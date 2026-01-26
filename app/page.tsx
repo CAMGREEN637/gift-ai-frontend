@@ -2,91 +2,88 @@
 
 import { useState } from "react";
 
+type Gift = {
+  name: string;
+  price: number;
+  description: string;
+  confidence: number;
+};
+
 export default function Home() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<Gift[]>([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   async function getRecommendations() {
-    if (!query) return;
-
     setLoading(true);
+    setError("");
+    setResults([]);
 
     try {
+      const apiUrl =
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
       const res = await fetch(
-        `http://localhost:8000/recommend?query=${encodeURIComponent(query)}`,
-        {
-          headers: {
-            "x-api-key": "dev-key", // change later
-          },
-        }
+        `${apiUrl}/recommend?query=${encodeURIComponent(query)}`
       );
 
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
+
       const data = await res.json();
-      setResults(data);
+      setResults(data.results || []);
     } catch (err) {
-      console.error(err);
-      alert("Failed to fetch recommendations");
+      setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <main className="min-h-screen p-10 bg-gray-50">
-      <h1 className="text-3xl font-bold mb-4">
-        🎁 AI Gift Finder
-      </h1>
+    <main style={{ padding: "2rem", maxWidth: "700px", margin: "auto" }}>
+      <h1>🎁 AI Gift Finder</h1>
 
-      <p className="mb-6 text-gray-600">
-        Describe the person and occasion, and I’ll recommend great gifts.
-      </p>
+      <input
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Gift for dad who likes grilling"
+        style={{
+          width: "100%",
+          padding: "0.75rem",
+          marginBottom: "1rem",
+        }}
+      />
 
-      <div className="flex gap-2 mb-6">
-        <input
-          className="flex-1 p-3 border rounded"
-          placeholder="e.g. Gift for my outdoorsy brother who loves coffee"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+      <button
+        onClick={getRecommendations}
+        disabled={loading || !query}
+        style={{ padding: "0.75rem 1.5rem" }}
+      >
+        {loading ? "Thinking..." : "Find Gifts"}
+      </button>
 
-        <button
-          onClick={getRecommendations}
-          className="px-5 py-3 bg-black text-white rounded"
-        >
-          {loading ? "Thinking..." : "Find Gifts"}
-        </button>
-      </div>
+      {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <div className="grid gap-4">
-        {results.map((gift, i) => (
-          <div
-            key={i}
-            className="p-4 border rounded bg-white shadow-sm"
+      <ul style={{ marginTop: "2rem" }}>
+        {results.map((gift, idx) => (
+          <li
+            key={idx}
+            style={{
+              border: "1px solid #ddd",
+              padding: "1rem",
+              marginBottom: "1rem",
+              borderRadius: "8px",
+            }}
           >
-            <h2 className="text-xl font-semibold">
-              {gift.name}
-            </h2>
-
-            <p className="text-gray-600 mb-2">
-              {gift.description}
-            </p>
-
-            <p className="text-sm text-gray-500">
-              💰 ${gift.price} · Confidence: {gift.confidence}
-            </p>
-
-            {gift.ranking_reasons?.length > 0 && (
-              <ul className="mt-2 text-sm text-green-700 list-disc ml-5">
-                {gift.ranking_reasons.map((r: string, idx: number) => (
-                  <li key={idx}>{r}</li>
-                ))}
-              </ul>
-            )}
-          </div>
+            <h3>{gift.name}</h3>
+            <p>{gift.description}</p>
+            <p>💰 ${gift.price}</p>
+            <p>🎯 Confidence: {(gift.confidence * 100).toFixed(0)}%</p>
+          </li>
         ))}
-      </div>
+      </ul>
     </main>
   );
 }
-

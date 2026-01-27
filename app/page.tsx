@@ -5,8 +5,8 @@ import { useState } from "react";
 type Gift = {
   name: string;
   price: number;
-  description: string;
   confidence: number;
+  reason: string;
 };
 
 export default function Home() {
@@ -33,7 +33,9 @@ export default function Home() {
       }
 
       const data = await res.json();
-      setResults(data.results || []);
+
+      // 🔥 FIX: backend returns { intro, gifts }
+      setResults(data.gifts || []);
     } catch (err) {
       setError("Failed to fetch recommendations");
     } finally {
@@ -78,7 +80,7 @@ export default function Home() {
             }}
           >
             <h3>{gift.name}</h3>
-            <p>{gift.description}</p>
+            <p>{gift.reason}</p>
             <p>💰 ${gift.price}</p>
             <p>🎯 Confidence: {(gift.confidence * 100).toFixed(0)}%</p>
           </li>

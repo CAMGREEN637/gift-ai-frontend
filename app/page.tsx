@@ -5,22 +5,15 @@ import { useState } from "react";
 type Gift = {
   name: string;
   price: number;
-  reason: string;
   confidence: number;
+  ranking_reasons: string[];
 };
 
-function confidenceLabel(confidence: number) {
-  if (confidence >= 0.8) return "Excellent match";
-  if (confidence >= 0.6) return "Strong match";
-  if (confidence >= 0.4) return "Good option";
-  return "Wildcard pick";
-}
-
-function confidenceColor(confidence: number) {
-  if (confidence >= 0.8) return "#22c55e";
-  if (confidence >= 0.6) return "#84cc16";
-  if (confidence >= 0.4) return "#facc15";
-  return "#9ca3af";
+function confidenceLabel(c: number) {
+  if (c >= 0.85) return { text: "Top Pick", color: "bg-emerald-500" };
+  if (c >= 0.7) return { text: "Strong match", color: "bg-blue-500" };
+  if (c >= 0.6) return { text: "Good option", color: "bg-slate-500" };
+  return { text: "Worth considering", color: "bg-gray-400" };
 }
 
 export default function Home() {
@@ -46,168 +39,95 @@ export default function Home() {
 
       const data = await res.json();
 
-      const sorted = (data.gifts || []).sort(
+      const gifts = (data.gifts || []).sort(
         (a: Gift, b: Gift) => b.confidence - a.confidence
       );
 
-      setResults(sorted);
+      setResults(gifts);
     } catch {
-      setError("Something went wrong. Try again.");
+      setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(135deg, #0f172a, #1e293b, #020617)",
-        padding: "4rem 1rem",
-        color: "#f8fafc",
-      }}
-    >
-      <main
-        style={{
-          maxWidth: "760px",
-          margin: "auto",
-          background: "rgba(255,255,255,0.05)",
-          backdropFilter: "blur(12px)",
-          borderRadius: "20px",
-          padding: "2.5rem",
-          boxShadow: "0 30px 80px rgba(0,0,0,0.4)",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: 800,
-            marginBottom: "0.5rem",
-          }}
-        >
-          🎁 AI Gift Finder
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* HERO */}
+      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+          Find the <span className="text-emerald-600">perfect gift</span>
         </h1>
-
-        <p style={{ opacity: 0.8, marginBottom: "2rem" }}>
-          Thoughtful gift ideas, ranked by how well they match.
+        <p className="mt-4 text-lg text-slate-600">
+          Thoughtful, personalized gift ideas — ranked just for them.
         </p>
 
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Gift for girlfriend who loves coffee"
-          style={{
-            width: "100%",
-            padding: "1rem",
-            borderRadius: "12px",
-            border: "none",
-            fontSize: "1rem",
-            marginBottom: "1rem",
-          }}
-        />
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Gift for girlfriend who loves coffee"
+            className="w-full sm:w-[420px] rounded-lg border border-slate-300 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
 
-        <button
-          onClick={getRecommendations}
-          disabled={loading || !query}
-          style={{
-            width: "100%",
-            padding: "1rem",
-            borderRadius: "12px",
-            fontSize: "1rem",
-            fontWeight: 600,
-            background: "linear-gradient(135deg, #f59e0b, #facc15)",
-            color: "#020617",
-            border: "none",
-            cursor: "pointer",
-            marginBottom: "1.5rem",
-          }}
-        >
-          {loading ? "Thinking..." : "Find Gifts"}
-        </button>
+          <button
+            onClick={getRecommendations}
+            disabled={loading || !query}
+            className="rounded-lg bg-emerald-600 px-6 py-3 text-white font-medium hover:bg-emerald-700 transition disabled:opacity-50"
+          >
+            {loading ? "Thinking…" : "Find Gifts"}
+          </button>
+        </div>
 
-        {error && <p style={{ color: "#f87171" }}>{error}</p>}
+        {error && (
+          <p className="mt-4 text-red-500 text-sm">{error}</p>
+        )}
+      </section>
 
-        <ul style={{ padding: 0 }}>
-          {results.map((gift, idx) => (
-            <li
-              key={idx}
-              style={{
-                listStyle: "none",
-                background: "rgba(255,255,255,0.08)",
-                borderRadius: "16px",
-                padding: "1.5rem",
-                marginBottom: "1.25rem",
-                position: "relative",
-                boxShadow:
-                  idx === 0
-                    ? "0 0 0 2px #facc15, 0 20px 50px rgba(250,204,21,0.3)"
-                    : "0 12px 30px rgba(0,0,0,0.3)",
-                transition: "transform 0.2s ease",
-              }}
-            >
-              {idx === 0 && (
+      {/* RESULTS */}
+      {results.length > 0 && (
+        <section className="max-w-4xl mx-auto px-6 pb-24">
+          <h2 className="text-2xl font-semibold mb-6 text-slate-800">
+            Recommended for you
+          </h2>
+
+          <div className="grid gap-6">
+            {results.map((gift, idx) => {
+              const badge = confidenceLabel(gift.confidence);
+
+              return (
                 <div
-                  style={{
-                    position: "absolute",
-                    top: "-12px",
-                    right: "16px",
-                    background: "#facc15",
-                    color: "#020617",
-                    padding: "6px 14px",
-                    borderRadius: "999px",
-                    fontSize: "0.75rem",
-                    fontWeight: 700,
-                  }}
+                  key={idx}
+                  className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition"
                 >
-                  🏆 Top Pick
+                  {/* BADGE */}
+                  <span
+                    className={`absolute -top-3 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white ${badge.color}`}
+                  >
+                    {badge.text}
+                  </span>
+
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {gift.name}
+                    </h3>
+                    <span className="text-lg font-medium text-slate-700">
+                      ${gift.price}
+                    </span>
+                  </div>
+
+                  <ul className="mt-4 space-y-1 text-slate-600 text-sm">
+                    {gift.ranking_reasons.map((reason, i) => (
+                      <li key={i}>• {reason}</li>
+                    ))}
+                  </ul>
                 </div>
-              )}
-
-              <h3 style={{ fontSize: "1.25rem", fontWeight: 700 }}>
-                {gift.name}
-              </h3>
-
-              <p style={{ opacity: 0.85, margin: "0.5rem 0" }}>
-                {gift.reason}
-              </p>
-
-              <p style={{ fontWeight: 600 }}>💰 ${gift.price}</p>
-
-              <div style={{ marginTop: "1rem" }}>
-                <div
-                  style={{
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    color: confidenceColor(gift.confidence),
-                    marginBottom: "0.25rem",
-                  }}
-                >
-                  {confidenceLabel(gift.confidence)} •{" "}
-                  {(gift.confidence * 100).toFixed(0)}%
-                </div>
-
-                <div
-                  style={{
-                    height: "8px",
-                    background: "#020617",
-                    borderRadius: "999px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: `${gift.confidence * 100}%`,
-                      background: confidenceColor(gift.confidence),
-                    }}
-                  />
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </main>
-    </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+    </main>
   );
 }
+

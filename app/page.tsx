@@ -6,7 +6,10 @@ type Gift = {
   name: string;
   price: number;
   confidence: number;
-  ranking_reasons?: string[];
+  description: string;
+  image_url: string;
+  product_url: string;
+  ranking_reasons: string[];
 };
 
 export default function Home() {
@@ -32,88 +35,136 @@ export default function Home() {
 
       const data = await res.json();
 
-      // 🔑 ALWAYS sort by confidence
-      const gifts = (data.gifts || []).sort(
-        (a: Gift, b: Gift) => b.confidence - a.confidence
+      const sorted = [...(data.gifts || [])].sort(
+        (a, b) => b.confidence - a.confidence
       );
 
-      setResults(gifts);
-    } catch {
+      setResults(sorted);
+    } catch (err) {
       setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
     }
   }
 
+  const topPick = results[0];
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-indigo-50 to-pink-50 p-8">
-      <div className="max-w-3xl mx-auto">
+    <main className="min-h-screen bg-slate-50 px-6 py-12">
+      <div className="mx-auto max-w-4xl">
         {/* Hero */}
-        <h1 className="text-4xl font-bold text-slate-800 mb-2">
+        <h1 className="text-4xl font-bold text-slate-900 mb-2">
           🎁 AI Gift Finder
         </h1>
-        <p className="text-slate-600 mb-6">
-          Tell us who you’re shopping for — we’ll do the thinking.
+        <p className="text-slate-600 mb-8">
+          Thoughtful gifts, ranked by relevance.
         </p>
 
-        {/* Input */}
-        <div className="flex gap-2 mb-6">
+        {/* Search */}
+        <div className="flex gap-3 mb-10">
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Gift for girlfriend who loves coffee"
-            className="flex-1 rounded-lg border px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            placeholder="Gift for dad who loves grilling"
+            className="flex-1 rounded-lg border border-slate-300 px-4 py-3"
           />
           <button
             onClick={getRecommendations}
             disabled={loading || !query}
-            className="rounded-lg bg-indigo-600 text-white px-6 py-3 font-semibold hover:bg-indigo-700 disabled:opacity-50"
+            className="rounded-lg bg-slate-900 px-6 py-3 text-white font-medium disabled:opacity-50"
           >
-            {loading ? "Thinking..." : "Find Gifts"}
+            {loading ? "Thinking…" : "Find Gifts"}
           </button>
         </div>
 
         {error && <p className="text-red-600">{error}</p>}
 
         {/* Results */}
-        <div className="space-y-4">
-          {results.map((gift, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-md p-5 border relative"
-            >
-              {/* Top Pick Badge */}
-              {idx === 0 && (
-                <span className="absolute top-3 right-3 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full">
-                  🏆 Top Pick
-                </span>
-              )}
+        <div className="space-y-8">
+          {results.map((gift, idx) => {
+            const isTopPick = idx === 0;
 
-              <h3 className="text-xl font-semibold text-slate-800">
-                {gift.name}
-              </h3>
+            return (
+              <div
+                key={gift.name}
+                className="rounded-xl bg-white shadow-sm border border-slate-200 overflow-hidden"
+              >
+                <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
+                  {/* Image */}
+                  <img
+                    src={gift.image_url}
+                    alt={gift.name}
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
 
-              <p className="text-slate-500 mt-1">
-                💰 ${gift.price}
-              </p>
+                  {/* Content */}
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <h2 className="text-xl font-semibold text-slate-900">
+                        {gift.name}
+                      </h2>
+                      {isTopPick && (
+                        <span className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold">
+                          🏆 Top Pick
+                        </span>
+                      )}
+                    </div>
 
-              {/* Confidence label (human-friendly) */}
-              <p className="mt-2 text-sm font-medium text-indigo-600">
-                {gift.confidence >= 0.75
-                  ? "Excellent match"
-                  : gift.confidence >= 0.6
-                  ? "Good option"
-                  : "Worth considering"}
-              </p>
+                    <p className="mt-2 text-slate-600">
+                      {gift.description}
+                    </p>
 
-              {/* Reasons */}
-              <ul className="mt-3 list-disc list-inside text-slate-600 text-sm">
-                {(gift.ranking_reasons ?? []).map((reason, i) => (
-                  <li key={i}>{reason}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                    {/* Confidence */}
+                    <div className="mt-4">
+                      <div className="flex justify-between text-sm mb-1">
+                        <span className="text-slate-500">Match</span>
+                        <span className="font-medium">
+                          {(gift.confidence * 100).toFixed(0)}%
+                        </span>
+                      </div>
+                      <div className="h-2 bg-slate-200 rounded-full">
+                        <div
+                          className="h-2 bg-emerald-500 rounded-full"
+                          style={{
+                            width: `${gift.confidence * 100}%`,
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Top pick explanation */}
+                    {isTopPick && gift.ranking_reasons?.length > 0 && (
+                      <div className="mt-4">
+                        <p className="text-sm font-semibold text-slate-700 mb-1">
+                          Why this is the best choice
+                        </p>
+                        <ul className="list-disc list-inside text-sm text-slate-600">
+                          {gift.ranking_reasons.map((reason, i) => (
+                            <li key={i}>{reason}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Footer */}
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className="text-lg font-semibold">
+                        ${gift.price}
+                      </span>
+                      <a
+                        href={gift.product_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium"
+                      >
+                        Buy Gift →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </main>

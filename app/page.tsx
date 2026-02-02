@@ -9,7 +9,7 @@ type Gift = {
   description: string;
   image_url: string;
   product_url: string;
-  ranking_reasons: string[];
+  ranking_reasons?: string[];
 };
 
 export default function Home() {
@@ -19,6 +19,8 @@ export default function Home() {
   const [error, setError] = useState("");
 
   async function getRecommendations() {
+    if (!query.trim()) return;
+
     setLoading(true);
     setError("");
     setResults([]);
@@ -35,19 +37,16 @@ export default function Home() {
 
       const data = await res.json();
 
-      const sorted = [...(data.gifts || [])].sort(
-        (a, b) => b.confidence - a.confidence
-      );
+      const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
 
-      setResults(sorted);
+      gifts.sort((a, b) => b.confidence - a.confidence);
+      setResults(gifts);
     } catch (err) {
       setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
     }
   }
-
-  const topPick = results[0];
 
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
@@ -65,7 +64,7 @@ export default function Home() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Gift for dad who loves grilling"
+            placeholder="Gift for girlfriend who loves coffee"
             className="flex-1 rounded-lg border border-slate-300 px-4 py-3"
           />
           <button
@@ -77,7 +76,7 @@ export default function Home() {
           </button>
         </div>
 
-        {error && <p className="text-red-600">{error}</p>}
+        {error && <p className="text-red-600 mb-6">{error}</p>}
 
         {/* Results */}
         <div className="space-y-8">
@@ -86,15 +85,20 @@ export default function Home() {
 
             return (
               <div
-                key={gift.name}
-                className="rounded-xl bg-white shadow-sm border border-slate-200 overflow-hidden"
+                key={`${gift.name}-${idx}`}
+                className="rounded-xl bg-white border border-slate-200 shadow-sm overflow-hidden"
               >
                 <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
                   {/* Image */}
                   <img
                     src={gift.image_url}
                     alt={gift.name}
-                    className="w-full h-48 object-cover rounded-lg"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src =
+                        "/placeholder.png";
+                    }}
+                    className="w-full h-48 object-cover rounded-lg bg-slate-100"
                   />
 
                   {/* Content */}
@@ -103,6 +107,7 @@ export default function Home() {
                       <h2 className="text-xl font-semibold text-slate-900">
                         {gift.name}
                       </h2>
+
                       {isTopPick && (
                         <span className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold">
                           🏆 Top Pick
@@ -124,7 +129,7 @@ export default function Home() {
                       </div>
                       <div className="h-2 bg-slate-200 rounded-full">
                         <div
-                          className="h-2 bg-emerald-500 rounded-full"
+                          className="h-2 bg-emerald-500 rounded-full transition-all"
                           style={{
                             width: `${gift.confidence * 100}%`,
                           }}
@@ -133,29 +138,32 @@ export default function Home() {
                     </div>
 
                     {/* Top pick explanation */}
-                    {isTopPick && gift.ranking_reasons?.length > 0 && (
-                      <div className="mt-4">
-                        <p className="text-sm font-semibold text-slate-700 mb-1">
-                          Why this is the best choice
-                        </p>
-                        <ul className="list-disc list-inside text-sm text-slate-600">
-                          {gift.ranking_reasons.map((reason, i) => (
-                            <li key={i}>{reason}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    {isTopPick &&
+                      gift.ranking_reasons &&
+                      gift.ranking_reasons.length > 0 && (
+                        <div className="mt-4">
+                          <p className="text-sm font-semibold text-slate-700 mb-1">
+                            Why this is the best choice
+                          </p>
+                          <ul className="list-disc list-inside text-sm text-slate-600">
+                            {gift.ranking_reasons.map((reason, i) => (
+                              <li key={i}>{reason}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
                     {/* Footer */}
                     <div className="mt-6 flex items-center justify-between">
                       <span className="text-lg font-semibold">
                         ${gift.price}
                       </span>
+
                       <a
                         href={gift.product_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium"
+                        className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium hover:bg-slate-800 transition"
                       >
                         Buy Gift →
                       </a>
@@ -165,8 +173,15 @@ export default function Home() {
               </div>
             );
           })}
+
+          {results.length === 0 && !loading && (
+            <p className="text-slate-500 text-center">
+              Try a more specific description to get better results.
+            </p>
+          )}
         </div>
       </div>
     </main>
   );
 }
+

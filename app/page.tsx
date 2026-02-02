@@ -36,12 +36,11 @@ export default function Home() {
       if (!res.ok) throw new Error("Request failed");
 
       const data = await res.json();
-
       const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
 
       gifts.sort((a, b) => b.confidence - a.confidence);
       setResults(gifts);
-    } catch (err) {
+    } catch {
       setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
@@ -64,7 +63,7 @@ export default function Home() {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Gift for girlfriend who loves coffee"
+            placeholder="Gift for dad who loves grilling"
             className="flex-1 rounded-lg border border-slate-300 px-4 py-3"
           />
           <button
@@ -86,23 +85,25 @@ export default function Home() {
             return (
               <div
                 key={`${gift.name}-${idx}`}
-                className="rounded-xl bg-white border border-slate-200 shadow-sm overflow-hidden"
+                className="relative rounded-xl bg-white border border-slate-200 shadow-sm"
               >
-                <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
+                <div className="relative z-10 grid md:grid-cols-[200px_1fr] gap-6 p-6">
                   {/* Image */}
                   <img
                     src={gift.image_url}
                     alt={gift.name}
                     referrerPolicy="no-referrer"
+                    crossOrigin="anonymous"
+                    loading="lazy"
+                    className="w-full h-48 object-cover rounded-lg bg-slate-100"
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src =
                         "/placeholder.png";
                     }}
-                    className="w-full h-48 object-cover rounded-lg bg-slate-100"
                   />
 
                   {/* Content */}
-                  <div>
+                  <div className="relative z-10">
                     <div className="flex items-center gap-3">
                       <h2 className="text-xl font-semibold text-slate-900">
                         {gift.name}
@@ -129,25 +130,22 @@ export default function Home() {
                       </div>
                       <div className="h-2 bg-slate-200 rounded-full">
                         <div
-                          className="h-2 bg-emerald-500 rounded-full transition-all"
-                          style={{
-                            width: `${gift.confidence * 100}%`,
-                          }}
+                          className="h-2 bg-emerald-500 rounded-full"
+                          style={{ width: `${gift.confidence * 100}%` }}
                         />
                       </div>
                     </div>
 
                     {/* Top pick explanation */}
                     {isTopPick &&
-                      gift.ranking_reasons &&
-                      gift.ranking_reasons.length > 0 && (
+                      gift.ranking_reasons?.length > 0 && (
                         <div className="mt-4">
                           <p className="text-sm font-semibold text-slate-700 mb-1">
                             Why this is the best choice
                           </p>
                           <ul className="list-disc list-inside text-sm text-slate-600">
-                            {gift.ranking_reasons.map((reason, i) => (
-                              <li key={i}>{reason}</li>
+                            {gift.ranking_reasons.map((r, i) => (
+                              <li key={i}>{r}</li>
                             ))}
                           </ul>
                         </div>
@@ -160,10 +158,12 @@ export default function Home() {
                       </span>
 
                       <a
-                        href={gift.product_url}
+                        href={gift.product_url.startsWith("http")
+                          ? gift.product_url
+                          : `https://${gift.product_url}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium hover:bg-slate-800 transition"
+                        className="relative z-20 pointer-events-auto inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium hover:bg-slate-800 transition"
                       >
                         Buy Gift →
                       </a>
@@ -173,15 +173,10 @@ export default function Home() {
               </div>
             );
           })}
-
-          {results.length === 0 && !loading && (
-            <p className="text-slate-500 text-center">
-              Try a more specific description to get better results.
-            </p>
-          )}
         </div>
       </div>
     </main>
   );
 }
+
 

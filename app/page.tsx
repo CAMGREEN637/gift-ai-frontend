@@ -7,10 +7,16 @@ type Gift = {
   price: number;
   confidence: number;
   description: string;
-  image_url: string;
-  product_url: string;
+  image_url?: string;
+  product_url?: string;
   ranking_reasons?: string[];
 };
+
+function normalizeUrl(url?: string): string | null {
+  if (!url || typeof url !== "string") return null;
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  return `https://${url}`;
+}
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -19,8 +25,6 @@ export default function Home() {
   const [error, setError] = useState("");
 
   async function getRecommendations() {
-    if (!query.trim()) return;
-
     setLoading(true);
     setError("");
     setResults([]);
@@ -36,11 +40,13 @@ export default function Home() {
       if (!res.ok) throw new Error("Request failed");
 
       const data = await res.json();
+
       const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
 
       gifts.sort((a, b) => b.confidence - a.confidence);
+
       setResults(gifts);
-    } catch {
+    } catch (err) {
       setError("Failed to fetch recommendations");
     } finally {
       setLoading(false);
@@ -75,40 +81,50 @@ export default function Home() {
           </button>
         </div>
 
-        {error && <p className="text-red-600 mb-6">{error}</p>}
+        {error && <p className="text-red-600">{error}</p>}
 
         {/* Results */}
         <div className="space-y-8">
           {results.map((gift, idx) => {
             const isTopPick = idx === 0;
+            const reasons = Array.isArray(gift.ranking_reasons)
+              ? gift.ranking_reasons
+              : [];
+
+            const buyUrl = normalizeUrl(gift.product_url);
 
             return (
               <div
                 key={`${gift.name}-${idx}`}
-                className="relative rounded-xl bg-white border border-slate-200 shadow-sm"
+                className="rounded-xl bg-white shadow-sm border border-slate-200 overflow-hidden"
               >
-                <div className="relative z-10 grid md:grid-cols-[200px_1fr] gap-6 p-6">
+                <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
                   {/* Image */}
-                  <img
-                    src={gift.image_url}
-                    alt={gift.name}
-                    referrerPolicy="no-referrer"
-                    crossOrigin="anonymous"
-                    loading="lazy"
-                    className="w-full h-48 object-cover rounded-lg bg-slate-100"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src =
-                        "/placeholder.png";
-                    }}
-                  />
+                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden">
+                    {gift.image_url ? (
+                      <img
+                        src={gift.image_url}
+                        alt={gift.name}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://via.placeholder.com/300x300?text=No+Image";
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
+                        No image
+                      </div>
+                    )}
+                  </div>
 
                   {/* Content */}
-                  <div className="relative z-10">
+                  <div>
                     <div className="flex items-center gap-3">
                       <h2 className="text-xl font-semibold text-slate-900">
                         {gift.name}
                       </h2>
-
                       {isTopPick && (
                         <span className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold">
                           🏆 Top Pick
@@ -131,25 +147,26 @@ export default function Home() {
                       <div className="h-2 bg-slate-200 rounded-full">
                         <div
                           className="h-2 bg-emerald-500 rounded-full"
-                          style={{ width: `${gift.confidence * 100}%` }}
+                          style={{
+                            width: `${gift.confidence * 100}%`,
+                          }}
                         />
                       </div>
                     </div>
 
                     {/* Top pick explanation */}
-                    {isTopPick &&
-                      gift.ranking_reasons?.length > 0 && (
-                        <div className="mt-4">
-                          <p className="text-sm font-semibold text-slate-700 mb-1">
-                            Why this is the best choice
-                          </p>
-                          <ul className="list-disc list-inside text-sm text-slate-600">
-                            {gift.ranking_reasons.map((r, i) => (
-                              <li key={i}>{r}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                    {isTopPick && reasons.length > 0 && (
+                      <div className="mt-4">
+                        <p className="text-sm font-semibold text-slate-700 mb-1">
+                          Why this is the best choice
+                        </p>
+                        <ul className="list-disc list-inside text-sm text-slate-600">
+                          {reasons.map((reason, i) => (
+                            <li key={i}>{reason}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
                     {/* Footer */}
                     <div className="mt-6 flex items-center justify-between">
@@ -157,16 +174,16 @@ export default function Home() {
                         ${gift.price}
                       </span>
 
-                      <a
-                        href={gift.product_url.startsWith("http")
-                          ? gift.product_url
-                          : `https://${gift.product_url}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="relative z-20 pointer-events-auto inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium hover:bg-slate-800 transition"
-                      >
-                        Buy Gift →
-                      </a>
+                      {buyUrl && (
+                        <a
+                          href={buyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-2 text-white text-sm font-medium hover:bg-slate-800 transition"
+                        >
+                          Buy Gift →
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

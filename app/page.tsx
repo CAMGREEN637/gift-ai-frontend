@@ -19,40 +19,20 @@ function normalizeUrl(url?: string): string | null {
   return `https://${url}`;
 }
 
-// Use your own backend to proxy Amazon images
-function getProxiedImageUrl(imageUrl?: string): string | null {
-  if (!imageUrl) {
-    console.log("No image URL provided");
-    return null;
-  }
-
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-  const proxiedUrl = `${apiUrl}/proxy-image?url=${encodeURIComponent(imageUrl)}`;
-
-  console.log("Original image URL:", imageUrl);
-  console.log("Proxied image URL:", proxiedUrl);
-
-  return proxiedUrl;
-}
-
 export default function Home() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Gift[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [imageErrors, setImageErrors] = useState<Record<number, string>>({});
 
   async function getRecommendations() {
     setLoading(true);
     setError("");
     setResults([]);
-    setImageErrors({});
 
     try {
       const apiUrl =
         process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-      console.log("Fetching from:", `${apiUrl}/recommend`);
 
       const res = await fetch(
         `${apiUrl}/recommend?query=${encodeURIComponent(query)}`
@@ -62,17 +42,7 @@ export default function Home() {
 
       const data = await res.json();
 
-      console.log("Full API Response:", data);
-
       const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
-
-      gifts.forEach((gift, idx) => {
-        console.log(`Gift ${idx}:`, {
-          name: gift.name,
-          image_url: gift.image_url,
-          product_url: gift.product_url
-        });
-      });
 
       gifts.sort((a, b) => b.confidence - a.confidence);
 
@@ -85,40 +55,6 @@ export default function Home() {
     }
   }
 
-  const handleImageError = (idx: number, event: any) => {
-    const img = event.currentTarget;
-    const errorMsg = `Failed to load: ${img.src}`;
-    console.error(`Image ${idx} error:`, errorMsg);
-    setImageErrors(prev => ({ ...prev, [idx]: errorMsg }));
-  };
-
-  const handleImageLoad = (idx: number, event: any) => {
-    const img = event.currentTarget;
-    console.log(`✓ Image ${idx} loaded successfully:`, img.src);
-  };
-
-  // Test the proxy endpoint
-  const testProxy = async () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-    const testUrl = `${apiUrl}/test-proxy`;
-
-    console.log("Testing proxy endpoint:", testUrl);
-
-    try {
-      const response = await fetch(testUrl);
-      console.log("Proxy test response status:", response.status);
-      console.log("Proxy test response headers:", Object.fromEntries(response.headers.entries()));
-
-      if (response.ok) {
-        console.log("✓ Proxy endpoint is working!");
-      } else {
-        console.error("✗ Proxy endpoint failed:", await response.text());
-      }
-    } catch (err) {
-      console.error("✗ Proxy endpoint error:", err);
-    }
-  };
-
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="mx-auto max-w-4xl">
@@ -126,17 +62,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-slate-900 mb-2">
           🎁 AI Gift Finder
         </h1>
-        <p className="text-slate-600 mb-4">
+        <p className="text-slate-600 mb-8">
           Thoughtful gifts, ranked by relevance.
         </p>
-
-        {/* Debug button */}
-        <button
-          onClick={testProxy}
-          className="mb-4 text-xs text-blue-600 hover:underline"
-        >
-          🔧 Test Image Proxy (check console)
-        </button>
 
         {/* Search */}
         <div className="flex gap-3 mb-10">
@@ -154,16 +82,16 @@ export default function Home() {
           <button
             onClick={getRecommendations}
             disabled={loading || !query}
-            className="rounded-lg bg-slate-900 px-6 py-3 text-white font-medium disabled:opacity-50"
+            className="rounded-lg bg-slate-900 px-6 py-3 text-white font-medium disabled:opacity-50 hover:bg-slate-800 transition"
           >
             {loading ? "Thinking…" : "Find Gifts"}
           </button>
         </div>
 
-        {error && <p className="text-red-600">{error}</p>}
+        {error && <p className="text-red-600 mb-4">{error}</p>}
 
         {/* Results */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {results.map((gift, idx) => {
             const isTopPick = idx === 0;
             const reasons = Array.isArray(gift.ranking_reasons)
@@ -171,80 +99,125 @@ export default function Home() {
               : [];
 
             const buyUrl = normalizeUrl(gift.product_url);
-            const imageUrl = getProxiedImageUrl(gift.image_url);
-            const hasImageError = imageErrors[idx];
+            const imageUrl = gift.image_url;
 
             return (
               <div
                 key={`${gift.name}-${idx}`}
-                className="rounded-xl bg-white shadow-sm border border-slate-200 overflow-hidden"
+                className="rounded-xl bg-white shadow-md border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
-                  {/* Image */}
-                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden flex-shrink-0 relative">
-                    {imageUrl && !hasImageError ? (
-                      <>
+                <div className="grid md:grid-cols-[220px_1fr] gap-6 p-6">
+                  {/* Image - Link to product on click */}
+                  {buyUrl ? (
+                    <a
+                      href={buyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="w-full h-52 bg-gradient-to-br from-slate-100 to-slate-50 rounded-lg overflow-hidden flex-shrink-0 hover:opacity-90 transition group relative">
+                        {imageUrl ? (
+                          <>
+                            {/* Referrer policy to help with CORS */}
+                            <img
+                              src={imageUrl}
+                              alt={gift.name}
+                              loading="lazy"
+                              referrerPolicy="no-referrer"
+                              className="w-full h-full object-contain p-4"
+                              onError={(e) => {
+                                // If image fails, show gift emoji instead
+                                const parent = e.currentTarget.parentElement;
+                                if (parent) {
+                                  e.currentTarget.style.display = 'none';
+                                  const fallback = document.createElement('div');
+                                  fallback.className = 'w-full h-full flex flex-col items-center justify-center text-slate-300';
+                                  fallback.innerHTML = '<div class="text-6xl mb-2">🎁</div><div class="text-xs">Click to view</div>';
+                                  parent.appendChild(fallback);
+                                }
+                              }}
+                            />
+                            {/* Hover overlay */}
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors flex items-center justify-center">
+                              <span className="opacity-0 group-hover:opacity-100 transition-opacity text-sm text-slate-700 font-medium">
+                                View on Amazon →
+                              </span>
+                            </div>
+                          </>
+                        ) : (
+                          <div className="w-full h-full flex flex-col items-center justify-center text-slate-300">
+                            <div className="text-6xl mb-2">🎁</div>
+                            <div className="text-xs">Click to view</div>
+                          </div>
+                        )}
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="w-full h-52 bg-gradient-to-br from-slate-100 to-slate-50 rounded-lg overflow-hidden flex-shrink-0">
+                      {imageUrl ? (
                         <img
                           src={imageUrl}
                           alt={gift.name}
                           loading="lazy"
-                          className="w-full h-full object-cover"
-                          onError={(e) => handleImageError(idx, e)}
-                          onLoad={(e) => handleImageLoad(idx, e)}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-contain p-4"
+                          onError={(e) => {
+                            const parent = e.currentTarget.parentElement;
+                            if (parent) {
+                              e.currentTarget.style.display = 'none';
+                              const fallback = document.createElement('div');
+                              fallback.className = 'w-full h-full flex flex-col items-center justify-center text-slate-300';
+                              fallback.innerHTML = '<div class="text-6xl">🎁</div>';
+                              parent.appendChild(fallback);
+                            }
+                          }}
                         />
-                        {/* Loading indicator */}
-                        <div className="absolute inset-0 bg-slate-200 animate-pulse"
-                             style={{ zIndex: -1 }}
-                        />
-                      </>
-                    ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 text-xs p-4 text-center">
-                        <div className="text-3xl mb-2">📦</div>
-                        <div className="font-medium">Image unavailable</div>
-                        {hasImageError && (
-                          <div className="mt-2 text-[10px] text-red-500 break-all">
-                            {hasImageError}
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-slate-300">
+                          <div className="text-6xl">🎁</div>
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* Content */}
-                  <div>
-                    <div className="flex items-center gap-3 flex-wrap">
-                      <h2 className="text-xl font-semibold text-slate-900">
+                  <div className="flex flex-col">
+                    <div className="flex items-start gap-3 flex-wrap mb-2">
+                      <h2 className="text-xl font-semibold text-slate-900 flex-1">
                         {gift.name}
                       </h2>
                       {isTopPick && (
-                        <span className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold">
+                        <span className="rounded-full bg-emerald-100 text-emerald-800 px-3 py-1 text-xs font-semibold whitespace-nowrap">
                           🏆 Top Pick
                         </span>
                       )}
                     </div>
 
-                    <p className="mt-2 text-slate-600">
+                    <p className="mt-1 text-slate-600 text-sm leading-relaxed">
                       {gift.description}
                     </p>
 
                     {/* LLM Reason */}
                     {gift.reason && (
-                      <p className="mt-3 text-sm text-emerald-700 italic">
-                        💡 {gift.reason}
-                      </p>
+                      <div className="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                        <p className="text-sm text-blue-900">
+                          <span className="font-semibold">💡 Why this works: </span>
+                          {gift.reason}
+                        </p>
+                      </div>
                     )}
 
                     {/* Confidence */}
                     <div className="mt-4">
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-slate-500">Match Confidence</span>
-                        <span className="font-medium">
+                      <div className="flex justify-between text-sm mb-1.5">
+                        <span className="text-slate-500 font-medium">Match Confidence</span>
+                        <span className="font-semibold text-slate-700">
                           {(gift.confidence * 100).toFixed(0)}%
                         </span>
                       </div>
-                      <div className="h-2 bg-slate-200 rounded-full">
+                      <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
                         <div
-                          className="h-2 bg-emerald-500 rounded-full transition-all"
+                          className="h-full bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full transition-all duration-500"
                           style={{
                             width: `${gift.confidence * 100}%`,
                           }}
@@ -254,14 +227,14 @@ export default function Home() {
 
                     {/* Top pick explanation */}
                     {isTopPick && reasons.length > 0 && (
-                      <div className="mt-4 p-3 bg-emerald-50 rounded-lg">
+                      <div className="mt-4 p-4 bg-emerald-50 rounded-lg border border-emerald-100">
                         <p className="text-sm font-semibold text-emerald-900 mb-2">
                           ⭐ Why this is the best choice:
                         </p>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1.5">
                           {reasons.map((reason, i) => (
                             <li key={i} className="text-sm text-emerald-800 flex items-start">
-                              <span className="mr-2">•</span>
+                              <span className="mr-2 mt-0.5">✓</span>
                               <span>{reason}</span>
                             </li>
                           ))}
@@ -270,24 +243,25 @@ export default function Home() {
                     )}
 
                     {/* Footer */}
-                    <div className="mt-6 flex items-center justify-between">
-                      <span className="text-2xl font-bold text-slate-900">
-                        ${gift.price}
-                      </span>
+                    <div className="mt-auto pt-5 flex items-center justify-between">
+                      <div>
+                        <span className="text-3xl font-bold text-slate-900">
+                          ${gift.price}
+                        </span>
+                      </div>
 
-                      {buyUrl ? (
+                      {buyUrl && (
                         <a
                           href={buyUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-2.5 text-white text-sm font-medium hover:bg-slate-800 transition"
+                          className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-white text-sm font-semibold hover:bg-slate-800 transition-colors shadow-sm hover:shadow-md"
                         >
-                          Buy Gift →
+                          <span>Buy Gift</span>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
                         </a>
-                      ) : (
-                        <span className="text-sm text-slate-400">
-                          No purchase link available
-                        </span>
                       )}
                     </div>
                   </div>
@@ -296,6 +270,14 @@ export default function Home() {
             );
           })}
         </div>
+
+        {/* Empty state */}
+        {!loading && results.length === 0 && query && (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🎁</div>
+            <p className="text-slate-600">No gifts found. Try a different search!</p>
+          </div>
+        )}
       </div>
     </main>
   );

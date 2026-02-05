@@ -21,12 +21,18 @@ function normalizeUrl(url?: string): string | null {
 
 // Use your own backend to proxy Amazon images
 function getProxiedImageUrl(imageUrl?: string): string | null {
-  if (!imageUrl) return null;
+  if (!imageUrl) {
+    console.log("No image URL provided");
+    return null;
+  }
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const proxiedUrl = `${apiUrl}/proxy-image?url=${encodeURIComponent(imageUrl)}`;
 
-  // Proxy through your backend to avoid CORS issues
-  return `${apiUrl}/proxy-image?url=${encodeURIComponent(imageUrl)}`;
+  console.log("Original image URL:", imageUrl);
+  console.log("Proxied image URL:", proxiedUrl);
+
+  return proxiedUrl;
 }
 
 export default function Home() {
@@ -34,7 +40,7 @@ export default function Home() {
   const [results, setResults] = useState<Gift[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
+  const [imageErrors, setImageErrors] = useState<Record<number, string>>({});
 
   async function getRecommendations() {
     setLoading(true);
@@ -46,6 +52,8 @@ export default function Home() {
       const apiUrl =
         process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
+      console.log("Fetching from:", `${apiUrl}/recommend`);
+
       const res = await fetch(
         `${apiUrl}/recommend?query=${encodeURIComponent(query)}`
       );
@@ -54,7 +62,17 @@ export default function Home() {
 
       const data = await res.json();
 
+      console.log("Full API Response:", data);
+
       const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
+
+      gifts.forEach((gift, idx) => {
+        console.log(`Gift ${idx}:`, {
+          name: gift.name,
+          image_url: gift.image_url,
+          product_url: gift.product_url
+        });
+      });
 
       gifts.sort((a, b) => b.confidence - a.confidence);
 
@@ -67,8 +85,38 @@ export default function Home() {
     }
   }
 
-  const handleImageError = (idx: number) => {
-    setImageErrors(prev => ({ ...prev, [idx]: true }));
+  const handleImageError = (idx: number, event: any) => {
+    const img = event.currentTarget;
+    const errorMsg = `Failed to load: ${img.src}`;
+    console.error(`Image ${idx} error:`, errorMsg);
+    setImageErrors(prev => ({ ...prev, [idx]: errorMsg }));
+  };
+
+  const handleImageLoad = (idx: number, event: any) => {
+    const img = event.currentTarget;
+    console.log(`✓ Image ${idx} loaded successfully:`, img.src);
+  };
+
+  // Test the proxy endpoint
+  const testProxy = async () => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const testUrl = `${apiUrl}/test-proxy`;
+
+    console.log("Testing proxy endpoint:", testUrl);
+
+    try {
+      const response = await fetch(testUrl);
+      console.log("Proxy test response status:", response.status);
+      console.log("Proxy test response headers:", Object.fromEntries(response.headers.entries()));
+
+      if (response.ok) {
+        console.log("✓ Proxy endpoint is working!");
+      } else {
+        console.error("✗ Proxy endpoint failed:", await response.text());
+      }
+    } catch (err) {
+      console.error("✗ Proxy endpoint error:", err);
+    }
   };
 
   return (
@@ -78,9 +126,17 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-slate-900 mb-2">
           🎁 AI Gift Finder
         </h1>
-        <p className="text-slate-600 mb-8">
+        <p className="text-slate-600 mb-4">
           Thoughtful gifts, ranked by relevance.
         </p>
+
+        {/* Debug button */}
+        <button
+          onClick={testProxy}
+          className="mb-4 text-xs text-blue-600 hover:underline"
+        >
+          🔧 Test Image Proxy (check console)
+        </button>
 
         {/* Search */}
         <div className="flex gap-3 mb-10">
@@ -115,7 +171,6 @@ export default function Home() {
               : [];
 
             const buyUrl = normalizeUrl(gift.product_url);
-            // Proxy image through backend to avoid CORS
             const imageUrl = getProxiedImageUrl(gift.image_url);
             const hasImageError = imageErrors[idx];
 
@@ -126,19 +181,31 @@ export default function Home() {
               >
                 <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
                   {/* Image */}
-                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden flex-shrink-0 relative">
                     {imageUrl && !hasImageError ? (
-                      <img
-                        src={imageUrl}
-                        alt={gift.name}
-                        loading="lazy"
-                        className="w-full h-full object-cover"
-                        onError={() => handleImageError(idx)}
-                      />
+                      <>
+                        <img
+                          src={imageUrl}
+                          alt={gift.name}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                          onError={(e) => handleImageError(idx, e)}
+                          onLoad={(e) => handleImageLoad(idx, e)}
+                        />
+                        {/* Loading indicator */}
+                        <div className="absolute inset-0 bg-slate-200 animate-pulse"
+                             style={{ zIndex: -1 }}
+                        />
+                      </>
                     ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 text-xs p-2 text-center">
+                      <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 text-xs p-4 text-center">
                         <div className="text-3xl mb-2">📦</div>
-                        <div>Image unavailable</div>
+                        <div className="font-medium">Image unavailable</div>
+                        {hasImageError && (
+                          <div className="mt-2 text-[10px] text-red-500 break-all">
+                            {hasImageError}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>

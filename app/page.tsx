@@ -18,6 +18,7 @@ type Gift = {
 
 function normalizeUrl(url?: string): string | null {
  if (!url || typeof url !== "string") return null;
+ // Don't modify URLs that are already complete
  if (url.startsWith("http://") || url.startsWith("https://")) return url;
  return `https://${url}`;
 }
@@ -28,12 +29,14 @@ export default function Home() {
  const [results, setResults] = useState<Gift[]>([]);
  const [loading, setLoading] = useState(false);
  const [error, setError] = useState("");
+ const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
 
 
  async function getRecommendations() {
    setLoading(true);
    setError("");
    setResults([]);
+   setImageErrors({});
 
 
    try {
@@ -51,8 +54,20 @@ export default function Home() {
 
      const data = await res.json();
 
+     // Debug: Log the raw response
+     console.log("API Response:", data);
+
 
      const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
+
+     // Debug: Log each gift's URLs
+     gifts.forEach((gift, idx) => {
+       console.log(`Gift ${idx}:`, {
+         name: gift.name,
+         image_url: gift.image_url,
+         product_url: gift.product_url
+       });
+     });
 
 
      gifts.sort((a, b) => b.confidence - a.confidence);
@@ -60,11 +75,18 @@ export default function Home() {
 
      setResults(gifts);
    } catch (err) {
+     console.error("Fetch error:", err);
      setError("Failed to fetch recommendations");
    } finally {
      setLoading(false);
    }
  }
+
+
+ const handleImageError = (idx: number, url: string) => {
+   console.error(`Image failed to load at index ${idx}:`, url);
+   setImageErrors(prev => ({ ...prev, [idx]: true }));
+ };
 
 
  return (
@@ -115,7 +137,9 @@ export default function Home() {
 
 
            const buyUrl = normalizeUrl(gift.product_url);
-           const imageUrl = normalizeUrl(gift.image_url);
+           // Don't normalize image URLs - use them as-is
+           const imageUrl = gift.image_url;
+           const hasImageError = imageErrors[idx];
 
 
            return (
@@ -126,27 +150,23 @@ export default function Home() {
                <div className="grid md:grid-cols-[200px_1fr] gap-6 p-6">
                  {/* Image */}
                  <div className="w-full h-48 bg-slate-100 rounded-lg overflow-hidden flex-shrink-0">
-                   {imageUrl ? (
+                   {imageUrl && !hasImageError ? (
                      <img
                        src={imageUrl}
                        alt={gift.name}
                        loading="lazy"
                        className="w-full h-full object-cover"
-                       onError={(e) => {
-                         e.currentTarget.style.display = 'none';
-                         const parent = e.currentTarget.parentElement;
-                         if (parent) {
-                           parent.innerHTML = `
-                             <div class="w-full h-full flex items-center justify-center text-slate-400 text-sm">
-                               No image available
-                             </div>
-                           `;
-                         }
-                       }}
+                       onError={() => handleImageError(idx, imageUrl)}
+                       crossOrigin="anonymous"
                      />
                    ) : (
-                     <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
-                       No image available
+                     <div className="w-full h-full flex flex-col items-center justify-center text-slate-400 text-xs p-2 text-center">
+                       <div>No image available</div>
+                       {hasImageError && (
+                         <div className="mt-1 text-[10px] text-slate-300">
+                           (failed to load)
+                         </div>
+                       )}
                      </div>
                    )}
                  </div>
@@ -245,4 +265,3 @@ export default function Home() {
    </main>
  );
 }
-

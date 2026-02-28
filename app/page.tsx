@@ -571,7 +571,7 @@ export default function Home() {
                     {/* CTA */}
                     {buyUrl && (
                       <div className="mt-5">
-
+                        <a
                           href={buyUrl}
                           target="_blank"
                           rel="noopener noreferrer"

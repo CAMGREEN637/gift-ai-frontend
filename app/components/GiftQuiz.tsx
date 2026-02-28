@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-// --- Types ---
-
 type Recipient = {
   gender?: string;
   relationship?: string;
@@ -12,14 +10,15 @@ type Recipient = {
 type QuizAnswers = {
   occasion?: string;
   recipient?: Recipient;
+  partner_name?: string; // NEW
+  partner_id?: string; // NEW (for editing existing partners)
   interests?: string[];
   categories?: string[];
   vibe?: string[];
   personality?: string[];
   experience_level?: string;
   max_price?: number;
-  // New fields for date handling
-  occasion_date?: string; // ISO date string (YYYY-MM-DD)
+  occasion_date?: string;
   days_until_needed?: number;
 };
 
@@ -34,42 +33,49 @@ type Question = {
   id: string;
   question: string;
   subtitle: string;
-  type: "single" | "multi" | "date"; // Added "date" type
+  type: "single" | "multi" | "date" | "text"; // Added "text"
   tagCategory: string;
   max?: number;
-  options?: Option[]; // Options are optional now since date question doesn't have them
-  skipable?: boolean; // New field to allow skipping
+  options?: Option[];
+  skipable?: boolean;
+  optional?: boolean; // NEW
 };
 
 type QuizProps = {
   onComplete: (answers: QuizAnswers) => void;
+  initialAnswers?: QuizAnswers; // NEW: For pre-filling
 };
 
-export default function GiftQuiz({ onComplete }: QuizProps) {
+export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<QuizAnswers>({
-    recipient: {},
-    interests: [],
-    categories: [],
-    vibe: [],
-    personality: [],
-  });
+  const [answers, setAnswers] = useState<QuizAnswers>(
+    initialAnswers || {
+      recipient: {},
+      interests: [],
+      categories: [],
+      vibe: [],
+      personality: [],
+    }
+  );
+  const [isEditingProfile, setIsEditingProfile] = useState(false);
 
-  // Helper to calculate next occurrence of fixed holidays
+  // Show banner if editing existing partner
+  if (initialAnswers && initialAnswers.partner_id && !isEditingProfile) {
+    setIsEditingProfile(true);
+  }
+
   const getNextHolidayDate = (month: number, day: number): string => {
     const today = new Date();
     const currentYear = today.getFullYear();
-    let targetDate = new Date(currentYear, month - 1, day); // Month is 0-indexed in JS
-
-    // If the date has passed this year, set it to next year
+    let targetDate = new Date(currentYear, month - 1, day);
     if (targetDate < today) {
-        targetDate.setFullYear(currentYear + 1);
+      targetDate.setFullYear(currentYear + 1);
     }
     return targetDate.toISOString().split('T')[0];
   };
 
   const questions: Question[] = [
-    // Question 1: Occasion
+    // Q1: Occasion
     {
       id: "occasion",
       question: "What's the occasion?",
@@ -86,7 +92,7 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         { label: "Just Because", value: "just_because", emoji: "✨" },
       ],
     },
-    // Question 2: Date (New!)
+    // Q2: Date
     {
       id: "occasion_date",
       question: "When is the big day?",
@@ -94,9 +100,8 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
       type: "date",
       tagCategory: "lead_time",
       skipable: true,
-      // No options array needed for date type
     },
-    // Question 3: Recipient
+    // Q3: Recipient
     {
       id: "recipient",
       question: "Who's this gift for?",
@@ -112,7 +117,16 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         { label: "Family Member", value: { gender: "unisex", relationship: "family" }, emoji: "👨‍👩‍👧" },
       ],
     },
-    // Question 4: Budget
+    // Q4: Partner Name (NEW!)
+    {
+      id: "partner_name",
+      question: "What's their name?",
+      subtitle: "We'll personalize your recommendations (and you can save this profile for next time!)",
+      type: "text",
+      tagCategory: "partner_info",
+      optional: true,
+    },
+    // Q5: Budget
     {
       id: "budget",
       question: "What's your budget?",
@@ -127,7 +141,7 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         { label: "$200+", value: 999999, sublabel: "No budget limit", emoji: "🌟" },
       ],
     },
-    // Question 5: Interests
+    // Q6: Interests
     {
       id: "interests",
       question: "What do they love doing?",
@@ -158,7 +172,7 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         { label: "Makeup", value: "makeup", emoji: "💄" },
       ],
     },
-    // Question 6: Persona
+    // Q7: Persona
     {
       id: "persona",
       question: "How would you describe their style?",
@@ -198,7 +212,7 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         },
       ],
     },
-    // Question 7: Categories
+    // Q8: Categories
     {
       id: "categories",
       question: "What type of gift sounds best?",
@@ -219,7 +233,7 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         { label: "Experiences", value: "experiences", emoji: "🎭" },
       ],
     },
-    // Question 8: Experience Level
+    // Q9: Experience Level
     {
       id: "experience",
       question: "What's their experience level?",
@@ -239,106 +253,83 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
   const maxSelections = currentQuestion.max || 5;
 
   const handleSelect = (value: any) => {
-    // --- Logic for Occasion (Pre-fill Date) ---
     if (currentQuestion.id === "occasion") {
-        let dateToPreFill = undefined;
-        let daysUntil = undefined;
+      let dateToPreFill = undefined;
+      let daysUntil = undefined;
 
-        // Check for specific holidays to auto-fill the next step
-        if (value === 'christmas') {
-            dateToPreFill = getNextHolidayDate(12, 25);
-        } else if (value === 'valentines') {
-            dateToPreFill = getNextHolidayDate(2, 14);
-        }
+      if (value === 'christmas') {
+        dateToPreFill = getNextHolidayDate(12, 25);
+      } else if (value === 'valentines') {
+        dateToPreFill = getNextHolidayDate(2, 14);
+      }
 
-        // If we found a date to prefill, calculate days needed immediately
-        if (dateToPreFill) {
-            const target = new Date(dateToPreFill);
-            const today = new Date();
-            daysUntil = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-        }
+      if (dateToPreFill) {
+        const target = new Date(dateToPreFill);
+        const today = new Date();
+        daysUntil = Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+      }
 
-        setAnswers({
-            ...answers,
-            occasion: value,
-            occasion_date: dateToPreFill,
-            days_until_needed: daysUntil
-        });
+      setAnswers({ ...answers, occasion: value, occasion_date: dateToPreFill, days_until_needed: daysUntil });
     }
-    // --- Logic for Date Picker ---
     else if (currentQuestion.id === "occasion_date") {
-        if (value) {
-            const selectedDate = new Date(value);
-            const today = new Date();
-            const daysUntil = Math.ceil((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-
-            setAnswers({
-                ...answers,
-                occasion_date: value,
-                days_until_needed: daysUntil
-            });
-        } else {
-            // User skipped (value is null)
-            setAnswers({
-                ...answers,
-                occasion_date: undefined,
-                days_until_needed: undefined
-            });
-        }
+      if (value) {
+        const selectedDate = new Date(value);
+        const today = new Date();
+        const daysUntil = Math.ceil((selectedDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+        setAnswers({ ...answers, occasion_date: value, days_until_needed: daysUntil });
+      } else {
+        setAnswers({ ...answers, occasion_date: undefined, days_until_needed: undefined });
+      }
     }
-    // --- Existing Logic ---
     else if (currentQuestion.id === "recipient") {
       setAnswers({ ...answers, recipient: value });
-    } else if (currentQuestion.id === "budget") {
+    }
+    else if (currentQuestion.id === "partner_name") {
+      setAnswers({ ...answers, partner_name: value });
+    }
+    else if (currentQuestion.id === "budget") {
       setAnswers({ ...answers, max_price: value });
-    } else if (currentQuestion.id === "interests") {
+    }
+    else if (currentQuestion.id === "interests") {
       const current = answers.interests || [];
       if (current.includes(value)) {
         setAnswers({ ...answers, interests: current.filter(i => i !== value) });
       } else if (current.length < maxSelections) {
         setAnswers({ ...answers, interests: [...current, value] });
       }
-    } else if (currentQuestion.id === "categories") {
+    }
+    else if (currentQuestion.id === "categories") {
       const current = answers.categories || [];
       if (current.includes(value)) {
         setAnswers({ ...answers, categories: current.filter(c => c !== value) });
       } else if (current.length < maxSelections) {
         setAnswers({ ...answers, categories: [...current, value] });
       }
-    } else if (currentQuestion.id === "persona") {
-      setAnswers({
-        ...answers,
-        vibe: value.vibe,
-        personality: value.personality,
-      });
-    } else if (currentQuestion.id === "experience") {
+    }
+    else if (currentQuestion.id === "persona") {
+      setAnswers({ ...answers, vibe: value.vibe, personality: value.personality });
+    }
+    else if (currentQuestion.id === "experience") {
       setAnswers({ ...answers, experience_level: value });
     }
   };
 
   const isSelected = (value: any) => {
-    if (currentQuestion.id === "occasion") {
-      return answers.occasion === value;
-    } else if (currentQuestion.id === "recipient") {
-      return JSON.stringify(answers.recipient) === JSON.stringify(value);
-    } else if (currentQuestion.id === "budget") {
-      return answers.max_price === value;
-    } else if (currentQuestion.id === "interests") {
-      return answers.interests?.includes(value);
-    } else if (currentQuestion.id === "categories") {
-      return answers.categories?.includes(value);
-    } else if (currentQuestion.id === "persona") {
-      return JSON.stringify(answers.vibe) === JSON.stringify(value.vibe);
-    } else if (currentQuestion.id === "experience") {
-      return answers.experience_level === value;
-    }
+    if (currentQuestion.id === "occasion") return answers.occasion === value;
+    if (currentQuestion.id === "recipient") return JSON.stringify(answers.recipient) === JSON.stringify(value);
+    if (currentQuestion.id === "budget") return answers.max_price === value;
+    if (currentQuestion.id === "interests") return answers.interests?.includes(value);
+    if (currentQuestion.id === "categories") return answers.categories?.includes(value);
+    if (currentQuestion.id === "persona") return JSON.stringify(answers.vibe) === JSON.stringify(value.vibe);
+    if (currentQuestion.id === "experience") return answers.experience_level === value;
     return false;
   };
 
   const canProceed = () => {
     if (currentQuestion.id === "occasion") return !!answers.occasion;
-    if (currentQuestion.id === "occasion_date") return true; // Always allow (skippable or filled)
+    if (currentQuestion.id === "occasion_date") return true;
     if (currentQuestion.id === "recipient") return !!answers.recipient?.relationship;
+    if (currentQuestion.id === "partner_name") return true; // Optional
     if (currentQuestion.id === "budget") return !!answers.max_price;
     if (currentQuestion.id === "interests") return (answers.interests?.length || 0) > 0;
     if (currentQuestion.id === "categories") return (answers.categories?.length || 0) > 0;
@@ -369,6 +360,23 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
 
   return (
     <div className="w-full max-w-3xl mx-auto">
+      {/* Editing Banner */}
+      {isEditingProfile && (
+        <div className="mb-6 p-4 bg-blue-50 rounded-xl border-2 border-blue-200">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">👤</span>
+            <div className="flex-1">
+              <p className="font-semibold text-blue-900 mb-1">
+                Editing {answers.partner_name}'s Profile
+              </p>
+              <p className="text-sm text-blue-800">
+                We've pre-filled their preferences. You can adjust anything before searching.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex justify-between items-center mb-2">
@@ -402,83 +410,108 @@ export default function GiftQuiz({ onComplete }: QuizProps) {
         )}
       </div>
 
-      {/* Options Logic: Check if Date type or Grid type */}
-      {currentQuestion.type === "date" ? (
-         <div className="max-w-md mx-auto">
-            <input
-              type="date"
-              min={new Date().toISOString().split('T')[0]}
-              value={answers.occasion_date || ''}
-              onChange={(e) => handleSelect(e.target.value)}
-              className="w-full px-6 py-4 text-lg border-2 border-slate-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
-            />
+      {/* Inputs */}
+      {currentQuestion.type === "text" ? (
+        <div className="max-w-md mx-auto">
+          <input
+            type="text"
+            value={answers.partner_name || ''}
+            onChange={(e) => setAnswers({ ...answers, partner_name: e.target.value })}
+            placeholder="e.g., Sarah, Mom, Alex..."
+            className="w-full px-6 py-4 text-lg border-2 border-slate-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+            autoFocus
+          />
 
-            {answers.days_until_needed !== undefined && (
-              <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-100 animate-in fade-in slide-in-from-top-2">
-                <p className="text-sm text-blue-900">
-                  {answers.days_until_needed > 0 ? (
-                    <>
-                      📦 <strong>{answers.days_until_needed} days</strong> until the big day.
-                      We'll find gifts that arrive on time!
-                    </>
-                  ) : (
-                    <>
-                      ⚠️ That's coming up soon! We'll prioritize fast shipping.
-                    </>
-                  )}
-                </p>
-              </div>
-            )}
+          {answers.partner_name && (
+            <p className="mt-3 text-sm text-green-700 bg-green-50 p-3 rounded-lg">
+              ✓ Great! We'll find perfect gifts for {answers.partner_name}
+            </p>
+          )}
 
-            {currentQuestion.skipable && (
-              <button
-                onClick={() => handleSelect(null)} // passing null triggers the skip logic
-                className="w-full mt-4 px-4 py-3 text-slate-500 hover:text-slate-700 text-sm font-medium transition"
-              >
-                Skip - No specific deadline
-              </button>
-            )}
-         </div>
+          {currentQuestion.optional && (
+            <button
+              onClick={() => handleNext()}
+              className="w-full mt-4 px-4 py-3 text-slate-600 hover:text-slate-800 font-medium"
+            >
+              Skip - Don't personalize
+            </button>
+          )}
+        </div>
+      ) : currentQuestion.type === "date" ? (
+        <div className="max-w-md mx-auto">
+          <input
+            type="date"
+            min={new Date().toISOString().split('T')[0]}
+            value={answers.occasion_date || ''}
+            onChange={(e) => handleSelect(e.target.value)}
+            className="w-full px-6 py-4 text-lg border-2 border-slate-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+          />
+
+          {answers.days_until_needed !== undefined && (
+            <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-100">
+              <p className="text-sm text-blue-900">
+                {answers.days_until_needed > 0 ? (
+                  <>
+                    📦 <strong>{answers.days_until_needed} days</strong> until the big day.
+                    We'll find gifts that arrive on time!
+                  </>
+                ) : (
+                  <>
+                    ⚠️ That's coming up soon! We'll prioritize fast shipping.
+                  </>
+                )}
+              </p>
+            </div>
+          )}
+
+          {currentQuestion.skipable && (
+            <button
+              onClick={() => handleSelect(null)}
+              className="w-full mt-4 px-4 py-3 text-slate-500 hover:text-slate-700 text-sm font-medium transition"
+            >
+              Skip - No specific deadline
+            </button>
+          )}
+        </div>
       ) : (
-        /* Regular Grid Options */
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-            {currentQuestion.options?.map((option, idx) => {
+          {currentQuestion.options?.map((option, idx) => {
             const selected = isSelected(option.value);
             const isDisabled = isMultiSelect && !selected && selectedCount >= maxSelections;
 
             return (
-                <button
+              <button
                 key={idx}
                 onClick={() => !isDisabled && handleSelect(option.value)}
                 disabled={isDisabled}
                 className={`
-                    p-4 rounded-xl border-2 text-left transition-all
-                    ${selected
+                  p-4 rounded-xl border-2 text-left transition-all
+                  ${selected
                     ? 'border-blue-600 bg-blue-50 shadow-md'
                     : isDisabled
                     ? 'border-slate-200 bg-slate-50 opacity-50 cursor-not-allowed'
                     : 'border-slate-200 bg-white hover:border-blue-300 hover:shadow-md'
-                    }
+                  }
                 `}
-                >
+              >
                 <div className="flex items-center gap-3">
-                    {option.emoji && (
-                        <span className="text-2xl">{option.emoji}</span>
-                    )}
-                    <div>
-                        <div className="text-lg font-medium text-slate-900 leading-tight">
-                            {option.label}
-                        </div>
-                        {option.sublabel && (
-                            <div className="text-sm text-slate-500 mt-1">
-                            {option.sublabel}
-                            </div>
-                        )}
+                  {option.emoji && (
+                    <span className="text-2xl">{option.emoji}</span>
+                  )}
+                  <div>
+                    <div className="text-lg font-medium text-slate-900 leading-tight">
+                      {option.label}
                     </div>
+                    {option.sublabel && (
+                      <div className="text-sm text-slate-500 mt-1">
+                        {option.sublabel}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                </button>
+              </button>
             );
-            })}
+          })}
         </div>
       )}
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import GiftQuiz from "./components/GiftQuiz";
 
@@ -124,7 +124,9 @@ function normalizeUrl(url?: string): string | null {
   return `https://${url}`;
 }
 
-export default function Home() {
+// --- Main Logic Component ---
+
+function GiftApp() {
   const [showQuiz, setShowQuiz] = useState(true);
   const [results, setResults] = useState<Gift[]>([]);
   const [loading, setLoading] = useState(false);
@@ -247,7 +249,6 @@ export default function Home() {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
       // 1. Save/Update Partner Profile (if logged in and partner name provided)
-      // TODO: Check if user is logged in before saving
       const userId = "test_user_123"; // Replace with actual auth check
 
       if (userId && answers.partner_name) {
@@ -284,7 +285,6 @@ export default function Home() {
           }
         } catch (partnerError) {
           console.error("Failed to save partner profile:", partnerError);
-          // Don't fail the whole flow
         }
       }
 
@@ -622,5 +622,22 @@ export default function Home() {
         )}
       </div>
     </main>
+  );
+}
+
+// --- Suspense Wrapper ---
+
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-4 border-blue-600 mb-4"></div>
+          <p className="text-lg text-slate-600">Loading...</p>
+        </div>
+      </div>
+    }>
+      <GiftApp />
+    </Suspense>
   );
 }

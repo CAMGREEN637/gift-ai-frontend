@@ -149,13 +149,11 @@ function GiftApp() {
   const loadPartner = async (partnerId: string) => {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      // FIX: Added trailing slash to prevent 307 redirect CORS issues
       const res = await fetch(`${apiUrl}/partners/${partnerId}/`);
       const partner = await res.json();
 
       setSelectedPartner(partner);
 
-      // Pre-fill quiz with partner data
       const prefilledAnswers: QuizAnswers = {
         partner_id: partner.id,
         partner_name: partner.name,
@@ -267,14 +265,12 @@ function GiftApp() {
           };
 
           if (answers.partner_id) {
-            // Update existing partner - FIX: Added trailing slash
             await fetch(`${apiUrl}/partners/${answers.partner_id}/`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(partnerData),
             });
           } else {
-            // Create new partner - FIX: Added trailing slash
             const partnerRes = await fetch(`${apiUrl}/partners/`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -291,7 +287,9 @@ function GiftApp() {
 
       // 2. Get Gift Recommendations
       const query = buildQuery(answers);
-      let url = `${apiUrl}/recommend?query=${encodeURIComponent(query)}`;
+
+      // FIX: Ensure trailing slash exists before query parameters to avoid 307 redirect/CORS errors
+      let url = `${apiUrl}/recommend/?query=${encodeURIComponent(query)}`;
 
       if (answers.max_price && answers.max_price < 999999) {
         url += `&max_price=${answers.max_price}`;
@@ -305,7 +303,11 @@ function GiftApp() {
         url += `&partner_id=${answers.partner_id}`;
       }
 
-      // NEW: Pass occasion and relationship for personalization
+      // NEW: Pass partner_name directly for enhanced backend personalization
+      if (answers.partner_name) {
+        url += `&partner_name=${encodeURIComponent(answers.partner_name)}`;
+      }
+
       if (answers.occasion) {
         url += `&occasion=${encodeURIComponent(answers.occasion)}`;
       }
@@ -316,7 +318,7 @@ function GiftApp() {
 
       console.log("Fetching recommendations from:", url);
       const res = await fetch(url);
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) throw new Error(`Request failed with status: ${res.status}`);
 
       const data = await res.json();
       const gifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
@@ -413,7 +415,6 @@ function GiftApp() {
                 key={`${gift.name}-${idx}`}
                 className="rounded-2xl bg-white shadow-md border border-slate-200 overflow-hidden hover:shadow-xl transition-shadow"
               >
-                {/* Delivery Warning Banner */}
                 {deliveryStatus.showWarning && (
                   <div className={`
                     p-4 border-b-2
@@ -443,7 +444,6 @@ function GiftApp() {
                 )}
 
                 <div className="grid md:grid-cols-[240px_1fr] gap-6 p-6">
-                  {/* Image */}
                   {buyUrl ? (
                     <a href={buyUrl} target="_blank" rel="noopener noreferrer" className="block">
                       <div className="w-full h-56 bg-gradient-to-br from-slate-100 to-slate-50 rounded-xl overflow-hidden flex-shrink-0 hover:opacity-90 transition group relative">
@@ -476,7 +476,6 @@ function GiftApp() {
                     </div>
                   )}
 
-                  {/* Content */}
                   <div className="flex flex-col">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1 pr-4">
@@ -494,7 +493,6 @@ function GiftApp() {
                             </span>
                           )}
 
-                          {/* Delivery Badge */}
                           {deliveryStatus && (
                             <span className={`
                               rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap
@@ -511,7 +509,6 @@ function GiftApp() {
                             </span>
                           )}
 
-                          {/* Already Purchased Badge */}
                           {gift.already_purchased && (
                             <span className="rounded-full bg-amber-100 text-amber-800 px-3 py-1 text-xs font-semibold whitespace-nowrap">
                               🔁 Purchased Before
@@ -521,7 +518,6 @@ function GiftApp() {
                       </div>
                     </div>
 
-                    {/* Description */}
                     {gift.description && (
                       <div className="mb-4">
                         <p className="text-slate-600 text-sm leading-relaxed">
@@ -538,7 +534,6 @@ function GiftApp() {
                       </div>
                     )}
 
-                    {/* LLM Reason */}
                     {gift.reason && (
                       <div className="mb-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
                         <p className="text-sm font-semibold text-blue-900 mb-1.5">
@@ -550,7 +545,6 @@ function GiftApp() {
                       </div>
                     )}
 
-                    {/* Filtered Reasons */}
                     {filteredReasons.length > 0 && (
                       <div className="mb-4">
                         <div className="flex flex-wrap gap-2">
@@ -563,7 +557,6 @@ function GiftApp() {
                       </div>
                     )}
 
-                    {/* Confidence Bar */}
                     <div className="mt-auto pt-4">
                       <div className="flex justify-between items-center text-xs mb-2">
                         <span className="text-slate-500 font-medium">Match Confidence</span>
@@ -579,7 +572,6 @@ function GiftApp() {
                       </div>
                     </div>
 
-                    {/* CTA */}
                     {buyUrl && (
                       <div className="mt-5">
                         <a
@@ -602,7 +594,6 @@ function GiftApp() {
           })}
         </div>
 
-        {/* Last-Minute Ideas */}
         {results.some(g => getDeliveryStatus(g, quizAnswers?.days_until_needed)?.status === 'late') &&
          quizAnswers?.days_until_needed &&
          quizAnswers.days_until_needed < 7 && (

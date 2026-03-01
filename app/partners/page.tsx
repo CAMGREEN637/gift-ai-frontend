@@ -27,7 +27,8 @@ export default function PartnersPage() {
   const loadPartners = async () => {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      const res = await fetch(`${apiUrl}/partners`);
+      // FIX: Added trailing slash
+      const res = await fetch(`${apiUrl}/partners/`);
       const data = await res.json();
       setPartners(data);
     } catch (error) {
@@ -42,7 +43,8 @@ export default function PartnersPage() {
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      await fetch(`${apiUrl}/partners/${id}`, { method: "DELETE" });
+      // FIX: Added trailing slash
+      await fetch(`${apiUrl}/partners/${id}/`, { method: "DELETE" });
       loadPartners();
     } catch (error) {
       console.error("Failed to delete partner:", error);
@@ -133,63 +135,54 @@ export default function PartnersPage() {
                   {/* Staleness Warning */}
                   {freshness.status !== 'fresh' && (
                     <div className={`
-                      p-3 rounded-lg mb-4
-                      ${freshness.status === 'very_stale' ? 'bg-red-50 border border-red-200' : 'bg-yellow-50 border border-yellow-200'}
+                      p-3 rounded-lg mb-4 text-sm font-medium
+                      ${freshness.status === 'very_stale' ? 'bg-red-50 text-red-800 border border-red-200' : 'bg-yellow-50 text-yellow-800 border border-yellow-200'}
                     `}>
-                      <p className={`text-sm ${freshness.status === 'very_stale' ? 'text-red-800' : 'text-yellow-800'}`}>
-                        ⚠️ {freshness.message}. Their interests may have changed!
-                      </p>
+                      ⚠️ {freshness.message}. <Link href={`/?partner_id=${partner.id}`} className="underline">Update their preferences</Link>
                     </div>
                   )}
 
                   <div className="flex justify-between items-start">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900">
                         {partner.name}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {partner.relationship && (
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
-                            {partner.relationship}
-                          </span>
-                        )}
-                        {partner.interests?.slice(0, 3).map((interest, i) => (
+                      {partner.relationship && (
+                        <p className="text-slate-500 font-medium">
+                          {partner.relationship}
+                        </p>
+                      )}
+                      <div className="flex gap-2 mt-3 flex-wrap">
+                        {partner.interests.slice(0, 4).map((interest, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full"
+                            className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md"
                           >
                             {interest}
                           </span>
                         ))}
-                        {partner.interests?.length > 3 && (
-                          <span className="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full">
-                            +{partner.interests.length - 3} more
+                        {partner.interests.length > 4 && (
+                          <span className="px-2 py-1 bg-slate-100 text-slate-500 text-xs rounded-md">
+                            +{partner.interests.length - 4} more
                           </span>
                         )}
                       </div>
-                      {partner.birthday && (
-                        <p className="text-sm text-slate-600">
-                          🎂 Birthday: {new Date(partner.birthday).toLocaleDateString()}
-                        </p>
-                      )}
-                      {partner.last_gift_search_at && (
-                        <p className="text-sm text-slate-500">
-                          Last search: {new Date(partner.last_gift_search_at).toLocaleDateString()}
-                        </p>
-                      )}
                     </div>
+
                     <div className="flex gap-2">
                       <Link
                         href={`/?partner_id=${partner.id}`}
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
+                        className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition"
+                        title="Find Gifts"
                       >
-                        Find Gifts
+                        🎁
                       </Link>
                       <button
                         onClick={() => deletePartner(partner.id, partner.name)}
-                        className="px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition"
+                        className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition"
+                        title="Delete Profile"
                       >
-                        Delete
+                        🗑️
                       </button>
                     </div>
                   </div>

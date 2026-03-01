@@ -149,7 +149,8 @@ function GiftApp() {
   const loadPartner = async (partnerId: string) => {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      const res = await fetch(`${apiUrl}/partners/${partnerId}`);
+      // FIX: Added trailing slash
+      const res = await fetch(`${apiUrl}/partners/${partnerId}/`);
       const partner = await res.json();
 
       setSelectedPartner(partner);
@@ -267,14 +268,16 @@ function GiftApp() {
 
           if (answers.partner_id) {
             // Update existing partner
-            await fetch(`${apiUrl}/partners/${answers.partner_id}`, {
+            // FIX: Added trailing slash
+            await fetch(`${apiUrl}/partners/${answers.partner_id}/`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(partnerData),
             });
           } else {
             // Create new partner
-            const partnerRes = await fetch(`${apiUrl}/partners`, {
+            // FIX: Added trailing slash
+            const partnerRes = await fetch(`${apiUrl}/partners/`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(partnerData),
@@ -290,6 +293,9 @@ function GiftApp() {
 
       // 2. Get Gift Recommendations
       const query = buildQuery(answers);
+      // NOTE: Query params (?) attach to the end. If recommendation endpoints also enforce trailing slashes
+      // and aren't working, this might need to be `${apiUrl}/recommend/?query...`
+      // But typically search endpoints are more flexible. We will keep as is unless it breaks.
       let url = `${apiUrl}/recommend?query=${encodeURIComponent(query)}`;
 
       if (answers.max_price && answers.max_price < 999999) {

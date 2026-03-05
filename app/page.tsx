@@ -1,8 +1,13 @@
+// app/page.tsx
+
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import GiftQuiz from "./components/GiftQuiz";
+import AuthModal from "./components/AuthModal";
+import { useAuth } from "@/contexts/AuthContext";
+import { createClient } from "@/lib/supabase/client";
 
 // --- Types ---
 
@@ -46,6 +51,20 @@ type DeliveryStatus = {
   icon: string;
   showWarning?: boolean;
   warningText?: string;
+};
+
+// NEW: Partner interface to replace 'any'
+type Partner = {
+  id: string;
+  name: string;
+  gender?: string;
+  relationship?: string;
+  interests?: string[];
+  categories?: string[];
+  vibe?: string[];
+  personality_traits?: string[];
+  experience_level?: string;
+  preferred_price_range?: string;
 };
 
 // --- Helpers ---
@@ -133,25 +152,42 @@ function GiftApp() {
   const [error, setError] = useState("");
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswers | null>(null);
   const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
-  const [selectedPartner, setSelectedPartner] = useState<any>(null);
+
+  // UPDATED: Using the Partner type here instead of any
+  const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
+
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { user, session, signOut } = useAuth();
+  const supabase = createClient();
 
   // Load partner from URL if present
   useEffect(() => {
     const partnerId = searchParams.get('partner_id');
-    if (partnerId) {
+    if (partnerId && user) {
       loadPartner(partnerId);
     }
-  }, [searchParams]);
+  }, [searchParams, user]);
 
   const loadPartner = async (partnerId: string) => {
+    if (!user || !session) return;
+
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      const res = await fetch(`${apiUrl}/partners/${partnerId}/`);
-      const partner = await res.json();
+      const res = await fetch(`${apiUrl}/partners/${partnerId}`, {
+        headers: {
+          "Authorization": `Bearer ${session.access_token}`
+        }
+      });
 
+      if (!res.ok) {
+        console.error("Failed to load partner:", res.status);
+        return;
+      }
+
+      const partner: Partner = await res.json();
       setSelectedPartner(partner);
 
       const prefilledAnswers: QuizAnswers = {
@@ -247,10 +283,8 @@ function GiftApp() {
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-      // 1. Save/Update Partner Profile
-      const userId = "test_user_123";
-
-      if (userId && answers.partner_name) {
+      // 1. Save/Update Partner Profile (only if logged in)
+      if (user && session && answers.partner_name) {
         try {
           const partnerData = {
             name: answers.partner_name,
@@ -264,21 +298,31 @@ function GiftApp() {
             preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
           };
 
+          const headers = {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${session.access_token}`
+          };
+
           if (answers.partner_id) {
-            await fetch(`${apiUrl}/partners/${answers.partner_id}/`, {
+            // Update existing partner
+            await fetch(`${apiUrl}/partners/${answers.partner_id}`, {
               method: "PUT",
-              headers: { "Content-Type": "application/json" },
+              headers,
               body: JSON.stringify(partnerData),
             });
           } else {
-            const partnerRes = await fetch(`${apiUrl}/partners/`, {
+            // Create new partner
+            const partnerRes = await fetch(`${apiUrl}/partners`, {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers,
               body: JSON.stringify(partnerData),
             });
-            const newPartner = await partnerRes.json();
-            setQuizAnswers({ ...answers, partner_id: newPartner.id });
-            answers.partner_id = newPartner.id;
+
+            if (partnerRes.ok) {
+              const newPartner = await partnerRes.json();
+              setQuizAnswers({ ...answers, partner_id: newPartner.id });
+              answers.partner_id = newPartner.id;
+            }
           }
         } catch (partnerError) {
           console.error("Failed to save partner profile:", partnerError);
@@ -287,9 +331,7 @@ function GiftApp() {
 
       // 2. Get Gift Recommendations
       const query = buildQuery(answers);
-
-      // FIX: Ensure trailing slash exists before query parameters to avoid 307 redirect/CORS errors
-      let url = `${apiUrl}/recommend/?query=${encodeURIComponent(query)}`;
+      let url = `${apiUrl}/recommend?query=${encodeURIComponent(query)}`;
 
       if (answers.max_price && answers.max_price < 999999) {
         url += `&max_price=${answers.max_price}`;
@@ -299,11 +341,13 @@ function GiftApp() {
         url += `&days_until_needed=${answers.days_until_needed}`;
       }
 
-      if (answers.partner_id) {
+      // Pass user_id if logged in
+      if (user && answers.partner_id) {
         url += `&partner_id=${answers.partner_id}`;
+        url += `&user_id=${user.id}`;
       }
 
-      // NEW: Pass partner_name directly for enhanced backend personalization
+      // Pass partner_name for personalization
       if (answers.partner_name) {
         url += `&partner_name=${encodeURIComponent(answers.partner_name)}`;
       }
@@ -335,6 +379,30 @@ function GiftApp() {
     return (
       <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 px-6 py-12">
         <div className="mx-auto max-w-4xl">
+          {/* Auth Status Bar */}
+          <div className="flex justify-end mb-4">
+            {user ? (
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-gray-600">
+                  {user.email}
+                </span>
+                <button
+                  onClick={() => signOut()}
+                  className="text-sm text-gray-600 hover:text-gray-900 underline"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => setShowAuthModal(true)}
+                className="px-4 py-2 bg-white border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition font-medium"
+              >
+                Sign In to Save Partners
+              </button>
+            )}
+          </div>
+
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold text-slate-900 mb-4">
               🎁 Find the Perfect Gift
@@ -343,18 +411,45 @@ function GiftApp() {
               Answer a few questions and we'll find gifts they'll love
             </p>
           </div>
+
           {loading ? (
             <div className="text-center py-20">
               <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mb-4"></div>
               <p className="text-lg text-slate-600">Finding perfect gifts...</p>
             </div>
           ) : (
-            <GiftQuiz
-              onComplete={handleQuizComplete}
-              initialAnswers={quizAnswers || undefined}
-            />
+            <>
+              <GiftQuiz
+                onComplete={handleQuizComplete}
+                initialAnswers={quizAnswers || undefined}
+              />
+
+              {/* Login prompt if they entered a name but aren't logged in */}
+              {quizAnswers?.partner_name && !user && (
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg border-2 border-blue-200">
+                  <p className="text-blue-900 text-center">
+                    💡 <button
+                      onClick={() => setShowAuthModal(true)}
+                      className="font-semibold underline hover:text-blue-700"
+                    >
+                      Sign in
+                    </button> to save {quizAnswers.partner_name}'s profile for next time!
+                  </p>
+                </div>
+              )}
+            </>
           )}
         </div>
+
+        <AuthModal
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          onSuccess={() => {
+            if (quizAnswers?.partner_name) {
+              handleQuizComplete(quizAnswers);
+            }
+          }}
+        />
       </main>
     );
   }
@@ -374,12 +469,14 @@ function GiftApp() {
             )}
           </div>
           <div className="flex gap-3">
-            <button
-              onClick={() => router.push('/partners')}
-              className="px-4 py-2 rounded-lg border-2 border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition"
-            >
-              👥 My Partners
-            </button>
+            {user && (
+              <button
+                onClick={() => router.push('/partners')}
+                className="px-4 py-2 rounded-lg border-2 border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition"
+              >
+                👥 My Partners
+              </button>
+            )}
             <button
               onClick={() => {
                 setShowQuiz(true);
@@ -391,6 +488,14 @@ function GiftApp() {
             >
               ← Start Over
             </button>
+            {user && (
+              <button
+                onClick={() => signOut()}
+                className="px-4 py-2 rounded-lg border-2 border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition"
+              >
+                Sign Out
+              </button>
+            )}
           </div>
         </div>
 
@@ -574,6 +679,7 @@ function GiftApp() {
 
                     {buyUrl && (
                       <div className="mt-5">
+                        {/* UPDATED: Added the missing '<a' right here! */}
                         <a
                           href={buyUrl}
                           target="_blank"
@@ -623,6 +729,11 @@ function GiftApp() {
           </div>
         )}
       </div>
+
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+      />
     </main>
   );
 }

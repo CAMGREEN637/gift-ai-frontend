@@ -44,7 +44,7 @@ type QuizAnswers = {
 type DeliveryStatus = {
   status: "instant" | "estimated" | "on-time" | "tight" | "late";
   message: string;
-  color: string; // Changed to string to handle dynamic classes safely
+  color: string;
   icon: string;
   showWarning?: boolean;
   warningText?: string;
@@ -158,6 +158,7 @@ function GiftApp() {
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswers | null>(null);
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -211,6 +212,18 @@ function GiftApp() {
     if (enhanced.length > 0) enhanced = enhanced.charAt(0).toUpperCase() + enhanced.slice(1);
     if (enhanced.length > 0 && !enhanced.endsWith(".") && !enhanced.endsWith("!")) enhanced += ".";
     return enhanced;
+  };
+
+  const toggleDescription = (index: number) => {
+    setExpandedDescriptions((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
   };
 
   const handleQuizComplete = async (answers: QuizAnswers) => {
@@ -286,22 +299,40 @@ function GiftApp() {
     }
   };
 
-  if (showQuiz && results.length === 0) {
+  if (showQuiz || loading) {
     return (
       <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 px-6 py-12">
         <div className="mx-auto max-w-4xl">
           <div className="flex justify-end mb-4 gap-4">
             {user ? (
               <>
-                <button onClick={() => router.push("/partners")} className="px-4 py-2 bg-white border-2 border-slate-300 rounded-lg">👥 My Partners</button>
-                <button onClick={() => signOut()} className="text-sm text-gray-600 underline">Sign Out</button>
+                <button
+                  onClick={() => router.push("/partners")}
+                  className="px-4 py-2 bg-white border-2 border-slate-300 rounded-lg hover:bg-slate-50 transition"
+                >
+                  👥 My Partners
+                </button>
+                <button
+                  onClick={() => signOut()}
+                  className="text-sm text-gray-600 underline hover:text-gray-800"
+                >
+                  Sign Out
+                </button>
               </>
             ) : (
-              <button onClick={() => setShowAuthModal(true)} className="px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg">Sign In</button>
+              <button
+                onClick={() => setShowAuthModal(true)}
+                className="px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition"
+              >
+                Sign In
+              </button>
             )}
           </div>
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold text-slate-900 mb-4">🎁 Find the Perfect Gift</h1>
+            <p className="text-xl text-slate-600">
+              Answer a few questions and we'll find gifts they'll love
+            </p>
           </div>
           <GiftQuiz onComplete={handleQuizComplete} initialAnswers={quizAnswers || undefined} />
         </div>
@@ -310,48 +341,142 @@ function GiftApp() {
     );
   }
 
+  const colorClasses: Record<string, string> = {
+    green: "bg-green-100 text-green-800",
+    yellow: "bg-yellow-100 text-yellow-800",
+    red: "bg-red-100 text-red-800",
+    purple: "bg-purple-100 text-purple-800",
+    slate: "bg-slate-100 text-slate-800",
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="mx-auto max-w-5xl">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">{quizAnswers?.partner_name ? `Gifts for ${quizAnswers.partner_name}` : "Results"}</h1>
-          <button onClick={() => { setShowQuiz(true); setResults([]); }} className="px-4 py-2 bg-blue-600 text-white rounded-lg">← Start Over</button>
+          <h1 className="text-3xl font-bold text-slate-900">
+            🎁 {quizAnswers?.partner_name ? `Gifts for ${quizAnswers.partner_name}` : "Your Results"}
+          </h1>
+          <div className="flex gap-3">
+            {user && (
+              <button
+                onClick={() => router.push("/partners")}
+                className="px-4 py-2 bg-white border-2 border-slate-300 rounded-lg hover:bg-slate-50 transition"
+              >
+                👥 My Partners
+              </button>
+            )}
+            <button
+              onClick={() => {
+                setShowQuiz(true);
+                setResults([]);
+                setError("");
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              ← Start Over
+            </button>
+          </div>
         </div>
+
+        {error && (
+          <div className="bg-red-50 border-2 border-red-200 text-red-800 p-4 rounded-xl mb-8">
+            <p className="font-medium">⚠️ {error}</p>
+          </div>
+        )}
+
+        {results.length === 0 && !loading && (
+          <div className="bg-slate-100 rounded-2xl p-12 text-center">
+            <div className="text-6xl mb-4">🔍</div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">No gifts found</h2>
+            <p className="text-slate-600 mb-6">Try adjusting your preferences or budget</p>
+            <button
+              onClick={() => {
+                setShowQuiz(true);
+                setResults([]);
+              }}
+              className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
+            >
+              Try Again
+            </button>
+          </div>
+        )}
 
         <div className="space-y-6">
           {results.map((gift, idx) => {
             const buyUrl = normalizeUrl(gift.product_url);
             const delivery = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
+            const isExpanded = expandedDescriptions.has(idx);
+            const matchPercentage = Math.round((gift.confidence || 0.85) * 100);
+            const isTopPick = idx === 0;
 
-            // Map colors to tailwind classes explicitly to avoid purge issues
-            const colorClasses: Record<string, string> = {
-              green: "bg-green-100 text-green-800",
-              yellow: "bg-yellow-100 text-yellow-800",
-              red: "bg-red-100 text-red-800",
-              purple: "bg-purple-100 text-purple-800",
-              slate: "bg-slate-100 text-slate-800",
-            };
+            const truncatedDescription =
+              gift.description.length > 150
+                ? gift.description.substring(0, 150) + "..."
+                : gift.description;
 
             return (
-              <div key={idx} className="bg-white rounded-2xl shadow-md p-6 grid md:grid-cols-[240px_1fr] gap-6">
+              <div
+                key={idx}
+                className="bg-white rounded-2xl shadow-md p-6 grid md:grid-cols-[240px_1fr] gap-6 relative"
+              >
+                {isTopPick && (
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                    ⭐ TOP PICK
+                  </div>
+                )}
+
                 <div className="h-56 bg-slate-100 rounded-xl flex items-center justify-center overflow-hidden">
-                  {gift.image_url ? <img src={gift.image_url} alt={gift.name} className="object-contain max-h-full p-4" /> : <span className="text-6xl">🎁</span>}
+                  {gift.image_url ? (
+                    <img
+                      src={gift.image_url}
+                      alt={gift.name}
+                      className="object-contain max-h-full p-4"
+                    />
+                  ) : (
+                    <span className="text-6xl">🎁</span>
+                  )}
                 </div>
+
                 <div>
-                  <h2 className="text-xl font-bold mb-2">{gift.name}</h2>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-2xl font-bold text-blue-600">${gift.price.toFixed(2)}</span>
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${colorClasses[delivery.color] || colorClasses.slate}`}>
+                  <h2 className="text-xl font-bold mb-2 pr-20">{gift.name}</h2>
+
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <span className="text-2xl font-bold text-blue-600">
+                      ${gift.price.toFixed(2)}
+                    </span>
+
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
+                      {matchPercentage}% Match
+                    </span>
+
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-bold ${
+                        colorClasses[delivery.color] || colorClasses.slate
+                      }`}
+                    >
                       {delivery.icon} {delivery.message}
                     </span>
                   </div>
-                  <p className="text-slate-600 text-sm mb-4">{gift.description}</p>
+
+                  <div className="text-slate-600 text-sm mb-4">
+                    {isExpanded ? gift.description : truncatedDescription}
+                    {gift.description.length > 150 && (
+                      <button
+                        onClick={() => toggleDescription(idx)}
+                        className="ml-2 text-blue-600 hover:text-blue-700 font-medium underline"
+                      >
+                        {isExpanded ? "Show less" : "Read more"}
+                      </button>
+                    )}
+                  </div>
+
                   {gift.reason && (
-                    <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 mb-4 text-sm">
-                      <p className="font-semibold text-blue-900">💝 Why this works</p>
-                      <p className="text-blue-800">{enhanceReason(gift.reason)}</p>
+                    <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 mb-4">
+                      <p className="text-sm font-semibold text-blue-900">💝 Why this works</p>
+                      <p className="text-sm text-blue-800">{enhanceReason(gift.reason)}</p>
                     </div>
                   )}
+
                   {buyUrl && (
                     <a
                       href={buyUrl}
@@ -374,7 +499,16 @@ function GiftApp() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center font-bold">Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mb-4"></div>
+            <p className="text-lg text-slate-600">Loading...</p>
+          </div>
+        </div>
+      }
+    >
       <GiftApp />
     </Suspense>
   );

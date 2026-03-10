@@ -55,7 +55,7 @@ type QuizProps = {
 
 // --- Constants ---
 
-const FEEDBACK_DISPLAY_DURATION = 900; // ms - matches animation duration
+const FEEDBACK_DISPLAY_DURATION = 1400; // ms - increased from 900ms for better readability
 const LOADING_SCREEN_DURATION = 2500; // ms - creates labor illusion
 
 // --- Component ---
@@ -85,7 +85,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   // Helper: Calculate days until date
   const getDaysUntil = (dateString: string): number => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0); // Normalize to midnight
+    today.setHours(0, 0, 0, 0);
 
     const target = new Date(dateString);
     target.setHours(0, 0, 0, 0);
@@ -109,11 +109,11 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   // Helper: Get min/max dates for date input
   const getDateLimits = () => {
     const today = new Date();
-    const minDate = today.toISOString().split('T')[0];
+    const minDate = today.toISOString().split("T")[0];
 
     const oneYearFromNow = new Date();
     oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-    const maxDate = oneYearFromNow.toISOString().split('T')[0];
+    const maxDate = oneYearFromNow.toISOString().split("T")[0];
 
     return { minDate, maxDate };
   };
@@ -243,7 +243,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   // Handle option selection
   const handleSelect = (value: OptionValue, feedbackMsg?: string) => {
-    // Validation
     if (value === undefined && currentQuestion.id !== "occasion_date") {
       return;
     }
@@ -251,7 +250,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     let newAnswers = { ...answers };
 
     try {
-      // Handle each question type
       if (currentQuestion.id === "occasion") {
         const occasionValue = value as string;
         let dateToPreFill: string | undefined;
@@ -315,7 +313,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       setAnswers(newAnswers);
       setError(null);
 
-      // Auto-advance for single-select questions
       if (currentQuestion.type === "single" && feedbackMsg) {
         setActiveFeedback(feedbackMsg);
         setTimeout(() => {
@@ -333,7 +330,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     }
   };
 
-  // Check if option is selected
   const isSelected = (value: OptionValue): boolean => {
     if (currentQuestion.id === "occasion") return answers.occasion === value;
     if (currentQuestion.id === "recipient")
@@ -348,7 +344,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     return false;
   };
 
-  // Check if can proceed
   const canProceed = (): boolean => {
     if (currentQuestion.optional) return true;
     if (currentQuestion.id === "occasion") return !!answers.occasion;
@@ -361,7 +356,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     return false;
   };
 
-  // Navigation handlers
   const handleNext = () => {
     if (!canProceed() && !currentQuestion.optional) {
       setError("Please make a selection to continue.");
@@ -396,7 +390,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   const selectedCount = currentQuestion.id === "interests" ? answers.interests?.length || 0 : 0;
   const { minDate, maxDate } = getDateLimits();
 
-  // Loading screen
   if (isFindingGifts) {
     return (
       <div className="w-full max-w-3xl mx-auto min-h-[400px] flex flex-col items-center justify-center text-center p-8">
@@ -413,7 +406,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     );
   }
 
-  // Main quiz UI
   return (
     <div className="w-full max-w-3xl mx-auto min-h-[400px]">
       {isEditingProfile && (
@@ -424,7 +416,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         </div>
       )}
 
-      {/* Progress bar */}
       <div className="mb-8">
         <div className="flex justify-between text-sm text-slate-600 mb-2">
           <span>Question {step + 1} of {questions.length}</span>
@@ -438,17 +429,15 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         </div>
       </div>
 
-      {/* Error message */}
       {error && (
         <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
           <p className="text-red-800 font-medium">⚠️ {error}</p>
         </div>
       )}
 
-      {/* Feedback animation */}
       {activeFeedback ? (
-        <div className="flex items-center justify-center py-20 px-4 animate-pulse">
-          <p className="text-2xl font-medium text-blue-600 text-center transition-opacity duration-300">
+        <div className="flex items-center justify-center py-20 px-4">
+          <p className="text-2xl font-medium text-blue-600 text-center animate-pulse">
             {activeFeedback}
           </p>
         </div>
@@ -466,7 +455,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             )}
           </div>
 
-          {/* Text input */}
           {currentQuestion.type === "text" ? (
             <div className="mb-8 max-w-md">
               <label htmlFor="partner-name" className="sr-only">
@@ -489,7 +477,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               <p className="text-xs text-slate-400 mt-2">Optional</p>
             </div>
           ) : currentQuestion.type === "date" ? (
-            /* Date input */
             <div className="mb-8 max-w-md">
               <label htmlFor="occasion-date" className="sr-only">
                 Occasion Date
@@ -510,7 +497,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               </p>
             </div>
           ) : (
-            /* Option buttons */
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {currentQuestion.options?.map((option, idx) => {
                 const selected = isSelected(option.value);
@@ -553,7 +539,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             </div>
           )}
 
-          {/* Navigation buttons */}
           <div className="flex gap-4 mt-8">
             {step > 0 && (
               <button

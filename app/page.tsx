@@ -10,6 +10,7 @@ import { useAuth } from "@/contexts/AuthContext";
 
 type Gift = {
   name: string;
+  display_name?: string; // ✅ Added display_name to the type
   price: number;
   confidence: number;
   description: string;
@@ -409,6 +410,9 @@ function GiftApp() {
             const matchPercentage = Math.round((gift.confidence || 0.85) * 100);
             const isTopPick = idx === 0;
 
+            // ✅ Compute the best name to show
+            const displayTitle = gift.display_name || gift.name;
+
             const truncatedDescription =
               gift.description.length > 150
                 ? gift.description.substring(0, 150) + "..."
@@ -429,7 +433,7 @@ function GiftApp() {
                   {gift.image_url ? (
                     <img
                       src={gift.image_url}
-                      alt={gift.name}
+                      alt={displayTitle} // ✅ Updated image alt text
                       className="object-contain max-h-full p-4"
                     />
                   ) : (
@@ -438,7 +442,8 @@ function GiftApp() {
                 </div>
 
                 <div>
-                  <h2 className="text-xl font-bold mb-2 pr-20">{gift.name}</h2>
+                  {/* ✅ Updated heading to use displayTitle */}
+                  <h2 className="text-xl font-bold mb-2 pr-20">{displayTitle}</h2>
 
                   <div className="flex items-center gap-3 mb-4 flex-wrap">
                     <span className="text-2xl font-bold text-blue-600">

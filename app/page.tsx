@@ -10,7 +10,7 @@ import { useAuth } from "@/contexts/AuthContext";
 
 type Gift = {
   name: string;
-  display_name?: string; // ✅ Added display_name to the type
+  display_name?: string;
   price: number;
   confidence: number;
   description: string;
@@ -38,6 +38,7 @@ type QuizAnswers = {
   personality?: string[];
   experience_level?: string;
   days_until_needed?: number;
+  min_price?: number;
   max_price?: number;
   occasion_date?: string;
 };
@@ -285,8 +286,18 @@ function GiftApp() {
       const query = queryParts.join(" ");
       let url = `${apiUrl}/recommend?query=${encodeURIComponent(query)}`;
       if (answers.max_price) url += `&max_price=${answers.max_price}`;
+      if (answers.min_price) url += `&min_price=${answers.min_price}`;
       if (answers.days_until_needed) url += `&days_until_needed=${answers.days_until_needed}`;
       if (answers.partner_id) url += `&partner_id=${answers.partner_id}`;
+      if (answers.occasion) url += `&occasion=${encodeURIComponent(answers.occasion)}`;
+      if (answers.recipient?.relationship) url += `&relationship=${encodeURIComponent(answers.recipient.relationship)}`;
+
+      // Send each interest as a separate param so FastAPI parses them as a list
+      if (answers.interests?.length) {
+        answers.interests.forEach((i) => {
+          url += `&interests=${encodeURIComponent(i)}`;
+        });
+      }
 
       const res = await fetch(url);
       if (!res.ok) throw new Error("Recommendation request failed");
@@ -410,7 +421,6 @@ function GiftApp() {
             const matchPercentage = Math.round((gift.confidence || 0.85) * 100);
             const isTopPick = idx === 0;
 
-            // ✅ Compute the best name to show
             const displayTitle = gift.display_name || gift.name;
 
             const truncatedDescription =
@@ -433,7 +443,7 @@ function GiftApp() {
                   {gift.image_url ? (
                     <img
                       src={gift.image_url}
-                      alt={displayTitle} // ✅ Updated image alt text
+                      alt={displayTitle}
                       className="object-contain max-h-full p-4"
                     />
                   ) : (
@@ -442,7 +452,6 @@ function GiftApp() {
                 </div>
 
                 <div>
-                  {/* ✅ Updated heading to use displayTitle */}
                   <h2 className="text-xl font-bold mb-2 pr-20">{displayTitle}</h2>
 
                   <div className="flex items-center gap-3 mb-4 flex-wrap">

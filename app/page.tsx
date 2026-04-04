@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import GiftQuiz from "./components/GiftQuiz";
+import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
 import AuthModal from "./components/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -22,22 +22,6 @@ type Gift = {
   already_purchased?: boolean;
 };
 
-type QuizAnswers = {
-  occasion?: string;
-  recipient?: { gender?: string; relationship?: string };
-  partner_name?: string;
-  partner_id?: string;
-  interests?: string[];
-  categories?: string[];
-  vibe?: string[];
-  personality?: string[];
-  experience_level?: string;
-  days_until_needed?: number;
-  min_price?: number;
-  max_price?: number;
-  occasion_date?: string;
-};
-
 type DeliveryStatus = {
   status: "instant" | "estimated" | "on-time" | "tight" | "late";
   message: string;
@@ -50,13 +34,12 @@ type DeliveryStatus = {
 type Partner = {
   id: string;
   name: string;
-  gender?: string;
+  relationship_stage?: string;
+  // legacy fields kept for backward compat with saved profiles
   relationship?: string;
   interests?: string[];
-  categories?: string[];
   vibe?: string[];
   personality_traits?: string[];
-  experience_level?: string;
   preferred_price_range?: string;
 };
 
@@ -97,27 +80,28 @@ function normalizeUrl(url?: string): string | null {
   return `https://${url}`;
 }
 
-// --- Delivery badge colors ---
 const deliveryColorClasses: Record<string, string> = {
-  green: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  green:  "bg-emerald-50 text-emerald-700 border-emerald-200",
   yellow: "bg-amber-50 text-amber-700 border-amber-200",
-  red: "bg-red-50 text-red-700 border-red-200",
+  red:    "bg-red-50 text-red-700 border-red-200",
   purple: "bg-violet-50 text-violet-700 border-violet-200",
-  stone: "bg-stone-100 text-stone-600 border-stone-200",
+  stone:  "bg-stone-100 text-stone-600 border-stone-200",
 };
 
 // --- Main Logic Component ---
 function GiftApp() {
-  const [showQuiz, setShowQuiz] = useState(true);
-  const [results, setResults] = useState<Gift[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [quizAnswers, setQuizAnswers] = useState<QuizAnswers | null>(null);
-  const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showQuiz, setShowQuiz]                       = useState(true);
+  const [results, setResults]                         = useState<Gift[]>([]);
+  const [loading, setLoading]                         = useState(false);
+  const [error, setError]                             = useState("");
+  const [quizAnswers, setQuizAnswers]                 = useState<QuizAnswers | null>(null);
+  const [selectedPartner, setSelectedPartner]         = useState<Partner | null>(null);
+  const [showAuthModal, setShowAuthModal]             = useState(false);
   const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
+  const [resultsHeadline, setResultsHeadline]         = useState<string>("");
+  const [resultsSubline, setResultsSubline]           = useState<string>("");
 
-  const router = useRouter();
+  const router      = useRouter();
   const searchParams = useSearchParams();
   const { user, session, signOut } = useAuth();
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -136,21 +120,22 @@ function GiftApp() {
       if (!res.ok) return;
       const partner: Partner = await res.json();
       setSelectedPartner(partner);
+
+      // Map saved partner profile into new QuizAnswers shape
+      // relationship_stage is the new field; fall back to legacy relationship
+      // for partners saved before the migration
       setQuizAnswers({
-        partner_id: partner.id,
-        partner_name: partner.name,
-        recipient: { relationship: partner.relationship },
-        interests: partner.interests || [],
-        categories: partner.categories || [],
-        vibe: partner.vibe || [],
-        personality: partner.personality_traits || [],
-        experience_level: partner.experience_level,
-        max_price: partner.preferred_price_range
-          ? parseInt(partner.preferred_price_range.replace(/\D/g, ""))
-          : undefined,
+        partner_id:         partner.id,
+        partner_name:       partner.name,
+        relationship_stage: (partner.relationship_stage ?? partner.relationship) as QuizAnswers["relationship_stage"],
+        interests:          (partner.interests ?? []) as QuizAnswers["interests"],
+        vibe:               (partner.vibe ?? []) as QuizAnswers["vibe"],
+        max_price:          partner.preferred_price_range
+                              ? parseInt(partner.preferred_price_range.replace(/\D/g, ""))
+                              : undefined,
       });
-    } catch (error) {
-      console.error("Failed to load partner:", error);
+    } catch (err) {
+      console.error("Failed to load partner:", err);
     }
   };
 
@@ -181,62 +166,76 @@ function GiftApp() {
     setQuizAnswers(answers);
 
     try {
+      // ------------------------------------------------------------------
+      // Save or update partner profile if user is logged in
+      // Maps new QuizAnswers fields back to the profile schema
+      // ------------------------------------------------------------------
       if (user && session && answers.partner_name) {
         const recipientData = {
-          name: answers.partner_name,
-          relationship: answers.recipient?.relationship,
-          birthday: answers.occasion_date || null,
-          interests: answers.interests || [],
-          categories: answers.categories || [],
-          vibe: answers.vibe || [],
-          personality_traits: answers.personality || [],
-          experience_level: answers.experience_level,
-          preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
+          name:               answers.partner_name,
+          relationship_stage: answers.relationship_stage,
+          interests:          answers.interests ?? [],
+          vibe:               answers.vibe ?? [],
+          preferred_price_range: answers.max_price
+                                   ? `Up to $${answers.max_price}`
+                                   : undefined,
         };
         const headers = {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${session.access_token}`,
+          Authorization:  `Bearer ${session.access_token}`,
         };
+
         let savedRecipient;
         if (answers.partner_id) {
-          const updateRes = await fetch(`${apiUrl}/user-profile/recipients/${answers.partner_id}`, {
-            method: "PUT", headers, body: JSON.stringify(recipientData),
-          });
+          const updateRes = await fetch(
+            `${apiUrl}/user-profile/recipients/${answers.partner_id}`,
+            { method: "PUT", headers, body: JSON.stringify(recipientData) }
+          );
           if (updateRes.ok) savedRecipient = await updateRes.json();
         } else {
-          const createRes = await fetch(`${apiUrl}/user-profile/recipients`, {
-            method: "POST", headers, body: JSON.stringify(recipientData),
-          });
+          const createRes = await fetch(
+            `${apiUrl}/user-profile/recipients`,
+            { method: "POST", headers, body: JSON.stringify(recipientData) }
+          );
           if (createRes.ok) savedRecipient = await createRes.json();
         }
+
         if (savedRecipient?.id) {
           answers.partner_id = savedRecipient.id;
           setQuizAnswers({ ...answers, partner_id: savedRecipient.id });
         }
       }
 
-      const queryParts = [];
-      if (answers.occasion) queryParts.push(`${answers.occasion} gift`);
-      if (answers.recipient?.relationship) queryParts.push(`for ${answers.recipient.relationship}`);
-      if (answers.partner_name) queryParts.push(`named ${answers.partner_name}`);
-      if (answers.interests?.length) queryParts.push(`who loves ${answers.interests.join(", ")}`);
-      const query = queryParts.join(" ");
+      // ------------------------------------------------------------------
+      // POST /recommend with the full RecommendRequest body
+      // Replaces the old GET with query string params
+      // ------------------------------------------------------------------
+      const res = await fetch(`${apiUrl}/recommend`, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          occasion:           answers.occasion,
+          occasion_date:      answers.occasion_date,
+          days_until_needed:  answers.days_until_needed,
+          relationship_stage: answers.relationship_stage,
+          partner_name:       answers.partner_name,
+          partner_id:         answers.partner_id,
+          vibe:               answers.vibe ?? [],
+          max_price:          answers.max_price,
+          confidence:         answers.confidence,
+          archetypes:         answers.archetypes ?? [],
+          interests:          answers.interests ?? [],
+          overlap_interests:  answers.overlap_interests ?? [],
+        }),
+      });
 
-      let url = `${apiUrl}/recommend?query=${encodeURIComponent(query)}`;
-      if (answers.max_price) url += `&max_price=${answers.max_price}`;
-      if (answers.min_price) url += `&min_price=${answers.min_price}`;
-      if (answers.days_until_needed) url += `&days_until_needed=${answers.days_until_needed}`;
-      if (answers.partner_id) url += `&partner_id=${answers.partner_id}`;
-      if (answers.occasion) url += `&occasion=${encodeURIComponent(answers.occasion)}`;
-      if (answers.recipient?.relationship) url += `&relationship=${encodeURIComponent(answers.recipient.relationship)}`;
-      if (answers.interests?.length) {
-        answers.interests.forEach((i) => { url += `&interests=${encodeURIComponent(i)}`; });
-      }
-
-      const res = await fetch(url);
       if (!res.ok) throw new Error("Recommendation request failed");
       const data = await res.json();
+
       setResults(Array.isArray(data.gifts) ? data.gifts : []);
+      setResultsHeadline(data.results_headline ?? "");
+      setResultsSubline(data.results_subline ?? "");
+
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to fetch recommendations.");
     } finally {
@@ -244,7 +243,7 @@ function GiftApp() {
     }
   };
 
-  // --- Loading screen (shown while API call is in flight) ---
+  // --- Loading screen ---
   if (loading) {
     return (
       <main className="min-h-screen bg-stone-50 flex items-center justify-center">
@@ -308,14 +307,17 @@ function GiftApp() {
             Find the perfect gift
           </h1>
           <p className="text-stone-500 text-lg max-w-md mx-auto">
-            Answer a few questions and we'll match you with gifts they'll genuinely love.
+            Answer a few questions and we'll match you with gifts she'll genuinely love.
           </p>
         </div>
 
         {/* Quiz card */}
         <div className="max-w-5xl mx-auto px-6 pb-20">
           <div className="bg-white rounded-3xl border border-stone-100 shadow-sm p-8 md:p-12">
-            <GiftQuiz onComplete={handleQuizComplete} initialAnswers={quizAnswers || undefined} />
+            <GiftQuiz
+              onComplete={handleQuizComplete}
+              initialAnswers={quizAnswers ?? undefined}
+            />
           </div>
         </div>
 
@@ -333,7 +335,7 @@ function GiftApp() {
         .font-serif { font-family: 'DM Serif Display', serif !important; }
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(16px); }
-          to { opacity: 1; transform: translateY(0); }
+          to   { opacity: 1; transform: translateY(0); }
         }
         .card-animate {
           animation: fadeUp 0.4s ease forwards;
@@ -355,7 +357,7 @@ function GiftApp() {
               </button>
             )}
             <button
-              onClick={() => { setShowQuiz(true); setResults([]); setError(""); }}
+              onClick={() => { setShowQuiz(true); setResults([]); setError(""); setResultsHeadline(""); setResultsSubline(""); }}
               className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all"
             >
               Start over
@@ -365,18 +367,20 @@ function GiftApp() {
       </nav>
 
       <div className="max-w-5xl mx-auto px-6 py-12">
-        {/* Page heading */}
+        {/* Page heading — uses smart copy from backend when available */}
         <div className="mb-10">
           <h1 className="font-serif text-4xl text-stone-900 tracking-tight">
-            {quizAnswers?.partner_name
-              ? `Gifts for ${quizAnswers.partner_name}`
-              : "Your recommendations"}
+            {resultsHeadline ||
+              (quizAnswers?.partner_name
+                ? `Gifts for ${quizAnswers.partner_name}`
+                : "Your recommendations")}
           </h1>
-          {results.length > 0 && (
-            <p className="text-stone-400 mt-1 text-sm">
-              {results.length} curated picks, ranked by match
-            </p>
-          )}
+          <p className="text-stone-400 mt-1 text-sm">
+            {resultsSubline ||
+              (results.length > 0
+                ? `${results.length} curated picks, ranked by match`
+                : "")}
+          </p>
         </div>
 
         {/* Error */}
@@ -411,9 +415,9 @@ function GiftApp() {
             const isTopPick = idx === 0;
             const displayTitle = gift.display_name || gift.name;
             const truncatedDescription =
-              gift.description.length > 150
+              gift.description && gift.description.length > 150
                 ? gift.description.substring(0, 150) + "…"
-                : gift.description;
+                : gift.description ?? "";
 
             return (
               <div
@@ -474,17 +478,19 @@ function GiftApp() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-stone-500 text-sm mb-4 leading-relaxed">
-                      {isExpanded ? gift.description : truncatedDescription}
-                      {gift.description.length > 150 && (
-                        <button
-                          onClick={() => toggleDescription(idx)}
-                          className="ml-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm"
-                        >
-                          {isExpanded ? "Show less" : "Read more"}
-                        </button>
-                      )}
-                    </p>
+                    {gift.description && (
+                      <p className="text-stone-500 text-sm mb-4 leading-relaxed">
+                        {isExpanded ? gift.description : truncatedDescription}
+                        {gift.description.length > 150 && (
+                          <button
+                            onClick={() => toggleDescription(idx)}
+                            className="ml-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                          >
+                            {isExpanded ? "Show less" : "Read more"}
+                          </button>
+                        )}
+                      </p>
+                    )}
 
                     {/* Why this works */}
                     {gift.reason && (

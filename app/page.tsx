@@ -35,8 +35,7 @@ type Partner = {
   id: string;
   name: string;
   relationship_stage?: string;
-  // legacy fields kept for backward compat with saved profiles
-  relationship?: string;
+  relationship?: string; // legacy fallback
   interests?: string[];
   vibe?: string[];
   personality_traits?: string[];
@@ -90,18 +89,18 @@ const deliveryColorClasses: Record<string, string> = {
 
 // --- Main Logic Component ---
 function GiftApp() {
-  const [showQuiz, setShowQuiz]                       = useState(true);
-  const [results, setResults]                         = useState<Gift[]>([]);
-  const [loading, setLoading]                         = useState(false);
-  const [error, setError]                             = useState("");
-  const [quizAnswers, setQuizAnswers]                 = useState<QuizAnswers | null>(null);
-  const [selectedPartner, setSelectedPartner]         = useState<Partner | null>(null);
-  const [showAuthModal, setShowAuthModal]             = useState(false);
+  const [showQuiz, setShowQuiz]                         = useState(true);
+  const [results, setResults]                           = useState<Gift[]>([]);
+  const [loading, setLoading]                           = useState(false);
+  const [error, setError]                               = useState("");
+  const [quizAnswers, setQuizAnswers]                   = useState<QuizAnswers | null>(null);
+  const [selectedPartner, setSelectedPartner]           = useState<Partner | null>(null);
+  const [showAuthModal, setShowAuthModal]               = useState(false);
   const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
-  const [resultsHeadline, setResultsHeadline]         = useState<string>("");
-  const [resultsSubline, setResultsSubline]           = useState<string>("");
+  const [resultsHeadline, setResultsHeadline]           = useState<string>("");
+  const [resultsSubline, setResultsSubline]             = useState<string>("");
 
-  const router      = useRouter();
+  const router       = useRouter();
   const searchParams = useSearchParams();
   const { user, session, signOut } = useAuth();
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -120,10 +119,6 @@ function GiftApp() {
       if (!res.ok) return;
       const partner: Partner = await res.json();
       setSelectedPartner(partner);
-
-      // Map saved partner profile into new QuizAnswers shape
-      // relationship_stage is the new field; fall back to legacy relationship
-      // for partners saved before the migration
       setQuizAnswers({
         partner_id:         partner.id,
         partner_name:       partner.name,
@@ -166,19 +161,14 @@ function GiftApp() {
     setQuizAnswers(answers);
 
     try {
-      // ------------------------------------------------------------------
-      // Save or update partner profile if user is logged in
-      // Maps new QuizAnswers fields back to the profile schema
-      // ------------------------------------------------------------------
+      // Save or update partner profile if logged in
       if (user && session && answers.partner_name) {
         const recipientData = {
-          name:               answers.partner_name,
-          relationship_stage: answers.relationship_stage,
-          interests:          answers.interests ?? [],
-          vibe:               answers.vibe ?? [],
-          preferred_price_range: answers.max_price
-                                   ? `Up to $${answers.max_price}`
-                                   : undefined,
+          name:                 answers.partner_name,
+          relationship_stage:   answers.relationship_stage,
+          interests:            answers.interests ?? [],
+          vibe:                 answers.vibe ?? [],
+          preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
         };
         const headers = {
           "Content-Type": "application/json",
@@ -206,10 +196,7 @@ function GiftApp() {
         }
       }
 
-      // ------------------------------------------------------------------
-      // POST /recommend with the full RecommendRequest body
-      // Replaces the old GET with query string params
-      // ------------------------------------------------------------------
+      // POST /recommend
       const res = await fetch(`${apiUrl}/recommend`, {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
@@ -220,11 +207,12 @@ function GiftApp() {
           relationship_stage: answers.relationship_stage,
           partner_name:       answers.partner_name,
           partner_id:         answers.partner_id,
-          vibe:               answers.vibe ?? [],
+          vibe:               answers.vibe          ?? [],
+          gift_types:         answers.gift_types    ?? [],  // new
           max_price:          answers.max_price,
           confidence:         answers.confidence,
-          archetypes:         answers.archetypes ?? [],
-          interests:          answers.interests ?? [],
+          archetypes:         answers.archetypes    ?? [],
+          interests:          answers.interests     ?? [],
           overlap_interests:  answers.overlap_interests ?? [],
         }),
       });
@@ -269,7 +257,6 @@ function GiftApp() {
           .font-serif { font-family: 'DM Serif Display', serif !important; }
         `}</style>
 
-        {/* Nav */}
         <nav className="border-b border-stone-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
           <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
             <span className="font-serif text-xl text-stone-900">Gift AI</span>
@@ -301,7 +288,6 @@ function GiftApp() {
           </div>
         </nav>
 
-        {/* Hero */}
         <div className="max-w-5xl mx-auto px-6 pt-16 pb-10 text-center">
           <h1 className="font-serif text-5xl text-stone-900 mb-3 tracking-tight leading-tight">
             Find the perfect gift
@@ -311,7 +297,6 @@ function GiftApp() {
           </p>
         </div>
 
-        {/* Quiz card */}
         <div className="max-w-5xl mx-auto px-6 pb-20">
           <div className="bg-white rounded-3xl border border-stone-100 shadow-sm p-8 md:p-12">
             <GiftQuiz
@@ -333,17 +318,10 @@ function GiftApp() {
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap');
         body { font-family: 'DM Sans', sans-serif; }
         .font-serif { font-family: 'DM Serif Display', serif !important; }
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .card-animate {
-          animation: fadeUp 0.4s ease forwards;
-          opacity: 0;
-        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        .card-animate { animation: fadeUp 0.4s ease forwards; opacity: 0; }
       `}</style>
 
-      {/* Nav */}
       <nav className="border-b border-stone-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <span className="font-serif text-xl text-stone-900">Gift AI</span>
@@ -357,7 +335,13 @@ function GiftApp() {
               </button>
             )}
             <button
-              onClick={() => { setShowQuiz(true); setResults([]); setError(""); setResultsHeadline(""); setResultsSubline(""); }}
+              onClick={() => {
+                setShowQuiz(true);
+                setResults([]);
+                setError("");
+                setResultsHeadline("");
+                setResultsSubline("");
+              }}
               className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all"
             >
               Start over
@@ -367,7 +351,6 @@ function GiftApp() {
       </nav>
 
       <div className="max-w-5xl mx-auto px-6 py-12">
-        {/* Page heading — uses smart copy from backend when available */}
         <div className="mb-10">
           <h1 className="font-serif text-4xl text-stone-900 tracking-tight">
             {resultsHeadline ||
@@ -377,20 +360,16 @@ function GiftApp() {
           </h1>
           <p className="text-stone-400 mt-1 text-sm">
             {resultsSubline ||
-              (results.length > 0
-                ? `${results.length} curated picks, ranked by match`
-                : "")}
+              (results.length > 0 ? `${results.length} curated picks, ranked by match` : "")}
           </p>
         </div>
 
-        {/* Error */}
         {error && (
           <div className="bg-red-50 border border-red-100 text-red-700 px-5 py-4 rounded-2xl mb-8">
             <p className="font-medium text-sm">{error}</p>
           </div>
         )}
 
-        {/* Empty state */}
         {results.length === 0 && !loading && (
           <div className="bg-white border border-stone-100 rounded-3xl p-16 text-center shadow-sm">
             <p className="text-4xl mb-4">🔍</p>
@@ -405,7 +384,6 @@ function GiftApp() {
           </div>
         )}
 
-        {/* Gift cards */}
         <div className="space-y-5">
           {results.map((gift, idx) => {
             const buyUrl = normalizeUrl(gift.product_url);
@@ -427,28 +405,20 @@ function GiftApp() {
                 }`}
                 style={{ animationDelay: `${idx * 80}ms` }}
               >
-                {/* Top pick accent bar */}
                 {isTopPick && (
                   <div className="h-1 w-full bg-gradient-to-r from-amber-400 to-amber-500" />
                 )}
 
                 <div className="grid md:grid-cols-[220px_1fr] gap-0">
-                  {/* Image */}
                   <div className="bg-stone-50 flex items-center justify-center p-6 border-r border-stone-100 min-h-[180px]">
                     {gift.image_url ? (
-                      <img
-                        src={gift.image_url}
-                        alt={displayTitle}
-                        className="object-contain max-h-40 w-full"
-                      />
+                      <img src={gift.image_url} alt={displayTitle} className="object-contain max-h-40 w-full" />
                     ) : (
                       <span className="text-5xl opacity-40">🎁</span>
                     )}
                   </div>
 
-                  {/* Content */}
                   <div className="p-6">
-                    {/* Title row */}
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <h2 className="font-serif text-xl text-stone-900 leading-snug tracking-tight">
                         {displayTitle}
@@ -460,7 +430,6 @@ function GiftApp() {
                       )}
                     </div>
 
-                    {/* Price + badges */}
                     <div className="flex items-center gap-2 flex-wrap mb-4">
                       <span className="text-2xl font-semibold text-stone-900">
                         ${gift.price.toFixed(2)}
@@ -477,7 +446,6 @@ function GiftApp() {
                       </span>
                     </div>
 
-                    {/* Description */}
                     {gift.description && (
                       <p className="text-stone-500 text-sm mb-4 leading-relaxed">
                         {isExpanded ? gift.description : truncatedDescription}
@@ -492,26 +460,21 @@ function GiftApp() {
                       </p>
                     )}
 
-                    {/* Why this works */}
                     {gift.reason && (
                       <div className="bg-amber-50 border border-amber-100 rounded-2xl px-4 py-3 mb-4">
-                        <p className="text-xs font-semibold text-amber-800 mb-0.5">
-                          Why this works
-                        </p>
+                        <p className="text-xs font-semibold text-amber-800 mb-0.5">Why this works</p>
                         <p className="text-sm text-amber-700 leading-relaxed">
                           {enhanceReason(gift.reason)}
                         </p>
                       </div>
                     )}
 
-                    {/* Shipping warning */}
                     {delivery.showWarning && delivery.warningText && (
                       <div className="bg-red-50 border border-red-100 rounded-2xl px-4 py-3 mb-4">
                         <p className="text-sm text-red-600">{delivery.warningText}</p>
                       </div>
                     )}
 
-                    {/* CTA */}
                     {buyUrl && (
                       <a
                         href={buyUrl}

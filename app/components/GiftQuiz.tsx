@@ -5,15 +5,18 @@ import {
   OccasionKey,
   StageKey,
   VibeKey,
+  GiftTypeKey,
   ArchetypeKey,
   InterestKey,
   ConfidenceKey,
   getVibeRecommendation,
   getBudgetRecommendation,
   getBudgetOptionFromRange,
+  getGiftTypeGuidance,
   getInterestsForArchetypes,
   getOverlapInterests,
   ARCHETYPE_INTERESTS,
+  GIFT_TYPE_META,
 } from "@/lib/quizRules";
 
 // =============================================================================
@@ -28,11 +31,11 @@ export type QuizAnswers = {
   partner_name?: string;
   partner_id?: string;
   vibe?: VibeKey[];
+  gift_types?: GiftTypeKey[];
   max_price?: number;
   confidence?: ConfidenceKey;
   archetypes?: ArchetypeKey[];
   interests?: InterestKey[];
-  // overlap interests are passed to backend for scoring boost
   overlap_interests?: InterestKey[];
 };
 
@@ -46,7 +49,11 @@ type QuizProps = {
 // =============================================================================
 
 const FEEDBACK_DURATION = 1400;
-const LOADING_DURATION = 2800;
+const LOADING_DURATION  = 2800;
+const MAX_VIBES         = 2;
+const MAX_GIFT_TYPES    = 3;
+const MAX_ARCHETYPES    = 2;
+const MAX_INTERESTS     = 5;
 
 const VIBE_META: Record<VibeKey, { label: string; emoji: string; feedback: string }> = {
   pampering:   { label: "Pampered",    emoji: "🛁", feedback: "She gets to slow down and feel taken care of." },
@@ -59,35 +66,35 @@ const VIBE_META: Record<VibeKey, { label: string; emoji: string; feedback: strin
 };
 
 const INTEREST_META: Record<InterestKey, { label: string; emoji: string }> = {
-  coffee:    { label: "Coffee",       emoji: "☕" },
-  cooking:   { label: "Cooking",      emoji: "🍳" },
-  baking:    { label: "Baking",       emoji: "🧁" },
-  wine:      { label: "Wine",         emoji: "🍷" },
-  cocktails: { label: "Cocktails",    emoji: "🍹" },
-  fitness:   { label: "Fitness",      emoji: "🏋️" },
-  running:   { label: "Running",      emoji: "🏃" },
-  cycling:   { label: "Cycling",      emoji: "🚴" },
-  yoga:      { label: "Yoga",         emoji: "🧘" },
-  reading:   { label: "Reading",      emoji: "📚" },
-  music:     { label: "Music",        emoji: "🎵" },
-  gaming:    { label: "Gaming",       emoji: "🎮" },
-  photography: { label: "Photography", emoji: "📸" },
-  art:       { label: "Art",          emoji: "🎨" },
-  travel:    { label: "Travel",       emoji: "✈️" },
-  hiking:    { label: "Hiking",       emoji: "⛰️" },
-  camping:   { label: "Camping",      emoji: "🏕️" },
-  gardening: { label: "Gardening",    emoji: "🌱" },
-  movies:    { label: "Movies",       emoji: "🎬" },
-  fashion:   { label: "Fashion",      emoji: "👗" },
-  skincare:  { label: "Skincare",     emoji: "✨" },
-  makeup:    { label: "Makeup",       emoji: "💄" },
-  wellness:  { label: "Wellness",     emoji: "🌿" },
-  home_decor: { label: "Candles & Home", emoji: "🕯️" },
-  pets:      { label: "Pets",         emoji: "🐾" },
+  coffee:      { label: "Coffee",         emoji: "☕" },
+  cooking:     { label: "Cooking",        emoji: "🍳" },
+  baking:      { label: "Baking",         emoji: "🧁" },
+  wine:        { label: "Wine",           emoji: "🍷" },
+  cocktails:   { label: "Cocktails",      emoji: "🍹" },
+  fitness:     { label: "Fitness",        emoji: "🏋️" },
+  running:     { label: "Running",        emoji: "🏃" },
+  cycling:     { label: "Cycling",        emoji: "🚴" },
+  yoga:        { label: "Yoga",           emoji: "🧘" },
+  reading:     { label: "Reading",        emoji: "📚" },
+  music:       { label: "Music",          emoji: "🎵" },
+  gaming:      { label: "Gaming",         emoji: "🎮" },
+  photography: { label: "Photography",    emoji: "📸" },
+  art:         { label: "Art",            emoji: "🎨" },
+  travel:      { label: "Travel",         emoji: "✈️" },
+  hiking:      { label: "Hiking",         emoji: "⛰️" },
+  camping:     { label: "Camping",        emoji: "🏕️" },
+  gardening:   { label: "Gardening",      emoji: "🌱" },
+  movies:      { label: "Movies",         emoji: "🎬" },
+  fashion:     { label: "Fashion",        emoji: "👗" },
+  skincare:    { label: "Skincare",       emoji: "✨" },
+  makeup:      { label: "Makeup",         emoji: "💄" },
+  wellness:    { label: "Wellness",       emoji: "🌿" },
+  home_decor:  { label: "Candles & Home", emoji: "🕯️" },
+  pets:        { label: "Pets",           emoji: "🐾" },
 };
 
 // =============================================================================
-// STEP IDs — explicit enum keeps routing logic readable
+// STEP IDs
 // =============================================================================
 
 type StepId =
@@ -97,6 +104,7 @@ type StepId =
   | "partner_name"
   | "vibe"
   | "budget"
+  | "gift_type"
   | "confidence"
   | "archetypes"
   | "interests";
@@ -108,12 +116,12 @@ const STEP_ORDER: StepId[] = [
   "partner_name",
   "vibe",
   "budget",
+  "gift_type",
   "confidence",
   "archetypes",
   "interests",
 ];
 
-// Steps that are skipped when confidence === 'lost'
 const INTEREST_STEPS: StepId[] = ["archetypes", "interests"];
 
 // =============================================================================
@@ -135,7 +143,6 @@ function getNextHolidayDate(month: number, day: number): string {
   return target.toISOString().split("T")[0];
 }
 
-// Second Sunday of May
 function getNextMothersDayDate(): string {
   const today = new Date();
   let year = today.getFullYear();
@@ -164,13 +171,13 @@ function getDateLimits() {
 // =============================================================================
 
 export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
-  const [stepIndex, setStepIndex] = useState(0);
-  const [answers, setAnswers] = useState<QuizAnswers>(
-    initialAnswers ?? { archetypes: [], interests: [] }
+  const [stepIndex, setStepIndex]               = useState(0);
+  const [answers, setAnswers]                   = useState<QuizAnswers>(
+    initialAnswers ?? { archetypes: [], interests: [], gift_types: [] }
   );
-  const [activeFeedback, setActiveFeedback] = useState<string | null>(null);
-  const [isFindingGifts, setIsFindingGifts] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [activeFeedback, setActiveFeedback]     = useState<string | null>(null);
+  const [isFindingGifts, setIsFindingGifts]     = useState(false);
+  const [error, setError]                       = useState<string | null>(null);
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [showAllInterests, setShowAllInterests] = useState(false);
 
@@ -180,7 +187,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     }
   }, [initialAnswers?.partner_id]);
 
-  // Build the active step sequence, skipping interest steps for 'lost'
   const activeSteps = useMemo<StepId[]>(() => {
     if (answers.confidence === "lost") {
       return STEP_ORDER.filter((s) => !INTEREST_STEPS.includes(s));
@@ -188,33 +194,31 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     return STEP_ORDER;
   }, [answers.confidence]);
 
-  const currentStepId = activeSteps[stepIndex];
-  const totalSteps = activeSteps.length;
+  const currentStepId   = activeSteps[stepIndex];
+  const totalSteps      = activeSteps.length;
   const progressPercent = ((stepIndex + 1) / totalSteps) * 100;
 
-  // Smart preselections (recomputed when occasion/stage change)
   const vibeRecommendation = useMemo(() => {
-    if (answers.occasion && answers.relationship_stage) {
+    if (answers.occasion && answers.relationship_stage)
       return getVibeRecommendation(answers.occasion, answers.relationship_stage);
-    }
     return null;
   }, [answers.occasion, answers.relationship_stage]);
 
   const budgetRecommendation = useMemo(() => {
-    if (answers.occasion && answers.relationship_stage) {
+    if (answers.occasion && answers.relationship_stage)
       return getBudgetRecommendation(answers.occasion, answers.relationship_stage);
-    }
     return null;
   }, [answers.occasion, answers.relationship_stage]);
 
-  // Interests to show in step 9 — based on selected archetypes
+  const giftTypeGuidance = useMemo(() => {
+    if (answers.occasion) return getGiftTypeGuidance(answers.occasion);
+    return null;
+  }, [answers.occasion]);
+
   const archetypeInterests = useMemo<InterestKey[]>(() => {
-    if (showAllInterests) {
-      return Object.keys(INTEREST_META) as InterestKey[];
-    }
-    if (answers.archetypes && answers.archetypes.length > 0) {
+    if (showAllInterests) return Object.keys(INTEREST_META) as InterestKey[];
+    if (answers.archetypes && answers.archetypes.length > 0)
       return getInterestsForArchetypes(answers.archetypes);
-    }
     return Object.keys(INTEREST_META) as InterestKey[];
   }, [answers.archetypes, showAllInterests]);
 
@@ -223,14 +227,12 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   // ============================================================
 
   const triggerCompletion = (finalAnswers: QuizAnswers) => {
-    // Calculate overlap interests for backend scoring boost
     const overlap =
       finalAnswers.archetypes && finalAnswers.archetypes.length > 1
         ? getOverlapInterests(finalAnswers.archetypes)
         : [];
-    const withOverlap = { ...finalAnswers, overlap_interests: overlap };
     setIsFindingGifts(true);
-    setTimeout(() => onComplete(withOverlap), LOADING_DURATION);
+    setTimeout(() => onComplete({ ...finalAnswers, overlap_interests: overlap }), LOADING_DURATION);
   };
 
   const goNext = (updatedAnswers?: QuizAnswers) => {
@@ -251,12 +253,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const handleSkip = () => goNext();
 
-  // Single-select with feedback flash then auto-advance
-  const selectWithFeedback = (
-    update: Partial<QuizAnswers>,
-    feedback: string,
-    updatedAnswers: QuizAnswers
-  ) => {
+  const selectWithFeedback = (feedback: string, updatedAnswers: QuizAnswers) => {
     setActiveFeedback(feedback);
     setTimeout(() => {
       setActiveFeedback(null);
@@ -270,10 +267,9 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const handleOccasion = (value: OccasionKey, feedback: string) => {
     let dateToPreFill: string | undefined;
-    if (value === "christmas") dateToPreFill = getNextHolidayDate(12, 25);
-    else if (value === "valentines") dateToPreFill = getNextHolidayDate(2, 14);
-    else if (value === "mothers_day") dateToPreFill = getNextMothersDayDate();
-
+    if (value === "christmas")      dateToPreFill = getNextHolidayDate(12, 25);
+    else if (value === "valentines")    dateToPreFill = getNextHolidayDate(2, 14);
+    else if (value === "mothers_day")   dateToPreFill = getNextMothersDayDate();
     const updated: QuizAnswers = {
       ...answers,
       occasion: value,
@@ -281,40 +277,58 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       days_until_needed: dateToPreFill ? getDaysUntil(dateToPreFill) : undefined,
     };
     setAnswers(updated);
-    selectWithFeedback({}, feedback, updated);
+    selectWithFeedback(feedback, updated);
   };
 
   const handleStage = (value: StageKey, feedback: string) => {
     const updated = { ...answers, relationship_stage: value };
     setAnswers(updated);
-    selectWithFeedback({}, feedback, updated);
+    selectWithFeedback(feedback, updated);
   };
 
-  const handleVibe = (value: VibeKey) => {
-    const updated = { ...answers, vibe: [value] };
-    setAnswers(updated);
-    selectWithFeedback({}, VIBE_META[value].feedback, updated);
+  const handleVibeToggle = (value: VibeKey) => {
+    const current = answers.vibe ?? [];
+    let next: VibeKey[];
+    if (current.includes(value)) {
+      next = current.filter((v) => v !== value);
+    } else if (current.length < MAX_VIBES) {
+      next = [...current, value];
+    } else {
+      next = current;
+    }
+    setAnswers({ ...answers, vibe: next });
   };
 
   const handleBudget = (value: number, feedback: string) => {
     const updated = { ...answers, max_price: value };
     setAnswers(updated);
-    selectWithFeedback({}, feedback, updated);
+    selectWithFeedback(feedback, updated);
+  };
+
+  const handleGiftTypeToggle = (value: GiftTypeKey) => {
+    const current = answers.gift_types ?? [];
+    let next: GiftTypeKey[];
+    if (current.includes(value)) {
+      next = current.filter((t) => t !== value);
+    } else if (current.length < MAX_GIFT_TYPES) {
+      next = [...current, value];
+    } else {
+      next = current;
+    }
+    setAnswers({ ...answers, gift_types: next });
   };
 
   const handleConfidence = (value: ConfidenceKey, feedback: string) => {
     const updated = { ...answers, confidence: value };
     setAnswers(updated);
-    // After setting confidence, re-evaluate active steps
     if (value === "lost") {
       setActiveFeedback(feedback);
       setTimeout(() => {
         setActiveFeedback(null);
-        // Skip to completion since interest steps are removed
         triggerCompletion(updated);
       }, FEEDBACK_DURATION);
     } else {
-      selectWithFeedback({}, feedback, updated);
+      selectWithFeedback(feedback, updated);
     }
   };
 
@@ -323,10 +337,10 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     let next: ArchetypeKey[];
     if (current.includes(value)) {
       next = current.filter((a) => a !== value);
-    } else if (current.length < 2) {
+    } else if (current.length < MAX_ARCHETYPES) {
       next = [...current, value];
     } else {
-      next = [current[1], value]; // replace oldest
+      next = [current[1], value];
     }
     setAnswers({ ...answers, archetypes: next, interests: [] });
     setShowAllInterests(false);
@@ -337,10 +351,10 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     let next: InterestKey[];
     if (current.includes(value)) {
       next = current.filter((i) => i !== value);
-    } else if (current.length < 5) {
+    } else if (current.length < MAX_INTERESTS) {
       next = [...current, value];
     } else {
-      next = current; // cap at 5
+      next = current;
     }
     setAnswers({ ...answers, interests: next });
   };
@@ -359,11 +373,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           style={{ animation: "spin 1s linear infinite" }}
         />
         <h2 className="text-3xl font-serif text-stone-900 mb-8 tracking-tight">
-          {isApology
-            ? "Finding the right gesture…"
-            : name
-            ? `Finding the perfect gift for ${name}…`
-            : "Finding the perfect gift…"}
+          {isApology ? "Finding the right gesture…" : name ? `Finding the perfect gift for ${name}…` : "Finding the perfect gift…"}
         </h2>
         <div className="space-y-4 w-full max-w-xs">
           {[
@@ -374,11 +384,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             <div
               key={i}
               className="flex items-center gap-3 text-left text-stone-500"
-              style={{
-                animation: "fadeSlideIn 0.5s ease forwards",
-                animationDelay: `${i * 0.7}s`,
-                opacity: 0,
-              }}
+              style={{ animation: "fadeSlideIn 0.5s ease forwards", animationDelay: `${i * 0.7}s`, opacity: 0 }}
             >
               <span className="text-lg">{s.icon}</span>
               <span className="text-sm font-medium">{s.text}</span>
@@ -387,10 +393,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         </div>
         <style>{`
           @keyframes spin { to { transform: rotate(360deg); } }
-          @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateX(-8px); }
-            to   { opacity: 1; transform: translateX(0); }
-          }
+          @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
         `}</style>
       </div>
     );
@@ -409,12 +412,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         >
           {activeFeedback}
         </p>
-        <style>{`
-          @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(6px); }
-            to   { opacity: 1; transform: translateY(0); }
-          }
-        `}</style>
+        <style>{`@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }`}</style>
       </div>
     );
   }
@@ -433,9 +431,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     highlight: string;
   }) => (
     <div className="mb-6 px-5 py-4 bg-amber-50 border border-amber-200 rounded-2xl">
-      <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-1">
-        {title}
-      </p>
+      <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-1">{title}</p>
       <p className="text-sm text-stone-600 leading-relaxed">{explanation}</p>
       <p className="text-sm font-semibold text-stone-900 mt-2">{highlight}</p>
     </div>
@@ -451,13 +447,9 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     badge?: string;
   }) => (
     <div className="mb-8">
-      <h2 className="text-3xl font-serif text-stone-900 mb-2 tracking-tight leading-snug">
-        {question}
-      </h2>
+      <h2 className="text-3xl font-serif text-stone-900 mb-2 tracking-tight leading-snug">{question}</h2>
       <p className="text-stone-500 text-base">{subtitle}</p>
-      {badge && (
-        <p className="text-sm text-amber-600 font-medium mt-2">{badge}</p>
-      )}
+      {badge && <p className="text-sm text-amber-600 font-medium mt-2">{badge}</p>}
     </div>
   );
 
@@ -467,20 +459,17 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const renderOccasion = () => (
     <>
-      <QuestionHeader
-        question="What's the occasion?"
-        subtitle="Let's start with the reason."
-      />
+      <QuestionHeader question="What's the occasion?" subtitle="Let's start with the reason." />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {(
           [
-            { label: "Birthday",       value: "birthday",    emoji: "🎂", feedback: "Birthdays are all about her — let's make it personal." },
-            { label: "Valentine's Day",value: "valentines",  emoji: "❤️", feedback: "Time to show up. Let's find something she'll love." },
-            { label: "Anniversary",    value: "anniversary", emoji: "💝", feedback: "The occasion that rewards thoughtfulness more than any other." },
-            { label: "Christmas",      value: "christmas",   emoji: "🎄", feedback: "Warm, cozy, and a little indulgent — let's find the one." },
-            { label: "Mother's Day",   value: "mothers_day", emoji: "🌸", feedback: "She deserves to feel celebrated. Let's get this right." },
-            { label: "Just Because",   value: "just_because",emoji: "✨", feedback: "Honestly? Surprise gifts are the most romantic move there is." },
-            { label: "I Owe Her One",  value: "apology",     emoji: "🙏", feedback: "We've all been there. Let's help you make it right." },
+            { label: "Birthday",       value: "birthday",     emoji: "🎂", feedback: "Birthdays are all about her — let's make it personal." },
+            { label: "Valentine's Day",value: "valentines",   emoji: "❤️", feedback: "Time to show up. Let's find something she'll love." },
+            { label: "Anniversary",    value: "anniversary",  emoji: "💝", feedback: "The occasion that rewards thoughtfulness more than any other." },
+            { label: "Christmas",      value: "christmas",    emoji: "🎄", feedback: "Warm, cozy, and a little indulgent — let's find the one." },
+            { label: "Mother's Day",   value: "mothers_day",  emoji: "🌸", feedback: "She deserves to feel celebrated. Let's get this right." },
+            { label: "Just Because",   value: "just_because", emoji: "✨", feedback: "Honestly? Surprise gifts are the most romantic move there is." },
+            { label: "I Messed Up",    value: "apology",      emoji: "🙏", feedback: "We've all been there. Let's help you make it right." },
           ] as { label: string; value: OccasionKey; emoji: string; feedback: string }[]
         ).map((opt) => (
           <OptionCard
@@ -499,10 +488,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const { minDate, maxDate } = getDateLimits();
     return (
       <>
-        <QuestionHeader
-          question="When is it?"
-          subtitle="We'll make sure it arrives in time."
-        />
+        <QuestionHeader question="When is it?" subtitle="We'll make sure it arrives in time." />
         <div className="mb-8 max-w-sm">
           <input
             type="date"
@@ -521,25 +507,14 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           />
           <p className="text-xs text-stone-400 mt-2">Must be within the next year</p>
         </div>
-        <NavRow
-          onBack={goBack}
-          onNext={() => goNext()}
-          onSkip={handleSkip}
-          showSkip
-          showBack={stepIndex > 0}
-          canProceed
-          isLast={stepIndex === activeSteps.length - 1}
-        />
+        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
       </>
     );
   };
 
   const renderRelationshipStage = () => (
     <>
-      <QuestionHeader
-        question="Where are you two at?"
-        subtitle="This helps us get the tone exactly right."
-      />
+      <QuestionHeader question="Where are you two at?" subtitle="This helps us get the tone exactly right." />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {(
           [
@@ -560,15 +535,14 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           />
         ))}
       </div>
+      {/* Back only — single-select auto-advances, no Continue needed */}
+      <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
     </>
   );
 
   const renderPartnerName = () => (
     <>
-      <QuestionHeader
-        question="What's her name?"
-        subtitle="Makes your recommendations feel a little more personal."
-      />
+      <QuestionHeader question="What's her name?" subtitle="Makes your recommendations feel a little more personal." />
       <div className="mb-8 max-w-sm">
         <input
           type="text"
@@ -581,25 +555,19 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         />
         <p className="text-xs text-stone-400 mt-2">Optional — skip if you prefer</p>
       </div>
-      <NavRow
-        onBack={goBack}
-        onNext={() => goNext()}
-        onSkip={handleSkip}
-        showSkip
-        showBack={stepIndex > 0}
-        canProceed
-        isLast={false}
-      />
+      <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
     </>
   );
 
   const renderVibe = () => {
-    const rec = vibeRecommendation;
+    const rec      = vibeRecommendation;
+    const selected = answers.vibe ?? [];
     return (
       <>
         <QuestionHeader
           question="What do you want her to feel?"
-          subtitle="We picked a starting point — but you know her best."
+          subtitle="Pick up to 2 — we'll match gifts to both."
+          badge={selected.length > 0 ? `${selected.length} of ${MAX_VIBES} selected` : undefined}
         />
         {rec && (
           <SmartCard
@@ -609,46 +577,45 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           />
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-          {(Object.keys(VIBE_META) as VibeKey[]).map((v) => (
-            <OptionCard
-              key={v}
-              label={VIBE_META[v].label}
-              emoji={VIBE_META[v].emoji}
-              selected={answers.vibe?.includes(v) ?? false}
-              recommended={rec?.vibes.includes(v) ?? false}
-              onClick={() => handleVibe(v)}
-            />
-          ))}
+          {(Object.keys(VIBE_META) as VibeKey[]).map((v) => {
+            const isSelected = selected.includes(v);
+            const isDisabled = !isSelected && selected.length >= MAX_VIBES;
+            return (
+              <OptionCard
+                key={v}
+                label={VIBE_META[v].label}
+                emoji={VIBE_META[v].emoji}
+                selected={isSelected}
+                disabled={isDisabled}
+                recommended={rec?.vibes.includes(v) ?? false}
+                onClick={() => !isDisabled && handleVibeToggle(v)}
+              />
+            );
+          })}
         </div>
+        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed={selected.length > 0} isLast={false} />
       </>
     );
   };
 
   const renderBudget = () => {
     const rec = budgetRecommendation;
-    const recommendedValue = rec
-      ? getBudgetOptionFromRange(rec.min, rec.max)
-      : undefined;
-
+    const recommendedValue = rec ? getBudgetOptionFromRange(rec.min, rec.max) : undefined;
     const options = [
-      { label: "Under $25",    value: 25,     sublabel: "Small but meaningful",      emoji: "💸" },
-      { label: "$25 – $50",    value: 50,     sublabel: "Sweet spot for most occasions", emoji: "💵" },
-      { label: "$50 – $100",   value: 100,    sublabel: "Room to be impressive",      emoji: "💳" },
-      { label: "$100 – $200",  value: 200,    sublabel: "For the moments that matter", emoji: "💎" },
-      { label: "$200+",        value: 999999, sublabel: "All out",                    emoji: "🌟" },
+      { label: "Under $25",   value: 25,     sublabel: "Small but meaningful",        emoji: "💸" },
+      { label: "$25 – $50",   value: 50,     sublabel: "Sweet spot for early stages", emoji: "💵" },
+      { label: "$50 – $100",  value: 100,    sublabel: "Room to be impressive",        emoji: "💳" },
+      { label: "$100 – $200", value: 200,    sublabel: "For the moments that matter", emoji: "💎" },
+      { label: "$200+",       value: 999999, sublabel: "All out",                      emoji: "🌟" },
     ];
-
     return (
       <>
-        <QuestionHeader
-          question="What's your budget?"
-          subtitle="We'll find the best option at any price point."
-        />
+        <QuestionHeader question="What's your budget?" subtitle="We'll find the best option at any price point." />
         {rec && (
           <SmartCard
             title="Our suggestion"
             explanation={rec.explanation}
-            highlight={`We'd recommend: $${rec.min}–$${rec.max}`}
+            highlight={`We'd recommend: ${options.find((o) => o.value === recommendedValue)?.label ?? "–"}`}
           />
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -660,15 +627,76 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               emoji={opt.emoji}
               selected={answers.max_price === opt.value}
               recommended={recommendedValue === opt.value}
-              onClick={() =>
-                handleBudget(
-                  opt.value,
-                  `${opt.label} — ${opt.sublabel.toLowerCase()}.`
-                )
-              }
+              onClick={() => handleBudget(opt.value, `${opt.label} — ${opt.sublabel.toLowerCase()}.`)}
             />
           ))}
         </div>
+      </>
+    );
+  };
+
+  const renderGiftType = () => {
+    const guidance = giftTypeGuidance;
+    const selected = answers.gift_types ?? [];
+
+    const allTypes    = Object.keys(GIFT_TYPE_META) as GiftTypeKey[];
+    const recommended = guidance?.recommended ?? [];
+    const discouraged = guidance?.discouraged ?? [];
+
+    // Sort: recommended first, then neutral, then discouraged
+    const sorted = [
+      ...allTypes.filter((t) => recommended.includes(t)),
+      ...allTypes.filter((t) => !recommended.includes(t) && !discouraged.includes(t)),
+      ...allTypes.filter((t) => discouraged.includes(t)),
+    ];
+
+    // Build a single advisory sentence about discouraged types
+    const discourageNote =
+      discouraged.length > 0
+        ? `One thing worth knowing: ${discouraged.map((t) => GIFT_TYPE_META[t].label).join(", ")} tend to miss the mark for this occasion.`
+        : "";
+
+    // Build explanation combining recommended types + discourage note
+    const recommendedNames = recommended.slice(0, 3).map((t) => GIFT_TYPE_META[t].label).join(", ");
+    const smartExplanation = recommended.length > 0
+      ? `${recommendedNames} tend to land really well here.${discourageNote ? " " + discourageNote : ""}`
+      : discourageNote;
+
+    return (
+      <>
+        <QuestionHeader
+          question="What type of gift are you thinking?"
+          subtitle="Pick up to 3 — or skip and we'll cover everything."
+          badge={selected.length > 0 ? `${selected.length} of ${MAX_GIFT_TYPES} selected` : undefined}
+        />
+        {guidance && smartExplanation && (
+          <SmartCard
+            title="Pro tip for this occasion"
+            explanation={smartExplanation}
+            highlight="Select what feels right, or skip to search across all types."
+          />
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {sorted.map((type) => {
+            const meta       = GIFT_TYPE_META[type];
+            const isSelected = selected.includes(type);
+            const isDisabled = !isSelected && selected.length >= MAX_GIFT_TYPES;
+            const isRecommended = recommended.includes(type) && !isSelected;
+            return (
+              <OptionCard
+                key={type}
+                label={meta.label}
+                sublabel={meta.sublabel}
+                emoji={meta.emoji}
+                selected={isSelected}
+                disabled={isDisabled}
+                recommended={isRecommended}
+                onClick={() => !isDisabled && handleGiftTypeToggle(type)}
+              />
+            );
+          })}
+        </div>
+        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
       </>
     );
   };
@@ -677,36 +705,13 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const isApology = answers.occasion === "apology";
     return (
       <>
-        <QuestionHeader
-          question="How well do you know her style?"
-          subtitle="Honest answer gets you better results."
-        />
+        <QuestionHeader question="How well do you know her style?" subtitle="Honest answer gets you better results." />
         <div className="grid grid-cols-1 gap-3 mb-8">
           {(
             [
-              {
-                label: "Pretty well",
-                sublabel: "I have a good sense of what she likes",
-                value: "confident" as ConfidenceKey,
-                emoji: "🎯",
-                feedback: "Perfect — we'll use everything you've told us to get specific.",
-              },
-              {
-                label: "Somewhat",
-                sublabel: "I have some idea but not totally sure",
-                value: "somewhat" as ConfidenceKey,
-                emoji: "🤔",
-                feedback: "No problem — we'll mix specific picks with versatile options.",
-              },
-              {
-                label: "Honestly lost",
-                sublabel: "I genuinely have no idea",
-                value: "lost" as ConfidenceKey,
-                emoji: "😅",
-                feedback: isApology
-                  ? "We've got you — let's find something that feels real."
-                  : "More common than you think. We'll focus on crowd-pleasers she'll actually love.",
-              },
+              { label: "Pretty well",   sublabel: "I have a good sense of what she likes", value: "confident" as ConfidenceKey, emoji: "🎯", feedback: "Perfect — we'll use everything you've told us to get specific." },
+              { label: "Somewhat",      sublabel: "I have some idea but not totally sure",  value: "somewhat"  as ConfidenceKey, emoji: "🤔", feedback: "No problem — we'll mix specific picks with versatile options." },
+              { label: "Honestly lost", sublabel: "I genuinely have no idea",              value: "lost"      as ConfidenceKey, emoji: "😅", feedback: isApology ? "We've got you — let's find something that feels real." : "More common than you think. We'll focus on crowd-pleasers she'll actually love." },
             ]
           ).map((opt) => (
             <OptionCard
@@ -719,6 +724,8 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             />
           ))}
         </div>
+        {/* Back only — single-select auto-advances */}
+        <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
       </>
     );
   };
@@ -730,23 +737,23 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         <QuestionHeader
           question="What's her vibe?"
           subtitle="Pick up to 2 that feel like her."
-          badge={`${selected.length} of 2 selected`}
+          badge={`${selected.length} of ${MAX_ARCHETYPES} selected`}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
           {(
             [
-              { label: "The Outdoorsy One", sublabel: "Happiest outside",                        value: "outdoorsy"    as ArchetypeKey, emoji: "🏕️" },
-              { label: "The Homebody",       sublabel: "Her home is her happy place",              value: "homebody"     as ArchetypeKey, emoji: "🕯️" },
-              { label: "The Artsy One",      sublabel: "Always making or appreciating something",  value: "artsy"        as ArchetypeKey, emoji: "🎨" },
-              { label: "The Wellness Girl",  sublabel: "Self-care is her love language",           value: "wellness"     as ArchetypeKey, emoji: "🧘" },
-              { label: "The Social One",     sublabel: "She makes everything an occasion",         value: "social"       as ArchetypeKey, emoji: "🥂" },
-              { label: "Has Her Thing",      sublabel: "Deeply into one or two specific interests",value: "niche"        as ArchetypeKey, emoji: "🎮" },
-              { label: "The Pet Parent",     sublabel: "Her fur baby is basically her child",      value: "petparent"    as ArchetypeKey, emoji: "🐾" },
-              { label: "The Fitness Girl",   sublabel: "The gym is her happy place",               value: "fitness_girl" as ArchetypeKey, emoji: "🏋️" },
+              { label: "The Outdoorsy One",  sublabel: "Happiest outside",                         value: "outdoorsy"    as ArchetypeKey, emoji: "🏕️" },
+              { label: "The Homebody",        sublabel: "Her home is her happy place",               value: "homebody"     as ArchetypeKey, emoji: "🕯️" },
+              { label: "The Artsy One",       sublabel: "Always making or appreciating something",   value: "artsy"        as ArchetypeKey, emoji: "🎨" },
+              { label: "The Wellness Girl",   sublabel: "Self-care is her love language",            value: "wellness"     as ArchetypeKey, emoji: "🧘" },
+              { label: "The Social One",      sublabel: "She makes everything an occasion",          value: "social"       as ArchetypeKey, emoji: "🥂" },
+              { label: "Pop Culture Queen",   sublabel: "Deeply into one or two specific interests", value: "niche"        as ArchetypeKey, emoji: "🎮" },
+              { label: "The Pet Parent",      sublabel: "Her fur baby is basically her child",       value: "petparent"    as ArchetypeKey, emoji: "🐾" },
+              { label: "The Fitness Girl",    sublabel: "The gym is her happy place",                value: "fitness_girl" as ArchetypeKey, emoji: "🏋️" },
             ]
           ).map((opt) => {
             const isSelected = selected.includes(opt.value);
-            const isDisabled = !isSelected && selected.length >= 2;
+            const isDisabled = !isSelected && selected.length >= MAX_ARCHETYPES;
             return (
               <OptionCard
                 key={opt.value}
@@ -765,7 +772,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           onNext={() => goNext()}
           onSkip={handleSkip}
           showSkip
-          showBack={stepIndex > 0}
+          showBack
           canProceed={selected.length > 0}
           isLast={stepIndex === activeSteps.length - 1}
         />
@@ -779,7 +786,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       answers.archetypes && answers.archetypes.length > 1
         ? getOverlapInterests(answers.archetypes)
         : [];
-
     return (
       <>
         <QuestionHeader
@@ -789,14 +795,14 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               ? "We narrowed it down based on her vibe — pick everything that fits."
               : "Pick up to 5 things she genuinely enjoys."
           }
-          badge={`${selected.length} of 5 selected`}
+          badge={`${selected.length} of ${MAX_INTERESTS} selected`}
         />
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
           {archetypeInterests.map((interest) => {
-            const meta = INTEREST_META[interest];
+            const meta       = INTEREST_META[interest];
             const isSelected = selected.includes(interest);
-            const isDisabled = !isSelected && selected.length >= 5;
-            const isOverlap = overlapInterests.includes(interest);
+            const isDisabled = !isSelected && selected.length >= MAX_INTERESTS;
+            const isOverlap  = overlapInterests.includes(interest);
             return (
               <OptionCard
                 key={interest}
@@ -823,7 +829,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           onNext={() => goNext()}
           onSkip={handleSkip}
           showSkip
-          showBack={stepIndex > 0}
+          showBack
           canProceed={selected.length > 0}
           isLast={stepIndex === activeSteps.length - 1}
         />
@@ -837,16 +843,17 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const renderStep = () => {
     switch (currentStepId) {
-      case "occasion":          return renderOccasion();
-      case "occasion_date":     return renderOccasionDate();
-      case "relationship_stage":return renderRelationshipStage();
-      case "partner_name":      return renderPartnerName();
-      case "vibe":              return renderVibe();
-      case "budget":            return renderBudget();
-      case "confidence":        return renderConfidence();
-      case "archetypes":        return renderArchetypes();
-      case "interests":         return renderInterests();
-      default:                  return null;
+      case "occasion":           return renderOccasion();
+      case "occasion_date":      return renderOccasionDate();
+      case "relationship_stage": return renderRelationshipStage();
+      case "partner_name":       return renderPartnerName();
+      case "vibe":               return renderVibe();
+      case "budget":             return renderBudget();
+      case "gift_type":          return renderGiftType();
+      case "confidence":         return renderConfidence();
+      case "archetypes":         return renderArchetypes();
+      case "interests":          return renderInterests();
+      default:                   return null;
     }
   };
 
@@ -882,25 +889,19 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               className="flex-1 h-1 rounded-full transition-all duration-500"
               style={{
                 backgroundColor:
-                  i < stepIndex
-                    ? "#d97706"
-                    : i === stepIndex
-                    ? "#f59e0b"
-                    : "#e7e5e4",
+                  i < stepIndex ? "#d97706" : i === stepIndex ? "#f59e0b" : "#e7e5e4",
               }}
             />
           ))}
         </div>
       </div>
 
-      {/* Error */}
       {error && (
         <div className="mb-6 px-5 py-4 bg-red-50 border border-red-100 rounded-2xl">
           <p className="text-sm text-red-700 font-medium">{error}</p>
         </div>
       )}
 
-      {/* Step content */}
       {renderStep()}
     </div>
   );
@@ -944,7 +945,6 @@ function OptionCard({
       }`}
       aria-pressed={selected}
     >
-      {/* Selected checkmark */}
       {selected && (
         <span className="absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center">
           <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -952,34 +952,23 @@ function OptionCard({
           </svg>
         </span>
       )}
-
-      {/* Recommended badge */}
       {recommended && !selected && (
         <span className="absolute top-3 right-3 text-xs font-semibold text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">
           Suggested
         </span>
       )}
-
-      {/* Overlap badge — double-archetype interest */}
-      {overlap && (
+      {overlap && !selected && (
         <span className="absolute top-3 right-3 text-xs font-semibold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full">
           Strong match
         </span>
       )}
-
       <div className="flex gap-3 items-center pr-6">
         {emoji && (
-          <span className="text-2xl leading-none" aria-hidden="true">
-            {emoji}
-          </span>
+          <span className="text-2xl leading-none" aria-hidden="true">{emoji}</span>
         )}
         <div>
-          <div className="text-base font-semibold text-stone-900 leading-tight">
-            {label}
-          </div>
-          {sublabel && (
-            <div className="text-xs text-stone-400 mt-0.5">{sublabel}</div>
-          )}
+          <div className="text-base font-semibold text-stone-900 leading-tight">{label}</div>
+          {sublabel && <div className="text-xs text-stone-400 mt-0.5">{sublabel}</div>}
         </div>
       </div>
     </button>
@@ -994,6 +983,7 @@ type NavRowProps = {
   showSkip?: boolean;
   canProceed: boolean;
   isLast: boolean;
+  backOnly?: boolean;
 };
 
 function NavRow({
@@ -1004,6 +994,7 @@ function NavRow({
   showSkip,
   canProceed,
   isLast,
+  backOnly,
 }: NavRowProps) {
   return (
     <div className="flex gap-3 mt-8">
@@ -1015,14 +1006,16 @@ function NavRow({
           ← Back
         </button>
       )}
-      <button
-        onClick={onNext}
-        disabled={!canProceed}
-        className="flex-1 px-6 py-3 rounded-2xl bg-stone-900 hover:bg-stone-800 text-white font-semibold disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-sm"
-      >
-        {isLast ? "Find Gifts" : "Continue"}
-      </button>
-      {showSkip && onSkip && (
+      {!backOnly && (
+        <button
+          onClick={onNext}
+          disabled={!canProceed}
+          className="flex-1 px-6 py-3 rounded-2xl bg-stone-900 hover:bg-stone-800 text-white font-semibold disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-sm"
+        >
+          {isLast ? "Find Gifts" : "Continue"}
+        </button>
+      )}
+      {showSkip && onSkip && !backOnly && (
         <button
           onClick={onSkip}
           className="px-5 py-3 text-stone-400 hover:text-stone-600 text-sm font-medium transition-all"

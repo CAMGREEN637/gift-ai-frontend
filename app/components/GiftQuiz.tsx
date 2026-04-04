@@ -20,7 +20,7 @@ import {
 // TYPES
 // =============================================================================
 
-type QuizAnswers = {
+export type QuizAnswers = {
   occasion?: OccasionKey;
   occasion_date?: string;
   days_until_needed?: number;

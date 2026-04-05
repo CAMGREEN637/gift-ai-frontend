@@ -163,7 +163,12 @@ function GiftApp() {
     return (
       <main>
         <GiftQuiz onComplete={handleQuizComplete} />
-        {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
+        {showAuthModal && (
+          <AuthModal
+            isOpen={showAuthModal}
+            onClose={() => setShowAuthModal(false)}
+          />
+        )}
       </main>
     );
   }

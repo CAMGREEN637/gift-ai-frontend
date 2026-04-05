@@ -1,9 +1,7 @@
-// app/components/AuthModal.tsx
-
 "use client";
 
-import { useState } from 'react';
-import { useAuth } from '@/contexts/AuthContext';  // ← Updated path
+import { useState, useEffect } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 type AuthModalProps = {
   isOpen: boolean;
@@ -13,17 +11,36 @@ type AuthModalProps = {
 
 export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps) {
   const [isSignUp, setIsSignUp] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { signIn, signUp, signInWithGoogle } = useAuth();  // Get signInWithGoogle too!
+
+  const { signIn, signUp, signInWithGoogle } = useAuth();
+
+  // ✅ Lock scroll + ESC close
+  useEffect(() => {
+    if (!isOpen) return;
+
+    document.body.style.overflow = "hidden";
+
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
 
     try {
@@ -35,14 +52,14 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         setError(error.message);
       } else {
         if (isSignUp) {
-          setError('Check your email to confirm your account!');
+          setError("Check your email to confirm your account!");
         } else {
           onSuccess?.();
           onClose();
         }
       }
     } catch (err: any) {
-      setError(err.message || 'An unexpected error occurred');
+      setError(err?.message || "An unexpected error occurred");
     } finally {
       setLoading(false);
     }
@@ -53,17 +70,24 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
       setLoading(true);
       await signInWithGoogle();
     } catch (err: any) {
-      setError(err.message || 'Google sign-in failed');
+      setError(err?.message || "Google sign-in failed");
       setLoading(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8">
+    <div
+      className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+      onClick={onClose} // ✅ click backdrop closes
+    >
+      <div
+        className="bg-white rounded-2xl shadow-xl max-w-md w-full p-8"
+        onClick={(e) => e.stopPropagation()} // ✅ prevent close when clicking modal
+      >
+        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-900">
-            {isSignUp ? 'Create Account' : 'Sign In'}
+            {isSignUp ? "Create Account" : "Sign In"}
           </h2>
           <button
             onClick={onClose}
@@ -73,6 +97,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
           </button>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -104,11 +129,13 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
           </div>
 
           {error && (
-            <div className={`p-3 rounded-lg text-sm ${
-              error.includes('Check your email')
-                ? 'bg-green-50 text-green-800'
-                : 'bg-red-50 text-red-800'
-            }`}>
+            <div
+              className={`p-3 rounded-lg text-sm ${
+                error.includes("Check your email")
+                  ? "bg-green-50 text-green-800"
+                  : "bg-red-50 text-red-800"
+              }`}
+            >
               {error}
             </div>
           )}
@@ -118,21 +145,24 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition disabled:bg-gray-400"
           >
-            {loading ? 'Please wait...' : (isSignUp ? 'Sign Up' : 'Sign In')}
+            {loading ? "Please wait..." : isSignUp ? "Sign Up" : "Sign In"}
           </button>
         </form>
 
-        {/* Google Sign-In Button */}
+        {/* Divider */}
         <div className="mt-4">
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Or continue with</span>
+              <span className="px-2 bg-white text-gray-500">
+                Or continue with
+              </span>
             </div>
           </div>
 
+          {/* Google */}
           <button
             type="button"
             onClick={handleGoogleSignIn}
@@ -145,21 +175,22 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
               <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
               <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
-            Google
+            Continue with Google
           </button>
         </div>
 
+        {/* Toggle */}
         <div className="mt-4 text-center">
           <button
             type="button"
             onClick={() => {
               setIsSignUp(!isSignUp);
-              setError('');
+              setError("");
             }}
             className="text-blue-600 hover:text-blue-700 text-sm font-medium"
           >
             {isSignUp
-              ? 'Already have an account? Sign in'
+              ? "Already have an account? Sign in"
               : "Don't have an account? Sign up"}
           </button>
         </div>

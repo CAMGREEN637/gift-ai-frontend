@@ -39,10 +39,8 @@ type Partner = {
   id: string;
   name: string;
   relationship_stage?: string;
-  relationship?: string;
   interests?: string[];
   vibe?: string[];
-  personality_traits?: string[];
   preferred_price_range?: string;
 };
 
@@ -546,7 +544,7 @@ function GiftApp() {
       setQuizAnswers({
         partner_id:         partner.id,
         partner_name:       partner.name,
-        relationship_stage: (partner.relationship_stage ?? partner.relationship) as QuizAnswers["relationship_stage"],
+        relationship_stage: partner.relationship_stage as QuizAnswers["relationship_stage"],
         interests:          (partner.interests ?? []) as QuizAnswers["interests"],
         vibe:               (partner.vibe ?? []) as QuizAnswers["vibe"],
         max_price:          partner.preferred_price_range

@@ -129,7 +129,7 @@ function RecipientCard({
   const interests = recipient.interests ?? [];
   const birthdayDays = daysUntil(recipient.birthday);
   const anniversaryDays = daysUntil(recipient.anniversary);
-  const joined = formatJoined(recipient.createdAt ?? recipient.created_at);
+  const joined = formatJoined(recipient.createdAt);
 
   return (
     <div className="bg-white border border-stone-100 rounded-3xl shadow-sm overflow-hidden">

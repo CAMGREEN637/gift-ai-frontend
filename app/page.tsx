@@ -526,10 +526,12 @@ function GiftApp() {
   const [resultsHeadline, setResultsHeadline]           = useState("");
   const [resultsSubline, setResultsSubline]             = useState("");
   const [enriching, setEnriching]                       = useState(false);
-  const [savedGiftIds, setSavedGiftIds]                 = useState<Set<number>>(new Set()); // indices of saved gifts
-  const [savingGiftIds, setSavingGiftIds]               = useState<Set<number>>(new Set()); // indices currently saving
+  const [savedGiftIds, setSavedGiftIds]                 = useState<Set<number>>(new Set());
+  const [savingGiftIds, setSavingGiftIds]               = useState<Set<number>>(new Set());
   const [showAuthModal, setShowAuthModal]               = useState(false);
   const [saveAllDone, setSaveAllDone]                   = useState(false);
+  const [loadingMore, setLoadingMore]                   = useState(false);
+  const [noMoreGifts, setNoMoreGifts]                   = useState(false);
 
   const searchParams = useSearchParams();
   const { user, session } = useAuth();
@@ -584,6 +586,8 @@ function GiftApp() {
     setSavedGiftIds(new Set());
     setSavingGiftIds(new Set());
     setSaveAllDone(false);
+    setLoadingMore(false);
+    setNoMoreGifts(false);
   };
 
   // ============================================================
@@ -655,15 +659,82 @@ function GiftApp() {
     if (!pending) return;
     sessionStorage.removeItem(PENDING_SAVES_KEY);
     try {
-      const { indices, results: pendingResults } = JSON.parse(pending);
+      const { action, indices, results: pendingResults } = JSON.parse(pending);
       if (pendingResults?.length) {
-        // Restore results if the user just came back from auth
         setResults(pendingResults);
         setView("results");
-        executeSave(indices, pendingResults);
+        if (action === "load_more") {
+          // Re-fire load more after auth
+          fetchMoreGifts(pendingResults);
+        } else {
+          executeSave(indices ?? [], pendingResults);
+        }
       }
     } catch { /* malformed — ignore */ }
   }, [user, session]);
+
+  // ============================================================
+  // LOAD MORE
+  // ============================================================
+
+  const fetchMoreGifts = async (currentResults: Gift[]) => {
+    if (!quizAnswers || loadingMore) return;
+    setLoadingMore(true);
+
+    // Pass currently shown gift names so the backend excludes them
+    const excludeNames = currentResults.map((g) => g.name);
+
+    try {
+      const res = await fetch(`${apiUrl}/recommend`, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          occasion:           quizAnswers.occasion,
+          occasion_date:      quizAnswers.occasion_date,
+          days_until_needed:  quizAnswers.days_until_needed,
+          relationship_stage: quizAnswers.relationship_stage,
+          partner_name:       quizAnswers.partner_name,
+          partner_id:         quizAnswers.partner_id,
+          vibe:               quizAnswers.vibe          ?? [],
+          gift_types:         quizAnswers.gift_types    ?? [],
+          max_price:          quizAnswers.max_price,
+          confidence:         quizAnswers.confidence,
+          archetypes:         quizAnswers.archetypes    ?? [],
+          interests:          quizAnswers.interests     ?? [],
+          overlap_interests:  quizAnswers.overlap_interests ?? [],
+          exclude_names:      excludeNames,   // backend filters these out
+          k:                  5,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to load more");
+      const data = await res.json();
+      const newGifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
+
+      if (newGifts.length === 0) {
+        setNoMoreGifts(true);
+      } else {
+        setResults((prev) => [...prev, ...newGifts]);
+      }
+    } catch {
+      setNoMoreGifts(true);
+    } finally {
+      setLoadingMore(false);
+    }
+  };
+
+  const handleLoadMore = () => {
+    if (!user) {
+      // Queue load more and prompt auth
+      sessionStorage.setItem(
+        PENDING_SAVES_KEY,
+        JSON.stringify({ action: "load_more", results })
+      );
+      setShowAuthModal(true);
+      return;
+    }
+    fetchMoreGifts(results);
+  };
 
   // ============================================================
   // STREAMING HANDLER
@@ -1100,13 +1171,39 @@ function GiftApp() {
             </div>
           )}
 
-          {/* Retake CTA */}
+          {/* Load more + Start over */}
           {allGifts.length > 0 && !enriching && (
-            <div className="mt-12 text-center">
-              <p className="text-stone-400 text-sm mb-4">Not quite right?</p>
-              <button onClick={resetToLanding} className="px-6 py-3 border border-stone-200 rounded-2xl text-sm font-medium text-stone-600 hover:bg-stone-100 transition-all">
-                Start over
-              </button>
+            <div className="mt-10 flex flex-col items-center gap-4">
+              {!noMoreGifts ? (
+                <button
+                  onClick={handleLoadMore}
+                  disabled={loadingMore}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-stone-200 rounded-2xl text-sm font-semibold text-stone-700 hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
+                >
+                  {loadingMore ? (
+                    <>
+                      <svg className="w-4 h-4 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                      </svg>
+                      Finding more…
+                    </>
+                  ) : (
+                    <>
+                      Show 5 more gifts
+                      {!user && <span className="text-xs font-normal text-stone-400 ml-1">(free account required)</span>}
+                    </>
+                  )}
+                </button>
+              ) : (
+                <p className="text-stone-400 text-sm">No more gifts to show — try adjusting your quiz answers.</p>
+              )}
+              <div className="text-center">
+                <p className="text-stone-400 text-xs mb-2">Not quite right?</p>
+                <button onClick={resetToLanding} className="px-5 py-2 border border-stone-200 rounded-xl text-xs font-medium text-stone-500 hover:bg-stone-100 transition-all">
+                  Start over
+                </button>
+              </div>
             </div>
           )}
         </div>

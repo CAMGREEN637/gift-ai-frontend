@@ -46,6 +46,9 @@ type Partner = {
 
 type AppView = "landing" | "quiz" | "loading" | "results";
 
+// Key used to persist pending saves across the auth redirect
+const PENDING_SAVES_KEY = "giftai_pending_saves";
+
 // =============================================================================
 // HELPERS
 // =============================================================================
@@ -523,6 +526,10 @@ function GiftApp() {
   const [resultsHeadline, setResultsHeadline]           = useState("");
   const [resultsSubline, setResultsSubline]             = useState("");
   const [enriching, setEnriching]                       = useState(false);
+  const [savedGiftIds, setSavedGiftIds]                 = useState<Set<number>>(new Set()); // indices of saved gifts
+  const [savingGiftIds, setSavingGiftIds]               = useState<Set<number>>(new Set()); // indices currently saving
+  const [showAuthModal, setShowAuthModal]               = useState(false);
+  const [saveAllDone, setSaveAllDone]                   = useState(false);
 
   const searchParams = useSearchParams();
   const { user, session } = useAuth();
@@ -574,7 +581,89 @@ function GiftApp() {
     setResultsSubline("");
     setExpandedDescriptions(new Set());
     setEnriching(false);
+    setSavedGiftIds(new Set());
+    setSavingGiftIds(new Set());
+    setSaveAllDone(false);
   };
+
+  // ============================================================
+  // SAVE GIFTS
+  // If not signed in, stores pending saves in sessionStorage and
+  // opens the auth modal. After sign-in the useEffect below fires
+  // the pending saves automatically.
+  // ============================================================
+
+  const executeSave = async (indices: number[], currentResults: Gift[]) => {
+    if (!session) return;
+    const giftsToSave = indices
+      .filter((i) => !savedGiftIds.has(i))
+      .map((i) => currentResults[i])
+      .filter(Boolean);
+    if (giftsToSave.length === 0) return;
+
+    const pendingIndices = indices.filter((i) => !savedGiftIds.has(i));
+    setSavingGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
+
+    try {
+      const res = await fetch(`${apiUrl}/user-profile/saved-gifts`, {
+        method:  "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${session.access_token}` },
+        body: JSON.stringify({
+          recipient_name: quizAnswers?.partner_name || "My Partner",
+          recipient_id:   quizAnswers?.partner_id,
+          occasion:       quizAnswers?.occasion,
+          gifts:          giftsToSave,
+        }),
+      });
+      if (res.ok) {
+        setSavedGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
+        if (pendingIndices.length === results.length) setSaveAllDone(true);
+      }
+    } catch (err) {
+      console.error("Failed to save gifts:", err);
+    } finally {
+      setSavingGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.delete(i)); return s; });
+    }
+  };
+
+  const handleSaveGift = (idx: number) => {
+    if (savedGiftIds.has(idx)) return; // already saved — bookmark is purely additive
+    if (!user) {
+      // Queue the save and prompt auth
+      sessionStorage.setItem(PENDING_SAVES_KEY, JSON.stringify({ indices: [idx], results }));
+      setShowAuthModal(true);
+      return;
+    }
+    executeSave([idx], results);
+  };
+
+  const handleSaveAll = () => {
+    if (!user) {
+      const allIndices = results.map((_, i) => i);
+      sessionStorage.setItem(PENDING_SAVES_KEY, JSON.stringify({ indices: allIndices, results }));
+      setShowAuthModal(true);
+      return;
+    }
+    const unsaved = results.map((_, i) => i).filter((i) => !savedGiftIds.has(i));
+    executeSave(unsaved, results);
+  };
+
+  // After sign-in, flush any pending saves that were queued before auth
+  useEffect(() => {
+    if (!user || !session) return;
+    const pending = sessionStorage.getItem(PENDING_SAVES_KEY);
+    if (!pending) return;
+    sessionStorage.removeItem(PENDING_SAVES_KEY);
+    try {
+      const { indices, results: pendingResults } = JSON.parse(pending);
+      if (pendingResults?.length) {
+        // Restore results if the user just came back from auth
+        setResults(pendingResults);
+        setView("results");
+        executeSave(indices, pendingResults);
+      }
+    } catch { /* malformed — ignore */ }
+  }, [user, session]);
 
   // ============================================================
   // STREAMING HANDLER
@@ -746,7 +835,7 @@ function GiftApp() {
     const allGifts = results;
 
     return (
-      <div className="min-h-screen bg-stone-50">
+      <div className="min-h-screen bg-amber-50/40">
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
           body { font-family: 'DM Sans', sans-serif; }
@@ -828,7 +917,31 @@ function GiftApp() {
             {enriching && (
               <p className="text-amber-500 text-xs font-medium mt-1.5 animate-pulse">✦ Personalising your picks…</p>
             )}
+            {/* Save all button — appears once gifts are loaded */}
+            {allGifts.length > 0 && !enriching && (
+              <div className="mt-4">
+                {saveAllDone ? (
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-amber-700">
+                    <svg className="w-4 h-4 fill-amber-500" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                    All gifts saved
+                  </span>
+                ) : (
+                  <button
+                    onClick={handleSaveAll}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-xl text-sm font-medium text-stone-700 hover:border-amber-300 hover:text-amber-700 hover:bg-amber-50 transition-all shadow-sm"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                    </svg>
+                    Save this list
+                  </button>
+                )}
+              </div>
+            )}
           </div>
+
+          {/* Auth modal — triggered by save actions when not signed in */}
+          <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
 
           {error && (
             <div className="bg-red-50 border border-red-100 text-red-700 px-5 py-4 rounded-2xl mb-6">
@@ -862,7 +975,7 @@ function GiftApp() {
                   : gift.description ?? "";
 
                 const cardBorder = isTopPick
-                  ? "border-amber-300"
+                  ? "border-amber-200"
                   : "border-stone-100";
 
                 return (
@@ -887,6 +1000,28 @@ function GiftApp() {
                             </span>
                           </div>
                         )}
+
+                        {/* Bookmark icon — top right of image */}
+                        <button
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleSaveGift(idx); }}
+                          className="absolute top-2.5 right-2.5 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm shadow-sm hover:bg-white transition-all"
+                          title={savedGiftIds.has(idx) ? "Saved" : "Save gift"}
+                        >
+                          {savingGiftIds.has(idx) ? (
+                            <svg className="w-4 h-4 text-stone-300 animate-spin" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3"/>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                            </svg>
+                          ) : savedGiftIds.has(idx) ? (
+                            <svg className="w-4 h-4 fill-amber-500 text-amber-500" viewBox="0 0 24 24">
+                              <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                            </svg>
+                          ) : (
+                            <svg className="w-4 h-4 text-stone-400 hover:text-amber-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                            </svg>
+                          )}
+                        </button>
 
                         {gift.image_url ? (
                           <img
@@ -953,11 +1088,7 @@ function GiftApp() {
                         {buyUrl && (
                           <div
                             onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(buyUrl, "_blank", "noopener,noreferrer"); }}
-                            className={`flex items-center justify-center gap-1.5 w-full px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                              isTopPick
-                                ? "bg-amber-500 hover:bg-amber-600 text-white"
-                                : "bg-stone-900 hover:bg-stone-800 text-white"
-                            }`}
+                            className="flex items-center justify-center gap-1.5 w-full bg-stone-900 hover:bg-stone-800 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer"
                           >
                             View on Amazon
                             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

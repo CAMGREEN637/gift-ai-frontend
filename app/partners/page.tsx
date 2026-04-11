@@ -9,6 +9,18 @@ import { useAuth } from "@/contexts/AuthContext";
 // TYPES
 // =============================================================================
 
+type SavedGift = {
+  id: string;
+  name: string;
+  display_name?: string;
+  price?: number;
+  image_url?: string;
+  product_url?: string;
+  reason?: string;
+  occasion?: string;
+  saved_at?: string;
+};
+
 type Recipient = {
   id: string;
   name: string;
@@ -18,6 +30,7 @@ type Recipient = {
   anniversary?: string;
   notes?: string;
   createdAt?: string;
+  saved_gifts?: SavedGift[];
 };
 
 // =============================================================================
@@ -126,7 +139,8 @@ function RecipientCard({
     recipient.relationship_stage ||
     null;
 
-  const interests = recipient.interests ?? [];
+  const interests    = recipient.interests ?? [];
+  const savedGifts   = recipient.saved_gifts ?? [];
   const birthdayDays = daysUntil(recipient.birthday);
   const anniversaryDays = daysUntil(recipient.anniversary);
   const joined = formatJoined(recipient.createdAt);
@@ -237,20 +251,85 @@ function RecipientCard({
             </div>
           )}
 
-          {/* Saved gifts placeholder */}
+          {/* Saved gifts */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-3">
               Saved gifts
+              {savedGifts.length > 0 && (
+                <span className="ml-2 normal-case font-medium text-stone-400">
+                  · {savedGifts.length}
+                </span>
+              )}
             </p>
-            <div className="bg-stone-50 border border-stone-100 rounded-2xl px-4 py-4 text-center">
-              <p className="text-sm text-stone-400">
-                Saved gifts will appear here.{" "}
-                <Link href={`/?partner_id=${recipient.id}`} className="text-amber-600 hover:underline font-medium">
-                  Run a recommendation
-                </Link>{" "}
-                to get started.
-              </p>
-            </div>
+
+            {savedGifts.length === 0 ? (
+              <div className="bg-stone-50 border border-stone-100 rounded-2xl px-4 py-4 text-center">
+                <p className="text-sm text-stone-400">
+                  No gifts saved yet.{" "}
+                  <Link href={`/?partner_id=${recipient.id}`} className="text-amber-600 hover:underline font-medium">
+                    Find gift ideas
+                  </Link>{" "}
+                  and bookmark the ones you like.
+                </p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {savedGifts.map((gift) => {
+                  const buyUrl = gift.product_url
+                    ? gift.product_url.startsWith("http") ? gift.product_url : `https://${gift.product_url}`
+                    : null;
+                  const savedDate = gift.saved_at
+                    ? new Date(gift.saved_at).toLocaleDateString("en-US", { month: "short", day: "numeric" })
+                    : null;
+
+                  return (
+                    <div key={gift.id} className="flex gap-3 bg-stone-50 border border-stone-100 rounded-2xl p-3 group">
+                      {/* Thumbnail */}
+                      <div className="w-14 h-14 rounded-xl bg-white border border-stone-100 flex items-center justify-center shrink-0 overflow-hidden">
+                        {gift.image_url ? (
+                          <img src={gift.image_url} alt={gift.display_name || gift.name} className="w-full h-full object-contain p-1" />
+                        ) : (
+                          <span className="text-xl opacity-30">🎁</span>
+                        )}
+                      </div>
+
+                      {/* Info */}
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-stone-900 leading-tight truncate">
+                          {gift.display_name || gift.name}
+                        </p>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          {gift.price != null && (
+                            <span className="text-xs font-medium text-stone-600">${gift.price.toFixed(2)}</span>
+                          )}
+                          {gift.occasion && (
+                            <span className="text-xs text-stone-400 capitalize">{gift.occasion.replace(/_/g, " ")}</span>
+                          )}
+                        </div>
+                        {gift.reason && (
+                          <p className="text-xs text-stone-400 leading-relaxed mt-1 line-clamp-2">{gift.reason}</p>
+                        )}
+                        <div className="flex items-center gap-3 mt-2">
+                          {buyUrl && (
+                            <a
+                              href={buyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs font-medium text-amber-600 hover:text-amber-700 hover:underline"
+                            >
+                              View on Amazon →
+                            </a>
+                          )}
+                          {savedDate && (
+                            <span className="text-xs text-stone-300">Saved {savedDate}</span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* Danger zone */}

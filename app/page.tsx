@@ -743,19 +743,67 @@ function GiftApp() {
   // ============================================================
 
   if (view === "results") {
+    // Split into top pick + remaining for the Pinterest layout
+    const topPick    = results[0] ?? null;
+    const restGifts  = results.slice(1);
+
     return (
       <div className="min-h-screen bg-stone-50">
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
           body { font-family: 'DM Sans', sans-serif; }
           .font-serif { font-family: 'DM Serif Display', serif !important; }
-          @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-          .card-animate { animation: fadeUp 0.4s ease forwards; opacity: 0; }
+
+          /* Staggered card entrance */
+          @keyframes pinDrop {
+            from { opacity: 0; transform: translateY(22px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+          }
+          .pin-animate {
+            animation: pinDrop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            opacity: 0;
+          }
+
+          /* Pinterest-style masonry using CSS columns */
+          .pin-grid {
+            columns: 2;
+            column-gap: 1rem;
+          }
+          @media (max-width: 640px) {
+            .pin-grid { columns: 1; }
+          }
+          .pin-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+          }
+
+          /* Card lift on hover */
+          .pin-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+          .pin-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px -8px rgba(0,0,0,0.12);
+          }
+
+          /* Shimmer for image placeholders while enriching */
+          @keyframes shimmer {
+            from { background-position: -400px 0; }
+            to   { background-position: 400px 0; }
+          }
+          .shimmer {
+            background: linear-gradient(90deg, #f5f4f3 25%, #eae8e6 50%, #f5f4f3 75%);
+            background-size: 800px 100%;
+            animation: shimmer 1.6s infinite linear;
+          }
         `}</style>
+
         <Nav view="results" onLogoClick={resetToLanding} showStartOver onStartOver={resetToLanding} />
 
-        <div className="max-w-5xl mx-auto px-6 py-12">
-          <div className="mb-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+
+          {/* Page heading */}
+          <div className="mb-8">
             <h1 className="font-serif text-4xl text-stone-900 tracking-tight">
               {resultsHeadline || (quizAnswers?.partner_name ? `Gifts for ${quizAnswers.partner_name}` : "Your recommendations")}
             </h1>
@@ -763,12 +811,14 @@ function GiftApp() {
               {resultsSubline || (results.length > 0 ? `${results.length} curated picks, ranked by match` : "")}
             </p>
             {enriching && (
-              <p className="text-amber-500 text-xs font-medium mt-1 animate-pulse">Personalising your picks…</p>
+              <p className="text-amber-500 text-xs font-medium mt-1.5 animate-pulse">
+                ✦ Personalising your picks…
+              </p>
             )}
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-100 text-red-700 px-5 py-4 rounded-2xl mb-8">
+            <div className="bg-red-50 border border-red-100 text-red-700 px-5 py-4 rounded-2xl mb-6">
               <p className="font-medium text-sm">{error}</p>
             </div>
           )}
@@ -784,82 +834,187 @@ function GiftApp() {
             </div>
           )}
 
-          <div className="space-y-5">
-            {results.map((gift, idx) => {
-              const buyUrl          = normalizeUrl(gift.product_url);
-              const delivery        = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
-              const isExpanded      = expandedDescriptions.has(idx);
-              const matchPct        = Math.round((gift.confidence || 0.85) * 100);
-              const isTopPick       = idx === 0;
-              const displayTitle    = gift.display_name || gift.name;
-              const truncDesc       = gift.description && gift.description.length > 150 ? gift.description.substring(0, 150) + "…" : gift.description ?? "";
+          {/* ── TOP PICK — featured full-width card ── */}
+          {topPick && (() => {
+            const buyUrl     = normalizeUrl(topPick.product_url);
+            const delivery   = getDeliveryStatus(topPick, quizAnswers?.days_until_needed);
+            const matchPct   = Math.round((topPick.confidence || 0.85) * 100);
+            const title      = topPick.display_name || topPick.name;
+            const isExpanded = expandedDescriptions.has(0);
+            const truncDesc  = topPick.description && topPick.description.length > 180
+              ? topPick.description.substring(0, 180) + "…"
+              : topPick.description ?? "";
 
-              return (
-                <div
-                  key={idx}
-                  className={`card-animate bg-white rounded-3xl border shadow-sm overflow-hidden transition-shadow hover:shadow-md ${isTopPick ? "border-amber-200" : "border-stone-100"}`}
-                  style={{ animationDelay: `${idx * 80}ms` }}
-                >
-                  {isTopPick && <div className="h-1 w-full bg-gradient-to-r from-amber-400 to-amber-500" />}
-                  <div className="grid md:grid-cols-[220px_1fr] gap-0">
-                    <div className="bg-stone-50 flex items-center justify-center p-6 border-r border-stone-100 min-h-[180px]">
-                      {gift.image_url ? (
-                        <img src={gift.image_url} alt={displayTitle} className="object-contain max-h-40 w-full" />
-                      ) : (
-                        <span className="text-5xl opacity-40">🎁</span>
-                      )}
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-start justify-between gap-4 mb-3">
-                        <h2 className="font-serif text-xl text-stone-900 leading-snug tracking-tight">{displayTitle}</h2>
-                        {isTopPick && (
-                          <span className="shrink-0 text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">
-                            Top pick
-                          </span>
-                        )}
+            return (
+              <div
+                className="pin-animate pin-card bg-white rounded-3xl border border-amber-200 overflow-hidden mb-4 shadow-sm"
+                style={{ animationDelay: "0ms" }}
+              >
+                {/* Amber accent bar */}
+                <div className="h-1 w-full bg-gradient-to-r from-amber-400 to-amber-300" />
+
+                <div className="grid sm:grid-cols-[260px_1fr]">
+                  {/* Image — taller for featured card */}
+                  <div className="bg-stone-50 flex items-center justify-center p-6 border-b sm:border-b-0 sm:border-r border-stone-100 min-h-[220px]">
+                    {topPick.image_url ? (
+                      <img src={topPick.image_url} alt={title} className="object-contain max-h-52 w-full rounded-xl" />
+                    ) : (
+                      <span className="text-6xl opacity-30">🎁</span>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <h2 className="font-serif text-2xl text-stone-900 leading-snug tracking-tight">{title}</h2>
+                        <span className="shrink-0 text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full whitespace-nowrap">
+                          ✦ Top pick
+                        </span>
                       </div>
+
                       <div className="flex items-center gap-2 flex-wrap mb-4">
-                        <span className="text-2xl font-semibold text-stone-900">${gift.price.toFixed(2)}</span>
+                        <span className="text-2xl font-semibold text-stone-900">${topPick.price.toFixed(2)}</span>
                         <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-stone-100 text-stone-600 border border-stone-200">{matchPct}% match</span>
                         <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${deliveryColorClasses[delivery.color] || deliveryColorClasses.stone}`}>
                           {delivery.icon} {delivery.message}
                         </span>
                       </div>
-                      {gift.description && (
+
+                      {topPick.description && (
                         <p className="text-stone-500 text-sm mb-4 leading-relaxed">
-                          {isExpanded ? gift.description : truncDesc}
-                          {gift.description.length > 150 && (
-                            <button onClick={() => toggleDescription(idx)} className="ml-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm">
+                          {isExpanded ? topPick.description : truncDesc}
+                          {topPick.description.length > 180 && (
+                            <button onClick={() => toggleDescription(0)} className="ml-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm">
                               {isExpanded ? "Show less" : "Read more"}
                             </button>
                           )}
                         </p>
                       )}
-                      {gift.reason && (
+
+                      {/* Why this works — the hero element on top pick */}
+                      {topPick.reason && (
                         <div className="bg-amber-50 border border-amber-100 rounded-2xl px-4 py-3 mb-4">
-                          <p className="text-xs font-semibold text-amber-800 mb-0.5">Why this works</p>
-                          <p className="text-sm text-amber-700 leading-relaxed">{enhanceReason(gift.reason)}</p>
+                          <p className="text-xs font-semibold text-amber-700 mb-1 uppercase tracking-widest">Why this works</p>
+                          <p className="text-sm text-amber-800 leading-relaxed">{enhanceReason(topPick.reason)}</p>
                         </div>
                       )}
+
                       {delivery.showWarning && delivery.warningText && (
                         <div className="bg-red-50 border border-red-100 rounded-2xl px-4 py-3 mb-4">
                           <p className="text-sm text-red-600">{delivery.warningText}</p>
                         </div>
                       )}
-                      {buyUrl && (
-                        <a href={buyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-stone-900 text-white px-6 py-2.5 rounded-2xl text-sm font-semibold hover:bg-stone-800 transition-all shadow-sm hover:shadow-md">
-                          View on Amazon
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </a>
-                      )}
                     </div>
+
+                    {buyUrl && (
+                      <a href={buyUrl} target="_blank" rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-stone-900 text-white px-6 py-2.5 rounded-2xl text-sm font-semibold hover:bg-stone-800 transition-all shadow-sm self-start mt-2">
+                        View on Amazon
+                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })()}
+
+          {/* ── REMAINING GIFTS — Pinterest masonry grid ── */}
+          {restGifts.length > 0 && (
+            <div className="pin-grid">
+              {restGifts.map((gift, i) => {
+                const idx      = i + 1; // offset because top pick is idx 0
+                const buyUrl   = normalizeUrl(gift.product_url);
+                const delivery = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
+                const matchPct = Math.round((gift.confidence || 0.85) * 100);
+                const title    = gift.display_name || gift.name;
+                const isExpanded = expandedDescriptions.has(idx);
+                const truncDesc  = gift.description && gift.description.length > 120
+                  ? gift.description.substring(0, 120) + "…"
+                  : gift.description ?? "";
+
+                return (
+                  <div
+                    key={idx}
+                    className="pin-item pin-animate"
+                    style={{ animationDelay: `${idx * 90}ms` }}
+                  >
+                    <div className="pin-card bg-white rounded-3xl border border-stone-100 overflow-hidden shadow-sm">
+
+                      {/* Image — portrait crop, fills top of card like a Pinterest pin */}
+                      <div className="bg-stone-50 flex items-center justify-center overflow-hidden"
+                        style={{ minHeight: i % 2 === 0 ? "200px" : "170px" }}>
+                        {gift.image_url ? (
+                          <img
+                            src={gift.image_url}
+                            alt={title}
+                            className="w-full object-cover"
+                            style={{ maxHeight: i % 2 === 0 ? "220px" : "190px", objectFit: "contain", padding: "16px" }}
+                          />
+                        ) : enriching ? (
+                          <div className="shimmer w-full h-full" style={{ minHeight: "inherit" }} />
+                        ) : (
+                          <span className="text-5xl opacity-25 py-8">🎁</span>
+                        )}
+                      </div>
+
+                      {/* Card body */}
+                      <div className="p-4">
+                        <h2 className="font-serif text-lg text-stone-900 leading-snug tracking-tight mb-2">{title}</h2>
+
+                        <div className="flex items-center gap-1.5 flex-wrap mb-3">
+                          <span className="text-xl font-semibold text-stone-900">${gift.price.toFixed(2)}</span>
+                          <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-stone-100 text-stone-500 border border-stone-200">{matchPct}%</span>
+                          <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${deliveryColorClasses[delivery.color] || deliveryColorClasses.stone}`}>
+                            {delivery.icon} {delivery.message}
+                          </span>
+                        </div>
+
+                        {/* Description — shorter on pin cards */}
+                        {gift.description && (
+                          <p className="text-stone-400 text-xs mb-3 leading-relaxed">
+                            {isExpanded ? gift.description : truncDesc}
+                            {gift.description.length > 120 && (
+                              <button onClick={() => toggleDescription(idx)} className="ml-1 text-amber-600 hover:text-amber-700 font-medium">
+                                {isExpanded ? " less" : " more"}
+                              </button>
+                            )}
+                          </p>
+                        )}
+
+                        {/* Why this works — compact version */}
+                        {gift.reason && (
+                          <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
+                            <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">Why this works</p>
+                            <p className="text-xs text-amber-700 leading-relaxed">{enhanceReason(gift.reason)}</p>
+                          </div>
+                        )}
+
+                        {delivery.showWarning && delivery.warningText && (
+                          <div className="bg-red-50 border border-red-100 rounded-xl px-3 py-2 mb-3">
+                            <p className="text-xs text-red-600">{delivery.warningText}</p>
+                          </div>
+                        )}
+
+                        {buyUrl && (
+                          <a href={buyUrl} target="_blank" rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-1.5 w-full bg-stone-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-stone-800 transition-all">
+                            View on Amazon
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
 
           {/* Retake CTA */}
           {results.length > 0 && !enriching && (

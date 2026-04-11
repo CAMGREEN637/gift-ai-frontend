@@ -743,9 +743,7 @@ function GiftApp() {
   // ============================================================
 
   if (view === "results") {
-    // Split into top pick + remaining for the Pinterest layout
-    const topPick    = results[0] ?? null;
-    const restGifts  = results.slice(1);
+    const allGifts = results;
 
     return (
       <div className="min-h-screen bg-stone-50">
@@ -754,9 +752,8 @@ function GiftApp() {
           body { font-family: 'DM Sans', sans-serif; }
           .font-serif { font-family: 'DM Serif Display', serif !important; }
 
-          /* Staggered card entrance */
           @keyframes pinDrop {
-            from { opacity: 0; transform: translateY(22px) scale(0.97); }
+            from { opacity: 0; transform: translateY(20px) scale(0.97); }
             to   { opacity: 1; transform: translateY(0) scale(1); }
           }
           .pin-animate {
@@ -764,12 +761,11 @@ function GiftApp() {
             opacity: 0;
           }
 
-          /* Pinterest-style masonry using CSS columns */
           .pin-grid {
             columns: 2;
             column-gap: 1rem;
           }
-          @media (max-width: 640px) {
+          @media (max-width: 600px) {
             .pin-grid { columns: 1; }
           }
           .pin-item {
@@ -777,16 +773,35 @@ function GiftApp() {
             margin-bottom: 1rem;
           }
 
-          /* Card lift on hover */
+          /* Whole-card click target */
           .pin-card {
+            display: block;
+            cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
           }
           .pin-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px -8px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px -10px rgba(0,0,0,0.13);
+          }
+          .pin-card:active {
+            transform: translateY(-1px);
           }
 
-          /* Shimmer for image placeholders while enriching */
+          /* Top pick glows amber on hover */
+          .pin-card-top:hover {
+            box-shadow: 0 16px 40px -10px rgba(217,119,6,0.25);
+          }
+
+          /* Ribbon badge on image */
+          .ribbon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+          }
+
           @keyframes shimmer {
             from { background-position: -400px 0; }
             to   { background-position: 400px 0; }
@@ -808,12 +823,10 @@ function GiftApp() {
               {resultsHeadline || (quizAnswers?.partner_name ? `Gifts for ${quizAnswers.partner_name}` : "Your recommendations")}
             </h1>
             <p className="text-stone-400 mt-1 text-sm">
-              {resultsSubline || (results.length > 0 ? `${results.length} curated picks, ranked by match` : "")}
+              {resultsSubline || (allGifts.length > 0 ? `${allGifts.length} curated picks, ranked by match` : "")}
             </p>
             {enriching && (
-              <p className="text-amber-500 text-xs font-medium mt-1.5 animate-pulse">
-                ✦ Personalising your picks…
-              </p>
+              <p className="text-amber-500 text-xs font-medium mt-1.5 animate-pulse">✦ Personalising your picks…</p>
             )}
           </div>
 
@@ -823,7 +836,7 @@ function GiftApp() {
             </div>
           )}
 
-          {results.length === 0 && !enriching && (
+          {allGifts.length === 0 && !enriching && (
             <div className="bg-white border border-stone-100 rounded-3xl p-16 text-center shadow-sm">
               <p className="text-4xl mb-4">🔍</p>
               <h2 className="font-serif text-2xl text-stone-900 mb-2">No gifts found</h2>
@@ -834,158 +847,95 @@ function GiftApp() {
             </div>
           )}
 
-          {/* ── TOP PICK — featured full-width card ── */}
-          {topPick && (() => {
-            const buyUrl     = normalizeUrl(topPick.product_url);
-            const delivery   = getDeliveryStatus(topPick, quizAnswers?.days_until_needed);
-            const matchPct   = Math.round((topPick.confidence || 0.85) * 100);
-            const title      = topPick.display_name || topPick.name;
-            const isExpanded = expandedDescriptions.has(0);
-            const truncDesc  = topPick.description && topPick.description.length > 180
-              ? topPick.description.substring(0, 180) + "…"
-              : topPick.description ?? "";
-
-            return (
-              <div
-                className="pin-animate pin-card bg-white rounded-3xl border border-amber-200 overflow-hidden mb-4 shadow-sm"
-                style={{ animationDelay: "0ms" }}
-              >
-                {/* Amber accent bar */}
-                <div className="h-1 w-full bg-gradient-to-r from-amber-400 to-amber-300" />
-
-                <div className="grid sm:grid-cols-[260px_1fr]">
-                  {/* Image — taller for featured card */}
-                  <div className="bg-stone-50 flex items-center justify-center p-6 border-b sm:border-b-0 sm:border-r border-stone-100 min-h-[220px]">
-                    {topPick.image_url ? (
-                      <img src={topPick.image_url} alt={title} className="object-contain max-h-52 w-full rounded-xl" />
-                    ) : (
-                      <span className="text-6xl opacity-30">🎁</span>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-start justify-between gap-3 mb-3">
-                        <h2 className="font-serif text-2xl text-stone-900 leading-snug tracking-tight">{title}</h2>
-                        <span className="shrink-0 text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full whitespace-nowrap">
-                          ✦ Top pick
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-2 flex-wrap mb-4">
-                        <span className="text-2xl font-semibold text-stone-900">${topPick.price.toFixed(2)}</span>
-                        <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-stone-100 text-stone-600 border border-stone-200">{matchPct}% match</span>
-                        <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${deliveryColorClasses[delivery.color] || deliveryColorClasses.stone}`}>
-                          {delivery.icon} {delivery.message}
-                        </span>
-                      </div>
-
-                      {topPick.description && (
-                        <p className="text-stone-500 text-sm mb-4 leading-relaxed">
-                          {isExpanded ? topPick.description : truncDesc}
-                          {topPick.description.length > 180 && (
-                            <button onClick={() => toggleDescription(0)} className="ml-1.5 text-amber-600 hover:text-amber-700 font-medium text-sm">
-                              {isExpanded ? "Show less" : "Read more"}
-                            </button>
-                          )}
-                        </p>
-                      )}
-
-                      {/* Why this works — the hero element on top pick */}
-                      {topPick.reason && (
-                        <div className="bg-amber-50 border border-amber-100 rounded-2xl px-4 py-3 mb-4">
-                          <p className="text-xs font-semibold text-amber-700 mb-1 uppercase tracking-widest">Why this works</p>
-                          <p className="text-sm text-amber-800 leading-relaxed">{enhanceReason(topPick.reason)}</p>
-                        </div>
-                      )}
-
-                      {delivery.showWarning && delivery.warningText && (
-                        <div className="bg-red-50 border border-red-100 rounded-2xl px-4 py-3 mb-4">
-                          <p className="text-sm text-red-600">{delivery.warningText}</p>
-                        </div>
-                      )}
-                    </div>
-
-                    {buyUrl && (
-                      <a href={buyUrl} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-stone-900 text-white px-6 py-2.5 rounded-2xl text-sm font-semibold hover:bg-stone-800 transition-all shadow-sm self-start mt-2">
-                        View on Amazon
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })()}
-
-          {/* ── REMAINING GIFTS — Pinterest masonry grid ── */}
-          {restGifts.length > 0 && (
+          {/* ── PINTEREST GRID — all cards unified ── */}
+          {allGifts.length > 0 && (
             <div className="pin-grid">
-              {restGifts.map((gift, i) => {
-                const idx      = i + 1; // offset because top pick is idx 0
-                const buyUrl   = normalizeUrl(gift.product_url);
-                const delivery = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
-                const matchPct = Math.round((gift.confidence || 0.85) * 100);
-                const title    = gift.display_name || gift.name;
+              {allGifts.map((gift, idx) => {
+                const isTopPick  = idx === 0;
+                const buyUrl     = normalizeUrl(gift.product_url);
+                const delivery   = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
+                const matchPct   = Math.round((gift.confidence || 0.85) * 100);
+                const title      = gift.display_name || gift.name;
                 const isExpanded = expandedDescriptions.has(idx);
                 const truncDesc  = gift.description && gift.description.length > 120
                   ? gift.description.substring(0, 120) + "…"
                   : gift.description ?? "";
 
-                return (
-                  <div
-                    key={idx}
-                    className="pin-item pin-animate"
-                    style={{ animationDelay: `${idx * 90}ms` }}
-                  >
-                    <div className="pin-card bg-white rounded-3xl border border-stone-100 overflow-hidden shadow-sm">
+                const cardBorder = isTopPick
+                  ? "border-amber-300"
+                  : "border-stone-100";
 
-                      {/* Image — portrait crop, fills top of card like a Pinterest pin */}
-                      <div className="bg-stone-50 flex items-center justify-center overflow-hidden"
-                        style={{ minHeight: i % 2 === 0 ? "200px" : "170px" }}>
+                return (
+                  <div key={idx} className="pin-item pin-animate" style={{ animationDelay: `${idx * 90}ms` }}>
+                    {/* Whole card is a link — inner interactive elements stop propagation */}
+                    <a
+                      href={buyUrl ?? undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`pin-card ${isTopPick ? "pin-card-top" : ""} bg-white rounded-3xl border ${cardBorder} overflow-hidden shadow-sm`}
+                      onClick={(e) => { if (!buyUrl) e.preventDefault(); }}
+                    >
+                      {/* Image area */}
+                      <div className="relative bg-stone-50 flex items-center justify-center overflow-hidden"
+                        style={{ minHeight: idx % 2 === 0 ? "190px" : "165px" }}>
+
+                        {/* Top pick ribbon overlaid on image */}
+                        {isTopPick && (
+                          <div className="ribbon">
+                            <span className="inline-flex items-center gap-1 bg-amber-500 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                              ✦ Top pick
+                            </span>
+                          </div>
+                        )}
+
                         {gift.image_url ? (
                           <img
                             src={gift.image_url}
                             alt={title}
-                            className="w-full object-cover"
-                            style={{ maxHeight: i % 2 === 0 ? "220px" : "190px", objectFit: "contain", padding: "16px" }}
+                            className="w-full object-contain p-4"
+                            style={{ maxHeight: idx % 2 === 0 ? "190px" : "165px" }}
                           />
                         ) : enriching ? (
-                          <div className="shimmer w-full h-full" style={{ minHeight: "inherit" }} />
+                          <div className="shimmer w-full" style={{ height: idx % 2 === 0 ? "190px" : "165px" }} />
                         ) : (
-                          <span className="text-5xl opacity-25 py-8">🎁</span>
+                          <span className="text-5xl opacity-20 py-8">🎁</span>
                         )}
                       </div>
 
+                      {/* Amber accent line under image for top pick */}
+                      {isTopPick && (
+                        <div className="h-0.5 w-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400" />
+                      )}
+
                       {/* Card body */}
                       <div className="p-4">
-                        <h2 className="font-serif text-lg text-stone-900 leading-snug tracking-tight mb-2">{title}</h2>
+                        <h2 className={`font-serif leading-snug tracking-tight mb-2 ${isTopPick ? "text-xl text-stone-900" : "text-lg text-stone-800"}`}>
+                          {title}
+                        </h2>
 
                         <div className="flex items-center gap-1.5 flex-wrap mb-3">
-                          <span className="text-xl font-semibold text-stone-900">${gift.price.toFixed(2)}</span>
+                          <span className="text-lg font-semibold text-stone-900">${gift.price.toFixed(2)}</span>
                           <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-stone-100 text-stone-500 border border-stone-200">{matchPct}%</span>
                           <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${deliveryColorClasses[delivery.color] || deliveryColorClasses.stone}`}>
                             {delivery.icon} {delivery.message}
                           </span>
                         </div>
 
-                        {/* Description — shorter on pin cards */}
                         {gift.description && (
                           <p className="text-stone-400 text-xs mb-3 leading-relaxed">
                             {isExpanded ? gift.description : truncDesc}
                             {gift.description.length > 120 && (
-                              <button onClick={() => toggleDescription(idx)} className="ml-1 text-amber-600 hover:text-amber-700 font-medium">
+                              <button
+                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleDescription(idx); }}
+                                className="ml-1 text-amber-600 hover:text-amber-700 font-medium"
+                              >
                                 {isExpanded ? " less" : " more"}
                               </button>
                             )}
                           </p>
                         )}
 
-                        {/* Why this works — compact version */}
+                        {/* Why this works */}
                         {gift.reason && (
                           <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
                             <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">Why this works</p>
@@ -999,17 +949,24 @@ function GiftApp() {
                           </div>
                         )}
 
+                        {/* View on Amazon — stops propagation so it doesn't double-open */}
                         {buyUrl && (
-                          <a href={buyUrl} target="_blank" rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-1.5 w-full bg-stone-900 text-white px-4 py-2.5 rounded-xl text-xs font-semibold hover:bg-stone-800 transition-all">
+                          <div
+                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(buyUrl, "_blank", "noopener,noreferrer"); }}
+                            className={`flex items-center justify-center gap-1.5 w-full px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                              isTopPick
+                                ? "bg-amber-500 hover:bg-amber-600 text-white"
+                                : "bg-stone-900 hover:bg-stone-800 text-white"
+                            }`}
+                          >
                             View on Amazon
                             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                          </a>
+                          </div>
                         )}
                       </div>
-                    </div>
+                    </a>
                   </div>
                 );
               })}
@@ -1017,7 +974,7 @@ function GiftApp() {
           )}
 
           {/* Retake CTA */}
-          {results.length > 0 && !enriching && (
+          {allGifts.length > 0 && !enriching && (
             <div className="mt-12 text-center">
               <p className="text-stone-400 text-sm mb-4">Not quite right?</p>
               <button onClick={resetToLanding} className="px-6 py-3 border border-stone-200 rounded-2xl text-sm font-medium text-stone-600 hover:bg-stone-100 transition-all">

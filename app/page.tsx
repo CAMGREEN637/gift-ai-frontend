@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { toast } from "sonner";
 import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
 import AuthModal from "./components/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
@@ -622,6 +623,7 @@ function GiftApp() {
       if (res.ok) {
         setSavedGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
         if (pendingIndices.length === results.length) setSaveAllDone(true);
+        toast.success(giftsToSave.length === 1 ? "Gift saved!" : `${giftsToSave.length} gifts saved!`);
       }
     } catch (err) {
       console.error("Failed to save gifts:", err);
@@ -826,7 +828,7 @@ function GiftApp() {
         }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch recommendations.");
+      toast.error(err instanceof Error ? err.message : "Failed to fetch recommendations.");
       setView("results");
       setEnriching(false);
     }

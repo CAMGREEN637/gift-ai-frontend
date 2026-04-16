@@ -3,7 +3,23 @@
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "sonner";
-import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
+import dynamic from "next/dynamic";
+import type { QuizAnswers } from "./components/GiftQuiz";
+
+const GiftQuiz = dynamic(() => import("./components/GiftQuiz"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center py-24">
+      <div className="text-center">
+        <div
+          className="w-10 h-10 rounded-full border-4 border-stone-200 border-t-amber-500 mx-auto mb-4"
+          style={{ animation: "spin 1s linear infinite" }}
+        />
+        <p className="text-sm text-stone-400 font-medium">Loading quiz…</p>
+      </div>
+    </div>
+  ),
+});
 import AuthModal from "./components/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
 

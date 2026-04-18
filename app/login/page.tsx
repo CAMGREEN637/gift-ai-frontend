@@ -40,10 +40,16 @@ function LoginForm() {
     setError('')
 
     try {
+      // 🔒 Normalize redirect URL (prevents trailing slash mismatch)
+      const redirectTo =
+        typeof window !== 'undefined'
+          ? `${window.location.origin}/auth/callback`.replace(/\/$/, '')
+          : undefined
+
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo,
         },
       })
 

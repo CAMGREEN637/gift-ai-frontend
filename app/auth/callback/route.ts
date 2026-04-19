@@ -7,7 +7,18 @@ import type { CookieOptions } from '@supabase/ssr'
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url)
   const code = requestUrl.searchParams.get('code')
-  const origin = requestUrl.origin
+
+  /**
+   * FIX: Railway (and most hosting providers) uses a proxy.
+   * requestUrl.origin will incorrectly point to the internal
+   * container port (http://localhost:8080).
+   * We must use the forwarded headers to find the real public URL.
+   */
+  const forwardedHost = request.headers.get('x-forwarded-host')
+  const forwardedProto = request.headers.get('x-forwarded-proto') || 'https'
+  const origin = forwardedHost
+    ? `${forwardedProto}://${forwardedHost}`
+    : requestUrl.origin
 
   if (code) {
     const cookieStore = await cookies()
@@ -32,6 +43,7 @@ export async function GET(request: NextRequest) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
 
     if (!error) {
+      // ✅ Now correctly redirects to https://gift-ai-frontend-production.up.railway.app
       return NextResponse.redirect(`${origin}`)
     }
   }

@@ -269,7 +269,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
         </h1>
 
         <p className="text-stone-500 text-lg max-w-lg mx-auto mb-10 leading-relaxed fade-up-3">
-          Answer a few questions. Get 5 curated picks — each one with a clear explanation of why it works for her, this occasion, and where you two are.
+          Answer a few questions. Get curated picks — each one with a clear explanation of why it works for her, this occasion, and where you two are.
         </p>
 
         <div className="fade-up-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -386,7 +386,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
             {[
               { step: "01", title: "Tell us about her", body: "Pick her archetype, her interests, and how well you know her. Takes about 60 seconds." },
               { step: "02", title: "Tell us the moment", body: "The occasion, the relationship stage, your budget. We use this to calibrate the tone — not just the product." },
-              { step: "03", title: "Get smart picks", body: "5 curated gifts, each with a clear explanation of why it's the right move for her, right now." },
+              { step: "03", title: "Get smart picks", body: "Curated gifts ranked for her specifically, each with a clear explanation of why it's the right move for her, right now." },
             ].map((s) => (
               <div key={s.step} className="flex flex-col">
                 <span className="font-serif text-5xl text-amber-200 mb-4 leading-none">{s.step}</span>
@@ -451,7 +451,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
               },
               {
                 q: "How is this different from just Googling gift ideas?",
-                a: "Google gives you generic lists. We give you 5 specific picks for your girlfriend, for this occasion, with an explanation of why each one is the right call for where you two are right now.",
+                a: "Google gives you generic lists. We give you specific picks for your girlfriend, for this occasion, with an explanation of why each one is the right call for where you two are right now.",
               },
               {
                 q: "Is it really free?",

@@ -2,24 +2,7 @@
 
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { toast } from "sonner";
-import dynamic from "next/dynamic";
-import type { QuizAnswers } from "./components/GiftQuiz";
-
-const GiftQuiz = dynamic(() => import("./components/GiftQuiz"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center py-24">
-      <div className="text-center">
-        <div
-          className="w-10 h-10 rounded-full border-4 border-stone-200 border-t-amber-500 mx-auto mb-4"
-          style={{ animation: "spin 1s linear infinite" }}
-        />
-        <p className="text-sm text-stone-400 font-medium">Loading quiz…</p>
-      </div>
-    </div>
-  ),
-});
+import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
 import AuthModal from "./components/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
 
@@ -61,7 +44,7 @@ type Partner = {
   preferred_price_range?: string;
 };
 
-type AppView = "landing" | "quiz" | "loading" | "results";
+type AppView = "landing" | "quiz" | "results";
 
 // Key used to persist pending saves across the auth redirect
 const PENDING_SAVES_KEY = "giftai_pending_saves";
@@ -639,7 +622,6 @@ function GiftApp() {
       if (res.ok) {
         setSavedGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
         if (pendingIndices.length === results.length) setSaveAllDone(true);
-        toast.success(giftsToSave.length === 1 ? "Gift saved!" : `${giftsToSave.length} gifts saved!`);
       }
     } catch (err) {
       console.error("Failed to save gifts:", err);
@@ -714,13 +696,12 @@ function GiftApp() {
           partner_name:       quizAnswers.partner_name,
           partner_id:         quizAnswers.partner_id,
           vibe:               quizAnswers.vibe          ?? [],
-          gift_types:         quizAnswers.gift_types    ?? [],
           max_price:          quizAnswers.max_price,
           confidence:         quizAnswers.confidence,
           archetypes:         quizAnswers.archetypes    ?? [],
           interests:          quizAnswers.interests     ?? [],
           overlap_interests:  quizAnswers.overlap_interests ?? [],
-          exclude_names:      excludeNames,   // backend filters these out
+          exclude_names:      excludeNames,
           k:                  5,
         }),
       });
@@ -759,7 +740,6 @@ function GiftApp() {
   // ============================================================
 
   const handleQuizComplete = async (answers: QuizAnswers) => {
-    setView("loading");
     setError("");
     setResults([]);
     setQuizAnswers(answers);
@@ -799,7 +779,6 @@ function GiftApp() {
           partner_name:       answers.partner_name,
           partner_id:         answers.partner_id,
           vibe:               answers.vibe          ?? [],
-          gift_types:         answers.gift_types    ?? [],
           max_price:          answers.max_price,
           confidence:         answers.confidence,
           archetypes:         answers.archetypes    ?? [],
@@ -844,50 +823,11 @@ function GiftApp() {
         }
       }
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Failed to fetch recommendations.");
+      setError(err instanceof Error ? err.message : "Failed to fetch recommendations.");
       setView("results");
       setEnriching(false);
     }
   };
-
-  // ============================================================
-  // LOADING VIEW
-  // ============================================================
-
-  if (view === "loading") {
-    return (
-      <div className="min-h-screen bg-stone-50">
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-          body { font-family: 'DM Sans', sans-serif; }
-          .font-serif { font-family: 'DM Serif Display', serif !important; }
-          @keyframes spin { to { transform: rotate(360deg); } }
-          @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
-        `}</style>
-        <Nav view="loading" onLogoClick={resetToLanding} />
-        <div className="flex items-center justify-center min-h-[calc(100vh-56px)]">
-          <div className="text-center">
-            <div className="w-12 h-12 rounded-full border-4 border-stone-200 border-t-amber-500 mx-auto mb-6" style={{ animation: "spin 1s linear infinite" }} />
-            <h2 className="font-serif text-2xl text-stone-900 mb-6 tracking-tight">
-              {quizAnswers?.occasion === "apology" ? "Finding the right gesture…" : quizAnswers?.partner_name ? `Finding the perfect gift for ${quizAnswers.partner_name}…` : "Finding the perfect gift…"}
-            </h2>
-            <div className="space-y-3 text-left max-w-xs mx-auto">
-              {[
-                { icon: "🔍", text: "Scanning thousands of options" },
-                { icon: "💡", text: "Matching with her interests" },
-                { icon: "📦", text: "Checking delivery times" },
-              ].map((s, i) => (
-                <div key={i} className="flex items-center gap-3 text-stone-500" style={{ animation: "fadeSlideIn 0.5s ease forwards", animationDelay: `${i * 0.7}s`, opacity: 0 }}>
-                  <span className="text-lg">{s.icon}</span>
-                  <span className="text-sm font-medium">{s.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   // ============================================================
   // QUIZ VIEW

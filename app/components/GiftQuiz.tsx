@@ -5,10 +5,10 @@ import {
   OccasionKey,
   StageKey,
   VibeKey,
-  GiftTypeKey,
   ArchetypeKey,
   InterestKey,
   ConfidenceKey,
+  GiftTypeKey,
   getVibeRecommendation,
   getBudgetRecommendation,
   getBudgetOptionFromRange,
@@ -17,6 +17,7 @@ import {
   getOverlapInterests,
   ARCHETYPE_INTERESTS,
   GIFT_TYPE_META,
+  GIFT_TYPE_GUIDANCE,
 } from "@/lib/quizRules";
 
 // =============================================================================
@@ -31,7 +32,6 @@ export type QuizAnswers = {
   partner_name?: string;
   partner_id?: string;
   vibe?: VibeKey[];
-  gift_types?: GiftTypeKey[];
   max_price?: number;
   confidence?: ConfidenceKey;
   archetypes?: ArchetypeKey[];
@@ -49,9 +49,8 @@ type QuizProps = {
 // =============================================================================
 
 const FEEDBACK_DURATION = 1400;
-const LOADING_DURATION  = 2800;
+const LOADING_DURATION  = 3200; // slightly longer to show more insights
 const MAX_VIBES         = 2;
-const MAX_GIFT_TYPES    = 3;
 const MAX_ARCHETYPES    = 2;
 const MAX_INTERESTS     = 5;
 
@@ -94,6 +93,118 @@ const INTEREST_META: Record<InterestKey, { label: string; emoji: string }> = {
 };
 
 // =============================================================================
+// LOADING SCREEN INSIGHTS
+// Occasion-specific wisdom shown while recommendations load.
+// Replaces the generic "scanning thousands of options" text with something
+// that makes the wait feel like part of the product experience.
+// =============================================================================
+
+type LoadingInsight = {
+  icon: string;
+  text: string;
+};
+
+function getLoadingInsights(answers: QuizAnswers): LoadingInsight[] {
+  const insights: LoadingInsight[] = [];
+  const { occasion, relationship_stage, vibe, confidence, interests } = answers;
+
+  // Always first: what we're doing
+  insights.push({ icon: "🔍", text: "Scanning our gift database for the best matches" });
+
+  // Occasion-specific gift type wisdom
+  if (occasion) {
+    const guidance = GIFT_TYPE_GUIDANCE[occasion];
+    if (guidance) {
+      const discouraged = guidance.discouraged;
+      const recommended = guidance.recommended;
+
+      // Pick the most interesting discourage message
+      const discourageEntry = Object.entries(guidance.discourageMessages ?? {})[0];
+      if (discourageEntry) {
+        insights.push({ icon: "💡", text: discourageEntry[1] });
+      } else if (discouraged.length > 0) {
+        const discNames = discouraged
+          .slice(0, 2)
+          .map((k: GiftTypeKey) => GIFT_TYPE_META[k].label.toLowerCase())
+          .join(" and ");
+        insights.push({
+          icon: "💡",
+          text: `Skipping ${discNames} — ${occasion === "valentines" ? "they rarely feel romantic" : occasion === "apology" ? "they miss the mark for apologies" : "they tend to miss for this occasion"}.`,
+        });
+      } else if (recommended.length > 0) {
+        const recNames = recommended
+          .slice(0, 2)
+          .map((k: GiftTypeKey) => GIFT_TYPE_META[k].label.toLowerCase())
+          .join(" and ");
+        insights.push({
+          icon: "💡",
+          text: `${recNames.charAt(0).toUpperCase() + recNames.slice(1)} tend to land really well for ${
+            occasion === "valentines" ? "Valentine's Day"
+            : occasion === "anniversary" ? "anniversaries"
+            : occasion === "birthday" ? "birthdays"
+            : occasion === "christmas" ? "Christmas"
+            : occasion === "mothers_day" ? "Mother's Day"
+            : occasion === "just_because" ? "surprise gifts"
+            : "apologies"
+          }.`,
+        });
+      }
+    }
+
+    // Occasion-specific relationship wisdom
+    if (relationship_stage) {
+      const stageWisdom: Partial<Record<OccasionKey, Partial<Record<StageKey, string>>>> = {
+        valentines: {
+          new:       "Keeping it warm without overdoing it — early Valentine's gifts should feel like a signal, not a statement.",
+          committed: "Prioritising something personal over something expensive — she'll notice the difference.",
+          complicated: "Warm and genuine is the assignment here. Nothing too intense.",
+        },
+        anniversary: {
+          new:       "First anniversaries call for something meaningful but not overwhelming.",
+          committed: "Leaning into what makes your relationship specifically yours.",
+        },
+        apology: {
+          committed: "Something that says you actually know her — not just that you felt bad.",
+          new:       "Keeping it proportional to where you two are.",
+        },
+      };
+      const wisdom = stageWisdom[occasion]?.[relationship_stage];
+      if (wisdom) {
+        insights.push({ icon: "❤️", text: wisdom });
+      }
+    }
+  }
+
+  // Interest-based insight
+  if (interests && interests.length > 0) {
+    insights.push({
+      icon: "🎯",
+      text: `Matching against her interests: ${interests.slice(0, 3).join(", ")}`,
+    });
+  } else if (confidence === "lost") {
+    insights.push({
+      icon: "🎯",
+      text: "Focusing on crowd-pleasers that work for almost any woman — no guesswork needed.",
+    });
+  }
+
+  // Vibe insight
+  if (vibe && vibe.length > 0) {
+    const vibeLabels = vibe.map((v) => VIBE_META[v].label.toLowerCase());
+    insights.push({
+      icon: "✦",
+      text: `Filtering for gifts that feel ${vibeLabels.join(" and ")}`,
+    });
+  }
+
+  // Always last: delivery check
+  insights.push({ icon: "📦", text: "Checking availability and delivery times" });
+
+  // Return max 4 insights so the screen doesn't overflow
+  return insights.slice(0, 4);
+}
+
+// =============================================================================
 // STEP IDs
 // =============================================================================
 
@@ -104,7 +215,6 @@ type StepId =
   | "partner_name"
   | "vibe"
   | "budget"
-  | "gift_type"
   | "confidence"
   | "archetypes"
   | "interests";
@@ -116,7 +226,6 @@ const STEP_ORDER: StepId[] = [
   "partner_name",
   "vibe",
   "budget",
-  "gift_type",
   "confidence",
   "archetypes",
   "interests",
@@ -173,13 +282,14 @@ function getDateLimits() {
 export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   const [stepIndex, setStepIndex]               = useState(0);
   const [answers, setAnswers]                   = useState<QuizAnswers>(
-    initialAnswers ?? { archetypes: [], interests: [], gift_types: [] }
+    initialAnswers ?? { archetypes: [], interests: [] }
   );
   const [activeFeedback, setActiveFeedback]     = useState<string | null>(null);
   const [isFindingGifts, setIsFindingGifts]     = useState(false);
   const [error, setError]                       = useState<string | null>(null);
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [showAllInterests, setShowAllInterests] = useState(false);
+  const [visibleInsights, setVisibleInsights]   = useState(0);
 
   useEffect(() => {
     if (initialAnswers?.partner_id && !isEditingProfile) {
@@ -210,11 +320,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     return null;
   }, [answers.occasion, answers.relationship_stage]);
 
-  const giftTypeGuidance = useMemo(() => {
-    if (answers.occasion) return getGiftTypeGuidance(answers.occasion);
-    return null;
-  }, [answers.occasion]);
-
   const archetypeInterests = useMemo<InterestKey[]>(() => {
     if (showAllInterests) return Object.keys(INTEREST_META) as InterestKey[];
     if (answers.archetypes && answers.archetypes.length > 0)
@@ -232,6 +337,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
         ? getOverlapInterests(finalAnswers.archetypes)
         : [];
     setIsFindingGifts(true);
+    setVisibleInsights(0);
     setTimeout(() => onComplete({ ...finalAnswers, overlap_interests: overlap }), LOADING_DURATION);
   };
 
@@ -267,9 +373,9 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const handleOccasion = (value: OccasionKey, feedback: string) => {
     let dateToPreFill: string | undefined;
-    if (value === "christmas")      dateToPreFill = getNextHolidayDate(12, 25);
-    else if (value === "valentines")    dateToPreFill = getNextHolidayDate(2, 14);
-    else if (value === "mothers_day")   dateToPreFill = getNextMothersDayDate();
+    if (value === "christmas")    dateToPreFill = getNextHolidayDate(12, 25);
+    else if (value === "valentines")  dateToPreFill = getNextHolidayDate(2, 14);
+    else if (value === "mothers_day") dateToPreFill = getNextMothersDayDate();
     const updated: QuizAnswers = {
       ...answers,
       occasion: value,
@@ -303,19 +409,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const updated = { ...answers, max_price: value };
     setAnswers(updated);
     selectWithFeedback(feedback, updated);
-  };
-
-  const handleGiftTypeToggle = (value: GiftTypeKey) => {
-    const current = answers.gift_types ?? [];
-    let next: GiftTypeKey[];
-    if (current.includes(value)) {
-      next = current.filter((t) => t !== value);
-    } else if (current.length < MAX_GIFT_TYPES) {
-      next = [...current, value];
-    } else {
-      next = current;
-    }
-    setAnswers({ ...answers, gift_types: next });
   };
 
   const handleConfidence = (value: ConfidenceKey, feedback: string) => {
@@ -365,36 +458,48 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   if (isFindingGifts) {
     const isApology = answers.occasion === "apology";
-    const name = answers.partner_name;
+    const name      = answers.partner_name;
+    const insights  = getLoadingInsights(answers);
+
     return (
       <div className="w-full max-w-2xl mx-auto min-h-[400px] flex flex-col items-center justify-center text-center p-8">
+        <style>{`
+          @keyframes spin { to { transform: rotate(360deg); } }
+          @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+          @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        `}</style>
+
         <div
           className="w-14 h-14 rounded-full border-4 border-amber-200 border-t-amber-500 mb-8"
           style={{ animation: "spin 1s linear infinite" }}
         />
-        <h2 className="text-3xl font-serif text-stone-900 mb-8 tracking-tight">
-          {isApology ? "Finding the right gesture…" : name ? `Finding the perfect gift for ${name}…` : "Finding the perfect gift…"}
+
+        <h2 className="text-3xl font-serif text-stone-900 mb-8 tracking-tight"
+          style={{ animation: "fadeSlideUp 0.4s ease forwards" }}>
+          {isApology
+            ? "Finding the right gesture…"
+            : name
+            ? `Finding the perfect gift for ${name}…`
+            : "Finding the perfect gift…"}
         </h2>
-        <div className="space-y-4 w-full max-w-xs">
-          {[
-            { icon: "🔍", text: "Scanning thousands of options" },
-            { icon: "💡", text: "Matching with her interests" },
-            { icon: "📦", text: "Checking delivery times" },
-          ].map((s, i) => (
+
+        {/* Smart insights — each fades in staggered */}
+        <div className="space-y-3 w-full max-w-sm text-left">
+          {insights.map((insight, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 text-left text-stone-500"
-              style={{ animation: "fadeSlideIn 0.5s ease forwards", animationDelay: `${i * 0.7}s`, opacity: 0 }}
+              className="flex items-start gap-3 text-stone-500"
+              style={{
+                animation: "fadeSlideIn 0.5s ease forwards",
+                animationDelay: `${i * 0.75}s`,
+                opacity: 0,
+              }}
             >
-              <span className="text-lg">{s.icon}</span>
-              <span className="text-sm font-medium">{s.text}</span>
+              <span className="text-base mt-0.5 shrink-0">{insight.icon}</span>
+              <span className="text-sm leading-relaxed">{insight.text}</span>
             </div>
           ))}
         </div>
-        <style>{`
-          @keyframes spin { to { transform: rotate(360deg); } }
-          @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
-        `}</style>
       </div>
     );
   }
@@ -463,13 +568,13 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
         {(
           [
-            { label: "Birthday",       value: "birthday",     emoji: "🎂", feedback: "Birthdays are all about her — let's make it personal." },
-            { label: "Valentine's Day",value: "valentines",   emoji: "❤️", feedback: "Time to show up. Let's find something she'll love." },
-            { label: "Anniversary",    value: "anniversary",  emoji: "💝", feedback: "The occasion that rewards thoughtfulness more than any other." },
-            { label: "Christmas",      value: "christmas",    emoji: "🎄", feedback: "Warm, cozy, and a little indulgent — let's find the one." },
-            { label: "Mother's Day",   value: "mothers_day",  emoji: "🌸", feedback: "She deserves to feel celebrated. Let's get this right." },
-            { label: "Just Because",   value: "just_because", emoji: "✨", feedback: "Honestly? Surprise gifts are the most romantic move there is." },
-            { label: "I Messed Up",    value: "apology",      emoji: "🙏", feedback: "We've all been there. Let's help you make it right." },
+            { label: "Birthday",        value: "birthday",     emoji: "🎂", feedback: "Birthdays are all about her — let's make it personal." },
+            { label: "Valentine's Day", value: "valentines",   emoji: "❤️", feedback: "Time to show up. Let's find something she'll love." },
+            { label: "Anniversary",     value: "anniversary",  emoji: "💝", feedback: "The occasion that rewards thoughtfulness more than any other." },
+            { label: "Christmas",       value: "christmas",    emoji: "🎄", feedback: "Warm, cozy, and a little indulgent — let's find the one." },
+            { label: "Mother's Day",    value: "mothers_day",  emoji: "🌸", feedback: "She deserves to feel celebrated. Let's get this right." },
+            { label: "Just Because",    value: "just_because", emoji: "✨", feedback: "Honestly? Surprise gifts are the most romantic move there is." },
+            { label: "I Messed Up",     value: "apology",      emoji: "🙏", feedback: "We've all been there. Let's help you make it right." },
           ] as { label: string; value: OccasionKey; emoji: string; feedback: string }[]
         ).map((opt) => (
           <OptionCard
@@ -535,7 +640,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           />
         ))}
       </div>
-      {/* Back only — single-select auto-advances, no Continue needed */}
       <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
     </>
   );
@@ -635,72 +739,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     );
   };
 
-  const renderGiftType = () => {
-    const guidance = giftTypeGuidance;
-    const selected = answers.gift_types ?? [];
-
-    const allTypes    = Object.keys(GIFT_TYPE_META) as GiftTypeKey[];
-    const recommended = guidance?.recommended ?? [];
-    const discouraged = guidance?.discouraged ?? [];
-
-    // Sort: recommended first, then neutral, then discouraged
-    const sorted = [
-      ...allTypes.filter((t) => recommended.includes(t)),
-      ...allTypes.filter((t) => !recommended.includes(t) && !discouraged.includes(t)),
-      ...allTypes.filter((t) => discouraged.includes(t)),
-    ];
-
-    // Build a single advisory sentence about discouraged types
-    const discourageNote =
-      discouraged.length > 0
-        ? `One thing worth knowing: ${discouraged.map((t) => GIFT_TYPE_META[t].label).join(", ")} tend to miss the mark for this occasion.`
-        : "";
-
-    // Build explanation combining recommended types + discourage note
-    const recommendedNames = recommended.slice(0, 3).map((t) => GIFT_TYPE_META[t].label).join(", ");
-    const smartExplanation = recommended.length > 0
-      ? `${recommendedNames} tend to land really well here.${discourageNote ? " " + discourageNote : ""}`
-      : discourageNote;
-
-    return (
-      <>
-        <QuestionHeader
-          question="What type of gift are you thinking?"
-          subtitle="Pick up to 3 — or skip and we'll cover everything."
-          badge={selected.length > 0 ? `${selected.length} of ${MAX_GIFT_TYPES} selected` : undefined}
-        />
-        {guidance && smartExplanation && (
-          <SmartCard
-            title="Pro tip for this occasion"
-            explanation={smartExplanation}
-            highlight="Select what feels right, or skip to search across all types."
-          />
-        )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-          {sorted.map((type) => {
-            const meta       = GIFT_TYPE_META[type];
-            const isSelected = selected.includes(type);
-            const isDisabled = !isSelected && selected.length >= MAX_GIFT_TYPES;
-            const isRecommended = recommended.includes(type) && !isSelected;
-            return (
-              <OptionCard
-                key={type}
-                label={meta.label}
-                sublabel={meta.sublabel}
-                emoji={meta.emoji}
-                selected={isSelected}
-                disabled={isDisabled}
-                recommended={isRecommended}
-                onClick={() => !isDisabled && handleGiftTypeToggle(type)}
-              />
-            );
-          })}
-        </div>
-        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
-      </>
-    );
-  };
-
   const renderConfidence = () => {
     const isApology = answers.occasion === "apology";
     return (
@@ -711,7 +749,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             [
               { label: "Pretty well",   sublabel: "I have a good sense of what she likes", value: "confident" as ConfidenceKey, emoji: "🎯", feedback: "Perfect — we'll use everything you've told us to get specific." },
               { label: "Somewhat",      sublabel: "I have some idea but not totally sure",  value: "somewhat"  as ConfidenceKey, emoji: "🤔", feedback: "No problem — we'll mix specific picks with versatile options." },
-              { label: "Honestly lost", sublabel: "I genuinely have no idea",              value: "lost"      as ConfidenceKey, emoji: "😅", feedback: isApology ? "We've got you — let's find something that feels real." : "More common than you think. We'll focus on crowd-pleasers she'll actually love." },
+              { label: "Honestly lost", sublabel: "I genuinely have no idea",               value: "lost"      as ConfidenceKey, emoji: "😅", feedback: isApology ? "We've got you — let's find something that feels real." : "More common than you think. We'll focus on crowd-pleasers she'll actually love." },
             ]
           ).map((opt) => (
             <OptionCard
@@ -724,7 +762,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             />
           ))}
         </div>
-        {/* Back only — single-select auto-advances */}
         <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
       </>
     );
@@ -849,7 +886,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       case "partner_name":       return renderPartnerName();
       case "vibe":               return renderVibe();
       case "budget":             return renderBudget();
-      case "gift_type":          return renderGiftType();
       case "confidence":         return renderConfidence();
       case "archetypes":         return renderArchetypes();
       case "interests":          return renderInterests();

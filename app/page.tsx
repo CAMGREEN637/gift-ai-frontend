@@ -136,7 +136,7 @@ function Nav({
             {user ? (
               <>
                 <button onClick={() => router.push("/partners")} className="px-4 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-xl transition-all">
-                  My Partners
+                  Saved Recipients
                 </button>
                 <button onClick={() => signOut()} className="px-4 py-1.5 text-sm font-medium text-stone-400 hover:text-stone-600 transition-all">
                   Sign out

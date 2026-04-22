@@ -450,7 +450,7 @@ export default function PartnersPage() {
         <div className="max-w-md mx-auto px-6 py-24 text-center">
           <p className="text-5xl mb-6">🔒</p>
           <h1 className="font-serif text-3xl text-stone-900 mb-3 tracking-tight">Sign in to view your account</h1>
-          <p className="text-stone-500 mb-8 text-sm">Your saved partners and gift history live here.</p>
+          <p className="text-stone-500 mb-8 text-sm">Your saved recipients and gift history live here.</p>
           <Link href="/" className="px-6 py-3 bg-stone-900 text-white rounded-2xl font-semibold text-sm hover:bg-stone-800 transition-all">
             Back to Gift AI
           </Link>
@@ -471,10 +471,10 @@ export default function PartnersPage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-2">My Account</p>
-            <h1 className="font-serif text-4xl text-stone-900 tracking-tight">Saved Partners</h1>
+            <h1 className="font-serif text-4xl text-stone-900 tracking-tight">Saved Recipients</h1>
             <p className="text-stone-400 text-sm mt-1">
               {recipients.length === 0
-                ? "No partners saved yet."
+                ? "No recipients saved yet."
                 : `${recipients.length} saved profile${recipients.length !== 1 ? "s" : ""}`}
             </p>
           </div>
@@ -511,9 +511,9 @@ export default function PartnersPage() {
         {recipients.length === 0 ? (
           <div className="bg-white border border-stone-100 rounded-3xl p-16 text-center shadow-sm">
             <p className="text-5xl mb-5">💝</p>
-            <h2 className="font-serif text-2xl text-stone-900 mb-2">No partners saved yet</h2>
+            <h2 className="font-serif text-2xl text-stone-900 mb-2">No recipients saved yet</h2>
             <p className="text-stone-500 text-sm mb-8 max-w-xs mx-auto">
-              When you enter a partner's name during the quiz, their profile is saved here for next time.
+              When you enter a name during the quiz, their profile is saved here for next time.
             </p>
             <Link
               href="/"

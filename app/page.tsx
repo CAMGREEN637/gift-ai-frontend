@@ -699,7 +699,12 @@ function GiftApp() {
           max_price:          quizAnswers.max_price,
           confidence:         quizAnswers.confidence,
           archetypes:         quizAnswers.archetypes    ?? [],
-          interests:          quizAnswers.interests     ?? [],
+          interests: [
+            ...(quizAnswers.interests ?? []),
+            ...(quizAnswers.custom_interest && !quizAnswers.interests?.includes(quizAnswers.custom_interest as never)
+              ? [quizAnswers.custom_interest]
+              : []),
+          ],
           overlap_interests:  quizAnswers.overlap_interests ?? [],
           exclude_names:      excludeNames,
           k:                  5,
@@ -750,7 +755,12 @@ function GiftApp() {
         const recipientData = {
           name:                 answers.partner_name,
           relationship_stage:   answers.relationship_stage,
-          interests:            answers.interests ?? [],
+          interests: [
+            ...(answers.interests ?? []),
+            ...(answers.custom_interest && !answers.interests?.includes(answers.custom_interest as never)
+              ? [answers.custom_interest]
+              : []),
+          ],
           vibe:                 answers.vibe ?? [],
           preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
         };
@@ -782,7 +792,12 @@ function GiftApp() {
           max_price:          answers.max_price,
           confidence:         answers.confidence,
           archetypes:         answers.archetypes    ?? [],
-          interests:          answers.interests     ?? [],
+          interests: [
+            ...(answers.interests ?? []),
+            ...(answers.custom_interest && !answers.interests?.includes(answers.custom_interest as never)
+              ? [answers.custom_interest]
+              : []),
+          ],
           overlap_interests:  answers.overlap_interests ?? [],
         }),
       });

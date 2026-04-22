@@ -59,7 +59,8 @@ export type ArchetypeKey =
   | "social"
   | "niche"
   | "petparent"
-  | "fitness_girl";
+  | "fitness_girl"
+  | "custom";
 
 export type ConfidenceKey = "confident" | "somewhat" | "lost";
 
@@ -323,6 +324,7 @@ export const ARCHETYPE_INTERESTS: Record<ArchetypeKey, InterestKey[]> = {
   niche:        ["gaming", "movies", "reading", "music", "art"],
   petparent:    ["pets", "hiking", "photography", "home_decor", "wellness"],
   fitness_girl: ["fitness", "running", "cycling", "yoga", "hiking"],
+  custom:       [],
 };
 
 // -----------------------------------------------------------------------------

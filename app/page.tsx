@@ -699,7 +699,14 @@ function GiftApp() {
           max_price:          quizAnswers.max_price,
           confidence:         quizAnswers.confidence,
           archetypes:         (quizAnswers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          quizAnswers.interests     ?? [],
+          interests:          [
+            ...new Set([
+              ...(quizAnswers.interests ?? []),
+              ...(quizAnswers.custom_interest
+                ? quizAnswers.custom_interest.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
+                : []),
+            ]),
+          ],
           overlap_interests:  quizAnswers.overlap_interests ?? [],
           exclude_names:      excludeNames,
           k:                  5,
@@ -745,12 +752,25 @@ function GiftApp() {
     setQuizAnswers(answers);
 
     // Save partner profile
+    // Build the full interests array — splits custom_interest on commas so
+    // "coffee, art, pottery" becomes ["coffee", "art", "pottery"] and merges
+    // with any archetype-derived interests, deduplicating throughout.
+    const customInterests = answers.custom_interest
+      ? answers.custom_interest
+          .split(",")
+          .map((s) => s.trim().toLowerCase())
+          .filter(Boolean)
+      : [];
+    const mergedInterests = [
+      ...new Set([...(answers.interests ?? []), ...customInterests]),
+    ];
+
     if (user && session && answers.partner_name) {
       try {
         const recipientData = {
           name:                 answers.partner_name,
           relationship_stage:   answers.relationship_stage,
-          interests:            answers.interests ?? [],
+          interests:            mergedInterests,
           vibe:                 answers.vibe ?? [],
           preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
         };
@@ -782,7 +802,7 @@ function GiftApp() {
           max_price:          answers.max_price,
           confidence:         answers.confidence,
           archetypes:         (answers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          answers.interests     ?? [],
+          interests:          mergedInterests,
           overlap_interests:  answers.overlap_interests ?? [],
         }),
       });

@@ -758,7 +758,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const isApology = answers.occasion === "apology";
     return (
       <>
-        <QuestionHeader question="How well do you know her style?" subtitle="Honest answer gets you better results." />
+        <QuestionHeader question="How well do you know her interests?" subtitle="Be honest — it helps us pick the right approach." />
         <div className="grid grid-cols-1 gap-3 mb-8">
           {(
             [

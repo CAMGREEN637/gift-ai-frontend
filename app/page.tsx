@@ -432,6 +432,64 @@ function LandingPage({ onStart }: { onStart: () => void }) {
         </div>
       </section>
 
+      {/* ── NEVER FORGET ── */}
+      <section className="bg-white border-y border-stone-100 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="grid sm:grid-cols-2 gap-12 items-center">
+            {/* Left column */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Free account</p>
+              <h2 className="font-serif text-4xl text-stone-900 tracking-tight mb-4">
+                Never forget to buy<br />a gift again.
+              </h2>
+              <p className="text-stone-500 leading-relaxed mb-6">
+                We remember everything for you — birthdays, anniversaries, and what she actually likes.
+              </p>
+              <div className="space-y-2">
+                {[
+                  { emoji: "📅", text: "We remind you before every important date" },
+                  { emoji: "💡", text: "We remember her interests so you don't have to" },
+                  { emoji: "📈", text: "Every future gift gets easier — and better" },
+                ].map(({ emoji, text }) => (
+                  <div key={text} className="flex items-start gap-3">
+                    <span className="text-lg mt-0.5">{emoji}</span>
+                    <span className="text-sm text-stone-700 font-medium">{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right column — reminder mock-up */}
+            <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8">
+              <div className="space-y-3">
+                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
+                  <span className="text-xl">🎂</span>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">Sarah&apos;s birthday</p>
+                    <p className="text-xs text-amber-600 font-medium">in 7 days — we&apos;ll help you find something</p>
+                  </div>
+                </div>
+                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
+                  <span className="text-xl">💝</span>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">Your anniversary</p>
+                    <p className="text-xs text-stone-400">in 45 days — you&apos;ve got time</p>
+                  </div>
+                </div>
+                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
+                  <span className="text-xl">🎄</span>
+                  <div>
+                    <p className="text-sm font-semibold text-stone-900">Christmas</p>
+                    <p className="text-xs text-stone-400">in 3 months — relax</p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-stone-400 text-center mt-4">Sign up free to unlock reminders</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section id="faq" className="bg-white border-t border-stone-100 py-16">
         <div className="max-w-3xl mx-auto px-6">
@@ -450,8 +508,8 @@ function LandingPage({ onStart }: { onStart: () => void }) {
                 a: "That's exactly what we're built for. The confidence check in our quiz adapts the recommendations — when you say you're lost, we lean on occasion and vibe instead of interests, and surface crowd-pleasers that work broadly.",
               },
               {
-                q: "How is this different from just Googling gift ideas?",
-                a: "Google gives you generic lists. We give you specific picks for your girlfriend, for this occasion, with an explanation of why each one is the right call for where you two are right now.",
+                q: "How is this different from asking an AI chatbot for gift ideas?",
+                a: "A chatbot gives you a generic list based on whatever you type in the moment. It doesn't know your relationship stage, it doesn't adapt to the occasion's emotional register, it can't explain why a specific gift works for where you two are, and it forgets everything by next time. We remember her interests, track what's worked before, and get better with every gift you give.",
               },
               {
                 q: "Is it really free?",

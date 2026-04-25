@@ -50,6 +50,134 @@ type AppView = "landing" | "quiz" | "results";
 const PENDING_SAVES_KEY = "giftai_pending_saves";
 
 // =============================================================================
+// INTEREST EXTRACTION
+// =============================================================================
+
+const KNOWN_INTERESTS = new Set([
+  "coffee", "tea", "wine", "cocktails",
+  "cooking", "baking",
+  "reading", "books",
+  "fitness", "yoga", "running", "pilates",
+  "outdoors", "hiking", "camping", "travel", "adventure",
+  "art", "crafts", "painting", "drawing",
+  "music", "concerts",
+  "gaming", "tech",
+  "fashion", "style",
+  "beauty", "skincare", "makeup",
+  "wellness", "meditation", "spa",
+  "home_decor", "candles",
+  "gardening", "plants",
+  "pets", "dogs", "cats",
+  "photography",
+  "hobby",
+]);
+
+const INTEREST_ALIASES: Record<string, string> = {
+  // coffee
+  caffeine: "coffee", espresso: "coffee", latte: "coffee",
+  // cooking
+  foodie: "cooking", chef: "cooking",
+  // reading / books
+  book: "books", bookworm: "books", reader: "books", novel: "books",
+  // fitness
+  gym: "fitness", workout: "fitness", exercise: "fitness",
+  // outdoors
+  nature: "outdoors", hike: "hiking", camp: "camping",
+  // home_decor
+  candle: "home_decor", decor: "home_decor", decorating: "home_decor", interior: "home_decor",
+  // beauty
+  cosmetics: "beauty",
+  // wellness
+  selfcare: "wellness", "self-care": "wellness",
+  // gaming
+  gamer: "gaming", games: "gaming",
+  // tech
+  technology: "tech", gadgets: "tech", electronics: "tech",
+  // pets
+  dog: "pets", cat: "pets",
+  // gardening
+  garden: "gardening", plant: "plants", flowers: "gardening",
+  // music
+  musician: "music", singing: "music", singer: "music",
+  // travel
+  traveling: "travel", wanderlust: "travel",
+};
+
+const EXTRACTION_STOP_WORDS = new Set([
+  "she", "her", "hers", "he", "his", "they", "their",
+  "loves", "love", "loved", "likes", "like", "really", "into", "anything",
+  "with", "who", "is", "are", "was", "a", "an", "the", "and", "or",
+  "but", "very", "so", "also", "always", "girl", "woman", "person",
+  "partner", "girlfriend", "wife", "my", "our", "all", "some", "about",
+  "for", "of", "in", "on", "at", "to", "by", "from", "that", "this",
+  "it", "i", "me", "we", "has", "have", "had", "been", "be", "do",
+  "does", "did", "just", "get", "got", "both", "super", "totally",
+  "pretty", "kind", "sort", "type", "really", "big",
+]);
+
+function extractInterests(input: string): { tags: string[]; niche: string[] } {
+  if (!input.trim()) return { tags: [], niche: [] };
+
+  const lower = input.toLowerCase().trim();
+  const foundTags = new Set<string>();
+  const tags: string[] = [];
+  const niche: string[] = [];
+
+  const resolveTag = (word: string): string | null => {
+    const clean = word.replace(/[''s]+$/g, "");
+    if (KNOWN_INTERESTS.has(clean)) return clean;
+    if (INTEREST_ALIASES[clean]) return INTEREST_ALIASES[clean];
+    if (KNOWN_INTERESTS.has(word)) return word;
+    if (INTEREST_ALIASES[word]) return INTEREST_ALIASES[word];
+    return null;
+  };
+
+  if (input.includes(",")) {
+    // Comma-separated: each segment is a tag candidate or a raw niche keyword
+    for (const part of lower.split(",").map((s) => s.trim()).filter(Boolean)) {
+      const tag = resolveTag(part);
+      if (tag && !foundTags.has(tag)) {
+        tags.push(tag);
+        foundTags.add(tag);
+      } else if (!tag) {
+        niche.push(part);
+      }
+    }
+  } else {
+    // Natural language: word-by-word tag matching
+    for (const word of lower.split(/\s+/)) {
+      const tag = resolveTag(word);
+      if (tag && !foundTags.has(tag)) {
+        tags.push(tag);
+        foundTags.add(tag);
+      }
+    }
+
+    // Niche extraction: split on "and" / punctuation, strip stop words, keep 1–3 word phrases
+    const segments = lower.split(/\band\b|[,\.]/g);
+    for (const seg of segments) {
+      const words = seg
+        .replace(/['']/g, "")
+        .split(/\s+/)
+        .map((w) => w.trim())
+        .filter((w) => w && !EXTRACTION_STOP_WORDS.has(w.replace(/[''s]+$/g, "")));
+
+      if (words.length >= 1 && words.length <= 3) {
+        const phrase = words.join(" ");
+        if (phrase && !resolveTag(phrase) && !foundTags.has(phrase)) {
+          niche.push(phrase);
+        }
+      }
+    }
+  }
+
+  return {
+    tags:  [...new Set(tags)],
+    niche: [...new Set(niche)].filter(Boolean),
+  };
+}
+
+// =============================================================================
 // HELPERS
 // =============================================================================
 
@@ -742,6 +870,9 @@ function GiftApp() {
     // Pass currently shown gift names so the backend excludes them
     const excludeNames = currentResults.map((g) => g.name);
 
+    const loadMoreExtracted = extractInterests(quizAnswers.custom_interest || "");
+    const loadMoreMerged = [...new Set([...(quizAnswers.interests ?? []), ...loadMoreExtracted.tags])];
+
     try {
       const res = await fetch(`${apiUrl}/recommend`, {
         method:  "POST",
@@ -757,14 +888,8 @@ function GiftApp() {
           max_price:          quizAnswers.max_price,
           confidence:         quizAnswers.confidence,
           archetypes:         (quizAnswers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          [
-            ...new Set([
-              ...(quizAnswers.interests ?? []),
-              ...(quizAnswers.custom_interest
-                ? quizAnswers.custom_interest.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
-                : []),
-            ]),
-          ],
+          interests:          [...loadMoreMerged, ...loadMoreExtracted.niche],
+          niche_keywords:     loadMoreExtracted.niche,
           overlap_interests:  quizAnswers.overlap_interests ?? [],
           exclude_names:      excludeNames,
           k:                  5,
@@ -809,19 +934,11 @@ function GiftApp() {
     setResults([]);
     setQuizAnswers(answers);
 
-    // Save partner profile
-    // Build the full interests array — splits custom_interest on commas so
-    // "coffee, art, pottery" becomes ["coffee", "art", "pottery"] and merges
-    // with any archetype-derived interests, deduplicating throughout.
-    const customInterests = answers.custom_interest
-      ? answers.custom_interest
-          .split(",")
-          .map((s) => s.trim().toLowerCase())
-          .filter(Boolean)
-      : [];
-    const mergedInterests = [
-      ...new Set([...(answers.interests ?? []), ...customInterests]),
-    ];
+    // Extract taxonomy tags and raw niche keywords from the freeform interest input.
+    // Tags are matched against the 25-tag taxonomy; unrecognised phrases become niche keywords
+    // (e.g. "Star Wars", "true crime") that feed the vector search and LLM prompt directly.
+    const extracted = extractInterests(answers.custom_interest || "");
+    const mergedInterests = [...new Set([...(answers.interests ?? []), ...extracted.tags])];
 
     if (user && session && answers.partner_name) {
       try {
@@ -860,7 +977,8 @@ function GiftApp() {
           max_price:          answers.max_price,
           confidence:         answers.confidence,
           archetypes:         (answers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          mergedInterests,
+          interests:          [...mergedInterests, ...extracted.niche],
+          niche_keywords:     extracted.niche,
           overlap_interests:  answers.overlap_interests ?? [],
         }),
       });

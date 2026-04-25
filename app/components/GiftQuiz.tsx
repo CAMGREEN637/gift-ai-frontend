@@ -36,7 +36,6 @@ export type QuizAnswers = {
   confidence?: ConfidenceKey;
   archetypes?: ArchetypeKey[];
   interests?: InterestKey[];
-  custom_interest?: string;
   overlap_interests?: InterestKey[];
 };
 
@@ -218,7 +217,6 @@ type StepId =
   | "budget"
   | "confidence"
   | "archetypes"
-  | "custom_archetype"
   | "interests";
 
 const STEP_ORDER: StepId[] = [
@@ -230,11 +228,10 @@ const STEP_ORDER: StepId[] = [
   "budget",
   "confidence",
   "archetypes",
-  "custom_archetype",
   "interests",
 ];
 
-const INTEREST_STEPS: StepId[] = ["archetypes", "interests", "custom_archetype"];
+const INTEREST_STEPS: StepId[] = ["archetypes", "interests"];
 
 // =============================================================================
 // HELPERS
@@ -292,8 +289,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   const [error, setError]                       = useState<string | null>(null);
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [showAllInterests, setShowAllInterests] = useState(false);
-  const [showCustomInput, setShowCustomInput]   = useState(false);
-  const [customInputValue, setCustomInputValue] = useState("");
   const [visibleInsights, setVisibleInsights]   = useState(0);
 
   useEffect(() => {
@@ -306,11 +301,8 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     if (answers.confidence === "lost") {
       return STEP_ORDER.filter((s) => !INTEREST_STEPS.includes(s));
     }
-    if (answers.archetypes?.includes("custom")) {
-      return STEP_ORDER.filter((s) => s !== "interests");
-    }
-    return STEP_ORDER.filter((s) => s !== "custom_archetype");
-  }, [answers.confidence, answers.archetypes]);
+    return STEP_ORDER;
+  }, [answers.confidence]);
 
   const currentStepId   = activeSteps[stepIndex];
   const totalSteps      = activeSteps.length;
@@ -434,8 +426,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   };
 
   const handleArchetypeToggle = (value: ArchetypeKey) => {
-    if (value === "custom") return; // handled by handleCustomArchetype
-    const current = (answers.archetypes ?? []).filter((a) => a !== "custom");
+    const current = answers.archetypes ?? [];
     let next: ArchetypeKey[];
     if (current.includes(value)) {
       next = current.filter((a) => a !== value);
@@ -446,12 +437,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     }
     setAnswers({ ...answers, archetypes: next, interests: [] });
     setShowAllInterests(false);
-  };
-
-  const handleCustomArchetype = () => {
-    const updated: QuizAnswers = { ...answers, archetypes: ["custom"], interests: [] };
-    setAnswers(updated);
-    goNext(updated);
   };
 
   const handleInterestToggle = (value: InterestKey) => {
@@ -758,7 +743,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const isApology = answers.occasion === "apology";
     return (
       <>
-        <QuestionHeader question="How well do you know her style?" subtitle="Honest answer gets you better results." />
+        <QuestionHeader question="How well do you know her interests?" subtitle="Be honest — it helps us pick the right approach." />
         <div className="grid grid-cols-1 gap-3 mb-8">
           {(
             [
@@ -784,13 +769,12 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
 
   const renderArchetypes = () => {
     const selected = answers.archetypes ?? [];
-    const selectedRegular = selected.filter((a) => a !== "custom");
     return (
       <>
         <QuestionHeader
           question="What's her vibe?"
           subtitle="Pick up to 2 that feel like her."
-          badge={`${selectedRegular.length} of ${MAX_ARCHETYPES} selected`}
+          badge={`${selected.length} of ${MAX_ARCHETYPES} selected`}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
           {(
@@ -806,7 +790,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
             ]
           ).map((opt) => {
             const isSelected = selected.includes(opt.value);
-            const isDisabled = !isSelected && selectedRegular.length >= MAX_ARCHETYPES;
+            const isDisabled = !isSelected && selected.length >= MAX_ARCHETYPES;
             return (
               <OptionCard
                 key={opt.value}
@@ -819,15 +803,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               />
             );
           })}
-          {/* "None of these feel right" — advances immediately, dashed border */}
-          <OptionCard
-            label="None of these feel right"
-            sublabel="I'll describe her myself"
-            emoji="✏️"
-            selected={selected.includes("custom")}
-            dashedBorder
-            onClick={handleCustomArchetype}
-          />
         </div>
         <NavRow
           onBack={goBack}
@@ -835,43 +810,8 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           onSkip={handleSkip}
           showSkip
           showBack
-          canProceed={selectedRegular.length > 0}
+          canProceed={selected.length > 0}
           isLast={stepIndex === activeSteps.length - 1}
-        />
-      </>
-    );
-  };
-
-  const renderCustomArchetype = () => {
-    const value = answers.custom_interest ?? "";
-    const charCount = value.length;
-    const counterColor = charCount >= 70 ? "text-amber-500" : "text-stone-400";
-    return (
-      <>
-        <QuestionHeader
-          question="How would you describe her?"
-          subtitle="One or two things she's really into — in your own words."
-        />
-        <div className="mb-8 max-w-sm">
-          <input
-            type="text"
-            value={value}
-            onChange={(e) => setAnswers({ ...answers, custom_interest: e.target.value })}
-            placeholder="e.g. pottery, true crime podcasts, vintage fashion"
-            maxLength={80}
-            autoFocus
-            className="w-full px-5 py-4 bg-white border border-stone-200 rounded-2xl text-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all"
-          />
-          <p className={`text-xs mt-2 text-right ${counterColor}`}>{charCount} / 80</p>
-        </div>
-        <NavRow
-          onBack={goBack}
-          onNext={() => goNext()}
-          onSkip={handleSkip}
-          showSkip
-          showBack
-          canProceed={value.trim().length > 0}
-          isLast={true}
         />
       </>
     );
@@ -883,17 +823,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       answers.archetypes && answers.archetypes.length > 1
         ? getOverlapInterests(answers.archetypes)
         : [];
-    const atMax = selected.length >= MAX_INTERESTS;
-
-    const handleAddCustomInterest = () => {
-      const trimmed = customInputValue.trim();
-      if (!trimmed || atMax) return;
-      const newInterests = [...selected, trimmed] as InterestKey[];
-      setAnswers({ ...answers, interests: newInterests, custom_interest: trimmed });
-      setCustomInputValue("");
-      setShowCustomInput(false);
-    };
-
     return (
       <>
         <QuestionHeader
@@ -909,7 +838,7 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
           {archetypeInterests.map((interest) => {
             const meta       = INTEREST_META[interest];
             const isSelected = selected.includes(interest);
-            const isDisabled = !isSelected && atMax;
+            const isDisabled = !isSelected && selected.length >= MAX_INTERESTS;
             const isOverlap  = overlapInterests.includes(interest);
             return (
               <OptionCard
@@ -923,63 +852,15 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
               />
             );
           })}
-          {/* Custom interest chips added via inline input */}
-          {selected
-            .filter((i) => !((i as string) in INTEREST_META))
-            .map((customInt) => (
-              <OptionCard
-                key={customInt}
-                label={customInt}
-                emoji="✏️"
-                selected
-                onClick={() => handleInterestToggle(customInt as InterestKey)}
-              />
-            ))}
         </div>
         {!showAllInterests && (answers.archetypes?.length ?? 0) > 0 && (
           <button
             onClick={() => setShowAllInterests(true)}
-            className="text-sm text-stone-400 hover:text-stone-600 underline mb-4 transition-all"
+            className="text-sm text-stone-400 hover:text-stone-600 underline mb-6 transition-all"
           >
             Show all interests instead
           </button>
         )}
-        {/* Add a custom interest inline */}
-        <div className="mb-6">
-          {showCustomInput ? (
-            <div className="flex gap-2 items-center">
-              <input
-                type="text"
-                value={customInputValue}
-                onChange={(e) => setCustomInputValue(e.target.value)}
-                placeholder="Type an interest…"
-                maxLength={40}
-                autoFocus
-                onKeyDown={(e) => { if (e.key === "Enter") handleAddCustomInterest(); }}
-                className="flex-1 bg-white border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
-              />
-              <button
-                onClick={handleAddCustomInterest}
-                disabled={!customInputValue.trim() || atMax}
-                className="px-3 py-2 bg-stone-900 text-white text-sm font-semibold rounded-xl hover:bg-stone-800 disabled:opacity-40 transition-all"
-              >
-                Add
-              </button>
-            </div>
-          ) : (
-            <div>
-              <button
-                onClick={() => { if (!atMax) setShowCustomInput(true); }}
-                className={`text-sm underline transition-all ${atMax ? "text-stone-300 cursor-not-allowed" : "text-stone-400 hover:text-stone-600"}`}
-              >
-                + Add an interest not listed
-              </button>
-              {atMax && (
-                <p className="text-xs text-stone-400 mt-1">Remove an interest to add a custom one</p>
-              )}
-            </div>
-          )}
-        </div>
         <NavRow
           onBack={goBack}
           onNext={() => goNext()}
@@ -1007,7 +888,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       case "budget":             return renderBudget();
       case "confidence":         return renderConfidence();
       case "archetypes":         return renderArchetypes();
-      case "custom_archetype":   return renderCustomArchetype();
       case "interests":          return renderInterests();
       default:                   return null;
     }
@@ -1075,7 +955,6 @@ type OptionCardProps = {
   recommended?: boolean;
   overlap?: boolean;
   disabled?: boolean;
-  dashedBorder?: boolean;
   onClick: () => void;
 };
 
@@ -1087,7 +966,6 @@ function OptionCard({
   recommended,
   overlap,
   disabled,
-  dashedBorder,
   onClick,
 }: OptionCardProps) {
   return (
@@ -1099,8 +977,6 @@ function OptionCard({
           ? "border-amber-400 bg-amber-50 shadow-sm"
           : disabled
           ? "border-stone-100 opacity-40 cursor-not-allowed"
-          : dashedBorder
-          ? "border-dashed border-stone-300 bg-white hover:border-amber-300 hover:shadow-sm"
           : "border-stone-200 bg-white hover:border-amber-300 hover:shadow-sm"
       }`}
       aria-pressed={selected}

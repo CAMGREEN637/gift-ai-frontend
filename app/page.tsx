@@ -1,1280 +1,1065 @@
 "use client";
 
-import { useState, useEffect, useRef, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
-import AuthModal from "./components/AuthModal";
-import { useAuth } from "@/contexts/AuthContext";
+import { useState, useEffect, useMemo } from "react";
+import {
+  OccasionKey,
+  StageKey,
+  VibeKey,
+  ArchetypeKey,
+  InterestKey,
+  ConfidenceKey,
+  GiftTypeKey,
+  getVibeRecommendation,
+  getBudgetRecommendation,
+  getBudgetOptionFromRange,
+  getGiftTypeGuidance,
+  getInterestsForArchetypes,
+  getOverlapInterests,
+  ARCHETYPE_INTERESTS,
+  GIFT_TYPE_META,
+  GIFT_TYPE_GUIDANCE,
+} from "@/lib/quizRules";
 
 // =============================================================================
 // TYPES
 // =============================================================================
 
-type Gift = {
-  name: string;
-  display_name?: string;
-  price: number;
-  confidence: number;
-  description: string;
-  image_url?: string;
-  product_url?: string;
-  ranking_reasons?: string[];
-  reason?: string;
-  shipping_min_days?: number;
-  shipping_max_days?: number;
-  is_prime_eligible?: boolean;
-  already_purchased?: boolean;
+export type QuizAnswers = {
+  occasion?: OccasionKey;
+  occasion_date?: string;
+  days_until_needed?: number;
+  relationship_stage?: StageKey;
+  partner_name?: string;
+  partner_id?: string;
+  vibe?: VibeKey[];
+  max_price?: number;
+  confidence?: ConfidenceKey;
+  archetypes?: ArchetypeKey[];
+  interests?: InterestKey[];
+  overlap_interests?: InterestKey[];
+  custom_interest?: string;
 };
 
-type DeliveryStatus = {
-  status: "instant" | "estimated" | "on-time" | "tight" | "late";
-  message: string;
-  color: "green" | "yellow" | "red" | "purple" | "stone";
+type QuizProps = {
+  onComplete: (answers: QuizAnswers) => void;
+  initialAnswers?: QuizAnswers;
+};
+
+// =============================================================================
+// CONSTANTS
+// =============================================================================
+
+const FEEDBACK_DURATION = 1400;
+const LOADING_DURATION  = 3200; // slightly longer to show more insights
+const MAX_VIBES         = 2;
+const MAX_ARCHETYPES    = 2;
+const MAX_INTERESTS     = 5;
+
+const VIBE_META: Record<VibeKey, { label: string; emoji: string; feedback: string }> = {
+  pampering:   { label: "Pampered",    emoji: "🛁", feedback: "She gets to slow down and feel taken care of." },
+  romantic:    { label: "Romantic",    emoji: "🌹", feedback: "Warm, intentional, and just for her." },
+  sentimental: { label: "Sentimental", emoji: "💌", feedback: "The gift that shows you've been paying attention." },
+  luxe:        { label: "Luxe",        emoji: "✨", feedback: "Something she'd never justify buying herself." },
+  cozy:        { label: "Cozy",        emoji: "🕯️", feedback: "Warm, comforting, and perfect for any season." },
+  fun:         { label: "Fun",         emoji: "🎉", feedback: "Playful, surprising, and genuinely enjoyable." },
+  thoughtful:  { label: "Thoughtful",  emoji: "🎯", feedback: "Specific to her — shows you actually listen." },
+};
+
+const INTEREST_META: Record<InterestKey, { label: string; emoji: string }> = {
+  coffee:      { label: "Coffee",         emoji: "☕" },
+  cooking:     { label: "Cooking",        emoji: "🍳" },
+  baking:      { label: "Baking",         emoji: "🧁" },
+  wine:        { label: "Wine",           emoji: "🍷" },
+  cocktails:   { label: "Cocktails",      emoji: "🍹" },
+  fitness:     { label: "Fitness",        emoji: "🏋️" },
+  running:     { label: "Running",        emoji: "🏃" },
+  cycling:     { label: "Cycling",        emoji: "🚴" },
+  yoga:        { label: "Yoga",           emoji: "🧘" },
+  reading:     { label: "Reading",        emoji: "📚" },
+  music:       { label: "Music",          emoji: "🎵" },
+  gaming:      { label: "Gaming",         emoji: "🎮" },
+  photography: { label: "Photography",    emoji: "📸" },
+  art:         { label: "Art",            emoji: "🎨" },
+  travel:      { label: "Travel",         emoji: "✈️" },
+  hiking:      { label: "Hiking",         emoji: "⛰️" },
+  camping:     { label: "Camping",        emoji: "🏕️" },
+  gardening:   { label: "Gardening",      emoji: "🌱" },
+  movies:      { label: "Movies",         emoji: "🎬" },
+  fashion:     { label: "Fashion",        emoji: "👗" },
+  skincare:    { label: "Skincare",       emoji: "✨" },
+  makeup:      { label: "Makeup",         emoji: "💄" },
+  wellness:    { label: "Wellness",       emoji: "🌿" },
+  home_decor:  { label: "Candles & Home", emoji: "🕯️" },
+  pets:        { label: "Pets",           emoji: "🐾" },
+};
+
+// =============================================================================
+// LOADING SCREEN INSIGHTS
+// Occasion-specific wisdom shown while recommendations load.
+// Replaces the generic "scanning thousands of options" text with something
+// that makes the wait feel like part of the product experience.
+// =============================================================================
+
+type LoadingInsight = {
   icon: string;
-  showWarning?: boolean;
-  warningText?: string;
+  text: string;
 };
 
-type Partner = {
-  id: string;
-  name: string;
-  relationship_stage?: string;
-  interests?: string[];
-  vibe?: string[];
-  preferred_price_range?: string;
-};
+function getLoadingInsights(answers: QuizAnswers): LoadingInsight[] {
+  const insights: LoadingInsight[] = [];
+  const { occasion, relationship_stage, vibe, confidence, interests } = answers;
 
-type AppView = "landing" | "quiz" | "results";
+  // Always first: what we're doing
+  insights.push({ icon: "🔍", text: "Scanning our gift database for the best matches" });
 
-// Key used to persist pending saves across the auth redirect
-const PENDING_SAVES_KEY = "giftai_pending_saves";
+  // Occasion-specific gift type wisdom
+  if (occasion) {
+    const guidance = GIFT_TYPE_GUIDANCE[occasion];
+    if (guidance) {
+      const discouraged = guidance.discouraged;
+      const recommended = guidance.recommended;
+
+      // Pick the most interesting discourage message
+      const discourageEntry = Object.entries(guidance.discourageMessages ?? {})[0];
+      if (discourageEntry) {
+        insights.push({ icon: "💡", text: discourageEntry[1] });
+      } else if (discouraged.length > 0) {
+        const discNames = discouraged
+          .slice(0, 2)
+          .map((k: GiftTypeKey) => GIFT_TYPE_META[k].label.toLowerCase())
+          .join(" and ");
+        insights.push({
+          icon: "💡",
+          text: `Skipping ${discNames} — ${occasion === "valentines" ? "they rarely feel romantic" : occasion === "apology" ? "they miss the mark for apologies" : "they tend to miss for this occasion"}.`,
+        });
+      } else if (recommended.length > 0) {
+        const recNames = recommended
+          .slice(0, 2)
+          .map((k: GiftTypeKey) => GIFT_TYPE_META[k].label.toLowerCase())
+          .join(" and ");
+        insights.push({
+          icon: "💡",
+          text: `${recNames.charAt(0).toUpperCase() + recNames.slice(1)} tend to land really well for ${
+            occasion === "valentines" ? "Valentine's Day"
+            : occasion === "anniversary" ? "anniversaries"
+            : occasion === "birthday" ? "birthdays"
+            : occasion === "christmas" ? "Christmas"
+            : occasion === "mothers_day" ? "Mother's Day"
+            : occasion === "just_because" ? "surprise gifts"
+            : "apologies"
+          }.`,
+        });
+      }
+    }
+
+    // Occasion-specific relationship wisdom
+    if (relationship_stage) {
+      const stageWisdom: Partial<Record<OccasionKey, Partial<Record<StageKey, string>>>> = {
+        valentines: {
+          new:       "Keeping it warm without overdoing it — early Valentine's gifts should feel like a signal, not a statement.",
+          committed: "Prioritising something personal over something expensive — she'll notice the difference.",
+          complicated: "Warm and genuine is the assignment here. Nothing too intense.",
+        },
+        anniversary: {
+          new:       "First anniversaries call for something meaningful but not overwhelming.",
+          committed: "Leaning into what makes your relationship specifically yours.",
+        },
+        apology: {
+          committed: "Something that says you actually know her — not just that you felt bad.",
+          new:       "Keeping it proportional to where you two are.",
+        },
+      };
+      const wisdom = stageWisdom[occasion]?.[relationship_stage];
+      if (wisdom) {
+        insights.push({ icon: "❤️", text: wisdom });
+      }
+    }
+  }
+
+  // Interest-based insight
+  if (interests && interests.length > 0) {
+    insights.push({
+      icon: "🎯",
+      text: `Matching against her interests: ${interests.slice(0, 3).join(", ")}`,
+    });
+  } else if (confidence === "lost") {
+    insights.push({
+      icon: "🎯",
+      text: "Focusing on crowd-pleasers that work for almost any woman — no guesswork needed.",
+    });
+  }
+
+  // Vibe insight
+  if (vibe && vibe.length > 0) {
+    const vibeLabels = vibe.map((v) => VIBE_META[v].label.toLowerCase());
+    insights.push({
+      icon: "✦",
+      text: `Filtering for gifts that feel ${vibeLabels.join(" and ")}`,
+    });
+  }
+
+  // Always last: delivery check
+  insights.push({ icon: "📦", text: "Checking availability and delivery times" });
+
+  // Return max 4 insights so the screen doesn't overflow
+  return insights.slice(0, 4);
+}
+
+// =============================================================================
+// STEP IDs
+// =============================================================================
+
+type StepId =
+  | "occasion"
+  | "occasion_date"
+  | "relationship_stage"
+  | "partner_name"
+  | "vibe"
+  | "budget"
+  | "confidence"
+  | "archetypes"
+  | "interests";
+
+const STEP_ORDER: StepId[] = [
+  "occasion",
+  "occasion_date",
+  "relationship_stage",
+  "partner_name",
+  "vibe",
+  "budget",
+  "confidence",
+  "archetypes",
+  "interests",
+];
+
+const INTEREST_STEPS: StepId[] = ["archetypes", "interests"];
 
 // =============================================================================
 // HELPERS
 // =============================================================================
 
-const calculateDeliveryDate = (minDays: number, maxDays: number): string => {
-  const minDate = new Date();
-  const maxDate = new Date();
-  minDate.setDate(minDate.getDate() + minDays);
-  maxDate.setDate(maxDate.getDate() + maxDays);
-  const minStr = minDate.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  const maxStr = maxDate.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  return minDays === maxDays ? minStr : `${minStr} – ${maxStr}`;
-};
-
-const getDeliveryStatus = (gift: Gift, daysUntilNeeded?: number): DeliveryStatus => {
-  const minDays = gift.shipping_min_days ?? 5;
-  const maxDays = gift.shipping_max_days ?? 8;
-  if (maxDays === 0) return { status: "instant", message: "Instant delivery", color: "purple", icon: "⚡", showWarning: false };
-  if (daysUntilNeeded === undefined || daysUntilNeeded === null)
-    return { status: "estimated", message: `Arrives ${calculateDeliveryDate(minDays, maxDays)}`, color: "stone", icon: "📦", showWarning: false };
-  if (maxDays <= daysUntilNeeded)
-    return { status: "on-time", message: `Arrives ${calculateDeliveryDate(minDays, maxDays)}`, color: "green", icon: "✓", showWarning: false };
-  if (maxDays <= daysUntilNeeded + 3)
-    return { status: "tight", message: `Tight timeline (${maxDays} days)`, color: "yellow", icon: "⚠️", showWarning: true, warningText: `This gift takes ${maxDays} days to ship, close to your ${daysUntilNeeded}-day deadline.` };
-  const daysLate = maxDays - daysUntilNeeded;
-  return { status: "late", message: `May arrive ${daysLate} days after`, color: "red", icon: "⚠️", showWarning: true, warningText: `This gift typically takes ${maxDays} days to arrive, which may be after your event.` };
-};
-
-function normalizeUrl(url?: string): string | null {
-  if (!url || typeof url !== "string") return null;
-  if (url.startsWith("http://") || url.startsWith("https://")) return url;
-  return `https://${url}`;
+function getDaysUntil(dateString: string): number {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const target = new Date(dateString);
+  target.setHours(0, 0, 0, 0);
+  return Math.max(0, Math.ceil((target.getTime() - today.getTime()) / 86400000));
 }
 
-const enhanceReason = (reason: string): string => {
-  let enhanced = reason
-    .replace(/^(This gift|This item|This product|This)\s+/i, "")
-    .replace(/matches your search/gi, "perfectly suited for what you are looking for")
-    .trim();
-  if (enhanced.length > 0) enhanced = enhanced.charAt(0).toUpperCase() + enhanced.slice(1);
-  if (enhanced.length > 0 && !enhanced.endsWith(".") && !enhanced.endsWith("!")) enhanced += ".";
-  return enhanced;
-};
+function getNextHolidayDate(month: number, day: number): string {
+  const today = new Date();
+  let target = new Date(today.getFullYear(), month - 1, day);
+  if (target < today) target.setFullYear(today.getFullYear() + 1);
+  return target.toISOString().split("T")[0];
+}
 
-const deliveryColorClasses: Record<string, string> = {
-  green:  "bg-emerald-50 text-emerald-700 border-emerald-200",
-  yellow: "bg-amber-50 text-amber-700 border-amber-200",
-  red:    "bg-red-50 text-red-700 border-red-200",
-  purple: "bg-violet-50 text-violet-700 border-violet-200",
-  stone:  "bg-stone-100 text-stone-600 border-stone-200",
-};
+function getNextMothersDayDate(): string {
+  const today = new Date();
+  let year = today.getFullYear();
+  const getMothersDay = (y: number) => {
+    const may1 = new Date(y, 4, 1);
+    const firstSunday = (7 - may1.getDay()) % 7;
+    return new Date(y, 4, 1 + firstSunday + 7);
+  };
+  let md = getMothersDay(year);
+  if (md < today) md = getMothersDay(year + 1);
+  return md.toISOString().split("T")[0];
+}
+
+function getDateLimits() {
+  const today = new Date();
+  const oneYear = new Date();
+  oneYear.setFullYear(oneYear.getFullYear() + 1);
+  return {
+    minDate: today.toISOString().split("T")[0],
+    maxDate: oneYear.toISOString().split("T")[0],
+  };
+}
 
 // =============================================================================
-// SHARED NAV COMPONENT
+// COMPONENT
 // =============================================================================
 
-function Nav({
-  view,
-  onStartOver,
-  onLogoClick,
-  showStartOver,
-}: {
-  view: AppView;
-  onStartOver?: () => void;
-  onLogoClick: () => void;
-  showStartOver?: boolean;
-}) {
-  const router = useRouter();
-  const { user, signOut } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
-
-  return (
-    <>
-      <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <button onClick={onLogoClick} className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-            Gift AI
-          </button>
-          <div className="flex items-center gap-2">
-            {view === "landing" && (
-              <a href="#how-it-works" className="px-4 py-1.5 text-sm font-medium text-stone-500 hover:text-stone-900 transition-all hidden sm:block">
-                How it works
-              </a>
-            )}
-            {user ? (
-              <>
-                <button onClick={() => router.push("/partners")} className="px-4 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-xl transition-all">
-                  Saved Recipients
-                </button>
-                <button onClick={() => signOut()} className="px-4 py-1.5 text-sm font-medium text-stone-400 hover:text-stone-600 transition-all">
-                  Sign out
-                </button>
-              </>
-            ) : (
-              <button onClick={() => setShowAuthModal(true)} className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all">
-                Sign in
-              </button>
-            )}
-            {showStartOver && (
-              <button onClick={onStartOver} className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all">
-                Start over
-              </button>
-            )}
-          </div>
-        </div>
-      </nav>
-      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-    </>
+export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
+  const [stepIndex, setStepIndex]               = useState(0);
+  const [answers, setAnswers]                   = useState<QuizAnswers>(
+    initialAnswers ?? { archetypes: [], interests: [] }
   );
-}
-
-// =============================================================================
-// FOOTER
-// =============================================================================
-
-function Footer() {
-  return (
-    <footer className="bg-stone-900 text-stone-400 mt-20">
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-10 border-b border-stone-700">
-          {/* Brand */}
-          <div>
-            <p className="font-serif text-white text-lg mb-3">Gift AI</p>
-            <p className="text-sm leading-relaxed text-stone-500">
-              The gift advisor built for men who want to get it right. Context-aware recommendations that explain why each gift works.
-            </p>
-          </div>
-
-          {/* Explore */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-3">Explore</p>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#how-it-works" className="hover:text-white transition-colors">How it works</a></li>
-              <li><a href="#why-different" className="hover:text-white transition-colors">Why we're different</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-3">Legal</p>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
-            </ul>
-            <p className="text-xs text-stone-600 mt-4 leading-relaxed">
-              We earn a small commission when you purchase through our links at no extra cost to you.
-            </p>
-          </div>
-        </div>
-
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-600">
-          <p>© {new Date().getFullYear()} Gift AI. All rights reserved.</p>
-          <p>Free to use · No sign-up required · Real products, real links</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-// =============================================================================
-// LANDING PAGE
-// =============================================================================
-
-function LandingPage({ onStart }: { onStart: () => void }) {
-  const archetypes = [
-    "your outdoorsy girlfriend",
-    "your homebody wife",
-    "your wellness-obsessed partner",
-    "someone you just started dating",
-    "your wife of 10 years",
-    "your girlfriend who has everything",
-  ];
-  const [archetypeIndex, setArchetypeIndex] = useState(0);
-  const [fading, setFading] = useState(false);
+  const [activeFeedback, setActiveFeedback]     = useState<string | null>(null);
+  const [isFindingGifts, setIsFindingGifts]     = useState(false);
+  const [error, setError]                       = useState<string | null>(null);
+  const [isEditingProfile, setIsEditingProfile] = useState(false);
+  const [showAllInterests, setShowAllInterests] = useState(false);
+  const [visibleInsights, setVisibleInsights]   = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setFading(true);
+    if (initialAnswers?.partner_id && !isEditingProfile) {
+      setIsEditingProfile(true);
+    }
+  }, [initialAnswers?.partner_id]);
+
+  const activeSteps = useMemo<StepId[]>(() => {
+    if (answers.confidence === "lost") {
+      return STEP_ORDER.filter((s) => !INTEREST_STEPS.includes(s));
+    }
+    return STEP_ORDER;
+  }, [answers.confidence]);
+
+  const currentStepId   = activeSteps[stepIndex];
+  const totalSteps      = activeSteps.length;
+  const progressPercent = ((stepIndex + 1) / totalSteps) * 100;
+
+  const vibeRecommendation = useMemo(() => {
+    if (answers.occasion && answers.relationship_stage)
+      return getVibeRecommendation(answers.occasion, answers.relationship_stage);
+    return null;
+  }, [answers.occasion, answers.relationship_stage]);
+
+  const budgetRecommendation = useMemo(() => {
+    if (answers.occasion && answers.relationship_stage)
+      return getBudgetRecommendation(answers.occasion, answers.relationship_stage);
+    return null;
+  }, [answers.occasion, answers.relationship_stage]);
+
+  const archetypeInterests = useMemo<InterestKey[]>(() => {
+    if (showAllInterests) return Object.keys(INTEREST_META) as InterestKey[];
+    if (answers.archetypes && answers.archetypes.length > 0)
+      return getInterestsForArchetypes(answers.archetypes);
+    return Object.keys(INTEREST_META) as InterestKey[];
+  }, [answers.archetypes, showAllInterests]);
+
+  // ============================================================
+  // NAVIGATION
+  // ============================================================
+
+  const triggerCompletion = (finalAnswers: QuizAnswers) => {
+    const overlap =
+      finalAnswers.archetypes && finalAnswers.archetypes.length > 1
+        ? getOverlapInterests(finalAnswers.archetypes)
+        : [];
+    setIsFindingGifts(true);
+    setVisibleInsights(0);
+    setTimeout(() => onComplete({ ...finalAnswers, overlap_interests: overlap }), LOADING_DURATION);
+  };
+
+  const goNext = (updatedAnswers?: QuizAnswers) => {
+    const ans = updatedAnswers ?? answers;
+    setError(null);
+    if (stepIndex < activeSteps.length - 1) {
+      setStepIndex((i) => i + 1);
+    } else {
+      triggerCompletion(ans);
+    }
+  };
+
+  const goBack = () => {
+    setActiveFeedback(null);
+    setError(null);
+    if (stepIndex > 0) setStepIndex((i) => i - 1);
+  };
+
+  const handleSkip = () => goNext();
+
+  const selectWithFeedback = (feedback: string, updatedAnswers: QuizAnswers) => {
+    setActiveFeedback(feedback);
+    setTimeout(() => {
+      setActiveFeedback(null);
+      goNext(updatedAnswers);
+    }, FEEDBACK_DURATION);
+  };
+
+  // ============================================================
+  // PER-STEP HANDLERS
+  // ============================================================
+
+  const handleOccasion = (value: OccasionKey, feedback: string) => {
+    let dateToPreFill: string | undefined;
+    if (value === "christmas")    dateToPreFill = getNextHolidayDate(12, 25);
+    else if (value === "valentines")  dateToPreFill = getNextHolidayDate(2, 14);
+    else if (value === "mothers_day") dateToPreFill = getNextMothersDayDate();
+    const updated: QuizAnswers = {
+      ...answers,
+      occasion: value,
+      occasion_date: dateToPreFill,
+      days_until_needed: dateToPreFill ? getDaysUntil(dateToPreFill) : undefined,
+    };
+    setAnswers(updated);
+    selectWithFeedback(feedback, updated);
+  };
+
+  const handleStage = (value: StageKey, feedback: string) => {
+    const updated = { ...answers, relationship_stage: value };
+    setAnswers(updated);
+    selectWithFeedback(feedback, updated);
+  };
+
+  const handleVibeToggle = (value: VibeKey) => {
+    const current = answers.vibe ?? [];
+    let next: VibeKey[];
+    if (current.includes(value)) {
+      next = current.filter((v) => v !== value);
+    } else if (current.length < MAX_VIBES) {
+      next = [...current, value];
+    } else {
+      next = current;
+    }
+    setAnswers({ ...answers, vibe: next });
+  };
+
+  const handleBudget = (value: number, feedback: string) => {
+    const updated = { ...answers, max_price: value };
+    setAnswers(updated);
+    selectWithFeedback(feedback, updated);
+  };
+
+  const handleConfidence = (value: ConfidenceKey, feedback: string) => {
+    const updated = { ...answers, confidence: value };
+    setAnswers(updated);
+    if (value === "lost") {
+      setActiveFeedback(feedback);
       setTimeout(() => {
-        setArchetypeIndex((i) => (i + 1) % archetypes.length);
-        setFading(false);
-      }, 350);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
+        setActiveFeedback(null);
+        triggerCompletion(updated);
+      }, FEEDBACK_DURATION);
+    } else {
+      selectWithFeedback(feedback, updated);
+    }
+  };
 
-  return (
-    <div className="min-h-screen bg-stone-50">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-        body { font-family: 'DM Sans', sans-serif; }
-        .font-serif { font-family: 'DM Serif Display', serif !important; }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .fade-up-1 { animation: fadeUp 0.6s ease both; }
-        .fade-up-2 { animation: fadeUp 0.6s 0.15s ease both; }
-        .fade-up-3 { animation: fadeUp 0.6s 0.3s ease both; }
-        .fade-up-4 { animation: fadeUp 0.6s 0.45s ease both; }
-        .archetype-text { transition: opacity 0.35s ease; }
-        .archetype-fade { opacity: 0; }
-      `}</style>
+  const handleArchetypeToggle = (value: ArchetypeKey) => {
+    const current = answers.archetypes ?? [];
+    let next: ArchetypeKey[];
+    if (current.includes(value)) {
+      next = current.filter((a) => a !== value);
+    } else if (current.length < MAX_ARCHETYPES) {
+      next = [...current, value];
+    } else {
+      next = [current[1], value];
+    }
+    setAnswers({ ...answers, archetypes: next, interests: [] });
+    setShowAllInterests(false);
+  };
 
-      {/* ── HERO ── */}
-      <section className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
-        <div className="fade-up-1 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block"></span>
-          Free · No sign-up required
-        </div>
+  const handleInterestToggle = (value: InterestKey) => {
+    const current = answers.interests ?? [];
+    let next: InterestKey[];
+    if (current.includes(value)) {
+      next = current.filter((i) => i !== value);
+    } else if (current.length < MAX_INTERESTS) {
+      next = [...current, value];
+    } else {
+      next = current;
+    }
+    setAnswers({ ...answers, interests: next });
+  };
 
-        <h1 className="font-serif text-5xl sm:text-6xl text-stone-900 mb-5 tracking-tight leading-tight fade-up-2">
-          The right gift for<br />
-          <span
-            className={`archetype-text text-amber-600 italic ${fading ? "archetype-fade" : ""}`}
-          >
-            {archetypes[archetypeIndex]}
-          </span>
-        </h1>
+  // ============================================================
+  // LOADING SCREEN
+  // ============================================================
 
-        <p className="text-stone-500 text-lg max-w-lg mx-auto mb-10 leading-relaxed fade-up-3">
-          Answer a few questions. Get curated picks — each one with a clear explanation of why it works for her, this occasion, and where you two are.
-        </p>
+  if (isFindingGifts) {
+    const isApology = answers.occasion === "apology";
+    const name      = answers.partner_name;
+    const insights  = getLoadingInsights(answers);
 
-        <div className="fade-up-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={onStart}
-            className="px-8 py-4 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm hover:shadow-md text-base"
-          >
-            Find the perfect gift →
-          </button>
-          <a
-            href="#how-it-works"
-            className="px-6 py-4 text-stone-500 font-medium text-sm hover:text-stone-800 transition-all"
-          >
-            See how it works
-          </a>
-        </div>
+    return (
+      <div className="w-full max-w-2xl mx-auto min-h-[400px] flex flex-col items-center justify-center text-center p-8">
+        <style>{`
+          @keyframes spin { to { transform: rotate(360deg); } }
+          @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+          @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        `}</style>
 
-        {/* Social proof */}
-        <div className="fade-up-4 mt-10 flex items-center justify-center gap-6 text-xs text-stone-400">
-          <span>✓ 100% free</span>
-          <span className="text-stone-200">|</span>
-          <span>✓ Real products with buy links</span>
-          <span className="text-stone-200">|</span>
-          <span>✓ No generic lists</span>
-        </div>
-      </section>
+        <div
+          className="w-14 h-14 rounded-full border-4 border-amber-200 border-t-amber-500 mb-8"
+          style={{ animation: "spin 1s linear infinite" }}
+        />
 
-      {/* ── BEFORE / AFTER — CORE DIFFERENTIATOR ── */}
-      <section id="why-different" className="bg-white border-y border-stone-100 py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">What makes us different</p>
-            <h2 className="font-serif text-4xl text-stone-900 tracking-tight">
-              Other tools show options.<br />We explain the right move.
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {/* Before */}
-            <div className="bg-stone-50 border border-stone-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-4">Every other gift app</p>
-              <div className="bg-white border border-stone-100 rounded-xl p-4 mb-3">
-                <p className="text-sm font-semibold text-stone-700 mb-1">Faux Fur Throw Blanket</p>
-                <p className="text-xs text-stone-400">Soft, warm, great for relaxing at home.</p>
-              </div>
-              <div className="bg-white border border-stone-100 rounded-xl p-4">
-                <p className="text-sm font-semibold text-stone-700 mb-1">Skincare Gift Set</p>
-                <p className="text-xs text-stone-400">A luxurious set she'll love.</p>
-              </div>
-              <p className="text-xs text-stone-400 mt-4 italic">You still don't know which one to get.</p>
-            </div>
-
-            {/* After */}
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Gift AI</p>
-              <div className="bg-white border border-amber-100 rounded-xl p-4 mb-3">
-                <p className="text-sm font-semibold text-stone-800 mb-2">Faux Fur Throw Blanket</p>
-                <div className="bg-amber-50 rounded-lg px-3 py-2">
-                  <p className="text-xs font-semibold text-amber-700 mb-0.5">Why this works</p>
-                  <p className="text-xs text-amber-600 leading-relaxed">This feels like you're giving her permission to slow down — exactly what a cozy surprise gift should say. It's personal without being intense, which is exactly right for where you two are.</p>
-                </div>
-              </div>
-              <p className="text-xs text-amber-700 mt-4 italic font-medium">You know it's the right call before you buy it.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3 FEATURE COLUMNS ── */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Built different</p>
-          <h2 className="font-serif text-4xl text-stone-900 tracking-tight">
-            Not a filter. A decision engine.
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-3 gap-6">
-          {[
-            {
-              icon: "🎯",
-              title: "Context-aware",
-              body: "A Valentine's gift shouldn't feel like a birthday gift. We adapt to the occasion, your relationship stage, and the timing — all at once.",
-            },
-            {
-              icon: "❤️",
-              title: "Emotionally intelligent",
-              body: "We don't just tell you what to buy — we tell you what it communicates. Every pick comes with a reason that helps you give it with confidence.",
-            },
-            {
-              icon: "🧭",
-              title: "Built for guys who are stuck",
-              body: "Don't know her interests? Not sure what's appropriate? We guide you through it. The less you know, the more we help.",
-            },
-          ].map((f) => (
-            <div key={f.title} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
-              <span className="text-3xl mb-4 block">{f.icon}</span>
-              <h3 className="font-semibold text-stone-900 mb-2">{f.title}</h3>
-              <p className="text-sm text-stone-500 leading-relaxed">{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="bg-white border-y border-stone-100 py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Simple process</p>
-            <h2 className="font-serif text-4xl text-stone-900 tracking-tight">From stuck to confident in 2 minutes</h2>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              { step: "01", title: "Tell us about her", body: "Pick her archetype, her interests, and how well you know her. Takes about 60 seconds." },
-              { step: "02", title: "Tell us the moment", body: "The occasion, the relationship stage, your budget. We use this to calibrate the tone — not just the product." },
-              { step: "03", title: "Get smart picks", body: "Curated gifts ranked for her specifically, each with a clear explanation of why it's the right move for her, right now." },
-            ].map((s) => (
-              <div key={s.step} className="flex flex-col">
-                <span className="font-serif text-5xl text-amber-200 mb-4 leading-none">{s.step}</span>
-                <h3 className="font-semibold text-stone-900 mb-2">{s.title}</h3>
-                <p className="text-sm text-stone-500 leading-relaxed">{s.body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <button
-              onClick={onStart}
-              className="px-8 py-4 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm text-base"
-            >
-              Find the perfect gift →
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ── OCCASION CHIPS ── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-6">Works for every moment</p>
-        <div className="flex flex-wrap justify-center gap-3">
-          {[
-            ["🎂", "Birthday"],
-            ["❤️", "Valentine's Day"],
-            ["💝", "Anniversary"],
-            ["🎄", "Christmas"],
-            ["🌸", "Mother's Day"],
-            ["✨", "Just Because"],
-            ["🙏", "I Messed Up"],
-          ].map(([emoji, label]) => (
-            <button
-              key={label}
-              onClick={onStart}
-              className="flex items-center gap-2 px-4 py-2.5 bg-white border border-stone-200 rounded-full text-sm font-medium text-stone-700 hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 transition-all"
-            >
-              <span>{emoji}</span>
-              <span>{label}</span>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* ── NEVER FORGET SECTION ── */}
-      <section className="bg-white border-y border-stone-100 py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="grid sm:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Free account</p>
-              <h2 className="font-serif text-4xl text-stone-900 tracking-tight mb-4">
-                Never forget to buy<br />a gift again.
-              </h2>
-              <p className="text-stone-500 leading-relaxed mb-6">
-                We remember everything for you — birthdays, anniversaries, and what she actually likes.
-              </p>
-              <div className="space-y-4">
-                {[
-                  { icon: "📅", text: "We remind you before every important date" },
-                  { icon: "💡", text: "We remember her interests so you don't have to" },
-                  { icon: "📈", text: "Every future gift gets easier — and better" },
-                ].map((item) => (
-                  <div key={item.text} className="flex items-start gap-3">
-                    <span className="text-lg mt-0.5">{item.icon}</span>
-                    <p className="text-sm text-stone-700 font-medium">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8">
-              <div className="space-y-4">
-                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
-                  <span className="text-xl">🎂</span>
-                  <div>
-                    <p className="text-sm font-semibold text-stone-900">Sarah's birthday</p>
-                    <p className="text-xs text-amber-600 font-medium">in 7 days — we'll help you find something</p>
-                  </div>
-                </div>
-                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
-                  <span className="text-xl">💝</span>
-                  <div>
-                    <p className="text-sm font-semibold text-stone-900">Your anniversary</p>
-                    <p className="text-xs text-stone-400">in 45 days — you've got time</p>
-                  </div>
-                </div>
-                <div className="bg-white border border-stone-100 rounded-2xl px-4 py-3 flex items-center gap-3">
-                  <span className="text-xl">🎄</span>
-                  <div>
-                    <p className="text-sm font-semibold text-stone-900">Christmas</p>
-                    <p className="text-xs text-stone-400">in 3 months — relax</p>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-stone-400 text-center mt-4">Sign up free to unlock reminders</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ ── */}
-      <section id="faq" className="bg-white border-t border-stone-100 py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl text-stone-900 tracking-tight">Common questions</h2>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              {
-                q: "How does Gift AI find the right gift?",
-                a: "We use a combination of your answers about her interests, personality, and the relationship context — the occasion, your stage, timing, and budget — to match and rank real products. Then an AI layer explains why each one fits her specifically.",
-              },
-              {
-                q: "What if I don't know her interests well?",
-                a: "That's exactly what we're built for. The confidence check in our quiz adapts the recommendations — when you say you're lost, we lean on occasion and vibe instead of interests, and surface crowd-pleasers that work broadly.",
-              },
-              {
-                q: "How is this different from asking an AI chatbot for gift ideas?",
-                a: "A chatbot gives you a generic list based on whatever you type in the moment. It doesn't know your relationship stage, it doesn't adapt to the occasion's emotional register, it can't explain why a specific gift works for where you two are, and it forgets everything by next time. We remember her interests, track what's worked before, and get better with every gift you give.",
-              },
-              {
-                q: "Is it really free?",
-                a: "Yes, completely free. We earn a small affiliate commission when you click through and buy something — same price you'd pay anywhere else, no catch.",
-              },
-              {
-                q: "How do I buy the recommended gifts?",
-                a: "Every recommendation includes a direct link to the product. Click View on Amazon and you'll be taken straight to the listing to complete your purchase.",
-              },
-              {
-                q: "Can I save my partner's profile for next time?",
-                a: "Yes — create a free account and we'll remember her interests, vibe, and relationship stage so future recommendations start with context already filled in.",
-              },
-            ].map(({ q, a }) => (
-              <FaqItem key={q} question={q} answer={a} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── BOTTOM CTA ── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 text-center">
-        <h2 className="font-serif text-4xl text-stone-900 mb-4 tracking-tight">
-          Stop guessing.<br />Know it's the right gift.
+        <h2 className="text-3xl font-serif text-stone-900 mb-8 tracking-tight"
+          style={{ animation: "fadeSlideUp 0.4s ease forwards" }}>
+          {isApology
+            ? "Finding the right gesture…"
+            : name
+            ? `Finding the perfect gift for ${name}…`
+            : "Finding the perfect gift…"}
         </h2>
-        <p className="text-stone-500 mb-8 max-w-sm mx-auto">
-          Free, fast, and built for the guy who wants to get it right — not just get something.
-        </p>
-        <button
-          onClick={onStart}
-          className="px-8 py-4 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm text-base"
-        >
-          Find the perfect gift →
-        </button>
-      </section>
 
-      <Footer />
+        {/* Smart insights — each fades in staggered */}
+        <div className="space-y-3 w-full max-w-sm text-left">
+          {insights.map((insight, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-3 text-stone-500"
+              style={{
+                animation: "fadeSlideIn 0.5s ease forwards",
+                animationDelay: `${i * 0.75}s`,
+                opacity: 0,
+              }}
+            >
+              <span className="text-base mt-0.5 shrink-0">{insight.icon}</span>
+              <span className="text-sm leading-relaxed">{insight.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // ============================================================
+  // FEEDBACK OVERLAY
+  // ============================================================
+
+  if (activeFeedback) {
+    return (
+      <div className="w-full max-w-2xl mx-auto min-h-[400px] flex items-center justify-center py-24 px-4">
+        <p
+          className="text-2xl font-serif text-stone-800 text-center"
+          style={{ animation: "fadeSlideIn 0.3s ease forwards" }}
+        >
+          {activeFeedback}
+        </p>
+        <style>{`@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+      </div>
+    );
+  }
+
+  // ============================================================
+  // RENDER HELPERS
+  // ============================================================
+
+  const SmartCard = ({
+    title,
+    explanation,
+    highlight,
+  }: {
+    title: string;
+    explanation: string;
+    highlight: string;
+  }) => (
+    <div className="mb-6 px-5 py-4 bg-amber-50 border border-amber-200 rounded-2xl">
+      <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-1">{title}</p>
+      <p className="text-sm text-stone-600 leading-relaxed">{explanation}</p>
+      <p className="text-sm font-semibold text-stone-900 mt-2">{highlight}</p>
     </div>
   );
-}
 
-function FaqItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
+  const QuestionHeader = ({
+    question,
+    subtitle,
+    badge,
+  }: {
+    question: string;
+    subtitle: string;
+    badge?: string;
+  }) => (
+    <div className="mb-8">
+      <h2 className="text-3xl font-serif text-stone-900 mb-2 tracking-tight leading-snug">{question}</h2>
+      <p className="text-stone-500 text-base">{subtitle}</p>
+      {badge && <p className="text-sm text-amber-600 font-medium mt-2">{badge}</p>}
+    </div>
+  );
+
+  // ============================================================
+  // STEP RENDERERS
+  // ============================================================
+
+  const renderOccasion = () => (
+    <>
+      <QuestionHeader question="What's the occasion?" subtitle="Let's start with the reason." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        {(
+          [
+            { label: "Birthday",        value: "birthday",     emoji: "🎂", feedback: "Birthdays are all about her — let's make it personal." },
+            { label: "Valentine's Day", value: "valentines",   emoji: "❤️", feedback: "Time to show up. Let's find something she'll love." },
+            { label: "Anniversary",     value: "anniversary",  emoji: "💝", feedback: "The occasion that rewards thoughtfulness more than any other." },
+            { label: "Christmas",       value: "christmas",    emoji: "🎄", feedback: "Warm, cozy, and a little indulgent — let's find the one." },
+            { label: "Mother's Day",    value: "mothers_day",  emoji: "🌸", feedback: "She deserves to feel celebrated. Let's get this right." },
+            { label: "Just Because",    value: "just_because", emoji: "✨", feedback: "Honestly? Surprise gifts are the most romantic move there is." },
+            { label: "I Messed Up",     value: "apology",      emoji: "🙏", feedback: "We've all been there. Let's help you make it right." },
+          ] as { label: string; value: OccasionKey; emoji: string; feedback: string }[]
+        ).map((opt) => (
+          <OptionCard
+            key={opt.value}
+            label={opt.label}
+            emoji={opt.emoji}
+            selected={answers.occasion === opt.value}
+            onClick={() => handleOccasion(opt.value, opt.feedback)}
+          />
+        ))}
+      </div>
+    </>
+  );
+
+  const renderOccasionDate = () => {
+    const { minDate, maxDate } = getDateLimits();
+    return (
+      <>
+        <QuestionHeader question="When is it?" subtitle="We'll make sure it arrives in time." />
+        <div className="mb-8 max-w-sm">
+          <input
+            type="date"
+            value={answers.occasion_date ?? ""}
+            onChange={(e) => {
+              const v = e.target.value;
+              setAnswers({
+                ...answers,
+                occasion_date: v || undefined,
+                days_until_needed: v ? getDaysUntil(v) : undefined,
+              });
+            }}
+            min={minDate}
+            max={maxDate}
+            className="w-full px-5 py-4 bg-white border border-stone-200 rounded-2xl text-lg text-stone-900 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all"
+          />
+          <p className="text-xs text-stone-400 mt-2">Must be within the next year</p>
+        </div>
+        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
+      </>
+    );
+  };
+
+  const renderRelationshipStage = () => (
+    <>
+      <QuestionHeader question="Where are you two at?" subtitle="This helps us get the tone exactly right." />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+        {(
+          [
+            { label: "Early days",       sublabel: "Just started seeing each other", value: "new",         emoji: "🌱", feedback: "New relationships have their own rules — we've got you." },
+            { label: "We're official",   sublabel: "In a relationship",              value: "dating",      emoji: "💛", feedback: "You know her well enough to be specific. Good place to be." },
+            { label: "The real deal",    sublabel: "Serious or living together",     value: "serious",     emoji: "🔑", feedback: "The bar is high — but so is your advantage. You know her." },
+            { label: "All in",           sublabel: "Engaged or married",             value: "committed",   emoji: "💍", feedback: "The highest stakes and the best opportunity. Let's make it count." },
+            { label: "It's complicated", sublabel: "On and off",                     value: "complicated", emoji: "🌀", feedback: "Warm and genuine without putting pressure on things — we know the assignment." },
+          ] as { label: string; sublabel: string; value: StageKey; emoji: string; feedback: string }[]
+        ).map((opt) => (
+          <OptionCard
+            key={opt.value}
+            label={opt.label}
+            sublabel={opt.sublabel}
+            emoji={opt.emoji}
+            selected={answers.relationship_stage === opt.value}
+            onClick={() => handleStage(opt.value, opt.feedback)}
+          />
+        ))}
+      </div>
+      <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
+    </>
+  );
+
+  const renderPartnerName = () => (
+    <>
+      <QuestionHeader question="What's her name?" subtitle="Makes your recommendations feel a little more personal." />
+      <div className="mb-8 max-w-sm">
+        <input
+          type="text"
+          value={answers.partner_name ?? ""}
+          onChange={(e) => setAnswers({ ...answers, partner_name: e.target.value })}
+          placeholder="e.g., Sarah"
+          maxLength={50}
+          autoFocus
+          className="w-full px-5 py-4 bg-white border border-stone-200 rounded-2xl text-lg text-stone-900 placeholder-stone-300 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all"
+        />
+        <p className="text-xs text-stone-400 mt-2">Optional — skip if you prefer</p>
+      </div>
+      <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed isLast={false} />
+    </>
+  );
+
+  const renderVibe = () => {
+    const rec      = vibeRecommendation;
+    const selected = answers.vibe ?? [];
+    return (
+      <>
+        <QuestionHeader
+          question="What do you want her to feel?"
+          subtitle="Pick up to 2 — we'll match gifts to both."
+          badge={selected.length > 0 ? `${selected.length} of ${MAX_VIBES} selected` : undefined}
+        />
+        {rec && (
+          <SmartCard
+            title="Our read on this"
+            explanation={rec.explanation}
+            highlight={`We'd lean toward: ${rec.vibes.map((v) => VIBE_META[v].label).join(" + ")}`}
+          />
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {(Object.keys(VIBE_META) as VibeKey[]).map((v) => {
+            const isSelected = selected.includes(v);
+            const isDisabled = !isSelected && selected.length >= MAX_VIBES;
+            return (
+              <OptionCard
+                key={v}
+                label={VIBE_META[v].label}
+                emoji={VIBE_META[v].emoji}
+                selected={isSelected}
+                disabled={isDisabled}
+                recommended={rec?.vibes.includes(v) ?? false}
+                onClick={() => !isDisabled && handleVibeToggle(v)}
+              />
+            );
+          })}
+        </div>
+        <NavRow onBack={goBack} onNext={() => goNext()} onSkip={handleSkip} showSkip showBack canProceed={selected.length > 0} isLast={false} />
+      </>
+    );
+  };
+
+  const renderBudget = () => {
+    const rec = budgetRecommendation;
+    const recommendedValue = rec ? getBudgetOptionFromRange(rec.min, rec.max) : undefined;
+    const options = [
+      { label: "Under $25",   value: 25,     sublabel: "Small but meaningful",        emoji: "💸" },
+      { label: "$25 – $50",   value: 50,     sublabel: "Sweet spot for early stages", emoji: "💵" },
+      { label: "$50 – $100",  value: 100,    sublabel: "Room to be impressive",        emoji: "💳" },
+      { label: "$100 – $200", value: 200,    sublabel: "For the moments that matter", emoji: "💎" },
+      { label: "$200+",       value: 999999, sublabel: "All out",                      emoji: "🌟" },
+    ];
+    return (
+      <>
+        <QuestionHeader question="What's your budget?" subtitle="We'll find the best option at any price point." />
+        {rec && (
+          <SmartCard
+            title="Our suggestion"
+            explanation={rec.explanation}
+            highlight={`We'd recommend: ${options.find((o) => o.value === recommendedValue)?.label ?? "–"}`}
+          />
+        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {options.map((opt) => (
+            <OptionCard
+              key={opt.value}
+              label={opt.label}
+              sublabel={opt.sublabel}
+              emoji={opt.emoji}
+              selected={answers.max_price === opt.value}
+              recommended={recommendedValue === opt.value}
+              onClick={() => handleBudget(opt.value, `${opt.label} — ${opt.sublabel.toLowerCase()}.`)}
+            />
+          ))}
+        </div>
+      </>
+    );
+  };
+
+  const renderConfidence = () => {
+    const isApology = answers.occasion === "apology";
+    return (
+      <>
+        <QuestionHeader question="How well do you know her interests?" subtitle="Be honest — it helps us pick the right approach." />
+        <div className="grid grid-cols-1 gap-3 mb-8">
+          {(
+            [
+              { label: "Pretty well",   sublabel: "I have a good sense of what she likes", value: "confident" as ConfidenceKey, emoji: "🎯", feedback: "Perfect — we'll use everything you've told us to get specific." },
+              { label: "Somewhat",      sublabel: "I have some idea but not totally sure",  value: "somewhat"  as ConfidenceKey, emoji: "🤔", feedback: "No problem — we'll mix specific picks with versatile options." },
+              { label: "Honestly lost", sublabel: "I genuinely have no idea",               value: "lost"      as ConfidenceKey, emoji: "😅", feedback: isApology ? "We've got you — let's find something that feels real." : "More common than you think. We'll focus on crowd-pleasers she'll actually love." },
+            ]
+          ).map((opt) => (
+            <OptionCard
+              key={opt.value}
+              label={opt.label}
+              sublabel={opt.sublabel}
+              emoji={opt.emoji}
+              selected={answers.confidence === opt.value}
+              onClick={() => handleConfidence(opt.value, opt.feedback)}
+            />
+          ))}
+        </div>
+        <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
+      </>
+    );
+  };
+
+  const renderArchetypes = () => {
+    const selected = answers.archetypes ?? [];
+    return (
+      <>
+        <QuestionHeader
+          question="What's her vibe?"
+          subtitle="Pick up to 2 that feel like her."
+          badge={`${selected.length} of ${MAX_ARCHETYPES} selected`}
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {(
+            [
+              { label: "The Outdoorsy One",  sublabel: "Happiest outside",                         value: "outdoorsy"    as ArchetypeKey, emoji: "🏕️" },
+              { label: "The Homebody",        sublabel: "Her home is her happy place",               value: "homebody"     as ArchetypeKey, emoji: "🕯️" },
+              { label: "The Artsy One",       sublabel: "Always making or appreciating something",   value: "artsy"        as ArchetypeKey, emoji: "🎨" },
+              { label: "The Wellness Girl",   sublabel: "Self-care is her love language",            value: "wellness"     as ArchetypeKey, emoji: "🧘" },
+              { label: "The Social One",      sublabel: "She makes everything an occasion",          value: "social"       as ArchetypeKey, emoji: "🥂" },
+              { label: "Pop Culture Queen",   sublabel: "Deeply into one or two specific interests", value: "niche"        as ArchetypeKey, emoji: "🎮" },
+              { label: "The Pet Parent",      sublabel: "Her fur baby is basically her child",       value: "petparent"    as ArchetypeKey, emoji: "🐾" },
+              { label: "The Fitness Girl",    sublabel: "The gym is her happy place",                value: "fitness_girl" as ArchetypeKey, emoji: "🏋️" },
+            ]
+          ).map((opt) => {
+            const isSelected = selected.includes(opt.value);
+            const isDisabled = !isSelected && selected.length >= MAX_ARCHETYPES;
+            return (
+              <OptionCard
+                key={opt.value}
+                label={opt.label}
+                sublabel={opt.sublabel}
+                emoji={opt.emoji}
+                selected={isSelected}
+                disabled={isDisabled}
+                onClick={() => !isDisabled && handleArchetypeToggle(opt.value)}
+              />
+            );
+          })}
+        </div>
+        <NavRow
+          onBack={goBack}
+          onNext={() => goNext()}
+          onSkip={handleSkip}
+          showSkip
+          showBack
+          canProceed={selected.length > 0}
+          isLast={stepIndex === activeSteps.length - 1}
+        />
+      </>
+    );
+  };
+
+  const renderInterests = () => {
+    const selected = answers.interests ?? [];
+    const overlapInterests =
+      answers.archetypes && answers.archetypes.length > 1
+        ? getOverlapInterests(answers.archetypes)
+        : [];
+    return (
+      <>
+        <QuestionHeader
+          question="What specifically is she into?"
+          subtitle={
+            answers.archetypes && answers.archetypes.length > 0 && !showAllInterests
+              ? "We narrowed it down based on her vibe — pick everything that fits."
+              : "Pick up to 5 things she genuinely enjoys."
+          }
+          badge={`${selected.length} of ${MAX_INTERESTS} selected`}
+        />
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
+          {archetypeInterests.map((interest) => {
+            const meta       = INTEREST_META[interest];
+            const isSelected = selected.includes(interest);
+            const isDisabled = !isSelected && selected.length >= MAX_INTERESTS;
+            const isOverlap  = overlapInterests.includes(interest);
+            return (
+              <OptionCard
+                key={interest}
+                label={meta.label}
+                emoji={meta.emoji}
+                selected={isSelected}
+                disabled={isDisabled}
+                overlap={isOverlap}
+                onClick={() => !isDisabled && handleInterestToggle(interest)}
+              />
+            );
+          })}
+        </div>
+        {!showAllInterests && (answers.archetypes?.length ?? 0) > 0 && (
+          <button
+            onClick={() => setShowAllInterests(true)}
+            className="text-sm text-stone-400 hover:text-stone-600 underline mb-6 transition-all"
+          >
+            Show all interests instead
+          </button>
+        )}
+        <NavRow
+          onBack={goBack}
+          onNext={() => goNext()}
+          onSkip={handleSkip}
+          showSkip
+          showBack
+          canProceed={selected.length > 0}
+          isLast={stepIndex === activeSteps.length - 1}
+        />
+      </>
+    );
+  };
+
+  // ============================================================
+  // STEP ROUTER
+  // ============================================================
+
+  const renderStep = () => {
+    switch (currentStepId) {
+      case "occasion":           return renderOccasion();
+      case "occasion_date":      return renderOccasionDate();
+      case "relationship_stage": return renderRelationshipStage();
+      case "partner_name":       return renderPartnerName();
+      case "vibe":               return renderVibe();
+      case "budget":             return renderBudget();
+      case "confidence":         return renderConfidence();
+      case "archetypes":         return renderArchetypes();
+      case "interests":          return renderInterests();
+      default:                   return null;
+    }
+  };
+
+  // ============================================================
+  // MAIN RENDER
+  // ============================================================
+
   return (
-    <div className="border border-stone-100 rounded-2xl overflow-hidden">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-stone-50 transition-all"
-      >
-        <span className="font-medium text-stone-900 text-sm pr-4">{question}</span>
-        <span className="text-stone-400 text-lg shrink-0">{open ? "−" : "+"}</span>
-      </button>
-      {open && (
-        <div className="px-6 pb-5">
-          <p className="text-sm text-stone-500 leading-relaxed">{answer}</p>
+    <div className="w-full max-w-3xl mx-auto min-h-[400px]">
+      {isEditingProfile && (
+        <div className="mb-6 px-5 py-3 bg-amber-50 rounded-2xl border border-amber-200 flex items-center gap-2">
+          <span className="text-amber-600 text-sm">✏️</span>
+          <p className="text-sm font-medium text-amber-800">
+            Editing {answers.partner_name || "profile"}'s preferences
+          </p>
         </div>
       )}
+
+      {/* Progress bar */}
+      <div className="mb-10">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-xs font-semibold uppercase tracking-widest text-stone-400">
+            Step {stepIndex + 1} of {totalSteps}
+          </span>
+          <span className="text-xs font-semibold text-stone-400">
+            {Math.round(progressPercent)}%
+          </span>
+        </div>
+        <div className="flex gap-1.5">
+          {activeSteps.map((_, i) => (
+            <div
+              key={i}
+              className="flex-1 h-1 rounded-full transition-all duration-500"
+              style={{
+                backgroundColor:
+                  i < stepIndex ? "#d97706" : i === stepIndex ? "#f59e0b" : "#e7e5e4",
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {error && (
+        <div className="mb-6 px-5 py-4 bg-red-50 border border-red-100 rounded-2xl">
+          <p className="text-sm text-red-700 font-medium">{error}</p>
+        </div>
+      )}
+
+      {renderStep()}
     </div>
   );
 }
 
 // =============================================================================
-// MAIN APP COMPONENT
+// SUB-COMPONENTS
 // =============================================================================
 
-function GiftApp() {
-  const [view, setView]                                 = useState<AppView>("landing");
-  const [results, setResults]                           = useState<Gift[]>([]);
-  const [error, setError]                               = useState("");
-  const [quizAnswers, setQuizAnswers]                   = useState<QuizAnswers | null>(null);
-  const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
-  const [resultsHeadline, setResultsHeadline]           = useState("");
-  const [resultsSubline, setResultsSubline]             = useState("");
-  const [enriching, setEnriching]                       = useState(false);
-  const [savedGiftIds, setSavedGiftIds]                 = useState<Set<number>>(new Set());
-  const [savingGiftIds, setSavingGiftIds]               = useState<Set<number>>(new Set());
-  const [showAuthModal, setShowAuthModal]               = useState(false);
-  const [saveAllDone, setSaveAllDone]                   = useState(false);
-  const [loadingMore, setLoadingMore]                   = useState(false);
-  const [noMoreGifts, setNoMoreGifts]                   = useState(false);
+type OptionCardProps = {
+  label: string;
+  sublabel?: string;
+  emoji?: string;
+  selected: boolean;
+  recommended?: boolean;
+  overlap?: boolean;
+  disabled?: boolean;
+  onClick: () => void;
+};
 
-  const searchParams = useSearchParams();
-  const { user, session } = useAuth();
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-  useEffect(() => {
-    const partnerId = searchParams.get("partner_id");
-    if (partnerId && user) loadPartner(partnerId);
-  }, [searchParams, user]);
-
-  const loadPartner = async (partnerId: string) => {
-    if (!user || !session) return;
-    try {
-      const res = await fetch(`${apiUrl}/user-profile/recipients/${partnerId}`, {
-        headers: { Authorization: `Bearer ${session.access_token}` },
-      });
-      if (!res.ok) return;
-      const partner: Partner = await res.json();
-      setQuizAnswers({
-        partner_id:         partner.id,
-        partner_name:       partner.name,
-        relationship_stage: partner.relationship_stage as QuizAnswers["relationship_stage"],
-        interests:          (partner.interests ?? []) as QuizAnswers["interests"],
-        vibe:               (partner.vibe ?? []) as QuizAnswers["vibe"],
-        max_price:          partner.preferred_price_range
-                              ? parseInt(partner.preferred_price_range.replace(/\D/g, ""))
-                              : undefined,
-      });
-      setView("quiz");
-    } catch (err) {
-      console.error("Failed to load partner:", err);
-    }
-  };
-
-  const toggleDescription = (index: number) => {
-    setExpandedDescriptions((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(index)) newSet.delete(index);
-      else newSet.add(index);
-      return newSet;
-    });
-  };
-
-  const resetToLanding = () => {
-    setView("landing");
-    setResults([]);
-    setError("");
-    setResultsHeadline("");
-    setResultsSubline("");
-    setExpandedDescriptions(new Set());
-    setEnriching(false);
-    setSavedGiftIds(new Set());
-    setSavingGiftIds(new Set());
-    setSaveAllDone(false);
-    setLoadingMore(false);
-    setNoMoreGifts(false);
-  };
-
-  // ============================================================
-  // SAVE GIFTS
-  // If not signed in, stores pending saves in sessionStorage and
-  // opens the auth modal. After sign-in the useEffect below fires
-  // the pending saves automatically.
-  // ============================================================
-
-  const executeSave = async (indices: number[], currentResults: Gift[]) => {
-    if (!session) return;
-    const giftsToSave = indices
-      .filter((i) => !savedGiftIds.has(i))
-      .map((i) => currentResults[i])
-      .filter(Boolean);
-    if (giftsToSave.length === 0) return;
-
-    const pendingIndices = indices.filter((i) => !savedGiftIds.has(i));
-    setSavingGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
-
-    try {
-      const res = await fetch(`${apiUrl}/user-profile/saved-gifts`, {
-        method:  "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${session.access_token}` },
-        body: JSON.stringify({
-          recipient_name: quizAnswers?.partner_name || "My Partner",
-          recipient_id:   quizAnswers?.partner_id,
-          occasion:       quizAnswers?.occasion,
-          gifts:          giftsToSave,
-        }),
-      });
-      if (res.ok) {
-        setSavedGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.add(i)); return s; });
-        if (pendingIndices.length === results.length) setSaveAllDone(true);
-      }
-    } catch (err) {
-      console.error("Failed to save gifts:", err);
-    } finally {
-      setSavingGiftIds((prev) => { const s = new Set(prev); pendingIndices.forEach((i) => s.delete(i)); return s; });
-    }
-  };
-
-  const handleSaveGift = (idx: number) => {
-    if (savedGiftIds.has(idx)) return; // already saved — bookmark is purely additive
-    if (!user) {
-      // Queue the save and prompt auth
-      sessionStorage.setItem(PENDING_SAVES_KEY, JSON.stringify({ indices: [idx], results }));
-      setShowAuthModal(true);
-      return;
-    }
-    executeSave([idx], results);
-  };
-
-  const handleSaveAll = () => {
-    if (!user) {
-      const allIndices = results.map((_, i) => i);
-      sessionStorage.setItem(PENDING_SAVES_KEY, JSON.stringify({ indices: allIndices, results }));
-      setShowAuthModal(true);
-      return;
-    }
-    const unsaved = results.map((_, i) => i).filter((i) => !savedGiftIds.has(i));
-    executeSave(unsaved, results);
-  };
-
-  // After sign-in, flush any pending saves that were queued before auth
-  useEffect(() => {
-    if (!user || !session) return;
-    const pending = sessionStorage.getItem(PENDING_SAVES_KEY);
-    if (!pending) return;
-    sessionStorage.removeItem(PENDING_SAVES_KEY);
-    try {
-      const { action, indices, results: pendingResults } = JSON.parse(pending);
-      if (pendingResults?.length) {
-        setResults(pendingResults);
-        setView("results");
-        if (action === "load_more") {
-          // Re-fire load more after auth
-          fetchMoreGifts(pendingResults);
-        } else {
-          executeSave(indices ?? [], pendingResults);
-        }
-      }
-    } catch { /* malformed — ignore */ }
-  }, [user, session]);
-
-  // ============================================================
-  // LOAD MORE
-  // ============================================================
-
-  const fetchMoreGifts = async (currentResults: Gift[]) => {
-    if (!quizAnswers || loadingMore) return;
-    setLoadingMore(true);
-
-    // Pass currently shown gift names so the backend excludes them
-    const excludeNames = currentResults.map((g) => g.name);
-
-    try {
-      const res = await fetch(`${apiUrl}/recommend`, {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          occasion:           quizAnswers.occasion,
-          occasion_date:      quizAnswers.occasion_date,
-          days_until_needed:  quizAnswers.days_until_needed,
-          relationship_stage: quizAnswers.relationship_stage,
-          partner_name:       quizAnswers.partner_name,
-          partner_id:         quizAnswers.partner_id,
-          vibe:               quizAnswers.vibe          ?? [],
-          max_price:          quizAnswers.max_price,
-          confidence:         quizAnswers.confidence,
-          archetypes:         (quizAnswers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          [
-            ...new Set([
-              ...(quizAnswers.interests ?? []),
-              ...(quizAnswers.custom_interest
-                ? quizAnswers.custom_interest.split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
-                : []),
-            ]),
-          ],
-          overlap_interests:  quizAnswers.overlap_interests ?? [],
-          exclude_names:      excludeNames,
-          k:                  5,
-        }),
-      });
-
-      if (!res.ok) throw new Error("Failed to load more");
-      const data = await res.json();
-      const newGifts: Gift[] = Array.isArray(data.gifts) ? data.gifts : [];
-
-      if (newGifts.length === 0) {
-        setNoMoreGifts(true);
-      } else {
-        setResults((prev) => [...prev, ...newGifts]);
-      }
-    } catch {
-      setNoMoreGifts(true);
-    } finally {
-      setLoadingMore(false);
-    }
-  };
-
-  const handleLoadMore = () => {
-    if (!user) {
-      // Queue load more and prompt auth
-      sessionStorage.setItem(
-        PENDING_SAVES_KEY,
-        JSON.stringify({ action: "load_more", results })
-      );
-      setShowAuthModal(true);
-      return;
-    }
-    fetchMoreGifts(results);
-  };
-
-  // ============================================================
-  // STREAMING HANDLER
-  // ============================================================
-
-  const handleQuizComplete = async (answers: QuizAnswers) => {
-    setError("");
-    setResults([]);
-    setQuizAnswers(answers);
-
-    // Save partner profile
-    // Build the full interests array — splits custom_interest on commas so
-    // "coffee, art, pottery" becomes ["coffee", "art", "pottery"] and merges
-    // with any archetype-derived interests, deduplicating throughout.
-    const customInterests = answers.custom_interest
-      ? answers.custom_interest
-          .split(",")
-          .map((s) => s.trim().toLowerCase())
-          .filter(Boolean)
-      : [];
-    const mergedInterests = [
-      ...new Set([...(answers.interests ?? []), ...customInterests]),
-    ];
-
-    if (user && session && answers.partner_name) {
-      try {
-        const recipientData = {
-          name:                 answers.partner_name,
-          relationship_stage:   answers.relationship_stage,
-          interests:            mergedInterests,
-          vibe:                 answers.vibe ?? [],
-          preferred_price_range: answers.max_price ? `Up to $${answers.max_price}` : undefined,
-        };
-        const headers = { "Content-Type": "application/json", Authorization: `Bearer ${session.access_token}` };
-        let saved;
-        if (answers.partner_id) {
-          const r = await fetch(`${apiUrl}/user-profile/recipients/${answers.partner_id}`, { method: "PUT", headers, body: JSON.stringify(recipientData) });
-          if (r.ok) saved = await r.json();
-        } else {
-          const r = await fetch(`${apiUrl}/user-profile/recipients`, { method: "POST", headers, body: JSON.stringify(recipientData) });
-          if (r.ok) saved = await r.json();
-        }
-        if (saved?.id) answers.partner_id = saved.id;
-      } catch { /* non-fatal */ }
-    }
-
-    try {
-      const res = await fetch(`${apiUrl}/recommend?stream=true`, {
-        method:  "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          occasion:           answers.occasion,
-          occasion_date:      answers.occasion_date,
-          days_until_needed:  answers.days_until_needed,
-          relationship_stage: answers.relationship_stage,
-          partner_name:       answers.partner_name,
-          partner_id:         answers.partner_id,
-          vibe:               answers.vibe          ?? [],
-          max_price:          answers.max_price,
-          confidence:         answers.confidence,
-          archetypes:         (answers.archetypes ?? []).filter((a) => a !== "custom"),
-          interests:          mergedInterests,
-          overlap_interests:  answers.overlap_interests ?? [],
-        }),
-      });
-
-      if (!res.body) throw new Error("Streaming not supported");
-
-      const reader  = res.body.getReader();
-      const decoder = new TextDecoder("utf-8");
-      let buffer    = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const parts = buffer.split("\n\n");
-        buffer = parts.pop() || "";
-
-        for (const part of parts) {
-          if (!part.startsWith("data: ")) continue;
-          const jsonStr = part.replace("data: ", "").trim();
-          if (jsonStr === "[DONE]") { setEnriching(false); return; }
-
-          try {
-            const parsed = JSON.parse(jsonStr);
-            if (parsed.type === "preview") {
-              setResults(parsed.gifts || []);
-              setEnriching(true);
-              setView("results");
-            }
-            if (parsed.type === "result") {
-              setResults(parsed.gifts || []);
-              setResultsHeadline(parsed.results_headline ?? "");
-              setResultsSubline(parsed.results_subline ?? "");
-              setEnriching(false);
-            }
-          } catch { /* ignore bad chunks */ }
-        }
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to fetch recommendations.");
-      setView("results");
-      setEnriching(false);
-    }
-  };
-
-  // ============================================================
-  // QUIZ VIEW
-  // ============================================================
-
-  if (view === "quiz") {
-    return (
-      <div className="min-h-screen bg-stone-50">
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-          body { font-family: 'DM Sans', sans-serif; }
-          .font-serif { font-family: 'DM Serif Display', serif !important; }
-        `}</style>
-        <Nav view="quiz" onLogoClick={resetToLanding} />
-        <div className="max-w-5xl mx-auto px-6 pt-12 pb-6 text-center">
-          <h1 className="font-serif text-4xl text-stone-900 mb-2 tracking-tight">Find the perfect gift</h1>
-          <p className="text-stone-500 max-w-md mx-auto">Answer a few questions and we'll match you with gifts she'll genuinely love.</p>
-        </div>
-        <div className="max-w-5xl mx-auto px-6 pb-20">
-          <div className="bg-white rounded-3xl border border-stone-100 shadow-sm p-8 md:p-12">
-            <GiftQuiz onComplete={handleQuizComplete} initialAnswers={quizAnswers ?? undefined} />
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  // ============================================================
-  // RESULTS VIEW
-  // ============================================================
-
-  if (view === "results") {
-    const allGifts = results;
-
-    return (
-      <div className="min-h-screen bg-amber-50/40">
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-          body { font-family: 'DM Sans', sans-serif; }
-          .font-serif { font-family: 'DM Serif Display', serif !important; }
-
-          @keyframes pinDrop {
-            from { opacity: 0; transform: translateY(20px) scale(0.97); }
-            to   { opacity: 1; transform: translateY(0) scale(1); }
-          }
-          .pin-animate {
-            animation: pinDrop 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-            opacity: 0;
-          }
-
-          .pin-grid {
-            columns: 2;
-            column-gap: 1rem;
-          }
-          @media (max-width: 600px) {
-            .pin-grid { columns: 1; }
-          }
-          .pin-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-          }
-
-          /* Whole-card click target */
-          .pin-card {
-            display: block;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-decoration: none;
-            color: inherit;
-          }
-          .pin-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px -10px rgba(0,0,0,0.13);
-          }
-          .pin-card:active {
-            transform: translateY(-1px);
-          }
-
-          /* Top pick glows amber on hover */
-          .pin-card-top:hover {
-            box-shadow: 0 16px 40px -10px rgba(217,119,6,0.25);
-          }
-
-          /* Ribbon badge on image */
-          .ribbon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 2;
-          }
-
-          @keyframes shimmer {
-            from { background-position: -400px 0; }
-            to   { background-position: 400px 0; }
-          }
-          .shimmer {
-            background: linear-gradient(90deg, #f5f4f3 25%, #eae8e6 50%, #f5f4f3 75%);
-            background-size: 800px 100%;
-            animation: shimmer 1.6s infinite linear;
-          }
-        `}</style>
-
-        <Nav view="results" onLogoClick={resetToLanding} showStartOver onStartOver={resetToLanding} />
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
-
-          {/* Page heading */}
-          <div className="mb-8">
-            <h1 className="font-serif text-4xl text-stone-900 tracking-tight">
-              {resultsHeadline || (quizAnswers?.partner_name ? `Gifts for ${quizAnswers.partner_name}` : "Your recommendations")}
-            </h1>
-            <p className="text-stone-400 mt-1 text-sm">
-              {resultsSubline || (allGifts.length > 0 ? `${allGifts.length} curated picks, ranked by match` : "")}
-            </p>
-            {enriching && (
-              <p className="text-amber-500 text-xs font-medium mt-1.5 animate-pulse">✦ Personalising your picks…</p>
-            )}
-            {/* Save all button — appears once gifts are loaded */}
-            {allGifts.length > 0 && !enriching && (
-              <div className="mt-4">
-                {saveAllDone ? (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-amber-700">
-                    ✓ All gifts saved
-                  </span>
-                ) : (
-                  <button
-                    onClick={handleSaveAll}
-                    className="px-4 py-2 bg-white border border-stone-200 rounded-xl text-sm font-medium text-stone-700 hover:border-amber-300 hover:text-amber-700 hover:bg-amber-50 transition-all shadow-sm"
-                  >
-                    Save this list
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* Auth modal — triggered by save actions when not signed in */}
-          <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
-
-          {error && (
-            <div className="bg-red-50 border border-red-100 text-red-700 px-5 py-4 rounded-2xl mb-6">
-              <p className="font-medium text-sm">{error}</p>
-            </div>
-          )}
-
-          {allGifts.length === 0 && !enriching && (
-            <div className="bg-white border border-stone-100 rounded-3xl p-16 text-center shadow-sm">
-              <p className="text-4xl mb-4">🔍</p>
-              <h2 className="font-serif text-2xl text-stone-900 mb-2">No gifts found</h2>
-              <p className="text-stone-500 mb-8 text-sm">Try adjusting your preferences or budget.</p>
-              <button onClick={resetToLanding} className="px-6 py-3 bg-stone-900 text-white rounded-2xl font-semibold text-sm hover:bg-stone-800 transition-all">
-                Try again
-              </button>
-            </div>
-          )}
-
-          {/* ── PINTEREST GRID — all cards unified ── */}
-          {allGifts.length > 0 && (
-            <div className="pin-grid">
-              {allGifts.map((gift, idx) => {
-                const isTopPick  = idx === 0;
-                const buyUrl     = normalizeUrl(gift.product_url);
-                const delivery   = getDeliveryStatus(gift, quizAnswers?.days_until_needed);
-                const matchPct   = Math.round((gift.confidence || 0.85) * 100);
-                const title      = gift.display_name || gift.name;
-                const isExpanded = expandedDescriptions.has(idx);
-                const truncDesc  = gift.description && gift.description.length > 120
-                  ? gift.description.substring(0, 120) + "…"
-                  : gift.description ?? "";
-
-                const cardBorder = isTopPick
-                  ? "border-amber-200"
-                  : "border-stone-100";
-
-                return (
-                  <div key={idx} className="pin-item pin-animate" style={{ animationDelay: `${idx * 90}ms` }}>
-                    {/* Whole card is a link — inner interactive elements stop propagation */}
-                    <a
-                      href={buyUrl ?? undefined}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`pin-card ${isTopPick ? "pin-card-top" : ""} bg-white rounded-3xl border ${cardBorder} overflow-hidden shadow-sm`}
-                      onClick={(e) => { if (!buyUrl) e.preventDefault(); }}
-                    >
-                      {/* Image area */}
-                      <div className="relative bg-stone-50 flex items-center justify-center overflow-hidden"
-                        style={{ minHeight: idx % 2 === 0 ? "190px" : "165px" }}>
-
-                        {/* Top pick ribbon overlaid on image */}
-                        {isTopPick && (
-                          <div className="ribbon">
-                            <span className="inline-flex items-center gap-1 bg-amber-500 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
-                              ✦ Top pick
-                            </span>
-                          </div>
-                        )}
-
-                        {/* Bookmark icon — top right of image */}
-                        <button
-                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleSaveGift(idx); }}
-                          className="absolute top-2.5 right-2.5 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm shadow-sm hover:bg-white transition-all"
-                          title={savedGiftIds.has(idx) ? "Saved" : "Save gift"}
-                        >
-                          {savingGiftIds.has(idx) ? (
-                            <svg className="w-4 h-4 text-stone-300 animate-spin" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3"/>
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-                            </svg>
-                          ) : savedGiftIds.has(idx) ? (
-                            <svg className="w-4 h-4 fill-amber-500 text-amber-500" viewBox="0 0 24 24">
-                              <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
-                            </svg>
-                          ) : (
-                            <svg className="w-4 h-4 text-stone-400 hover:text-amber-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
-                            </svg>
-                          )}
-                        </button>
-
-                        {gift.image_url ? (
-                          <img
-                            src={gift.image_url}
-                            alt={title}
-                            className="w-full object-contain p-4"
-                            style={{ maxHeight: idx % 2 === 0 ? "190px" : "165px" }}
-                          />
-                        ) : enriching ? (
-                          <div className="shimmer w-full" style={{ height: idx % 2 === 0 ? "190px" : "165px" }} />
-                        ) : (
-                          <span className="text-5xl opacity-20 py-8">🎁</span>
-                        )}
-                      </div>
-
-                      {/* Amber accent line under image for top pick */}
-                      {isTopPick && (
-                        <div className="h-0.5 w-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400" />
-                      )}
-
-                      {/* Card body */}
-                      <div className="p-4">
-                        <h2 className={`font-serif leading-snug tracking-tight mb-2 ${isTopPick ? "text-xl text-stone-900" : "text-lg text-stone-800"}`}>
-                          {title}
-                        </h2>
-
-                        <div className="flex items-center gap-1.5 flex-wrap mb-3">
-                          <span className="text-lg font-semibold text-stone-900">${gift.price.toFixed(2)}</span>
-                          <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-stone-100 text-stone-500 border border-stone-200">{matchPct}%</span>
-                          <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${deliveryColorClasses[delivery.color] || deliveryColorClasses.stone}`}>
-                            {delivery.icon} {delivery.message}
-                          </span>
-                        </div>
-
-                        {gift.description && (
-                          <p className="text-stone-400 text-xs mb-3 leading-relaxed">
-                            {isExpanded ? gift.description : truncDesc}
-                            {gift.description.length > 120 && (
-                              <button
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleDescription(idx); }}
-                                className="ml-1 text-amber-600 hover:text-amber-700 font-medium"
-                              >
-                                {isExpanded ? " less" : " more"}
-                              </button>
-                            )}
-                          </p>
-                        )}
-
-                        {/* Why this works */}
-                        {gift.reason && (
-                          <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
-                            <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">Why this works</p>
-                            <p className="text-xs text-amber-700 leading-relaxed">{enhanceReason(gift.reason)}</p>
-                          </div>
-                        )}
-
-                        {delivery.showWarning && delivery.warningText && (
-                          <div className="bg-red-50 border border-red-100 rounded-xl px-3 py-2 mb-3">
-                            <p className="text-xs text-red-600">{delivery.warningText}</p>
-                          </div>
-                        )}
-
-                        {/* View on Amazon — stops propagation so it doesn't double-open */}
-                        {buyUrl && (
-                          <div
-                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(buyUrl, "_blank", "noopener,noreferrer"); }}
-                            className="flex items-center justify-center gap-1.5 w-full bg-stone-900 hover:bg-stone-800 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer"
-                          >
-                            View on Amazon
-                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                          </div>
-                        )}
-                      </div>
-                    </a>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Load more + Start over */}
-          {allGifts.length > 0 && !enriching && (
-            <div className="mt-10 flex flex-col items-center gap-4">
-              {!noMoreGifts ? (
-                <button
-                  onClick={handleLoadMore}
-                  disabled={loadingMore}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-stone-200 rounded-2xl text-sm font-semibold text-stone-700 hover:border-amber-300 hover:bg-amber-50 hover:text-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
-                >
-                  {loadingMore ? (
-                    <>
-                      <svg className="w-4 h-4 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3"/>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-                      </svg>
-                      Finding more…
-                    </>
-                  ) : (
-                    <>
-                      Show 5 more gifts
-                      {!user && <span className="text-xs font-normal text-stone-400 ml-1">(free account required)</span>}
-                    </>
-                  )}
-                </button>
-              ) : (
-                <p className="text-stone-400 text-sm">No more gifts to show — try adjusting your quiz answers.</p>
-              )}
-              <div className="text-center">
-                <p className="text-stone-400 text-xs mb-2">Not quite right?</p>
-                <button onClick={resetToLanding} className="px-5 py-2 border border-stone-200 rounded-xl text-xs font-medium text-stone-500 hover:bg-stone-100 transition-all">
-                  Start over
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  // ============================================================
-  // LANDING VIEW (default)
-  // ============================================================
-
+function OptionCard({
+  label,
+  sublabel,
+  emoji,
+  selected,
+  recommended,
+  overlap,
+  disabled,
+  onClick,
+}: OptionCardProps) {
   return (
-    <>
-      <Nav view="landing" onLogoClick={resetToLanding} />
-      <LandingPage onStart={() => setView("quiz")} />
-    </>
+    <button
+      disabled={disabled}
+      onClick={onClick}
+      className={`relative p-4 rounded-2xl border text-left transition-all duration-200 ${
+        selected
+          ? "border-amber-400 bg-amber-50 shadow-sm"
+          : disabled
+          ? "border-stone-100 opacity-40 cursor-not-allowed"
+          : "border-stone-200 bg-white hover:border-amber-300 hover:shadow-sm"
+      }`}
+      aria-pressed={selected}
+    >
+      {selected && (
+        <span className="absolute top-3 right-3 w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center">
+          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </span>
+      )}
+      {recommended && !selected && (
+        <span className="absolute top-3 right-3 text-xs font-semibold text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">
+          Suggested
+        </span>
+      )}
+      {overlap && !selected && (
+        <span className="absolute top-3 right-3 text-xs font-semibold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full">
+          Strong match
+        </span>
+      )}
+      <div className="flex gap-3 items-center pr-6">
+        {emoji && (
+          <span className="text-2xl leading-none" aria-hidden="true">{emoji}</span>
+        )}
+        <div>
+          <div className="text-base font-semibold text-stone-900 leading-tight">{label}</div>
+          {sublabel && <div className="text-xs text-stone-400 mt-0.5">{sublabel}</div>}
+        </div>
+      </div>
+    </button>
   );
 }
 
-// =============================================================================
-// PAGE EXPORT
-// =============================================================================
+type NavRowProps = {
+  onBack: () => void;
+  onNext: () => void;
+  onSkip?: () => void;
+  showBack: boolean;
+  showSkip?: boolean;
+  canProceed: boolean;
+  isLast: boolean;
+  backOnly?: boolean;
+};
 
-export default function Home() {
+function NavRow({
+  onBack,
+  onNext,
+  onSkip,
+  showBack,
+  showSkip,
+  canProceed,
+  isLast,
+  backOnly,
+}: NavRowProps) {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen flex items-center justify-center bg-stone-50">
-          <div className="text-center">
-            <div className="w-10 h-10 rounded-full border-4 border-stone-200 border-t-amber-500 mx-auto mb-4" style={{ animation: "spin 1s linear infinite" }} />
-            <p className="text-sm text-stone-400 font-medium">Loading…</p>
-            <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-          </div>
-        </div>
-      }
-    >
-      <GiftApp />
-    </Suspense>
+    <div className="flex gap-3 mt-8">
+      {showBack && (
+        <button
+          onClick={onBack}
+          className="px-5 py-3 rounded-2xl text-stone-500 font-medium hover:text-stone-800 hover:bg-stone-100 transition-all"
+        >
+          ← Back
+        </button>
+      )}
+      {!backOnly && (
+        <button
+          onClick={onNext}
+          disabled={!canProceed}
+          className="flex-1 px-6 py-3 rounded-2xl bg-stone-900 hover:bg-stone-800 text-white font-semibold disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-sm"
+        >
+          {isLast ? "Find Gifts" : "Continue"}
+        </button>
+      )}
+      {showSkip && onSkip && !backOnly && (
+        <button
+          onClick={onSkip}
+          className="px-5 py-3 text-stone-400 hover:text-stone-600 text-sm font-medium transition-all"
+        >
+          Skip
+        </button>
+      )}
+    </div>
   );
 }

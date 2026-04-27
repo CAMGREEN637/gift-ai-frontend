@@ -216,7 +216,6 @@ type StepId =
   | "partner_name"
   | "vibe"
   | "budget"
-  | "confidence"
   | "archetypes"
   | "custom_archetype"
   | "interests";
@@ -228,13 +227,10 @@ const STEP_ORDER: StepId[] = [
   "partner_name",
   "vibe",
   "budget",
-  "confidence",
   "archetypes",
   "custom_archetype",
   "interests",
 ];
-
-const INTEREST_STEPS: StepId[] = ["archetypes", "interests", "custom_archetype"];
 
 // =============================================================================
 // HELPERS
@@ -303,14 +299,14 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
   }, [initialAnswers?.partner_id]);
 
   const activeSteps = useMemo<StepId[]>(() => {
-    if (answers.confidence === "lost") {
-      return STEP_ORDER.filter((s) => !INTEREST_STEPS.includes(s));
-    }
     if (answers.archetypes?.includes("custom")) {
       return STEP_ORDER.filter((s) => s !== "interests");
     }
-    return STEP_ORDER.filter((s) => s !== "custom_archetype");
-  }, [answers.confidence, answers.archetypes]);
+    if (STEP_ORDER.includes("custom_archetype")) {
+      return STEP_ORDER.filter((s) => s !== "custom_archetype");
+    }
+    return STEP_ORDER;
+  }, [answers.archetypes]);
 
   const currentStepId   = activeSteps[stepIndex];
   const totalSteps      = activeSteps.length;
@@ -344,9 +340,25 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       finalAnswers.archetypes && finalAnswers.archetypes.length > 1
         ? getOverlapInterests(finalAnswers.archetypes)
         : [];
+
+    let autoConfidence: ConfidenceKey;
+    if (finalAnswers.interests && finalAnswers.interests.length >= 3) {
+      autoConfidence = "confident";
+    } else if (finalAnswers.interests && finalAnswers.interests.length >= 1) {
+      autoConfidence = "somewhat";
+    } else {
+      autoConfidence = "lost";
+    }
+
+    const completed = {
+      ...finalAnswers,
+      confidence: autoConfidence,
+      overlap_interests: overlap,
+    };
+
     setIsFindingGifts(true);
     setVisibleInsights(0);
-    setTimeout(() => onComplete({ ...finalAnswers, overlap_interests: overlap }), LOADING_DURATION);
+    setTimeout(() => onComplete(completed), LOADING_DURATION);
   };
 
   const goNext = (updatedAnswers?: QuizAnswers) => {
@@ -417,20 +429,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     const updated = { ...answers, max_price: value };
     setAnswers(updated);
     selectWithFeedback(feedback, updated);
-  };
-
-  const handleConfidence = (value: ConfidenceKey, feedback: string) => {
-    const updated = { ...answers, confidence: value };
-    setAnswers(updated);
-    if (value === "lost") {
-      setActiveFeedback(feedback);
-      setTimeout(() => {
-        setActiveFeedback(null);
-        triggerCompletion(updated);
-      }, FEEDBACK_DURATION);
-    } else {
-      selectWithFeedback(feedback, updated);
-    }
   };
 
   const handleArchetypeToggle = (value: ArchetypeKey) => {
@@ -754,34 +752,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
     );
   };
 
-  const renderConfidence = () => {
-    const isApology = answers.occasion === "apology";
-    return (
-      <>
-        <QuestionHeader question="How well do you know her interests?" subtitle="Be honest — it helps us pick the right approach." />
-        <div className="grid grid-cols-1 gap-3 mb-8">
-          {(
-            [
-              { label: "Pretty well",   sublabel: "I have a good sense of what she likes", value: "confident" as ConfidenceKey, emoji: "🎯", feedback: "Perfect — we'll use everything you've told us to get specific." },
-              { label: "Somewhat",      sublabel: "I have some idea but not totally sure",  value: "somewhat"  as ConfidenceKey, emoji: "🤔", feedback: "No problem — we'll mix specific picks with versatile options." },
-              { label: "Honestly lost", sublabel: "I genuinely have no idea",               value: "lost"      as ConfidenceKey, emoji: "😅", feedback: isApology ? "We've got you — let's find something that feels real." : "More common than you think. We'll focus on crowd-pleasers she'll actually love." },
-            ]
-          ).map((opt) => (
-            <OptionCard
-              key={opt.value}
-              label={opt.label}
-              sublabel={opt.sublabel}
-              emoji={opt.emoji}
-              selected={answers.confidence === opt.value}
-              onClick={() => handleConfidence(opt.value, opt.feedback)}
-            />
-          ))}
-        </div>
-        <NavRow onBack={goBack} onNext={() => {}} showBack canProceed={false} isLast={false} backOnly />
-      </>
-    );
-  };
-
   const renderArchetypes = () => {
     const selected = answers.archetypes ?? [];
     const selectedRegular = selected.filter((a) => a !== "custom");
@@ -1005,7 +975,6 @@ export default function GiftQuiz({ onComplete, initialAnswers }: QuizProps) {
       case "partner_name":       return renderPartnerName();
       case "vibe":               return renderVibe();
       case "budget":             return renderBudget();
-      case "confidence":         return renderConfidence();
       case "archetypes":         return renderArchetypes();
       case "custom_archetype":   return renderCustomArchetype();
       case "interests":          return renderInterests();

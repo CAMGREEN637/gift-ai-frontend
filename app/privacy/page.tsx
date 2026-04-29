@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 h-14 flex items-center">
           <a href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-            Gift AI
+            Regala
           </a>
         </div>
       </nav>
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">1. Overview</h2>
             <p>
-              Gift AI ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our gift recommendation service at this website (the "Service"). By using the Service, you agree to the collection and use of information in accordance with this policy.
+              Regala ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you use our gift recommendation service at this website (the "Service"). By using the Service, you agree to the collection and use of information in accordance with this policy.
             </p>
           </section>
 
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">4. Affiliate Links and Third-Party Retailers</h2>
             <p>
-              Gift AI participates in affiliate programs including the Amazon Associates Program. When you click a product link and make a purchase, we may earn a small commission at no additional cost to you. The price you pay is identical to what you would pay visiting the retailer directly.
+              Regala participates in affiliate programs including the Amazon Associates Program. When you click a product link and make a purchase, we may earn a small commission at no additional cost to you. The price you pay is identical to what you would pay visiting the retailer directly.
             </p>
             <p className="mt-3">
               We do not share your personal information with retailers. Clicking a product link will take you to a third-party website governed by their own privacy policy.
@@ -140,22 +140,22 @@ export default function PrivacyPolicy() {
               If you have any questions about this Privacy Policy or how we handle your data, please contact us at:
             </p>
             <p className="mt-3 font-medium text-stone-800">
-              Gift AI<br />
-              <a href="mailto:support@giftai.app" className="text-amber-700 hover:underline">support@giftai.app</a>
+              Regala<br />
+              <a href="mailto:support@regala.ai" className="text-amber-700 hover:underline">support@regala.ai</a>
             </p>
           </section>
 
         </div>
 
         <div className="mt-16 pt-8 border-t border-stone-200">
-          <a href="/" className="text-sm text-amber-700 hover:underline">← Back to Gift AI</a>
+          <a href="/" className="text-sm text-amber-700 hover:underline">← Back to Regala</a>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-stone-900 text-stone-500 mt-12">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© {new Date().getFullYear()} Gift AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Regala. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>

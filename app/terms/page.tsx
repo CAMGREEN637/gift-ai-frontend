@@ -11,7 +11,7 @@ export default function TermsOfService() {
       <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 h-14 flex items-center">
           <a href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-            Gift AI
+            Regala
           </a>
         </div>
       </nav>
@@ -25,14 +25,14 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using Gift AI (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service. These Terms apply to all visitors, users, and others who access the Service.
+              By accessing or using Regala (the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service. These Terms apply to all visitors, users, and others who access the Service.
             </p>
           </section>
 
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">2. Description of Service</h2>
             <p>
-              Gift AI is a free gift recommendation tool that uses artificial intelligence to suggest products based on information you provide about a gift recipient. The Service is provided for personal, non-commercial use. We earn affiliate commissions when users purchase products through links on the Service.
+              Regala is a free gift recommendation tool that uses artificial intelligence to suggest products based on information you provide about a gift recipient. The Service is provided for personal, non-commercial use. We earn affiliate commissions when users purchase products through links on the Service.
             </p>
           </section>
 
@@ -59,7 +59,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">5. Affiliate Disclosure</h2>
             <p>
-              Gift AI participates in affiliate programs including the Amazon Associates Program. We earn a commission when you click a product link and make a purchase. This commission comes at no additional cost to you — the price you pay is the same as if you visited the retailer directly. Our recommendations are based on relevance and quality, not commission rates.
+              Regala participates in affiliate programs including the Amazon Associates Program. We earn a commission when you click a product link and make a purchase. This commission comes at no additional cost to you — the price you pay is the same as if you visited the retailer directly. Our recommendations are based on relevance and quality, not commission rates.
             </p>
           </section>
 
@@ -76,7 +76,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">7. Limitation of Liability</h2>
             <p>
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, GIFT AI AND ITS OPERATORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR ANY DISSATISFACTION WITH PURCHASED PRODUCTS.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, REGALA AND ITS OPERATORS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR ANY DISSATISFACTION WITH PURCHASED PRODUCTS.
             </p>
             <p className="mt-3">
               We are not responsible for the quality, safety, legality, or availability of products purchased through third-party retailers. Any disputes regarding products should be directed to the retailer from whom the product was purchased.
@@ -93,7 +93,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="font-semibold text-stone-900 text-base mb-3">9. Intellectual Property</h2>
             <p>
-              The Service and its original content, features, and functionality are owned by Gift AI and are protected by applicable intellectual property laws. You may not copy, modify, distribute, or create derivative works based on the Service without our express written permission.
+              The Service and its original content, features, and functionality are owned by Regala and are protected by applicable intellectual property laws. You may not copy, modify, distribute, or create derivative works based on the Service without our express written permission.
             </p>
             <p className="mt-3">
               Product names, images, and descriptions displayed through the Service are the property of their respective owners and are used for informational purposes under applicable fair use principles.
@@ -143,22 +143,22 @@ export default function TermsOfService() {
               If you have any questions about these Terms, please contact us at:
             </p>
             <p className="mt-3 font-medium text-stone-800">
-              Gift AI<br />
-              <a href="mailto:support@giftai.app" className="text-amber-700 hover:underline">support@giftai.app</a>
+              Regala<br />
+              <a href="mailto:support@regala.ai" className="text-amber-700 hover:underline">support@regala.ai</a>
             </p>
           </section>
 
         </div>
 
         <div className="mt-16 pt-8 border-t border-stone-200">
-          <a href="/" className="text-sm text-amber-700 hover:underline">← Back to Gift AI</a>
+          <a href="/" className="text-sm text-amber-700 hover:underline">← Back to Regala</a>
         </div>
       </div>
 
       {/* Footer */}
       <footer className="bg-stone-900 text-stone-500 mt-12">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© {new Date().getFullYear()} Gift AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Regala. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>

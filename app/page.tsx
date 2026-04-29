@@ -252,8 +252,13 @@ function Nav({
     <>
       <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <button onClick={onLogoClick} className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-            Gift AI
+          <button onClick={onLogoClick} className="flex items-center gap-2">
+            <span className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
+              Regala
+            </span>
+            <span className="text-stone-400 text-xs font-medium hidden sm:inline">
+              gift advisor
+            </span>
           </button>
           <div className="flex items-center gap-2">
             {view === "landing" && (
@@ -299,9 +304,9 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-10 border-b border-stone-700">
           {/* Brand */}
           <div>
-            <p className="font-serif text-white text-lg mb-3">Gift AI</p>
+            <p className="font-serif text-white text-lg mb-3">Regala</p>
             <p className="text-sm leading-relaxed text-stone-500">
-              The gift advisor built for men who want to get it right. Context-aware recommendations that explain why each gift works.
+              The AI gift advisor built for men who want to get it right. Context-aware recommendations that explain why each gift works.
             </p>
           </div>
 
@@ -329,8 +334,8 @@ function Footer() {
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-600">
-          <p>© {new Date().getFullYear()} Gift AI. All rights reserved.</p>
-          <p>Free to use · No sign-up required · Real products, real links</p>
+          <p>© {new Date().getFullYear()} Regala. All rights reserved.</p>
+          <p>AI-powered gift advisor · Free to use · Real products, real links</p>
         </div>
       </div>
     </footer>
@@ -384,7 +389,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
         <div className="fade-up-1 inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block"></span>
-          Free · No sign-up required
+          AI-powered gift advisor · Free
         </div>
 
         <h1 className="font-serif text-5xl sm:text-6xl text-stone-900 mb-5 tracking-tight leading-tight fade-up-2">
@@ -452,7 +457,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
 
             {/* After */}
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Gift AI</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Regala</p>
               <div className="bg-white border border-amber-100 rounded-xl p-4 mb-3">
                 <p className="text-sm font-semibold text-stone-800 mb-2">Faux Fur Throw Blanket</p>
                 <div className="bg-amber-50 rounded-lg px-3 py-2">
@@ -628,7 +633,7 @@ function LandingPage({ onStart }: { onStart: () => void }) {
           <div className="space-y-4">
             {[
               {
-                q: "How does Gift AI find the right gift?",
+                q: "How does Regala find the right gift?",
                 a: "We use a combination of your answers about her interests, personality, and the relationship context — the occasion, your stage, timing, and budget — to match and rank real products. Then an AI layer explains why each one fits her specifically.",
               },
               {

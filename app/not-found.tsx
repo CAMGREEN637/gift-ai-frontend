@@ -18,7 +18,7 @@ export default function NotFound() {
           href="/"
           className="px-6 py-3 bg-stone-900 text-white rounded-2xl font-semibold text-sm hover:bg-stone-800 transition-all inline-block"
         >
-          Back to Gift AI
+          Back to Regala
         </Link>
       </div>
     </div>

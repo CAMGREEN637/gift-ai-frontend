@@ -9,8 +9,8 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gift AI - Find Perfect Gifts",
-  description: "AI-powered gift recommendations personalized for your loved ones",
+  title: "Regala — The AI Gift Advisor",
+  description: "Answer a few questions about her and get curated gift recommendations with explanations of why each one works.",
 };
 
 export default function RootLayout({

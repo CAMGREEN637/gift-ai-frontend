@@ -408,8 +408,13 @@ export default function PartnersPage() {
   const nav = (
     <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-          Gift AI
+        <Link href="/" className="flex items-center gap-2">
+          <span className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
+            Regala
+          </span>
+          <span className="text-stone-400 text-xs font-medium hidden sm:inline">
+            gift advisor
+          </span>
         </Link>
         <div className="flex items-center gap-2">
           <Link href="/" className="px-4 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-xl transition-all">
@@ -452,7 +457,7 @@ export default function PartnersPage() {
           <h1 className="font-serif text-3xl text-stone-900 mb-3 tracking-tight">Sign in to view your account</h1>
           <p className="text-stone-500 mb-8 text-sm">Your saved recipients and gift history live here.</p>
           <Link href="/" className="px-6 py-3 bg-stone-900 text-white rounded-2xl font-semibold text-sm hover:bg-stone-800 transition-all">
-            Back to Gift AI
+            Back to Regala
           </Link>
         </div>
       </main>
@@ -535,7 +540,7 @@ export default function PartnersPage() {
       {/* Footer */}
       <footer className="bg-stone-900 text-stone-500 mt-20">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© {new Date().getFullYear()} Gift AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Regala. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

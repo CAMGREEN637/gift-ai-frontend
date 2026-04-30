@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import GiftQuiz, { QuizAnswers } from "./components/GiftQuiz";
 import AuthModal from "./components/AuthModal";
 import { useAuth } from "@/contexts/AuthContext";
@@ -262,9 +263,14 @@ function Nav({
           </button>
           <div className="flex items-center gap-2">
             {view === "landing" && (
-              <a href="#how-it-works" className="px-4 py-1.5 text-sm font-medium text-stone-500 hover:text-stone-900 transition-all hidden sm:block">
-                How it works
-              </a>
+              <>
+                <a href="#how-it-works" className="px-4 py-1.5 text-sm font-medium text-stone-500 hover:text-stone-900 transition-all hidden sm:block">
+                  How it works
+                </a>
+                <Link href="/blog" className="px-4 py-1.5 text-sm font-medium text-stone-500 hover:text-stone-900 transition-all hidden sm:block">
+                  Gift Guide
+                </Link>
+              </>
             )}
             {user ? (
               <>
@@ -317,6 +323,7 @@ function Footer() {
               <li><a href="#how-it-works" className="hover:text-white transition-colors">How it works</a></li>
               <li><a href="#why-different" className="hover:text-white transition-colors">Why we're different</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Gift Guide</Link></li>
             </ul>
           </div>
 
@@ -730,7 +737,23 @@ function GiftApp() {
 
   useEffect(() => {
     const partnerId = searchParams.get("partner_id");
-    if (partnerId && user) loadPartner(partnerId);
+    if (partnerId && user) {
+      loadPartner(partnerId);
+      return;
+    }
+
+    const occasionParam = searchParams.get("occasion");
+    const interestsParam = searchParams.get("interests");
+
+    if (occasionParam || interestsParam) {
+      const prefill: Partial<QuizAnswers> = {};
+      if (occasionParam) prefill.occasion = occasionParam as QuizAnswers["occasion"];
+      if (interestsParam) {
+        prefill.interests = interestsParam.split(",").map((s) => s.trim()) as QuizAnswers["interests"];
+      }
+      setQuizAnswers(prefill as QuizAnswers);
+      setView("quiz");
+    }
   }, [searchParams, user]);
 
   const loadPartner = async (partnerId: string) => {

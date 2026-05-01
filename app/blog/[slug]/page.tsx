@@ -31,6 +31,18 @@ export async function generateMetadata({
   return {
     title: seoTitle,
     description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      type: "article",
+      publishedTime: article.publishedAt,
+      siteName: "Regala",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+    },
   };
 }
 
@@ -53,31 +65,42 @@ const OCCASION_LABELS: Record<string, string> = {
 
 function GiftPickCard({ gift }: { gift: GiftPick }) {
   return (
-    <div className="bg-white border border-stone-100 rounded-2xl p-5">
-      <div className="flex items-start justify-between gap-4 mb-3">
-        <h3 className="font-serif text-lg text-stone-900 leading-snug">
-          {gift.name}
-        </h3>
-        <span className="text-stone-600 font-semibold text-base shrink-0">
-          {gift.price}
-        </span>
-      </div>
+    <div className="bg-white border border-stone-100 rounded-2xl p-5 mb-4 flex gap-4">
+      {gift.image_url && (
+        <div className="w-20 h-20 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center shrink-0 overflow-hidden">
+          <img
+            src={gift.image_url}
+            alt={gift.name}
+            className="w-full h-full object-contain p-2"
+          />
+        </div>
+      )}
+      <div className="flex-1">
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <h3 className="font-serif text-lg text-stone-900 leading-snug">
+            {gift.name}
+          </h3>
+          <span className="text-stone-600 font-semibold text-base shrink-0">
+            {gift.price}
+          </span>
+        </div>
 
-      <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
-        <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">
-          Why this works
-        </p>
-        <p className="text-xs text-amber-700 leading-relaxed">{gift.reason}</p>
-      </div>
+        <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
+          <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">
+            Why this works
+          </p>
+          <p className="text-xs text-amber-700 leading-relaxed">{gift.reason}</p>
+        </div>
 
-      <a
-        href={gift.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
-      >
-        View on Amazon →
-      </a>
+        <a
+          href={gift.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+        >
+          View on Amazon →
+        </a>
+      </div>
     </div>
   );
 }

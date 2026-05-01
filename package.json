@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "generate-article": "ts-node scripts/generate-article.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.8.0",
@@ -26,6 +27,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.4",
     "tailwindcss": "^4",
+    "ts-node": "^10",
     "typescript": "^5"
   }
 }

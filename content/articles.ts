@@ -3,6 +3,7 @@ export type GiftPick = {
   price: string;
   reason: string;
   url: string;
+  image_url?: string;
 };
 
 export type ArticleSection =
@@ -50,6 +51,7 @@ export const SAMPLE_ARTICLES: Article[] = [
             reason:
               "Sheet masks are the one skincare product that never conflicts with what she already owns — they're a standalone ritual, not part of a routine. A luxury set signals that you put thought into it, and the variety means she gets to pick her mood.",
             url: "https://www.amazon.com/s?k=luxury+face+mask+gift+set",
+            image_url: undefined,
           },
           {
             name: "Jade Roller & Gua Sha Facial Tool Set",
@@ -57,6 +59,7 @@ export const SAMPLE_ARTICLES: Article[] = [
             reason:
               "These sit beautifully on a bathroom shelf and feel like a spa upgrade even when she's doing her normal routine. It's a gift that communicates 'I want you to feel taken care of' without being overly personal or intimate.",
             url: "https://www.amazon.com/s?k=jade+roller+gua+sha+set",
+            image_url: undefined,
           },
           {
             name: "Cooluli Mini Skincare Refrigerator",
@@ -64,36 +67,15 @@ export const SAMPLE_ARTICLES: Article[] = [
             reason:
               "If she hasn't bought one for herself, this is the gift that makes her wonder how she lived without it. A skincare fridge keeps certain products more effective and makes her morning routine feel a little more curated — it's the kind of upgrade she'd love but wouldn't prioritise buying.",
             url: "https://www.amazon.com/s?k=skincare+mini+fridge",
+            image_url: undefined,
           },
-        ],
-      },
-      {
-        type: "text",
-        heading: "Why skincare gifts are tricky",
-        body: "The problem with most skincare gift guides is that they default to whatever's trending — a product that's everywhere right now, regardless of whether it actually suits your girlfriend. Skincare is personal. The wrong texture, the wrong formula, or even just the wrong brand aesthetic can make a gift feel generic rather than considered. What she really wants is evidence that you were thinking about her specifically.",
-      },
-      {
-        type: "text",
-        heading: "Our approach",
-        body: "The picks above and below are chosen because they feel luxurious without requiring you to know her exact routine. They're the kind of things she'll genuinely use — treats that sit on top of a skincare routine rather than disrupting it. Each one comes with a plain-English explanation of why it works as a birthday gift, so you know what you're giving and why.",
-      },
-      {
-        type: "cta",
-      },
-      {
-        type: "text",
-        heading: "Beyond the products",
-        body: "How you present it matters almost as much as what's inside. Wrap it simply — a white box, tissue paper, and a ribbon beats a plastic gift bag every time. Add a handwritten note that's specific: not 'hope you like it' but something that shows you chose it for her. Even one sentence — 'I know you love your skin routine so I wanted to add something to it' — lands differently than no note at all. The presentation is part of the gift.",
-      },
-      {
-        type: "picks",
-        gifts: [
           {
             name: "Lush Bath Bomb Gift Set",
             price: "$30",
             reason:
               "Bath bombs are a low-risk, high-reward gift for someone who values their self-care time. A curated set feels more special than a single product, and they're the kind of thing she'll actually look forward to using rather than saving for a special occasion.",
             url: "https://www.amazon.com/s?k=luxury+bath+bomb+gift+set",
+            image_url: undefined,
           },
           {
             name: "Mulberry Silk Pillowcase",
@@ -101,8 +83,22 @@ export const SAMPLE_ARTICLES: Article[] = [
             reason:
               "A silk pillowcase is one of those gifts that feels indulgent but has a real use-case she probably already knows about — better for skin, better for hair. It's thoughtful without being high-effort to find, and it's something she'll use every single night.",
             url: "https://www.amazon.com/s?k=mulberry+silk+pillowcase",
+            image_url: undefined,
           },
         ],
+      },
+      {
+        type: "cta",
+      },
+      {
+        type: "text",
+        heading: "Why these work",
+        body: "The problem with most skincare gift guides is that they default to whatever's trending — a product that's everywhere right now, regardless of whether it actually suits your girlfriend. Skincare is personal. The wrong texture, the wrong formula, or even just the wrong brand aesthetic can make a gift feel generic rather than considered. The picks above are chosen because they feel luxurious without requiring you to know her exact routine — treats that sit on top of a skincare routine rather than disrupting it.",
+      },
+      {
+        type: "text",
+        heading: "Making it land",
+        body: "How you present it matters almost as much as what's inside. Wrap it simply — a white box, tissue paper, and a ribbon beats a plastic gift bag every time. Add a handwritten note that's specific: not 'hope you like it' but something that shows you chose it for her. Even one sentence — 'I know you love your skin routine so I wanted to add something to it' — lands differently than no note at all. The presentation is part of the gift.",
       },
       {
         type: "cta",

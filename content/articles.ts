@@ -42,20 +42,6 @@ export const SAMPLE_ARTICLES: Article[] = [
     publishedAt: "2026-04-15",
     sections: [
       {
-        type: "text",
-        body: "Buying a skincare gift sounds simple until you realise you have no idea what she already owns. Maybe she has three serums she swears by. Maybe she's sensitive to fragrance. Maybe she's been eyeing something specific for weeks and hasn't bought it for herself. The pressure is real — get it right and it feels incredibly thoughtful; get it wrong and you've handed her a polite smile and something she'll quietly never use.",
-      },
-      {
-        type: "text",
-        heading: "Why skincare gifts are tricky",
-        body: "The problem with most skincare gift guides is that they default to whatever's trending — a product that's everywhere right now, regardless of whether it actually suits your girlfriend. Skincare is personal. The wrong texture, the wrong formula, or even just the wrong brand aesthetic can make a gift feel generic rather than considered. What she really wants is evidence that you were thinking about her specifically.",
-      },
-      {
-        type: "text",
-        heading: "Our approach",
-        body: "The picks below are chosen because they feel luxurious without requiring you to know her exact routine. They're the kind of things she'll genuinely use — treats that sit on top of a skincare routine rather than disrupting it. Each one comes with a plain-English explanation of why it works as a birthday gift, so you know what you're giving and why.",
-      },
-      {
         type: "picks",
         gifts: [
           {
@@ -80,6 +66,16 @@ export const SAMPLE_ARTICLES: Article[] = [
             url: "https://www.amazon.com/s?k=skincare+mini+fridge",
           },
         ],
+      },
+      {
+        type: "text",
+        heading: "Why skincare gifts are tricky",
+        body: "The problem with most skincare gift guides is that they default to whatever's trending — a product that's everywhere right now, regardless of whether it actually suits your girlfriend. Skincare is personal. The wrong texture, the wrong formula, or even just the wrong brand aesthetic can make a gift feel generic rather than considered. What she really wants is evidence that you were thinking about her specifically.",
+      },
+      {
+        type: "text",
+        heading: "Our approach",
+        body: "The picks above and below are chosen because they feel luxurious without requiring you to know her exact routine. They're the kind of things she'll genuinely use — treats that sit on top of a skincare routine rather than disrupting it. Each one comes with a plain-English explanation of why it works as a birthday gift, so you know what you're giving and why.",
       },
       {
         type: "cta",

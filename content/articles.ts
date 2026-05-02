@@ -102,6 +102,76 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     ]
   }
 
+{
+  "slug": "mothers_day-gifts-skincare",
+  "title": "5 Thoughtful Mother’s Day Skincare Gifts That Don’t Feel Generic",
+  "excerpt": "Curated mothers_day gift ideas for a girlfriend who's into skincare — each one with an explanation of why it works.",
+  "occasion": "mothers_day",
+  "interests": [
+    "skincare"
+  ],
+  "readTime": "4 min read",
+  "publishedAt": "2026-05-02",
+  "sections": [
+    {
+      "type": "picks",
+      "gifts": [
+        {
+          "name": "Rodan + Fields Luxury Skincare Set",
+          "price": "$199.20",
+          "reason": "This skincare kit allows your wife to indulge in a luxurious self-care routine, providing her with the pampering she deserves on Mother's Day. It shows that you recognize her hard work and want her to take a well-deserved break to focus on herself.",
+          "url": "https://www.amazon.com/Rodan-Fields-Redefine-Appearance-Firmness/dp/B01LHPRZFE?adgrpid=1334807680377124&dib=eyJ2IjoiMSJ9.vNwidWy7M36jyNXaqISGFCAA51DkL_HiYuR0DXwKnm5vaoT0eyRIpzDLSdazGcRUFF6jga01jsw3NPhGK0lNffG2zejIRbqnvCUAeqmvWrvrwX3cK9cgdJuii4yqubzeQ0_lfHkK7hzRwElUO_GyoBIpfpshBtY-mB2HSKiFAOTsTVVmNkHQWOUSHAygADnQhfswlLQbw1BXdg-LvbC2DBTricf9C0332DdgaxY3ot3CFwh9QlE1GxYqg-GSP1PDonuoIkDdIpMTYDpoy2LhYOqboXi84U1APuWkY308-WE.JNohrTUUe29SoEN-2OCs3OaFp7V6ne2WVGp3nR-qrlc&dib_tag=se&hvadid=83425866964659&hvbmt=bp&hvdev=c&hvlocphy=79130&hvnetw=o&hvqmt=p&hvtargid=kwd-83425824611205%3Aloc-190&hydadcr=27529_14788860&keywords=best+skin+care+sets+for+women&mcid=0c5c65dda7e73fc2b5c355be760b48e0&msclkid=a841f6e682371a4418259f2ed52d6840&qid=1774737186&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=284fc3f2aee9fe1a6876a53489609c75&language=en_US&ref_=as_li_ss_tl",
+          "image_url": "https://m.media-amazon.com/images/I/51AHekjUOkL._SL1500_.jpg"
+        },
+        {
+          "name": "4D Red Light Therapy Face Mask",
+          "price": "$179.00",
+          "reason": "This red light therapy mask is a perfect way for your wife to relax and rejuvenate her skin, allowing her to indulge in some personal time. It's a thoughtful gesture that acknowledges her need for self-care and appreciation on this special day.",
+          "url": "https://www.amazon.com/dp/B0FJS8ZQWS?maas=maas_adg_api_591804581339319208_static_9_129&aa_campaignid=lv_4b9e4NCSPDPodUvBVE&aa_adgroupid=lv_GkCHmtolszTKUOCWcB&aa_creativeid=lv_GaHtQ89nbgwHXkQWzr&m=A2F97CWV4SAWYO&linkCode=ll2&tag=cbggiftapp637-20&linkId=f6f921d72446bb436ddc452c78b448ec&language=en_US&ref_=as_li_ss_tl",
+          "image_url": "https://m.media-amazon.com/images/I/41AUc0hbRmL._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "Lavender Spa Gift Set for Women",
+          "price": "$139.00",
+          "reason": "This luxurious spa gift set offers your wife a complete pampering experience right at home, aligning perfectly with the Mother's Day spirit of relaxation and care. It reflects your understanding of her need to unwind and indulge in self-care.",
+          "url": "https://www.amazon.com/Lizush-Piece-Complete-Luxury-Women/dp/B088ZHBX22?crid=2G4FUVG6DASK1&dib=eyJ2IjoiMSJ9.wdNCtqyWta1khiiItcCLEpIhdm4EINKvTl_DHBm_SnxBItbZaoZk8OIAHJOgJeB2W27kbbkpT2Z4y7Q_qi86DdzHjJ2gJ3-LV6SD9fHaMaz6e7q8mYW6kcc2Td3rZPx0a2u3ZieMlP2ksPmue-3agNO0-fBLYTqdqh4Cc7uxCG1k3CioUQMTnwfqx_dex9LRESDR5LuFEMhJE4s42bhaGmA-9Nql839dB1g6sXWY6Vfdl8chIfjD07-4GPGC17PFGzEqICnmafZ2Un2XwJfY4vaAlV7ND2sYHeU9x5NI0jc.JU4TOnIMdhDBIDGIRql33BPX2JOLX5EP0WzFzfpUQJs&dib_tag=se&keywords=Luxury%2BBath%2BSpa%2BGift%2BBasket&qid=1773537574&sprefix=luxury%2Bbath%2Bspa%2Bgift%2Bbasket%2Caps%2C879&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9adbe727004cb2e61534ae42ad47e515&language=en_US&ref_=as_li_ss_tl",
+          "image_url": "https://m.media-amazon.com/images/I/513jKGDIIYL._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "ELEMIS SPF 30 Daily Facial Moisturizer",
+          "price": "$119.00",
+          "reason": "This facial moisturizer provides your wife with a daily luxury that celebrates her beauty while helping her feel rejuvenated. It's a lovely way to show her that you value the time and effort she puts into looking after herself.",
+          "url": "https://www.amazon.com/ELEMIS-Pro-Collagen-Marine-Cream-SPF/dp/B07BMBQG73?content-id=amzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db%3Aamzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db&crid=3VN2E0TD1YFX8&cv_ct_cx=sunblock&keywords=sunblock&pd_rd_i=B07BMBQG73&pd_rd_r=a7114abf-2f7d-4f53-ba7c-8a90d9d18ab9&pd_rd_w=V1e4H&pd_rd_wg=n0vET&pf_rd_p=582a5b7f-e458-4b67-81d0-f4623d03d4db&pf_rd_r=495FY18MF9JN2J8HCD6E&qid=1776907518&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=sunblock%2Caps%2C222&sr=1-3-905f6665-3817-4290-88eb-a2363c78a4a1-spons&aref=4IXxEF4y02&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e10101586eeab8e737c00e52dbdf074e&language=en_US&ref_=as_li_ss_tl",
+          "image_url": "https://m.media-amazon.com/images/I/61EU70GZWTL._SL1500_.jpg"
+        },
+        {
+          "name": "Skincare Fridge with LED Mirror",
+          "price": "$135.59",
+          "reason": "This thoughtful skincare fridge allows your wife to keep her beauty products organized and at the perfect temperature, enhancing her self-care routine. It shows that you understand and support her desire to treat herself well.",
+          "url": "https://www.amazon.com/Kikihouse-Skincare-Lighting-Dimmable-Cosmetic/dp/B0GSZN88J7?crid=27258EJ1UFEKA&dib=eyJ2IjoiMSJ9.zx3Fk_WUmRwXrzp0D0gU5e8TQm6CEfK107oHJZIR6M7gEgWXcZaRUbcX3i1rblMyXdfNjFGHb-4M9J-txRLwc1vdOSyce7LMxYMUBkkjNharuM0WeaajbCOq5XJpb73WBcfcFFecYCu--UvWlQGP5v5DBTCnIGwx-e2_W2DN8bP1lHgeCbsuhPtbTLujDkzTGnuTospC_bpyg60rBUT60zgYZtwzAz0fcueKfEBmEyo.OogYByPYITc49JWl2R2F2NbgmFzK2Ke5CFJQGVLnKpc&dib_tag=se&keywords=skincare%2Bfridge&qid=1774738658&sprefix=skinca%2Caps%2C210&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d59697ac6fb7f43bcf3f5073fd57af0c&language=en_US&ref_=as_li_ss_tl",
+          "image_url": "https://m.media-amazon.com/images/I/61IdGY1rcPL._AC_SL1500_.jpg"
+        }
+      ]
+    },
+    {
+      "type": "cta"
+    },
+    {
+      "type": "text",
+      "heading": "Why skincare gifts need extra thought",
+      "body": "Buying a mothers_day gift for someone who's into skincare sounds straightforward — but the wrong pick can feel generic or lazy. The best gifts in this space connect to how she actually engages with skincare, not just the category label."
+    },
+    {
+      "type": "text",
+      "heading": "Making it land",
+      "body": "Mother's Day gifts land best when paired with an experience — breakfast in bed, a quiet morning, or just handling everything for the day so she doesn't have to."
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}
+
   // Add more articles here as you build them
   // TEMPLATE:
   // {

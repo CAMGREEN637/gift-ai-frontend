@@ -47,6 +47,16 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     ],
     sections: [
       {
+        type: "text",
+        heading: "What most guys get wrong about coffee gifts",
+        body: "Buying a birthday gift for someone who's into coffee sounds straightforward — but the wrong pick can feel generic or lazy. The best gifts in this space connect to how she actually engages with coffee, not just the category label."
+      },
+      {
+        type: "text",
+        heading: "Making it land",
+        body: "Birthday gifts hit different when they feel considered, not last-minute. If it arrives in Amazon packaging, rewrap it. A handwritten note — even two sentences — elevates any gift."
+      },
+      {
         type: "picks",
         gifts: [
           {
@@ -81,23 +91,10 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             name: "Fellow Stagg EKG Pro Kettle",
             price: "$179.00",
             reason: "Investing in a high-quality kettle like this showcases your attention to detail and luxury for your girlfriend's birthday celebration. It's a thoughtful gesture that enhances her coffee-making experience.",
-            url: "https://www.amazon.com/Fellow-Stagg-Electric-Gooseneck-Kettle/dp/B0BF7DXLBF?crid=3OIMZOVWJNRXA&dib=eyJ2IjoiMSJ9.kgh-95Gmn8iXvGBVrnDCwGYdH7kyBSsJUYSbIVGugVCU7ykZcZ0-q8ZTxnprn2nesd4fsNV_4UiRsDLDcPu1nuvbXkS6XfxBYeCJWnCZNySX3ROQ16gqFvjhH6z7ILy9uNJneHAeZ-EURmTnfhcBHi1agw-0Yowqwh1-gaAd0hUiyGkRSlcokxhkMaszS00Se5RyIJox-GUC59jO6qfVHrdOmh4SPeFJEquaVa5fpgE.kK2UVqiZS6OHuJWy5OJI_lb5cQkTDQcuLCR7_NuLs&dib_tag=se&keywords=Fellow%2BStagg%2BEKG%2BElectric%2BPour-Over%2BKettle&qid=1776730622&s=handmade&sprefix=fellow%2Bstagg%2Bekg%2Belectric%2Bpour-over%2Bkettle%2Cspecialty-aps%2C433&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e5edc9a0e8e188c4b4cf4ce4ea95024b&language=en_US&ref_=as_li_ss_tl",
+            url: "https://www.amazon.com/Fellow-Stagg-Electric-Gooseneck-Kettle/dp/B0BF7DXLBF?crid=3OIMZOVWJNRXA&dib=eyJ2IjoiMSJ9.kgh-95Gmn8iXvGBVrnDCwGYdH7kyBSsJUYSbIVGugVCU7ykZcZ0-q8ZTxnprn2nesd4fsNV_4UiRsDLDcPu1nuvbXkS6XfxBYeCJWnCySX3ROQ16gqFvjhH6z7ILy9uNJneHAeZ-EURmTnfhcBHi1agw-0Yowqwh1-gaAd0hUiyGkRSlcokxhkMaszS00Se5RyIJox-GUC59jO6qfVHrdOmh4SPeFJEquaVa5fpgE.kK2UVqiZS6OHuJWy5OJI_lb5cQkTDQcuLCR7_NuLs&dib_tag=se&keywords=Fellow%2BStagg%2BEKG%2BElectric%2BPour-Over%2BKettle&qid=1776730622&s=handmade&sprefix=fellow%2Bstagg%2Bekg%2Belectric%2Bpour-over%2Bkettle%2Cspecialty-aps%2C433&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e5edc9a0e8e188c4b4cf4ce4ea95024b&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61grHEIj7PL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
-      },
-      {
-        type: "cta"
-      },
-      {
-        type: "text",
-        heading: "What most guys get wrong about coffee gifts",
-        body: "Buying a birthday gift for someone who's into coffee sounds straightforward — but the wrong pick can feel generic or lazy. The best gifts in this space connect to how she actually engages with coffee, not just the category label."
-      },
-      {
-        type: "text",
-        heading: "Making it land",
-        body: "Birthday gifts hit different when they feel considered, not last-minute. If it arrives in Amazon packaging, rewrap it. A handwritten note — even two sentences — elevates any gift."
       },
       {
         type: "cta"

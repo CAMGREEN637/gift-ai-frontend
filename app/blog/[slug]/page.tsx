@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllArticles, getArticleBySlug } from "@/content/articles";
-import type { GiftArticle as Article, ArticleSection, Gift as GiftPick } from "@/content/articles";import type { Metadata } from "next";
+import type { GiftArticle as Article, Gift as GiftPick } from "@/content/articles";
+import type { Metadata } from "next";
 
 // =============================================================================
 // STATIC PARAMS — pre-render all articles at build time
@@ -12,7 +13,7 @@ export function generateStaticParams() {
 }
 
 // =============================================================================
-// METADATA — Task 3: emotional hook in title
+// METADATA
 // =============================================================================
 
 export async function generateMetadata({
@@ -59,43 +60,39 @@ const OCCASION_LABELS: Record<string, string> = {
 };
 
 // =============================================================================
-// GIFT PICK CARD
+// GIFT PICK CARD — stacked layout with full-width image
 // =============================================================================
 
 function GiftPickCard({ gift }: { gift: GiftPick }) {
   return (
-    <div className="bg-white border border-stone-100 rounded-2xl p-5 mb-4 flex gap-4">
+    <div className="bg-white border border-stone-100 rounded-2xl overflow-hidden mb-4">
       {gift.image_url && (
-        <div className="w-20 h-20 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center shrink-0 overflow-hidden">
+        <div className="bg-stone-50 flex items-center justify-center p-6 border-b border-stone-100">
           <img
             src={gift.image_url}
             alt={gift.name}
-            className="w-full h-full object-contain p-2"
+            className="max-h-64 w-auto object-contain"
           />
         </div>
       )}
-      <div className="flex-1">
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <h3 className="font-serif text-lg text-stone-900 leading-snug">
-            {gift.name}
-          </h3>
-          <span className="text-stone-600 font-semibold text-base shrink-0">
+      <div className="p-5">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="font-serif text-lg text-stone-900">{gift.name}</h3>
+          <span className="text-stone-600 font-semibold text-sm shrink-0 ml-4">
             {gift.price}
           </span>
         </div>
-
         <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
           <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">
             Why this works
           </p>
           <p className="text-xs text-amber-700 leading-relaxed">{gift.reason}</p>
         </div>
-
         <a
           href={gift.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-medium text-amber-600 hover:text-amber-700 transition-colors"
+          className="text-xs font-medium text-amber-600 hover:text-amber-700 hover:underline"
         >
           View on Amazon →
         </a>
@@ -105,7 +102,7 @@ function GiftPickCard({ gift }: { gift: GiftPick }) {
 }
 
 // =============================================================================
-// GIFT PICKS GROUP — renders each card + inline micro-CTA (Task 2)
+// GIFT PICKS GROUP — inline CTA only after the first card
 // =============================================================================
 
 function GiftPicksGroup({
@@ -117,18 +114,19 @@ function GiftPicksGroup({
 }) {
   return (
     <div className="my-6">
-      {gifts.map((gift, i) => (
-        <div key={i}>
+      {gifts.map((gift, idx) => (
+        <div key={idx}>
           <GiftPickCard gift={gift} />
-          {/* Task 2: subtle inline micro-CTA after each card */}
-          <div className="text-right mt-1 mb-4">
-            <Link
-              href={quizUrl}
-              className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
-            >
-              Want more picks like this? Take the quiz →
-            </Link>
-          </div>
+          {idx === 0 && (
+            <div className="text-right mt-1 mb-4">
+              <Link
+                href={quizUrl}
+                className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
+              >
+                Want picks tailored to her? Take the quiz →
+              </Link>
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -136,24 +134,15 @@ function GiftPicksGroup({
 }
 
 // =============================================================================
-// CTA BLOCK
+// CTA BLOCK — single instance at bottom of article
 // =============================================================================
 
-function CtaBlock({
-  article,
-  variant,
-}: {
-  article: Article;
-  variant: "mid" | "bottom";
-}) {
+function CtaBlock({ article }: { article: Article }) {
   const quizUrl = `/?occasion=${article.occasion}&interests=${article.interests.join(",")}`;
-
   return (
     <div className="bg-amber-50 border border-amber-200 rounded-3xl p-8 my-10 text-center">
       <h2 className="font-serif text-2xl text-stone-900 mb-2">
-        {variant === "mid"
-          ? "Want picks tailored specifically to her?"
-          : "Still not sure? We'll figure it out together."}
+        Still not sure? We'll figure it out together.
       </h2>
       <p className="text-stone-500 text-sm mt-2 mb-6 max-w-sm mx-auto">
         Take the 2-minute quiz and get recommendations matched to her
@@ -163,14 +152,14 @@ function CtaBlock({
         href={quizUrl}
         className="inline-block px-8 py-4 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm text-base"
       >
-        {variant === "mid" ? "Find the perfect gift →" : "Take the quiz →"}
+        Take the quiz →
       </Link>
     </div>
   );
 }
 
 // =============================================================================
-// HOW WE CHOOSE THESE — Task 5: hardcoded trust section
+// HOW WE CHOOSE THESE
 // =============================================================================
 
 function HowWeChoose() {
@@ -228,54 +217,6 @@ function HowWeChoose() {
 }
 
 // =============================================================================
-// SECTION RENDERER — skips first picks (already front-loaded)
-// =============================================================================
-
-function renderSection(
-  section: ArticleSection,
-  index: number,
-  article: Article,
-  ctaCount: { count: number },
-  quizUrl: string
-): React.ReactNode {
-  if (section.type === "text") {
-    return (
-      <div key={index}>
-        {section.heading && (
-          <h2 className="font-serif text-2xl text-stone-900 mt-10 mb-4">
-            {section.heading}
-          </h2>
-        )}
-        <p className="text-stone-600 text-base leading-relaxed mb-6">
-          {section.body}
-        </p>
-      </div>
-    );
-  }
-
-  if (section.type === "picks") {
-    return (
-      <GiftPicksGroup key={index} gifts={section.gifts || []} quizUrl={quizUrl} />
-    );
-  }
-
-  if (section.type === "cta") {
-    ctaCount.count += 1;
-    const variant = ctaCount.count === 1 ? "mid" : "bottom";
-    // Task 5: inject "How we choose these" immediately before the bottom CTA
-    if (variant === "bottom") {
-      return [
-        <HowWeChoose key={`how-${index}`} />,
-        <CtaBlock key={`cta-${index}`} article={article} variant="bottom" />,
-      ];
-    }
-    return <CtaBlock key={index} article={article} variant="mid" />;
-  }
-
-  return null;
-}
-
-// =============================================================================
 // PAGE
 // =============================================================================
 
@@ -290,12 +231,34 @@ export default async function ArticlePage({
 
   const quizUrl = `/?occasion=${article.occasion}&interests=${article.interests.join(",")}`;
 
-  // Task 1: find the first picks section to front-load
-  const firstPicksIndex = article.sections.findIndex((s) => s.type === "picks");
-  const firstPicksSection =
-    firstPicksIndex !== -1 ? article.sections[firstPicksIndex] : null;
+  // Hook paragraph — auto-generated from article metadata
+  const hookOccasionLabels: Record<string, string> = {
+    birthday: "her birthday",
+    valentines: "Valentine's Day",
+    anniversary: "your anniversary",
+    christmas: "Christmas",
+    mothers_day: "Mother's Day",
+    just_because: "a surprise gift",
+    apology: "an apology",
+  };
+  const hookOccasion = hookOccasionLabels[article.occasion] || "the occasion";
+  const hookInterest = article.interests[0] || "her interests";
 
-  // Task 4: related articles — same occasion or overlapping interests
+  // Price range — computed from all gift data
+  const allGifts = article.sections
+    .filter((s) => s.type === "picks")
+    .flatMap((s) => s.gifts ?? []);
+  const prices = allGifts
+    .map((g) => parseFloat(g.price.replace(/[$,]/g, "")))
+    .filter((p) => !isNaN(p));
+  const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
+  const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+
+  // Partition sections by type
+  const textSections = article.sections.filter((s) => s.type === "text");
+  const picksSections = article.sections.filter((s) => s.type === "picks");
+
+  // Related articles — same occasion or overlapping interests
   const relatedArticles = getAllArticles()
     .filter((a) => a.slug !== article.slug)
     .filter(
@@ -304,8 +267,6 @@ export default async function ArticlePage({
         a.interests.some((i) => article.interests.includes(i))
     )
     .slice(0, 3);
-
-  const ctaCount = { count: 0 };
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -347,41 +308,76 @@ export default async function ArticlePage({
           ← Back to Gift Guide
         </Link>
 
-        {/* Occasion badge */}
+        {/* 1. Occasion badge */}
         <div className="mt-6 mb-4">
           <span className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">
             {OCCASION_LABELS[article.occasion] ?? article.occasion}
           </span>
         </div>
 
-        {/* Title */}
+        {/* 1. Title */}
         <h1 className="font-serif text-4xl text-stone-900 tracking-tight mb-4 leading-tight">
           {article.title}
         </h1>
 
-        {/* Meta */}
+        {/* 1. Meta line */}
         <p className="text-xs text-stone-400 mb-8">{article.readTime}</p>
 
-        {/* Task 1: front-loaded first picks section */}
-        {firstPicksSection && firstPicksSection.type === "picks" && (
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">
-              Our top picks
-            </p>
-            <GiftPicksGroup
-              gifts={firstPicksSection.gifts || []}
-              quizUrl={quizUrl}
-            />
+        {/* 2. Hook paragraph — auto-generated */}
+        <p className="text-stone-600 text-base leading-relaxed mb-8">
+          {`You know she's into ${hookInterest} — but buying ${
+            hookOccasion === "a surprise gift" || hookOccasion === "an apology"
+              ? hookOccasion
+              : `a ${hookOccasion} gift`
+          } around that interest is harder than it sounds. The obvious picks feel lazy, the obscure ones feel risky. These are the ones that actually land.`}
+        </p>
+
+        {/* 3. Price range context */}
+        {prices.length > 0 && (
+          <div className="flex items-center gap-3 mb-8 text-xs text-stone-400">
+            <span>{allGifts.length} picks</span>
+            <span className="text-stone-200">·</span>
+            <span>
+              ${minPrice.toFixed(0)} – ${maxPrice.toFixed(0)}
+            </span>
           </div>
         )}
 
-        {/* Remaining sections — skip the already-rendered first picks */}
-        {article.sections.map((section, index) => {
-          if (index === firstPicksIndex) return null;
-          return renderSection(section, index, article, ctaCount, quizUrl);
-        })}
+        {/* 4. Text sections — editorial content before picks */}
+        {textSections.map((section, index) => (
+          <div key={index}>
+            {section.heading && (
+              <h2 className="font-serif text-2xl text-stone-900 mt-10 mb-4">
+                {section.heading}
+              </h2>
+            )}
+            <p className="text-stone-600 text-base leading-relaxed mb-6">
+              {section.body}
+            </p>
+          </div>
+        ))}
 
-        {/* Task 4: related guides */}
+        {/* 5. "Our picks" subheading */}
+        {picksSections.length > 0 && (
+          <h2 className="font-serif text-2xl text-stone-900 mb-6 mt-10">
+            Our picks
+          </h2>
+        )}
+
+        {/* 6. Gift pick cards */}
+        {picksSections.map((section, index) => (
+          <GiftPicksGroup
+            key={index}
+            gifts={section.gifts ?? []}
+            quizUrl={quizUrl}
+          />
+        ))}
+
+        {/* 7 & 8. How we choose + single CTA block */}
+        <HowWeChoose />
+        <CtaBlock article={article} />
+
+        {/* 9. Related guides */}
         {relatedArticles.length > 0 && (
           <div className="mt-16 pt-10 border-t border-stone-200">
             <h3 className="font-serif text-xl text-stone-900 mb-6">

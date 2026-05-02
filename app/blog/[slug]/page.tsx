@@ -369,7 +369,7 @@ export default async function ArticlePage({
               Our top picks
             </p>
             <GiftPicksGroup
-              gifts={firstPicksSection.gifts}
+              gifts={firstPicksSection.gifts || []}
               quizUrl={quizUrl}
             />
           </div>

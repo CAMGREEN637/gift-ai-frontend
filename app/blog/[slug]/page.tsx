@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllArticles, getArticleBySlug } from "@/content/articles";
-import type { Article, ArticleSection, GiftPick } from "@/content/articles";
-import type { Metadata } from "next";
+import type { GiftArticle as Article, ArticleSection, Gift as GiftPick } from "@/content/articles";import type { Metadata } from "next";
 
 // =============================================================================
 // STATIC PARAMS — pre-render all articles at build time

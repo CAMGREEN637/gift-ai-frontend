@@ -15,6 +15,8 @@ const occasion = getArg("--occasion");
 const interest = getArg("--interest");
 const stage = getArg("--stage") ?? "dating";
 
+// --- Guard Clause ---
+// This ensures the script stops if arguments are missing.
 if (!occasion || !interest) {
   console.error(
     "Usage: npx ts-node scripts/generate-article.ts --occasion <occasion> --interest <interest> [--stage <stage>]"
@@ -208,10 +210,11 @@ async function main() {
 
     const diverseGifts = selectDiverseGifts(rawGifts, 5);
 
+    // Note: Use ! (non-null assertion) here because we checked them at the top of the file
     const article = {
-      slug: generateSlug(occasion, interest),
-      title: generateTitle(occasion, interest),
-      excerpt: generateExcerpt(occasion, interest),
+      slug: generateSlug(occasion!, interest!),
+      title: generateTitle(occasion!, interest!),
+      excerpt: generateExcerpt(occasion!, interest!),
       occasion,
       interests: [interest],
       readTime: "4 min read",
@@ -230,13 +233,13 @@ async function main() {
         { type: "cta" },
         {
           type: "text",
-          heading: generateWhyHeading(occasion, interest),
-          body: generateWhySection(occasion, interest),
+          heading: generateWhyHeading(occasion!, interest!),
+          body: generateWhySection(occasion!, interest!),
         },
         {
           type: "text",
           heading: "Making it land",
-          body: generatePresentationTips(occasion),
+          body: generatePresentationTips(occasion!),
         },
         { type: "cta" },
       ],

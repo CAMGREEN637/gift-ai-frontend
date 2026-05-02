@@ -255,7 +255,7 @@ function renderSection(
 
   if (section.type === "picks") {
     return (
-      <GiftPicksGroup key={index} gifts={section.gifts} quizUrl={quizUrl} />
+      <GiftPicksGroup key={index} gifts={section.gifts || []} quizUrl={quizUrl} />
     );
   }
 

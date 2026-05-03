@@ -11,18 +11,20 @@ function getArg(name: string): string | undefined {
   return idx !== -1 && args[idx + 1] !== undefined ? args[idx + 1] : undefined;
 }
 
-const occasion = getArg("--occasion");
-const interest = getArg("--interest");
-const stage = getArg("--stage") ?? "dating";
+const _occasion = getArg("--occasion");
+const _interest = getArg("--interest");
+const stage = getArg("--stage") ?? (_occasion === "mothers_day" ? "committed" : "dating");
 
-// --- Guard Clause ---
-// This ensures the script stops if arguments are missing.
-if (!occasion || !interest) {
+if (!_occasion || !_interest) {
   console.error(
     "Usage: npx ts-node scripts/generate-article.ts --occasion <occasion> --interest <interest> [--stage <stage>]"
   );
   process.exit(1);
 }
+
+// Type-narrow to string after the exit guard above
+const occasion: string = _occasion;
+const interest: string = _interest;
 
 const backendUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -52,7 +54,7 @@ const OCCASION_LABELS: Record<string, string> = {
 
 const INTEREST_LABELS: Record<string, string> = {
   coffee: "Coffee-Obsessed",
-  skincare: "Into Skincare",
+  skincare: "Loves Skincare",
   hiking: "Loves Hiking",
   cooking: "Loves Cooking",
   reading: "Loves Reading",
@@ -72,37 +74,47 @@ const INTEREST_LABELS: Record<string, string> = {
   pets: "a Pet Mom",
 };
 
-function generateTitle(occ: string, int: string): string {
+const STAGE_LABELS: Record<string, string> = {
+  new:         "Someone You Just Started Dating",
+  dating:      "Girlfriend",
+  serious:     "Girlfriend",
+  committed:   "Wife",
+  complicated: "Partner",
+};
+
+function generateTitle(occ: string, int: string, stg: string): string {
   const occasionLabel =
     OCCASION_LABELS[occ] ??
     occ.charAt(0).toUpperCase() + occ.slice(1).replace(/_/g, " ");
   const interestLabel =
     INTEREST_LABELS[int] ??
     `Loves ${int.charAt(0).toUpperCase() + int.slice(1).replace(/_/g, " ")}`;
+  const personLabel = STAGE_LABELS[stg] ?? "Girlfriend";
 
   if (occ === "apology") {
-    return "Apology Gifts for Your Girlfriend (That Actually Feel Sincere)";
+    return `Apology Gifts for Your ${personLabel} (That Actually Feel Sincere)`;
   }
   if (occ === "just_because") {
-    return `Surprise Gifts for a ${interestLabel} Girlfriend`;
+    return `Surprise Gifts for a ${personLabel} Who ${interestLabel}`;
   }
 
   return pick([
-    `${occasionLabel} Gifts for a Girlfriend Who's ${interestLabel}`,
-    `${occasionLabel} Gift Ideas for a ${interestLabel} Girlfriend`,
-    `What to Get a ${interestLabel} Girlfriend for ${occasionLabel}`,
+    `${occasionLabel} Gifts for a ${personLabel} Who ${interestLabel}`,
+    `${occasionLabel} Gift Ideas for a ${personLabel} Who ${interestLabel}`,
+    `What to Get a ${personLabel} Who ${interestLabel} for ${occasionLabel}`,
   ]);
 }
 
 // ─── Excerpt ─────────────────────────────────────────────────────────────────
 
-function generateExcerpt(occ: string, int: string): string {
+function generateExcerpt(occ: string, int: string, stg: string): string {
   const occLabel =
     OCCASION_LABELS[occ] ??
     occ.charAt(0).toUpperCase() + occ.slice(1).replace(/_/g, " ");
+  const personLabel = (STAGE_LABELS[stg] ?? "girlfriend").toLowerCase();
   return pick([
-    `Curated ${occ} gift ideas for a girlfriend who's into ${int} — each one with an explanation of why it works.`,
-    `Not sure what to get her for ${occ}? These ${int}-inspired picks actually feel personal.`,
+    `Curated ${occLabel} gift ideas for a ${personLabel} who's into ${int} — each one with an explanation of why it works.`,
+    `Not sure what to get her for ${occLabel}? These ${int}-inspired picks actually feel personal.`,
     `${occLabel} gifts matched to her love of ${int}, ranked by how thoughtful they'll feel.`,
   ]);
 }
@@ -120,8 +132,9 @@ function generateWhyHeading(occ: string, int: string): string {
 // ─── Why section body ────────────────────────────────────────────────────────
 
 function generateWhySection(occ: string, int: string): string {
+  const occLabel = (OCCASION_LABELS[occ] ?? occ).toLowerCase();
   return pick([
-    `Buying a ${occ} gift for someone who's into ${int} sounds straightforward — but the wrong pick can feel generic or lazy. The best gifts in this space connect to how she actually engages with ${int}, not just the category label.`,
+    `Buying a ${occLabel} gift for someone who's into ${int} sounds straightforward — but the wrong pick can feel generic or lazy. The best gifts in this space connect to how she actually engages with ${int}, not just the category label.`,
     `The temptation is to search '${int} gift' and buy the first thing with good reviews. But she can do that herself. What makes a gift land is the signal that you understand what ${int} means to her specifically — not just that she's into it.`,
     `Most ${int} gifts miss because they're too obvious — the thing everyone buys. The picks above are chosen to match her interest without being the predictable choice.`,
   ]);
@@ -210,11 +223,10 @@ async function main() {
 
     const diverseGifts = selectDiverseGifts(rawGifts, 5);
 
-    // Note: Use ! (non-null assertion) here because we checked them at the top of the file
     const article = {
-      slug: generateSlug(occasion!, interest!),
-      title: generateTitle(occasion!, interest!),
-      excerpt: generateExcerpt(occasion!, interest!),
+      slug: generateSlug(occasion, interest),
+      title: generateTitle(occasion, interest, stage),
+      excerpt: generateExcerpt(occasion, interest, stage),
       occasion,
       interests: [interest],
       readTime: "4 min read",
@@ -233,13 +245,13 @@ async function main() {
         { type: "cta" },
         {
           type: "text",
-          heading: generateWhyHeading(occasion!, interest!),
-          body: generateWhySection(occasion!, interest!),
+          heading: generateWhyHeading(occasion, interest),
+          body: generateWhySection(occasion, interest),
         },
         {
           type: "text",
           heading: "Making it land",
-          body: generatePresentationTips(occasion!),
+          body: generatePresentationTips(occasion),
         },
         { type: "cta" },
       ],

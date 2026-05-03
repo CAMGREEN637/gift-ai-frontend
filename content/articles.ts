@@ -114,7 +114,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$46.00",
             reason: "Hydration is vital for new moms, especially those breastfeeding. This insulated bottle tracks intake and sends reminders, making it easy to hit daily water goals with one hand while holding a baby.",
             url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61f9Vp-1LmL._AC_SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/61j0emHta6L._AC_SL1500_.jpg"
           },
           {
             name: "Hatch Restore 2 Sunrise Alarm Clock",

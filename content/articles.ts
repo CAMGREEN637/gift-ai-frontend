@@ -451,7 +451,95 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       "type": "cta"
     }
   ]
-}
+},
+{
+    slug: "mothers-day-gifts-dog-mom-cat-mom",
+    title: "Mother's Day Gifts for the Dog Mom (or Cat Mom) in Your Life",
+    excerpt: "She treats her pet like family. These Mother's Day gifts celebrate that bond — from practical upgrades to cozy keepsakes she'll actually love.",
+    occasion: "mothers_day",
+    interests: ["pets", "home_decor", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-03",
+    relatedArticles: [
+      "top-relaxation-gifts-mothers-day",
+      "mothers-day-gifts-luxury",
+      "practical-mothers-day-gifts-new-moms"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why pet moms deserve their own category",
+        body: "For a lot of people, their dog or cat isn't just a pet — they're family. If the woman you're buying for talks about her animal like a child, plans her schedule around walks or feeding times, and has more photos of her pet on her phone than anything else, she's a pet mom. That changes what makes a good gift. Generic flowers or chocolates miss the point. The best gifts for her either make her life with her pet easier, celebrate that bond directly, or give her a moment of relaxation she rarely makes time for herself."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Best Dog Mom Scented Candle – Lavender Vanilla Soy Wax",
+            price: "$20.00",
+            reason: "Small, personal, and specific to who she is. A 'Dog Mom' candle in lavender vanilla is the kind of gift that makes her smile the moment she reads the label. It's a great add-on to a bigger gift or a strong standalone if you're keeping it simple.",
+            url: "https://www.amazon.com/Dog-Mom-Gifts-Women-Birthday/dp/B0B46YQ13F?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSRUTYgYtipxH0cVuBt_tnDYGK1T8V_113cHF1rZCAWDZF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.BRHrxuQaSurkmIvKxAoKwtX9RvtNxuJkIPMtdmUsIRI&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828370&sr=8-22-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9f8eea3684199de5eb59f2d9940ebbe5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71b7juZJqhL._SL1500_.jpg"
+          },
+          {
+            name: "Dog Water Bottle with Food Container – Travel All-in-One",
+            price: "$11.00",
+            reason: "If she's always out on walks with her dog, this is the kind of practical gift that genuinely improves her routine. The bottle and food container combo means she can head out for longer adventures without overpacking. Low price, high utility.",
+            url: "https://www.amazon.com/Portable-Dispenser-Detachable-Container-Cibaabo/dp/B09F5ZYV7M?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSRUTYgYtipxH0cVuBt_tnDYGK1T8V_113cHF1rZCAWDZF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.BRHrxuQaSurkmIvKxAoKwtX9RvtNxuJkIPMtdmUsIRI&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828370&sr=8-13-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=cc2fe8b9fe09297a8165ede3513dbd5f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51Gv4-WbKxL._AC_SL1200_.jpg"
+          },
+          {
+            name: "Dog Mom Water Bottle – 32oz Insulated with Detachable Dog Bowl",
+            price: "$28.00",
+            reason: "A step up from the travel bottle — this insulated stainless steel option keeps drinks cold for hours and has a detachable bowl built into the base. It's designed specifically for dog moms and hits that sweet spot between practical and personal.",
+            url: "https://www.amazon.com/Dog-Mom-Water-Bottle-Detachable/dp/B0DBJCDR4W?_encoding=UTF8&pd_rd_w=Xqw5v&content-id=amzn1.sym.048a6e3c-8d40-4302-8312-26c626af6738%3Aamzn1.symc.050ea944-f1cf-4610-b462-3b604f2f4082&pf_rd_p=048a6e3c-8d40-4302-8312-26c626af6738&pf_rd_r=SK0MDKSYJ94ZXNRG40QF&pd_rd_wg=7YIst&pd_rd_r=4be3fdca-0244-41a5-9781-9465751cafe3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e772c1eadb0c88b52ae8ed9a31c96703&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81vXvXv7VPL._AC_SL1500_.jpg"
+          },
+          {
+            name: "AMOSIJOY Cordless Cat Window Perch",
+            price: "$16.00",
+            reason: "For the cat mom, this is a gift that makes her cat happier — which in turn makes her happier. The strap-free suction design installs without drilling, and the foldable frame means it stores easily. If her cat is a window watcher, this will get used every single day.",
+            url: "https://www.amazon.com/AMOSIJOY-Cordless-Installation-Foldable-Large/dp/B09WDDGP2V?crid=2DYQCBK9N5V84&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.VojaeMlgoUCouJzKzsOPsEx2axkkcw2g7KCgzbr8350QX7PAaubU0fw8rItfXjdcxxQpP6WpYM7n68-ZLlBCgJWRGcfHO24ZupGRc-fEDpisjUqAqCsrs5lg68myzzTwLxdBYt8bdKNHkyLWdezN8c67wAJTa7J1URPtFyDriGkRdzKGvJfsEbQPsvdCpbJ310OrgsOTMkQMDDXlsi2crdtppNnHclSSDexlrrWF4qI._9ASk7V7B6hRRUIIRbLUUr0l1shTriBg8ZG8bcKSoGg&dib_tag=se&keywords=cat%2Bwindow%2Bperch&qid=1775431041&s=samedaystore&sprefix=cat%2Bwindow%2Bperch%2Csamedaystore%2C203&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=75788c33d082f851633bcb2f11b13f61&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Fluffy Flannel Fleece Pet Blanket – 80 x 64\"",
+            price: "$32.00",
+            reason: "A cozy oversized blanket she can share with her pet on the couch. It's machine washable — which matters a lot when there's a dog or cat involved — and the size means there's room for both of them. Practical and genuinely sweet.",
+            url: "https://www.amazon.com/Allisandro-Fluffy-Blanket-Medium-Flannel/dp/B073J8MYH1?crid=U1E72AQNIR5Q&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.gqFamlB54jXvgBfgodvAi-nwKQSPn87UPlgqi4JxLmbcGg35lW8Ih9Ici5PkeksdpzHAco0Ew-KbR9HkZyl558dE87cBnNskUHUy9wAtLPg.ZBBsVfRzXp-RoyRZJm8OESakM69etuML7K7T1DwTDRE&dib_tag=se&keywords=custom%2Bpet%2Bportrait%2Bblanket&qid=1775430815&s=samedaystore&sprefix=custom%2Bpet%2Bportrait%2Bblanket%2Csamedaystore%2C191&sr=1-6&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1ec3e26480e10acde47272224cb4fa47&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71bO9GhO3PL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "PETLIBRO 5G WiFi Automatic Cat Feeder",
+            price: "$69.00",
+            reason: "This one is a gift for her and her pet. A smart automatic feeder with WiFi control and low-food sensor takes the anxiety out of leaving home. She can check in and schedule feedings from her phone — peace of mind that any pet parent will appreciate.",
+            url: "https://www.amazon.com/PETLIBRO-Automatic-Control-Stainless-Blockage/dp/B09S8WMJY9?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSQZRVx51xmr1SzZ1s_cxcyhoesWtuwLwua1u5_SFSwjFF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.JqyLq3USXi_HTqgJDcY5O2V9yvEqb76_stuo6rrX0k0&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828172&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=eaa5ac35b1b7314f3845f6406699fe46&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71f-u9v5H8L._AC_SL1500_.jpg"
+          },
+          {
+            name: "Skylight Frame – 10\" WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "Load it up with her favorite photos of her pet — or mix in photos of you two together with the animal. It displays them in a continuous slideshow and she can add new photos from anywhere via the app. Sentimental, personal, and something she'll have on display every day.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81vXvXv7VPL._AC_SL1500_.jpg"
+          },
+          {
+            name: "EyeVac Pro Touchless Vacuum Automatic Dustpan",
+            price: "$179.00",
+            reason: "Pet hair is a constant battle. This touchless automatic dustpan activates the moment you sweep debris toward it — no bending down, no fuss. It's one of those gifts that sounds unglamorous until she uses it once, and then she can't imagine life without it.",
+            url: "https://www.amazon.com/EYE-VAC-Touchless-Automatic-Dustpan-Canister/dp/B0011G20QY?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSRUTYgYtipxH0cVuBt_tnDYGK1T8V_113cHF1rZCAWDZF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.BRHrxuQaSurkmIvKxAoKwtX9RvtNxuJkIPMtdmUsIRI&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828370&sr=8-20-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=96e42224a45096a135ddd7df2b0835e5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61f9Vp-1LmL._AC_SL1500_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "How to make it feel personal",
+        body: "The easiest way to elevate any of these gifts is to tie it back to her specific pet. If you know the dog's name, write it in the card. If you're getting the photo frame, pre-load it with pictures before you give it — don't make her do the setup herself. Small touches like that are what take a good gift and make it a memorable one."
+      },
+      { type: "cta" }
+    ]
+  }
 ];
 
 // ============================================================================

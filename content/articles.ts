@@ -170,41 +170,103 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
   // MOTHER'S DAY GIFTS — LUXURY WELLNESS
   // ============================================================================
   {
-    slug: "mothers-day-gifts-luxury-wellness",
-    title: "Luxury Mother’s Day Gift Ideas: The Ultimate Self-Care List",
-    excerpt: "Go beyond the standard card and flowers with these high-end picks that prioritize her long-term well-being.",
-    occasion: "mothers_day",
-    interests: ["luxe", "wellness", "home_decor"],
-    readTime: "5 min read",
-    publishedAt: "2026-05-03",
-    sections: [
-      {
-        type: "picks",
-        gifts: [
-          {
-            name: "Eco-Friendly Non-Slip Yoga Mat",
-            price: "$164.00",
-            reason: "This is the 'Rolls Royce' of yoga mats. Its premium construction and eco-friendly materials make it a standout gift.",
-            url: "https://www.amazon.com/dp/B01CGLCGRA",
-            image_url: "https://m.media-amazon.com/images/I/41jBqFTYZVL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Nespresso Vertuo Coffee and Espresso Machine",
-            price: "$99.00",
-            reason: "Give her the luxury of a specialty coffee bar at home. The Vertuo system is known for its rich crema and elegant design.",
-            url: "https://www.amazon.com/dp/B0DVDG5TRT",
-            image_url: "https://m.media-amazon.com/images/I/51KPEbDiU+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          }
-        ]
-      },
-      {
-        type: "text",
-        heading: "Making her feel celebrated",
-        body: "Mother's Day is the perfect time to upgrade the things she uses every day."
-      },
-      { type: "cta" }
-    ]
-  }
+  "slug": "mothers-day-gifts-luxury",
+  "title": "Luxury Mother’s Day Gifts That Actually Feel Worth It",
+  "excerpt": "High-end Mother’s Day gifts that feel intentional, not just expensive.",
+  "occasion": "mothers_day",
+  "interests": ["wellness", "home_decor", "skincare", "cooking"],
+  "readTime": "5 min read",
+  "publishedAt": "2026-05-03",
+  "relatedArticles": [
+    "mothers-day-gifts-relaxation",
+    "mothers-day-gifts-new-moms",
+    "birthday-gifts-skincare",
+    "christmas-gifts-home"
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "heading": "What most people get wrong about luxury gifts",
+      "body": "Spending more doesn’t automatically make a gift better. The mistake most people make is choosing something expensive that still feels generic. The best luxury gifts feel like an upgrade to her everyday life—something she wouldn’t buy for herself, but ends up using constantly once she has it."
+    },
+    {
+      "type": "text",
+      "heading": "How to make a high-end gift actually land",
+      "body": "Luxury works when it feels intentional. Think about how she spends her time—relaxing, cooking, unwinding—and choose something that elevates that specific part of her routine. Even a premium gift can feel flat if it’s not tied to how she actually lives day to day."
+    },
+    {
+      "type": "picks",
+      "gifts": [
+        {
+          "name": "LifePro Infrared Sauna Blanket",
+          "price": "$293.95",
+          "reason": "This feels like a true lifestyle upgrade. It turns her home into a personal spa, making it perfect for a Mother’s Day gift that prioritizes her relaxation and well-being in a way she likely wouldn’t invest in herself.",
+          "url": "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ",
+          "image_url": "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+        },
+        {
+          "name": "Le Creuset Enameled Cast Iron Dutch Oven (6.5 qt)",
+          "price": "$289.00",
+          "reason": "This is the kind of gift that lasts for years and gets used constantly. It elevates everyday cooking into something more intentional, making it a thoughtful pick if she enjoys time in the kitchen.",
+          "url": "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ",
+          "image_url": "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "Coravin Wine Preservation System",
+          "price": "$279.00",
+          "reason": "This is a subtle but impressive upgrade. It lets her enjoy wine on her terms without committing to the whole bottle, which makes it feel both luxurious and genuinely useful.",
+          "url": "https://www.amazon.com/Coravin-Timeless-Three-Preservation-System/dp/B095BRZYP2",
+          "image_url": "https://m.media-amazon.com/images/I/71wEYWomDBL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "TheraGun Mini (3rd Generation)",
+          "price": "$219.00",
+          "reason": "A high-end self-care tool that actually gets used. It’s perfect for relieving tension and stress, making it a practical luxury she’ll appreciate regularly—not just on the day she opens it.",
+          "url": "https://www.amazon.com/dp/B0DV71V4R7",
+          "image_url": "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "Rodan + Fields Redefine Skincare Regimen",
+          "price": "$199.20",
+          "reason": "Instead of a single product, this gives her a full routine. That makes it feel more complete and intentional, which is what separates a luxury gift from a basic one.",
+          "url": "https://www.amazon.com/Rodan-Fields-Redefine-Appearance-Firmness/dp/B01LHPRZFE",
+          "image_url": "https://m.media-amazon.com/images/I/51AHekjUOkL._SL1500_.jpg"
+        },
+        {
+          "name": "RENPHO Red Light Therapy Face Mask",
+          "price": "$179.00",
+          "reason": "This hits the sweet spot between tech and self-care. It feels modern, high-end, and slightly indulgent in a way that makes it stand out as a gift.",
+          "url": "https://www.amazon.com/dp/B0FJS8ZQWS",
+          "image_url": "https://m.media-amazon.com/images/I/41AUc0hbRmL._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "Barefoot Dreams CozyChic Robe",
+          "price": "$138.00",
+          "reason": "This is everyday luxury done right. It’s something she’ll wear constantly, which makes the higher price feel justified every time she uses it.",
+          "url": "https://www.amazon.com/gp/aw/d/B0FFHS6PXG",
+          "image_url": "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+        },
+        {
+          "name": "Blissy Mulberry Silk Pillowcase",
+          "price": "$82.46",
+          "reason": "A smaller luxury that still feels premium. It improves sleep and feels noticeably different, making it a great add-on or standalone gift.",
+          "url": "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9",
+          "image_url": "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+        },
+        {
+          "name": "Teabloom Complete Glass Tea Set",
+          "price": "$63.00",
+          "reason": "This is more about the experience than the object. It turns a simple routine into something calming and intentional, which makes it feel more thoughtful than its price suggests.",
+          "url": "https://www.amazon.com/dp/B01IFBPX7A",
+          "image_url": "https://m.media-amazon.com/images/I/71imBu7dydL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+        }
+      ]
+    },
+    {
+      "type": "cta"
+    }
+  ]
+}
 ];
 
 // ============================================================================

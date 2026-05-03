@@ -103,60 +103,60 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         type: "picks",
         gifts: [
           {
-            name: "Ember Temperature Control Smart Mug 2",
-            price: "$129.95",
+            name: "Temperature-Controlled Self-Heating Mug, 14oz",
+            price: "$99.00",
             reason: "Between feedings and diaper changes, coffee almost always goes cold. This smart mug keeps her drink at the perfect temperature for hours, ensuring she finally gets to finish a hot cup.",
-            url: "https://www.amazon.com/dp/B07XJK9S59?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/51pI-E-A79L._AC_SL1000_.jpg"
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "Stanley Quencher H2.0 FlowState Tumbler",
-            price: "$45.00",
-            reason: "Hydration is vital for new moms, especially those breastfeeding. This massive, cup-holder-friendly tumbler makes it easy to hit daily water goals with one hand while holding a baby.",
-            url: "https://www.amazon.com/dp/B0BHTN9X8N?tag=cbggiftapp637-20",
+            name: "BOOST Smart Water Bottle with Reminder & Tracker",
+            price: "$46.00",
+            reason: "Hydration is vital for new moms, especially those breastfeeding. This insulated bottle tracks intake and sends reminders, making it easy to hit daily water goals with one hand while holding a baby.",
+            url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61f9Vp-1LmL._AC_SL1500_.jpg"
           },
           {
             name: "Hatch Restore 2 Sunrise Alarm Clock",
-            price: "$199.99",
+            price: "$169.99",
             reason: "Sleep is a precious commodity. The Hatch helps Mom maximize her rest by creating a soothing sleep environment and waking her gently with light rather than a jarring phone alarm.",
-            url: "https://www.amazon.com/dp/B0BC9N5B9G?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/61Nl-m9KlbL._AC_SL1500_.jpg"
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "Lululemon Everywhere Belt Bag",
-            price: "$38.00",
-            reason: "When she's out with a stroller, having her phone and keys easily accessible is a game-changer. This bag is trendy, durable, and keeps her essentials hands-free.",
-            url: "https://shop.lululemon.com/p/bags/Everywhere-Belt-Bag/_/prod8900747",
-            image_url: "https://images.lululemon.com/is/image/lululemon/LU9BYQS_0001_1"
+            name: "Barefoot Dreams CozyChic Adult Robe",
+            price: "$138.00",
+            reason: "After long nights and early mornings, something this soft makes even the 5am feed feel a little more manageable. It's a gift she'd never splurge on for herself but will reach for every single day.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
           },
           {
             name: "Frida Mom Postpartum Recovery Kit",
-            price: "$99.99",
+            price: "$199.99",
             reason: "It might not be glamorous, but it is one of the most useful things a new mom can own. It provides all the physical recovery essentials she needs but might not think to buy for herself.",
-            url: "https://www.amazon.com/dp/B07TKXKWLY?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/81M7-N-3vXL._SL1500_.jpg"
+            url: "https://www.amazon.com/Frida-Mom-Motherload-Hospital-Bag/dp/B0C3K5L66J?dib=eyJ2IjoiMSJ9.Knr9326FIApqUnJC3e36v7s40GyDDgj-fbEYBuOEYl0brL005rPSxPOpGjWJmedkPdajz4XB9_hhjr9bK04REC3x8tm8ykQILMS2R-OpRtN221HKP7VaoMnsmrsnshmTuWsRWslD0UnVTo50LojHs9_VPK8qQQTnlyOwaQbJi_hHMJ4NLIDhoicqVcTEpOHrpPgWntwgVNu1FEYxx8PqL1eYUHpoZ-xV9vesam4jp9FahjiSWEdYENiegSgZnF2p991vM38Q9dRiF8u3jzyfCh7TDEm7FttWkg6h4ILMLfk.Ag7ZKYt0uER9AJyjd4poizIOdLuxDn9B2-faeHxaaC0&dib_tag=se&keywords=Frida%2BMom%2BKit&qid=1777841340&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1d89240dbe9a93c7ca8c554acff052f4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81Aum14ocaL._SL1500_.jpg"
           },
           {
-            name: "Kindle Paperwhite",
-            price: "$149.99",
-            reason: "The Kindle is perfect for one-handed reading during late-night feedings. The adjustable warm light is easy on the eyes and won't wake a sleeping baby.",
-            url: "https://www.amazon.com/dp/B08KTZ8249?tag=cbggiftapp637-20",
+            name: "Amazon Kindle Paperwhite",
+            price: "$159.00",
+            reason: "Perfect for one-handed reading during late-night feeds. The glare-free display and adjustable warm light won't wake a sleeping baby, and weeks of battery life means one less thing to charge constantly.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/51H-x942qfL._AC_SL1000_.jpg"
           },
           {
-            name: "Keurig K-Mini Single Serve Coffee Maker",
-            price: "$99.99",
-            reason: "Space and time are at a premium. This tiny brewer fits anywhere and makes a fresh cup in minutes—ideal for those mornings when she needs caffeine immediately.",
-            url: "https://www.amazon.com/dp/B07GZ6S3KB?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71Yy8I0M1SL._AC_SL1500_.jpg"
+            name: "La Chatelaine Hand Cream Trio",
+            price: "$29.00",
+            reason: "New moms wash their hands constantly — dry, cracked skin comes with the territory. This French-made trio with 20% organic shea butter is small enough to keep on the changing table and luxurious enough to feel like a treat.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
           },
           {
             name: "Loop Quiet Earplugs",
-            price: "$24.95",
+            price: "$34.95",
             reason: "These help dampen overstimulating noise without completely blocking out the sounds she needs to hear. Great for focus or for catching a 20-minute nap while a partner is on baby duty.",
-            url: "https://www.amazon.com/dp/B08MFDT65P?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/51Gv4-WbKxL._AC_SL1200_.jpg"
+            url: "https://www.amazon.com/Loop-Experience-Ear-Plugs-High-Fidelity/dp/B0D4DFQTMJ?dib=eyJ2IjoiMSJ9.XnK1RMTVrUuM9Ct8j60j5MeK-US74wmjOZfzwbfb7qWynEw4kqCNmT-1wNzhMWZLP9qQUzPXQEnUDlmxK-zimBNTe9YOcC91mQn4qo_3jbTViEkqXOAlqjpzmO8no-XBhZvQCZIxMVy1GkGyThmYBiIawhuyheelMgcmzqdzOmV83jznFGsrzTfj3rH7NnZzGferK2t4MlpD5VZWrDc8CI4lT3TOcuYHdXYfbxPnY70S_ZbFg6zTNPPNcHGXYf1JBy0fkESNGgbIotM7cEGa6SHW3PteMoATzJUfbRRNVFk.p_u1gKLuyIcTKdCJscwvtNc92WHJnEdGU64BSe0lo8Y&dib_tag=se&keywords=Loop%2BEarplugs&qid=1777841578&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6cdd273c81eca52583601106cef78cfa&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SL1500_.jpg"
           },
           {
             name: "Bio-Oil Skincare Oil",
@@ -166,11 +166,11 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
           },
           {
-            name: "YETI Camino 35 Carryall Tote Bag",
-            price: "$150.00",
-            reason: "This bag is indestructible and waterproof. It's the ultimate 'everything' bag for a new mom—perfect for park trips, beach days, or just lugging extra supplies in the car.",
-            url: "https://www.amazon.com/dp/B08VMTVQW9?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/81vXvXv7VPL._AC_SL1500_.jpg"
+            name: "Nodpod Weighted Silk Sleep Mask",
+            price: "$68.00",
+            reason: "Sleep is precious and rare in the newborn phase. This strap-free weighted mask blocks light completely and uses gentle pressure to help her drop off faster whenever she gets a window to rest.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
       },

@@ -11,7 +11,7 @@ import {
   ArticleSection,
   getArticleBySlug,
   getRelatedArticles,
-} from "@/app/content/articles";
+} from "@/content/articles";
 
 // =============================================================================
 // TYPES

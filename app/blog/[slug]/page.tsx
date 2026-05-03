@@ -134,14 +134,14 @@ function GiftPickCard({ gift, index }: { gift: Gift; index: number }) {
 
 function CtaSection() {
   return (
-    <div className="my-10 rounded-2xl bg-stone-900 px-8 py-8 text-center">
-      <p className="font-serif text-white text-2xl mb-2">Not sure which one to pick?</p>
-      <p className="text-stone-400 text-sm mb-5 max-w-sm mx-auto leading-relaxed">
-        Answer 4 quick questions and get a recommendation matched to her, not just her interests.
+    <div className="my-10 rounded-2xl bg-amber-50 border border-amber-200 px-8 py-8 text-center">
+      <p className="font-serif text-stone-900 text-2xl mb-2">Not sure which one to pick?</p>
+      <p className="text-stone-500 text-sm mb-5 max-w-sm mx-auto leading-relaxed">
+        Take a short quiz and get a recommendation matched to her specifically.
       </p>
       <Link
         href="/"
-        className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
+        className="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
       >
         Get a personalized pick
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

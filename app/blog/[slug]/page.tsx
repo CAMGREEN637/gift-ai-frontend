@@ -1,24 +1,40 @@
-"use client";
-
-// app/blog/[slug]/ArticlePage.tsx
-// Drop-in editorial article template — The Strategist / Wirecutter aesthetic
-// Uses the stone/amber design system from the main app.
+// app/blog/[slug]/page.tsx
 
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import {
   GiftArticle,
   Gift,
   ArticleSection,
   getArticleBySlug,
   getRelatedArticles,
+  getAllArticles,
 } from "@/content/articles";
 
 // =============================================================================
-// TYPES
+// STATIC PARAMS — pre-renders all article slugs at build time
 // =============================================================================
 
-interface ArticlePageProps {
-  article: GiftArticle;
+export async function generateStaticParams() {
+  return getAllArticles().map((article) => ({ slug: article.slug }));
+}
+
+// =============================================================================
+// METADATA
+// =============================================================================
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const article = getArticleBySlug(params.slug);
+  if (!article) return {};
+  return {
+    title: `${article.title} | Regala`,
+    description: article.excerpt,
+  };
 }
 
 // =============================================================================
@@ -46,7 +62,7 @@ function occasionLabel(occasion: string): string {
 }
 
 // =============================================================================
-// GIFT PICK CARD — editorial list style
+// GIFT PICK CARD
 // =============================================================================
 
 function GiftPickCard({ gift, index }: { gift: Gift; index: number }) {
@@ -55,57 +71,56 @@ function GiftPickCard({ gift, index }: { gift: Gift; index: number }) {
       href={gift.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="gift-pick-card group block"
-      aria-label={`View ${gift.name} on Amazon`}
+      className="group flex gap-5 items-start py-7 border-b border-stone-100 hover:bg-stone-50 rounded-xl px-3 -mx-3 transition-colors"
     >
-      <div className="flex gap-5 items-start py-7 border-b border-stone-100 transition-colors hover:bg-stone-50 rounded-xl px-3 -mx-3">
-        {/* Number */}
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5">
-          <span className="font-serif text-amber-700 text-sm leading-none">{index + 1}</span>
+      {/* Number */}
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5">
+        <span className="font-serif text-amber-700 text-sm leading-none">{index + 1}</span>
+      </div>
+
+      {/* Image */}
+      {gift.image_url && (
+        <div className="flex-shrink-0 w-24 h-24 rounded-xl bg-stone-100 overflow-hidden flex items-center justify-center border border-stone-200 group-hover:border-amber-300 transition-colors">
+          <img
+            src={gift.image_url}
+            alt={gift.name}
+            className="w-full h-full object-contain p-2"
+          />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-start justify-between gap-3 mb-1">
+          <h3 className="font-serif text-stone-900 text-lg leading-snug group-hover:text-amber-800 transition-colors">
+            {gift.name}
+          </h3>
+          <span className="flex-shrink-0 text-stone-900 font-semibold text-base tabular-nums">
+            {gift.price}
+          </span>
         </div>
 
-        {/* Image */}
-        {gift.image_url && (
-          <div className="flex-shrink-0 w-24 h-24 rounded-xl bg-stone-100 overflow-hidden flex items-center justify-center border border-stone-200 group-hover:border-amber-300 transition-colors">
-            <img
-              src={gift.image_url}
-              alt={gift.name}
-              className="w-full h-full object-contain p-2"
-            />
+        {gift.reason && (
+          <div className="mt-2 flex gap-2 items-start">
+            <svg
+              className="flex-shrink-0 mt-0.5 text-amber-500"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+            >
+              <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M7 4v4M7 9.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+            <p className="text-stone-500 text-sm leading-relaxed">{gift.reason}</p>
           </div>
         )}
 
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-3 mb-1">
-            <h3 className="font-serif text-stone-900 text-lg leading-snug group-hover:text-amber-800 transition-colors">
-              {gift.name}
-            </h3>
-            <span className="flex-shrink-0 text-stone-900 font-semibold text-base tabular-nums">
-              {gift.price}
-            </span>
-          </div>
-
-          {/* Why this works */}
-          {gift.reason && (
-            <div className="mt-2 flex gap-2 items-start">
-              <span className="flex-shrink-0 mt-0.5">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-amber-500">
-                  <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M7 4v4M7 9.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-              </span>
-              <p className="text-stone-500 text-sm leading-relaxed">{gift.reason}</p>
-            </div>
-          )}
-
-          {/* CTA inline */}
-          <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 group-hover:text-amber-900 transition-colors">
-            View on Amazon
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </div>
+        <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 group-hover:text-amber-900 transition-colors">
+          View on Amazon
+          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </div>
       </div>
     </a>
@@ -141,9 +156,6 @@ function CtaSection() {
 // =============================================================================
 
 function ArticleSections({ sections }: { sections: ArticleSection[] }) {
-  const picks = sections.filter((s) => s.type === "picks").flatMap((s) => s.gifts ?? []);
-  const pickSectionIndex = sections.findIndex((s) => s.type === "picks");
-
   return (
     <div>
       {sections.map((section, i) => {
@@ -165,7 +177,6 @@ function ArticleSections({ sections }: { sections: ArticleSection[] }) {
         if (section.type === "picks" && section.gifts) {
           return (
             <div key={i} className="mb-4">
-              {/* Section label */}
               <div className="flex items-center gap-3 mb-1">
                 <span className="text-xs font-semibold uppercase tracking-widest text-amber-600">
                   Our Picks
@@ -224,58 +235,48 @@ function RelatedArticles({ articles }: { articles: GiftArticle[] }) {
 }
 
 // =============================================================================
-// ARTICLE NAV (top bar)
+// PAGE — DEFAULT EXPORT (required by Next.js)
 // =============================================================================
 
-function ArticleNav() {
-  return (
-    <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-          Regala
-        </Link>
-        <div className="flex items-center gap-4">
-          <Link href="/blog" className="text-sm font-medium text-stone-400 hover:text-stone-700 transition-colors">
-            ← Gift Guides
-          </Link>
-          <Link
-            href="/"
-            className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all"
-          >
-            Get a pick
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
-}
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const article = getArticleBySlug(params.slug);
 
-// =============================================================================
-// ARTICLE PAGE — MAIN COMPONENT
-// =============================================================================
+  if (!article) notFound();
 
-export default function ArticlePage({ article }: ArticlePageProps) {
   const related = getRelatedArticles(article);
 
   return (
-    <>
+    <div className="min-h-screen bg-stone-50">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-        body { font-family: 'DM Sans', sans-serif; background: #fafaf9; }
+        body { font-family: 'DM Sans', sans-serif; }
         .font-serif { font-family: 'DM Serif Display', serif !important; }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-up { animation: fadeUp 0.55s ease both; }
-        .fade-up-2 { animation: fadeUp 0.55s 0.1s ease both; }
-        .fade-up-3 { animation: fadeUp 0.55s 0.2s ease both; }
       `}</style>
 
-      <ArticleNav />
+      {/* Nav */}
+      <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+          <Link href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
+            Regala
+          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/blog" className="text-sm font-medium text-stone-400 hover:text-stone-700 transition-colors">
+              ← Gift Guides
+            </Link>
+            <Link
+              href="/"
+              className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all"
+            >
+              Get a pick
+            </Link>
+          </div>
+        </div>
+      </nav>
 
       <main className="max-w-3xl mx-auto px-6 py-12">
 
-        {/* ── ARTICLE HEADER ── */}
-        <header className="mb-10 fade-up">
-          {/* Eyebrow */}
+        {/* Article header */}
+        <header className="mb-10">
           <div className="flex items-center gap-2.5 mb-4">
             <Link
               href={`/blog?occasion=${article.occasion}`}
@@ -290,19 +291,18 @@ export default function ArticlePage({ article }: ArticlePageProps) {
             ))}
           </div>
 
-          {/* Title */}
           <h1 className="font-serif text-stone-900 text-4xl sm:text-5xl leading-tight tracking-tight mb-4">
             {article.title}
           </h1>
 
-          {/* Excerpt / dek */}
           <p className="text-stone-500 text-lg leading-relaxed max-w-xl mb-5">
             {article.excerpt}
           </p>
 
-          {/* Byline */}
           <div className="flex items-center gap-3 text-xs text-stone-400">
-            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-semibold text-sm">R</span>
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-semibold text-sm">
+              R
+            </span>
             <span>
               By <span className="text-stone-600 font-medium">Regala Editors</span>
             </span>
@@ -313,23 +313,20 @@ export default function ArticlePage({ article }: ArticlePageProps) {
           </div>
         </header>
 
-        {/* ── DIVIDER ── */}
-        <div className="h-px bg-stone-200 mb-10 fade-up-2" />
+        <div className="h-px bg-stone-200 mb-10" />
 
-        {/* ── BODY ── */}
-        <div className="fade-up-3">
-          <ArticleSections sections={article.sections} />
-        </div>
+        {/* Article body */}
+        <ArticleSections sections={article.sections} />
 
-        {/* ── RELATED ARTICLES ── */}
+        {/* Related articles */}
         <RelatedArticles articles={related} />
 
-        {/* ── AFFILIATE DISCLAIMER ── */}
+        {/* Affiliate disclaimer */}
         <p className="mt-10 text-xs text-stone-300 text-center leading-relaxed">
           Regala earns a small commission when you buy through our links, at no extra cost to you.
           We only recommend products we'd actually suggest.
         </p>
       </main>
-    </>
+    </div>
   );
 }

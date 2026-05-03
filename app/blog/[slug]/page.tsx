@@ -1,425 +1,335 @@
+"use client";
+
+// app/blog/[slug]/ArticlePage.tsx
+// Drop-in editorial article template — The Strategist / Wirecutter aesthetic
+// Uses the stone/amber design system from the main app.
+
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getAllArticles, getArticleBySlug } from "@/content/articles";
-import type { GiftArticle as Article, Gift as GiftPick } from "@/content/articles";
-import type { Metadata } from "next";
+import {
+  GiftArticle,
+  Gift,
+  ArticleSection,
+  getArticleBySlug,
+  getRelatedArticles,
+} from "@/app/content/articles";
 
 // =============================================================================
-// STATIC PARAMS — pre-render all articles at build time
+// TYPES
 // =============================================================================
 
-export function generateStaticParams() {
-  return getAllArticles().map((article) => ({ slug: article.slug }));
+interface ArticlePageProps {
+  article: GiftArticle;
 }
 
 // =============================================================================
-// METADATA
+// HELPERS
 // =============================================================================
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
-  if (!article) return {};
-  const hasParenthetical = article.title.includes("(");
-  const seoTitle = hasParenthetical
-    ? `${article.title} | Regala`
-    : `${article.title} (That Actually Feel Thoughtful) | Regala`;
-  return {
-    title: seoTitle,
-    description: article.excerpt,
-    openGraph: {
-      title: article.title,
-      description: article.excerpt,
-      type: "article",
-      publishedTime: article.publishedAt,
-      siteName: "Regala",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
-    },
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+function occasionLabel(occasion: string): string {
+  const map: Record<string, string> = {
+    birthday: "Birthday",
+    valentines: "Valentine's Day",
+    christmas: "Christmas",
+    anniversary: "Anniversary",
+    mothers_day: "Mother's Day",
+    "mothers-day": "Mother's Day",
   };
+  return map[occasion] ?? occasion.replace(/_/g, " ");
 }
 
 // =============================================================================
-// OCCASION LABELS
+// GIFT PICK CARD — editorial list style
 // =============================================================================
 
-const OCCASION_LABELS: Record<string, string> = {
-  birthday: "Birthday",
-  valentines: "Valentine's Day",
-  anniversary: "Anniversary",
-  christmas: "Christmas",
-  "mothers-day": "Mother's Day",
-  "just-because": "Just Because",
-};
-
-// =============================================================================
-// GIFT PICK CARD — stacked layout with full-width image
-// =============================================================================
-
-function GiftPickCard({ gift }: { gift: GiftPick }) {
+function GiftPickCard({ gift, index }: { gift: Gift; index: number }) {
   return (
-    <div className="bg-white border border-stone-100 rounded-2xl overflow-hidden mb-4">
-      {gift.image_url && (
-        <div className="bg-stone-50 flex items-center justify-center p-6 border-b border-stone-100">
-          <img
-            src={gift.image_url}
-            alt={gift.name}
-            className="max-h-64 w-auto object-contain"
-          />
+    <a
+      href={gift.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="gift-pick-card group block"
+      aria-label={`View ${gift.name} on Amazon`}
+    >
+      <div className="flex gap-5 items-start py-7 border-b border-stone-100 transition-colors hover:bg-stone-50 rounded-xl px-3 -mx-3">
+        {/* Number */}
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5">
+          <span className="font-serif text-amber-700 text-sm leading-none">{index + 1}</span>
         </div>
-      )}
-      <div className="p-5">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-serif text-lg text-stone-900">{gift.name}</h3>
-          <span className="text-stone-600 font-semibold text-sm shrink-0 ml-4">
-            {gift.price}
-          </span>
-        </div>
-        <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5 mb-3">
-          <p className="text-xs font-semibold text-amber-700 mb-0.5 uppercase tracking-widest">
-            Why this works
-          </p>
-          <p className="text-xs text-amber-700 leading-relaxed">{gift.reason}</p>
-        </div>
-        <a
-          href={gift.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-medium text-amber-600 hover:text-amber-700 hover:underline"
-        >
-          View on Amazon →
-        </a>
-      </div>
-    </div>
-  );
-}
 
-// =============================================================================
-// GIFT PICKS GROUP — inline CTA only after the first card
-// =============================================================================
+        {/* Image */}
+        {gift.image_url && (
+          <div className="flex-shrink-0 w-24 h-24 rounded-xl bg-stone-100 overflow-hidden flex items-center justify-center border border-stone-200 group-hover:border-amber-300 transition-colors">
+            <img
+              src={gift.image_url}
+              alt={gift.name}
+              className="w-full h-full object-contain p-2"
+            />
+          </div>
+        )}
 
-function GiftPicksGroup({
-  gifts,
-  quizUrl,
-}: {
-  gifts: GiftPick[];
-  quizUrl: string;
-}) {
-  return (
-    <div className="my-6">
-      {gifts.map((gift, idx) => (
-        <div key={idx}>
-          <GiftPickCard gift={gift} />
-          {idx === 0 && (
-            <div className="text-right mt-1 mb-4">
-              <Link
-                href={quizUrl}
-                className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
-              >
-                Want picks tailored to her? Take the quiz →
-              </Link>
+        {/* Content */}
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-3 mb-1">
+            <h3 className="font-serif text-stone-900 text-lg leading-snug group-hover:text-amber-800 transition-colors">
+              {gift.name}
+            </h3>
+            <span className="flex-shrink-0 text-stone-900 font-semibold text-base tabular-nums">
+              {gift.price}
+            </span>
+          </div>
+
+          {/* Why this works */}
+          {gift.reason && (
+            <div className="mt-2 flex gap-2 items-start">
+              <span className="flex-shrink-0 mt-0.5">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-amber-500">
+                  <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M7 4v4M7 9.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </span>
+              <p className="text-stone-500 text-sm leading-relaxed">{gift.reason}</p>
             </div>
           )}
+
+          {/* CTA inline */}
+          <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 group-hover:text-amber-900 transition-colors">
+            View on Amazon
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
         </div>
-      ))}
-    </div>
+      </div>
+    </a>
   );
 }
 
 // =============================================================================
-// CTA BLOCK — single instance at bottom of article
+// CTA SECTION
 // =============================================================================
 
-function CtaBlock({ article }: { article: Article }) {
-  const quizUrl = `/?occasion=${article.occasion}&interests=${article.interests.join(",")}`;
+function CtaSection() {
   return (
-    <div className="bg-amber-50 border border-amber-200 rounded-3xl p-8 my-10 text-center">
-      <h2 className="font-serif text-2xl text-stone-900 mb-2">
-        Still not sure? We'll figure it out together.
-      </h2>
-      <p className="text-stone-500 text-sm mt-2 mb-6 max-w-sm mx-auto">
-        Take the 2-minute quiz and get recommendations matched to her
-        interests, your relationship, and the occasion.
+    <div className="my-10 rounded-2xl bg-stone-900 px-8 py-8 text-center">
+      <p className="font-serif text-white text-2xl mb-2">Not sure which one to pick?</p>
+      <p className="text-stone-400 text-sm mb-5 max-w-sm mx-auto leading-relaxed">
+        Answer 4 quick questions and get a recommendation matched to her, not just her interests.
       </p>
       <Link
-        href={quizUrl}
-        className="inline-block px-8 py-4 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm text-base"
+        href="/"
+        className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
       >
-        Take the quiz →
+        Get a personalized pick
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </Link>
     </div>
   );
 }
 
 // =============================================================================
-// HOW WE CHOOSE THESE
+// SECTION RENDERER
 // =============================================================================
 
-function HowWeChoose() {
+function ArticleSections({ sections }: { sections: ArticleSection[] }) {
+  const picks = sections.filter((s) => s.type === "picks").flatMap((s) => s.gifts ?? []);
+  const pickSectionIndex = sections.findIndex((s) => s.type === "picks");
+
   return (
-    <div className="bg-stone-50 border border-stone-100 rounded-3xl p-8 my-10">
-      <h3 className="font-serif text-xl text-stone-900 mb-4">
-        How we choose these gifts
-      </h3>
-      <p className="text-stone-600 text-sm leading-relaxed mb-4">
-        We don't just list popular products. Every recommendation is scored
-        across multiple dimensions — her specific interests, the emotional
-        register of the occasion, where your relationship is, and your
-        budget — then ranked by how well each gift fits the full picture.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-        <div className="flex items-start gap-3">
-          <span className="text-lg mt-0.5">🎯</span>
-          <div>
-            <p className="text-sm font-semibold text-stone-800">
-              Interest matching
-            </p>
-            <p className="text-xs text-stone-500 mt-0.5">
-              Gifts ranked by how well they align with what she actually
-              cares about
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-3">
-          <span className="text-lg mt-0.5">❤️</span>
-          <div>
-            <p className="text-sm font-semibold text-stone-800">
-              Occasion awareness
-            </p>
-            <p className="text-xs text-stone-500 mt-0.5">
-              A Valentine's gift should feel different from a birthday gift
-              — we calibrate for that
-            </p>
-          </div>
-        </div>
-        <div className="flex items-start gap-3">
-          <span className="text-lg mt-0.5">🧭</span>
-          <div>
-            <p className="text-sm font-semibold text-stone-800">
-              Stage sensitivity
-            </p>
-            <p className="text-xs text-stone-500 mt-0.5">
-              What works for a new relationship is different from what
-              works for a marriage
-            </p>
-          </div>
-        </div>
-      </div>
+    <div>
+      {sections.map((section, i) => {
+        if (section.type === "text") {
+          return (
+            <div key={i} className="mb-8">
+              {section.heading && (
+                <h2 className="font-serif text-stone-900 text-2xl mb-3 leading-tight">
+                  {section.heading}
+                </h2>
+              )}
+              {section.body && (
+                <p className="text-stone-600 leading-relaxed text-[1.0625rem]">{section.body}</p>
+              )}
+            </div>
+          );
+        }
+
+        if (section.type === "picks" && section.gifts) {
+          return (
+            <div key={i} className="mb-4">
+              {/* Section label */}
+              <div className="flex items-center gap-3 mb-1">
+                <span className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+                  Our Picks
+                </span>
+                <div className="flex-1 h-px bg-amber-100" />
+              </div>
+              <div>
+                {section.gifts.map((gift, gi) => (
+                  <GiftPickCard key={gi} gift={gift} index={gi} />
+                ))}
+              </div>
+            </div>
+          );
+        }
+
+        if (section.type === "cta") {
+          return <CtaSection key={i} />;
+        }
+
+        return null;
+      })}
     </div>
   );
 }
 
 // =============================================================================
-// PAGE
+// RELATED ARTICLES
 // =============================================================================
 
-export default async function ArticlePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
-  if (!article) notFound();
+function RelatedArticles({ articles }: { articles: GiftArticle[] }) {
+  if (!articles.length) return null;
+  return (
+    <aside className="mt-14 pt-10 border-t border-stone-100">
+      <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-5">
+        More Gift Guides
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {articles.slice(0, 4).map((a) => (
+          <Link
+            key={a.slug}
+            href={`/blog/${a.slug}`}
+            className="group block rounded-xl border border-stone-100 bg-white hover:border-amber-200 hover:shadow-sm transition-all px-5 py-4"
+          >
+            <span className="text-xs font-medium text-amber-600 uppercase tracking-wide">
+              {occasionLabel(a.occasion)}
+            </span>
+            <p className="font-serif text-stone-900 text-base leading-snug mt-1 group-hover:text-amber-800 transition-colors">
+              {a.title}
+            </p>
+            <p className="text-stone-400 text-xs mt-1.5">{a.readTime}</p>
+          </Link>
+        ))}
+      </div>
+    </aside>
+  );
+}
 
-  const quizUrl = `/?occasion=${article.occasion}&interests=${article.interests.join(",")}`;
+// =============================================================================
+// ARTICLE NAV (top bar)
+// =============================================================================
 
-  // Hook paragraph — auto-generated from article metadata
-  const hookOccasionLabels: Record<string, string> = {
-    birthday: "her birthday",
-    valentines: "Valentine's Day",
-    anniversary: "your anniversary",
-    christmas: "Christmas",
-    mothers_day: "Mother's Day",
-    just_because: "a surprise gift",
-    apology: "an apology",
-  };
-  const hookOccasion = hookOccasionLabels[article.occasion] || "the occasion";
-  const hookInterest = article.interests[0] || "her interests";
+function ArticleNav() {
+  return (
+    <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
+      <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+        <Link href="/" className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
+          Regala
+        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/blog" className="text-sm font-medium text-stone-400 hover:text-stone-700 transition-colors">
+            ← Gift Guides
+          </Link>
+          <Link
+            href="/"
+            className="px-4 py-1.5 text-sm font-semibold bg-stone-900 text-white rounded-xl hover:bg-stone-800 transition-all"
+          >
+            Get a pick
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
-  // Price range — computed from all gift data
-  const allGifts = article.sections
-    .filter((s) => s.type === "picks")
-    .flatMap((s) => s.gifts ?? []);
-  const prices = allGifts
-    .map((g) => parseFloat(g.price.replace(/[$,]/g, "")))
-    .filter((p) => !isNaN(p));
-  const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
-  const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+// =============================================================================
+// ARTICLE PAGE — MAIN COMPONENT
+// =============================================================================
 
-  // Partition sections by type
-  const textSections = article.sections.filter((s) => s.type === "text");
-  const picksSections = article.sections.filter((s) => s.type === "picks");
-
-  // Related articles — same occasion or overlapping interests
-  const relatedArticles = getAllArticles()
-    .filter((a) => a.slug !== article.slug)
-    .filter(
-      (a) =>
-        a.occasion === article.occasion ||
-        a.interests.some((i) => article.interests.includes(i))
-    )
-    .slice(0, 3);
+export default function ArticlePage({ article }: ArticlePageProps) {
+  const related = getRelatedArticles(article);
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap');
-        body { font-family: 'DM Sans', sans-serif; }
+        body { font-family: 'DM Sans', sans-serif; background: #fafaf9; }
         .font-serif { font-family: 'DM Serif Display', serif !important; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        .fade-up { animation: fadeUp 0.55s ease both; }
+        .fade-up-2 { animation: fadeUp 0.55s 0.1s ease both; }
+        .fade-up-3 { animation: fadeUp 0.55s 0.2s ease both; }
       `}</style>
 
-      {/* Nav */}
-      <nav className="border-b border-stone-100 bg-white/90 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-xl text-stone-900 hover:text-amber-700 transition-colors">
-              Regala
-            </span>
-            <span className="text-stone-400 text-xs font-medium hidden sm:inline">
-              gift advisor
-            </span>
-          </Link>
-          <div className="flex items-center gap-2">
+      <ArticleNav />
+
+      <main className="max-w-3xl mx-auto px-6 py-12">
+
+        {/* ── ARTICLE HEADER ── */}
+        <header className="mb-10 fade-up">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-2.5 mb-4">
             <Link
-              href="/"
-              className="px-4 py-1.5 text-sm font-medium text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-xl transition-all"
+              href={`/blog?occasion=${article.occasion}`}
+              className="text-xs font-semibold uppercase tracking-widest text-amber-600 hover:text-amber-800 transition-colors"
             >
-              Find gifts
+              {occasionLabel(article.occasion)}
             </Link>
+            {article.interests.map((tag) => (
+              <span key={tag} className="text-xs font-medium text-stone-400 capitalize">
+                · {tag.replace(/_/g, " ")}
+              </span>
+            ))}
           </div>
-        </div>
-      </nav>
 
-      {/* Article */}
-      <div className="max-w-3xl mx-auto px-6 py-12">
-        {/* Back link */}
-        <Link
-          href="/blog"
-          className="text-sm text-stone-400 hover:text-stone-600 transition-colors mb-8 inline-block"
-        >
-          ← Back to Gift Guide
-        </Link>
+          {/* Title */}
+          <h1 className="font-serif text-stone-900 text-4xl sm:text-5xl leading-tight tracking-tight mb-4">
+            {article.title}
+          </h1>
 
-        {/* 1. Occasion badge */}
-        <div className="mt-6 mb-4">
-          <span className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">
-            {OCCASION_LABELS[article.occasion] ?? article.occasion}
-          </span>
-        </div>
+          {/* Excerpt / dek */}
+          <p className="text-stone-500 text-lg leading-relaxed max-w-xl mb-5">
+            {article.excerpt}
+          </p>
 
-        {/* 1. Title */}
-        <h1 className="font-serif text-4xl text-stone-900 tracking-tight mb-4 leading-tight">
-          {article.title}
-        </h1>
-
-        {/* 1. Meta line */}
-        <p className="text-xs text-stone-400 mb-8">{article.readTime}</p>
-
-        {/* 2. Hook paragraph — auto-generated */}
-        <p className="text-stone-600 text-base leading-relaxed mb-8">
-          {`You know she's into ${hookInterest} — but buying ${
-            hookOccasion === "a surprise gift" || hookOccasion === "an apology"
-              ? hookOccasion
-              : `a ${hookOccasion} gift`
-          } around that interest is harder than it sounds. The obvious picks feel lazy, the obscure ones feel risky. These are the ones that actually land.`}
-        </p>
-
-        {/* 3. Price range context */}
-        {prices.length > 0 && (
-          <div className="flex items-center gap-3 mb-8 text-xs text-stone-400">
-            <span>{allGifts.length} picks</span>
-            <span className="text-stone-200">·</span>
+          {/* Byline */}
+          <div className="flex items-center gap-3 text-xs text-stone-400">
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-semibold text-sm">R</span>
             <span>
-              ${minPrice.toFixed(0)} – ${maxPrice.toFixed(0)}
+              By <span className="text-stone-600 font-medium">Regala Editors</span>
             </span>
+            <span>·</span>
+            <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
+            <span>·</span>
+            <span>{article.readTime}</span>
           </div>
-        )}
+        </header>
 
-        {/* 4. Text sections — editorial content before picks */}
-        {textSections.map((section, index) => (
-          <div key={index}>
-            {section.heading && (
-              <h2 className="font-serif text-2xl text-stone-900 mt-10 mb-4">
-                {section.heading}
-              </h2>
-            )}
-            <p className="text-stone-600 text-base leading-relaxed mb-6">
-              {section.body}
-            </p>
-          </div>
-        ))}
+        {/* ── DIVIDER ── */}
+        <div className="h-px bg-stone-200 mb-10 fade-up-2" />
 
-        {/* 5. "Our picks" subheading */}
-        {picksSections.length > 0 && (
-          <h2 className="font-serif text-2xl text-stone-900 mb-6 mt-10">
-            Our picks
-          </h2>
-        )}
-
-        {/* 6. Gift pick cards */}
-        {picksSections.map((section, index) => (
-          <GiftPicksGroup
-            key={index}
-            gifts={section.gifts ?? []}
-            quizUrl={quizUrl}
-          />
-        ))}
-
-        {/* 7 & 8. How we choose + single CTA block */}
-        <HowWeChoose />
-        <CtaBlock article={article} />
-
-        {/* 9. Related guides */}
-        {relatedArticles.length > 0 && (
-          <div className="mt-16 pt-10 border-t border-stone-200">
-            <h3 className="font-serif text-xl text-stone-900 mb-6">
-              Related guides
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {relatedArticles.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={`/blog/${related.slug}`}
-                  className="bg-white border border-stone-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all group"
-                >
-                  <p className="text-xs text-amber-600 font-semibold uppercase tracking-widest mb-2">
-                    {OCCASION_LABELS[related.occasion] ?? related.occasion}
-                  </p>
-                  <p className="font-serif text-base text-stone-900 group-hover:text-amber-700 transition-colors leading-snug">
-                    {related.title}
-                  </p>
-                  <p className="text-xs text-stone-400 mt-2">
-                    {related.readTime}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-stone-900 text-stone-500 mt-20">
-        <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© {new Date().getFullYear()} Regala. All rights reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-          </div>
+        {/* ── BODY ── */}
+        <div className="fade-up-3">
+          <ArticleSections sections={article.sections} />
         </div>
-      </footer>
-    </div>
+
+        {/* ── RELATED ARTICLES ── */}
+        <RelatedArticles articles={related} />
+
+        {/* ── AFFILIATE DISCLAIMER ── */}
+        <p className="mt-10 text-xs text-stone-300 text-center leading-relaxed">
+          Regala earns a small commission when you buy through our links, at no extra cost to you.
+          We only recommend products we'd actually suggest.
+        </p>
+      </main>
+    </>
   );
 }

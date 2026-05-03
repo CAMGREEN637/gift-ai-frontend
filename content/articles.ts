@@ -142,14 +142,14 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$159.00",
             reason: "Perfect for one-handed reading during late-night feeds. The glare-free display and adjustable warm light won't wake a sleeping baby, and weeks of battery life means one less thing to charge constantly.",
             url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/51H-x942qfL._AC_SL1000_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SL1500_.jpg"
           },
           {
             name: "La Chatelaine Hand Cream Trio",
             price: "$29.00",
             reason: "New moms wash their hands constantly — dry, cracked skin comes with the territory. This French-made trio with 20% organic shea butter is small enough to keep on the changing table and luxurious enough to feel like a treat.",
             url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/8171z4-KddL._SL1500_.jpg"
           },
           {
             name: "Loop Quiet Earplugs",
@@ -159,11 +159,11 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             image_url: "https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SL1500_.jpg"
           },
           {
-            name: "Bio-Oil Skincare Oil",
-            price: "$13.00",
-            reason: "A simple, highly effective staple for postpartum skincare. It's a small but meaningful way to help Mom feel like herself again during her daily routine.",
-            url: "https://www.amazon.com/dp/B004E9S69A?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+            name: "ASAKUKI Smart WiFi Essential Oil Diffuser",
+            price: "$32.00",
+            reason: "A calm environment helps everyone sleep better — including the baby. This smart diffuser can be scheduled from her phone, so she can set a winding-down routine without having to get up to fiddle with it.",
+            url: "https://www.amazon.com/dp/B07DH4ZSDF?ascsubtag=%5Bartid%7C10049.g.69275335%5Bsrc%7Cmgu_bg_cos_d_bm_comm_org_us_g13602855%5Buuid%7C964c00cb990844d49e2f93c4693d1a80&asc_source=bing&asc_campaign=mgu_bg_cos_d_bm_comm_org_us_g13602855&asc_refurl=https%3A%2F%2Fwww.cosmopolitan.com%2Fstyle-beauty%2Ffashion%2Fg69275335%2Fgift-ideas-for-women%2F&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18301597d6f4c3e886f68ef830b08d4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Nodpod Weighted Silk Sleep Mask",

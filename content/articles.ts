@@ -539,6 +539,106 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+{
+    slug: "mothers-day-gifts-single-moms",
+    title: "Mother's Day Gifts for the Single Mom Who Does It All",
+    excerpt: "She handles everything on her own — the school runs, the late nights, the worry, the love. These gifts are for the single mom who never makes time for herself.",
+    occasion: "mothers_day",
+    interests: ["wellness", "skincare", "home_decor", "reading"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-03",
+    relatedArticles: [
+      "top-relaxation-gifts-mothers-day",
+      "mothers-day-gifts-luxury",
+      "practical-mothers-day-gifts-new-moms"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The hardest job with the least backup",
+        body: "Single moms don't get a tag team. There's no one to hand off to when she's exhausted, no one to take the morning shift, no one reminding her to take care of herself. She gets it done because she has to — and that means her own needs almost always end up last on the list. The best gifts for a single mom aren't just nice things. They're permission slips. Permission to rest, to be still, to do something that's entirely for her."
+      },
+      {
+        type: "text",
+        heading: "What actually lands",
+        body: "Skip anything that creates more work. The best picks for a single mom are things that reduce friction, require nothing from her, or carve out a moment of quiet in a life that rarely has one. Practical self-care beats decorative every time."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
+            price: "$23.00",
+            reason: "A candle is one of the simplest ways to signal the end of the day. Eight different scents in a vintage amber jar set means she has something to reach for all year — not just today. It's small, thoughtful, and makes her space feel like hers.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Nextmug Temperature-Controlled Self-Heating Coffee Mug",
+            price: "$99.00",
+            reason: "Single moms reheat their coffee more than anyone on earth. This mug keeps her drink at the exact temperature she set — for hours — so no matter how many times she gets interrupted, she comes back to a hot cup. It sounds simple because it is, and that's exactly the point.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Mo Cuishle Shiatsu Neck & Back Massager with Heat",
+            price: "$45.00",
+            reason: "She's carrying a lot — literally and figuratively. This deep-tissue massager with heat works on her neck, shoulders, and back without needing anyone else in the room. She can use it on the couch after the kids are in bed. No appointment, no babysitter required.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Papier Daily Wellness Journal",
+            price: "$32.00",
+            reason: "Single moms spend so much energy managing everyone else's emotional world that their own often goes unexamined. This guided journal creates a low-pressure ritual — a few minutes each day to track how she's actually doing. It's a gift that looks inward, which is exactly what she rarely gets to do.",
+            url: "https://www.amazon.com/Papier-Wellness-Journal-Intentions-Feel-Good/dp/B0DHVC4W35?crid=1I4PQHXSSLO7U&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.1Qc_Hq9L29Jyz8h7SqYqWc3xviuBBu4uM3-jwv_WuKxpCUGjgwm9RnY-TBtXCjuvRsE1gZrQyXxSBvJ1Y32ynPWITk13Y_k1576mBnVZYnJxl6iz6PEovWPiiKRIYztjcZ_CPsBSsxzW7AOFotbtBqwY0JhBnJ0CKItuHwd9avTqE5xWaOEMJjAgjhx1UxpDzPapFFbAnu2_CjLHlnUeJ5_MV0Uw68bKmyqU19cyzCc.no6nq2ieliPfIgPTNmt_vltI9DikasdkhxB0qJIvX_w&dib_tag=se&keywords=Wellness%2Bjournal&qid=1775431859&s=samedaystore&sprefix=wellness%2Bjournal%2Csamedaystore%2C188&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=775690df25fa59a6197605255056c912&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51e2zJ60pPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Amazon Kindle Paperwhite",
+            price: "$159.00",
+            reason: "Reading is one of the few things that is truly, completely hers. No one needs anything from her while she's reading. The Kindle Paperwhite is glare-free, holds thousands of books, and has weeks of battery life — so she can pick it up and disappear into something for twenty minutes whenever she gets the chance.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          },
+          {
+            name: "LEVOIT Air Purifier for Home – Covers 1073 sq ft",
+            price: "$99.00",
+            reason: "A cleaner home environment is a gift that keeps working after Mother's Day is over. This LEVOIT runs quietly in the background, removing allergens, dust, and odors across a large space. It's a practical upgrade she'd probably never prioritize for herself, which is exactly why it makes a great gift.",
+            url: "https://www.amazon.com/dp/B07VVK39F7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71t-9BTIg9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Blissy 100% Mulberry Silk Pillowcase",
+            price: "$82.46",
+            reason: "She's not getting enough sleep — that's just the reality. A silk pillowcase won't fix that, but it makes the sleep she does get feel more restorative. Better for her skin and hair, noticeably cooler, and genuinely luxurious in a way she'd never justify buying for herself.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Barefoot Dreams CozyChic Adult Robe",
+            price: "$138.00",
+            reason: "The robe she should have had years ago. Single moms move fast from the moment they wake up — this is something that slows the morning down, even just a little. Incredibly soft, lasting quality, and the kind of everyday luxury that makes her feel like she's being taken care of for once.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "LifePro Infrared Sauna Blanket",
+            price: "$293.95",
+            reason: "If you want to give her something she will genuinely never buy for herself, this is it. An infrared sauna blanket turns her bedroom into a personal spa — 30 minutes of heat therapy that relieves muscle tension, reduces stress, and forces her to lie still and do absolutely nothing. For a single mom, that last part alone might be the most valuable thing of all.",
+            url: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ?content-id=amzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095%3Aamzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095&crid=1AJN8MOV2F7HQ&cv_ct_cx=Weighted%2Bheated%2Bblanket&keywords=Weighted%2Bheated%2Bblanket&pd_rd_i=B0BX7HLCYQ&pd_rd_r=af11a619-c016-41f2-80f0-9ac0a51e57df&pd_rd_w=KEL4v&pd_rd_wg=07rVc&pf_rd_p=141f5c48-2844-433f-b731-f8ecc97a5095&pf_rd_r=9TSAQ9DSX1BB9PNCNGRQ&qid=1774736436&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bheated%2Bblanket%2Caps%2C270&sr=1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&aref=SGiR41tniM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c23aa71ec7e1c3167017f6abfec16408&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing worth saying",
+        body: "Whatever you give her, pair it with something she can't buy: time. Offer to take the kids for an afternoon. Show up with groceries. Handle something on her list without being asked. The gift is the gesture — but the real thing she needs most is someone in her corner."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

@@ -639,6 +639,108 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+  {
+    slug: "mothers-day-gifts-under-50",
+    title: "Mother's Day Gifts Under $50 That Still Feel Thoughtful",
+    excerpt: "You don't need to spend a lot to give something meaningful. These Mother's Day picks all come in under $50 — and none of them feel like it.",
+    occasion: "mothers_day",
+    interests: ["wellness", "skincare", "home_decor", "fitness", "gardening"],
+    readTime: "4 min read",
+    publishedAt: "2026-05-03",
+    relatedArticles: [
+      "mothers-day-gifts-luxury",
+      "top-relaxation-gifts-mothers-day",
+      "mothers-day-gifts-single-moms"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Budget doesn't have to mean generic",
+        body: "The worst under-$50 gifts aren't cheap — they're thoughtless. A $12 candle that says 'World's Best Mom' feels lazy. A $12 jade roller feels considered. The difference isn't the price, it's whether you thought about who she actually is. Every pick on this list is under $50, in stock, and specific enough to feel like it was chosen for her — not grabbed last minute."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "BAIMEI Jade Face Roller & Gua Sha Set",
+            price: "$13.00",
+            reason: "One of the best value-to-thoughtfulness ratios on this list. A jade roller and gua sha set is the kind of gift that feels indulgent and intentional — she probably wants one but hasn't bought it for herself. Pair it with a note about taking five minutes for herself every morning and it lands even better.",
+            url: "https://www.amazon.com/BAIMEI-Face-Roller-Gua-Sha/dp/B07ZKWZMS4?crid=3JCWV8KSX1WMJ&dib=eyJ2IjoiMSJ9.UuMXSSGnXPTQOiRoWuCk6r0LoOxoiULBAfJrZJ3RCq44nnWwv7EFgpzHAqvnL9N1IfhvRscEKGI7K-AE5k6LQioVLfqExlXpJJJWVG3lcvVT5jQmA1yHzAaMmVRf1ghTU0Q4yUPJV2RBxVUe4PFc-6wVZyQ3wYOO-2HsE9LYKfvFgmTzGhB5IJxrfC4GnHmvhk6FxiMzQHxwCHVMkbz2b09GxRWbJN0RLWF0fhv4yw.4LPz1Cqv6hJ2XyxXbSB62KBcBsYqERfJFQ5w8r3WBfcs&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775774869&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Caps%2C235&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50b8659a60a8a6b4e9f6fa2ece6fe8bb&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61fNqnFNLzL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
+            price: "$23.00",
+            reason: "Eight candles in vintage amber jars, each a different scent. It feels like a curated gift set, not a single impulse buy — and the variety means she's covered for every mood for months. Burn time, scent throw, and packaging are all genuinely good for the price.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "La Chatelaine Hand Cream Trio Tin",
+            price: "$29.00",
+            reason: "This French-made hand cream set comes in a beautiful tin with three different scents — gardenia, rose, and citrus. Twenty percent organic shea butter, no harsh chemicals, and packaging that actually looks like a gift. It's the kind of thing she'll keep on her nightstand and reach for every night.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+          },
+          {
+            name: "Lure Essentials Silicone Cupping Set",
+            price: "$29.00",
+            reason: "Cupping therapy at home sounds intimidating until she tries it — then it becomes a weekly ritual. This silicone set works on the neck, back, legs, and face, and requires no heat or special equipment. It's the kind of self-care gift that feels a little unexpected and a lot more useful than another bath set.",
+            url: "https://www.amazon.com/Lure-Essentials-Silicone-Cupping-Therapy/dp/B01LZIQFPJ?crid=1GXMJXNLJMFZL&dib=eyJ2IjoiMSJ9.f4kBrOLhYOXPW0KS-mA7Hv0rr7u5HhFSgSGCzxnSdF3HvCE26-3kTLmW0MbQIMaVFNL7pDFVXWmLmV0LGTY84IlHX0U3JHJrV0-LmEUGDR0K4IgdriJMiUJiKFqQMNDfpDmE03cEb9nYBp5CkNPRxr6r-U6Dwy0a9RI7b3xUwCKuDxdwJNB1FbUHlO2FY5_n4kY3XKe3w75dqRHLbFf-nB0ZEuC3N4mhD7lppzRxf-m0rfD5mTkP1kpC5LFZY5WYv8aJluqx1lS7BPU9-SuFn3tJR23BELWt_X4nAQU.cqnEz4HXP75S6hwb9EXGDzqN83SgBGKQS_bw8yJVQ1M&dib_tag=se&keywords=Silicone%2Bcupping%2Bset&qid=1775775659&sprefix=silicone%2Bcupping%2Bset%2Caps%2C228&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7e50de5c18b9caa93e8eb5e63faf77aa&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61EJqnMBjWL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Papier Daily Wellness Journal",
+            price: "$32.00",
+            reason: "Small, beautiful, and genuinely useful. This hardback guided journal walks through daily intentions, mood, sleep, and gratitude in a format that takes five minutes but leaves her feeling more grounded. It's the kind of gift that shows you want her to take care of herself — and that you thought about more than just what she'd unwrap.",
+            url: "https://www.amazon.com/Papier-Wellness-Journal-Intentions-Feel-Good/dp/B0DHVC4W35?crid=1I4PQHXSSLO7U&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.1Qc_Hq9L29Jyz8h7SqYqWc3xviuBBu4uM3-jwv_WuKxpCUGjgwm9RnY-TBtXCjuvRsE1gZrQyXxSBvJ1Y32ynPWITk13Y_k1576mBnVZYnJxl6iz6PEovWPiiKRIYztjcZ_CPsBSsxzW7AOFotbtBqwY0JhBnJ0CKItuHwd9avTqE5xWaOEMJjAgjhx1UxpDzPapFFbAnu2_CjLHlnUeJ5_MV0Uw68bKmyqU19cyzCc.no6nq2ieliPfIgPTNmt_vltI9DikasdkhxB0qJIvX_w&dib_tag=se&keywords=Wellness%2Bjournal&qid=1775431859&s=samedaystore&sprefix=wellness%2Bjournal%2Csamedaystore%2C188&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=775690df25fa59a6197605255056c912&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51e2zJ60pPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "ASAKUKI Smart WiFi Essential Oil Diffuser",
+            price: "$32.00",
+            reason: "A smart diffuser that works with Alexa and can be scheduled from her phone. It transforms any room into something that feels intentional and calm — which for most moms is a rare commodity. At $32 it's a gift that will get used every single day.",
+            url: "https://www.amazon.com/dp/B07DH4ZSDF?ascsubtag=%5Bartid%7C10049.g.69275335%5Bsrc%7Cmgu_bg_cos_d_bm_comm_org_us_g13602855%5Buuid%7C964c00cb990844d49e2f93c4693d1a80&asc_source=bing&asc_campaign=mgu_bg_cos_d_bm_comm_org_us_g13602855&asc_refurl=https%3A%2F%2Fwww.cosmopolitan.com%2Fstyle-beauty%2Ffashion%2Fg69275335%2Fgift-ideas-for-women%2F&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18301597d6f4c3e886f68ef830b08d4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Organic Bath Bombs Spa Gift Set",
+            price: "$35.99",
+            reason: "USA-made with natural ingredients and zero harsh chemicals. This set comes wrapped and ready to give, and it turns an ordinary bath into something that actually feels like a break. Not the flashiest gift on this list — but consistently one of the most appreciated.",
+            url: "https://www.amazon.com/Organic-Natural-Ingredients-Mothers-Relaxing/dp/B00W2EH98I?crid=1TZOFATGJQ3GS&dib=eyJ2IjoiMSJ9.vklHGBmzD8ikSQyGGE9s0RaW_Jxo68pG_qNpTtDVHzVf6Vy1L_a_qqAkrqvEQTxegHJpv9yqWKMz3mflBIzz0EfWw_hOhIp5hRCqf7xSLbh8e0Jal5X5SsF1_UwMmr9qPFJpTOXnW3kLBz8GD0wlJ-uNuqLbJvAP-4_Gq4E6fTUAe5FXbKzaJ7vz9sZoJ7e-n8EXzXpZRbVuePWnJP2VJ7rIrZr7v-i1H7cW7e4B3WW9cTvHFMY9ICv6rVWr-UYr_zD-2e8NNJ8kJP5hYE7fTb7YPjJrNiQ7ZJeJE.qs0bfK2bGCXlUbFNdH5gkJFAVKSaEhByvvRULQu1yj8&dib_tag=se&keywords=organic%2Bbath%2Bbombs%2Bgift%2Bset&qid=1775775460&sprefix=organic%2Bbath%2Bbombs%2Bgift%2Bset%2Caps%2C234&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=37d1b91e2a39d0acf3f5ab3ef8db56a6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81b7juZJqhL._SL1500_.jpg"
+          },
+          {
+            name: "Axene At-Home Pilates Kit – Ring and Ball Set",
+            price: "$32.00",
+            reason: "If she's been talking about getting back into fitness or trying Pilates, this gives her everything she needs to start at home with no gym membership required. The ring and ball target core strength, flexibility, and posture — and the whole kit fits in a tote bag. It's an active, encouraging gift that says you believe in her goals.",
+            url: "https://www.amazon.com/dp/B0FXJLMPXC?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61Nl-m9KlbL._AC_SL1500_.jpg"
+          },
+          {
+            name: "THE COMFY Original Wearable Blanket Hoodie",
+            price: "$49.00",
+            reason: "Part hoodie, part blanket, entirely hers. The COMFY is one of those gifts that sounds gimmicky until she puts it on — then she refuses to take it off. At $49 it's the highest-priced pick on this list, but it's also the one most likely to make her laugh, love it, and text you a photo of herself wearing it on the couch.",
+            url: "https://www.amazon.com/dp/B07DKSY26D?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Mo Cuishle Shiatsu Neck & Back Massager with Heat",
+            price: "$45.00",
+            reason: "Coming in right at the $50 ceiling, this is the most luxurious-feeling gift on this list. A deep-tissue shiatsu massager with heat — the kind of thing you'd normally pay for at a spa — that she can use solo on the couch. For the price, nothing else here delivers the same wow-factor per dollar.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The move that makes any of these better",
+        body: "Wrap it properly. An $13 jade roller in a gift bag with tissue paper and a handwritten note will always outperform a $100 gift that was shoved in a shipping box. Presentation is half the gift — and it costs nothing but a little effort."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

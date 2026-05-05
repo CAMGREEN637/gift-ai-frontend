@@ -663,13 +663,6 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         type: "picks",
         gifts: [
           {
-            name: "BAIMEI Jade Face Roller & Gua Sha Set",
-            price: "$13.00",
-            reason: "One of the best value-to-thoughtfulness ratios on this list. A jade roller and gua sha set is the kind of gift that feels indulgent and intentional — she probably wants one but hasn't bought it for herself. Pair it with a note about taking five minutes for herself every morning and it lands even better.",
-            url: "https://www.amazon.com/BAIMEI-Face-Roller-Gua-Sha/dp/B07ZKWZMS4?crid=3JCWV8KSX1WMJ&dib=eyJ2IjoiMSJ9.UuMXSSGnXPTQOiRoWuCk6r0LoOxoiULBAfJrZJ3RCq44nnWwv7EFgpzHAqvnL9N1IfhvRscEKGI7K-AE5k6LQioVLfqExlXpJJJWVG3lcvVT5jQmA1yHzAaMmVRf1ghTU0Q4yUPJV2RBxVUe4PFc-6wVZyQ3wYOO-2HsE9LYKfvFgmTzGhB5IJxrfC4GnHmvhk6FxiMzQHxwCHVMkbz2b09GxRWbJN0RLWF0fhv4yw.4LPz1Cqv6hJ2XyxXbSB62KBcBsYqERfJFQ5w8r3WBfcs&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775774869&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Caps%2C235&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50b8659a60a8a6b4e9f6fa2ece6fe8bb&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61fNqnFNLzL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
             name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
             price: "$23.00",
             reason: "Eight candles in vintage amber jars, each a different scent. It feels like a curated gift set, not a single impulse buy — and the variety means she's covered for every mood for months. Burn time, scent throw, and packaging are all genuinely good for the price.",
@@ -681,14 +674,14 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$29.00",
             reason: "This French-made hand cream set comes in a beautiful tin with three different scents — gardenia, rose, and citrus. Twenty percent organic shea butter, no harsh chemicals, and packaging that actually looks like a gift. It's the kind of thing she'll keep on her nightstand and reach for every night.",
             url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/8171z4-KddL._SL1500_.jpg"
           },
           {
             name: "Lure Essentials Silicone Cupping Set",
             price: "$29.00",
             reason: "Cupping therapy at home sounds intimidating until she tries it — then it becomes a weekly ritual. This silicone set works on the neck, back, legs, and face, and requires no heat or special equipment. It's the kind of self-care gift that feels a little unexpected and a lot more useful than another bath set.",
-            url: "https://www.amazon.com/Lure-Essentials-Silicone-Cupping-Therapy/dp/B01LZIQFPJ?crid=1GXMJXNLJMFZL&dib=eyJ2IjoiMSJ9.f4kBrOLhYOXPW0KS-mA7Hv0rr7u5HhFSgSGCzxnSdF3HvCE26-3kTLmW0MbQIMaVFNL7pDFVXWmLmV0LGTY84IlHX0U3JHJrV0-LmEUGDR0K4IgdriJMiUJiKFqQMNDfpDmE03cEb9nYBp5CkNPRxr6r-U6Dwy0a9RI7b3xUwCKuDxdwJNB1FbUHlO2FY5_n4kY3XKe3w75dqRHLbFf-nB0ZEuC3N4mhD7lppzRxf-m0rfD5mTkP1kpC5LFZY5WYv8aJluqx1lS7BPU9-SuFn3tJR23BELWt_X4nAQU.cqnEz4HXP75S6hwb9EXGDzqN83SgBGKQS_bw8yJVQ1M&dib_tag=se&keywords=Silicone%2Bcupping%2Bset&qid=1775775659&sprefix=silicone%2Bcupping%2Bset%2Caps%2C228&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7e50de5c18b9caa93e8eb5e63faf77aa&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61EJqnMBjWL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            url: "https://www.amazon.com/Silicone-Professional-Myofascial-Cellulite-Reduction/dp/B0BQV1NTT4?crid=39J1DMXK5DLAO&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.KVk-I89w299CSZOXQhGMmfrmu0Q4X7KN3AWOpMUpGEsvw3DNBM-s-K1WMkhVfQVESBEveyI0PtWwNioVyuQTP-v1hS_1do3MzFmaeVlU0ivtWg5neTztWCDKzj1hGYy9G3-GlYG7BhinL4mfOLegI2v_3HP9PneXMyUfy4hOcjCWgPZgyeCAMNToeMb_hrYLkSQl1SRijnbbo6imaIj9BQrvgZiZelg_roVXY-ryym4.-qVbBSlyDkH767ygJQZnTZ3Bo1X1sn4ojpdzeFcIeYM&dib_tag=se&keywords=cupping%2Bset&qid=1775436411&s=samedaystore&sprefix=CUPPING%2Csamedaystore%2C185&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18f89f6352cd8e2df9daccc2eba1d6f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/91yTkhFs20L._AC_SX679_.jpg"
           },
           {
             name: "Papier Daily Wellness Journal",
@@ -716,7 +709,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$32.00",
             reason: "If she's been talking about getting back into fitness or trying Pilates, this gives her everything she needs to start at home with no gym membership required. The ring and ball target core strength, flexibility, and posture — and the whole kit fits in a tote bag. It's an active, encouraging gift that says you believe in her goals.",
             url: "https://www.amazon.com/dp/B0FXJLMPXC?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/61Nl-m9KlbL._AC_SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/61XNTjSzhVL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "THE COMFY Original Wearable Blanket Hoodie",

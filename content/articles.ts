@@ -775,7 +775,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$39.00",
             reason: "Real roses preserved to last years, not days. No wilting, no cleanup, and a presentation that looks genuinely considered. This is the version of 'flowers' that doesn't end up in the compost bin by Wednesday.",
             url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71b7juZJqhL._SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/81bHitaEdvL._AC_SL1500_.jpg"
           }
         ]
       },
@@ -800,7 +800,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$29.00",
             reason: "If you want to keep it under $30, this French-made hand cream set in a beautiful tin is a significantly better version of the 'personal care gift.' Twenty percent organic shea butter, elegant packaging, and a scent selection that doesn't smell like a candle shop.",
             url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/81QToIh4USL._SL1500_.jpg"
           }
         ]
       },

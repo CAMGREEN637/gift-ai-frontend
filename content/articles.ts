@@ -741,6 +741,195 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+{
+    slug: "mothers-day-gifts-to-avoid",
+    title: "Mother's Day Gifts to Avoid (And What to Get Instead)",
+    excerpt: "Some gifts are worse than no gift at all. Here's what to skip this Mother's Day — and exactly what to get instead.",
+    occasion: "mothers_day",
+    interests: ["wellness", "skincare", "home_decor", "reading", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-03",
+    relatedArticles: [
+      "mothers-day-gifts-under-50",
+      "top-relaxation-gifts-mothers-day",
+      "mothers-day-gifts-luxury"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The bar is higher than you think",
+        body: "Mother's Day gift fails aren't about spending too little. They're about reaching for the obvious without thinking about who's actually receiving it. The gifts on this list aren't bad because they're cheap or lazy — they're bad because they're generic. And generic reads as 'I didn't really think about you.' Here's what to avoid, why, and what to get instead."
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A generic flower bouquet",
+        body: "Flowers from a grocery store or a rushed same-day delivery look exactly like what they are. They're beautiful for 72 hours, then they're dead and she's cleaning up petals. The gesture says 'I remembered at the last minute.' If you want something that feels like flowers without the shelf life problem, go with preserved roses — they look better, last years, and actually feel like you planned ahead."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "GLAMOUR BOUTIQUE Eternal Preserved Roses – Heart Shape Box",
+            price: "$39.00",
+            reason: "Real roses preserved to last years, not days. No wilting, no cleanup, and a presentation that looks genuinely considered. This is the version of 'flowers' that doesn't end up in the compost bin by Wednesday.",
+            url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71b7juZJqhL._SL1500_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A Bath & Body Works gift set",
+        body: "This is the 'I panicked at the mall' gift. The packaging is fine, the scents are overwhelming, and she already has three of these under the sink from previous years. It's not that she doesn't like nice things — it's that this particular nice thing signals zero effort. A proper spa gift set, built around a single calming scent and actually useful products, lands completely differently."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Lizush Luxury 15-Piece Lavender Spa Gift Basket",
+            price: "$139.00",
+            reason: "Fifteen lavender-scented pieces — bath salts, body scrub, loofah, candle, and more — in a basket that's actually curated rather than just stuffed. The cohesive scent profile and quality of ingredients make it feel intentional rather than grabbed off a shelf.",
+            url: "https://www.amazon.com/Lizush-Piece-Complete-Luxury-Women/dp/B088ZHBX22?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/513jKGDIIYL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "La Chatelaine Hand Cream Trio Tin",
+            price: "$29.00",
+            reason: "If you want to keep it under $30, this French-made hand cream set in a beautiful tin is a significantly better version of the 'personal care gift.' Twenty percent organic shea butter, elegant packaging, and a scent selection that doesn't smell like a candle shop.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: Jewelry she didn't ask for",
+        body: "Jewelry is a minefield. Wrong metal, wrong style, wrong size — and now she's nodding enthusiastically while mentally planning how to never wear it. Unless she's shown you exactly what she wants, jewelry is a high-risk gift with a low hit rate. Wearable luxury that requires zero guesswork is a much safer bet — and she'll actually use it every day."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Barefoot Dreams CozyChic Adult Robe",
+            price: "$138.00",
+            reason: "Luxury she can wear constantly, with zero chance of getting it wrong. One size fits most, universally loved, and something she'd never justify buying for herself. The equivalent splurge to a nice piece of jewelry — but one she'll reach for every single morning.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Blissy 100% Mulberry Silk Pillowcase",
+            price: "$82.46",
+            reason: "At a lower price point, this is another form of wearable luxury that requires zero style guesswork. Noticeably better for her skin and hair, cool to the touch, and something she'll be glad to have every single night.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: Breakfast in bed",
+        body: "Breakfast in bed is a lovely idea that almost never works in practice. The eggs are cold by the time they arrive. The tray is awkward. Someone spills orange juice on the duvet. And the worst part — she's probably the one who ends up cleaning it up later. The intention is right (do something nice for her in the morning) but the execution is the problem. Give her something that makes every morning better, not just this one."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Nextmug Temperature-Controlled Self-Heating Coffee Mug",
+            price: "$99.00",
+            reason: "A mug that keeps her coffee or tea at the exact temperature she wants, for hours. Every morning, not just Mother's Day morning. No reheating, no cold sips, no rushing. It's the breakfast-in-bed impulse done properly.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A spa gift certificate",
+        body: "The logic is sound — she deserves a spa day. The reality is that gift certificates create homework. She has to book it, find a time when she doesn't have other responsibilities, arrange childcare if needed, and use it before it expires. A lot of spa gift certificates quietly die unused while generating background guilt. Bring the spa to her instead."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Mo Cuishle Shiatsu Neck & Back Massager with Heat",
+            price: "$45.00",
+            reason: "Deep-tissue shiatsu massage with heat, usable any night on the couch after the kids are in bed. No booking, no babysitter, no expiry date. At $45 it costs less than a single spa visit and gets used indefinitely.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "LifePro Infrared Sauna Blanket",
+            price: "$293.95",
+            reason: "If you want to go big, this is the spa experience that requires nothing from her except 30 minutes lying still. Infrared heat therapy for muscle recovery and stress relief, in her bedroom, on her schedule. The spa gift certificate upgraded into something she'll actually use.",
+            url: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ?content-id=amzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095%3Aamzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095&crid=1AJN8MOV2F7HQ&cv_ct_cx=Weighted%2Bheated%2Bblanket&keywords=Weighted%2Bheated%2Bblanket&pd_rd_i=B0BX7HLCYQ&pd_rd_r=af11a619-c016-41f2-80f0-9ac0a51e57df&pd_rd_w=KEL4v&pd_rd_wg=07rVc&pf_rd_p=141f5c48-2844-433f-b731-f8ecc97a5095&pf_rd_r=9TSAQ9DSX1BB9PNCNGRQ&qid=1774736436&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bheated%2Bblanket%2Caps%2C270&sr=1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&aref=SGiR41tniM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c23aa71ec7e1c3167017f6abfec16408&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: Something for the house",
+        body: "A new vacuum, an Instant Pot, a fancy air fryer — these feel like gifts but they're really just household purchases with a bow on top. The whole family benefits, which means it's not really a gift for her. Mother's Day is about her specifically, not the infrastructure of the home. Give her something she wouldn't buy for the house — something just for herself."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "TheraGun Mini (3rd Generation)",
+            price: "$219.00",
+            reason: "A percussive massage gun that is entirely, unambiguously hers. Nobody else in the house needs it. Nobody else will use it. It's for her recovery, her tension, her body — and it's the kind of personal upgrade she'd never prioritize for herself over something 'useful' for the family.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "ELEMIS Pro-Collagen Marine Cream SPF 30",
+            price: "$119.00",
+            reason: "A premium skincare product that is purely, personally hers. Nobody else in the house is using the SPF 30 marine collagen moisturizer. It's the opposite of a household appliance — it's something that says 'this is for you, specifically.'",
+            url: "https://www.amazon.com/ELEMIS-Pro-Collagen-Marine-Cream-SPF/dp/B0CW16BBVV?crid=1OUG44CMGKTUP&dib=eyJ2IjoiMSJ9.wBq3sqMaRieSQH0oVvXzPFQ25cXtGYW4v9nI1VgOWQ7vVFUY4-FKSlPxHH1yniIMgCVv2_2cqIeFqCFz_r59dDNYq3ybmEKLANxiXqgO2KWKk7VF_7KoNiQ4pJp8mLJz9YfVaFmvPqXz19CDxTHrgaSaFzDX3WTNl5hJ2lSbiFnU5nVw0AvjOWa_2i2OC-JkZPqirchROnCHPMJDRB_hb2VhqUIfFfaL4e9HbCHM1NF9XceSp7VDMv5q4XBpfj6tBdRCJLKKxSEE7lEiW-GiInLNhkzCGBDv9MfgdkCqE.F2R8K5h7JXFUI16fFdqMC0f9iosMiUr1J5mJzQvOt_E&dib_tag=se&keywords=ELEMIS%2BPro-Collagen%2BMarine%2BCream&qid=1775774584&sprefix=elemis%2Bpro-collagen%2Bmarine%2Bcream%2Caps%2C234&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bb00c432ee49e7cc2a5d60f3bbb78476&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: An experience she has to organize",
+        body: "Tickets to a show, a cooking class, a wine tasting — these feel thoughtful because they're experiences, not things. But if she has to arrange childcare, figure out transport, and carve time out of a packed schedule to actually use the gift, it quietly becomes a source of stress rather than joy. The best experiences for moms are the ones that come to her, on her timeline, with zero logistics."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Amazon Kindle Paperwhite",
+            price: "$159.00",
+            reason: "An entire library in her bag, usable whenever she has 20 minutes — on her lunch break, in the school pickup line, before bed. No scheduling, no planning, no one to coordinate with. The experience of reading is entirely hers to take whenever she wants it.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          },
+          {
+            name: "Papier Daily Wellness Journal",
+            price: "$32.00",
+            reason: "A guided journal is a daily ritual that asks nothing more than five quiet minutes. No planning required. She picks it up when she wants to, puts it down when she needs to. A low-friction experience that's entirely on her terms.",
+            url: "https://www.amazon.com/Papier-Wellness-Journal-Intentions-Feel-Good/dp/B0DHVC4W35?crid=1I4PQHXSSLO7U&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.1Qc_Hq9L29Jyz8h7SqYqWc3xviuBBu4uM3-jwv_WuKxpCUGjgwm9RnY-TBtXCjuvRsE1gZrQyXxSBvJ1Y32ynPWITk13Y_k1576mBnVZYnJxl6iz6PEovWPiiKRIYztjcZ_CPsBSsxzW7AOFotbtBqwY0JhBnJ0CKItuHwd9avTqE5xWaOEMJjAgjhx1UxpDzPapFFbAnu2_CjLHlnUeJ5_MV0Uw68bKmyqU19cyzCc.no6nq2ieliPfIgPTNmt_vltI9DikasdkhxB0qJIvX_w&dib_tag=se&keywords=Wellness%2Bjournal&qid=1775431859&s=samedaystore&sprefix=wellness%2Bjournal%2Csamedaystore%2C188&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=775690df25fa59a6197605255056c912&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51e2zJ60pPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The pattern behind every good gift",
+        body: "Look back at everything in the 'instead' column and you'll notice the same thing: each one is personal, requires nothing from her to enjoy, and is something she'd never buy for herself. That's the formula. It doesn't require a big budget — it requires actually thinking about who she is and what her daily life looks like. Get that right and the gift almost doesn't matter."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

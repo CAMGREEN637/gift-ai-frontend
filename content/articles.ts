@@ -662,6 +662,13 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "picks",
         gifts: [
+              {
+            name: "BAIMEI Jade Face Roller & Gua Sha Set",
+            price: "$13.00",
+            reason: "One of the best value-to-thoughtfulness ratios on this list. A jade roller and gua sha set is the kind of gift that feels indulgent and intentional — she probably wants one but hasn't bought it for herself. Pair it with a note about taking five minutes for herself every morning and it lands even better.",
+            url: "https://www.amazon.com/BAIMEI-Roller-Facial-Routine-Puffiness-Light/dp/B08YN3KC2Z?crid=3PFFPTQV700IL&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.MZo5n7p0I5c8DdzjChPlHvHjyWopd4VKV-of1NDER0xSBv47xRZ1JNQ_clSd2wxgcuvC0HHIGKRlIDK_ldR_r6xtclbG9VD7QYk7I9a76THXxUQq9l2_5WOGS_iXZxaVRKuw6IUW_qwi0d1wVgIXRMNAV8b3Dq5FWZDfm_54v5A-azJxktd8UpnNi5OG5jnhZ2J72r9ZIExgludKssyZKerg_mQwNW8sBF3BgjV85ho.WdWXxK4CGOeUunIaDWE43qe4JEpncJr17yPicWVrF8U&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775434614&s=samedaystore&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Csamedaystore%2C228&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=cacfff9482ff45a4bb533241b48a8a75&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61ilGIuzB4L._SL1500_.jpg"
+          },
           {
             name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
             price: "$23.00",
@@ -716,7 +723,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$49.00",
             reason: "Part hoodie, part blanket, entirely hers. The COMFY is one of those gifts that sounds gimmicky until she puts it on — then she refuses to take it off. At $49 it's the highest-priced pick on this list, but it's also the one most likely to make her laugh, love it, and text you a photo of herself wearing it on the couch.",
             url: "https://www.amazon.com/dp/B07DKSY26D?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/71GImnotwXL._AC_SX679_.jpg"
           },
           {
             name: "Mo Cuishle Shiatsu Neck & Back Massager with Heat",

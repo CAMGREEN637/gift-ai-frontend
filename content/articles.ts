@@ -930,6 +930,122 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+{
+    slug: "last-minute-mothers-day-gifts",
+    title: "Last-Minute Mother's Day Gifts That Don't Feel Last-Minute",
+    excerpt: "You're cutting it close. That's fine — none of these look like it.",
+    occasion: "mothers_day",
+    interests: ["wellness", "skincare", "fashion", "home_decor", "coffee"],
+    readTime: "4 min read",
+    publishedAt: "2026-05-03",
+    relatedArticles: [
+      "mothers-day-gifts-under-50",
+      "mothers-day-gifts-to-avoid",
+      "top-relaxation-gifts-mothers-day"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The secret to a last-minute gift that lands",
+        body: "The problem with most last-minute gifts isn't the timing — it's that they look last-minute. A candle from a gas station is a bad gift because it's thoughtless, not because it was bought on May 11th. Everything on this list ships fast and looks like it was chosen with intention. Pick something that fits her, wrap it properly, write a real note, and nobody will ever know you ordered it four days ago."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "BAIMEI Jade Face Roller & Gua Sha Set",
+            price: "$13.00",
+            reason: "Ships fast, looks like a considered gift. A jade roller and gua sha set is exactly the kind of thing she wants but hasn't gotten around to buying herself — and at $13, it's one of the best value-to-thoughtfulness ratios on this list. Tuck it in a small gift bag with tissue paper and it looks like you planned this weeks ago.",
+            url: "https://www.amazon.com/BAIMEI-Face-Roller-Gua-Sha/dp/B07ZKWZMS4?crid=3JCWV8KSX1WMJ&dib=eyJ2IjoiMSJ9.UuMXSSGnXPTQOiRoWuCk6r0LoOxoiULBAfJrZJ3RCq44nnWwv7EFgpzHAqvnL9N1IfhvRscEKGI7K-AE5k6LQioVLfqExlXpJJJWVG3lcvVT5jQmA1yHzAaMmVRf1ghTU0Q4yUPJV2RBxVUe4PFc-6wVZyQ3wYOO-2HsE9LYKfvFgmTzGhB5IJxrfC4GnHmvhk6FxiMzQHxwCHVMkbz2b09GxRWbJN0RLWF0fhv4yw.4LPz1Cqv6hJ2XyxXbSB62KBcBsYqERfJFQ5w8r3WBfcs&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775774869&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Caps%2C235&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50b8659a60a8a6b4e9f6fa2ece6fe8bb&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61fNqnFNLzL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
+            price: "$23.00",
+            reason: "Eight candles in vintage amber jars. It looks like a curated gift set — because it is one. The variety of scents and the packaging do a lot of the presentation work for you, which is exactly what you need when you're working against the clock.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "La Chatelaine Hand Cream Trio Tin",
+            price: "$29.00",
+            reason: "Comes in a proper gift tin. Three scents, French-made, 20% organic shea butter — this looks significantly more expensive than it is, which is the exact energy you want from a late order. She'll have no idea you clicked 'buy' on a Thursday night.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+          },
+          {
+            name: "Organic Bath Bombs Spa Gift Set",
+            price: "$35.99",
+            reason: "Arrives ready to give — no additional wrapping needed. USA-made with natural ingredients, comes in gift packaging, and reads as a proper spa set rather than a supermarket grab. The kind of gift that earns a 'you didn't have to do this' even when the delivery window was tight.",
+            url: "https://www.amazon.com/Organic-Natural-Ingredients-Mothers-Relaxing/dp/B00W2EH98I?crid=1TZOFATGJQ3GS&dib=eyJ2IjoiMSJ9.vklHGBmzD8ikSQyGGE9s0RaW_Jxo68pG_qNpTtDVHzVf6Vy1L_a_qqAkrqvEQTxegHJpv9yqWKMz3mflBIzz0EfWw_hOhIp5hRCqf7xSLbh8e0Jal5X5SsF1_UwMmr9qPFJpTOXnW3kLBz8GD0wlJ-uNuqLbJvAP-4_Gq4E6fTUAe5FXbKzaJ7vz9sZoJ7e-n8EXzXpZRbVuePWnJP2VJ7rIrZr7v-i1H7cW7e4B3WW9cTvHFMY9ICv6rVWr-UYr_zD-2e8NNJ8kJP5hYE7fTb7YPjJrNiQ7ZJeJE.qs0bfK2bGCXlUbFNdH5gkJFAVKSaEhByvvRULQu1yj8&dib_tag=se&keywords=organic%2Bbath%2Bbombs%2Bgift%2Bset&qid=1775775460&sprefix=organic%2Bbath%2Bbombs%2Bgift%2Bset%2Caps%2C234&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=37d1b91e2a39d0acf3f5ab3ef8db56a6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81b7juZJqhL._SL1500_.jpg"
+          },
+          {
+            name: "Nodpod Weighted Silk Sleep Mask",
+            price: "$68.00",
+            reason: "Comes in proper retail packaging and looks like a premium gift the moment she opens the box. The strap-free weighted design is genuinely unique — it's not something she could have picked up herself at a drugstore — which means it reads as considered, not convenient.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Blissy 100% Mulberry Silk Pillowcase",
+            price: "$82.46",
+            reason: "Ships in clean, minimal packaging that looks intentional. A silk pillowcase is the kind of gift that sounds simple but consistently lands well — it's specific, personal, and something she'll notice every single night. Nobody guesses this was an order placed five days ago.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Tatcha The Starter Ritual Skincare Set",
+            price: "$95.00",
+            reason: "Tatcha ships in its signature cream and gold packaging — one of the most giftable unboxing experiences in skincare. It looks like something from a boutique, not a browser tab you had open at midnight. The two-week introductory set is the right size to feel generous without being overwhelming.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=BHFHLS0AWLMK&dib=eyJ2IjoiMSJ9.qm1bRLBl2MDh_k6r8tSlbCMLfFBh5p6G3k3Ij_UaR5UG_kFHPMWj9Fmfu14Sg_3LxHBVFfDqBPMGdKT8Lsap7Fk7p-tXR-JvKyNaYCj8VTQ7P0p0Cq4pVQMxifVYX7GBfbzaJ2OGDIgJlbUq2HhpTDJD_9KMhJ8r3lkq8X5K5X3OZG6QSbQ7GvMDXkUqMOvFPkJbpKb_VLcWqJVOjT2YV0-p4G4wSgQBdFCpkJfPqJIJSDiXnDiV8R2emMOgJf3qWl72OuR_6VDqm4VWpTRzNECrpJC8sS_U3AUG2Gp4jgq7D8NbHyXQfUDg.0B5w3CuDSjJ5gSYvFTMO3NnFPSEykyIxTf6vEg2DUkA&dib_tag=se&keywords=Tatcha+starter+ritual+set&qid=1775774000&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e89b3cfcd7c9a5e1e63dc7dbb0dbbc30&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          },
+          {
+            name: "UGG Women's Scuffette II Slippers",
+            price: "$99.00",
+            reason: "UGG ships in their signature branded box, which does the presentation work for you. Slippers are a gift that hits immediately — she puts them on and feels it right away. No batteries, no setup, no instructions. Just instant comfort she'll wear every day.",
+            url: "https://www.amazon.com/UGG-Scuffette-Slipper-Chestnut-Size/dp/B082HHWYWD?crid=LH8UZT1PJIHD&dib=eyJ2IjoiMSJ9.Y88sgIKj9IuLNT1_SgyamhmgK439Xqr6wgq4VojmCjxxPidbZ2J6lzs7Z49B6WIHa-ZiW-Hx3EJiOjEpGu8eSCE2VOwHVGcg5AC7pazFpWvqtXXYdJrRxRuFfQ5PnIpQIzS9ddxlyhl-aiDuAGIcy9TN0w067WbH5vXwtBjdgBnBDpanhKyw2c9twXYnMts0lkUYyeh5tYwKqGmZvidXSihWs5E9pIWWcDgyFL-2U9N1X9-5QgxA1NI6wqUwY3FX7SXxBBVdIR_rDwL1h0Eq5s-ER05vBqecuQ_WJ1Z_EP4.rmpy3TnS3T89mWU9HjZnDb1x8JCoF633B6tJAno749s&dib_tag=se&keywords=UGG%2BFluff%2BYeah%2BSlide%2BSlippers&qid=1776652891&sprefix=ugg%2Bfluff%2Byeah%2Bslide%2Bslippers%2Caps%2C422&sr=8-9&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=fee796cc758334434fed5a1a995dbec6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51ZwU6Xht5L._AC_SX395_SY395_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams CozyChic Adult Robe",
+            price: "$138.00",
+            reason: "One of the best gifts on this entire list, last-minute or otherwise. The Barefoot Dreams robe ships in clean packaging and lands as a genuinely luxurious gift the moment she unfolds it. One size, universal appeal, and the kind of present that makes her wonder why it took you this long to get it for her.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BOLL & BRANCH Soft Knit Pajama Set",
+            price: "$149.00",
+            reason: "Boll & Branch packaging is premium enough that this looks like it was ordered from a boutique. A high-quality pajama set in her size is a personal, wearable gift that she'd never think to question the timing on — she's too busy being comfortable.",
+            url: "https://www.amazon.com/BOLL-BRANCH-Womens-Sleeve-Pajama/dp/B0DTB465K4?crid=1WLTVAKZMJHMC&dib=eyJ2IjoiMSJ9.O6A8ENDWF97OH2kFf2yKSBGiTSBUUx0URzdyLuT-K8c3NT9d7JxvBIi5XeGGnEFje_fY4VeYfs6GkHWCCOKZrecYlVJExuteJwIGL_rHyVQ8kH4C43QLYJHENfaBy26AF-8N-qMcJ2aOPZkbVaLaEh4OeKeSi-Y7k1nu6shR3ucH4_R8K-NBl2EuTR4okxR6zay3e9oHLTBV7koBxkQxpUhEMmwyFxaQCuzcFcgY_-SQMCB8hdMgnILI7n5yxXDC5Fjwn_wzElDJgQ3HeV4I2x11sYg89GFepVTKTajjL5Q.4zzn-kLAxuPiw3aCtzVoPMLuBumpQUChM5BnQ8W62Sw&dib_tag=se&keywords=Luxury%2BSilk%2BPajama%2BSet&qid=1773535460&sprefix=luxury%2Bsilk%2Bpajama%2Bset%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=95af7bf7c56daa4c3700048b87385595&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71hSiXigNlL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "RENPHO 4D Red Light Therapy Face Mask",
+            price: "$179.00",
+            reason: "Comes in retail-ready packaging that looks like a considered tech gift. Red light therapy masks are having a serious moment in skincare, and this one delivers professional-level results at home. At this price point, nobody assumes this was a last-minute decision — it looks exactly like something you researched.",
+            url: "https://www.amazon.com/dp/B0FJS8ZQWS?maas=maas_adg_api_591804581339319208_static_9_129&aa_campaignid=lv_4b9e4NCSPDPodUvBVE&aa_adgroupid=lv_GkCHmtolszTKUOCWcB&aa_creativeid=lv_GaHtQ89nbgwHXkQWzr&m=A2F97CWV4SAWYO&linkCode=ll2&tag=cbggiftapp637-20&linkId=f6f921d72446bb436ddc452c78b448ec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41AUc0hbRmL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "LifePro Infrared Sauna Blanket",
+            price: "$293.95",
+            reason: "The highest-priced pick on this list, and the one least likely to ever read as last-minute. At nearly $300 it signals serious intention, and the gift itself — a personal infrared sauna she can use in her bedroom — is so specific and considered that the delivery timestamp is the last thing on her mind.",
+            url: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ?content-id=amzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095%3Aamzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095&crid=1AJN8MOV2F7HQ&cv_ct_cx=Weighted%2Bheated%2Bblanket&keywords=Weighted%2Bheated%2Bblanket&pd_rd_i=B0BX7HLCYQ&pd_rd_r=af11a619-c016-41f2-80f0-9ac0a51e57df&pd_rd_w=KEL4v&pd_rd_wg=07rVc&pf_rd_p=141f5c48-2844-433f-b731-f8ecc97a5095&pf_rd_r=9TSAQ9DSX1BB9PNCNGRQ&qid=1774736436&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bheated%2Bblanket%2Caps%2C270&sr=1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&aref=SGiR41tniM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c23aa71ec7e1c3167017f6abfec16408&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing that costs nothing and fixes everything",
+        body: "Write a real note. Not a two-word card insert — an actual handwritten note about why you're grateful for her and what you specifically appreciate. A great note elevates any gift on this list. It's also the one thing that cannot be delivered late, requires zero planning, and is impossible to buy last-minute from Amazon. Do that part right and the timing of the order doesn't matter at all."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

@@ -953,13 +953,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "picks",
         gifts: [
-          {
-            name: "BAIMEI Jade Face Roller & Gua Sha Set",
-            price: "$13.00",
-            reason: "Ships fast, looks like a considered gift. A jade roller and gua sha set is exactly the kind of thing she wants but hasn't gotten around to buying herself — and at $13, it's one of the best value-to-thoughtfulness ratios on this list. Tuck it in a small gift bag with tissue paper and it looks like you planned this weeks ago.",
-            url: "https://www.amazon.com/BAIMEI-Face-Roller-Gua-Sha/dp/B07ZKWZMS4?crid=3JCWV8KSX1WMJ&dib=eyJ2IjoiMSJ9.UuMXSSGnXPTQOiRoWuCk6r0LoOxoiULBAfJrZJ3RCq44nnWwv7EFgpzHAqvnL9N1IfhvRscEKGI7K-AE5k6LQioVLfqExlXpJJJWVG3lcvVT5jQmA1yHzAaMmVRf1ghTU0Q4yUPJV2RBxVUe4PFc-6wVZyQ3wYOO-2HsE9LYKfvFgmTzGhB5IJxrfC4GnHmvhk6FxiMzQHxwCHVMkbz2b09GxRWbJN0RLWF0fhv4yw.4LPz1Cqv6hJ2XyxXbSB62KBcBsYqERfJFQ5w8r3WBfcs&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775774869&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Caps%2C235&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50b8659a60a8a6b4e9f6fa2ece6fe8bb&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61fNqnFNLzL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
+
           {
             name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
             price: "$23.00",
@@ -972,7 +966,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             price: "$29.00",
             reason: "Comes in a proper gift tin. Three scents, French-made, 20% organic shea butter — this looks significantly more expensive than it is, which is the exact energy you want from a late order. She'll have no idea you clicked 'buy' on a Thursday night.",
             url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71-0jR5x2iL._SL1500_.jpg"
+            image_url: "https://m.media-amazon.com/images/I/81QToIh4USL._SL1500_.jpg"
           },
           {
             name: "Organic Bath Bombs Spa Gift Set",

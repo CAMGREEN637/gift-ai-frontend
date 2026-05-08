@@ -1040,6 +1040,60 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+{
+    slug: "birthday-gifts-yoga",
+    title: "Birthday Gifts for a Girlfriend Who Loves Yoga",
+    excerpt: "Yoga gifts that go beyond the basics — picked for women who actually practice, not just own a mat.",
+    occasion: "birthday",
+    interests: ["yoga"],
+    readTime: "4 min read",
+    publishedAt: "2026-05-07",
+    relatedArticles: [
+      "birthday-gifts-wellness",
+      "birthday-gifts-fitness",
+      "birthday-gifts-coffee",
+      "birthday-gifts-cooking"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why yoga gifts are easy to get wrong",
+        body: "The trap with yoga gifts is defaulting to anything with a lotus flower on it. If she actually practices — even a few times a week — she already has the basics and she's picky about her gear. The gifts that land are the ones that enhance her practice or her recovery, not decorate it."
+      },
+      {
+        type: "text",
+        heading: "How to make it feel personal",
+        body: "You don't need to know the difference between Vinyasa and Yin to give a great gift here. What matters is that it feels considered — something that fits into her routine rather than sitting unused. If she mentions being sore after practice, recovery gear is a slam dunk. If she talks about wanting to go deeper in her practice, upgrade her equipment. When the gift shows you were listening, that's what she'll remember."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Gaiam Non-Slip Yoga Block",
+            price: "$17.00",
+            reason: "A small gift that serious practitioners actually use every session. Yoga blocks let her hold poses longer, go deeper, and protect her joints — the kind of gear she might not splurge on herself but will appreciate every time she rolls out her mat.",
+            url: "https://www.amazon.com/Gaiam-Essentials-Yoga-Block-Set/dp/B075W63K67?crid=397CVCAPJ997Y&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.NfOZ4OcZ4eXwAThicoa_gjbEYBeGP6_r2-gFsRQntPieDR-dM7QPKiykrPio0c00q36wEMz9Re-txgL_DD2YTXyROxenxwAb_7Z2QlfKpF2VgcebfZJJ1nPcJ3H-0u4u60qDI_MpaDwcezHAoRes6YEP9apWjyK4mj7uGhPP2wQslXhdcvFLt38TzbQv4H6CVTh84lNHQYeW6YjOPaqXsV842kNFVTIsWsyw6Q6HDHg.sqJit1Fk0tGQ_Hrg91OosJAXSbSJvqGi0Ut87Rmz4Pc&dib_tag=se&keywords=yoga%2Bbolster&qid=1775436932&s=samedaystore&sprefix=yoga%2Bbolster%2Csamedaystore%2C248&sr=1-6&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=375d87892afb0671a098d783a02fc142&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81xT4xrd3eL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Liforme Eco-Friendly Non-Slip Yoga Mat",
+            price: "$164.00",
+            reason: "The mat serious practitioners aspire to. It has a patented alignment grid built into the surface, warrior-grip traction that holds even when things get sweaty, and it's made from eco-friendly natural rubber. If she's been practicing on a basic mat, this is a genuine upgrade she'll feel the difference on immediately.",
+            url: "https://www.amazon.com/dp/B01CGLCGRA?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/41jBqFTYZVL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "TheraGun Mini Massage Gun",
+            price: "$219.00",
+            reason: "Yoga works muscles hard, and recovery is half the practice. The Theragun Mini is pocket-sized but delivers the same percussive therapy as the full-size — she can use it on her back, shoulders, and legs after any session. It's a splurge that crosses into genuine self-care territory, which makes it feel like a real birthday treat.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

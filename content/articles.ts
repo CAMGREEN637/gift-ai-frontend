@@ -1094,6 +1094,77 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — TRAVEL
+  // ============================================================================
+  {
+    slug: "birthday-gifts-travel",
+    title: "Birthday Gifts for a Girlfriend Who's Always Traveling",
+    excerpt: "Practical, beautiful, and actually useful gifts for the woman who lives out of a suitcase.",
+    occasion: "birthday",
+    interests: ["travel"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-08",
+    relatedArticles: [
+      "birthday-gifts-wellness",
+      "birthday-gifts-reading",
+      "birthday-gifts-yoga",
+      "birthday-gifts-coffee"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why travel gifts are tricky to get right",
+        body: "The problem with buying gifts for a traveler is that she has already figured out her system. She knows exactly which bag she likes, how she packs, and what she carries on. Walk into this blind and you risk buying something she already owns, something too bulky to bring, or something that sounds great but collects dust at home. The gifts that work are the ones that make travel itself more comfortable, more organized, or more enjoyable in the moment."
+      },
+      {
+        type: "text",
+        heading: "Think about the trip, not the destination",
+        body: "The best travel gifts are useful at 30,000 feet or in a rental car at 6am, not just in some aspirational vacation photo. If she travels for work, she needs different things than someone who only takes leisure trips. Noise cancelling headphones matter on a red eye. A compact instant camera matters on a beach trip with friends. A weekender bag matters for the long weekend more than the two-week holiday. Match the gift to how she actually travels and you will be the one she thinks of every time she packs."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Compression Packing Cubes for Travel",
+            price: "$59.00",
+            reason: "Packing cubes sound like a boring gift until she actually uses them. These compression ones let her fit nearly twice as much into a carry-on, eliminate the suitcase chaos she deals with every trip, and keep everything organized from departure to return. Travelers who switch to packing cubes never go back.",
+            url: "https://www.amazon.com/dp/B0CLVYTLFB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91i0aP-D56L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wireless Noise Cancelling Over-Ear Headphones",
+            price: "$49.00",
+            reason: "A good pair of noise cancelling headphones changes what long travel feels like. She can finally sleep on a plane, block out the airport, or just exist in her own space without the ambient noise of being in transit. At this price, it is one of the most practical birthday gifts you can give someone who travels regularly.",
+            url: "https://www.amazon.com/dp/B0F4884LN3?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/613wL6XbeBL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Weekender Duffel Bag with Laptop Sleeve",
+            price: "$90.00",
+            reason: "A well-designed weekender is something she will use constantly. This one has a dedicated laptop sleeve, thoughtful organization throughout, and looks good enough to carry from the airport to a dinner without stopping to drop it off. If she takes a lot of quick trips and still uses a bag that is falling apart, this is a very easy win.",
+            url: "https://www.amazon.com/dp/B0CJMWQ4QK?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81ALT4VPS8L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Instax Mini 12 Instant Camera Bundle",
+            price: "$165.00",
+            reason: "Photos on a phone feel temporary. Photos from an instant camera feel like something worth keeping. This bundle comes with everything she needs to start shooting, and the mini prints are small enough to slip into a journal, stick to a mirror, or send home in a postcard. If she is someone who genuinely loves documenting her travels, this is the kind of gift that produces years of memories.",
+            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "70L Lightweight Travel Backpack",
+            price: "$249.00",
+            reason: "For anyone who travels more than a few times a year, the quality of the bag they carry matters enormously. This 70L backpack is built for multi-day trips, is lightweight enough that it does not eat into luggage limits, and is organized intelligently so she can actually find things. If she has been traveling with a bag she has outgrown or never really loved, this is the upgrade she has been putting off buying for herself.",
+            url: "https://www.amazon.com/dp/B0FRTQTTKX?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51251W6bY6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

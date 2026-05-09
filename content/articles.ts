@@ -1165,6 +1165,77 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — HOME DECOR
+  // ============================================================================
+  {
+    slug: "birthday-gifts-home-decor",
+    title: "Birthday Gifts for a Girlfriend Who's Obsessed With Her Home",
+    excerpt: "For the woman who treats her living space like a project. Gifts that actually fit into a home she cares about.",
+    occasion: "birthday",
+    interests: ["home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-08",
+    relatedArticles: [
+      "birthday-gifts-wellness",
+      "birthday-gifts-cooking",
+      "birthday-gifts-yoga",
+      "birthday-gifts-reading"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "What makes a home decor gift actually work",
+        body: "Buying home decor for someone who cares deeply about their space is a high-stakes move. She has a vision for how she wants her home to look and feel, and a random decorative object that does not match it will end up in a closet. The gifts that work here are not statement pieces or things with strong opinions about aesthetic. They are things that improve how her home feels to live in, things that are functional enough to earn their place on a shelf or nightstand, and things personal enough that she knows you thought about her specifically."
+      },
+      {
+        type: "text",
+        heading: "The shortcut that always works",
+        body: "If you are not confident about her taste in art or decor, go functional over decorative. A beautiful candle set, a silk pillowcase, a smart diffuser, or a sunrise alarm clock all improve daily life without requiring you to guess her aesthetic. They feel considered without being risky. Save the wall art and statement pieces for when you genuinely know what she would pick herself."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Aromatherapy Soy Candle Set",
+            price: "$23.00",
+            reason: "A set of eight soy candles covers every mood and season, which means she will actually burn through them rather than saving them for a special occasion that never comes. It is a low-risk gift that lands well because it looks generous, smells great, and fits any home style.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Smart WiFi Essential Oil Diffuser",
+            price: "$32.00",
+            reason: "A diffuser that connects to her phone or works with Alexa and Google Home is the kind of upgrade that blends into a well-designed space without looking like an afterthought. She can set schedules, adjust mist levels from the couch, and make her home smell exactly how she wants it to. Much more interesting than a standard diffuser and genuinely useful every day.",
+            url: "https://www.amazon.com/dp/B07DH4ZSDF?ascsubtag=%5Bartid%7C10049.g.69275335%5Bsrc%7Cmgu_bg_cos_d_bm_comm_org_us_g13602855%5Buuid%7C964c00cb990844d49e2f93c4693d1a80&asc_source=bing&asc_campaign=mgu_bg_cos_d_bm_comm_org_us_g13602855&asc_refurl=https%3A%2F%2Fwww.cosmopolitan.com%2Fstyle-beauty%2Ffashion%2Fg69275335%2Fgift-ideas-for-women%2F&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18301597d6f4c3e886f68ef830b08d4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "A 100% mulberry silk pillowcase is one of those things that feels indulgent but is genuinely functional. It is better for her hair, better for her skin, and better for her sleep. It also looks beautiful on a made bed, which matters to someone who cares about how their bedroom looks. She probably knows about silk pillowcases and has been meaning to get one. This is better than anything she would buy herself.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "The Skylight Frame lets you and her friends send photos directly to the frame from anywhere, so it is always displaying something new and personal rather than the same six vacation photos from three years ago. For someone who cares about her home, this is a genuinely beautiful object that also happens to be deeply sentimental. It is the kind of gift that gets more meaningful over time.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "The Hatch is one of the few tech products that actually looks good on a nightstand. It functions as a sunrise alarm clock, a sound machine, and a reading light in one clean device. For someone who has put thought into every corner of their bedroom, this replaces the phone-as-alarm-clock setup she probably uses and makes her whole morning routine better. It is a splurge she would appreciate every single day.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

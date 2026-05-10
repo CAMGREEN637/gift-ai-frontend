@@ -1236,6 +1236,77 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — HIKING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-hiking",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Hike",
+    excerpt: "Gear and gadgets she will actually bring on the trail. Nothing she already owns, nothing that will sit in a drawer.",
+    occasion: "birthday",
+    interests: ["hiking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-09",
+    relatedArticles: [
+      "birthday-gifts-fitness",
+      "birthday-gifts-travel",
+      "birthday-gifts-wellness",
+      "birthday-gifts-yoga"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why hiking gifts go wrong",
+        body: "Hikers are particular. They have thought carefully about what they carry and why, and they tend to be skeptical of anything that adds weight without earning it. The classic mistakes are gifts that are too generic (a water bottle she already has three of), too heavy (gear she would never actually pack), or too niche (something that only works for a specific type of trail she does not do). The gifts that land are the ones that solve a real problem she has on the trail, or make the experience noticeably better without requiring her to rethink her whole kit."
+      },
+      {
+        type: "text",
+        heading: "How to make it feel considered",
+        body: "You do not need to be a hiker yourself to give a great gift here. Pay attention to what she complains about after a long day outside. If she is always sore the next morning, recovery gear is an obvious win. If she mentions running out of water or struggling to stay hydrated, a vest with a built-in bladder is the kind of upgrade that makes every future hike better. Gifts that connect to something she has actually said will always land better than gifts that are just generically outdoorsy."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "STANLEY Quencher ProTour Tumbler 30 oz",
+            price: "$40.00",
+            reason: "Stanley makes some of the best insulated drinkware around, and the ProTour is the leakproof version built for active use. The flip straw lid means she can drink on the move without taking her pack off, and double-wall vacuum insulation keeps cold drinks cold all day on the trail. A practical gift that she will reach for constantly.",
+            url: "https://www.amazon.com/Leakproof-Cupholder-Compatible-Insulated-Stainless/dp/B0DCDZP98B?dib=eyJ2IjoiMSJ9.29dH_iwoxIhj_jwoJBkzf7HgRzM3sexdgEKX8SguWt6dS-663dyhZfvPQ5VvcBIER18rENSpM3RwNAOLKCbsTSlo_I3IJAei1rXi5g4KHcExVhnBsO-qsbc53ObReWCc3F7dZpewl05r_oAqXJ03u2DrRe89siLYmg1EMaF-nH3itmLoBj5K2OJXYq0pBIUtuZsauR64e5EbtTOjYTrBGzp6I_GVDl_ec82YCwQjug70x-nk2vhNrsuqC2nAQ9RAIRANIi5of5e3t4jPt6lTlUlaQ49kkc4a9qOHfbg5sCw.F689nwW0ga1IYpFpru3a9qJUD8Yn9XQiyVA-Jd3J24w&dib_tag=se&keywords=stanley%2Bquencher&qid=1777840415&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=37ccbd86f288942a2d304698f88d4c07&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51L-q8h+bwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hydration Running Vest Backpack 5L",
+            price: "$32.00",
+            reason: "A hydration vest is one of the most functional upgrades a hiker can make. This one comes with a 1.5L BPA-free bladder built in, adjustable fit, and enough storage for a phone, snacks, and a layer. She can run or hike hands-free without a big pack pulling on her shoulders. If she does longer trails and still carries a handheld water bottle, this is a genuine quality-of-life improvement.",
+            url: "https://www.amazon.com/dp/B07HQM4DPB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81pu2p5PqpL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Portable Waterproof Bluetooth Speaker, Petal Pink",
+            price: "$119.00",
+            reason: "The Bose SoundLink Flex is one of the most well-regarded portable speakers on the market, and the waterproof build makes it genuinely trail-ready. She can clip it to her pack, bring it to a summit, take it to a campsite, or use it in the shower after she gets back. The sound quality is in a different league from cheaper options, and at this price it is a birthday gift that feels like a proper upgrade.",
+            url: "https://www.amazon.com/dp/B0DPN69X2V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61a47LVNd4L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "GPS Running Watch with Daily Workouts",
+            price: "$169.00",
+            reason: "A Garmin watch is the kind of thing serious hikers always want but rarely buy for themselves. This one tracks heart rate, distance, pace, and GPS route data, and the battery lasts up to 20 hours in GPS mode, which covers all but the most serious multi-day adventures. If she is someone who logs her hikes, tracks her stats, or is curious about her exertion levels on the trail, this is the gift that will genuinely change how she hikes.",
+            url: "https://www.amazon.com/Garmin-Forerunner-Running-Suggested-Workouts/dp/B092RH28GN?crid=3UXLKOM2V2JMS&dib=eyJ2IjoiMSJ9.3JJNc3wPtOyEngqmKQIfNW5ats_fPIsEYUZHgSDBKvddwHtMNG_Oz04uIyMn8TKZMTxT9kwnvgZUxJKJngfkwG69ZTcfBijI4oi1Wlcw8QJFJAGJjDLaxP1cUB-4uTE6gkyHDVrUiIbcIfnxGn-vP7iJ5ZAs8cmxyZO7nTfqatXZEzhCIri8MlzzqQbLF_gp9Y2GvwspKkIjrd5JVadaKlrTAAImdAzZI5lP2bt1OgM.6zyP3ZgsgpsJblkx6IaA94uwaUq_q3veNbQEg19gcy4&dib_tag=se&keywords=garmin%2Brunning%2Bwatch&qid=1772586295&sprefix=%2Caps%2C370&sr=8-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=28aff32a41eda4391c71c358d27d6aa4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51oLbLikOeS._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "Long hikes are hard on legs, hips, and feet. The Theragun Mini is 30% smaller and lighter than the full-size version but delivers the same percussive therapy, which means she can use it on her quads and calves the evening after a hard day on the trail without hauling a brick-sized device around. Recovery is part of any serious outdoor routine, and this is the tool that makes it easy.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

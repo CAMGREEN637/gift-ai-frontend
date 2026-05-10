@@ -1541,6 +1541,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // ANNIVERSARY GIFTS — PERSONAL NOT GENERIC
+  // ============================================================================
+  {
+    slug: "anniversary-gifts-personal",
+    title: "Anniversary Gifts That Feel Personal Instead of Generic",
+    excerpt: "Skip the flowers and wine. Anniversary gifts that actually mean something.",
+    occasion: "anniversary",
+    interests: [],
+    readTime: "5 min read",
+    publishedAt: "2026-05-09",
+    relatedArticles: [
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-new-relationship",
+      "birthday-gifts-home-decor",
+      "birthday-gifts-wellness"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why anniversary gifts so often miss",
+        body: "Anniversaries carry more weight than birthdays because they are specifically about the two of you, which means a generic gift feels worse here than anywhere else. Flowers, a nice dinner, a spa voucher: all fine, none of them memorable. The gifts that she will actually remember are the ones tied to something real, a date, a place, a joke, a habit you share. You do not need to spend more. You need to be more specific."
+      },
+      {
+        type: "text",
+        heading: "What personal actually means",
+        body: "Personal does not require custom engraving or a scrapbook you spent weeks on. It means the gift could only make sense for her, for you two, for this relationship. A star map of the night you met costs less than dinner out. A scratch-off date book works because it points at your future together, not just a moment in the past. The detail that makes it personal is usually small. It just has to be deliberate."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "You enter a date, a location, and a short line of text, and it prints the exact night sky from that moment. First date, first trip, the night you made things official. It is one of the most personal gifts you can give at any price, and it costs less than a round of drinks. Order it with enough lead time to frame it before you give it.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized Gold Bar Name Bracelet",
+            price: "$27.00",
+            reason: "A dainty gold bar bracelet engraved with her name or a word that means something to you two. It is jewelry without being jewelry-gift-sized pressure, which makes it a strong anniversary pick regardless of how long you have been together. She will wear it constantly and think of you every time she notices it.",
+            url: "https://www.amazon.com/Personalized-Bracelet-Bridesmaid-Anniversary-Christmas/dp/B015DTI1OY?dib=eyJ2IjoiMSJ9.PCCDydwMZHOLTSR7mcG-URohJE-b3eKoUeyBSZ9R1rUDpaUpKeRPqGOgTI-Lz_LD8xeCMU-TpEFesF4Sb2bPjUOj1hXJCAWyp4hEoTgsjjTHY2TICW7jKHz32-pTtGmLk_Sw7-diWqgKip7wbbzXSZ9WE6lQs1NK7RpTGUTVG2qhxD_I-be4WDlM5KcfQXYASbewbAlrWUTnU4BLwgMiUvGydgSlapCdBW8jWZkbAVx_dJGg-VGAQ4n3W_-bQjx1rzidiWuUQrGyxuvH6JPR50yc2uUd8V1E8xGs.r_Xzn70VgCmJJLzrtY0rF_w5D5KrcAvQb0wahN_yrdE&dib_tag=se&keywords=Custom+coordinates+bracelet&qid=1777685069&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=29d71f5bc7c800c112cd399b0cc5fe9a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Pressed Flower Art Kit",
+            price: "$31.99",
+            reason: "A pressed flower kit gives her everything she needs to preserve and frame flowers, leaves, or anything botanical that means something. Give it alongside flowers from a place that matters, or just let her use it however she wants. It is a creative, tactile gift that produces something she made herself, which tends to be more meaningful than anything you could buy off a shelf.",
+            url: "https://www.amazon.com/Aboofx-Pressing-Detailed-instruction-Preservation/dp/B0C7T7JWWM?crid=2HCE070Q0HIFC&dib=eyJ2IjoiMSJ9.XB-VrJgulguvzs3nesGKKRWz6j4S_kMlajLr13WaxMbYofz9UU-z3NQM2Z5d85yycWyPB4zfYvgCqnl9q5IG2wPzVCd6uFH65vvq6gHmqgfT7WtSnmFIVIRPyi6qEZrirRUNOe7trKme5lBLY94QXdwywBDZxv7znCis56btA0Hiarsgv7nLjJQ0N9_p3jAiqWKlDVsU24ZB8iIMsz40pDibNTT40wCvEWyTi1aZ0t8EnuDifq-ZmsmBsdlJokCrnvNNe0miPt2LkD0Vjycped_85u7zeAt9n5qGKwPDiDI.4qxEJl5PvfGhYEpf6GXC4Ex7CQ3MG7uoN2U0fHQFJbs&dib_tag=se&keywords=Pressed%2Bflower%2Bart%2Bkit&qid=1774735650&sprefix=pressed%2Bflower%2Bart%2Bkit%2Caps%2C414&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ef0f8037debeb680b7fcc9d4c32713c5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/91K6A7TnAuL._AC_SX679_.jpg"
+          },
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Fifty scratch-off date ideas across five categories: stay in, go out, get active, get away, get creative. It is forward-looking, which is exactly what an anniversary gift should be. You are not just marking how long you have been together, you are pointing at everything still ahead. A good gift for couples who have been together long enough that the spontaneity has started to require a little more effort.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "$169.00",
+            reason: "The Lovebox sits on her desk or nightstand and spins its heart whenever you send her a photo or message from the app. It sounds simple, and it is, but it creates a small ritual of connection that builds over time. A year from now the box will hold hundreds of small moments you sent her. For a significant anniversary with a partner you want to stay deliberately present with, it is one of the most thoughtful objects on this list.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW78J?crid=107QJ3KGU5AT9&dib=eyJ2IjoiMSJ9.iy0k1nYzZ6EZAmonOpTbXRT72JZWqZMxciM2DfDXm2TyF-bYlw4gI0h86sOHBfAAFawV3k_RcpvdINEdMxCQYMcmzI8ZbGcDJs9h85h2s.ga92mLAB_rMTyOvd4jTXYw3hmzU2nRHHhtV6DXIW-ak&dib_tag=se&keywords=Lovebox+Spinning+Heart+Messenger&qid=1776654042&s=handmade&sprefix=lovebox+spinning+heart+messenger%2Cspecialty-aps%2C192&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8c9cdbf3c271910d049f4fc42520b055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The thing that ties any of these together",
+        body: "Write something down. A card, a note, two sentences on your phone that you read out loud. Tell her why you picked what you picked. The gift shows you thought about it. The note proves it."
+      },
+      { type: "cta" }
+    ]
+  }
 ];
 
 // ============================================================================

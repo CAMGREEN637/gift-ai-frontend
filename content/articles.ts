@@ -1307,6 +1307,87 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — HARD TO SHOP FOR
+  // ============================================================================
+  {
+    slug: "birthday-gifts-hard-to-shop-for",
+    title: "Birthday Gifts for a Girlfriend Who's Impossible to Shop For",
+    excerpt: "When she says she doesn't need anything and means it. A guide to gifts that work even when nothing obvious comes to mind.",
+    occasion: "birthday",
+    interests: [],
+    readTime: "5 min read",
+    publishedAt: "2026-05-09",
+    relatedArticles: [
+      "birthday-gifts-home-decor",
+      "birthday-gifts-wellness",
+      "birthday-gifts-travel",
+      "birthday-gifts-yoga"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why some people are so hard to buy for",
+        body: "There is a specific kind of dread that comes with shopping for someone who already has everything she wants, buys things for herself the moment she thinks of them, and genuinely does not care about receiving gifts. It is not that she is ungrateful. It is that her life is already full, her tastes are specific, and she would rather you not spend money than spend it on something she does not love. The pressure is real. And it is made worse by the fact that a gift that misses with someone like this is very obvious."
+      },
+      {
+        type: "text",
+        heading: "The mistake most people make",
+        body: "When people are stuck, they default to category. They think: she likes wine, so wine glasses. She likes skincare, so a face mask set. She likes cooking, so a cookbook. The problem is that someone who is genuinely into those things has already accumulated the best versions of those objects. A generic pick in a category she cares about reads as low-effort. The better move is to go either more personal or more experiential. A gift that connects to something she said, something she does every day, or something she has been putting off buying for herself will always outperform a safe category gift."
+      },
+      {
+        type: "text",
+        heading: "What actually works",
+        body: "The gifts that land for hard-to-shop-for people share a few traits. They are things she would genuinely enjoy but would feel slightly indulgent buying for herself. They improve something she does every day, which means she will think of the gift constantly. Or they are deeply personal in a way that has nothing to do with the price tag. You are not trying to find something she wants. You are trying to find something that makes her daily life noticeably better, or something that shows you were paying attention."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Kindle Paperwhite 16GB eReader",
+            price: "$159.00",
+            reason: "The Kindle works for almost anyone who reads, even occasionally. It holds thousands of books, the glare-free display is genuinely easier on the eyes than a phone screen, and the battery lasts weeks. If she reads on her phone in bed or has a stack of books she keeps meaning to get through, this removes every friction point between her and reading more. A gift that improves a habit she already has is hard to miss.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "A 100% mulberry silk pillowcase is one of the few gifts that is simultaneously practical, indulgent, and universally flattering to receive. It is better for hair, better for skin, and noticeably different to sleep on. She knows about silk pillowcases. She has probably thought about getting one. She has not, because spending eighty dollars on a pillowcase feels slightly absurd when you are buying it for yourself. That is exactly why it makes such a good gift.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "The Skylight Frame is the rare gift that gets more meaningful over time rather than less. You and her friends can send photos directly to it from anywhere, so it is always cycling through something new and personal. For someone who is difficult to buy for because she does not want more stuff, this is a gift that lives on her shelf and accumulates meaning with every photo it receives. Set it up before you give it to her and load it with photos first.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "The Hatch is a sunrise alarm clock, sound machine, and reading light combined in a single device that looks genuinely good on a nightstand. It replaces the phone-as-alarm-clock setup almost everyone uses and makes both falling asleep and waking up noticeably better. It is the kind of object she would never think to ask for, would never justify buying herself, and would use every single day. That combination is exactly what you are looking for in a gift for someone who has everything.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Rose Gold Oura Ring, Size 9",
+            price: "$499.00",
+            reason: "The Oura Ring tracks sleep, recovery, heart rate, and readiness in a ring that looks like jewelry rather than a fitness tracker. It is the best health wearable on the market for people who want the data without the screen on their wrist, and it is genuinely something most people would not buy for themselves because the price feels indulgent. If she is someone who cares about her health, her sleep, or her recovery, this is the gift that will genuinely surprise her. Nothing else on this list signals more thought.",
+            url: "https://www.amazon.com/Oura-Ring-Tracking-Wearable-Fitness/dp/B0D9WV3474?crid=1SF6Z7F9VRB46&dib=eyJ2IjoiMSJ9.IzR6mfi0tEmvMVGOTQpLj0AKbm96ymX28ha5429xXCJwa2zoLYJolC5su-0p8OebQs35hNsR-K8Cp7d9aWLh1l_5ZYDq27fOM3fpmRcEOf1_aRzgqtB_GCYzCZdjq6eujSIgGqaYDVFrfp1qsYAE3LAxabmfjKpkrTkvFQO-BCo5CecCI8A8uxb4lgzvkIxNn6xAhL_5jq5yYCstRkH_mK2VHv98Q7o7FiFH9oIkCyE.jkKLgUH4BjH_jDLkzb-EVEjSSQ4ZWZWByiENll3Qyko&dib_tag=se&keywords=Oura%2BRing%2Bgen%2B3&qid=1773371204&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=oura%2Bring%2Bgen%2B3%2B%2Caps%2C232&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7fefc7c69fb1dca3420cec09c1e66fab&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51zKmnnZU8L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing that makes any of these land better",
+        body: "For someone who does not love receiving gifts, presentation and intention matter more than the object itself. A short handwritten note explaining why you chose what you chose goes further than you think. Not a paragraph, just two or three sentences. Something that shows you thought about her specifically and not just the occasion. The gift tells her what you bought. The note tells her why you bought it for her."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

@@ -1388,6 +1388,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — ART / CREATIVE
+  // ============================================================================
+  {
+    slug: "birthday-gifts-art",
+    title: "Birthday Gifts for a Girlfriend Who's Into Art and Making Things",
+    excerpt: "For the creative girlfriend. Gifts that feed her need to make, not just consume.",
+    occasion: "birthday",
+    interests: ["art"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-09",
+    relatedArticles: [
+      "birthday-gifts-reading",
+      "birthday-gifts-home-decor",
+      "birthday-gifts-hard-to-shop-for",
+      "birthday-gifts-coffee"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The mistake people make with creative gifts",
+        body: "The reflex when shopping for someone who makes things is to buy more supplies. More paint, more yarn, more sketchbooks. The problem is that she already has supplies, and buying more of something she manages herself can feel like you did not think too hard about it. Creative people are also particular about their materials, so a random set of brushes or a generic craft kit often misses. The gifts that actually work either enable her to make something new she has not tried, give her better tools for what she already does, or support the environment she creates in."
+      },
+      {
+        type: "text",
+        heading: "What to look for",
+        body: "Think about where she creates and what that space is like. A good desk lamp that does not strain her eyes is used every session. A guided kit that takes the blank-canvas pressure away gives her a low-stakes creative outlet on evenings when she wants to make something without the weight of an original project. And a camera or photo printer connects art to the way she documents and shares her world. The best creative gifts are the ones that make the act of making easier, more comfortable, or more fun."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "8 x 12 Paint by Numbers Kit",
+            price: "$30.00",
+            reason: "Paint by numbers sounds simple, but for someone who makes things this is genuinely enjoyable in a different way than their usual work. It is structured enough to be relaxing and finished enough to feel satisfying. The kit comes framed and ready to hang, so it produces a real object at the end. A good gift for the creative person who sometimes needs permission to make something without pressure.",
+            url: "https://www.amazon.com/Numbers-Adults-Flower-Beginner-Painting/dp/B0FC67KR3K?crid=114K1XO5MJ3PQ&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.BDMfm1eo1Kgp3kJnFvH0Y9uNGBxIjWtzVTFA41_7i7U5plG_oHfu8S9atKZ2-yxP0holuHUHNht-x5fEHMjvZxImINdiulS1_gLFAcHjTC2kqScyPF3H9KjhXWDHbYJwN_QrMl9IG0Mu-gP6cdThlh8H2q6FxLYPBIuD6KWb3c5TuFzrg28z2i3Gg3b4JxIKK1xd-DGuZDtg78wHCZNxJOMdMKmQ8gvqM-o55CoShK4.wLkr9UIkIkbHpAeNLAVl9eXznql4EUwNzPcec8h0YNE&dib_tag=se&keywords=paint%2Bby%2Bnumbers%2Bkit&qid=1775437348&s=samedaystore&sprefix=paint%2Bby%2Bnumbers%2Bkit%2Csamedaystore%2C188&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=243d751b33e52b6d2d2ec084faf22e34&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81Ksu7KwWgL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Woobles Beginner Crochet Kit",
+            price: "$29.00",
+            reason: "Woobles has become the go-to starter kit for crochet because it actually teaches the skill rather than assuming it. Everything is included and the instructions are genuinely clear. For a creative person who has been curious about crochet but never started, this removes every barrier. The finished product is a small amigurumi character, which is charming enough that she will want to make another one immediately.",
+            url: "https://www.amazon.com/PRE-Order-Woobles-Beginners-Tutorials-Penguin/dp/B08YS42GPG?dib=eyJ2IjoiMSJ9.jYShvN-VGIXjTymxMZBKw2uFL3zluk1uDLnYuyrttDDWqTM4XeiBvSn57ErznvpIMIxO0Uuti-XtaFASAz6silNvXnUMmLJFtWpQs6Xts063fF2O8B6PP1yLwREYeRV3OzkI_OkIvNXTRnYlq3Sd56JXNQ2yXygKab5FzG2PvojP3nLW3f89eZG-pZ6aDKzgJ78NSjm1-w9j8847ga4VpwE99XR-2wmSD7lXqZmYIPmygaGkYiz4IIoA1ptuZPE5IlFty6UwYChTYZqRY4ImsBT4pEwp69oSg6yNhOUu9bY.HkAZcC4-r5DMvSP9UwZH0lKWSnbJ8IdWXdwCpC8ubqc&dib_tag=se&keywords=wobbles&qid=1777602032&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ab46783f8aa0ff9752596310efe85297&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71l2S+fPvFL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "LED Desk Lamp with Clamp",
+            price: "$47.00",
+            reason: "A desk lamp sounds mundane until you consider how much time a creative person spends under bad lighting. This one has seven adjustable joints, three light bars, and multiple brightness levels, which means she can position it exactly where she needs it for drawing, painting, or detailed work. It clamps onto any desk or shelf without taking up surface space. Practical gifts that improve the creative environment land better than people expect.",
+            url: "https://www.amazon.com/dp/B0BNHNG5CY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81f0B2GPxyL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Eclectic Wall Art Frame Set",
+            price: "$89.00",
+            reason: "For someone who has an opinion about what goes on their walls, a ready-to-hang art frame set with an eclectic, maximalist aesthetic is the kind of thing they would spend hours choosing themselves. This set covers vintage-inspired, modern, and bohemian styles together, which means it works as a gallery wall starter or a way to fill a corner she has been staring at blankly for months. Only give this if you have a sense of her taste. If you do, it is a very good gift.",
+            url: "https://www.amazon.com/ANERZA-Eclectic-Maximalist-Aesthetic-Pictures/dp/B0CQYVWB7M?crid=17RT1GBNO3FQ0&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.mznwvZNY8iRSje-97agJ-l9sj0AV1-ga-4J758CDlJL2pZaJUDZoH4k8iltGYT9SYW1Occ0KFHlJVgF31pcUYrq51S43qx9QzpuY8lzRLbodGf_hDekyS67Ur82IG2t0GpVeXNBVO7btoZZguwRJmUGL_oStpXXeJLcpVe_RBx0JReGow0-Ne_7khhD-EqUZKkORZtgmEfsH8YAt9Hcstx6iRj4gy26GXnHDmiClRdI.BFRENzT7gYhQQcKtBNcDKXuzsZGUAVNNGGmyBXMMrRQ&dib_tag=se&keywords=art%2Bprint%2Bset&qid=1775435341&s=samedaystore&sprefix=art%2Bprint%2Bset%2Csamedaystore%2C282&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f161db6d93aa37c284a78b5d8568c63c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+RnG12xAL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Instax Mini 12 Instant Camera Bundle",
+            price: "$165.00",
+            reason: "A creative person who does not already own an instant camera is missing something. The Instax Mini 12 produces small physical prints on the spot, which means she can build a wall of images, tuck them into sketchbooks, or send them to people in letters. The bundle includes film and accessories to get started immediately. For someone who thinks visually and documents everything, this becomes part of how she sees and records the world.",
+            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on giving creative gifts",
+        body: "Creative people can be sensitive about their work, so the framing matters. A kit or a guided project is not a comment on her skill level. It is a different kind of making, one with lower stakes and no blank canvas anxiety. Present it that way and she will appreciate it for what it is."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

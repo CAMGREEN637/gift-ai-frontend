@@ -1465,113 +1465,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
-{
-    slug: "gifts-for-new-relationship",
+// ============================================================================
+  // GIFTS — NEW RELATIONSHIP
+  // ============================================================================
+  {
+    slug: "gifts-new-relationship",
     title: "Gifts for a New Relationship That Aren't Too Intense",
-    excerpt: "You like her. You want to get her something. You just don't want it to be weird. These gifts hit the right note — thoughtful without being too much.",
-    occasion: "just_because",
-    interests: ["coffee", "cooking", "wellness", "reading", "fitness"],
-    readTime: "4 min read",
-    publishedAt: "2026-05-10",
+    excerpt: "Early relationship gift ideas that are thoughtful without being overwhelming. The right amount for where things are.",
+    occasion: "birthday",
+    interests: [],
+    readTime: "5 min read",
+    publishedAt: "2026-05-09",
     relatedArticles: [
-      "birthday-gifts-coffee",
-      "mothers-day-gifts-under-50",
-      "mothers-day-gifts-to-avoid"
+      "birthday-gifts-hard-to-shop-for",
+      "birthday-gifts-home-decor",
+      "birthday-gifts-art",
+      "birthday-gifts-coffee"
     ],
     sections: [
       {
         type: "text",
-        heading: "The new relationship gift problem",
-        body: "You've been seeing each other for a few weeks or a couple of months. Things are going well. A birthday comes up, or a trip, or you just want to do something nice — and suddenly you're stuck. Too small feels like you don't care. Too big feels like you're rushing things. Jewelry is way too much. Flowers feel like a first date. The sweet spot is something that's clearly considered but doesn't have the weight of a grand gesture. Fun, specific to her, and impossible to misread as anything more than 'I was thinking about you.'"
+        heading: "Why early relationship gifts are uniquely stressful",
+        body: "The problem with gifting someone you have only been seeing for a few months is that almost every option sends a message. Too expensive reads as intense. Too cheap reads as indifferent. Too personal signals you have been paying more attention than feels comfortable at this stage. Too generic signals you have not been paying attention at all. You are trying to hit a narrow target: something that shows you thought about her without implying you have already planned the next five years. Most men overthink it. The answer is usually simpler than it feels."
       },
       {
         type: "text",
-        heading: "What works, and why",
-        body: "The best new relationship gifts share a few traits: they're experiences or objects that invite doing something together, they reflect something she's mentioned or you've noticed, and they have enough personality to feel personal without being overwhelming. Bonus points if there's a laugh in there somewhere."
+        heading: "The category that almost always works",
+        body: "Gifts that create an experience together are the safest and often the most memorable option in a new relationship. A sushi making kit, a cocktail set, a picnic backpack. These are not things you give and walk away from. They are invitations to do something together, which is exactly what a new relationship is built on. The gift becomes the plan, and the plan becomes a good memory. At this stage, shared experiences are worth more than objects."
       },
       {
         type: "picks",
         gifts: [
           {
-            name: "Wine Folly Wine Tasting Journal",
-            price: "$19.00",
-            reason: "If you've had wine together — or she's mentioned she's into it — this is a low-key, charming gift. A guided tasting notebook she can bring to a wine bar or use at home. It's specific, it's fun, and it quietly says 'let's do this together sometime.' Under $20, zero pressure.",
-            url: "https://www.amazon.com/Wine-Folly-Tasting-Journal-Guided/dp/1523516445?crid=HBJFWPKFZGQPB&dib=eyJ2IjoiMSJ9.dWDymGN5EDnxJqb7C8y_vVF3GqLZ6X2VlEGlmRpbALz7Ql_bTEUEIK6BO0E79b2dq5LKNGO7_F_Ld1GvPIJBFZaRw9XJrqbvDn6a8FnIGJGCnQk9G7TIwpEFqVBqdkVJFRXiT5Y-W7-e4mz1cJjNK9nv4mTGRTdqdYYhQQFNu0EKPJfZYX7-bqtJz55Fc4aBQE8N9RSlPqjHb5mRPmE7rCPSAH-N8pxOstVW68vg.4EFPC7x6aw4vF2RFCJ3XHZAYxuFB4_0i1dliqJCLekQ&dib_tag=se&keywords=wine%2Btasting%2Bjournal&qid=1775434600&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1a2db51b3e3af7c01ffa51f9cbabb48e&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71nBcC3YXKL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
+            name: "Aromatherapy Soy Candle Set",
             price: "$23.00",
-            reason: "A candle set is a reliable low-stakes gift — but this one earns its place because it comes as eight different scents in vintage amber jars, which makes it feel like a proper gift set rather than a checkout-line impulse buy. She gets to explore and pick her favorites. Casual, useful, appreciated.",
+            reason: "A set of eight soy candles is warm, thoughtful, and completely pressure-free. It is something she will use at home, enjoy on her own, and associate with the fact that you picked something nice without making a big deal of it. At this price point it signals effort without intensity, which is exactly the tone you want early on.",
             url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
           },
           {
-            name: "Thoughtfully Skinny Cocktail Mixer Set",
+            name: "20 Piece Sushi Making Set",
+            price: "$25.00",
+            reason: "A sushi kit is a date in a box. You buy it, suggest making sushi together one evening, and suddenly you have a plan that is low-key, fun, and surprisingly memorable. It is not a gift that sits on a shelf. It is something you do together, which at this stage of a relationship is more valuable than almost anything you could wrap up and hand her.",
+            url: "https://www.amazon.com/dp/B09L3FH1F5?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81c9N+Cn5lL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Skinny Cocktail Mixer Set, 12 Flavors",
             price: "$26.00",
-            reason: "A cocktail mixer set is a gift that practically invites itself over. Eight mixers — skinny margarita, cosmopolitan, mojito, and more — that you can try together. Fun, low-key, and the kind of thing that leads to a good evening. This is a 'let's hang out' gift, not a 'this is serious' gift.",
-            url: "https://www.amazon.com/Thoughtfully-Cocktails-Skinny-Cocktail-Sampler/dp/B07QW43DMB?crid=27F9KPJ8YDR5Z&dib=eyJ2IjoiMSJ9.EaNv45dKDEuNdYP0H2O3mGjkLLJLFYOVp-bJMFUG_iyEd4O3Jy-aBvDgRXa-5Fkp1M3z6fmtOYUdcGd4cFkUa1d3rZOWrZRhcMlAuDJZ7vU5Gg_74fzGH4xnYY5sSFYVVNsLnmB8EhC7YE1L9bH16ySqvU0F9WbHT2mHmrNTRF5mSGR6WoGQQbRFMqdxVHrxrZzVUvHflVqilklKomCSDL3wqbLvBJCNgM0f-5iQQh7_4cE5Mq3lDgjfZHFr8aB-dICFCHJkQmqNJF2A2ggBJjRajlKQkHFxsYXN37M.Ev3HEg3I0WCj58KaUkBPcRFhU6qK5soBhV7gU4vPMJcg&dib_tag=se&keywords=cocktail%2Bmixer%2Bset&qid=1774829200&sprefix=cocktail%2Bmixer%2Bset%2Caps%2C277&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=aad2b2c7c8e70a2d2cf4f29b5f1a5c50&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            reason: "Twelve cocktail syrup flavors is another gift that doubles as an evening together. Low-calorie mixers that work with whatever spirit you have at home, no bar equipment required. It is playful, shareable, and costs less than two drinks out. A good option if she is the type who enjoys a drink at home over going out, or if you just want something with more personality than a bottle of wine.",
+            url: "https://www.amazon.com/Thoughtfully-Cocktail-Hawaiian-Sunrise-Contains/dp/B07R2P9ZLZ?crid=25SKHVWMIQV&dib=eyJ2IjoiMSJ9.75CdVMojuN5lJw9oAyVGVFQe0noHu95n26uqbTT0_85msyu12MQNF-a8aaQ095tWeU1-CdKHBErf_WYLXmsuYy6L4MDy0ipLte77ippPqTqQEn7pY45Is9Wjf8Yz-4QmE1yYBkFitQz6iEncALIzNbdtfzjETo1Gz9_rdqfVNRyfXoos2LX0yLk8s374lpw59lcx8AdbX3S1N-yMwhwpTU2ydxehg9ATzfYgtI7QszN7Q0xAHEoeAOuH_1B31KT_8a8wHL54hdhqUSaNfNROgDtVWkUKdvDL1W1jDKylyr4.FUdd81f8NEE9PKKzKpd2AXeRUkMYteLJubXnxGM_m6A&dib_tag=se&keywords=cocktail%2Bsyrup%2Bsampler&qid=1773364782&sprefix=ocktail%2Bsyrup%2Bsampler%2Caps%2C235&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=660ad516414602577d937f4bd362c949&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51Zm3BdXWPL._SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "The Woobles Crochet Kit for Beginners",
-            price: "$29.00",
-            reason: "Unexpected, a little playful, and genuinely zero romantic pressure. If she's mentioned wanting to try a new hobby, or you've seen the crochet kits all over her social media, this is an excellent gift. It's charming, it's fun, and it shows you were paying attention to something other than the obvious. No overthinking required.",
-            url: "https://www.amazon.com/Woobles-Beginner-Crochet-Kit-Crochet/dp/B09TDV1SL1?crid=3BQHLRQLYYFOU&dib=eyJ2IjoiMSJ9.KNm2pR3-MnA3lUx-UMFzv-4kYfHWLFBJhFvk3YYbBvAg2PBHCLnUVXqVG9UMDGolM0q1dBhfpDnQj_RNBCVxMPJHHijDVCpwQJFBzw2MxRicPe43wA8P_KQGG8PNFb9a4MHuWHGiD3g-f8Tp_k2EOFC4BeBbJNXiM3SJumyZXq3F14PZRbfDLqQ2xXiZQcm4kJvAuFHYE9ZfzKlqMnv3gjPQkm0AV7B8bGW5dT7xDs0eR2Bp7X5I0RN6NhPGDx30l0s8bvvovTkCasOkZ-9c0qpIp4M0TuiMUPcvJvR5J.Mm5LLvJkOXRHGmzLMFgWBHApE2rkPHvkMmVt5DXKgRU&dib_tag=se&keywords=woobles%2Bcrochet%2Bkit&qid=1775430500&sprefix=woobles%2Bcrochet%2Bkit%2Caps%2C223&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9ed3d51dc71bfedd9e1a90ae28a23e12&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71kS9WR06BL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Mini Dates – 30 Date Night Ideas Card Deck",
-            price: "$29.99",
-            reason: "This one threads the needle perfectly. Thirty date ideas on scratch-off cards, all doable for under $10 — coffee walks, picnics, bookshop browsing. It's a gift that says 'I want to keep spending time with you' without saying anything heavier than that. Playful, practical, and genuinely fun to open together.",
-            url: "https://www.amazon.com/Mini-Dates-Night-Ideas-Couples/dp/B0BV3C6MF8?crid=3A01F4C5DG0X8&dib=eyJ2IjoiMSJ9.0B4OWR14SLXJc4tJxoaSNwh5b2VflFi58P7Efu_9kXXpMn1-1hYBQeMwFMwHvKWJibMV6f8OWC9xGEDzqN2tkCmElEt2wWa-5gRRBVIY5RwABN5DFjxo5E4m9pcJMH9HbpBF91cxoTrC0F1G_NqCsIPkPqSPVJGLJD7C9bj6m3Nqo_1FYjLW3jBNJqS7RO07lMMhS2pTbzxkMqPFEHT_rHyoawSh8HVPtF4lD5xk3VoY7sLl3CXDxMqFCcTBXWlCyVMuNnxRxFMkCiXHa3nSE.O1E5TBaBoTwLKjBLOBqDDVKBKW8U-4XA8FZQf7TGAmrI&dib_tag=se&keywords=Mini+Dates+card+deck&qid=1775432000&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1eb7a5e64c1c2a3e7e5de84c4b63f9e7&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71b7juZJqhL._SL1500_.jpg"
-          },
-          {
-            name: "The Date Night Book – 60 Scratch-Off Date Ideas",
-            price: "$42.00",
-            reason: "A step up from the card deck — this is a proper keepsake book with 60 scratch-off dates organized by category: stay-in, go-out, adventure, and more. It's a gift with a built-in inside joke ('which one are we doing first?') and a subtle way of saying you're excited about what's coming, not trying to define what it is.",
-            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Ideas/dp/B0CDSYJN2G?crid=1L03HBBVXQWHM&dib=eyJ2IjoiMSJ9.5EzJiWFCIr9PqXGx4T_g8k-w-v0CDp4oMfH0hqYtGnADPNKPAe-7w5iJvO9s5FDqFCfFZM8_ZDvVmyCSSxl4aUH2hm5VWTLEGXCwmVcvY3fMdWrTfDNEFuq8w7GPJXxFkZJ7BUAlH5A3AY3sIRyPIJMxpNdAh4OWe1wz5qKqGFNKaP0TTZO6J4_P6amO1GMWsyvHHe0nNJt5g1BKknY5L22aFQbr78w4Bm8gqJDRRsLbPXF2A9eDPaQK4AUUwvW-6o3TuMMqkYnkpFKdIMVH9b9eywEdPZ6GTCkwRpA.KPUB8nW3V6D3WZBOLGSkmGRp_5w9n7x_mzT9Gg3xCLI&dib_tag=se&keywords=date+night+scratch+off+book&qid=1774829500&sprefix=date+night+scratch+off+book%2Caps%2C258&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=3b7c5e9f6a8d1c2e4f7a9b3d5e8f2a1b&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Thoughtfully Gourmet Olive Oil Sampler Gift Set",
-            price: "$43.00",
-            reason: "If she cooks, or you've cooked together, this is a gift with personality. Six uniquely flavored olive oils — truffle, garlic, chili, lemon, and more — in a proper gift set. It's specific, a little unexpected, and it has a natural use together. The kind of gift that earns a 'this is so you' without making anything weird.",
-            url: "https://www.amazon.com/Thoughtfully-Gourmet-Olive-Sampler-Flavored/dp/B07MQLMJVS?crid=WQGLXPJVV3WY&dib=eyJ2IjoiMSJ9.LLHZE1kVYnM6NVL2h4n4v5Q_Cf2-RGn-9MDII-GSBZ-NxNRH0sP7t9b5RR7EqTGDFfGWPr6zrz0qdtReSJkZCwfNPE0L8BOjpg0AkdKRk9RTjmUW62Yo0X4DRl47NuJVJEFHxuLSJL6RPZjn5GOGBj_KbWFBFqsYlCOJlwLiJFGp-5jGw6CL6FN_6yFYr8rKeSzr-x4dkTGBnx5bnLxFAHMRRobqwZXlKzFbSqXFfFm6JXTz1Ot3E4B0iRWqCsBa2mLcF_7FMthElE4pjBIA.mq5i3W6H-CwGLQg5p0s_yC-sxV3VqZqRE0VEv7lCk9U&dib_tag=se&keywords=olive%2Boil%2Bsampler%2Bgift%2Bset&qid=1775434200&sprefix=olive%2Boil%2Bsampler%2Bgift%2Bset%2Caps%2C237&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c4c2a0a6b3d5e7f9a1b2c4d6e8f0a2b4&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Espresso Martini Complete Kit",
-            price: "$45.00",
-            reason: "A full espresso martini kit — shaker, glasses, syrups, and instructions. This is a gift and a plan in one: the implied message is 'let's make these.' It's fun, it's specific to a drink that's genuinely having a moment, and it has no romantic pressure whatsoever. Just a good evening waiting to happen.",
-            url: "https://www.amazon.com/Espresso-Martini-Kit-Cocktail-Making/dp/B0CH7YP7HN?crid=3NKFX1QMVL5H8&dib=eyJ2IjoiMSJ9.NxA0j-Vo2_FhPV0ADFPkXXUPGm1J9L2Y7XC4zGHFI7DvaTSJGFHc2yFrMoN5E1ZT9JXMH9KFLnGKp8OTkI3fqDZR9n3tYQMlJJRf7Lb5n1bsNZ3PcTTiobGfNbCrH0hqdNtXhHHGPbbFGwmyCcHXYLlJkHxN9YyH5f_5zJd4a0ym9TDnfq0_eTM0U3F5fBJr4_BNCY2PBgmYdEIrX9rXijEwN4a4cKZVN4PdPuqyiTSGpFJb4Wm6jVjXbN4oTSJdxelHiJFrN2oVUmBYjsk.5E6RxvxVW8xkHk8Y5UEI7V9j0PDHLA3m9kAnc7oMVRE&dib_tag=se&keywords=espresso+martini+kit&qid=1774830000&sprefix=espresso+martini+kit%2Caps%2C265&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d8e0f2a4b6c8e0f2a4b6c8e0f2a4b6c8&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "Victrola Journey Bluetooth Portable Record Player",
+            name: "Victrola Journey Bluetooth Record Player",
             price: "$54.00",
-            reason: "If she's into music — or you've had a good conversation about albums — this is the gift that feels like a cool discovery, not a romantic statement. A portable suitcase-style turntable with Bluetooth. It's retro, it's fun, it doubles as a conversation piece, and it's the kind of thing she'll show people. A statement gift with zero intensity.",
-            url: "https://www.amazon.com/Victrola-Bluetooth-Suitcase-Record-Player/dp/B07MTBCLRP?crid=1SPFMYGKZWXJZ&dib=eyJ2IjoiMSJ9.IaEMVdHLxAIgApI1NqCvHmjc38t5HZdxoYqfANQ4JI4gZJlgRfHwN1aSVQqWvZ5d1yqP4GCbzWHtL_vEhJd2tJqz3JV-wC9d-dYobxjhWpEiF7sTQqdEHqzQV5XNwEZV9LDRuhtXE6Edk55Kgm7CtLMPeJx_c5jJEhPnM5IGHUO56B5yJJcDSrgKqLPjrx8JnIDEMOG_dOWcwjGcl5FIxYHlBXL7O9q18EBuaYH_3xVMFy-UYB3Vn5o3A8NaXCUSm8UFWLGE3pEfxpBhlY8D.ROe3i5rnRRZ5iRHFXqHqMn4A_eBQ9r42Sd0LkxjLf-k&dib_tag=se&keywords=victrola+journey+bluetooth+record+player&qid=1775432500&sprefix=victrola+journey+record+player%2Caps%2C252&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+            reason: "A portable record player is the kind of object that makes a room feel different. It is also a conversation piece, something to browse records for together, and a way to suggest she bring it over or that you go look for vinyls at a shop together. It is not overly personal, it does not require knowing her taste deeply, and it sits at a price that says you put thought in without going overboard. A strong mid-range option for someone who has any interest in music.",
+            url: "https://www.amazon.com/Victrola-Bluetooth-Suitcase-Turntable-Turquoise/dp/B00UMVVUOC?crid=3A6UL297LFY65&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.B_2j35_Vg9b_AlLlAUMvulZRsbQ7rGVyBiFjwAtjPxFUj-W-s6TBlqDWEPkCLLV77y8Fh4ZCrfILitMl4RUmFIGqRgDsFObmc4IxNOk40EubSEnaBENO8Cly1yIhjuCDG0WpG_VgKQHZo-y_L4iBEQCJyOKbjg_ROqzJo3zDZVfIqg_MxH7XGNV4GPGHvcj124RaGYEeofb_MF5ItrlScdDpwbOM-zSn7ubGypozgec.6I38cXLys5ntWFv_Rol112QAE9I9ACrlVDl76Vy_QzY&dib_tag=se&keywords=bluetooth%2Brecord%2Bplayer&qid=1775431322&s=samedaystore&sprefix=bluetooth%2Brecord%2Bplayer%2Csamedaystore%2C169&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=22ef620ab421f22cfe313ea42640766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71q-KKcG4aL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "Tesla Box Electronic Puzzle Box",
-            price: "$64.00",
-            reason: "An escape-room-in-a-box that takes about an hour to solve. This one is purely about having a good time together — no subtext, no sentimentality, just a genuinely fun experience that you do side by side. It's the kind of gift that creates a memory rather than an expectation, which is exactly right for where things are.",
-            url: "https://www.amazon.com/Tesla-Box-Electronic-Puzzle-Escape/dp/B089QVXFK8?crid=7HXKM3P2WQ4NZ&dib=eyJ2IjoiMSJ9.ZPxTNBqm4-NfXLyBPpGKGU5mYuFDAbY68G0IOkYGfLKOqCH3mnKBVTe8qwDCb3qiBGnjO3rdMmKV88A0K0pjKqq4rvNaWI27mAiqWP9JVWyh8N2kXP0IrxHnb-aBiPj6JEjV-hO1KPjJ1MdFi5NbX7A_l9e6BwVm0R9vPe-JGO1I8cKLVq8B9s-3tAk5nFfX2r3dNqnHXtFZBF0b8oyvnMbyCF1VK3W3YWxqlaSuqHiP9hbOj5fCxBhkJ7i5-cKP94yRyXLwGVmRLv9Jbqr4M.TFEinNs3aOPRhL4Rq8sJ9bGZdQ9VoWKPiJv6dNyAOVs&dib_tag=se&keywords=tesla+box+puzzle&qid=1775432800&sprefix=tesla+box+puzzle%2Caps%2C244&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully kitted picnic backpack is a gift and a plan at the same time. It comes with plates, cutlery, glasses, and a insulated pouch for food, all packed into a backpack. You suggest a picnic, she brings the backpack, and you have a genuinely nice afternoon with almost no planning required. It is romantic without being heavy, practical without being boring, and it will get used every summer for years.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
       },
       {
         type: "text",
-        heading: "One rule worth keeping in mind",
-        body: "Skip anything that requires her to wear it, put it in her home permanently, or involves a photo of the two of you. Those are great gifts — later. Right now, fun and low-pressure beats thoughtful and heavy every time. The goal is to give her something that makes her smile without making her think about where this is going. You've got plenty of time for the bigger gestures."
+        heading: "One thing worth remembering",
+        body: "At this stage, how you give the gift matters as much as what it is. A small gesture with good delivery, a reason attached, a plan built around it, will land better than a more expensive object handed over with nothing behind it. Keep it light. Keep it fun. Save the grand gestures for when you know each other better."
       },
       { type: "cta" }
     ]
-  }
+  },
 ];
 
 // ============================================================================

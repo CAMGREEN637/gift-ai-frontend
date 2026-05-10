@@ -1099,73 +1099,73 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
   // BIRTHDAY GIFTS — TRAVEL
   // ============================================================================
   {
-    slug: "birthday-gifts-travel",
-    title: "Birthday Gifts for a Girlfriend Who's Always Traveling",
-    excerpt: "Practical, beautiful, and actually useful gifts for the woman who lives out of a suitcase.",
-    occasion: "birthday",
-    interests: ["travel"],
-    readTime: "5 min read",
-    publishedAt: "2026-05-08",
-    relatedArticles: [
-      "birthday-gifts-wellness",
-      "birthday-gifts-reading",
-      "birthday-gifts-yoga",
-      "birthday-gifts-coffee"
-    ],
-    sections: [
-      {
-        type: "text",
-        heading: "Why travel gifts are tricky to get right",
-        body: "The problem with buying gifts for a traveler is that she has already figured out her system. She knows exactly which bag she likes, how she packs, and what she carries on. Walk into this blind and you risk buying something she already owns, something too bulky to bring, or something that sounds great but collects dust at home. The gifts that work are the ones that make travel itself more comfortable, more organized, or more enjoyable in the moment."
-      },
-      {
-        type: "text",
-        heading: "Think about the trip, not the destination",
-        body: "The best travel gifts are useful at 30,000 feet or in a rental car at 6am, not just in some aspirational vacation photo. If she travels for work, she needs different things than someone who only takes leisure trips. Noise cancelling headphones matter on a red eye. A compact instant camera matters on a beach trip with friends. A weekender bag matters for the long weekend more than the two-week holiday. Match the gift to how she actually travels and you will be the one she thinks of every time she packs."
-      },
-      {
-        type: "picks",
-        gifts: [
+        slug: "birthday-gifts-travel",
+        title: "Birthday Gifts for a Girlfriend Who's Always Traveling",
+        excerpt: "Practical, beautiful, and actually useful gifts for the woman who lives out of a suitcase.",
+        occasion: "birthday",
+        interests: ["travel"],
+        readTime: "5 min read",
+        publishedAt: "2026-05-08",
+        relatedArticles: [
+          "birthday-gifts-wellness",
+          "birthday-gifts-reading",
+          "birthday-gifts-yoga",
+          "birthday-gifts-coffee"
+        ],
+        sections: [
           {
-            name: "Compression Packing Cubes for Travel",
-            price: "$59.00",
-            reason: "Packing cubes sound like a boring gift until she actually uses them. These compression ones let her fit nearly twice as much into a carry-on, eliminate the suitcase chaos she deals with every trip, and keep everything organized from departure to return. Travelers who switch to packing cubes never go back.",
-            url: "https://www.amazon.com/dp/B0CLVYTLFB?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/91i0aP-D56L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            type: "text",
+            heading: "Why travel gifts are tricky to get right",
+            body: "The problem with buying gifts for a traveler is that she has already figured out her system. She knows exactly which bag she likes, how she packs, and what she carries on. Walk into this blind and you risk buying something she already owns, something too bulky to bring, or something that sounds great but collects dust at home. The gifts that work are the ones that make travel itself more comfortable, more organized, or more enjoyable in the moment."
           },
           {
-            name: "Wireless Noise Cancelling Over-Ear Headphones",
-            price: "$49.00",
-            reason: "A good pair of noise cancelling headphones changes what long travel feels like. She can finally sleep on a plane, block out the airport, or just exist in her own space without the ambient noise of being in transit. At this price, it is one of the most practical birthday gifts you can give someone who travels regularly.",
-            url: "https://www.amazon.com/dp/B0F4884LN3?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/613wL6XbeBL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            type: "text",
+            heading: "Think about the trip, not the destination",
+            body: "The best travel gifts are useful at 30,000 feet or in a rental car at 6am, not just in some aspirational vacation photo. If she travels for work, she needs different things than someone who only takes leisure trips. Noise cancelling headphones matter on a red eye. A compact instant camera matters on a beach trip with friends. A weekender bag matters for the long weekend more than the two-week holiday. Match the gift to how she actually travels and you will be the one she thinks of every time she packs."
           },
           {
-            name: "Weekender Duffel Bag with Laptop Sleeve",
-            price: "$90.00",
-            reason: "A well-designed weekender is something she will use constantly. This one has a dedicated laptop sleeve, thoughtful organization throughout, and looks good enough to carry from the airport to a dinner without stopping to drop it off. If she takes a lot of quick trips and still uses a bag that is falling apart, this is a very easy win.",
-            url: "https://www.amazon.com/dp/B0CJMWQ4QK?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/81ALT4VPS8L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+            type: "picks",
+            gifts: [
+              {
+                name: "Compression Packing Cubes for Travel",
+                price: "$59.00",
+                reason: "Packing cubes sound like a boring gift until she actually uses them. These compression ones let her fit nearly twice as much into a carry-on, eliminate the suitcase chaos she deals with every trip, and keep everything organized from departure to return. Travelers who switch to packing cubes never go back.",
+                url: "https://www.amazon.com/dp/B0CLVYTLFB?tag=cbggiftapp637-20",
+                image_url: "https://m.media-amazon.com/images/I/91i0aP-D56L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+              },
+              {
+                name: "Wireless Noise Cancelling Over-Ear Headphones",
+                price: "$49.00",
+                reason: "A good pair of noise cancelling headphones changes what long travel feels like. She can finally sleep on a plane, block out the airport, or just exist in her own space without the ambient noise of being in transit. At this price, it is one of the most practical birthday gifts you can give someone who travels regularly.",
+                url: "https://www.amazon.com/dp/B0F4884LN3?tag=cbggiftapp637-20",
+                image_url: "https://m.media-amazon.com/images/I/613wL6XbeBL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+              },
+              {
+                name: "Weekender Duffel Bag with Laptop Sleeve",
+                price: "$90.00",
+                reason: "A well-designed weekender is something she will use constantly. This one has a dedicated laptop sleeve, thoughtful organization throughout, and looks good enough to carry from the airport to a dinner without stopping to drop it off. If she takes a lot of quick trips and still uses a bag that is falling apart, this is a very easy win.",
+                url: "https://www.amazon.com/dp/B0CJMWQ4QK?tag=cbggiftapp637-20",
+                image_url: "https://m.media-amazon.com/images/I/81ALT4VPS8L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+              },
+              {
+                name: "Instax Mini 12 Instant Camera Bundle",
+                price: "$165.00",
+                reason: "Photos on a phone feel temporary. Photos from an instant camera feel like something worth keeping. This bundle comes with everything she needs to start shooting, and the mini prints are small enough to slip into a journal, stick to a mirror, or send home in a postcard. If she is someone who genuinely loves documenting her travels, this is the kind of gift that produces years of memories.",
+                url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+                image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+              },
+              {
+                name: "70L Lightweight Travel Backpack",
+                price: "$249.00",
+                reason: "For anyone who travels more than a few times a year, the quality of the bag they carry matters enormously. This 70L backpack is built for multi-day trips, is lightweight enough that it does not eat into luggage limits, and is organized intelligently so she can actually find things. If she has been traveling with a bag she has outgrown or never really loved, this is the upgrade she has been putting off buying for herself.",
+                url: "https://www.amazon.com/dp/B0FRTQTTKX?tag=cbggiftapp637-20",
+                image_url: "https://m.media-amazon.com/images/I/51251W6bY6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+              }
+            ]
           },
-          {
-            name: "Instax Mini 12 Instant Camera Bundle",
-            price: "$165.00",
-            reason: "Photos on a phone feel temporary. Photos from an instant camera feel like something worth keeping. This bundle comes with everything she needs to start shooting, and the mini prints are small enough to slip into a journal, stick to a mirror, or send home in a postcard. If she is someone who genuinely loves documenting her travels, this is the kind of gift that produces years of memories.",
-            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          },
-          {
-            name: "70L Lightweight Travel Backpack",
-            price: "$249.00",
-            reason: "For anyone who travels more than a few times a year, the quality of the bag they carry matters enormously. This 70L backpack is built for multi-day trips, is lightweight enough that it does not eat into luggage limits, and is organized intelligently so she can actually find things. If she has been traveling with a bag she has outgrown or never really loved, this is the upgrade she has been putting off buying for herself.",
-            url: "https://www.amazon.com/dp/B0FRTQTTKX?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/51251W6bY6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          }
+          { type: "cta" }
         ]
       },
-      { type: "cta" }
-    ]
-  },
 // ============================================================================
   // BIRTHDAY GIFTS — HOME DECOR
   // ============================================================================
@@ -1461,6 +1461,113 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         type: "text",
         heading: "A note on giving creative gifts",
         body: "Creative people can be sensitive about their work, so the framing matters. A kit or a guided project is not a comment on her skill level. It is a different kind of making, one with lower stakes and no blank canvas anxiety. Present it that way and she will appreciate it for what it is."
+      },
+      { type: "cta" }
+    ]
+  },
+{
+    slug: "gifts-for-new-relationship",
+    title: "Gifts for a New Relationship That Aren't Too Intense",
+    excerpt: "You like her. You want to get her something. You just don't want it to be weird. These gifts hit the right note — thoughtful without being too much.",
+    occasion: "just_because",
+    interests: ["coffee", "cooking", "wellness", "reading", "fitness"],
+    readTime: "4 min read",
+    publishedAt: "2026-05-10",
+    relatedArticles: [
+      "birthday-gifts-coffee",
+      "mothers-day-gifts-under-50",
+      "mothers-day-gifts-to-avoid"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The new relationship gift problem",
+        body: "You've been seeing each other for a few weeks or a couple of months. Things are going well. A birthday comes up, or a trip, or you just want to do something nice — and suddenly you're stuck. Too small feels like you don't care. Too big feels like you're rushing things. Jewelry is way too much. Flowers feel like a first date. The sweet spot is something that's clearly considered but doesn't have the weight of a grand gesture. Fun, specific to her, and impossible to misread as anything more than 'I was thinking about you.'"
+      },
+      {
+        type: "text",
+        heading: "What works, and why",
+        body: "The best new relationship gifts share a few traits: they're experiences or objects that invite doing something together, they reflect something she's mentioned or you've noticed, and they have enough personality to feel personal without being overwhelming. Bonus points if there's a laugh in there somewhere."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Wine Folly Wine Tasting Journal",
+            price: "$19.00",
+            reason: "If you've had wine together — or she's mentioned she's into it — this is a low-key, charming gift. A guided tasting notebook she can bring to a wine bar or use at home. It's specific, it's fun, and it quietly says 'let's do this together sometime.' Under $20, zero pressure.",
+            url: "https://www.amazon.com/Wine-Folly-Tasting-Journal-Guided/dp/1523516445?crid=HBJFWPKFZGQPB&dib=eyJ2IjoiMSJ9.dWDymGN5EDnxJqb7C8y_vVF3GqLZ6X2VlEGlmRpbALz7Ql_bTEUEIK6BO0E79b2dq5LKNGO7_F_Ld1GvPIJBFZaRw9XJrqbvDn6a8FnIGJGCnQk9G7TIwpEFqVBqdkVJFRXiT5Y-W7-e4mz1cJjNK9nv4mTGRTdqdYYhQQFNu0EKPJfZYX7-bqtJz55Fc4aBQE8N9RSlPqjHb5mRPmE7rCPSAH-N8pxOstVW68vg.4EFPC7x6aw4vF2RFCJ3XHZAYxuFB4_0i1dliqJCLekQ&dib_tag=se&keywords=wine%2Btasting%2Bjournal&qid=1775434600&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1a2db51b3e3af7c01ffa51f9cbabb48e&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71nBcC3YXKL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Scented Candles for Home – 8 Pack Aromatherapy Set",
+            price: "$23.00",
+            reason: "A candle set is a reliable low-stakes gift — but this one earns its place because it comes as eight different scents in vintage amber jars, which makes it feel like a proper gift set rather than a checkout-line impulse buy. She gets to explore and pick her favorites. Casual, useful, appreciated.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Thoughtfully Skinny Cocktail Mixer Set",
+            price: "$26.00",
+            reason: "A cocktail mixer set is a gift that practically invites itself over. Eight mixers — skinny margarita, cosmopolitan, mojito, and more — that you can try together. Fun, low-key, and the kind of thing that leads to a good evening. This is a 'let's hang out' gift, not a 'this is serious' gift.",
+            url: "https://www.amazon.com/Thoughtfully-Cocktails-Skinny-Cocktail-Sampler/dp/B07QW43DMB?crid=27F9KPJ8YDR5Z&dib=eyJ2IjoiMSJ9.EaNv45dKDEuNdYP0H2O3mGjkLLJLFYOVp-bJMFUG_iyEd4O3Jy-aBvDgRXa-5Fkp1M3z6fmtOYUdcGd4cFkUa1d3rZOWrZRhcMlAuDJZ7vU5Gg_74fzGH4xnYY5sSFYVVNsLnmB8EhC7YE1L9bH16ySqvU0F9WbHT2mHmrNTRF5mSGR6WoGQQbRFMqdxVHrxrZzVUvHflVqilklKomCSDL3wqbLvBJCNgM0f-5iQQh7_4cE5Mq3lDgjfZHFr8aB-dICFCHJkQmqNJF2A2ggBJjRajlKQkHFxsYXN37M.Ev3HEg3I0WCj58KaUkBPcRFhU6qK5soBhV7gU4vPMJcg&dib_tag=se&keywords=cocktail%2Bmixer%2Bset&qid=1774829200&sprefix=cocktail%2Bmixer%2Bset%2Caps%2C277&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=aad2b2c7c8e70a2d2cf4f29b5f1a5c50&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "The Woobles Crochet Kit for Beginners",
+            price: "$29.00",
+            reason: "Unexpected, a little playful, and genuinely zero romantic pressure. If she's mentioned wanting to try a new hobby, or you've seen the crochet kits all over her social media, this is an excellent gift. It's charming, it's fun, and it shows you were paying attention to something other than the obvious. No overthinking required.",
+            url: "https://www.amazon.com/Woobles-Beginner-Crochet-Kit-Crochet/dp/B09TDV1SL1?crid=3BQHLRQLYYFOU&dib=eyJ2IjoiMSJ9.KNm2pR3-MnA3lUx-UMFzv-4kYfHWLFBJhFvk3YYbBvAg2PBHCLnUVXqVG9UMDGolM0q1dBhfpDnQj_RNBCVxMPJHHijDVCpwQJFBzw2MxRicPe43wA8P_KQGG8PNFb9a4MHuWHGiD3g-f8Tp_k2EOFC4BeBbJNXiM3SJumyZXq3F14PZRbfDLqQ2xXiZQcm4kJvAuFHYE9ZfzKlqMnv3gjPQkm0AV7B8bGW5dT7xDs0eR2Bp7X5I0RN6NhPGDx30l0s8bvvovTkCasOkZ-9c0qpIp4M0TuiMUPcvJvR5J.Mm5LLvJkOXRHGmzLMFgWBHApE2rkPHvkMmVt5DXKgRU&dib_tag=se&keywords=woobles%2Bcrochet%2Bkit&qid=1775430500&sprefix=woobles%2Bcrochet%2Bkit%2Caps%2C223&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9ed3d51dc71bfedd9e1a90ae28a23e12&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71kS9WR06BL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Mini Dates – 30 Date Night Ideas Card Deck",
+            price: "$29.99",
+            reason: "This one threads the needle perfectly. Thirty date ideas on scratch-off cards, all doable for under $10 — coffee walks, picnics, bookshop browsing. It's a gift that says 'I want to keep spending time with you' without saying anything heavier than that. Playful, practical, and genuinely fun to open together.",
+            url: "https://www.amazon.com/Mini-Dates-Night-Ideas-Couples/dp/B0BV3C6MF8?crid=3A01F4C5DG0X8&dib=eyJ2IjoiMSJ9.0B4OWR14SLXJc4tJxoaSNwh5b2VflFi58P7Efu_9kXXpMn1-1hYBQeMwFMwHvKWJibMV6f8OWC9xGEDzqN2tkCmElEt2wWa-5gRRBVIY5RwABN5DFjxo5E4m9pcJMH9HbpBF91cxoTrC0F1G_NqCsIPkPqSPVJGLJD7C9bj6m3Nqo_1FYjLW3jBNJqS7RO07lMMhS2pTbzxkMqPFEHT_rHyoawSh8HVPtF4lD5xk3VoY7sLl3CXDxMqFCcTBXWlCyVMuNnxRxFMkCiXHa3nSE.O1E5TBaBoTwLKjBLOBqDDVKBKW8U-4XA8FZQf7TGAmrI&dib_tag=se&keywords=Mini+Dates+card+deck&qid=1775432000&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1eb7a5e64c1c2a3e7e5de84c4b63f9e7&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71b7juZJqhL._SL1500_.jpg"
+          },
+          {
+            name: "The Date Night Book – 60 Scratch-Off Date Ideas",
+            price: "$42.00",
+            reason: "A step up from the card deck — this is a proper keepsake book with 60 scratch-off dates organized by category: stay-in, go-out, adventure, and more. It's a gift with a built-in inside joke ('which one are we doing first?') and a subtle way of saying you're excited about what's coming, not trying to define what it is.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Ideas/dp/B0CDSYJN2G?crid=1L03HBBVXQWHM&dib=eyJ2IjoiMSJ9.5EzJiWFCIr9PqXGx4T_g8k-w-v0CDp4oMfH0hqYtGnADPNKPAe-7w5iJvO9s5FDqFCfFZM8_ZDvVmyCSSxl4aUH2hm5VWTLEGXCwmVcvY3fMdWrTfDNEFuq8w7GPJXxFkZJ7BUAlH5A3AY3sIRyPIJMxpNdAh4OWe1wz5qKqGFNKaP0TTZO6J4_P6amO1GMWsyvHHe0nNJt5g1BKknY5L22aFQbr78w4Bm8gqJDRRsLbPXF2A9eDPaQK4AUUwvW-6o3TuMMqkYnkpFKdIMVH9b9eywEdPZ6GTCkwRpA.KPUB8nW3V6D3WZBOLGSkmGRp_5w9n7x_mzT9Gg3xCLI&dib_tag=se&keywords=date+night+scratch+off+book&qid=1774829500&sprefix=date+night+scratch+off+book%2Caps%2C258&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=3b7c5e9f6a8d1c2e4f7a9b3d5e8f2a1b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Thoughtfully Gourmet Olive Oil Sampler Gift Set",
+            price: "$43.00",
+            reason: "If she cooks, or you've cooked together, this is a gift with personality. Six uniquely flavored olive oils — truffle, garlic, chili, lemon, and more — in a proper gift set. It's specific, a little unexpected, and it has a natural use together. The kind of gift that earns a 'this is so you' without making anything weird.",
+            url: "https://www.amazon.com/Thoughtfully-Gourmet-Olive-Sampler-Flavored/dp/B07MQLMJVS?crid=WQGLXPJVV3WY&dib=eyJ2IjoiMSJ9.LLHZE1kVYnM6NVL2h4n4v5Q_Cf2-RGn-9MDII-GSBZ-NxNRH0sP7t9b5RR7EqTGDFfGWPr6zrz0qdtReSJkZCwfNPE0L8BOjpg0AkdKRk9RTjmUW62Yo0X4DRl47NuJVJEFHxuLSJL6RPZjn5GOGBj_KbWFBFqsYlCOJlwLiJFGp-5jGw6CL6FN_6yFYr8rKeSzr-x4dkTGBnx5bnLxFAHMRRobqwZXlKzFbSqXFfFm6JXTz1Ot3E4B0iRWqCsBa2mLcF_7FMthElE4pjBIA.mq5i3W6H-CwGLQg5p0s_yC-sxV3VqZqRE0VEv7lCk9U&dib_tag=se&keywords=olive%2Boil%2Bsampler%2Bgift%2Bset&qid=1775434200&sprefix=olive%2Boil%2Bsampler%2Bgift%2Bset%2Caps%2C237&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c4c2a0a6b3d5e7f9a1b2c4d6e8f0a2b4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Espresso Martini Complete Kit",
+            price: "$45.00",
+            reason: "A full espresso martini kit — shaker, glasses, syrups, and instructions. This is a gift and a plan in one: the implied message is 'let's make these.' It's fun, it's specific to a drink that's genuinely having a moment, and it has no romantic pressure whatsoever. Just a good evening waiting to happen.",
+            url: "https://www.amazon.com/Espresso-Martini-Kit-Cocktail-Making/dp/B0CH7YP7HN?crid=3NKFX1QMVL5H8&dib=eyJ2IjoiMSJ9.NxA0j-Vo2_FhPV0ADFPkXXUPGm1J9L2Y7XC4zGHFI7DvaTSJGFHc2yFrMoN5E1ZT9JXMH9KFLnGKp8OTkI3fqDZR9n3tYQMlJJRf7Lb5n1bsNZ3PcTTiobGfNbCrH0hqdNtXhHHGPbbFGwmyCcHXYLlJkHxN9YyH5f_5zJd4a0ym9TDnfq0_eTM0U3F5fBJr4_BNCY2PBgmYdEIrX9rXijEwN4a4cKZVN4PdPuqyiTSGpFJb4Wm6jVjXbN4oTSJdxelHiJFrN2oVUmBYjsk.5E6RxvxVW8xkHk8Y5UEI7V9j0PDHLA3m9kAnc7oMVRE&dib_tag=se&keywords=espresso+martini+kit&qid=1774830000&sprefix=espresso+martini+kit%2Caps%2C265&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d8e0f2a4b6c8e0f2a4b6c8e0f2a4b6c8&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Victrola Journey Bluetooth Portable Record Player",
+            price: "$54.00",
+            reason: "If she's into music — or you've had a good conversation about albums — this is the gift that feels like a cool discovery, not a romantic statement. A portable suitcase-style turntable with Bluetooth. It's retro, it's fun, it doubles as a conversation piece, and it's the kind of thing she'll show people. A statement gift with zero intensity.",
+            url: "https://www.amazon.com/Victrola-Bluetooth-Suitcase-Record-Player/dp/B07MTBCLRP?crid=1SPFMYGKZWXJZ&dib=eyJ2IjoiMSJ9.IaEMVdHLxAIgApI1NqCvHmjc38t5HZdxoYqfANQ4JI4gZJlgRfHwN1aSVQqWvZ5d1yqP4GCbzWHtL_vEhJd2tJqz3JV-wC9d-dYobxjhWpEiF7sTQqdEHqzQV5XNwEZV9LDRuhtXE6Edk55Kgm7CtLMPeJx_c5jJEhPnM5IGHUO56B5yJJcDSrgKqLPjrx8JnIDEMOG_dOWcwjGcl5FIxYHlBXL7O9q18EBuaYH_3xVMFy-UYB3Vn5o3A8NaXCUSm8UFWLGE3pEfxpBhlY8D.ROe3i5rnRRZ5iRHFXqHqMn4A_eBQ9r42Sd0LkxjLf-k&dib_tag=se&keywords=victrola+journey+bluetooth+record+player&qid=1775432500&sprefix=victrola+journey+record+player%2Caps%2C252&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Tesla Box Electronic Puzzle Box",
+            price: "$64.00",
+            reason: "An escape-room-in-a-box that takes about an hour to solve. This one is purely about having a good time together — no subtext, no sentimentality, just a genuinely fun experience that you do side by side. It's the kind of gift that creates a memory rather than an expectation, which is exactly right for where things are.",
+            url: "https://www.amazon.com/Tesla-Box-Electronic-Puzzle-Escape/dp/B089QVXFK8?crid=7HXKM3P2WQ4NZ&dib=eyJ2IjoiMSJ9.ZPxTNBqm4-NfXLyBPpGKGU5mYuFDAbY68G0IOkYGfLKOqCH3mnKBVTe8qwDCb3qiBGnjO3rdMmKV88A0K0pjKqq4rvNaWI27mAiqWP9JVWyh8N2kXP0IrxHnb-aBiPj6JEjV-hO1KPjJ1MdFi5NbX7A_l9e6BwVm0R9vPe-JGO1I8cKLVq8B9s-3tAk5nFfX2r3dNqnHXtFZBF0b8oyvnMbyCF1VK3W3YWxqlaSuqHiP9hbOj5fCxBhkJ7i5-cKP94yRyXLwGVmRLv9Jbqr4M.TFEinNs3aOPRhL4Rq8sJ9bGZdQ9VoWKPiJv6dNyAOVs&dib_tag=se&keywords=tesla+box+puzzle&qid=1775432800&sprefix=tesla+box+puzzle%2Caps%2C244&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One rule worth keeping in mind",
+        body: "Skip anything that requires her to wear it, put it in her home permanently, or involves a photo of the two of you. Those are great gifts — later. Right now, fun and low-pressure beats thoughtful and heavy every time. The goal is to give her something that makes her smile without making her think about where this is going. You've got plenty of time for the bigger gestures."
       },
       { type: "cta" }
     ]

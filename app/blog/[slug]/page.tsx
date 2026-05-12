@@ -27,14 +27,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
-  if (!article) return {};
+  params: { slug: string };
+}) {
+  const article = getArticleBySlug(params.slug);
+
+  if (!article) {
+    return { title: "Not Found" };
+  }
+
+  const hasParenthetical = article.title.includes("(");
+  const seoTitle = hasParenthetical
+    ? `${article.title} | Regala`
+    : `${article.title} (That Actually Feel Thoughtful) | Regala`;
+
   return {
-    title: `${article.title} | Regala`,
+    title: seoTitle,
     description: article.excerpt,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      type: "article",
+      publishedTime: article.publishedAt,
+      siteName: "Regala",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+    },
   };
 }
 

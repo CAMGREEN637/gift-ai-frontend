@@ -1616,6 +1616,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — WELLNESS
+  // ============================================================================
+  {
+    slug: "birthday-gifts-wellness",
+    title: "Birthday Gifts for a Girlfriend Who's Into Wellness",
+    excerpt: "For the woman who takes her health seriously. Gifts that fit into a routine she has actually built.",
+    occasion: "birthday",
+    interests: ["wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-12",
+    relatedArticles: [
+      "birthday-gifts-yoga",
+      "birthday-gifts-fitness",
+      "birthday-gifts-skincare",
+      "birthday-gifts-hard-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why wellness gifts miss more often than they should",
+        body: "The mistake is treating wellness as an aesthetic rather than a practice. Buying a pretty candle set or a face mask for someone who genuinely prioritizes her health reads as surface-level. She has thought carefully about what she puts in and on her body, how she sleeps, how she recovers, and what her environment feels like. The gifts that land are the ones that fit into that system, tools and upgrades she would use every day, not things that gesture at wellness from a distance."
+      },
+      {
+        type: "text",
+        heading: "Where to focus",
+        body: "Think about which part of her routine has room for an upgrade. Recovery, sleep, stress, and environment are the four areas where a well-chosen gift makes a real difference. A good recovery tool she uses after every workout. Something that improves her sleep quality without requiring any effort. A way to reduce sensory overload on hard days. An environment upgrade that makes her home feel more intentional. Any one of those is a better gift than something that just looks wellness-adjacent."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Silicone Cupping Set for Massage",
+            price: "$29.00",
+            reason: "Silicone cupping is one of those recovery tools that wellness-oriented people swear by once they start using it. It improves circulation, reduces muscle tension, and is easy to use at home with no experience required. At this price it is a low-risk gift that feels considered rather than generic, especially if she does yoga, pilates, or any kind of regular training.",
+            url: "https://www.amazon.com/Silicone-Professional-Myofascial-Cellulite-Reduction/dp/B0BQV1NTT4?crid=39J1DMXK5DLAO&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.KVk-I89w299CSZOXQhGMmfrmu0Q4X7KN3AWOpMUpGEsvw3DNBM-s-K1WMkhVfQVESBEveyI0PtWwNioVyuQTP-v1hS_1do3MzFmaeVlU0ivtWg5neTztWCDKzj1hGYy9G3-GlYG7BhinL4mfOLegI2v_3HP9PneXMyUfy4hOcjCWgPZgyeCAMNToeMb_hrYLkSQl1SRijnbbo6imaIj9BQrvgZiZelg_roVXY-ryym4.-qVbBSlyDkH767ygJQZnTZ3Bo1X1sn4ojpdzeFcIeYM&dib_tag=se&keywords=cupping%2Bset&qid=1775436411&s=samedaystore&sprefix=CUPPING%2Csamedaystore%2C185&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18f89f6352cd8e2df9daccc2eba1d6f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/91yTkhFs20L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Smart WiFi Essential Oil Diffuser",
+            price: "$32.00",
+            reason: "A diffuser she can control from her phone or schedule through Alexa and Google Home is a meaningful upgrade from a basic model. She can set it to run during her morning routine, her wind-down, or her workout without thinking about it. For someone who has put thought into how her home feels and smells, this is the kind of object that earns its place on a shelf.",
+            url: "https://www.amazon.com/dp/B07DH4ZSDF?ascsubtag=%5Bartid%7C10049.g.69275335%5Bsrc%7Cmgu_bg_cos_d_bm_comm_org_us_g13602855%5Buuid%7C964c00cb990844d49e2f93c4693d1a80&asc_source=bing&asc_campaign=mgu_bg_cos_d_bm_comm_org_us_g13602855&asc_refurl=https%3A%2F%2Fwww.cosmopolitan.com%2Fstyle-beauty%2Ffashion%2Fg69275335%2Fgift-ideas-for-women%2F&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c18301597d6f4c3e886f68ef830b08d4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61kUIZamPwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Loop Experience 2 Ear Plugs",
+            price: "$34.00",
+            reason: "Loop earplugs reduce noise by around 18 decibels without blocking sound entirely, which means she can wear them in loud environments, during focus time, or on public transit without feeling cut off. For someone who manages her energy and sensory environment deliberately, these are the kind of tool she will reach for constantly once she has them. Small gift, outsized daily impact.",
+            url: "https://www.amazon.com/Loop-Experience-Ear-Plugs-High-Fidelity/dp/B0D4DFQTMJ?dib=eyJ2IjoiMSJ9.XnK1RMTVrUuM9Ct8j60j5MeK-US74wmjOZfzwbfb7qWynEw4kqCNmT-1wNzhMWZLP9qQUzPXQEnUDlmxK-zimBNTe9YOcC91mQn4qo_3jbTViEkqXOAlqjpzmO8no-XBhZvQCZIxMVy1GkGyThmYBiIawhuyheelMgcmzqdzOmV83jznFGsrzTfj3rH7NnZzGferK2t4MlpD5VZWrDc8CI4lT3TOcuYHdXYfbxPnY70S_ZbFg6zTNPPNcHGXYf1JBy0fkESNGgbIotM7cEGa6SHW3PteMoATzJUfbRRNVFk.p_u1gKLuyIcTKdCJscwvtNc92WHJnEdGU64BSe0lo8Y&dib_tag=se&keywords=Loop%2BEarplugs&qid=1777841578&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6cdd273c81eca52583601106cef78cfa&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SY300_SX300_QL70_ML2_.jpg"
+          },
+          {
+            name: "Lavender Spa Gift Set for Women",
+            price: "$139.00",
+            reason: "A complete lavender spa set covering bath salts, body scrub, lotion, and more in a single cohesive kit. For a wellness-focused person this works because it is not a random collection of products: it is a fully thought-out self-care evening in a box. The lavender focus gives it a clear, intentional identity rather than the grab-bag feel of most gift sets. A strong option when you want to give something that feels luxurious without being a single-product gift.",
+            url: "https://www.amazon.com/Lizush-Piece-Complete-Luxury-Women/dp/B088ZHBX22?crid=2G4FUVG6DASK1&dib=eyJ2IjoiMSJ9.wdNCtqyWta1khiiItcCLEpIhdm4EINKvTl_DHBm_SnxBItbZaoZk8OIAHJOgJeB2W27kbbkpT2Z4y7Q_qi86DdzHjJ2gJ3-LV6SD9fHaMaz6e7q8mYW6kcc2Td3rZPx0a2u3ZieMlP2ksPmue-3agNO0-fBLYTqdqh4Cc7uxCG1k3CioUQMTnwfqx_dex9LRESDR5LuFEMhJE4s42bhaGmA-9Nql839dB1g6sXWY6Vfdl8chIfjD07-4GPGC17PFGzEqICnmafZ2Un2XwJfY4vaAlV7ND2sYHeU9x5NI0jc.JU4TOnIMdhDBIDGIRql33BPX2JOLX5EP0WzFzfpUQJs&dib_tag=se&keywords=Luxury%2BBath%2BSpa%2BGift%2BBasket&qid=1773537574&sprefix=luxury%2Bbath%2Bspa%2Bgift%2Bbasket%2Caps%2C879&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9adbe727004cb2e61534ae42ad47e515&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/513jKGDIIYL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "4D Red Light Therapy Face Mask",
+            price: "$179.00",
+            reason: "Red light therapy has moved from professional clinics to at-home devices, and this mask delivers it in a hands-free format she can use during her wind-down routine. It targets collagen production, skin tone, and inflammation with clinical-grade wavelengths. For a woman who takes her skincare and wellness seriously, this is the kind of device she has probably looked at and put off buying for herself because it feels indulgent. That is exactly the sweet spot for a birthday gift.",
+            url: "https://www.amazon.com/dp/B0FJS8ZQWS?maas=maas_adg_api_591804581339319208_static_9_129&aa_campaignid=lv_4b9e4NCSPDPodUvBVE&aa_adgroupid=lv_GkCHmtolszTKUOCWcB&aa_creativeid=lv_GaHtQ89nbgwHXkQWzr&m=A2F97CWV4SAWYO&linkCode=ll2&tag=cbggiftapp637-20&linkId=f6f921d72446bb436ddc452c78b448ec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41AUc0hbRmL._SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on giving wellness gifts",
+        body: "Avoid anything that could read as a comment on her body or her habits. The gifts above work because they enhance something she already does, not because they suggest she should be doing something differently. Frame it that way and she will receive it exactly as intended."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

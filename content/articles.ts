@@ -1692,6 +1692,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — RUNNING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-running",
+    title: "Birthday Gifts for a Girlfriend Who Runs",
+    excerpt: "For the woman whose shoes are always muddy and whose training plan is non-negotiable. Gifts built around how she actually runs.",
+    occasion: "birthday",
+    interests: ["running"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-13",
+    relatedArticles: [
+      "birthday-gifts-fitness",
+      "birthday-gifts-hiking",
+      "birthday-gifts-wellness",
+      "birthday-gifts-yoga"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The gift trap with runners",
+        body: "Runners are specific about their gear in a way that makes gifting feel risky. She has strong opinions about her shoes, her socks, her watch, and she has already tried most of the basics. The mistake is buying something she can walk into any sporting goods store and find herself. A generic water bottle, a foam roller she already owns, a running top in the wrong fabric. The gifts that actually work are the ones that solve a real problem in her routine, or upgrade something she uses so often that better quality makes a daily difference."
+      },
+      {
+        type: "text",
+        heading: "Think about what happens before and after the run",
+        body: "The run itself is sorted. She has figured that part out. Where gifts tend to land is in the support around it: how she hydrates on longer efforts, how she recovers when she is sore, how she tracks her progress and adjusts her training. Those are the gaps worth filling. A gift that improves her recovery or gives her better data about her body will matter to her far more than another piece of kit to add to the pile."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Hydration Running Vest Backpack 5L",
+            price: "$32.00",
+            reason: "A hydration vest changes how she can approach longer runs. The built-in 1.5L bladder means she can go further without planning around water stops, the adjustable fit keeps it from bouncing, and there is enough storage for a phone, gels, and a layer. If she is still carrying a handheld bottle on runs over an hour, this is a straightforward upgrade she will use every time.",
+            url: "https://www.amazon.com/dp/B07HQM4DPB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81pu2p5PqpL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BOOST Smart Water Bottle 32oz",
+            price: "$46.00",
+            reason: "A smart water bottle with hydration reminders and a built-in tracker is a small but genuinely useful gift for someone who runs regularly. It keeps drinks cold for 24 hours, tracks daily intake, and reminds her to drink on a schedule. Runners are often better at fueling during a run than hydrating the rest of the day, which is where this earns its place.",
+            url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-HoXBRhLFIGkuRoiSx7wo-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61j0emHta6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Bala Bangles Adjustable Wrist & Ankle",
+            price: "$55.00",
+            reason: "Bala Bangles are weighted wrist and ankle bands she can wear during easy runs, walks, or cross-training to add resistance without changing her routine. They are well-designed enough to look intentional rather than clunky, and they are the kind of thing she would enjoy but probably would not buy herself. A good mid-range pick that shows you paid attention to what she does.",
+            url: "https://www.amazon.com/dp/B0BQCJRL6Q?_encoding=UTF8&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c3ea6a28710d170f2c7e0b1d28359b92&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61yHjkXkINL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "GPS Running Watch with Daily Workouts",
+            price: "$169.00",
+            reason: "The Garmin Forerunner is the watch serious runners aspire to. It tracks pace, distance, heart rate, and GPS route, suggests daily workouts based on her training load, and the battery lasts up to 20 hours in GPS mode. If she is still running with her phone or using a basic fitness tracker, this is a genuine upgrade that will change how she trains. The kind of gift she tells people about.",
+            url: "https://www.amazon.com/Garmin-Forerunner-Running-Suggested-Workouts/dp/B092RH28GN?crid=3UXLKOM2V2JMS&dib=eyJ2IjoiMSJ9.3JJNc3wPtOyEngqmKQIfNW5ats_fPIsEYUZHgSDBKvddwHtMNG_Oz04uIyMn8TKZMTxT9kwnvgZUxJKJngfkwG69ZTcfBijI4oi1Wlcw8QJFJAGJjDLaxP1cUB-4uTE6gkyHDVrUiIbcIfnxGn-vP7iJ5ZAs8cmxyZO7nTfqatXZEzhCIri8MlzzqQbLF_gp9Y2GvwspKkIjrd5JVadaKlrTAAImdAzZI5lP2bt1OgM.6zyP3ZgsgpsJblkx6IaA94uwaUq_q3veNbQEg19gcy4&dib_tag=se&keywords=garmin%2Brunning%2Bwatch&qid=1772586295&sprefix=%2Caps%2C370&sr=8-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=28aff32a41eda4391c71c358d27d6aa4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51oLbLikOeS._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "Running is hard on legs, and recovery is where most amateur runners fall short. The Theragun Mini is compact enough to fit in a bag but delivers the same percussive therapy as the full-size model. She can use it on her quads, calves, and IT band after any run without setting up a whole recovery ritual. If she runs more than three times a week and does not already own one, this will be one of the most-used gifts she has ever received.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth knowing",
+        body: "Avoid buying running shoes or socks unless she has told you exactly what she wears. Both are deeply personal choices for runners and getting them wrong is worse than not giving them at all. Everything else on this list is safe territory."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

@@ -1768,7 +1768,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
-  }
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — COOKING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-cooking",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Cook",
+    excerpt: "For the woman who actually uses her kitchen. Gifts that belong on a counter, not in a drawer.",
+    occasion: "birthday",
+    interests: ["cooking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-13",
+    relatedArticles: [
+      "birthday-gifts-home-decor",
+      "birthday-gifts-reading",
+      "birthday-gifts-wellness",
+      "gifts-new-relationship"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why kitchen gifts are so easy to get wrong",
+        body: "Someone who genuinely loves cooking has already accumulated the tools she needs. Her knife is chosen deliberately, her pans are the ones she researched, and her counter space is managed with intention. Walk in with a generic kitchen gadget and you are adding clutter, not value. The gifts that land are either ingredients and consumables she goes through regularly, a piece of equipment she has been wanting but cannot justify buying herself, or something that opens up a new technique she has not tried yet."
+      },
+      {
+        type: "text",
+        heading: "What cooks actually want",
+        body: "The best cooking gifts fall into two categories. The first is beautiful ingredients: high-quality olive oils, specialty salts, things she would use in every dish but feels slightly indulgent buying for herself. The second is an object with a specific purpose she does not already own, something that unlocks a new way of cooking rather than duplicating what she has. A pasta maker, a Dutch oven, a cocktail smoker. Functional, specific, and interesting enough that she will actually use it."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Gourmet Olive Oil Set",
+            price: "$43.00",
+            reason: "A set of six infused and flavored olive oils covering everything from garlic and basil to chipotle and Meyer lemon. For someone who cooks seriously, quality olive oil is something she goes through constantly and rarely splurges on. This set lets her experiment with flavor in dishes she already makes without changing her whole approach. A thoughtful consumable that will be finished and missed.",
+            url: "https://www.amazon.com/Thoughtfully-Sampler-Flavors-Include-Chipotle/dp/B08TDZVQDM?crid=23RDG83403FX6&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.WUNJLGxoRUgSi9-GvzZpUROpb-_sEiyIglpAmzE_OgpAzK5X1VBsC3HjPbT1Y6e2q5SIJHqowQX4qxC7DiZdgsy237x1nKwQFTYS-Y3X0THXWcIH_VAH-GrVip_2snDoWrmFV74aqj1vxQl2VyrjaYGpyyw9Zw_2E4IN6tn-s4ZD8yt6fRo1bYCsN8LoElFvCA_H_Yr-n8PnKjLfnKf1x217rQODDt_js0XcogpXG7A.EEfKw-egu2NW4FlEiBqmyj6dA6wEADQlxyBoI4N9Ssk&dib_tag=se&keywords=gourmet+olive+oil+set&qid=1775435704&s=samedaystore&sprefix=gourmet+olive+oil+set%2Csamedaystore%2C185&sr=1-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=06f300d79e895b98bcb38bb1586943d4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81rEVc-M7PL._SL1500_.jpg"
+          },
+          {
+            name: "Whiskey Smoker Kit with Torch",
+            price: "$47.00",
+            reason: "A cocktail and food smoker kit lets her add real wood-smoked flavor to drinks, meats, cheese, and desserts at home. It is the kind of technique-expanding gift that someone who loves cooking will immediately want to experiment with, and it produces impressive results the first time she uses it. Nothing else on this list will make her stop and say she has always wanted to try this.",
+            url: "https://www.amazon.com/Whiskey-Smoker-Kit-Torch-Fashioned/dp/B0BJV68C17/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.BQik9qjTRgMVoww3vrQeW74S181REjqNa1jLHvvDL9XGcJ7fNEp_BAGaFWlGwr6KbUbDUcQ7Q7gyFjD5hMfJRbI6FspVTpaYBmfdvBpm1-P9kUPo4mEeVwPgda2l4aK62OldihDaAUFvDxMH-S-Y3-0wl0xuzlXnInwe7M7jHuCi7pHNOxZJQkb2sf4YNETOflqcQyGNI5EC2gBWtJzPFVPIOgA3jTRVGYcBghO9FHrxQ9FsgxgfhOGc37yMJM_YMTIQMVjWm3BiAWGaxYjBJUx2vgoH5_aYQG22RbJfUwQ.eB2Od59JBTL4C9BbbBA0-xk1nmIThvxmWQ3IyiRRrzc&dib_tag=se&keywords=Cocktail+smoking+kit&qid=1773364547&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+            image_url: "https://m.media-amazon.com/images/I/81giNCIRH5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "17-Pod Hydroponics Growing System",
+            price: "$109.00",
+            reason: "An indoor hydroponic garden lets her grow fresh herbs year-round on a countertop, no soil, no outdoor space required. Basil, cilantro, parsley, and mint on demand. For someone who cooks seriously, access to fresh herbs changes the quality of everyday meals in a way that dried herbs never can. It is a genuinely useful gift that also looks beautiful in a kitchen.",
+            url: "https://www.amazon.com/dp/B0CQN9Z2WD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/818unoUl7-L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Classic Manual Pasta Maker Machine",
+            price: "$149.00",
+            reason: "A pasta maker is one of those kitchen objects that serious home cooks always mean to get around to. This is the classic Marcato Atlas, the machine that has been in Italian kitchens for decades, and it produces genuinely better pasta than anything from a box. If she has never made fresh pasta before, this is the gift that starts a new habit. If she has, she already knows exactly what this is and will be pleased.",
+            url: "https://www.amazon.com/dp/B0009U5OSO?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61bbptSFINL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "6.5qt Enameled Cast Iron Dutch Oven",
+            price: "$289.00",
+            reason: "A Le Creuset Dutch oven is the kind of cookware that lasts a lifetime and gets better with use. She can braise, bake sourdough, make stocks, and slow-cook anything in it, and it goes from stovetop to oven to table without skipping a step. It is expensive enough that she would never buy it for herself without a specific reason, which is exactly why it makes such a strong birthday gift. This is the splurge pick for someone whose cooking you take seriously.",
+            url: "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ?crid=29M2RNIQI65CV&dib=eyJ2IjoiMSJ9.zg3iPs8agRKCchFLOXS7h7EK0szh4EpkojQGW2Vmvb3YR4Lyg9sum8uQvi7CIBaoWozDWCCaVAoEMFGcdbdgJRxT9ot8MXvtTGJwbiUdbNccrMdcPY3IxK7fO0O3_Ic-VZZe_lmvvpYTMm6Toz8mvZ6uKl8K1v2cn8mfkzlg6Sveuozdbinr3tawS6BrrXNUaTGGKRn7x_6JgGXIdcnldNMNQF3Y8eJFl7YNGarTqd9dvDZ16tBtLl36LpMGWYI4BEa_MXeceaeYERciaz2XUWoOlRNRFcYLrQ6UW_30JnM.SI896DJBYRmSYcQ_Pnm-6-3pzktKSxSoMyEQATdads0&dib_tag=se&keywords=Le%2BCreuset%2BDutch%2Boven&qid=1773371582&sprefix=le%2Bcreuset%2Bdutch%2Boven%2Caps%2C343&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5743fe6d2fb116790feb2470792c6bbe&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on kitchen gifts",
+        body: "Counter and storage space is precious to someone who cooks a lot. The bigger the gift, the more useful it needs to be to justify its footprint. The Dutch oven earns it. The pasta maker earns it. If you are not sure how much she cooks or how seriously she takes it, the olive oil set is the safest pick on this list and one of the most appreciated."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

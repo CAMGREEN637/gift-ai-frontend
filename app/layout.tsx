@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   title: "Regala — The AI Gift Advisor",
   description: "Answer a few questions about her and get curated gift recommendations with explanations of why each one works.",
   metadataBase: new URL("https://regala.ai"),
-  alternates: {
-    canonical: "/",
+  other: {
+    "p:domain_verify": "fd5e51a014c5ea35530cf90aabbdd3e1",
   },
 };
 

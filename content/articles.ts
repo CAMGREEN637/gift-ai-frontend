@@ -1845,6 +1845,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — GARDENING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-gardening",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Garden",
+    excerpt: "For the woman who knows her soil and actually uses her hands. Gifts that fit into the way she grows things.",
+    occasion: "birthday",
+    interests: ["gardening"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-14",
+    relatedArticles: [
+      "birthday-gifts-home-decor",
+      "birthday-gifts-cooking",
+      "birthday-gifts-wellness",
+      "birthday-gifts-reading"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why gardening gifts go wrong",
+        body: "The instinct with gardening gifts is to buy seeds or plants, which sounds obvious until you consider that she already knows exactly what she wants to grow and why. Seeds are personal choices that depend on her climate, her soil, her available space, and what she already has growing. Buying the wrong ones is like buying a book she has already read. The gifts that actually work are tools that make the physical work easier, systems that extend what she can grow, or upgrades to the space where she does it."
+      },
+      {
+        type: "text",
+        heading: "Where to focus",
+        body: "Think about whether she gardens outdoors, indoors, or both. An outdoor gardener will get more use from quality tools and a way to start seeds earlier in the season. An indoor or apartment gardener is constrained by space and light, which is exactly where a hydroponic system changes what is possible. Either way, the best gifts are the ones that expand what she can do, not just add to what she already has."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Bonviee Seed Starter Tray Set",
+            price: "$9.00",
+            reason: "A humidity-controlled seed starter tray with adjustable vents lets her get a head start on the growing season by germinating seeds indoors weeks before the last frost. It is the kind of practical, low-cost gift that a serious gardener will actually reach for every spring. Pair it with a handwritten note and it is a thoughtful gesture that costs almost nothing.",
+            url: "https://www.amazon.com/Bonviee-Adjustable-Humidity-Greenhouse-Propagator/dp/B0DBDKRQNS?crid=3HD1VP2ZFV250&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.D14rWyG5fv7BDJQnLll6BkDXXSuZJccDXq7pp6ATMKdAPROloBPB9rPRZd0_DinFnNFBG_Rj3jIDbyvUBCVbtxfojxys-1dFu8zxivqLkjvRwgMHYqbGZZFN-QJSKlMNJJ_ChTHAwIak6EG8GAqrbAa4eGW2_DRLn_oTWXQCdnhI5cf5XSBABowol9cEe-Z0XJWoTNlmQG6vx2E3jyTxFBur7E67XUF6SGm5W6KXkZg.93u7uFtXFQ40Kffi-hANGHp2oPFH-kJ_OWHRpd_Rar0&dib_tag=se&keywords=Gardening%2Bseed%2Bstarter%2Bkit&qid=1775433224&s=samedaystore&sprefix=gardening%2Bseed%2Bstarter%2Bkit%2Csamedaystore%2C334&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d40e0a7de7f927d795c79adaf5df060f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81UZJlqGjeL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "All-in-One Gardening Tool Set",
+            price: "$32.00",
+            reason: "A complete stainless steel gardening set with ergonomic handles, a trowel, transplanter, cultivator, and weeder, all in a carrying case. Quality tools make a real difference in how the work feels, and if she has been using a mismatched collection of cheap implements, this is a noticeable upgrade. Practical without being boring, and something she will pick up every time she is out in the garden.",
+            url: "https://www.amazon.com/Scuddles-Stainless-Fingertip-Landscaping-Gardening/dp/B0761Z9MKM?crid=233CP1RI8QE95&dib=eyJ2IjoiMSJ9.PZYsXAh67pc8FLxZ6eEqRbK1JHv6SPVo7Td0vFgHKOipG12has7h_6fJck2rV60-_KYLmMbX03abogoVK4cfS3uSox7jj2tUXR_bLaRREUUdaIel9t63cccWkocN3qK8YdhDXgkKWAaDRFGwNKxkjJfDtcOxGS6l-D5P9hY-2WviXPWYKriff6r-CtL44lO9e99672sbjbrMuWGqtBJL2dxhDvUc9WYhpkOuwOLv67GjPMjq-bSkgv1_ttS6UGXVkka1wNDO01Pd40HHxn462I3_okPgzCsbFgFymDo9mIw.WS0zFvBb9LkMPeHAJ2ghxBsItW6guh_9NUWy0FGU9s&dib_tag=se&keywords=Professional%2BGardening%2BTool%2BSet&qid=1773534318&sprefix=professional%2Bgardening%2Btool%2Bset%2Caps%2C271&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6f8bfc9c48bad73de24200b7cba43254&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81GQjPjFt+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "17-Pod Hydroponics Growing System",
+            price: "$109.00",
+            reason: "A 17-pod indoor hydroponic garden grows herbs, lettuces, and small vegetables in water rather than soil, with a built-in LED grow light that handles the light requirements automatically. For a gardener who wants to grow year-round regardless of season, or who lives somewhere without outdoor space, this is the kind of system that genuinely expands what she can do. It also looks clean and modern on a kitchen counter.",
+            url: "https://www.amazon.com/dp/B0CQN9Z2WD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/818unoUl7-L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Smart Hydroponics Herb Garden Kit",
+            price: "$119.00",
+            reason: "A step up from a standard hydroponic system, this smart kit has automated lighting schedules, a water level indicator, and is designed specifically for herbs, which means basil, mint, cilantro, and parsley growing on her counter all year. If she cooks as well as gardens, the crossover appeal here is strong. A gift that two of her interests will thank her for every week.",
+            url: "https://www.amazon.com/LPH-SE-Hydroponics-Growing-Controlled-Automatic/dp/B0BL3GG6J3?crid=M1G78Z3PAD77&dib=eyJ2IjoiMSJ9.pIVabIJFS-84JWcH8F-_PG8V7eM02IN3hAeoY3Ch1zBgx-8uras5QWmLw8uk3V33vQX46RvQNBA6CZsAhllWZElX2DK8pmjYjLJHpxgTkIWvOiFxWKWe0FURMMw1UusOf2q3Bv8LuLsOaR-ije6SmNF5yncxOx-6BfqUrmeugcizxf3ijzG7PjqLJV0fbUW1HtA6erWGZDmKwD-G9t-VkN4T_sJFxo4rUdPihcX3qomZH_WbaajhzU-uUcmfNeImPWExj93hp1nyWu5DDaM09elYWpmad1wQsKglsPpKLmM.e-MP5enEWh_sEtI8CbSLfxDa4Z91TK2CMuDfQWr73W0&dib_tag=se&keywords=Smart%2BIndoor%2BHydroponic%2BGarden&qid=1773534501&sprefix=smart%2Bindoor%2Bhydroponic%2Bgarden%2Caps%2C269&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50ecac0c91dc019eb0c7089fa1777dda&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81k-jJm+DXL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "2-Person Outdoor Hammock with Stand",
+            price: "$199.00",
+            reason: "Every gardener eventually wants somewhere to sit and appreciate what she has grown. A freestanding two-person hammock that sets up without trees gives her a proper place to rest in the middle of a garden she has put real work into. It is a slightly unexpected pick for a gardening article, but for someone who spends hours outdoors, a place to actually enjoy being outside is as useful as any tool.",
+            url: "https://www.amazon.com/Everyfun-Polyester-Adjustable-Portable-Carrying/dp/B0FMDYQFWZ?crid=36HYK0SHGY7X7&dib=eyJ2IjoiMSJ9.0gor6a9VZm3ZgdAABiXZ7ODlqrNSgiSM08dymlFeYNIsB4VUP5BKISSLrZhitGzQMKM-ecrVcJUB9deKw_C0qcVPMJWnuHI6ftK_N1IxvLApXgjjPw1LYmYtcd_LUy-Xa7Y33lcQmKYBBM992z-NotNhEqjxwCOKQtWSJJ2BZ6tyyw8KeyLznQOfNvBQ14XOsAAsg_w6BTm-g6uF2JzKOfJZ7wAUcfhKhQVcT74WnEzTNHaLNv2jXEZvKxQ27Ij2WmKvjKhsSQ0rK68Tkh7r4Ob3jW6ynxolioULRBGsHxk.2zSnS8VhzZTfAzKFad95DkjLerYCjq13p5XjfDLpNHo&dib_tag=se&keywords=Premium%2BCamping%2BHammock&qid=1772582431&sprefix=premium%2Bcamping%2Bhammock%2Caps%2C352&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=54cebdefa34f457130d7e23b9edd316a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71ZI9Z7oIHL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing to keep in mind",
+        body: "If she has outdoor space, the seed starter and tool set are safe choices at any budget. If she is an apartment or indoor gardener, go straight to one of the hydroponic systems. They solve the constraint she is actually working around, which is the most useful thing a gift can do."
+      },
+      { type: "cta" }
+    ]
+  }
 ];
 
 // ============================================================================

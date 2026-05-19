@@ -2149,6 +2149,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — COZY HOMEBODY
+  // ============================================================================
+  {
+    slug: "gifts-cozy-homebody",
+    title: "Gifts for the Cozy Homebody Girlfriend",
+    excerpt: "For the woman who has perfected the art of staying in. Gifts that make her favorite place even better.",
+    occasion: "birthday",
+    interests: [],
+    readTime: "5 min read",
+    publishedAt: "2026-05-16",
+    relatedArticles: [
+      "birthday-gifts-reading",
+      "birthday-gifts-home-decor",
+      "birthday-gifts-wellness",
+      "birthday-gifts-hard-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why homebody gifts are easier than they seem",
+        body: "Someone who genuinely loves being at home has already made peace with what other people call staying in. She is not waiting for the right reason to go out. Her home is where she wants to be, and she has probably put real thought into making it comfortable. That means the best gifts for her are the ones that improve the experience of being at home, things that make her evenings softer, her mornings easier, or her favorite corner of the couch feel like exactly the right place to be."
+      },
+      {
+        type: "text",
+        heading: "The category that never misses",
+        body: "Comfort is a legitimate gift category, and for a homebody it is the highest form of consideration. A robe she would never spend that much on herself. Slippers that are noticeably better than any she has owned. A wearable blanket that replaces the pile of throws she has been rotating. These are not lazy gifts when they are genuinely well-chosen. They are the gifts that improve her daily life in a way she will notice every single evening."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Aromatherapy Soy Candle Set",
+            price: "$23.00",
+            reason: "Eight soy candles covering every mood and season, from warm amber and sandalwood to fresh linen and eucalyptus. For someone who burns candles constantly, this is a practical gift that feels generous, looks beautiful on a shelf, and will actually get used rather than saved. A strong entry-level option that shows thought without requiring much risk.",
+            url: "https://www.amazon.com/Candles-Aromatherapy-Birthday-Valentine-Thanksgiving/dp/B0CR7L79Q2?crid=2T20TQUHIBJUB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.0-t-XHcozIYtbIiwh4wdjmNFDjTafkOuOKdXT28s3IR_Qkxm8A8vLksKKjgSannrAK2MU-mtRahJ4VO4O74D5chxzv97NGXFAa8yJrRvepOGwXqpIo5IYfnprf59VfKOcRRGbnEDurP6eqjayvsItx2k5OFESZ8Tiw4IysnPEopzlEkO-wlS0ZOp28KWBdxPkldrdkBoqGFc6-RBSOSzLE9samSzY8IcpaHZsHWZCFE.jMT71PJKmQ60K0kJcUlXBqfz9o1mE8WQRSYnRgswHNo&dib_tag=se&keywords=Scented%2Bcandle%2Bset&qid=1775434851&s=samedaystore&sprefix=scented%2Bcandle%2Bset%2Csamedaystore%2C205&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=bbd15837d00ce154479856fa8c9ce361&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81EMGMLiJ3L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Oversized Sherpa Lined Wearable Blanket",
+            price: "$49.00",
+            reason: "A full-length wearable blanket with sherpa lining, deep pockets, and enough room to pull her knees up on the couch. This is a different category from a throw blanket: she can move around the house without losing it, keep her hands free, and stay warm from the neck down. For a homebody who has the couch figured out but not the moving-between-rooms part, this is an immediate quality-of-life upgrade.",
+            url: "https://www.amazon.com/dp/B07DKSY26D?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71sz7vQVtAL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "UGG Women's Scuffette II Slippers",
+            price: "$99.00",
+            reason: "UGG slippers are one of those purchases people know they would love and consistently put off making because the price feels hard to justify for something you wear at home. That is exactly why they make such a good gift. The Scuffette II has the same sheepskin lining as UGG boots, a cushioned outsole that works on any floor, and a backless design that is easy to slip on and off. She will reach for these every single day.",
+            url: "https://www.amazon.com/UGG-Scuffette-Slipper-Chestnut-Size/dp/B082HHWYWD?crid=LH8UZT1PJIHD&dib=eyJ2IjoiMSJ9.Y88sgIKj9IuLNT1_SgyamhmgK439Xqr6wgq4VojmCjxxPidbZ2J6lzs7Z49B6WIHa-ZiW-Hx3EJiOjEpGu8eSCE2VOwHVGcg5AC7pazFpWvqtXXYdJrRxRuFfQ5PnIpQIzS9ddxlyhl-aiDuAGIcy9TN0w067WbH5vXwtBjdgBnBDpanhKyw2c9twXYnMts0lkUYyeh5tYwKqGmZvidXSihWs5E9pIWWcDgyFL-2U9N1X9-5QgxA1NI6wqUwY3FX7SXxBBVdIR_rDwL1h0Eq5s-ER05vBqecuQ_WJ1Z_EP4.rmpy3TnS3T89mWU9HjZnDb1x8JCoF633B6tJAno749s&dib_tag=se&keywords=UGG%2BFluff%2BYeah%2BSlide%2BSlippers&qid=1776652891&sprefix=ugg%2Bfluff%2Byeah%2Bslide%2Bslippers%2Caps%2C422&sr=8-9&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=fee796cc758334434fed5a1a995dbec6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51ZwU6Xht5L._AC_SX395_SY395_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "Barefoot Dreams makes the softest loungewear most people have ever worn, and the robe is the centrepiece of the range. The CozyChic fabric is a step above standard terry cloth in a way that is immediately obvious when she puts it on. It is the kind of gift that makes hotel robes feel inadequate by comparison. For a homebody who has everything she needs at home but not necessarily everything at its best, this is the upgrade that lands every time.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "For a homebody, the bedroom is as important as the living room. The Hatch Restore is a sunrise alarm clock, sound machine, and reading light in one clean device that replaces the phone-as-alarm-clock setup most people tolerate without enjoying. It makes falling asleep easier, waking up gentler, and the whole bedroom feel more intentional. For someone who has invested in how her home feels to live in, the nightstand is a natural next step.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on occasion",
+        body: "This article is framed around birthdays but these gifts work just as well for Christmas, Valentine's Day, or no reason at all. A homebody does not need an occasion to appreciate something that makes her home feel better. If you have been looking for a just-because gift that will actually land, start here."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

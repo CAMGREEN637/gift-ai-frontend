@@ -2225,6 +2225,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS UNDER $100 — HIGH END FEEL
+  // ============================================================================
+  {
+    slug: "gifts-under-100-high-end",
+    title: "Gifts Under $100 That Feel High-End",
+    excerpt: "The sweet spot between thoughtful and affordable. Gifts that look and feel like more than they cost.",
+    occasion: "birthday",
+    interests: [],
+    readTime: "5 min read",
+    publishedAt: "2026-05-17",
+    relatedArticles: [
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-cozy-homebody",
+      "birthday-gifts-skincare",
+      "anniversary-gifts-personal"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why budget and quality do not have to be in conflict",
+        body: "There is a common assumption that spending more signals more effort, and spending less signals you did not try. That is only true when the gift is generic. A $40 crystal wine decanter from a brand she would buy herself tells a completely different story than a $150 gift basket from a pharmacy. The question is never how much you spent. It is whether the gift is the kind of thing she would have chosen for herself, at a quality level that feels considered rather than convenient."
+      },
+      {
+        type: "text",
+        heading: "What makes a gift feel expensive",
+        body: "Three things: materials, brand, and how it is received in the moment. Silk, crystal, and cashmere all feel elevated regardless of price. A name like Tatcha or Blissy carries weight because she has heard of them and knows what they represent. And a gift that comes with a short explanation of why you chose it, even two sentences, lands in a completely different category from one handed over in a bag. None of those things require spending more than a hundred dollars."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Crystal Wine Decanter with Aerator",
+            price: "$41.00",
+            reason: "A lead-free crystal decanter with a built-in aerator is the kind of object that looks like it belongs in a well-designed home and costs far less than it appears to. It aerates wine as it pours, brings out the full flavor profile of any red, and sits beautifully on a dining table or shelf. For someone who enjoys wine, this is an understated, genuinely useful gift that reads as more considered than its price tag suggests.",
+            url: "https://www.amazon.com/Decanter-Aerator-Lead-free-Hand-held-Accessories/dp/B07X8TQ8PD?crid=2FKQ1UJH869DG&dib=eyJ2IjoiMSJ9.bCOf6R37ehC_0v_ncYEIeWyQ2F3n41ZABIcxkd6_liGghI_KS-3Yn2-876l1l5KIwCj6kg-gVT0278k_aMRiPBG4zyVgZx7zt9eURIKZjru21ZhgzQOkEcuUI0Uep3-QYkYWbuaFNJMaIGW2gVBmkLWtV1rnl4GwcudFpjDXmqluPJ2PNLxnGnbzIKWl902lnfKPcrFn16WGBYUBnF_1OQ523mjx14Bo__Hn4mjlmbhlHdo-cgZO0EheDoMaeHX9HM3laRezZcFISXo83XNyzvQ98sUzYQ_3Xzppr6UWL6Q.S6Gpq6uzaVJv9HbSBzD9_nAtztUyanKjlV556EBTNfU&dib_tag=se&keywords=Rabbit+wine+aerator+%2B+decanter+set&qid=1773365378&sprefix=rabbit+wine+aerator+%2B+decanter+set%2Caps%2C233&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=33e1844d4fd050bdb6ab7b8d94a6a2c8&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81G3dhMyx7L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Faux Fur Throw Blanket, 50\"x70\", White",
+            price: "$54.00",
+            reason: "A large ivory faux fur throw looks like it belongs in a hotel suite and costs less than a nice dinner out. It drapes beautifully over a couch or bed, is genuinely soft to the touch, and the kind of object that elevates a room without requiring any design knowledge to place it well. For someone who cares about how her home looks and feels, this is a gift that improves both.",
+            url: "https://www.amazon.com/dp/B07WRDL2VZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71bO9GhO3PL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Nodpod Silk Sleep Mask",
+            price: "$68.00",
+            reason: "The Nodpod is a weighted silk sleep mask with a patented bead design that applies gentle pressure across the eyes and forehead to block light completely and encourage deeper sleep. It is one of those products that looks simple and costs more than expected, which is exactly the reaction a high-end feeling gift should produce. For someone who takes sleep seriously or travels frequently, this is a genuine upgrade from every sleep mask she has tried before.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.00",
+            reason: "A 100% mulberry silk pillowcase from Blissy is better for hair, better for skin, and noticeably different to sleep on from the first night. It is also the kind of purchase that feels slightly indulgent to make for yourself, which is exactly the gap a well-chosen gift fills. At just over eighty dollars it sits comfortably under the hundred dollar ceiling while feeling like something that belongs in a much higher price bracket.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Tatcha Skincare Set",
+            price: "$95.00",
+            reason: "Tatcha is one of the most respected names in Japanese-inspired skincare, and the starter ritual set brings together their most loved products at a price that works as a birthday gift without feeling like you hedged. The packaging alone feels luxurious, and the products inside are the kind she has likely seen on shelves and thought about trying. A strong choice for anyone who takes care of her skin and appreciates a brand with a genuine point of view.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=2UQ2KCRG5EGO1&dib=eyJ2IjoiMSJ9.x9w1hhp6SFHQ8JfZulUH5j9XizGt-Z34UJHa7FVSlY7U3twGEOdI2wY3Gv842P1uCKIifs3jBnL6VzmYyW0WgQfufeGPDjyRteHLalPvhii0VYn21Yj38zQz3AGH_GnHXagxRUsne0rcIW7uh6Y-VwpEqgQqNBvwrBWB22DZgsTXQI2PZUJbEA0euJZm3vwuIf92SHBuV22PnsibXGXNVb6Rq0jrt31jcfgmo2aA1Yy28vPHfaZK8GXORdbCXSWlerW9rYVKY7eOVk95a-kUQFjMD4yJWXbAyO8lR1eaqNw.3hXYTIyVr1pvZOBShvAw2Vgz2doeGO_osxW6kL3rK3I&dib_tag=se&keywords=Tatcha+skincare+set&qid=1774736945&sprefix=tatcha+skincare+set%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ed66be2350a587168c4fcbc32c54f59d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The rule that applies to all of these",
+        body: "Wrap it properly. A gift that arrives in tissue paper inside a box, with a short note, feels like a different price tier than the same item in a shopping bag. Presentation is part of the gift, and it costs almost nothing to get it right."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

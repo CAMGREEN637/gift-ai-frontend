@@ -2072,7 +2072,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
-  }
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — CAMPING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-camping",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Camp",
+    excerpt: "For the woman who actually sleeps outside. Gifts that earn their place in a pack she has already thought carefully about.",
+    occasion: "birthday",
+    interests: ["camping"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-16",
+    relatedArticles: [
+      "birthday-gifts-hiking",
+      "birthday-gifts-travel",
+      "birthday-gifts-fitness",
+      "birthday-gifts-wellness"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why camping gifts are harder than they look",
+        body: "Someone who camps regularly has figured out her kit. She knows the weight of everything she carries, what she reaches for and what she leaves behind, and which brands she trusts after a trip that did not go perfectly. Buying her camping gear without knowing her setup is a real risk: wrong size, wrong weight, duplicates something she already owns, or clashes with a system she has spent trips refining. The gifts that work are either universally useful consumables and everyday items she goes through, genuinely upgraded versions of something she uses constantly, or clever tools she has not thought to add yet."
+      },
+      {
+        type: "text",
+        heading: "Think about camp life, not just the trail",
+        body: "The best camping gifts are the ones that make being at a campsite more comfortable and more enjoyable, not just the ones that help her get there. A great cup for morning coffee at the fire. A soft cooler that keeps food cold for days without the bulk of a hard cooler. A stove that charges her devices while she cooks. Those are the gifts that get used every trip and make camp feel less like roughing it and more like exactly where she wants to be."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Stanley Stay-Hot Camp Cup 10 oz",
+            price: "$15.00",
+            reason: "Stanley's camp cup is a camping classic for good reason. It is stainless steel, vacuum insulated, stackable with other Stanley cups, and designed to sit steady on uneven ground. For someone who takes her morning coffee seriously even outdoors, this is a small, considered gift that signals you understood the assignment. Works equally well at a campfire or on a tailgate.",
+            url: "https://www.amazon.com/Stay-Hot-Stacking-Insulated-Stainless-BPA-Free/dp/B0CZC6M49S?crid=G5U07Z31E55G&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.mLi5DZYGvUB7k6XotWlc8ttVeqHXl-TQa_9pjnhIFaHqlHuVk-IDv05pXR4g9kbpWHv2IbJwZaIcdNOGpgqp7lrUAlyBv0eK-4jnnHSCUZbfW_V3hYU6-5PB3XorifuQzR3yY11my0EQGCszvkYDsoDMpCYeJAijo5HaCU7zEXH2HHWOiUPC2TQ.XOEx3qzlcvLMvviTqBYMcuXwLe2s0lZw0-1nKxyQpqo&dib_tag=se&keywords=camping%2Bmug%2Bset&qid=1775434019&s=samedaystore&sprefix=camping%2Bmug%2Bset%2Csamedaystore%2C535&sr=1-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=242a560cad4878ce43b90cec41955c21&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61mMo6A-d0L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully kitted picnic backpack pulls double duty on camping trips: it handles everything from trailhead lunches to late-afternoon snacks at the campsite without requiring her to dig through a main pack. Plates, cutlery, glasses, and an insulated pouch all included. A thoughtful, practical gift that works for camping, hiking days, and weekend outings alike.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Portable Soft Cooler with MagShield Access",
+            price: "$199.00",
+            reason: "The YETI Hopper is the best soft cooler on the market and the one serious campers aspire to. The MagShield closure is genuinely leak-proof, it keeps ice for days in the heat, and it is light enough to carry on a shoulder without killing your back. If she has been using a cheap soft cooler or borrowing one, this is an upgrade she will notice immediately and use for years. The gift that makes every future trip better.",
+            url: "https://www.amazon.com/YETI-Hopper-Portable-MagShield-Charcoal/dp/B0CGY16MR4?crid=2TAJNZZZ2UG6S&dib=eyJ2IjoiMSJ9.alrq0vuP4YYpBTHFmAYuS2mrMsmLikYtpZC3vsxClflzUz-kiTOFjdsXN-085gYZ023iHVwXt95jqZaS6F04yRoebQKWmX0t7rqifCsiO9Dkq9VMXj76082Ytn0cn4L2gepSHs5W7XryHE2oy7WSqruiA1vEyDV3bkuBEDFGPhmO1-qgR6q2s0fcdWJqzR3kJ53L4_1_k5MwA5Qc9YY5HCSdrlIF4lxVjZD-I9VZLRIJca_NvkhcJnjcKVa5mqmKhI4vFZn7aO-EkdcI3_VfeE8c5TG8EDIM6vvuMXi5CIk.sOYAtiau1tYpRFxxvtxbYWvt_DGdlP5TuoPYMeiO-sw&dib_tag=se&keywords=yeti%2Bhopper%2Bsoft%2Bcooler&qid=1773370870&sprefix=Yeti%2BHopper%2Bsoft%2Bcooler%2Caps%2C267&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=69c62d40dd00ccc5acfc3dff1447443b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61E2BzsbxZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "70L Lightweight Travel Backpack",
+            price: "$249.00",
+            reason: "A well-built 70L pack is the foundation of any serious camping kit. This one is lightweight enough to not eat into your energy before the trail even starts, organised intelligently so she can actually find things mid-trip, and built for multi-day hauls without the dead-weight feel of cheaper packs. If she has been camping with a bag she has outgrown or never truly loved, this is the upgrade that changes how the whole trip feels.",
+            url: "https://www.amazon.com/dp/B0FRTQTTKX?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51251W6bY6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wood Burning Camp Stove with USB",
+            price: "$299.00",
+            reason: "The BioLite CampStove 2 burns twigs and sticks rather than gas canisters, generates its own electricity to charge phones and devices via USB, and produces a cleaner burn than a standard camp stove. For a camper who cares about reducing what she carries, staying off the grid, or just having a more self-sufficient setup, this is the kind of gear that genuinely changes her relationship with camping. Nothing else on this list will get more conversation at a campsite.",
+            url: "https://www.amazon.com/BioLite-CampStove-Camping-Stoves-Complete-Renewable/dp/B08S46HLM1?crid=3L537D19AT37H&dib=eyJ2IjoiMSJ9.OGfnpWx-9XLbt5PcTfLnIPZCHFca3zdNT7M8cQr5VruI8dPjnGLDOBx6eg2-Zb5nljAs0PbQV5NebywSdj0XotSsXccphvCLIeyjgVd_LnkIiZSEPTGoXQ5bNKjx4SiPCJYYszLm2sghUQtn44zR4lyqpFz3VtsjoGu3coioRKC6Tu0RpjH-nRRQ4TRzVdia25AitjHLH-aPz2ed_9Xfmjo4TKZYsvF9Cwcgzo6Q2D4.4plZUNZ8aZLa5bae2TtEA7OuZ60_R9HIDUOuB6dTLL8&dib_tag=se&keywords=BioLite%2BCampStove%2B2&qid=1773366071&sprefix=biolite%2Bcampstove%2B2%2Caps%2C277&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=af65a4e38dca57783cbd2f94e0484eac&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71935nPZwsL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on budget",
+        body: "The Stanley cup is the right move if you want to spend under $20 and still give something she will genuinely use. The YETI cooler and BioLite stove are for when you want to make a real impression. Everything in between covers the range of most birthday budgets without feeling like you guessed."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

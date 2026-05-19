@@ -1920,6 +1920,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — FITNESS
+  // ============================================================================
+  {
+    slug: "birthday-gifts-fitness",
+    title: "Birthday Gifts for a Girlfriend Who Lives at the Gym",
+    excerpt: "For the woman whose training schedule is non-negotiable. Gifts that match how seriously she takes her fitness.",
+    occasion: "birthday",
+    interests: ["fitness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-15",
+    relatedArticles: [
+      "birthday-gifts-running",
+      "birthday-gifts-yoga",
+      "birthday-gifts-wellness",
+      "birthday-gifts-hiking"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The mistake people make with fitness gifts",
+        body: "Someone who trains consistently has already invested in the gear she trusts. She has a bag she likes, shoes she swears by, and a water bottle she will not replace. The mistake is buying anything in those categories without knowing exactly what she uses and why. Generic gym gear reads as low-effort to someone who has thought carefully about everything she brings to a session. The gifts that land are the ones that improve the parts of her routine she has not fully solved yet, particularly recovery, audio, and home training."
+      },
+      {
+        type: "text",
+        heading: "Where the best fitness gifts live",
+        body: "Think about what happens around the workout, not just during it. Recovery is the most under-served area for most people who train hard, and a well-chosen recovery tool will get used after every single session. Audio matters enormously in the gym, and most people are still using headphones that were not designed for training. Home equipment that genuinely replicates gym movements lets her train on the days she cannot make it in. Any of those gaps is a better target than another piece of kit she will evaluate against what she already has."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Foam Roller Set with Accessories",
+            price: "$24.00",
+            reason: "A high-density foam roller set with a massage stick, resistance bands, and a spiked ball covers the full range of recovery work she needs between sessions. If she trains hard and still skips rolling out because she does not have the right tools at home, this removes that excuse. A practical, thoughtful gift that will be used after every workout.",
+            url: "https://www.amazon.com/Density-Fasciitis-Stretching-Physical-Exercise/dp/B085ZS4G55?crid=1HS73KD2PSFM2&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.gU7iuYqoEDg3KKwX694EsMbcQ965AlLKHm2HJf_XNjhtu7jRFLh8v18IUjcwq7hYwx9GDw1OevNKvRYQs7gAq09OO1Cc9OaDn1_wOKb3mnTJkSRkQnTJHH2D9Pn3f4Ali94lsXjHxN6CP2fK1JSV4ZOhfNfrOdF6Jhi5ecVBwOt9vLcwFafWjrM-Fy2ZYFyyCeLWf7Ck7m1fIybDf5suZVerm7CzJEEeHqohi4Da-R0.zzqo_ISs8MMa3_kYLgM4qUgRmHialSWJXhJ-NB6zkwY&dib_tag=se&keywords=recovery%2Btools%2Bset&qid=1775436228&s=samedaystore&sprefix=recovery%2Btools%2Bset%2Csamedaystore%2C202&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e3f1d044285c7614fbc2732560da2482&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kVoH5EXTL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "5-in-1 Adjustable Dumbbell Set, 12/20lbs",
+            price: "$39.00",
+            reason: "A single adjustable dumbbell that replaces five weights in one compact unit. For someone who trains at home on rest days or travels and wants to keep her routine going, this solves the problem of a full dumbbell rack taking over a living room. It goes from 2.5lbs to 12lbs or 20lbs depending on the version, covers most accessory work she would do at the gym, and stores in almost no space.",
+            url: "https://www.amazon.com/dp/B0FVBF9N46?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71urDLNAOGL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "OpenRun Pro Bone Conduction Headphones",
+            price: "$139.00",
+            reason: "Bone conduction headphones sit outside the ear canal and transmit sound through the cheekbones, which means she can hear her music clearly while staying fully aware of her surroundings during outdoor training. The OpenRun Pro from Shokz is the best in this category, with eight hours of battery life, a quick charge feature, and a secure fit that does not move during hard efforts. For someone who runs, cycles, or trains outdoors, this is a genuine upgrade over standard earbuds.",
+            url: "https://www.amazon.com/SHOKZ-New-OpenRun-Pro-Comfortable/dp/B0FH4QX7TH?dib=eyJ2IjoiMSJ9.TVb5kEGmjMahLc2ZrEgdzyx_NZcZnkCMR7ah1ugbDMHaRN2c9y71f6rWOqT6lxul1IPkQeUO7A0ilAxUzbHZp9m1MB8ucBkbXyJotbAdtUeKBs7Klxwux5P4RG2mP2t1N23DXMLNmLs2vO27seW3vARzmHGUIn1Rqzw-hrIvCenaVrBICpjJy_5jBcuz-G8SKrKHbPsJPOrlu2QbReurAuTxqJw_uJEo9HhXCD6PQMY.dHKCcu9FxnyErBEcc_Bt332kowVnva3NIbCEw8r14pY&dib_tag=se&keywords=bone%2Bconduction%2Bheadphones&qid=1775607536&sr=8-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b7987e7f304ee046d043bfaa35836aec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51f7hhpfGnL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "The Theragun Mini delivers the same percussive therapy as the full-size model in a device small enough to fit in a gym bag. Thirty percent smaller and lighter than the standard version, it works on quads, hamstrings, shoulders, and calves after any session without requiring a dedicated recovery ritual. For someone who trains multiple times a week and is serious about how her body feels between sessions, this is one of the most-used gifts she will ever receive.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Infared Sauna Blanket",
+            price: "$293.95",
+            reason: "An infrared sauna blanket delivers the same deep-tissue heat and cardiovascular benefits as a traditional sauna from her own bed or couch. It raises core temperature, promotes recovery, supports detoxification, and most people who use one regularly describe it as one of the best purchases they have ever made for their health. For someone who trains hard and takes recovery seriously, this is the splurge that changes her entire post-workout routine.",
+            url: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ?content-id=amzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095%3Aamzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095&crid=1AJN8MOV2F7HQ&cv_ct_cx=Weighted%2Bheated%2Bblanket&keywords=Weighted%2Bheated%2Bblanket&pd_rd_i=B0BX7HLCYQ&pd_rd_r=af11a619-c016-41f2-80f0-9ac0a51e57df&pd_rd_w=KEL4v&pd_rd_wg=07rVc&pf_rd_p=141f5c48-2844-433f-b731-f8ecc97a5095&pf_rd_r=9TSAQ9DSX1BB9PNCNGRQ&qid=1774736436&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bheated%2Bblanket%2Caps%2C270&sr=1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&aref=SGiR41tniM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c23aa71ec7e1c3167017f6abfec16408&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "What to avoid",
+        body: "Skip gym clothes, shoes, and anything with a brand she has not specifically mentioned. Fitness people are extremely loyal to what works for their body and anything in those categories risks landing wrong. Everything on this list sidesteps that problem entirely by focusing on recovery and equipment she can use alongside whatever she already wears and trains with."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

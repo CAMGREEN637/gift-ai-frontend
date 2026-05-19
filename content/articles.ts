@@ -2301,6 +2301,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — COFFEE
+  // ============================================================================
+  {
+    slug: "birthday-gifts-coffee-lover",
+    title: "Birthday Gifts for the Girlfriend Who Runs on Coffee",
+    excerpt: "Not a generic mug. Gifts for someone whose coffee order is a personality trait and whose morning ritual is sacred.",
+    occasion: "birthday",
+    interests: ["coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-17",
+    relatedArticles: [
+      "birthday-gifts-cooking",
+      "birthday-gifts-home-decor",
+      "gifts-cozy-homebody",
+      "birthday-gifts-reading"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The gift that always misses",
+        body: "A mug. Everyone buys her a mug. She has seventeen mugs. The problem with coffee gifts is that most people default to the container rather than the ritual, and the ritual is what actually matters to someone who takes their coffee seriously. She is not attached to coffee because she needs caffeine. She is attached to it because of the process, the smell, the fifteen minutes in the morning that belong entirely to her. Gifts that connect to that feeling land completely differently from ones that just reference the category."
+      },
+      {
+        type: "text",
+        heading: "What coffee lovers actually want",
+        body: "Think about how she makes coffee and where. If she pours over at home every morning, better beans or a better brewer are both strong options. If she drinks it at her desk and it is always going cold, a smart mug that holds temperature changes her whole workday. If she has the equipment side handled, an experience-oriented gift like an espresso martini kit takes coffee somewhere she has not thought to take it yet. Match the gift to her version of coffee, not the generic version."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Espresso Martini Kit",
+            price: "$45.00",
+            reason: "A complete espresso martini kit with everything needed to make the cocktail at home: espresso botanicals, a shaker, and recipe cards. For someone who loves coffee and also enjoys a drink, this is a genuinely unexpected gift that combines both in a way she has probably not thought about. It is also an activity rather than an object, which makes it easy to suggest doing together the evening you give it.",
+            url: "https://www.amazon.com/Espresso-Martini-Gifts-Complete-Botanicals/dp/B0FW25RLC5?crid=3CJNI70R46CHZ&dib=eyJ2IjoiMSJ9.ZR2nqrEwJgautpxRgRVWeBXqIDGF35iKcFIe8ps-OIqC5DjqQ_syS_0n9ykyK1m1LAgGAcX5sehf0nFxmnWzlZOyD8a56oRuOfJ-5QqJCAkS_WVpPBmE5_AHs4HGAHkRcuJ7WdH4r3HQyeTpaf95XAdqYJrtJrUrvG3MmL9xL4e0gcR7GogSAZXlKjFV2JLwmp9sGxZeBakXSY_VL74X2Rqy_6I69QocjB3XorwfIIHkwPFs2C8SVJqyLv6uWLXcOFHSCSAXcA-RQTOpPkOp8WS8XS3CKaRp7GkheA5od0A.auAsuxsXHw3sqm0qR1WwSFCuhwhswIIQxjdsbU1X_YA&dib_tag=se&keywords=Espresso+martini+kit&qid=1776008712&sprefix=espresso+martini+kit%2Caps%2C1175&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=41f4e893f1df165f058706118238ca93&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71W-IVXYZ9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "6-Cup Pour-Over Glass Coffeemaker",
+            price: "$47.00",
+            reason: "The Chemex is the most recognizable pour-over brewer in the world and one of those objects that looks as good on a shelf as it does on a counter. It produces a noticeably cleaner, brighter cup than a standard drip machine and doubles as a piece of kitchen design. For someone who takes her morning coffee seriously and has not yet made the pour-over transition, this is the gift that starts a better ritual.",
+            url: "https://www.amazon.com/dp/B0000YWF5E?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71oMA36JxfL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Keurig K-Mini Portable Coffee Maker",
+            price: "$49.00",
+            reason: "The Keurig K-Mini is the most compact single-serve coffee maker on the market, small enough to fit on a desk, a bathroom counter, or in a bag for a camping trip. For someone who needs coffee the moment she wakes up and does not always want to run through a full pour-over ritual, this gives her a great cup in under two minutes with no mess and no cleanup. A practical, appreciated gift for any coffee lover whose mornings move fast.",
+            url: "https://www.amazon.com/Keurig-Compact-Portable-Machine-Glamping/dp/B0FMSTSYL7?crid=19FI926BGRJ8P&dib=eyJ2IjoiMSJ9.8OGpU9Yu-6EEX9xX0DuffMle4ANwQ0RPvRS2Qk8nPLlG3f4knXorJmRCUeSPH41LprJW1zc6eqc3OClEsC5V1Ocd-PlHhulgVY0XmB-mpOLwWlt1mPraRjIaLEc1YQ9auLdsG1cmVFJt0VRnYsxINcbU8E9HpyqLlskt2DBIJbSwpu-HZatRFPNb6lMTXbpeXCNy436AfepZcnBTpLIuodxmIXrAKKF5Zwkpfn4jj2P7iXEibhgyxSyIztQMmS0PI5Gf8jV1nIY-VC8XePsXJ019AOTbLJAf3uDoNmfwT3s.eYRXJcPyZbkxluCcBbZVRpblmwNc0gYeLY52kKiHcPQ&dib_tag=se&keywords=Keurig%2BK-Mini%2BSingle%2BServe%2BCoffee%2BMaker&qid=1777842338&sprefix=keurig%2Bk-mini%2Bsingle%2Bserve%2Bcoffee%2Bmaker%2Caps%2C290&sr=8-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=13ffb65d2fc32a37a7fb3d10b62bab70&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61FrE0tj9OL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Temperature-Controlled Self-Heating Mug, 14oz",
+            price: "$99.00",
+            reason: "The Ember mug maintains her coffee at exactly the temperature she sets for up to 80 minutes, which means she can actually finish a cup without it going cold halfway through. For someone who drinks coffee at a desk, during a slow morning, or in the middle of getting ready, this solves a problem she has accepted as permanent. One of the few tech gifts that improves a daily habit so directly that it is impossible to go back.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "20 Bar Semi-Automatic Espresso Machine",
+            price: "$159.00",
+            reason: "A 20-bar semi-automatic espresso machine that produces genuine cafe-quality espresso at home, with a built-in steam wand for milk drinks. For someone who spends serious money on coffee out but has not yet made the investment in a proper home setup, this is the gift that changes her morning entirely. At this price it is the most impactful thing on this list, and for the right person it will be used every single day.",
+            url: "https://www.amazon.com/HIBREW-H10B-Temperature-Adjustable-Intelligent/dp/B0DLP26373?crid=3LJEBJLSS58L5&dib=eyJ2IjoiMSJ9.VRfsNFwOnWd_4xvdvi1vQ1gnO7pp1TWyTMz6hYXrp60IW99Li0B_EQsDKi6gRXiZQrIA0E11VP2Dm-6o-YbwmGxkUEo1fLmqNWPxAfbyB5IW8ot43CDr1w2z5sKE_5TX2ZqkuONNNF6c3Ieq-7xkwxMQGnIBkftJu95YFz4N6rg4VqHrAe3_a6lqqLQE_bFMJLF87_Dgn94NvgdKBBH_ZzayyjUBmuznEsZqCjpDwrNV9IV-U4OYUhAxbMSmlTgFsCXAcm_Xsl41OaM0H22F3LsnhlZhVChJ0UsJBN6ArqA.sMMG9Sm2lc7yL4Jy2y5sZy-3uO9KwKpka23MhvJK6Hc&dib_tag=se&keywords=Breville%2BBarista%2BExpress%2BEspresso%2BMachine&qid=1773107129&sprefix=breville%2Bbarista%2Bexpress%2Bespresso%2Bmachine%2Caps%2C341&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=59d8a555daf224f89b05d4dd502510ff&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Still want to give her a mug",
+        body: "If you are set on a mug, make it the Ember. It is the only mug on the market that actively earns its place in a coffee lover's kitchen, and it is so far removed from the novelty mug category that she will not group it with the seventeen she already has."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

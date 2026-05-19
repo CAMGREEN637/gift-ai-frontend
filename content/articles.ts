@@ -1996,6 +1996,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — SKINCARE
+  // ============================================================================
+  {
+    slug: "birthday-gifts-skincare",
+    title: "Birthday Gifts for a Girlfriend Who's Into Skincare",
+    excerpt: "For the woman with a twelve-step routine and strong opinions about ingredients. Gifts that fit into a practice she has already built.",
+    occasion: "birthday",
+    interests: ["skincare"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-15",
+    relatedArticles: [
+      "birthday-gifts-wellness",
+      "birthday-gifts-home-decor",
+      "birthday-gifts-hard-to-shop-for",
+      "birthday-gifts-yoga"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why skincare gifts are risky if you get them wrong",
+        body: "Someone who takes her skincare seriously has done the research. She knows her skin type, the ingredients she responds to, and the products she trusts. Buying her a random serum or moisturiser from a brand you recognize is almost certain to duplicate something she already owns, clash with her routine, or include ingredients she actively avoids. The safest skincare gifts are either tools that work alongside any routine, or products from brands she has specifically mentioned, not ones you have heard of before."
+      },
+      {
+        type: "text",
+        heading: "The category that almost always works",
+        body: "Skincare tools are the smart move here. A jade roller, a gua sha stone, a skincare fridge, a red light therapy mask: none of these require you to know her skin type or her ingredient preferences, and all of them enhance whatever routine she already has. They are also the kind of purchase she is likely to want but hesitates to make for herself, which puts them squarely in gift territory."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Jade Roller and Gua Sha Set",
+            price: "$13.00",
+            reason: "A jade roller and gua sha stone are two of the most used tools in any serious skincare routine. They reduce puffiness, improve circulation, and help products absorb more effectively when used after serums and oils. This set comes with both for under fifteen dollars, making it an easy add-on to a card or a small standalone gift that shows you paid attention to what she does every morning.",
+            url: "https://www.amazon.com/BAIMEI-Roller-Facial-Routine-Puffiness-Light/dp/B08YN3KC2Z?crid=3PFFPTQV700IL&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.MZo5n7p0I5c8DdzjChPlHvHjyWopd4VKV-of1NDER0xSBv47xRZ1JNQ_clSd2wxgcuvC0HHIGKRlIDK_ldR_r6xtclbG9VD7QYk7I9a76THXxUQq9l2_5WOGS_iXZxaVRKuw6IUW_qwi0d1wVgIXRMNAV8b3Dq5FWZDfm_54v5A-azJxktd8UpnNi5OG5jnhZ2J72r9ZIExgludKssyZKerg_mQwNW8sBF3BgjV85ho.WdWXxK4CGOeUunIaDWE43qe4JEpncJr17yPicWVrF8U&dib_tag=se&keywords=jade%2Broller%2Band%2Bgua%2Bsha%2Bset&qid=1775434614&s=samedaystore&sprefix=jade%2Broller%2Band%2Bgua%2Bsha%2Bset%2Csamedaystore%2C228&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=cacfff9482ff45a4bb533241b48a8a75&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61ilGIuzB4L._SL1500_.jpg"
+          },
+          {
+            name: "Hydrating Bio-Collagen Overnight Mask, 16ea",
+            price: "$62.00",
+            reason: "A box of sixteen bio-collagen overnight masks gives her a full month of deeply hydrating treatments she can use whenever her skin needs a reset. Collagen masks are something she probably uses occasionally but would not stock in bulk for herself. Giving her a full set means she can use them freely rather than rationing them, which is a small but genuinely appreciated upgrade to her routine.",
+            url: "https://www.amazon.com/dp/B0B879FZBZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/417w02ffAmL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Tatcha Skincare Set",
+            price: "$95.00",
+            reason: "Tatcha is one of the most respected names in Japanese-inspired skincare and this starter ritual set brings together their most loved products in travel sizes, letting her try the full routine before committing to full sizes. For a skincare enthusiast who has not yet tried Tatcha, this is an exciting introduction. For one who already loves the brand, it is exactly the kind of restocking gift she will actually use.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=2UQ2KCRG5EGO1&dib=eyJ2IjoiMSJ9.x9w1hhp6SFHQ8JfZulUH5j9XizGt-Z34UJHa7FVSlY7U3twGEOdI2wY3Gv842P1uCKIifs3jBnL6VzmYyW0WgQfufeGPDjyRteHLalPvhii0VYn21Yj38zQz3AGH_GnHXagxRUsne0rcIW7uh6Y-VwpEqgQqNBvwrBWB22DZgsTXQI2PZUJbEA0euJZm3vwuIf92SHBuV22PnsibXGXNVb6Rq0jrt31jcfgmo2aA1Yy28vPHfaZK8GXORdbCXSWlerW9rYVKY7eOVk95a-kUQFjMD4yJWXbAyO8lR1eaqNw.3hXYTIyVr1pvZOBShvAw2Vgz2doeGO_osxW6kL3rK3I&dib_tag=se&keywords=Tatcha+skincare+set&qid=1774736945&sprefix=tatcha+skincare+set%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ed66be2350a587168c4fcbc32c54f59d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          },
+          {
+            name: "Skincare Fridge with LED Mirror",
+            price: "$135.59",
+            reason: "A dedicated skincare fridge keeps her serums, sheet masks, and vitamin C products at the optimal temperature for preservation and application. This one comes with a built-in LED mirror with adjustable lighting, which doubles its usefulness as part of a vanity or bathroom setup. For someone who has invested seriously in her skincare products, keeping them properly stored is a genuinely functional upgrade. It is also the kind of object that looks beautiful on a bathroom shelf.",
+            url: "https://www.amazon.com/Kikihouse-Skincare-Lighting-Dimmable-Cosmetic/dp/B0GSZN88J7?crid=27258EJ1UFEKA&dib=eyJ2IjoiMSJ9.zx3Fk_WUmRwXrzp0D0gU5e8TQm6CEfK107oHJZIR6M7gEgWXcZaRUbcX3i1rblMyXdfNjFGHb-4M9J-txRLwc1vdOSyce7LMxYMUBkkjNharuM0WeaajbCOq5XJpb73WBcfcFFecYCu--UvWlQGP5v5DBTCnIGwx-e2_W2DN8bP1lHgeCbsuhPtbTLujDkzTGnuTospC_bpyg60rBUT60zgYZtwzAz0fcueKfEBmEyo.OogYByPYITc49JWl2R2F2NbgmFzK2Ke5CFJQGVLnKpc&dib_tag=se&keywords=skincare%2Bfridge&qid=1774738658&sprefix=skinca%2Caps%2C210&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d59697ac6fb7f43bcf3f5073fd57af0c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IdGY1rcPL._AC_SL1500_.jpg"
+          },
+          {
+            name: "4D Red Light Therapy Face Mask",
+            price: "$179.00",
+            reason: "Red light therapy is one of the most evidence-backed skincare treatments available, stimulating collagen production, reducing inflammation, and improving skin tone with consistent use. This hands-free mask delivers clinical-grade wavelengths she can use during her wind-down routine without any additional effort. For a serious skincare enthusiast who has optimised her products but has not yet added a device, this is the upgrade that takes her routine to a different level entirely.",
+            url: "https://www.amazon.com/dp/B0FJS8ZQWS?maas=maas_adg_api_591804581339319208_static_9_129&aa_campaignid=lv_4b9e4NCSPDPodUvBVE&aa_adgroupid=lv_GkCHmtolszTKUOCWcB&aa_creativeid=lv_GaHtQ89nbgwHXkQWzr&m=A2F97CWV4SAWYO&linkCode=ll2&tag=cbggiftapp637-20&linkId=f6f921d72446bb436ddc452c78b448ec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41AUc0hbRmL._SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One rule worth following",
+        body: "Never buy her a moisturiser, serum, toner, or cleanser unless she has told you exactly what she uses. Products that touch her skin are deeply personal choices and the wrong one can cause a reaction, clash with her existing routine, or simply go unused. Tools and sets from brands she already trusts are always the safer and more appreciated territory."
+      },
+      { type: "cta" }
+    ]
   }
 ];
 

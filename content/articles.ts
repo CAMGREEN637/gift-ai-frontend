@@ -2377,6 +2377,117 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // ANNIVERSARY GIFTS — SKINCARE
+  // ============================================================================
+  {
+    slug: "anniversary-gifts-skincare",
+    title: "Anniversary Gifts for a Girlfriend Who Takes Her Skincare Seriously",
+    excerpt: "She already has a routine. These gifts upgrade it, and they show you actually paid attention.",
+    occasion: "anniversary",
+    interests: ["skincare"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-20",
+    relatedArticles: [
+      "birthday-gifts-skincare",
+      "anniversary-gifts-personal",
+      "gifts-under-100-high-end",
+      "birthday-gifts-wellness"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The mistake most guys make with skincare gifts",
+        body: "The easiest skincare gift to give is also the worst one: a generic face wash set from a brand she has never mentioned, in packaging that looks like it belongs in a hotel bathroom. It signals that you noticed the category but not the person. Skincare is one of those interests where the details matter enormously. She knows the difference between a brand she trusts and one that fills shelf space. She knows whether she wants retinol or vitamin C, a tool or a treatment, something to add to her routine or something to replace a step she has been tolerating for years. The gifts that land here are the ones that feel like they came from someone paying attention, not someone who typed a category into a search bar."
+      },
+      {
+        type: "text",
+        heading: "What actually works as a skincare anniversary gift",
+        body: "Anniversaries have weight. The gift does not need to be enormous, but it should feel considered in a way that a birthday gift or a just-because gift does not quite require. For skincare, that means one of a few things: a product from a brand she has mentioned wanting to try, a tool that upgrades something she already does every day, or something so luxurious that she would never quite justify it for herself. The ten picks below are spread across all of those angles, from a $13 jade roller she can start using tonight to a $139 spa set that makes the whole evening feel like an occasion."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Jade Roller and Gua Sha Set",
+            price: "$13.00",
+            reason: "A jade roller and gua sha tool are the entry point into facial massage that most skincare-interested women have thought about adding to their routine and not quite gotten around to. This set covers both tools at a price that feels like a small, thoughtful addition rather than a big swing. It is the kind of gift that fits inside a card envelope metaphorically speaking, works alongside whatever she already uses, and will sit on her bathroom shelf where she will see it every morning and think of you.",
+            url: "https://www.amazon.com/BAIMEI-Roller-Facial-Routine-Puffiness-Light/dp/B08YN3KC2Z?crid=3PF9E9K3Y7ZKC&dib=eyJ2IjoiMSJ9.8qm18eDQMiY5LL6c2mUJovfYo3MrNyb4rAISVb_xJmZ0OoGa5bEr-MwrM2xO7mDHo7F5eLFqTWM4cRCe1ysVj1UXMj8xO2MBB0kRjGlMvN4KJiJ4WJm0cjCJILJc2U85bKLnK0D3rNFIlZV7X5z_r9JL6bMXBunrOMM3JWQtG5VnYp6dvS3AqS9w15dxXlVMhUl8F_XYb0BbefXNhHihtbgBf0c8uDOeD3WMmKnlRLW0lpnjSZ8X7S1GgGYSaH91lCv4Sf7sAU2qzklomGCh1BfLOi4mMuFUfSarjYsI.LPrQXkW0oKPmX04lxD4BNzXVHYbGYNtG_I4s4UDv1XE&dib_tag=se&keywords=jade+roller+and+gua+sha+set&qid=1775770855&sprefix=jade+roller+and+gua+sha+set%2Caps%2C228&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d34e6e5f4a73c6cab5c55b9ab34b16a8&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61ilGIuzB4L._SL1500_.jpg"
+          },
+          {
+            name: "LilyAna Naturals Anti Aging Retinol Face Cream",
+            price: "$17.61",
+            reason: "Retinol is the ingredient most dermatologists agree on, and this moisturizer delivers it in a formula that pairs it with hyaluronic acid so it does not dry skin out the way some retinol products do. It is the kind of product she might already have on a list somewhere, kept there because the price of a proper retinol cream felt hard to justify. At under twenty dollars, you have removed that barrier completely, and the reason you chose it will not go unnoticed.",
+            url: "https://www.amazon.com/dp/B01ES349CY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81gcGOSloCL._AC_UL320_.jpg"
+          },
+          {
+            name: "La Chatelaine Hand Cream Trio",
+            price: "$29.00",
+            reason: "Three hand creams in different scents, made with plant-based and organic ingredients, in the kind of packaging that looks good sitting on a nightstand or a bathroom shelf. It is an easy gift to underestimate until you feel the quality of the formula, which is noticeably richer than anything from a drugstore. For an anniversary, it works well as part of a larger gift or as the main event when paired with a genuinely nice card.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=2KWRK9DIQRGVZ&dib=eyJ2IjoiMSJ9.G_B9AoAjTq_vDr3O-Bc0VUYBw-BJXM3vy7kfh39Ic1F0ERUVaT4FVDnSmTPEA5tZSWlSAfKJXm1JJD_1-bPy76E2pv_JR3LkpnUEmpvJK85sJpJUj_n7rO7LCj10spTQlVMJcXaRGRSjXYq8tJbBx1d7UPJTVjNpLRH14j-jJFN0OfW7bz2E-Iz7TrPUB3e-z7fPy2gqsVJBU5RHSOr6C5JHZuYsxk2RJqQ5rjf9I1kpFsrRK0UVeD6h7S5a8nW1tS8z1ry7Zb6_bGjl4-T6xmblYMq9TH7gYJyiLN4.8Z_Qls_q3pJbOvbDTZP9YI6JXX_ZjQkVqTHM0OgHT1Q&dib_tag=se&keywords=La%2BChatelaine%2Bhand%2Bcream%2Btrio&qid=1775771126&sprefix=la%2Bchatelaine%2Bhand%2Bcream%2Btrio%2Caps%2C214&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=3f6a15d6f5c2ca0f1f5bca28b02f0e7d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51gC3+iqO4L._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Olay Retinol Night Cream",
+            price: "$29.94",
+            reason: "Olay's retinol night moisturizer is one of the most consistently recommended drugstore skincare products among dermatologists, and it is the kind of gift that lands because it is genuinely useful rather than decorative. Fragrance-free, non-greasy, and formulated with peptides and niacinamide alongside the retinol, it fits into almost any nighttime routine without requiring adjustments. For an anniversary, it says: I know what you actually use, and I am helping you run out of it less often.",
+            url: "https://www.amazon.com/dp/B07XQBY5QQ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71hnOkynsSL._AC_UL320_.jpg"
+          },
+          {
+            name: "SUNGBOON EDITOR Deep Collagen Retinol Capsule Cream",
+            price: "$29.96",
+            reason: "This Korean skincare cream comes in individual capsules that protect the retinol from oxidation until the moment of use, which is a design detail that most women who follow skincare closely will immediately recognize as thoughtful rather than gimmicky. The formula combines retinol with collagen and spicule technology for firming and texture improvement. It is the kind of gift that shows you did not just grab the first retinol product you saw, and for someone who pays attention to what goes on her skin, that distinction registers.",
+            url: "https://www.amazon.com/dp/B0DK8JTL6S?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61E7m0E+7uL._AC_UL320_.jpg"
+          },
+          {
+            name: "SUNGBOON EDITOR Rejuvenating Combo Deep Collagen Boost Set",
+            price: "$39.00",
+            reason: "A collagen face mask and serum set from the same Korean skincare brand, with four sheet masks and a full-size serum in one box. For someone who treats skincare as a ritual rather than a chore, a mask set is an invitation to a slow evening rather than just a product. It is easy to pair with a bottle of wine and a night in, which makes it one of the few skincare gifts that doubles as a plan for the two of you.",
+            url: "https://www.amazon.com/dp/B0DRJNMTRS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/615umqCY-UL._AC_UL320_.jpg"
+          },
+          {
+            name: "Estee Lauder Dream Skin In One Sleep 4-Piece Skincare Set",
+            price: "$45.00",
+            reason: "Estee Lauder is one of those names that carries immediate recognition for anyone who follows skincare, and this four-piece set brings together a cleanser, serum, moisturizer, and overnight treatment in travel sizes that let her try the full routine before committing to full-size products. It is the kind of gift that feels more expensive than it is because the brand name does real work here, and the overnight treatment format is a natural fit for an anniversary night at home.",
+            url: "https://www.amazon.com/dp/B0FNRT96B8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71n3HdZpWzL._AC_UL320_.jpg"
+          },
+          {
+            name: "Hydrating Bio-Collagen Overnight Mask",
+            price: "$62.00",
+            reason: "Sixteen individual hydrogel overnight masks that she peels on before bed and wakes up from with noticeably softer, more hydrated skin. It is one of those products with a cult following in skincare communities for a reason: the results are immediate enough to be obvious, and the format feels more spa-like than most at-home treatments. Sixteen masks means she will think of this gift every time she uses one for the next several months, which is a long return on your investment.",
+            url: "https://www.amazon.com/dp/B0B879FZBZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/417w02ffAmL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Nodpod Silk Sleep Mask",
+            price: "$68.00",
+            reason: "The Nodpod is a weighted silk sleep mask with a bead-filled interior that applies gentle, even pressure across the eyes and forehead while blocking light completely. It is not a skincare product in the strict sense, but it supports the kind of deep sleep that is the most underrated part of any skincare routine. For an anniversary gift, it lands in a nice register: personal, thoughtful, luxurious enough to feel like a treat, and genuinely useful every single night.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "ELEMIS Pro-Collagen Marine SPF 30 Daily Facial Moisturizer",
+            price: "$119.00",
+            reason: "ELEMIS Pro-Collagen Marine Cream is one of the most awarded moisturizers in premium skincare, and the SPF 30 version makes it a daily driver rather than an occasional treat. It is the kind of product that replaces whatever she is currently using in the morning and makes her wonder why she waited so long to try it. At this price it is a real gift rather than a stocking stuffer, and for someone who takes her skincare seriously, it communicates clearly that you do too.",
+            url: "https://www.amazon.com/ELEMIS-Pro-Collagen-Marine-Cream-SPF/dp/B07BMBQG73?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=1P4BW5SE7L3S1&cv_ct_cx=elemis+spf&keywords=elemis+spf&pd_rd_i=B07BMBQG73&pd_rd_r=ffc7c4ae-0153-4024-a0d5-31c4e3a1f553&pd_rd_w=Fktyd&pd_rd_wg=m5k4q&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=XKF7DVWMPQ3XJ4AJE5EF&qid=1775775770&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&linkCode=ll2&tag=cbggiftapp637-20&linkId=7d5e26a9e64ebb23fdbd46b8b6ac03dc&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61EU70GZWTL._SL1500_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing",
+        body: "Whatever you choose, write two sentences about why. Not a long card, just: what made you pick it, and what you hope she gets out of it. For a skincare gift especially, that context is the difference between a thoughtful present and a lucky guess."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

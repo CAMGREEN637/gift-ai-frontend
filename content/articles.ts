@@ -2488,6 +2488,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // TECH GIFTS — THOUGHTFUL
+  // ============================================================================
+  {
+    slug: "tech-gifts-that-feel-thoughtful",
+    title: "Tech Gifts That Actually Feel Romantic",
+    excerpt: "Five picks that happen to plug in, but feel personal rather than practical.",
+    occasion: "birthday",
+    interests: ["photography", "music", "wellness", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-20",
+    relatedArticles: [
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-under-100-high-end",
+      "gifts-cozy-homebody",
+      "birthday-gifts-wellness"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why tech gifts usually miss",
+        body: "Most tech gifts for women fail for the same reason: they solve a problem she does not have, or they solve a problem she does have but in a way that feels impersonal. A generic Bluetooth speaker says you wanted to give her something useful. A record player in her favorite color, or a device that delivers photos from your camera roll to a frame on her nightstand, says something else entirely. The difference is not the technology. It is whether the gift connects to her life specifically."
+      },
+      {
+        type: "text",
+        heading: "What makes a tech gift feel thoughtful",
+        body: "The best ones tend to improve something she already does every day, or make possible something she has wanted to do but has not gotten around to. They are also the kind of thing she would not buy for herself, either because the price feels hard to justify or because she has simply not prioritized it. A gift that removes that friction, and arrives with a note explaining why you chose it, lands in a completely different register than the same item in a generic box."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Temperature-Controlled Self-Heating Mug, 14oz",
+            price: "$99.00",
+            reason: "The Ember mug maintains whatever temperature she sets for up to 80 minutes, which means she can actually finish a hot drink without it going cold halfway through. It sounds like a small fix, but for anyone who drinks coffee or tea at a desk, during a slow morning, or while getting ready, it changes a daily frustration she has probably stopped noticing. One of the rare tech gifts that improves a habit so directly that it is impossible to go back.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "A WiFi-connected digital frame that you can load with photos directly from your phone, and update remotely whenever you want. For a girlfriend who values the relationship itself more than the gadget, this is the rare tech gift that is actually about her and you rather than about a product. Set it up with photos from the past year before you give it, and it arrives already working in the most personal way a frame ever could.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Skincare Fridge with LED Mirror",
+            price: "$135.59",
+            reason: "A compact refrigerator designed for skincare, with a built-in LED mirror and enough space for serums, sheet masks, eye creams, and anything else she likes to keep cool. Chilled products reduce puffiness and extend the shelf life of actives, and it is the kind of upgrade that makes her skincare shelf look intentional rather than improvised. For someone who already has a routine, this is the gift that takes it seriously.",
+            url: "https://www.amazon.com/Kikihouse-Skincare-Lighting-Dimmable-Cosmetic/dp/B0GSZN88J7?crid=27FMTKR4E1Y6G&dib=eyJ2IjoiMSJ9.3sAOmTQZp6pPRkHOjZ49v1hxbPp2UR4Fk1aaT4FYFHlEkXpidQcYbT1bqYPOSKOHTVjk08v4mG0u-U0MqSLqG-JZuX6pJPU4t3Z5uVvQjnOVo5a9X83cEhP7IKn9cWTEjD9t7B0aB2bfhMIVMVhkjKXS4w6MKVRCkmTi0e3CGX-_Jcm9FcfV2n9yRAjuasA2xTlFGwi1u_w_cpjFDT7bnbfmpAp8oHVQRZ3o0R0Hbx-4Cz-4MuwYN7sVBT3X2PVYitlBuZj3sPWl2KvI8rrMbGt1MMbQjrxuHu8SZNM.g1WuKEWo7tHMbRCyEaruJ9rRVZaabTx0bJBhEU_g8oc&dib_tag=se&keywords=skincare+fridge+with+led+mirror&qid=1775773897&sprefix=skincare+fridge+with+led+mirror%2Caps%2C198&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b05823d6cba574e0c52fa9dafc6a27da&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IdGY1rcPL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Instax Mini 12 Instant Camera Bundle",
+            price: "$165.00",
+            reason: "The Instax Mini 12 prints credit-card-sized photos on the spot, with a simple enough interface that it actually gets used rather than sitting in a drawer. The bundle includes film and a case, so she can start the same day. For someone who takes photos on her phone but rarely has any of them printed, this closes that gap in a way that feels fun rather than dutiful. It is also the kind of gift that will end up in every photo from every occasion for years.",
+            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "$169.00",
+            reason: "A small wooden device that sits on her desk or nightstand and spins a heart whenever you send her a message from the app. She taps it to reveal a photo, drawing, or note. It sounds simple because it is, but for a long-distance couple or anyone who spends time apart during the week, it creates a connection point that no text message quite replicates. Of everything on this list, it is the one that has the least to do with technology and the most to do with the relationship.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW7YD?crid=3A31BDYSDKITD&dib=eyJ2IjoiMSJ9.OFvXNQqpK3D4GQjqNILxDl2R-gLiAb9Nf_jKGpNbRuDI4MNnpJKiQwv2N6ZFRS0aJfgdGhwFINBByFYQFuXAuUcmTqkL2f0VQkHOcHwwwEpHMJH5z00YGFdE1FLWNEhiPJzDvJLfOGMZWV5dpxs3LWOvFi1d7YB1iyOx6-e7rVMjRMSjSLrJb5Q9_x4mE6Xs-d7oDNqUhE1v4UVtVTqhN1Yp6h9wr1P6MoNJ2T9FtT9W1XjQX8kn1h_Xa1FH7WOcAFOlFPz4HNhRMzqePvmQ7GNhqt6TiJPkJgNLU.VlHFhL4B9u-rAiQ_PZhq6TBwWpUxpzW2hJnN5AvZFAc&dib_tag=se&keywords=lovebox+photo+messenger&qid=1775774562&sprefix=lovebox+photo+messenger%2Caps%2C205&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e0bdb31c74cb1c9c68c4e65b6f34a4e1&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The setup matters",
+        body: "For any of these, do the setup before you give it. Charge it, load it with photos, connect it to the app. A tech gift that arrives ready to use feels like a completely different level of effort than one that comes with a card saying you will help her set it up later."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

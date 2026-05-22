@@ -2564,6 +2564,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — CYCLING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-cycling",
+    title: "Birthday Gifts for a Girlfriend Who Loves Cycling",
+    excerpt: "Five picks for the woman who logs miles on weekends and actually uses what you give her.",
+    occasion: "birthday",
+    interests: ["cycling"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-20",
+    relatedArticles: [
+      "birthday-gifts-running",
+      "birthday-gifts-hiking",
+      "birthday-gifts-fitness",
+      "birthday-gifts-hard-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The mistake most people make with cycling gifts",
+        body: "The easiest cycling gift to give is also the worst one: something decorative or generic that signals you know she rides but not how she rides. A water bottle with a bicycle print on it, or a generic workout set that works for any activity. Cyclists are particular about their gear in the way any serious hobbyist is, and a gift that treats cycling as a personality type rather than a practice tends to land with a polite smile and a spot in a drawer. The gifts that actually get used are the ones that solve a real problem she encounters on every ride."
+      },
+      {
+        type: "text",
+        heading: "What to get a cyclist who already has the basics",
+        body: "Most cyclists who ride regularly already have a helmet, shoes, and a bike they love. The gap is usually in the smaller things: hydration that works properly, audio that is safe to use outdoors, or tracking tools that give her more data without requiring more effort. The five picks below cover that range from a well-designed everyday tumbler to the kind of GPS computer that serious cyclists keep on their wishlist for months before someone finally buys it for them."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "STANLEY Quencher ProTour Tumbler 30 oz",
+            price: "$40.00",
+            reason: "The ProTour is the Stanley tumbler redesigned specifically to fit a standard cupholder, which makes it the rare Stanley that works as well in a car or bike cage as it does on a desk. The leakproof flip straw lid means she can drink without unscrewing anything mid-ride, and the double-wall vacuum insulation keeps cold drinks cold through a full morning out. For a cyclist who is particular about gear, this is a practical upgrade she will actually reach for.",
+            url: "https://www.amazon.com/Leakproof-Cupholder-Compatible-Insulated-Stainless/dp/B0DCDZP9ZY?crid=1B57XHQFP2P7X&dib=eyJ2IjoiMSJ9.8Cp0W_wkTuuqHi3a4JBn_xDvHmYvq-7fjC0NfAWf3FBblHZ8Haf8J7mJ9UJvIVHKidyGW4Cp0_rX4lEjjpWXdl5EJfK4Mf0zWnxEhPKJLRbixKRgc5iUQhXHn5nkiCfYi1_cCHpnXxQ3Zq7aGU0KdwIidm1P6KenrNmLEMjxuAyBXZ16P3FpE6mV8hC_VhNMd41RyWJ7LGVZ-uKm9hJz4A8VJWdw0_7kzVmhcMx_HuaVx7YiOBMvnV39XBdp0mJI7C1THZK0yyGRxBD5Kkzz3pVq6HT4cxhAbXzQbA.pQkXWAXtnpK3SFc0BRLJ1ELuWelAi1lh7LiXbQ7kHGU&dib_tag=se&keywords=STANLEY+Quencher+ProTour+Tumbler+30+oz&qid=1775776297&sprefix=stanley+quencher+protour+tumbler+30+oz%2Caps%2C217&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=03e0fea8ed0c66c82869aae7ba73d55d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51L-q8h+bwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hydration Running Vest Backpack 5L",
+            price: "$32.00",
+            reason: "A 5-liter hydration vest with a 1.5L BPA-free water bladder and enough storage for a phone, keys, and a snack. For cyclists who go long or off-road, carrying water on your back is more practical than relying on a bottle cage, and the vest distributes the weight evenly so it does not pull or bounce. It is the kind of gear upgrade she might not prioritize for herself but will use constantly once she has it.",
+            url: "https://www.amazon.com/dp/B07HQM4DPB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81pu2p5PqpL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "OpenRun Pro Bone Conduction Headphones",
+            price: "$139.00",
+            reason: "Bone conduction headphones sit just in front of the ears rather than in them, which means she can hear music or podcasts while staying fully aware of traffic, other riders, and anything else happening around her. For a cyclist, this is not a compromise on audio quality so much as the only sensible way to listen to something on a ride. The OpenRun Pro is the most respected name in bone conduction, with better sound and a more secure fit than most alternatives at this price.",
+            url: "https://www.amazon.com/SHOKZ-New-OpenRun-Pro-Comfortable/dp/B0FH4QX7TH?dib=eyJ2IjoiMSJ9.TKFL3Uk8Ixkm1lkJJvUjKF7bXNmBXivLkHT1Ae-LS8jfb3wIzBUMKpfmcXQPOtlXfLPJ7pkMXl0T8v4NmpAb5Sz6hN_JcAiwqNJgdJBcWzrXrH9trdBDaAnvEFR9HEbCKGXIFO2OzMoOJrBZfSSSPeV2a-9w0JzMYEQN9OlWAi7KLBNN5I4IcW8VQ33nOJblq84sPAGMNPxIcJK5l7lAUNmYdm9JOUQGa1EAnH2q2iBj8VZNfijBNAIcqMJKrdm9HMFLSiZq__7FO08_44a-IHXXKzJfDg4b2WcMkH4JGcAHajVELrM6RNE1Jrt7f7D.y65UjYcSHhMvhxFSbajS46W3GCMA-Tc_HVzqzgJLlI&dib_tag=se&keywords=Shokz+OpenRun+Pro&qid=1776643521&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ac86a3ad67d29ab0e5e43d70f8c0f7a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51xLFxYW18L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "GPS Running Watch with Daily Workouts",
+            price: "$169.00",
+            reason: "The Garmin Forerunner tracks pace, distance, heart rate, and route via GPS, and works as well for cycling as it does for running or hiking. For a cyclist who wants more data without staring at her phone, a dedicated GPS watch is the natural next step, and Garmin is the brand that serious endurance athletes actually use rather than settle for. It suggests daily workouts based on her training load, which means it gets more useful the more she uses it.",
+            url: "https://www.amazon.com/Garmin-Forerunner-Running-Suggested-Workouts/dp/B092RH28GN?crid=1TBBSNJKM7ZMP&dib=eyJ2IjoiMSJ9.Xwk9nRHu6ZxfmMVm_UYFGZiQxuFO6NxFmqiuGVqoJV6HV-9TT5FmAVFnYQwc5-i3n9aXJnMvN4XJxDUt7R8bMYGVFBEHDCi4-vkPBHqCyxLmkBsS3JFqsmFJF4pKq0WrH_82c7OTnl8Y_V17RCdVwYUdxTN-7IHzwzQLKA2VCr6j0h43RvMlGGl95_HtLy5pQTJWc77tEHNETnwHuCjLz1RYq-JG8NKRR7h2XT6fUMNVuXUVjTzm7M5zN78rnAMZQDqE5dIg1Xq9LJlDqR-mPrHRyoGFVNuXDYFfZwu.mJgBG5k4G04iBPcWGrq9zqcnMlVU1O_WR0gNT5oRjJI&dib_tag=se&keywords=Garmin+Forerunner+55+GPS+Running+Watch&qid=1775776497&sprefix=garmin+forerunner+55+gps+running+watch%2Caps%2C202&sr=8-2&linkCode=ll2&tag=cbggiftapp637-20&linkId=33a56975e0dfcd65024c94286b8b42ac&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51oLbLikOeS._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Compact GPS Cycling Computer",
+            price: "$339.00",
+            reason: "A dedicated Garmin cycling computer mounted to the handlebars is what serious cyclists upgrade to when they want more than a watch can show them: turn-by-turn navigation, full route mapping, power metrics, and a screen large enough to read at speed without slowing down. The Edge 530 is the model that experienced cyclists actually recommend to each other, not the entry-level version marketed to beginners. If she has been riding long enough to feel the limits of her current setup, this is the gift that removes them.",
+            url: "https://www.amazon.com/Garmin-Computer-Controls-Targeted-Navigation/dp/B0BT36VBGM?crid=3FDD7M1RTYWR4&dib=eyJ2IjoiMSJ9.6ztumEMATjGZRhG-E0VKVCm-fTG8IQILhcr_JUh9DvdqnB8NYDZE5l0D3T3nHZfJzSIJVJK5VE3y4pxRO0l3T1Xa0V8N38xVrGJhVlUoVXMC2rwvIBRFSN9rWYuiKsU2iBHhJfqcVXoGQzOO37GG7w4h_j3fDVvnj5U6-JjRiMTfniMCCEhDDvhV-Q1VCXqsKLs7_beFBenN3MBq6cUAMAtd9tO_V_lpjt7I2M0hLaHBQ-MrN8k4U2RqGRyH7dvSLbdTkv7wO5GGKQO0wz4SsxiNPEkqMB25vEAWjBGTGm72pqTRmjUSz3bx3B9tl4.kGJL7JQ8M7MOlFdxQ5iRIKPD25LoqEFjDMLYs8Bld8Y&dib_tag=se&keywords=garmin+edge+530+cycling+computer&qid=1775776654&sprefix=garmin+edge+530+cycling+computer%2Caps%2C195&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e82c6cdc9f58a27e0e1cd0ecfc6e2a7f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/612ELumqRyL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on fit and compatibility",
+        body: "For anything that attaches to a bike, like a GPS computer, confirm her handlebar setup before ordering. Most road and gravel bikes use a standard mount that the Garmin quarter-turn adapter fits, but it is worth a quick check. Everything else on this list works regardless of what she rides."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

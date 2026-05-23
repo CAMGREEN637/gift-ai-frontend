@@ -2640,6 +2640,89 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — BEVERAGE GIRLIE / SUMMER DRINKS
+  // ============================================================================
+  {
+    slug: "gifts-beverage-girlie-summer-drinks",
+    title: "Gifts for the Girlfriend Who Takes Her Drinks Very Seriously",
+    excerpt: "She has opinions about ice. She knows the difference between a good mocktail and a glass of juice. These are for her.",
+    occasion: "birthday",
+    interests: ["cocktails", "wine", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-23",
+    relatedArticles: [
+      "birthday-gifts-cooking",
+      "gifts-under-100-high-end",
+      "anniversary-gifts-personal",
+      "gifts-cozy-homebody"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Summer is basically her Super Bowl",
+        body: "For the girlfriend who treats drink-making as a hobby, summer is the main event. Patio hours, outdoor hangs, the perfect ratio of sparkling water to something pretty in a glass. She has a running list of recipes she wants to try and an equally strong opinion about what goes wrong when people skip the effort. Gifting her something that upgrades that ritual is almost guaranteed to land well, because you are not just giving her a product, you are giving her more to work with."
+      },
+      {
+        type: "text",
+        heading: "What she actually wants",
+        body: "The best gifts for this person are the ones that open up new options: a new mixer she can riff on, a tool that makes something she already does look more impressive, or a setup that makes drinking outside feel intentional rather than improvised. These six picks cover the full range from a $17 impulse add-on to a $100 splurge that will live on her counter all summer."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Craftmix Espresso Martini Cocktail & Mocktail Drink Mixer",
+            price: "$16.99",
+            reason: "Single-serve cocktail mixer sticks that work with or without alcohol, which makes them genuinely useful for both nights in and nights out. The espresso martini flavor is having a serious moment right now, and the mocktail angle means she can enjoy the whole ritual without the drink. It is a small, thoughtful addition that signals you actually pay attention to what she is into.",
+            url: "https://www.amazon.com/dp/B0D4DFQTMJ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/711b7JHjXJL._AC_UL320_.jpg"
+          },
+          {
+            name: "Skinny Cocktail Mixer Set, 12 Flavors",
+            price: "$26.00",
+            reason: "Twelve sugar-free, gluten-free cocktail and mocktail mixers in a single set, covering everything from classic margarita to more adventurous summer flavors. For someone who likes to experiment with drinks at home, this is basically a whole season of recipes in one box. The skinny format means she can make something that actually tastes considered without the sugar hangover, which for the health-conscious drink lover is a very welcome detail.",
+            url: "https://www.amazon.com/Skinny-Mixes-Cocktail-Mocktail-Variety/dp/B08YDWNF6Q?crid=3FDD7M1RTYWR4&dib=eyJ2IjoiMSJ9.6ztumEMATjGZRhG-E0VKVCm-fTG8IQILhcr_JUh9DvdqnB8NYDZE5l0D3T3nHZfJzSIJVJK5VE3y4pxRO0l3T1Xa0V8N38xVrGJhVlUoVXMC2rwvIBRFSN9rWYuiKsU2iBHhJfqcVXoGQzOO37GG7w4h_j3fDVvnj5U6-JjRiMTfniMCCEhDDvhV-Q1VCXqsKLs7_beFBenN3MBq6cUAMAtd9tO_V_lpjt7I2M0hLaHBQ-MrN8k4U2RqGRyH7dvSLbdTkv7wO5GGKQO0wz4SsxiNPEkqMB25vEAWjBGTGm72pqTRmjUSz3bx3B9tl4.kGJL7JQ8M7MOlFdxQ5iRIKPD25LoqEFjDMLYs8Bld8Y&dib_tag=se&keywords=skinny+cocktail+mixer+set&qid=1775776497&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=skinny-mixer-set",
+            image_url: "https://m.media-amazon.com/images/I/51Zm3BdXWPL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Espresso Martini Infusion Kit",
+            price: "$39.90",
+            reason: "A from-scratch espresso martini kit that walks her through making the infused spirit herself rather than just shaking a pre-made mixer. The process is genuinely fun, the result tastes noticeably better, and it is the kind of project that works perfectly as a shared evening activity if you want to make an event of it. For someone who is already into drinks, this is the step up from buying ingredients to actually crafting something.",
+            url: "https://www.amazon.com/dp/B0DRJNMTRS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81IGBXpzMOL._AC_UL320_.jpg"
+          },
+          {
+            name: "Whiskey Smoker Kit with Torch",
+            price: "$47.00",
+            reason: "A cocktail smoker kit that adds a wood-smoked layer to old fashioneds, negronis, mocktail sours, or honestly whatever she feels like experimenting on. It looks impressive, smells incredible, and produces the kind of drink you post before you take a sip. If she is the type who follows drink content on Pinterest or TikTok, there is a very good chance she has already seen this and quietly wanted one.",
+            url: "https://www.amazon.com/dp/B0BNHNG5CY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81giNCIRH5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully kitted picnic backpack with plates, cutlery, wine glasses, and a insulated cooler compartment built in. For a girlfriend who likes her drinks to feel like an occasion, this turns any outdoor afternoon into something that actually looks like it was planned. Summer rooftops, beach days, park hangs with a good bottle of something cold: this is the bag that makes all of those feel pulled together rather than improvised.",
+            url: "https://www.amazon.com/dp/B0B879FZBZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Electric Wine Chiller",
+            price: "$99.99",
+            reason: "A countertop wine chiller that brings a bottle down to the perfect serving temperature in about eight minutes and keeps it there. For someone who takes drinks seriously, warm wine is basically an offense, and this solves that problem elegantly without requiring a full wine fridge. It looks good on a counter, works for still and sparkling, and is the kind of upgrade she would never quite justify buying for herself but will use every single weekend once she has it.",
+            url: "https://www.amazon.com/dp/B0CB1FW5FC?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61jJx0BhiSL._AC_SX679_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Bonus move",
+        body: "Pick up a bag of good ice. Jumbo cubes, clear spheres, whatever is available near you. Pair it with whichever gift you choose and show up ready to make the first round yourself. She will not see that coming."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

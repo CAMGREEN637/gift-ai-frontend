@@ -2758,14 +2758,14 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             name: "Personalized Acrylic Music Plaque",
             price: "$8.00",
             reason: "A custom plaque engraved with the album art and scan code of any song you choose, so she can hold her phone up to it and play the track instantly. The gift is the song choice. Pick the one from your first date, the one she plays on repeat, or the one that means something only the two of you would understand, and suddenly an eight-dollar piece of acrylic becomes one of the most personal things you have ever given her.",
-            url: "https://www.amazon.com/Personalized-Acrylic-Spotify-Plaque-Custom/dp/B0BPJCMX8X?crid=12RCUAWUQTW3X&dib=eyJ2IjoiMSJ9.Q-d7K4AMvUzYGMa6SZCB0P3pjHiZfX7TqiGhsrFBOVCe5IfI4R0E5b41pzd7wt4LPVxP1fxgSW0wMTMSTOeEMJp40v3XLKdJBpWr_cXqM8Eo-V6H97X3GDgYgxrm7G9b7YKc7BL6ANxv3eLu7Vp3pF7UYnpbz7YWxmgDVHNS8c3FPB5u_fZl3Ql6X5Cm8U7OvQNGX6Bm5HpBxkz5JAWvWr2yBDFbNcZGxJkH_bF7y4tWJcBHXv3nMHSCrZCi4X9vJW5mBzLkPgDqHZGnJCxBMcNFBymvjR1Sm3Gy7LNl7K9hAsMOm7RQ1c.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=music-plaque&language=en_US&ref_=as_li_ss_tl",
+            url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20&th=1",
             image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Personalized Gold Bar Name Bracelet",
             price: "$27.00",
             reason: "A dainty gold-filled bar bracelet engraved with her name, a date, or a word you choose. Jewelry always lands well, but personalized jewelry lands differently because it required a decision, not just a budget. She will wear it and know it was made for her specifically, which is a feeling that no bracelet pulled from a display case can replicate. At twenty-seven dollars it is also one of the better value gifts in the database relative to how it reads in person.",
-            url: "https://www.amazon.com/Personalized-Bracelet-Adjustable-Stainless-Engraved/dp/B08F7QXPQR?crid=1B57XHQFP2P7X&dib=eyJ2IjoiMSJ9.example&dib_tag=se&keywords=personalized+gold+bar+name+bracelet&qid=1775776297&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=gold-bar-bracelet&language=en_US&ref_=as_li_ss_tl",
+            url: "https://www.amazon.com/Personalized-Bracelet-Bridesmaid-Anniversary-Christmas/dp/B015DTI1OY?dib=eyJ2IjoiMSJ9.PCCDydwMZHOLTSR7mcG-URohJE-b3eKoUeyBSZ9R1rUDpaUpKeRPqGOgTI-Lz_LD8xeCMU-TpEKIl3x5FtesF4Sb2bPjUOj1hXJCAWyp4hEoTgsjjTHY2TICW7jKHz32-pTtGmLk_Sw7-diWqgKip7wbbzXSZ9WE6lQs1NK7RpTGUTVG2qhxD_I-be4WDlM5KcfQXYASbewbAlrWUTnU4BLwgMiUvGydgSlapCdBW8jWZkbAVx_dJGg-VGAQ4n3W_-bQjx1rzidiWuUQrGyxuvH6JPR50yc2uUd8V1E8xGs.r_Xzn70VgCmJJLzrtY0rF_w5D5KrcAvQb0wahN_yrdE&dib_tag=se&keywords=Custom+coordinates+bracelet&qid=1777685069&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=29d71f5bc7c800c112cd399b0cc5fe9a&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {

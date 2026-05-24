@@ -2799,6 +2799,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — ROMANTIC WITHOUT BEING OVER-THE-TOP
+  // ============================================================================
+  {
+    slug: "gifts-romantic-without-being-over-the-top",
+    title: "Gifts That Feel Romantic Without Being Over-the-Top",
+    excerpt: "Sweet without being heavy. Thoughtful without making it weird. Five picks that get the tone exactly right.",
+    occasion: "anniversary",
+    interests: ["home_decor", "travel", "wellness", "cooking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-23",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "anniversary-gifts-personal",
+      "gifts-cozy-homebody",
+      "tech-gifts-that-feel-thoughtful"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Getting the tone right is harder than it sounds",
+        body: "Romantic gifts exist on a spectrum. On one end: a bouquet and a card, which is warm but forgettable. On the other: a grand gesture that puts pressure on the moment and can make even a great relationship feel like it is being evaluated. The sweet spot is somewhere in the middle, gifts that communicate real affection without turning a birthday or anniversary into a production. They are the kind of thing she will quietly love rather than feel overwhelmed by."
+      },
+      {
+        type: "text",
+        heading: "What actually lands in that register",
+        body: "The best romantic-but-not-intense gifts tend to do one of two things: they reference your relationship specifically, or they create an occasion for the two of you rather than just transferring an object. A star map printed for the night you met. A book of date ideas that makes the next six months feel like something to look forward to. A picnic bag that is basically an invitation. These are gifts that say something without needing to say everything."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "A print of the night sky exactly as it appeared over a specific location on a specific date: the night you met, your first date, her birthday, any moment that matters. It is quiet and specific in a way that most gifts are not, and the fact that you had to choose a date and a place to generate it means the thought behind it is visible in the object itself. At sixteen dollars it is also proof that romantic does not have to mean expensive.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Capri Blue Volcano Scented Candles",
+            price: "$35.00",
+            reason: "The Capri Blue Volcano candle is one of those products with a genuinely devoted following, recognizable by anyone who pays attention to home fragrance and beloved for a reason: the scent is warm, complex, and distinctive without being heavy. A candle is a soft romantic gesture, the kind that makes an evening feel intentional without requiring a speech. This one in particular lands a level above the generic because she will almost certainly recognize it, which means the gift registers as considered rather than convenient.",
+            url: "https://www.amazon.com/dp/B000YBFJQU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61OaZLhib8L._AC_UL320_.jpg"
+          },
+          {
+            name: "Heart-Shaped Box of Preserved Roses",
+            price: "$39.00",
+            reason: "A heart-shaped box of real preserved roses that hold their shape and color for months without water. This sits in a different register than a dozen red roses: it is softer, less performative, and designed to stay rather than wilt by Wednesday. For a birthday, anniversary, or just-because occasion, it is the kind of romantic gift that communicates genuine thought without telegraphing that you spent twenty minutes Googling what to get her.",
+            url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81bHitaEdvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Sixty scratch-off date ideas ranging from low-key evenings in to proper adventures out, organized so you can pick based on mood, energy, and how ambitious you are feeling that week. Giving this says: I am already thinking about the next several months with you. That is a romantic gesture that does not require flowers or a speech, and unlike most gifts it keeps delivering, because every date you actually do together came from something you gave her.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully equipped picnic backpack with plates, glasses, cutlery, and a built-in cooler compartment, ready for two. The romantic element here is not the bag itself but what it implies: that you already have a plan. Hand her this and tell her where you are taking her, and the gift becomes an occasion rather than an object. It is also something you will both use together, which makes it one of the few gifts that is as much for the relationship as it is for her.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Keep it simple",
+        body: "None of these need a big setup or a speech. The ones that reference your relationship specifically, the star map especially, do their own talking. For the rest, a short card explaining why you chose it is all the occasion they need."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

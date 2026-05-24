@@ -2723,6 +2723,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — THOUGHTFUL / NOT LAST-MINUTE
+  // ============================================================================
+  {
+    slug: "thoughtful-gifts-that-dont-feel-last-minute",
+    title: "Thoughtful Gifts That Don't Feel Last-Minute",
+    excerpt: "For when you actually planned ahead, or need it to look like you did.",
+    occasion: "birthday",
+    interests: ["home_decor", "music", "photography", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-23",
+    relatedArticles: [
+      "birthday-gifts-hard-to-shop-for",
+      "anniversary-gifts-personal",
+      "gifts-under-100-high-end",
+      "tech-gifts-that-feel-thoughtful"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "What makes a gift look thought-through",
+        body: "There is a tell that most people miss: a last-minute gift solves a generic problem. It is useful in a way that has nothing to do with her specifically. A thoughtful gift, by contrast, requires knowing something about the person, making a decision, or putting in effort that she can actually see. It does not have to be expensive. It has to be the kind of thing where, when she opens it, the first thought is not just \"I like this\" but \"he actually thought about me.\""
+      },
+      {
+        type: "text",
+        heading: "Five gifts that read as considered, not convenient",
+        body: "These five picks span a wide range of prices and occasions, but they all share the same quality: each one requires something from you beyond clicking add to cart. A song you chose. Her name. Photos you curated. An activity you planned around her. That extra step is exactly what separates a gift she will remember from one she will politely thank you for."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Acrylic Music Plaque",
+            price: "$8.00",
+            reason: "A custom plaque engraved with the album art and scan code of any song you choose, so she can hold her phone up to it and play the track instantly. The gift is the song choice. Pick the one from your first date, the one she plays on repeat, or the one that means something only the two of you would understand, and suddenly an eight-dollar piece of acrylic becomes one of the most personal things you have ever given her.",
+            url: "https://www.amazon.com/Personalized-Acrylic-Spotify-Plaque-Custom/dp/B0BPJCMX8X?crid=12RCUAWUQTW3X&dib=eyJ2IjoiMSJ9.Q-d7K4AMvUzYGMa6SZCB0P3pjHiZfX7TqiGhsrFBOVCe5IfI4R0E5b41pzd7wt4LPVxP1fxgSW0wMTMSTOeEMJp40v3XLKdJBpWr_cXqM8Eo-V6H97X3GDgYgxrm7G9b7YKc7BL6ANxv3eLu7Vp3pF7UYnpbz7YWxmgDVHNS8c3FPB5u_fZl3Ql6X5Cm8U7OvQNGX6Bm5HpBxkz5JAWvWr2yBDFbNcZGxJkH_bF7y4tWJcBHXv3nMHSCrZCi4X9vJW5mBzLkPgDqHZGnJCxBMcNFBymvjR1Sm3Gy7LNl7K9hAsMOm7RQ1c.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=music-plaque&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized Gold Bar Name Bracelet",
+            price: "$27.00",
+            reason: "A dainty gold-filled bar bracelet engraved with her name, a date, or a word you choose. Jewelry always lands well, but personalized jewelry lands differently because it required a decision, not just a budget. She will wear it and know it was made for her specifically, which is a feeling that no bracelet pulled from a display case can replicate. At twenty-seven dollars it is also one of the better value gifts in the database relative to how it reads in person.",
+            url: "https://www.amazon.com/Personalized-Bracelet-Adjustable-Stainless-Engraved/dp/B08F7QXPQR?crid=1B57XHQFP2P7X&dib=eyJ2IjoiMSJ9.example&dib_tag=se&keywords=personalized+gold+bar+name+bracelet&qid=1775776297&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=gold-bar-bracelet&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Pressed Flower Art Kit",
+            price: "$31.99",
+            reason: "A complete kit for pressing and framing flowers, with everything she needs to turn blooms from the garden, a bouquet, or a meaningful occasion into preserved wall art. This is a gift that works on two levels: the kit itself is beautiful and genuinely well-made, and the implication that you thought she would enjoy making something with it shows a level of attention to who she is. If you give it with a fresh bouquet and suggest she try it with the flowers, it becomes a plan, not just a product.",
+            url: "https://www.amazon.com/dp/B09TQRK49Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91K6A7TnAuL._AC_SX679_.jpg"
+          },
+          {
+            name: "Personalized Engraved Wooden Keepsake Box",
+            price: "$49.00",
+            reason: "A wooden box engraved with her name, a date, initials, or a short phrase, sized for jewelry, letters, photos, or whatever she wants to keep. Keepsake boxes are one of those gifts where the value is almost entirely in what you engrave on the outside: a generic message makes it feel like a prop, but the right words make it something she keeps on her dresser for years. Think about what you want her to read every time she opens it, and this becomes one of the most lasting things you can give.",
+            url: "https://www.amazon.com/dp/B08C7PJQPX?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/816jS1pUXuL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "A WiFi-enabled digital frame you load with photos from your camera roll before you ever hand it to her, so it arrives already cycling through pictures of the two of you. The setup is twenty minutes of your time. The result is a gift that is running the moment she plugs it in, showing her exactly what you chose to put on it, which tells its own story. You can add new photos remotely any time after that, which means the gift keeps getting updated long after the birthday is over.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The card matters more than you think",
+        body: "Whatever you give, write two or three sentences about why you chose it. Not an essay, just enough to explain the thought behind it. That context is the difference between a gift that feels considered and one that just happens to be the right thing."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

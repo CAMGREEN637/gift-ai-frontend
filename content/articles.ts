@@ -2799,6 +2799,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+
 // ============================================================================
   // GIFTS — ROMANTIC WITHOUT BEING OVER-THE-TOP
   // ============================================================================
@@ -2871,6 +2872,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         type: "text",
         heading: "Keep it simple",
         body: "None of these need a big setup or a speech. The ones that reference your relationship specifically, the star map especially, do their own talking. For the rest, a short card explaining why you chose it is all the occasion they need."
+      },
+      { type: "cta" }
+    ]
+  },
+// ============================================================================
+  // GIFTS — SERIOUS RELATIONSHIP
+  // ============================================================================
+  {
+    slug: "gifts-for-a-serious-relationship",
+    title: "Gifts for a Serious Relationship",
+    excerpt: "When you know her well enough to actually get it right. Five picks that match the weight of where you are.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "cooking", "wine"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-23",
+    relatedArticles: [
+      "gifts-romantic-without-being-over-the-top",
+      "anniversary-gifts-skincare",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-under-100-high-end"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Gifting changes when the relationship is real",
+        body: "Early on, a gift is partly about impression management. You are still figuring out who she is and what she likes, and the gift reflects that uncertainty, careful, considered, calibrated to not overstep. In a serious relationship, that calculus shifts entirely. You know her. You know what she would never buy for herself, what she has mentioned wanting, what would make her everyday life noticeably better. A gift in this context is not about making a good impression. It is about showing that you were paying attention."
+      },
+      {
+        type: "text",
+        heading: "What the right gift looks like at this stage",
+        body: "The best gifts for a serious relationship tend to fall into one of two categories: things that reference the relationship itself, or things that are genuinely luxurious in a way that only makes sense because you know her well enough to know she would love it. Both signal the same thing: that you have been listening, and that you take her seriously. The five picks below span a wide price range and cover both ends of that spectrum."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Light Up Calendar Frame",
+            price: "$16.00",
+            reason: "A light-up photo frame you customize with a specific date highlighted on the calendar and a photo that goes with it: the day you met, your first trip together, an anniversary, any moment that belongs to the two of you specifically. It is the kind of gift that takes ten minutes to set up and communicates something no generic present ever could. At sixteen dollars it is also proof that the most relationship-specific gifts are rarely the most expensive ones.",
+            url: "https://www.amazon.com/Custom-Light-Calendar-Frame-Photo/dp/B0G6Z7PKW9?crid=3MZFD0TZUXRXL&dib=eyJ2IjoiMSJ9.t6t2pNeqHZdSXtSHYuf9E9d7KIZ4ow6eIGY_kt3jzULGjHj071QN20LucGBJIEps.EnocTYCndACYsxyyidZatfztBizyAU4Ahxz2tGTRPbc&dib_tag=se&keywords=Custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled&qid=1777862481&s=handmade&sprefix=custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled%2Cspecialty-aps%2C204&sr=8-3&srs=120955898011&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=65b194c8b30a30e7c224d2926e1cd20d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71lwEyHgZZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Mr. and Mrs. Wine Glass Set",
+            price: "$29.00",
+            reason: "A set of two engraved wine glasses that say something about where you are without requiring a conversation about it. In a new relationship this would be a bold move. In a serious one it lands as confident and warm, the kind of gift that gets used on a regular Thursday and makes her smile every time she reaches for it. Use them the night you give it, with a bottle of something she actually likes.",
+            url: "https://www.amazon.com/dp/B0D126Z2FV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81X+jpp-t5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "Barefoot Dreams makes the robe that anyone who has ever touched one immediately understands the appeal of: extraordinarily soft, the kind of thing you put on once and do not want to take off. Named one of Oprah's Favorite Things, it is the kind of luxury item she has probably encountered somewhere and quietly filed away. Giving it says that you know her well enough to know she would love this, and that you think she deserves it. For an anniversary or birthday in a serious relationship, that is exactly the right message.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "$169.00",
+            reason: "A small wooden device that spins its heart whenever you send her a message from the app, which she opens to find a photo or note from you. In a new relationship this could feel like a lot. In a serious one, where you spend time apart during the week or travel for work, it becomes the kind of quiet daily connection that makes a difference. You can update it from anywhere, which means it stays relevant long after the birthday or anniversary that prompted it.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW78J?crid=107QJ3KGU5AT9&dib=eyJ2IjoiMSJ9.iy0k1nYzZ6EZAmonOpTbXRT72JZWqZMxciM2DfDXm2TyF-bYlw4gI0h86sOHBfAAFawV3k_RcpvdINEdMxmQCYYMcmzI8ZbGcDJs9h85h2s.ga92mLAB_rMTyOvd4jTXYw3hmzU2nRHHhtV6DXIW-ak&dib_tag=se&keywords=Lovebox+Spinning+Heart+Messenger&qid=1776654042&s=handmade&sprefix=lovebox+spinning+heart+messenger%2Cspecialty-aps%2C192&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8c9cdbf3c271910d049f4fc42520b055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "6.5qt Enameled Cast Iron Dutch Oven",
+            price: "$289.00",
+            reason: "A Le Creuset Dutch oven is the kind of thing serious home cooks put on a mental wishlist and never quite prioritize for themselves because the price feels hard to justify on a random Tuesday. It is also a gift that lasts decades, looks beautiful on the stovetop, and gets used for every soup, braise, and slow Sunday dinner for years to come. Giving this in a serious relationship carries a particular weight: it is an investment in her kitchen, which is often the center of a shared home life, and it will be there long after the occasion that prompted it.",
+            url: "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ?crid=29M2RNIQI65CV&dib=eyJ2IjoiMSJ9.zg3iPs8agRKCchFLOXS7h7EK0szh4EpkojQGW2Vmvb3YR4Lyg9sum8uQvi7CIBaoWozDWCCaVAoEMFGcdbdgJRxT9ot8MXvtTGJwbiUdbNccrMdcPY3IxK7fO0O3_Ic-VZZe_lmvvpYTMm6Toz8mvZ6uKl8K1v2cn8mfkzlg6Sveuozdbinr3tawS6BrrXNUaTGGKRn7x_6JgGXIdcnldNMNQF3Y8eJFl7YNGarTqd9dvDZ16tBtLl36LpMGWYI4BEa_MXeceaeYERciaz2XUWoOlRNRFcYLrQ6UW_30JnM.SI896DJBYRmSYcQ_Pnm-6-3pzgtKSxSoMyEQATdads0&dib_tag=se&keywords=Le%2BCreuset%2BDutch%2Boven&qid=1773371582&sprefix=le%2Bcreuset%2Bdutch%2Boven%2Caps%2C343&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5743fe6d2fb116790feb2470792c6bbe&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One last thing",
+        body: "In a serious relationship, the card matters more than it ever did early on. Not because she needs the explanation, but because she has earned it. A few sentences about what she means to you will outweigh every other detail about the gift itself."
       },
       { type: "cta" }
     ]

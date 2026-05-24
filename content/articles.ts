@@ -2952,6 +2952,117 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — PHOTOGRAPHY
+  // ============================================================================
+  {
+    slug: "birthday-gifts-photography",
+    title: "Birthday Gifts for a Girlfriend Who Loves Photography",
+    excerpt: "Ten picks for the woman who sees the world through a lens, from small accessories she will actually use to the camera she has been eyeing.",
+    occasion: "birthday",
+    interests: ["photography"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-art",
+      "tech-gifts-that-feel-thoughtful",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "birthday-gifts-travel"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "What makes a photography gift actually land",
+        body: "Photography is one of those hobbies where the obvious gift, a new camera, is rarely the right move unless you know exactly what she shoots and what she already has. Most photographers at any level are more constrained by the smaller things: a strap that digs into her neck, a bag that does not fit her gear, a phone full of photos she never gets around to printing. The gifts that land best here are the ones that improve something she does every time she picks up a camera."
+      },
+      {
+        type: "text",
+        heading: "How to choose at any budget",
+        body: "The ten picks below are split across what they do: some are practical upgrades to her everyday kit, some are sentimental gifts that turn her photos into something tangible, and a few are novelty items that work well as additions to a larger gift. The price range runs from under twenty dollars to the Instax camera at the top, so there is a clear entry point regardless of the occasion."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "VAMSII Photographer Gift Vintage Cameras Tote Bag",
+            price: "$15.89",
+            reason: "A canvas tote printed with a vintage camera pattern, practical enough to use as an everyday bag and specific enough to signal that you know what she is into. It works well as part of a larger gift, paired with a card and something small inside, and it is the kind of thing she will actually reach for rather than set aside.",
+            url: "https://www.amazon.com/dp/B0FHKM9SX3?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61d3w9qLDKL._AC_UY218_.jpg"
+          },
+          {
+            name: "STRATA CUPS Camera Lens Coffee Mug",
+            price: "$15.95",
+            reason: "A stainless steel travel mug shaped and printed to look exactly like a camera lens, down to the markings. For someone who loves photography and coffee equally, this is the kind of desk accessory that makes her smile every time she reaches for it. It is a small gift that reads as very specific to her, which at this price is a strong return.",
+            url: "https://www.amazon.com/dp/B01N1WYQYT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91I+lFlSoZL._AC_UL320_.jpg"
+          },
+          {
+            name: "Padwa Lifestyle Plaid Camera Strap",
+            price: "$15.98",
+            reason: "A wide, padded camera strap in a black and white plaid pattern that is both more comfortable and more visually interesting than the default strap that comes with most cameras. For anyone who shoots regularly, the stock strap is one of those things they tolerate rather than love. This is an easy, low-cost upgrade that she will notice immediately the first time she takes her camera out.",
+            url: "https://www.amazon.com/dp/B09YD54GWC?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81jpzdyn+BL._AC_UY218_.jpg"
+          },
+          {
+            name: "Custom Photo Prints",
+            price: "$16.88",
+            reason: "Standard-size glossy photo prints ordered directly from your camera roll. The gift here is the curation: pick ten or fifteen of your favorite photos together, from trips, ordinary days, moments she captured that you both love, and have them printed. It costs almost nothing and takes twenty minutes, but arriving with a stack of physical photos she can pin up, frame, or keep says more than almost anything else on this list.",
+            url: "https://www.amazon.com/dp/B0D9YMF259?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/8136VxE5xUL._AC_UL320_.jpg"
+          },
+          {
+            name: "Photographer Leather Journal",
+            price: "$19.99",
+            reason: "A leather-bound journal designed for photographers, with prompts and space for notes on shots, settings, locations, and ideas. For someone who shoots intentionally rather than casually, this is the kind of companion that actually gets used. It is also a gift that acknowledges her practice as something worth documenting, which for a photographer who takes the hobby seriously lands with more weight than a novelty item.",
+            url: "https://www.amazon.com/dp/B0F1K4ZMXV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81w+ZUQT8PL._AC_UL320_.jpg"
+          },
+          {
+            name: "Besnfoto Compact Camera Bag",
+            price: "$21.99",
+            reason: "A small crossbody camera bag that holds a mirrorless or compact DSLR with a lens or two, plus a phone and wallet, without looking like camera gear. The canvas and leather construction is noticeably nicer than the standard padded nylon bags, and the compact size means she will actually bring it rather than leaving the camera at home because the bag is too bulky. For a photographer who shoots on the go, this solves a real problem.",
+            url: "https://www.amazon.com/dp/B07SG271TT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71KhNY1ENiL._AC_UY218_.jpg"
+          },
+          {
+            name: "Personalized Photo Album",
+            price: "$29.98",
+            reason: "A custom engraved photo album that holds up to 200 photos in a cover you personalize with her name, a date, or a short phrase. For a photographer who fills up memory cards but rarely prints anything, this is the push she needs to turn her favorite shots into something physical and permanent. Fill the first few pages before you give it and it becomes one of the most personal gifts on this list.",
+            url: "https://www.amazon.com/dp/B0CSQGQPGZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51FrLA5ebfL._AC_UL320_.jpg"
+          },
+          {
+            name: "Custom Leather Camera Strap",
+            price: "$42.99",
+            reason: "A handmade leather camera strap personalized with her name, initials, or a short message stamped directly into the leather. For a photographer who uses her camera often, the strap is one of the most-handled parts of the whole kit, and upgrading it to something that has her name on it transforms a piece of gear into something that actually belongs to her. The leather softens with use and looks better over time, which makes it the kind of gift that improves the longer she has it.",
+            url: "https://www.amazon.com/dp/B06XC2WTB8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H3lk8xIQL._AC_UY218_.jpg"
+          },
+          {
+            name: "4x6\" Portable Instant Photo Printer",
+            price: "$139.00",
+            reason: "A portable Bluetooth photo printer that connects to her phone and prints full-color 4x6 photos on the spot, no ink required. For a photographer who has thousands of images on her phone and almost none of them printed, this is the gift that closes that gap permanently. The prints are proper photo quality rather than the stamp-sized output of an Instax, which means she will actually frame them rather than just stick them on a bulletin board.",
+            url: "https://www.amazon.com/dp/B088PRX3BD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ySRliPMKL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Instax Mini 12 Instant Camera Bundle",
+            price: "$165.00",
+            reason: "The Fujifilm Instax Mini 12 is the instant camera that actually gets used. The interface is simple enough that it does not slow her down, the film is widely available, and the bundle includes enough to start shooting the same day you give it. For a photographer who already shoots digital, an instant camera scratches a completely different itch: the constraint of one shot, the physical print in hand thirty seconds later, the imperfection that makes each photo interesting. It is also the gift that ends up in every photo from every occasion for the next several years.",
+            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth knowing",
+        body: "If she shoots with a mirrorless camera, check the mount type before buying a camera strap with a clip attachment rather than a loop. Most straps on this list use a universal loop that fits any camera, but the personalized leather strap uses a clip, so a quick Google of her camera model takes thirty seconds and saves a return."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

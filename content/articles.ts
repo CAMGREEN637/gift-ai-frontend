@@ -3243,6 +3243,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — GRADUATION / GIRLFRIEND FROM BOYFRIEND
+  // ============================================================================
+  {
+    slug: "graduation-gift-girlfriend-from-boyfriend",
+    title: "Graduation Gift for Your Girlfriend: Ideas From a Boyfriend Who Actually Gets It",
+    excerpt: "She worked hard for this. These gifts say you noticed, and you are already excited for what comes next.",
+    occasion: "birthday",
+    interests: ["travel", "reading", "wellness", "home_decor", "fashion"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "what-to-get-girlfriend-one-year",
+      "gifts-for-a-serious-relationship",
+      "gifts-romantic-without-being-over-the-top"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Graduation is a different kind of occasion",
+        body: "A birthday is about her. An anniversary is about you two. Graduation is about something she did on her own, through years of work, stress, and showing up when it was hard. The best gift for this moment acknowledges that directly rather than defaulting to a romantic gesture. She does not need flowers right now as much as she needs something that says: I saw what you put into this, and I think you deserve to treat yourself well going into what comes next."
+      },
+      {
+        type: "text",
+        heading: "What works for the new chapter",
+        body: "The gifts that land best at graduation tend to fit one of two frames: something personal that marks the moment itself, or something she will actually use as her life shifts into the next phase, a new city, a new job, a new kind of freedom. The five picks below cover both, with a price range from $25 to $159 and enough variety that one of them will fit regardless of where she is headed."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized A5 Leather Bound Journal",
+            price: "$25.00",
+            reason: "A leather journal personalized with her name or initials, sized for a bag or a nightstand, with enough pages to carry her through the first year of whatever comes after graduation. Write something in the first page before you give it: the date, what you are proud of her for, what you hope for her. The journal will outlast the inscription, but the inscription is what she will read first and remember longest.",
+            url: "https://www.amazon.com/gp/aw/d/B0D24LDKX5?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=9bb5365bc186c87178f9f4cb90c081d0&hsa_cr_id=0&qid=1775774613&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=U65Id&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=ARRXF53ST4Y3K1VD65FY&pd_rd_wg=PmraY&pd_rd_r=e76aa7ec-d9a3-4a30-aaa7-c102a867b334&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=18a7ed644d91e499ebbebfc7bbb1d9f2&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71GlpMEAomL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Capri Blue Volcano Scented Candles",
+            price: "$35.00",
+            reason: "The Capri Blue Volcano candle is one of those gifts that anyone who follows home fragrance immediately recognizes, and it is beloved for a reason: the scent is warm and distinctive in a way that feels special rather than generic. For a graduation, a candle works particularly well because wherever she lands next, her new space will smell like something she chose. It is a small thing that makes a new apartment feel like home faster than almost anything else.",
+            url: "https://www.amazon.com/dp/B000YBFJQU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61OaZLhib8L._AC_UL320_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "A set of mulberry silk pillowcases that are noticeably better for her hair and skin than cotton, reduce friction and frizz overnight, and feel luxurious in a way that she will notice immediately the first night she uses them. This is a gift she would not buy for herself because it is hard to justify until you have tried it, and once she has tried it she will not go back. For a graduation, it lands in exactly the right register: you are good at what you do, you worked hard, and now you get to sleep on silk.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Weekender Duffel Bag with Laptop Sleeve",
+            price: "$90.00",
+            reason: "A well-made weekender bag with a dedicated laptop sleeve, wide enough to handle a two or three night trip and structured enough to look like it belongs in an overhead bin or a hotel lobby. For a girlfriend stepping into a new job or a new city, this is the gift that is ready when the first work trip comes up, or the first spontaneous weekend away. It is also the kind of bag that ages well, which means it will still be in rotation years from now.",
+            url: "https://www.amazon.com/dp/B0CJMWQ4QK?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81ALT4VPS8L._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Kindle Paperwhite 16GB eReader",
+            price: "$159.00",
+            reason: "The Kindle Paperwhite is the eReader that anyone who reads seriously eventually arrives at: a glare-free screen that works in direct sunlight, weeks of battery life, and enough storage to carry an entire library without adding any weight to a bag. For someone finishing years of required reading, this is the gift that says the reading she does from here is entirely for herself. It is also the kind of purchase she keeps putting off because the price is hard to justify on a random day, which makes it exactly right as a graduation gift.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The card is not optional here",
+        body: "Graduation is one of the few occasions where what you write matters more than what you give. Tell her specifically what you saw her go through and what you are proud of. Keep it short if you need to, but make it real. The gift will be used and eventually forgotten. The right card will not."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

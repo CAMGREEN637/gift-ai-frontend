@@ -3730,7 +3730,9 @@ export function getArticlesByOccasionAndInterest(
 }
 
 export function getAllArticles(): GiftArticle[] {
-  return SAMPLE_ARTICLES;
+  return [...SAMPLE_ARTICLES].sort((a, b) =>
+    new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
 }
 
 export function getRelatedArticles(article: GiftArticle): GiftArticle[] {

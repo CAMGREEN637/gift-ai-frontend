@@ -3319,6 +3319,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — MARATHON TRAINING / RUNNING
+  // ============================================================================
+  {
+    slug: "gifts-girlfriend-training-first-marathon",
+    title: "Gifts for Your Girlfriend Training for Her First Marathon",
+    excerpt: "She is putting in the miles. These five picks support the training, survive race day, and mean more because you understand what she is doing.",
+    occasion: "birthday",
+    interests: ["running", "fitness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-running",
+      "birthday-gifts-fitness",
+      "birthday-gifts-hiking",
+      "birthday-gifts-cycling"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Marathon training is a whole season",
+        body: "Training for a first marathon is not a hobby. It is a months-long project with early alarms, long Sundays on the road, and a level of physical and mental commitment that changes how her whole week is structured. The best gifts for this moment are the ones that make that project easier, more comfortable, or more motivating. Generic wellness gifts and cute running-themed mugs are well-intentioned but miss the point. She needs things she will actually use during the next twelve to twenty weeks."
+      },
+      {
+        type: "text",
+        heading: "What actually helps during a training block",
+        body: "The gaps in a first-time marathoner's kit tend to be the same: something to carry water on long runs once a belt is not enough, a GPS watch that gives her real data on pace and effort rather than just steps, and something for recovery because the runs that do not kill her make her sore for two days. The five picks below cover those needs across a price range from $16 to $219, with one pick that is about the finish line rather than the training."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "She Believed Medal Holder",
+            price: "$15.98",
+            reason: "A wall-mounted medal display that holds race finisher medals on individual hooks, printed with the phrase she believed she could so she did. Give this before race day and it functions as a statement of intent: a place already waiting for the medal she has not earned yet. After the race, it is where the marathon medal goes, and every morning she sees it is a small reminder of what she did. For a first marathon especially, that matters.",
+            url: "https://www.amazon.com/dp/B07S6SWRJX?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91s0kH46WSL._AC_UL320_.jpg"
+          },
+          {
+            name: "Hydration Running Vest Backpack 5L",
+            price: "$32.00",
+            reason: "A 5-liter running vest with a 1.5L hydration bladder and enough storage for a phone, keys, gels, and a light layer. For runs under an hour a belt is usually fine, but long runs in marathon training regularly stretch to two, three, or more hours, and carrying enough water without thinking about it changes everything. This is the upgrade she will reach for every weekend from her first long run through taper week, and it is the kind of functional gift that will not spend a single day unused.",
+            url: "https://www.amazon.com/dp/B07HQM4DPB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81pu2p5PqpL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BOOST Smart Water Bottle 32oz",
+            price: "$46.00",
+            reason: "A 32oz insulated stainless steel bottle with time markers and hydration reminders printed along the side, keeping her on track with daily intake on rest days and shorter runs when the vest stays home. Marathon training puts a real demand on hydration even on easy days, and most people chronically under-drink when they are not actively exercising. This is the kind of practical gift that does quiet, consistent work for the entire training block without ever feeling like a chore.",
+            url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-HoXBRhLFIGkuRoiSx7wo-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61j0emHta6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Garmin Forerunner 55",
+            price: "$149.99",
+            reason: "A dedicated GPS running watch that tracks pace, distance, heart rate, and cadence, and adjusts suggested daily workouts based on her training load and recovery. For a first marathoner who wants to train smart rather than just log miles, this closes the gap between effort and data: she can see when she is overreaching, when she can push, and whether her easy runs are actually easy. Garmin is what serious runners use, and this is the entry point that gives her everything she needs without overwhelming her with metrics she does not yet need.",
+            url: "https://www.amazon.com/dp/B0BFCZYMLY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61XNnt+pdDS._AC_UY218_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "A compact, powerful percussion massage gun that fits in a running bag and reaches deep enough to actually work on tight quads, calves, and hamstrings after a long run. Recovery is not optional in marathon training: the weeks that hold together are the ones where she is managing soreness consistently rather than just gutting through it. A foam roller helps, but a massage gun does in five minutes what a roller takes twenty to approximate. For a first marathon, this is the gift that keeps the training block from falling apart in mile fourteen of week twelve.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Show up on race day",
+        body: "If you are going to give her a gift during training, also make a plan to be at the finish line. A sign, her name, your face in the crowd: that is worth more than any of these gifts and it costs nothing except the morning. The medal holder will mean more if you were there when she earned it."
+      },
+      { type: "cta" }
+    ]
+  }
 ];
 
 // ============================================================================

@@ -3561,6 +3561,147 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // APOLOGY GIFTS — DOS AND DON'TS
+  // ============================================================================
+  {
+    slug: "apology-gifts-dos-and-donts",
+    title: "Apology Gifts: What to Get and What to Avoid",
+    excerpt: "Some gifts make an apology land. Others make it worse. Here is how to tell the difference.",
+    occasion: "anniversary",
+    interests: ["wellness", "home_decor", "skincare"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-for-a-serious-relationship",
+      "what-to-get-girlfriend-one-year"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The gift is not the apology",
+        body: "Let's get this out of the way first: a gift does not apologize for you. If you have not said the actual words, looked her in the eye, and taken genuine responsibility, no object in the world will do that work. A gift after an apology can reinforce that you meant it. A gift instead of an apology makes things worse. With that said, the right gift alongside a real apology does matter: it says the apology was not just words, and it tends to be remembered long after the argument is not."
+      },
+      {
+        type: "text",
+        heading: "What makes an apology gift work",
+        body: "The gifts that land after a genuine apology are the ones that feel personal and considered, not compensatory. The moment she suspects the gift is about your guilt rather than her feelings, it stops working. The picks below are organized around what to skip and what actually lands instead, with a clear reason for each."
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A generic bouquet",
+        body: "Flowers are not a bad idea, they are a default one. A same-day delivery bouquet or grocery store flowers communicate that you remembered something was required rather than that you thought about her. They also die in four days, which means the gesture fades faster than the disagreement. If you want flowers to land, they need to feel like a choice rather than a reflex."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Heart-Shaped Box of Preserved Roses",
+            price: "$39.00",
+            reason: "Real preserved roses that last months without water, arranged in a heart-shaped box. The key difference from a standard bouquet is staying power: these will still be on her shelf when the argument is a distant memory, which means the gesture stays visible in a way that cut flowers never do. It is the version of flowers that does not look like you grabbed them on the way over.",
+            url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81bHitaEdvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: Something expensive to make up for it",
+        body: "Spending a lot of money after a serious argument reads as trying to buy your way out of it, which tends to make her feel worse rather than better. It shifts the focus from the relationship to the transaction. A more expensive gift than the situation warrants can actually signal that you do not know how to address what happened, so you are deflecting with a price tag. What works instead is something that feels personal and relationship-specific, regardless of cost."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "A print of the night sky from a specific date and place that matters to the two of you: when you first met, your first trip, any moment she would recognize immediately. At sixteen dollars it cannot be mistaken for a compensatory gesture. The message it sends is not 'I spent a lot' but 'I was thinking about us,' which is exactly the right register after a genuine apology.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Sixty scratch-off date ideas that signal something specific: you are already thinking about what comes next, not just trying to close out the current chapter. This is the forward-looking apology gift. It says the relationship matters enough to you that you are planning things to do together, which lands very differently than something that is purely about the moment of contrition.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A gift that is secretly for both of you",
+        body: "Dinner reservations at a restaurant you both like. Tickets to something you have been wanting to see. A weekend away. These are wonderful ideas in most contexts, but after an argument they can read as self-serving: you want to feel better too, and the gift conveniently solves your discomfort alongside hers. An apology gift should be unambiguously for her. Something she can enjoy without requiring anything from her."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Capri Blue Volcano Scented Candles",
+            price: "$35.00",
+            reason: "A candle she lights in her own time, in her own space, that has nothing to do with you. The Capri Blue Volcano is one of the most recognizable home fragrance products around for a reason: the scent is genuinely distinctive and she almost certainly already loves it or has been meaning to try it. It is a gift that asks nothing from her, creates no obligation, and makes her space feel better the moment she lights it.",
+            url: "https://www.amazon.com/dp/B000YBFJQU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61OaZLhib8L._AC_UL320_.jpg"
+          },
+          {
+            name: "Shiatsu Neck and Back Massager",
+            price: "$45.00",
+            reason: "Something she uses entirely on her own terms, for herself, on her schedule. A shiatsu massager with heat is the kind of practical comfort gift that makes a real difference in how she feels physically, which is the right category for an apology: you want her to feel taken care of, not entertained. She can use it the same evening you give it, without you in the room.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A self-care gift set from a big brand",
+        body: "The logic is sound: she deserves to be pampered. But a Bath and Body Works set or a generic spa basket signals exactly the opposite of thoughtful. It says you knew the category but not the person. Apology context makes this worse, because anything that looks like a last-minute grab reads as insincere on top of being generic. A single well-chosen product from a brand she actually uses or has mentioned will land better than a basket of things she will never finish."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "La Chatelaine Hand Cream Trio",
+            price: "$29.00",
+            reason: "Three French-made hand creams with plant-based and organic ingredients, in packaging that looks genuinely considered. This is the version of a personal care gift that does not look generic: one category, one brand, three scents, presented beautifully. It is small enough not to feel like a compensatory gesture and specific enough to feel like you actually thought about her.",
+            url: "https://www.amazon.com/Chatelaine-Plant-Based-Organic-Gardenia-Blossom/dp/B017LJYDO6?crid=3RFLH1HYAQRFB&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.rNxwhBuwDooL74_92aNfk-RdzzaT1bCyCSkaQTJ-zKdnJS4W9MltgjGkL_k3w3nTof9RlkxkCSIjfy22kn6OvjzJHQ-3NxKl3dIwXqQjhauAD2AXjsp9tLD0NBkb7PgAxkLtYgnu9hBfCIZWWMYqzs-XJJil1o9xCkfGBWxZi0-5_USym1kTL5S5wGV9UJtJrr5X8NJtHqYapMTMiDn36m1_gAq5fgkMWTwFwDAunmo.x5KhnVNulKm23F4k_gLPT28D0pwCEBy-UBj5l4x1n7c&dib_tag=se&keywords=luxury%2Bhand%2Bcream%2Btrio&qid=1775435994&s=samedaystore&sprefix=luxury%2Bhand%2Bcream%2Btrio%2Csamedaystore%2C222&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ebcf8a32ac8d6238f6c2e0261ab29091&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51gC3+iqO4L._SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Avoid: A card that hedges",
+        body: "\"I'm sorry if you felt hurt.\" \"I'm sorry things got tense.\" \"I'm sorry you were upset.\" These are not apologies, they are deflections with punctuation. A card that hedges its language undoes everything the gift is trying to accomplish. The note that goes with an apology gift should be direct, specific, and free of the word \"if.\" If you are not sure what to write, a leather journal with your actual apology written on the first page, in your own handwriting, is more honest than any printed card."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized A5 Leather Bound Journal",
+            price: "$25.00",
+            reason: "A leather journal personalized with her name or initials, with your actual apology written on the first page before you give it. Not a workaround, not a substitute for saying sorry out loud, but a physical record of you taking responsibility in your own words, in handwriting she can return to. The journal will outlast the argument. Make the first page worth reading.",
+            url: "https://www.amazon.com/gp/aw/d/B0D24LDKX5?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=9bb5365bc186c87178f9f4cb90c081d0&hsa_cr_id=0&qid=1775774613&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=U65Id&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=ARRXF53ST4Y3K1VD65FY&pd_rd_wg=PmraY&pd_rd_r=e76aa7ec-d9a3-4a30-aaa7-c102a867b334&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=18a7ed644d91e499ebbebfc7bbb1d9f2&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71GlpMEAomL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The gift comes after the apology, not instead of it",
+        body: "None of these work without the words first. Say what you did wrong, say it clearly, and mean it. Then give the gift. In that order, a thoughtful gift reinforces that you meant what you said. In the wrong order, it is just an object that arrives awkwardly and leaves everyone feeling worse."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

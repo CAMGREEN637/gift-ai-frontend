@@ -350,6 +350,129 @@ function Footer() {
 }
 
 // =============================================================================
+// FEATURED GIFTS DATA
+// ← EDIT THESE with your real gift data
+// =============================================================================
+
+const FEATURED_GIFTS = [
+  {
+    name: "Personalized Star Map Wall Art",
+    price: 16.00,
+    occasion: "Anniversary",
+    image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg",
+    product_url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+    reason:
+      "A print of the night sky exactly as it appeared over a specific place on a specific date — the night you met, your first date, any moment that belongs to the two of you. The thought behind it is visible in the object itself.",
+    vibe: "Romantic",
+  },
+  {
+    name: "Date Night Scratch-Off Adventure Book",
+    price: 42.00,
+    occasion: "Just Because",
+    image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    product_url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+    reason:
+      "Sixty scratch-off date ideas from easy evenings in to proper adventures out — giving this says you are already thinking about the next several months together. Every date you actually do came from something you gave her.",
+    vibe: "Thoughtful",
+  },
+  {
+    name: "Barefoot Dreams Adult Robe",
+    price: 138.00,
+    occasion: "Birthday",
+    image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg",
+    product_url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+    reason:
+      "The robe that anyone who has ever touched one immediately understands — extraordinarily soft, named one of Oprah's Favorite Things, and the kind of thing she would never quite justify buying for herself. She will reach for it every morning.",
+    vibe: "Luxe",
+  },
+];
+
+type FeaturedGift = typeof FEATURED_GIFTS[0];
+
+// =============================================================================
+// FEATURED GIFT CARD
+// =============================================================================
+
+function FeaturedGiftCard({ gift, index }: { gift: FeaturedGift; index: number }) {
+  const [imgError, setImgError] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+
+    const entryDelays = [0, 150, 300];
+    const floatAnimDelays = ["0s", "0.5s", "1s"];
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            el.classList.add("gift-card-visible");
+            el.style.animation = `float 3s ease-in-out ${floatAnimDelays[index] ?? "0s"} infinite`;
+          }, entryDelays[index] ?? 0);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [index]);
+
+  return (
+    <div
+      ref={cardRef}
+      className="gift-card-enter gift-card-hover bg-white rounded-3xl border border-stone-100 shadow-sm overflow-hidden flex flex-col"
+    >
+      {/* Image section */}
+      <div className="relative bg-stone-50 flex items-center justify-center" style={{ height: "220px" }}>
+        <div className="absolute top-3 left-3 z-10">
+          <span className="bg-amber-500 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+            {gift.vibe}
+          </span>
+        </div>
+        {gift.image_url && !imgError ? (
+          <img
+            src={gift.image_url}
+            alt={gift.name}
+            className="w-full h-full object-contain p-6"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <span className="text-5xl opacity-20">🎁</span>
+        )}
+      </div>
+
+      {/* Card body */}
+      <div className="p-5 flex flex-col gap-3 flex-1">
+        <p className="text-xs font-semibold uppercase tracking-widest text-amber-600">{gift.occasion}</p>
+        <h3 className="font-serif text-lg text-stone-900 leading-snug">{gift.name}</h3>
+        <p className="text-stone-600 font-semibold text-base">${gift.price.toFixed(2)}</p>
+        <div className="bg-amber-50 border border-amber-100 rounded-xl px-3 py-2.5">
+          <p className="text-xs font-semibold text-amber-700 uppercase tracking-widest mb-1">Why this works</p>
+          <p className="text-xs text-amber-700 leading-relaxed">{gift.reason}</p>
+        </div>
+        <div className="mt-auto">
+          <button
+            onClick={() => {
+              if (gift.product_url) window.open(gift.product_url, "_blank", "noopener,noreferrer");
+            }}
+            className="w-full flex items-center justify-center gap-1.5 bg-stone-900 hover:bg-stone-800 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer"
+          >
+            View on Amazon
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// =============================================================================
 // LANDING PAGE
 // =============================================================================
 
@@ -390,6 +513,27 @@ function LandingPage({ onStart }: { onStart: () => void }) {
         .fade-up-4 { animation: fadeUp 0.6s 0.45s ease both; }
         .archetype-text { transition: opacity 0.35s ease; }
         .archetype-fade { opacity: 0; }
+        .gift-card-enter {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .gift-card-visible {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+        .gift-card-hover {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gift-card-hover:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
+          animation-play-state: paused;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-4px); }
+        }
       `}</style>
 
       {/* ── HERO ── */}
@@ -544,6 +688,37 @@ function LandingPage({ onStart }: { onStart: () => void }) {
               Find the perfect gift →
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* ── FEATURED GIFTS ── */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <div className="text-center mb-12">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Real picks, real explanations</p>
+          <h2 className="font-serif text-4xl text-stone-900 tracking-tight">
+            Here&apos;s what great looks like
+          </h2>
+          <p className="text-stone-500 mt-3 max-w-md mx-auto">
+            Every recommendation comes with a clear explanation of why it works — for her, for the occasion, for where you two are.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {FEATURED_GIFTS.map((gift, idx) => (
+            <FeaturedGiftCard key={idx} gift={gift} index={idx} />
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <p className="text-stone-400 text-sm mb-4">
+            Your picks will be matched to her specifically.
+          </p>
+          <button
+            onClick={onStart}
+            className="px-6 py-3 bg-stone-900 text-white font-semibold rounded-2xl hover:bg-stone-800 transition-all shadow-sm"
+          >
+            Find her gift →
+          </button>
         </div>
       </section>
 

@@ -3063,6 +3063,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — GIRLFRIEND OF ONE YEAR / FIRST ANNIVERSARY
+  // ============================================================================
+  {
+    slug: "what-to-get-girlfriend-one-year",
+    title: "What to Get Your Girlfriend of One Year",
+    excerpt: "The first anniversary has its own weight. Seven gifts that match it without overdoing it.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "music", "travel", "photography"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-for-a-serious-relationship",
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "anniversary-gifts-skincare"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "One year is its own category",
+        body: "A one-year anniversary sits in a particular spot. It is past the early uncertainty, past the phase where you were still figuring out what she likes and what the relationship is. But it is also not the territory of grand lifetime gestures. The gift that works here is one that acknowledges the milestone specifically: something that says you have been paying attention for a year, you are glad you did, and you are already thinking about what comes next."
+      },
+      {
+        type: "text",
+        heading: "What to actually look for",
+        body: "The best one-year gifts tend to do one of two things: they reference the relationship directly, a specific date, a shared habit, something only the two of you would understand, or they invest in an experience you will have together rather than just an object to unwrap. The seven picks below cover both angles across a range of budgets, and none of them require knowing her exact interests to land well."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "A print of the night sky exactly as it appeared over a specific location on a specific date. You choose the date your relationship started, or the night you met, or any moment from the past year that belongs to the two of you. The result is a piece of wall art that no one else in the world has, generated entirely from information only you would know to provide. For a one-year anniversary especially, that specificity is the whole gift.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Heart-Shaped Box of Preserved Roses",
+            price: "$39.00",
+            reason: "Real preserved roses that hold their shape and color for months without water, arranged in a heart-shaped box. This occupies a different register than a dozen red roses: quieter, more considered, designed to stay rather than wilt by Wednesday. A one-year anniversary is one of the few occasions where flowers as a standalone gift actually make sense, and this version makes the gesture feel less default and more deliberate.",
+            url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81bHitaEdvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Sixty scratch-off date ideas ranging from easy evenings in to proper adventures out. For a one-year anniversary, the framing of this gift does the work: you are handing her the next phase of the relationship in a book, suggesting that you have already been thinking about year two. Every date you actually do together came from something you gave her, which means the gift keeps showing up long after the occasion.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Victrola Journey Bluetooth Record Player",
+            price: "$54.00",
+            reason: "A portable suitcase-style record player with built-in speakers and Bluetooth, compact enough to move from room to room and simple enough to use immediately. For a girlfriend who has mentioned vinyl, who already has records, or who has the kind of taste in music that makes a record player feel like a natural fit for her apartment, this is the gift that transforms a Sunday morning at home. It also happens to be the kind of object that looks intentional rather than impulse-bought, which matters at one year.",
+            url: "https://www.amazon.com/Victrola-Suitcase-Record-Player-Speakers/dp/B06XWSTWMJ?crid=3FZGWXM3UVHZ2&dib=eyJ2IjoiMSJ9.v-KFRdiwjvlmJJYlkjd5CL8Af0wNOjrHb-EcYHUlSRDSFw2N5Bz7KNKyoOCJW76L_0czFJH8mKJa0TxC8tE5yCLdVuDGGpUFq8DjCe8ZeVqUSIL_TZ4I6PKmEEMcgwVH-YQxNdqrJLZfg-z9R-v64Eoqf8Vq9tFg-lc3T6RQ2TSoLhQ1T8LcHaGhHkuZqHvZqZJGMrJFMHqBJYUv2L0vFBZjqDp1-x-mYLQ0iu5tWXbiyPpRs7dGEVmkS-87yb3KANdEk5x7Ar0NxCHmCR3qmHY.R7GJoZ38iuSjKTPNY2LT0bdyHr7GFkrYRSsXzKpvV5k&dib_tag=se&keywords=Victrola+Journey+Bluetooth+Record+Player&qid=1776648455&sprefix=victrola+journey+bluetooth+record+player%2Caps%2C210&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d9e85e9c4cc9c3e5ba99f2c1ac70bb22&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71pFRkWKBFL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully equipped picnic backpack with plates, glasses, cutlery, and a built-in cooler compartment. Give this with a plan already made: the location, the day, what you are bringing to eat and drink. As a one-year anniversary gift the picnic bag is really just a very nice way of saying you have already thought about the next occasion. The bag will outlast the anniversary and get used every summer after.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "The Barefoot Dreams robe is genuinely one of the softest things you can put on. It has earned a devoted following and a permanent spot on best-of lists for a straightforward reason: anyone who puts it on immediately understands why it costs what it costs. For a one-year anniversary, this is the gift that says you want her everyday life to feel a little more luxurious. She will reach for it every morning and it will be associated with you for as long as she has it.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "$169.00",
+            reason: "A small wooden device that sits on her desk or nightstand and spins its heart whenever you send her a message from the app. She opens it to find a photo or note from you. At the one-year mark this is a gift that makes sense in a way it would not have six months ago: you are settled enough into each other's lives that a device designed for ongoing connection is not a bold statement but a natural one. You can update it from anywhere, which means it stays relevant and personal long after the anniversary itself.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW78J?crid=107QJ3KGU5AT9&dib=eyJ2IjoiMSJ9.iy0k1nYzZ6EZAmonOpTbXRT72JZWqZMxciM2DfDXm2TyF-bYlw4gI0h86sOHBfAAFawV3k_RcpvdINEdMxmQCYYMcmzI8ZbGcDJs9h85h2s.ga92mLAB_rMTyOvd4jTXYw3hmzU2nRHHhtV6DXIW-ak&dib_tag=se&keywords=Lovebox+Spinning+Heart+Messenger&qid=1776654042&s=handmade&sprefix=lovebox+spinning+heart+messenger%2Cspecialty-aps%2C192&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8c9cdbf3c271910d049f4fc42520b055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The date matters as much as the gift",
+        body: "Whatever you choose, plan the evening around it rather than just handing her something wrapped. One year is worth a dinner, a walk, a specific place that means something. The gift is part of the occasion, not a substitute for one."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

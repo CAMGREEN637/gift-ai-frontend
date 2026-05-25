@@ -3394,7 +3394,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
-  }
+  },
+// ============================================================================
+  // GIFTS — FIVE YEAR ANNIVERSARY
+  // ============================================================================
+  {
+    slug: "gifts-five-year-anniversary",
+    title: "Gifts for Your Five Year Anniversary",
+    excerpt: "Five years is not a small thing. These gifts are sized accordingly.",
+    occasion: "anniversary",
+    interests: ["wellness", "skincare", "cooking", "home_decor", "fashion"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-for-a-serious-relationship",
+      "what-to-get-girlfriend-two-years",
+      "anniversary-gifts-skincare",
+      "thoughtful-gifts-that-dont-feel-last-minute"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Five years means something different",
+        body: "The traditional five-year anniversary gift is wood, which is not a coincidence: wood is durable, it ages well, it holds up. A five-year relationship has those same qualities. It has been through enough to know it works, settled enough to stop performing, and deep enough that you probably know her better than most people in her life do. The gift that matches this moment is not a romantic gesture aimed at impressing her. It is an investment in her comfort, her life, or the daily rhythms you share, made with the confidence that comes from actually knowing someone."
+      },
+      {
+        type: "text",
+        heading: "What five years earns",
+        body: "At this point the floor for the gift should be higher, not because price is the point but because the relationship has earned something more substantial than a card and a candle. The five picks below start at $68 and go up to $569, and every one of them is the kind of thing she would not buy for herself but will use every single day. That daily presence is the quality that distinguishes a five-year anniversary gift from everything that came before it."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Nodpod Silk Sleep Mask",
+            price: "$68.00",
+            reason: "The Nodpod is a weighted silk sleep mask with a bead-filled interior that applies gentle, even pressure across the eyes and forehead while blocking light completely. It is the kind of object that feels extravagant until the first time she uses it, after which it becomes non-negotiable. For a five-year anniversary it works as the entry-level gift on this list: intimate in a way only a long relationship makes natural, personal, and genuinely useful every single night.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Skincare Fridge with LED Mirror",
+            price: "$135.59",
+            reason: "A compact refrigerator designed specifically for skincare, with a built-in dimmable LED mirror and enough space for serums, sheet masks, eye creams, and anything else she keeps chilled. Cooling actives extends their shelf life and makes application feel more deliberate and luxurious, and the mirror means the whole thing lives on her vanity rather than competing with food in the kitchen fridge. For someone with a real skincare routine, this is the gift that takes that routine seriously, which at five years is a way of taking her seriously.",
+            url: "https://www.amazon.com/Kikihouse-Skincare-Lighting-Dimmable-Cosmetic/dp/B0GSZN88J7?crid=27258EJ1UFEKA&dib=eyJ2IjoiMSJ9.zx3Fk_WUmRwXrzp0D0gU5e8TQm6CEfK107oHJZIR6M7gEgWXcZaRUbcX3i1rblMyXdfNjFGHb-4M9J-txRLwc1vdOSyce7LMxYMUBkkjNharuM0WeaajbCOq5XJpb73WBcfcFFecYCu--UvWlQGP5v5DBTCnIGwx-e2_W2DN8bP1lHgeCbsuhPtbTLujDkzTGnuTospC_bpyg60rBUT60zgYZtwzAz0fcueKfEBmEyo.OogYByPYITc49JWl2R2F2NbgmFzK2Ke5CFJQGVLnKpc&dib_tag=se&keywords=skincare%2Bfridge&qid=1774738658&sprefix=skinca%2Caps%2C210&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d59697ac6fb7f43bcf3f5073fd57af0c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IdGY1rcPL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Long Distance Relationship Bracelets",
+            price: "$178.00",
+            reason: "A pair of Bond Touch bracelets that connect over Bluetooth: when she taps hers, yours vibrates, and when you tap yours, hers vibrates. They are designed for long-distance couples but work just as well for two people who spend time apart during the week, travel for work, or simply want a way to say I am thinking of you that does not require a text. For a five-year anniversary, giving both bracelets says something about the relationship itself: that staying connected is something you actively choose, not just something that happens.",
+            url: "https://www.amazon.com/BOND-TOUCH-Bracelet-Long-Distance-Relationship/dp/B0DWXP5RFV?crid=10SGZ0HM95SL8&dib=eyJ2IjoiMSJ9.IYtZWl0Wr9pLBHlr4p8p_iZNGj48kSumnJI0OO_TtLTIzPvrLi7eVjgEM_GT2b3OZcZcZjXJfWljGiijmKXsYQclZWqMtENyGJhzzKfL1wXAJKk0D2fP3CTmYAsLdcM8KXgySZfOuBwY8e_7mHeE6PcPWg421bFefL_5rQ5MOwYjuV2A8_5HzxX7FQMbODbmGB8eHc79mKu6eD_8iNy8znr8KfQ3svAQIoOmDczDSyXevROUzuNC6nZLukdld-S63QQO__FKGO0qhMHFoyEZe_MVcCtDfr24kFdcfYkP78_SU.A1YF5dolZHYh2fIinRwyIkzQZZL3QJs5bIkxEnipsmw&dib_tag=se&keywords=long%2Bdistance%2Brelationship%2Bbracelets&qid=1778375751&sprefix=long%2Bdistance%2Brealtions%2Caps%2C229&sr=8-9&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=53d7fa0f222164d91541a7ca7c52b45f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61UQ8UKzLxL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "6.5qt Enameled Cast Iron Dutch Oven",
+            price: "$289.00",
+            reason: "A Le Creuset Dutch oven in a color she would actually choose, sized for every soup, braise, and slow Sunday dinner for the next several decades. Le Creuset is one of the few kitchen objects that genuinely outlasts the people who own it, which gives this gift a particular weight at five years. It is an investment in a shared domestic life, in the meals you will make and eat together, in a future that is already assumed rather than hoped for. If she cooks, she has wanted one of these. If she does not yet cook much, this is the pan that changes that.",
+            url: "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ?crid=29M2RNIQI65CV&dib=eyJ2IjoiMSJ9.zg3iPs8agRKCchFLOXS7h7EK0szh4EpkojQGW2Vmvb3YR4Lyg9sum8uQvi7CIBaoWozDWCCaVAoEMFGcdbdgJRxT9ot8MXvtTGJwbiUdbNccrMdcPY3IxK7fO0O3_Ic-VZZe_lmvvpYTMm6Toz8mvZ6uKl8K1v2cn8mfkzlg6Sveuozdbinr3tawS6BrrXNUaTGGKRn7x_6JgGXIdcnldNMNQF3Y8eJFl7YNGarTqd9dvDZ16tBtLl36LpMGWYI4BEa_MXeceaeYERciaz2XUWoOlRNRFcYLrQ6UW_30JnM.SI896DJBYRmSYcQ_Pnm-6-3pzgtKSxSoMyEQATdads0&dib_tag=se&keywords=Le%2BCreuset%2BDutch%2Boven&qid=1773371582&sprefix=le%2Bcreuset%2Bdutch%2Boven%2Caps%2C343&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5743fe6d2fb116790feb2470792c6bbe&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BedJet 3 Climate Comfort System",
+            price: "$569.00",
+            reason: "The BedJet is a climate control system that fits under any bed and pumps temperature-controlled air directly under the sheets, heating or cooling her side independently of yours. If she is always too hot when you sleep or always too cold, this ends that negotiation permanently, and does it in a way that works for both of you at once. It is an absurdly practical gift, which is exactly what makes it a five-year anniversary gift: only someone who has actually shared a bed with another person for years fully understands why this exists and why it matters. It is also the kind of thing neither of you would ever buy for yourselves.",
+            url: "https://www.amazon.com/gp/aw/d/B01BMCWJ7G?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=bb7653267b3edb6879b2730b873ee665&hsa_cr_id=0&qid=1775607047&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=jxLR4&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=JW96EH4QGC7H0MDY3J73&pd_rd_wg=eaUZP&pd_rd_r=7e9871da-10dd-47ce-8490-0565bea79b63&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=15982adffe3583f011b22fb8755973b0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51rOyGRfFBL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Make the evening match the gift",
+        body: "Five years deserves a dinner, not just a delivery. Whatever you give, plan the night around it. Go somewhere that means something to the two of you, or cook the first meal in the new Dutch oven together. The gift is the object. The evening is the anniversary."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

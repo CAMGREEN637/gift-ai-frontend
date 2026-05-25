@@ -3153,6 +3153,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — GIRLFRIEND OF TWO YEARS / SECOND ANNIVERSARY
+  // ============================================================================
+  {
+    slug: "what-to-get-girlfriend-two-years",
+    title: "What to Get Your Girlfriend of Two Years",
+    excerpt: "Two years means you know her. These gifts show it.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "cooking", "music", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "what-to-get-girlfriend-one-year",
+      "gifts-for-a-serious-relationship",
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Two years changes what a gift can do",
+        body: "At one year, the gift is partly about marking the milestone. At two, it is about something more specific: demonstrating that you have actually been paying attention. You know her morning routine, what she reaches for when she is tired, what she has been wanting but would never quite justify for herself. The gifts that land at this stage are the ones that invest in her daily life in a way that only makes sense because you know what that life actually looks like."
+      },
+      {
+        type: "text",
+        heading: "What works and what to avoid",
+        body: "Generic romantic gestures start to feel thin at two years, not because they are bad ideas but because you have enough information to do better. The picks below range from a small sentimental item to a proper splurge, and all of them share the same quality: each one requires knowing something real about her, or says something confident about where you are, in a way that would not have fit six months into the relationship."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Acrylic Music Plaque",
+            price: "$8.00",
+            reason: "A custom plaque printed with the album art and scan code of a specific song, playable instantly by holding a phone up to it. The gift is entirely in the song you choose: the one from a specific night, the one she plays on repeat when she is happy, the one that became yours without either of you planning it. Two years in you know exactly which song that is, and that knowledge is what makes this an eight-dollar gift that lands like something much more considered.",
+            url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Mr. and Mrs. Wine Glass Set",
+            price: "$29.00",
+            reason: "Two engraved wine glasses that say something about where you are without requiring a conversation about it. At one year this might feel like a statement. At two it lands as warm and confident, the kind of gift that lives on her shelf and gets used on a regular evening rather than saved for occasions. Open a bottle the night you give it.",
+            url: "https://www.amazon.com/dp/B0D126Z2FV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81X+jpp-t5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Shiatsu Neck and Back Massager",
+            price: "$45.00",
+            reason: "A heated shiatsu massager with rotating nodes that works on the neck, shoulders, and back. It is the kind of practical comfort gift that requires enough intimacy to give well: you have to know she carries tension in her shoulders, or that she comes home from work stiff, or that she has mentioned wanting one. Two years in you probably do know that, and this is the gift that acts on it. She will use it more than almost anything else on this list.",
+            url: "https://www.amazon.com/dp/B07BGPQSJY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61VFDj7WSYL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized Engraved Wooden Keepsake Box",
+            price: "$49.00",
+            reason: "A wooden box engraved with her name, your initials, a date, or whatever feels right, sized for jewelry, letters, photos, or anything else worth keeping. At two years there are things worth keeping: ticket stubs, a note you wrote, a photo you both love. This gives her somewhere to put them that is as considered as the things inside it. The engraving is what you make it, so spend a few minutes on the words rather than defaulting to her name and a heart.",
+            url: "https://www.amazon.com/Krezy-Case-Personalised-Engraved-Personalized/dp/B0FL958G1B?crid=1ZYMX8XHFMCW5&dib=eyJ2IjoiMSJ9.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=keepsake-box&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816jS1pUXuL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Fellow Stagg EKG Pro Kettle",
+            price: "$179.00",
+            reason: "The Fellow Stagg is the kettle that serious coffee and tea drinkers eventually arrive at: precision temperature control to the degree, a slow-pour spout designed for pour-over, and a design that looks considered sitting on a counter rather than hidden in a cabinet. For a girlfriend whose morning routine matters to her, this is the kind of upgrade that changes how that routine feels every single day. It is also the kind of thing she would admire but never quite buy for herself, which is exactly where a two-year anniversary gift should sit.",
+            url: "https://www.amazon.com/Fellow-Stagg-Stovetop-Pour-over-Thermometer/dp/B083121W7G?crid=JTQKLBQ3BN5P&dib=eyJ2IjoiMSJ9.V5C7xCm3DKhHTXtjLEFe3OlMknPHK2Yyx4f8JMM1p2wKwxiHVDN3c89xzLF3F0F8rCHJ7mTleBT7_v7P2Mk35pWfhYT7JKnifJOYVPjlkRrxFnqpB3s8MiMFcOO4qKnOWXrFc1RCdR4Uv5X_HZTdvnzQ2x2xMaTNT7b6R7hkZKD4VHcm8b2KdJEcfSdm_2VlQECXflsj6YdwSN78qJGFE1kKD8PbhQjhcFQH4YbYNXpW3dTmwN7xEj5b3zSSvtfJcGsFWBzuQBv3Bp5w6YA8yfbQWq8iC0KkBmBB_8E.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=fellow-kettle&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51PBtVl0c-L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "6.5qt Enameled Cast Iron Dutch Oven",
+            price: "$289.00",
+            reason: "A Le Creuset Dutch oven is one of those objects that serious home cooks keep on a wishlist for years and never quite prioritize because the price is hard to justify on a random day. It is also a gift that lasts decades, sits on the stovetop looking like it belongs there, and gets used for every slow Sunday dinner, soup, and braise for years to come. Giving this at two years carries a particular weight: it is an investment in her kitchen, which in a serious relationship is often the center of shared life, and it signals that you are thinking in terms of years rather than occasions.",
+            url: "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ?crid=29M2RNIQI65CV&dib=eyJ2IjoiMSJ9.zg3iPs8agRKCchFLOXS7h7EK0szh4EpkojQGW2Vmvb3YR4Lyg9sum8uQvi7CIBaoWozDWCCaVAoEMFGcdbdgJRxT9ot8MXvtTGJwbiUdbNccrMdcPY3IxK7fO0O3_Ic-VZZe_lmvvpYTMm6Toz8mvZ6uKl8K1v2cn8mfkzlg6Sveuozdbinr3tawS6BrrXNUaTGGKRn7x_6JgGXIdcnldNMNQF3Y8eJFl7YNGarTqd9dvDZ16tBtLl36LpMGWYI4BEa_MXeceaeYERciaz2XUWoOlRNRFcYLrQ6UW_30JnM.SI896DJBYRmSYcQ_Pnm-6-3pzgtKSxSoMyEQATdads0&dib_tag=se&keywords=Le%2BCreuset%2BDutch%2Boven&qid=1773371582&sr=8-1-spons&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5743fe6d2fb116790feb2470792c6bbe&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Rose Gold Oura Ring, Size 9",
+            price: "$499.00",
+            reason: "The Oura Ring tracks sleep quality, heart rate variability, body temperature, and recovery, delivering insights through an app that gets more accurate the longer she wears it. It is the most unobtrusive wearable on the market and the one that health-conscious women who have resisted fitness trackers tend to actually want. At five hundred dollars this is a real commitment as a gift, which is exactly why it fits at two years and nowhere earlier. Only give this if she has mentioned it, follows wellness closely, or you know with confidence it will land.",
+            url: "https://www.amazon.com/Oura-Ring-Generation-3-Sizing/dp/B0BXRZ9N13?crid=1JV1N2RKWHFKC&dib=eyJ2IjoiMSJ9.GmAEGxiCBcxPIiaCRa5mvgVJxr7w1YWSQ0V-WQlMpb5RfElCDyGc0sHTzf0gvxaVrNNbVOlb8HOi1bhTq4d_-ZqLGV8p2V2QR-BKDI-iFTEeSVXbAsPHPAlxPbsq-3MOSjdN7QUFB5t1RJpj0d-8JxfpIvP2i-OtGxj1H_Pt8VPGbBp1WCHlbZuvfZ3XCCkTc7eU8GnX4L64pjBtY4BiqPLLKiQqGElfZr3-z4VyQ-YtUV-4CZ2sE4l_eI0kvTbAfZ2bKqYlD4oFbM1sXq5yCFDHZajIJSp89Vy00mKI.bLBqmAFh6zUi5qVFPQXqWgdPrk8ueq9DFP7LKJZOZFc&dib_tag=se&keywords=oura%2Bring%2Brose%2Bgold&qid=1776647695&sprefix=oura%2Bring%2Brose%2Bgold%2Caps%2C221&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=0b8e4cc00048e2f3c1b56adcabd13ac3&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41M9gNwT1gL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Go bigger on the card",
+        body: "Two years of paying attention gives you material. Use it. A card that references something specific from the past year, an inside joke, a moment she does not know you remember, does more work than any of the gifts above. The gift shows you were paying attention. The card proves it."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

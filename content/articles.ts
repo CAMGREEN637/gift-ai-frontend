@@ -3471,6 +3471,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — GAMING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-gaming",
+    title: "Birthday Gifts for a Girlfriend Who Loves Gaming",
+    excerpt: "Seven picks for the woman who actually plays, from small upgrades to the console she does not have yet.",
+    occasion: "birthday",
+    interests: ["gaming"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "tech-gifts-that-feel-thoughtful",
+      "birthday-gifts-hard-to-shop-for",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "birthday-gifts-music"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Gaming gifts go wrong in a specific way",
+        body: "The mistake with gaming gifts is defaulting to something gaming-themed rather than something gaming-useful. A mug with a controller on it, a candle that smells like a specific console, a novelty shirt: these signal that you know she games without showing that you know how she games. The gifts that land are the ones that improve her actual setup, make her sessions more comfortable, or give her access to something she has been wanting to play."
+      },
+      {
+        type: "text",
+        heading: "What to look for at any budget",
+        body: "The seven picks below are split across three types: accessories that upgrade what she already has, gear that improves the experience of playing, and hardware for the person whose setup has a clear gap. None of them require knowing her exact library or platform history beyond whether she plays Switch, PC, or mobile, and several work regardless. The range runs from under $20 to just under $300."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Nintendo Switch Game Card Holder",
+            price: "$17.99",
+            reason: "A compact case that holds up to 24 Switch game cards and slots neatly into a bag or a Switch case. If she plays Switch cartridges rather than digital, this is the small organizational upgrade she has probably been meaning to sort out but never prioritized. It is a genuinely practical gift that shows you paid attention to what she actually plays, and at eighteen dollars it works well as a companion to something larger or as a standalone add-on to a card.",
+            url: "https://www.amazon.com/dp/B0B65L3VL8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71+peYwtXHL._AC_UY218_.jpg"
+          },
+          {
+            name: "Glow in The Dark Gamer Blanket",
+            price: "$27.99",
+            reason: "A soft throw blanket printed with gaming icons that glows in the dark, sized for a couch or a gaming chair. It is a fun gift rather than a purely functional one, and it works because it is comfortable, specific to who she is, and the kind of thing she would not think to buy herself. For a girlfriend who games from a couch or a bed, this is the cozy upgrade that makes long sessions noticeably more comfortable without making the gift feel like a productivity purchase.",
+            url: "https://www.amazon.com/dp/B0C7VFFLCD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81RaRBhA4mL._AC_UL320_.jpg"
+          },
+          {
+            name: "Razer BlackShark V2 X Gaming Headset",
+            price: "$34.99",
+            reason: "A wired gaming headset from Razer with 50mm drivers, a cardioid microphone, and the kind of audio clarity that makes a real difference in competitive games and atmospheric ones alike. Razer is one of the few gaming peripheral brands that carries genuine credibility among people who actually play, which means this gift reads as considered rather than generic. If she plays on PC or console and does not already have a good headset, this is the most impactful upgrade at this price point.",
+            url: "https://www.amazon.com/dp/B0DW18XKPV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ZBcCFbAdL._AC_UY218_.jpg"
+          },
+          {
+            name: "Wireless Mechanical Keyboard with Smart Display",
+            price: "$79.00",
+            reason: "A wireless mechanical keyboard with a built-in smart display that shows shortcuts, timers, and system info on a small screen embedded in the corner. For a PC gamer, a good mechanical keyboard is the single most noticeable daily upgrade after a monitor, and the smart display adds a layer of functionality that makes it feel more like a premium desk piece than a standard peripheral. If she games or works at a desk and is still on a membrane keyboard, this is the gift that changes how her whole setup feels.",
+            url: "https://www.amazon.com/dp/B0CQ2L9PCB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61g03L1eB1L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wireless RGB Gaming Headset with Kitty Ears",
+            price: "$129.00",
+            reason: "A wireless RGB gaming headset with detachable illuminated cat ears, retractable microphone, and 40-hour battery life. These have become one of the most recognizable gaming accessories among women who stream or take their setup's aesthetic seriously, and the audio quality is genuinely good rather than trading specs for style. If she has a setup she cares about how it looks, or if she streams any of her gameplay, this is the gift that she has probably looked at more than once and talked herself out of.",
+            url: "https://www.amazon.com/dp/B0FJ3ZR3B6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/710AbZCqBDL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Backbone Pro Mobile Gaming Controller",
+            price: "$169.00",
+            reason: "The Backbone Pro connects to an iPhone via Bluetooth and transforms it into a full handheld gaming console with console-quality thumbsticks, triggers, and bumpers. It is compatible with Game Pass, PlayStation Remote Play, and hundreds of App Store titles, which means the library is already massive without buying anything extra. For a girlfriend who games on her phone or has been curious about cloud gaming, this is the gift that makes that actually worth doing rather than something she tolerates on a touchscreen.",
+            url: "https://www.amazon.com/Backbone-Gaming-Controller-Bluetooth-Pro-Level-Console/dp/B0DQM23MLZ?content-id=amzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db%3Aamzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db&crid=28HTA8BKLDFLF&cv_ct_cx=Backbone%2BOne%2BiPhone%2BController&keywords=Backbone%2BOne%2BiPhone%2BController&pd_rd_i=B0DQM23MLZ&pd_rd_r=a46399da-61f1-41fa-887a-784e8e9305f0&pd_rd_w=Gp89I&pd_rd_wg=LvTdS&pf_rd_p=582a5b7f-e458-4b67-81d0-f4623d03d4db&pf_rd_r=0GZ3YMPRG7MFJG0NHP4E&qid=1776731130&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=backbone%2Bone%2Biphone%2Bcontroller%2B%2Cspecialty-aps%2C233&sr=1-1-905f6665-3817-4290-88eb-a2363c78a4a1-spons&srs=120955898011&aref=cVHAwrUUe1&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9daf56f2f2f30ba53846a39a8153a710&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41xP2Xc9z6L._SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Nintendo Switch OLED Model",
+            price: "$284.00",
+            reason: "The Nintendo Switch OLED is the version of the Switch with the upgraded 7-inch OLED screen, a wider adjustable stand, and enhanced audio for handheld and tabletop play. If she does not already own one, or if she is on the original Switch model without the OLED display, this is the gift that genuinely changes the hardware experience. It is the clearest big-birthday gaming gift in the database: she probably knows what it is, she probably wants one, and it is the kind of purchase that is easy to keep putting off.",
+            url: "https://www.amazon.com/dp/B09J652L1P?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61U4SKnyS4L._AC_UY218_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth checking first",
+        body: "Before buying the Switch OLED or the Backbone, confirm what platform she actually plays on. The Switch is the right call for a Nintendo player; the Backbone is built for iPhone and cloud gaming. If she primarily plays on PC or PlayStation, the keyboard and headset picks are the stronger choices at any budget. Thirty seconds of asking the right question saves a return."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

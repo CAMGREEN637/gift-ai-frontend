@@ -3882,6 +3882,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — UNDER $200
+  // ============================================================================
+  {
+    slug: "gifts-for-girlfriend-under-200",
+    title: "Gifts for Your Girlfriend Under $200",
+    excerpt: "Seven genuinely great gifts that stay under $200 and feel like you spent more.",
+    occasion: "birthday",
+    interests: ["wellness", "skincare", "reading", "photography", "home_decor", "fashion"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-romantic-without-being-over-the-top",
+      "tech-gifts-that-feel-thoughtful",
+      "birthday-gifts-hard-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Under $200 is more than enough",
+        body: "There is a tendency to equate spending more with giving better, but the gifts that actually land are not the most expensive ones: they are the ones that feel like they were chosen with some thought. Under $200 gives you access to premium brands, genuinely useful tech, and luxury daily-use items that most people would not buy for themselves. The seven picks below all feel like considered gifts rather than budget compromises, and none of them require you to explain why you spent what you spent."
+      },
+      {
+        type: "text",
+        heading: "How to choose from this list",
+        body: "The picks below cover seven distinct categories: comfort, skincare, reading, photography, daily routine, wellness, and sleep. Pick the one that fits who she is rather than the one with the highest price tag. A $82 silk pillowcase for someone who cares about her skin will land better than a $169 alarm clock for someone who already sleeps fine. The best gift here is whichever one matches her life most directly."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "Mulberry silk pillowcases that are genuinely better for her skin and hair than cotton, cool to the touch, and the kind of upgrade that is immediately noticeable the first night she uses them. Blissy is the brand that beauty editors and dermatologists consistently recommend because the quality of the silk is noticeably different from cheaper alternatives. For someone who cares about skincare or just appreciates sleeping on something that feels considered, this is an $82 gift that feels like it should cost more.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Tatcha Starter Ritual Skincare Set",
+            price: "$95.00",
+            reason: "A Tatcha starter set with a cleanser, moisturizer, and serum in sizes large enough to actually evaluate the routine rather than just sample it. Tatcha is one of those skincare brands that anyone who follows beauty knows by name, and giving a full set rather than a single product says you understand that skincare works as a system. For a girlfriend who takes her skin seriously, this is the gift that lands as genuinely luxurious without requiring you to know which individual product she already has.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=2UQ2KCRG5EGO1&dib=eyJ2IjoiMSJ9.x9w1hhp6SFHQ8JfZulUH5j9XizGt-Z34UJHa7FVSlY7U3twGEOdI2wY3Gv842P1uCKIifs3jBnL6VzmYyW0WgQfufeGPDjyRteHLalPvhii0VYn21Yj38zQz3AGH_GnHXagxRUsne0rcIW7uh6Y-VwpEqgQqNBvwrBWB22DZgsTXQI2PZUJbEA0euJZm3vwuIf92SHBuV22PnsibXGXNVb6Rq0jrt31jcfgmo2aA1Yy28vPHfaZK8GXORdbCXSWlerW9rYVKY7eOVk95a-kUQFjMD4yJWXbAyO8lR1eaqNw.3hXYTIyVr1pvZOBShvAw2Vgz2doeGO_osxW6kL3rK3I&dib_tag=se&keywords=Tatcha+skincare+set&qid=1774736945&sprefix=tatcha+skincare+set%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ed66be2350a587168c4fcbc32c54f59d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          },
+          {
+            name: "UGG Women's Scuffette II Slippers",
+            price: "$99.00",
+            reason: "UGG slippers are one of those products where the brand name genuinely reflects the quality: the sheepskin lining is noticeably warmer and softer than any generic alternative, and they hold up through years of daily use rather than flattening out within a few months. For someone who spends time at home and has never quite justified buying a proper pair for herself, these are the slippers that make her wonder how she tolerated the previous pair for so long.",
+            url: "https://www.amazon.com/UGG-Scuffette-Slipper-Chestnut-Size/dp/B082HHWYWD?crid=LH8UZT1PJIHD&dib=eyJ2IjoiMSJ9.Y88sgIKj9IuLNT1_SgyamhmgK439Xqr6wgq4VojmCjxxPidbZ2J6lzs7Z49B6WIHa-ZiW-Hx3EJiOjEpGu8eSCE2VOwHVGcg5AC7pazFpWvqtXXYdJrRxRuFfQ5PnIpQIzS9ddxlyhl-aiDuAGIcy9TN0w067WbH5vXwtBjdgBnBDpanhKyw2c9twXYnMts0lkUYyeh5tYwKqGmZvidXSihWs5E9pIWWcDgyFL-2U9N1X9-5QgxA1NI6wqUwY3FX7SXxBBVdIR_rDwL1h0Eq5s-ER05vBqecuQ_WJ1Z_EP4.rmpy3TnS3T89mWU9HjZnDb1x8JCoF633B6tJAno749s&dib_tag=se&keywords=UGG%2BFluff%2BYeah%2BSlide%2BSlippers&qid=1776652891&sprefix=ugg%2Bfluff%2Byeah%2Bslide%2Bslippers%2Caps%2C422&sr=8-9&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=fee796cc758334434fed5a1a995dbec6&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51ZwU6Xht5L._AC_SX395_SY395_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "The robe with a devoted following that anyone who has touched it immediately understands. Barefoot Dreams CozyChic fabric is extraordinarily soft in a way that is genuinely difficult to describe until you feel it, and the robe is the product that best showcases it. Named one of Oprah's Favorite Things and consistently at the top of best-robe lists for years. For a girlfriend who would never spend this on herself, it is one of the most reliably loved gifts in the database.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Kindle Paperwhite 16GB eReader",
+            price: "$159.00",
+            reason: "The Kindle Paperwhite is the reading upgrade that anyone who reads regularly eventually arrives at: a glare-free display that works outdoors, warm light for reading in bed without disturbing anyone, weeks of battery life, and 16GB of storage for thousands of books. For a girlfriend who reads constantly or who has been meaning to read more, this removes every practical obstacle to doing it. It is also one of those purchases she keeps putting off because the price is hard to justify on a normal Tuesday, which makes it exactly right as a gift.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          },
+          {
+            name: "Instax Mini 12 Instant Camera Bundle",
+            price: "$165.00",
+            reason: "The Fujifilm Instax Mini 12 with film and a case included, ready to use the day she receives it. Instant cameras have had a genuine renaissance because the physical print, slightly imperfect and immediate, captures something a phone photo does not. For a girlfriend who takes photos constantly but rarely has any of them printed, this closes that gap in a way that feels fun rather than practical. The bundle means she can start the same evening without needing to order anything first.",
+            url: "https://www.amazon.com/dp/B0BXMJDJWF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7155+ihePrL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "A sunrise alarm clock and sleep sound machine that wakes her gradually with light instead of a sudden sound, and helps her wind down at night with customizable sleep routines. For anyone whose sleep is affected by stress, a harsh alarm, or the bad habit of scrolling until the lights go out, this is the gift that addresses the root problem rather than just the symptom. The Hatch has a devoted following among people who take their sleep seriously, and the difference it makes is noticeable within the first week.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One last thing",
+        body: "The gift that fits who she is will always outperform the most expensive thing on the list. If she has never mentioned skincare, skip the Tatcha set regardless of how good it is. If she already has a Kindle, it is not a surprise. Spend thirty seconds choosing the right one and the price stops mattering entirely."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

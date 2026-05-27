@@ -3792,6 +3792,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — WORKAHOLIC GIRLFRIEND
+  // ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-is-a-workaholic",
+    title: "Gifts for a Girlfriend Who Is a Workaholic",
+    excerpt: "She is not going to stop working. These gifts meet her where she is and make the hours better.",
+    occasion: "birthday",
+    interests: ["wellness", "coffee", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "tech-gifts-that-feel-thoughtful",
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-for-a-serious-relationship"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The mistake most people make",
+        body: "The instinct with a workaholic is to give her something that signals she should slow down: a spa day, a wellness retreat, a candle and a bath bomb set that implies she needs to relax. The problem is that she knows she works too much, and a gift that underlines it lands more like a comment than a present. The gifts that actually land for this person are the ones that improve the hours she does work, help her decompress on her own terms, or make the non-work parts of her week feel more worth protecting."
+      },
+      {
+        type: "text",
+        heading: "What to look for",
+        body: "The seven picks below are split across two angles: things that make working feel better, and things that make stopping feel easier. Neither category requires her to change anything about how she operates. They just make the routine she already has noticeably better, which for a workaholic is more useful than any amount of encouragement to take a break."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Loop Experience 2 Ear Plugs",
+            price: "$34.00",
+            reason: "High-fidelity ear plugs that reduce noise without muffling it, designed for people who need to focus in loud environments or decompress without total silence. For a workaholic who is always on, these work in both directions: in during a long meeting or a noisy commute when she needs to concentrate, and in at the end of the day when she needs to start winding down but the world is not cooperating. Small, discreet, and the kind of thing she will use every single day once she has them.",
+            url: "https://www.amazon.com/Loop-Experience-Ear-Plugs-High-Fidelity/dp/B0D4DFQTMJ?dib=eyJ2IjoiMSJ9.XnK1RMTVrUuM9Ct8j60j5MeK-US74wmjOZfzwbfb7qWynEw4kqCNmT-1wNzhMWZLP9qQUzPXQEnUDlmxK-zimBNTe9YOcC91mQn4qo_3jbTViEkqXOAlqjpzmO8no-XBhZvQCZIxMVy1GkGyThmYBiIawhuyheelMgcmzqdzOmV83jznFGsrzTfj3rH7NnZzGferK2t4MlpD5VZWrDc8CI4lT3TOcuYHdXYfbxPnY70S_ZbFg6zTNPPNcHGXYf1JBy0fkESNGgbIotM7cEGa6SHW3PteMoATzJUfbRRNVFk.p_u1gKLuyIcTKdCJscwvtNc92WHJnEdGU64BSe0lo8Y&dib_tag=se&keywords=Loop%2BEarplugs&qid=1777841578&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6cdd273c81eca52583601106cef78cfa&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SY300_SX300_QL70_ML2_.jpg"
+          },
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Sixty scratch-off date ideas ranging from low-key evenings in to proper outings, built around the idea that spontaneity is easier when someone has already done the planning. For a girlfriend who fills every available hour with work, this is a gift that removes the friction from choosing to stop: the decision is already made, the idea is right there, all she has to do is scratch and show up. It is also the most direct way to say: I want your time, not just your proximity.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Shiatsu Neck and Back Massager with Heat",
+            price: "$45.00",
+            reason: "A heated shiatsu massager for the neck and shoulders, which are the first things to suffer during long days at a desk. The combination of deep-kneading nodes and heat addresses the specific physical cost of working long hours in a way that a foam roller or a bath cannot quite replicate. It works in ten minutes on the couch after she closes the laptop, requires nothing from her except sitting still, and will be one of the most-used things in her apartment.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "LED Desk Lamp with Clamp",
+            price: "$47.00",
+            reason: "A clamp-mounted LED lamp with adjustable color temperature and brightness, designed for a desk or monitor stand. For someone who spends six or eight or ten hours a day looking at a screen, proper lighting is not an aesthetic choice but a functional one: it reduces eye strain, reduces headaches, and makes the space she works in feel more considered. This is the unglamorous practical gift that she will notice immediately and quietly appreciate every single day.",
+            url: "https://www.amazon.com/dp/B0BNHNG5CY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81f0B2GPxyL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Temperature-Controlled Self-Heating Mug",
+            price: "$99.00",
+            reason: "The Ember mug keeps her coffee or tea at the exact temperature she sets for up to 80 minutes, which solves the problem every workaholic has: she makes something hot, gets pulled back into a call or a document, and comes back to find it cold. This happens multiple times a day. At $99 it is not cheap, but it is the kind of gift that gets used every single morning and earns its price over the first month of ownership alone.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "The Hatch Restore is a sunrise alarm and sleep sound machine that replaces a jarring phone alarm with gradually brightening light and chosen audio, and helps her wind down at night with sleep sounds and a dimming light routine. For a workaholic who struggles to stop thinking when she lies down, and who probably looks at her phone too close to sleep, this removes two of the main obstacles to actually resting well. Better sleep makes everything else better. It is the gift that keeps returning value every night.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Sony WH-1000XM5 Noise Cancelling Headphones",
+            price: "$199.99",
+            reason: "The Sony WH-1000XM5 are the industry benchmark for noise-cancelling headphones: the active noise cancellation is good enough to make a loud open office feel like a private room, and the sound quality holds up for long listening sessions without fatigue. For a workaholic, this is a dual-purpose gift: it makes focused work time genuinely more productive, and it makes the decompression time after work, on a commute or a walk, feel like actual separation from the day. A gift she will use for years across both halves of her life.",
+            url: "https://www.amazon.com/dp/B0B2FCT81R?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/519JPzTAdVL._AC_UY218_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing worth saying",
+        body: "The best thing you can give a workaholic is your patience with the fact that she is one, alongside a consistent invitation to stop. Not pressure, not commentary on the hours, just a standing offer: I am here when you close the laptop. The date night book helps make that concrete. The rest is just making the hours better until she is ready to use it."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

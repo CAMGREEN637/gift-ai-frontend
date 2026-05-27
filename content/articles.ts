@@ -3702,6 +3702,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — WIFE WHO JUST HAD A BABY
+  // ============================================================================
+  {
+    slug: "gifts-wife-just-had-a-baby",
+    title: "Gifts for Your Wife Who Just Had a Baby",
+    excerpt: "She just did something extraordinary. These gifts are about her, not the baby.",
+    occasion: "birthday",
+    interests: ["wellness", "skincare", "home_decor", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-for-a-serious-relationship",
+      "anniversary-gifts-skincare",
+      "gifts-romantic-without-being-over-the-top"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "This gift is not about the baby",
+        body: "The most common mistake with a new-baby gift for a partner is centering the baby. A keepsake frame, a personalised baby item, a mother-and-child necklace: these are sweet gestures but they are fundamentally about the new role rather than the person. What she actually needs right now is something that acknowledges her, specifically, and how much her body and her life have just been through. The best gifts for this moment are the ones that give her something that is unambiguously hers."
+      },
+      {
+        type: "text",
+        heading: "What she actually needs right now",
+        body: "She is exhausted in a way that is difficult to explain to anyone who has not experienced it. She is probably in some physical discomfort. She is almost certainly not getting enough sleep, and whatever sleep she does get matters more than it ever has. The seven picks below are chosen around those realities: comfort, recovery, sleep quality, and small daily moments that feel like they belong to her. The price range runs from $45 to $219, because this is an occasion that warrants something real."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Shiatsu Neck and Back Massager with Heat",
+            price: "$45.00",
+            reason: "Carrying, feeding, and holding a newborn puts enormous strain on the neck, shoulders, and upper back, and that tension builds over weeks without relief. A heated shiatsu massager reaches the areas that need it most, requires nothing from her except sitting still for ten minutes, and can be used any time the baby is asleep. It is one of the most practically useful gifts on this list for where her body is right now.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "Mulberry silk pillowcases that are cooler, smoother, and noticeably better for her skin and hair than cotton. When sleep is fragmented and every hour counts, the quality of those hours matters more than it ever has. This is the kind of upgrade that seems indulgent until the first night she uses it, after which it becomes one of those things she is quietly glad to have every single time she lies down.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
+          },
+          {
+            name: "Temperature-Controlled Self-Heating Mug",
+            price: "$99.00",
+            reason: "The Ember mug keeps her coffee or tea at whatever temperature she sets for up to 80 minutes. For a new mother, this is not a luxury item: it is the solution to a problem she has every single day. She makes something hot, puts it down to deal with the baby, and comes back to find it cold. That happens multiple times a day for months. This ends it completely, and she will think of it as one of the most practically useful gifts she has ever received.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "A WiFi photo frame you load with photos from your camera roll before you give it: the baby, the two of you, the first few weeks that are already becoming a blur. Set it up on her nightstand or desk so it is running when she first sees it. For a new mom who is living inside a significant moment but has almost no time to document it, this does the work of preserving that memory in a way she can see every day without having to do anything at all.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "The softest robe she has ever worn. Barefoot Dreams has a devoted following for a straightforward reason: the fabric is genuinely extraordinary, and anyone who has tried it immediately understands why it gets talked about. For a new mother who is home most of the time and whose standard for comfort has understandably shifted, this is the gift that makes every morning feel slightly more like something she deserves. She will reach for it every day for years.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169.00",
+            reason: "The Hatch Restore is a sunrise alarm clock and sleep sound machine that wakes her with gradually brightening light instead of a jarring alarm, and plays white noise, rain, or whatever sleep sound helps her fall back to sleep between wakes. For a new mother whose sleep schedule has been completely dismantled, the quality of whatever sleep she does get matters enormously. This is the gift that makes those hours meaningfully better, and it is one of the most recommended postpartum purchases among women who have been through it.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "A compact percussion massage gun that reaches deep into the muscles that take the most strain during pregnancy, birth, and the weeks of carrying and feeding that follow. Postpartum recovery is physical in ways that are easy to underestimate from the outside, and a massage gun addresses that directly: targeted relief in five minutes, whenever she has five minutes, without needing to book anything or leave the house. It is also the kind of thing she would never prioritize for herself right now, which is exactly why it makes sense as a gift.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The other thing she needs",
+        body: "Take something off her plate without being asked. Not as a trade for the gift, just in addition to it. Handle a night feed, arrange food for the week, take the baby for two hours so she can sleep. None of that is a gift, technically, but it is what she will remember most from this period. The gift shows you were thinking about her. Doing the work shows you meant it."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

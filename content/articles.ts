@@ -3972,6 +3972,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — COUPLES GAMES
+  // ============================================================================
+  {
+    slug: "games-to-play-as-a-couple",
+    title: "Games You Can Play as a Couple (That Are Actually Fun)",
+    excerpt: "Seven picks for a better Friday night than whatever you were going to watch on Netflix.",
+    occasion: "anniversary",
+    interests: ["gaming", "wine", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-beverage-girlie-summer-drinks",
+      "gifts-romantic-without-being-over-the-top",
+      "birthday-gifts-gaming",
+      "what-to-get-girlfriend-one-year"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Better than another scroll night",
+        body: "At some point every couple runs out of things to watch and stares at each other across the couch wondering what to do next. Games fix this. Not in a forced team-building exercise way, but in a genuinely fun, something-to-talk-about-tomorrow way. The seven picks below cover everything from quick ten-minute card games to a collaborative puzzle that will have you both arguing about levers and magnets in the best possible way."
+      },
+      {
+        type: "text",
+        heading: "Something for every kind of night",
+        body: "Some of these are best with wine, some are better competitive, some work well at a dinner table and some on the couch. A few are explicitly romantic, a few are just fun. All of them are more interesting than asking each other what you want for dinner."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Deluxe Date Night Dice Game",
+            price: "$16.99",
+            reason: "A set of dice that generate random date night combinations: where to go, what to do, what category of activity. Roll and commit to whatever comes up. It sounds simple because it is, and that is exactly why it works: it removes the twenty-minute negotiation about what to do and replaces it with a game that has already decided for you. Best used when neither of you has any strong opinions but both of you are tired of defaulting to the same three options.",
+            url: "https://www.amazon.com/dp/B0CPLC64H6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/7140Yf7wozL._AC_UL320_.jpg"
+          },
+          {
+            name: "Let's Get Deep Couples Card Game",
+            price: "$18.60",
+            reason: "A card game with questions designed to get past small talk and into the stuff you actually find interesting about each other. Not as intense as it sounds: the deck ranges from genuinely funny to genuinely thoughtful, and the format makes it easy to keep going or stop whenever. Good for a slow evening, a long car ride, or any night when you want conversation to go somewhere more interesting than recapping your respective days.",
+            url: "https://www.amazon.com/dp/B08PQ14F57?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71E5VZ2dGIL._AC_UL320_.jpg"
+          },
+          {
+            name: "DSS Games Couples Card Game",
+            price: "$19.97",
+            reason: "A competitive couples card game built around dares, challenges, and questions that are designed to produce laughter rather than deep conversation. The tone is deliberately lighter than most couples games, which makes it the better pick for a casual night in rather than a meaningful evening. Good for when you want to play something competitive but not actually care who wins.",
+            url: "https://www.amazon.com/dp/B09PMQRSPF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/611xkdRuE9L._AC_UL320_.jpg"
+          },
+          {
+            name: "Adultopoly Couples Board Game",
+            price: "$26.99",
+            reason: "A Monopoly-style couples board game with a twist: instead of buying properties, you are earning and spending on date night activities, dares, and challenges. It takes longer than a card game and works best when you have an actual evening to dedicate to it rather than an hour before bed. The competitive format gives the whole thing a bit more structure and stakes, which makes it the pick for couples who like to win things.",
+            url: "https://www.amazon.com/dp/B0GRJQT1XJ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71sFPve-gyL._AC_UL320_.jpg"
+          },
+          {
+            name: "Mini Dates Scratch-Off Date Night Game",
+            price: "$29.99",
+            reason: "Scratch-off cards with mini date ideas that take anywhere from twenty minutes to a full evening, designed to be spontaneous rather than planned. The format means you commit to whatever you scratch, which is the best part: no debating, no overthinking, just an activity that has already been decided for you. Covers a range of categories from cozy in-home nights to proper outings, so it works regardless of budget or how much energy either of you has.",
+            url: "https://www.amazon.com/Mini-Dates-Meaningful-Original-Scratch-Off/dp/B0BX4SQHW5?pd_rd_w=oRqMN&linkCode=ll2&tag=cbggiftapp637-20&linkId=mini-dates-scratch-off&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61ZDzTRTHDL._AC_SX679_.jpg"
+          },
+          {
+            name: "All You Need Is Wine Blind Tasting Game",
+            price: "$34.99",
+            reason: "A blind wine tasting kit with numbered bags, scorecards, and aroma wheels that turns an ordinary bottle of wine into an actual activity. You each guess the grape, region, and vintage without seeing the label, compare notes, and reveal the answer. It sounds like it requires wine knowledge but it really does not: the fun is mostly in how confidently wrong you both are. Works best with two or three bottles and no particular agenda for the evening.",
+            url: "https://www.amazon.com/dp/B003NAAQ4E?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91IF0jIOTGL._AC_UL320_.jpg"
+          },
+          {
+            name: "Electronic Tesla Puzzle Box",
+            price: "$64.00",
+            reason: "A 3D wooden puzzle box with electronic locks, hidden mechanisms, and a storyline built around unlocking Nikola Tesla's secrets. It is a fully collaborative puzzle, meaning you are both working on the same problem at the same time, which is a genuinely different dynamic from competitive games. Harder than it looks, satisfying in a way that is difficult to explain until you get one of the locks to click open, and the kind of thing you talk about for days after you finish it.",
+            url: "https://www.amazon.com/PUZZLE-POTATO-Tesla-Box-Electronic/dp/B0DFWQ6N2K?crid=N8806BZZQQ83U&dib=eyJ2IjoiMSJ9.mRhZAuByP1AMLD_OGYC9rnKzFYJpbhEjdh7V-OBfVpgvIRwFTLKGHhEgFE_iOIB-W3RX2ZMiICVWHY42NVxJiYrOk-j1QZHbhW2-ZNXaFkmYh7FVBsczimeBsVBfVvvmR3aBMFbSmP3ZGLW_-pJiflHdQSCpkEMz4JOy0h7sZeFyA7g_sSL0bpGCiDt-7CDOuBfktq3L0vUuqYH_JfLrPY1E_Y0MrYevUVa_oXkbmT9P_FPf62LuqJpW9G7QJjJuBgJwVkAQJE5R4Y0-4bEelh3VQZbicvkEMzAkK6u3g.XAuRhZ1KLpepFalzwnJRYLKvNh5wWl9UmRHfVWivFjA&dib_tag=se&keywords=electronic+wooden+puzzle+box+tesla&qid=1775774908&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=2ab4d97fe6aed07b6f1b21e6a24e4a76&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81ub9zRZYEL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Start with the dice",
+        body: "If you are not sure which one to try first, get the date night dice. Lowest commitment, fastest setup, no explanation required. Everything else on the list can wait until you know which direction you want to go."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

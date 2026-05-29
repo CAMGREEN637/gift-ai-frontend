@@ -4325,6 +4325,89 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — HEALTHY LIVING / WELLNESS / HEALTHY EATING
+  // ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-loves-healthy-eating",
+    title: "Gifts for a Girlfriend Who Is Serious About Healthy Living",
+    excerpt: "For the woman who meal preps on Sundays, tracks her macros, and knows exactly what goes into her smoothie.",
+    occasion: "birthday",
+    interests: ["fitness", "wellness", "cooking", "gardening"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-fitness",
+      "birthday-gifts-running",
+      "gifts-for-girlfriend-who-is-a-workaholic",
+      "birthday-gifts-wellness"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Healthy eating is a practice, not a phase",
+        body: "For a girlfriend who genuinely cares about what she eats and how she fuels herself, this is not a January resolution, it is a lifestyle. She reads ingredient labels, she grows her own herbs when she can, she knows the difference between a genuinely good protein smoothie and one that is mostly sugar in a different format. The best gifts for this person are the ones that support the practice she has already built, not ones that imply she should start one."
+      },
+      {
+        type: "text",
+        heading: "What works across every budget",
+        body: "The six picks below run from $28 to $499, and each one serves a different part of the healthy living picture: tracking what she eats and drinks, growing what she uses in her kitchen, making her workouts more effective, and monitoring the recovery and sleep that make everything else actually work. None of them are gimmicks and none of them require her to change anything about what she already does."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Recipe Journal with Gold Pen",
+            price: "$28.00",
+            reason: "A hardcover recipe journal with 240 pages and a gold pen, designed for someone who creates and refines their own recipes rather than just following them. For a girlfriend who experiments with healthy cooking, this is the place to capture what actually worked: the macros she has dialled in, the smoothie ratios she has perfected, the meals she wants to make again. It is a small gift that acknowledges her cooking as a practice worth documenting.",
+            url: "https://www.amazon.com/dp/B0FXSJL511?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81q1dU0MPTL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BOOST Smart Water Bottle 32oz",
+            price: "$46.00",
+            reason: "An insulated stainless steel bottle with time markers and hydration reminders that track daily intake against a goal. For someone who cares about nutrition, hydration is rarely an afterthought, and this is the bottle that makes staying on top of it passive rather than deliberate. The smart tracking works alongside everything else she already does, which is the right kind of gift for someone who does not need convincing to care about their health.",
+            url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-HoXBRhLFIGkuRoiSx7wo-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61j0emHta6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Bala Bangles Adjustable Wrist & Ankle Weights",
+            price: "$55.00",
+            reason: "Weighted bangles that add constant low-level resistance to any movement, from a walk to a yoga session to tidying the kitchen. Bala is one of the few fitness accessories that looks like it belongs on a nightstand rather than in a gym bag, which is part of why it has become a cult product among women who take wellness seriously. For a girlfriend who is already active and wants to upgrade the intensity of what she already does rather than adding a whole new workout, these are the gift that makes every hour count a little more.",
+            url: "https://www.amazon.com/dp/B0BQCJRL6Q?_encoding=UTF8&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c3ea6a28710d170f2c7e0b1d28359b92&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61yHjkXkINL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "17-Pod Hydroponics Growing System",
+            price: "$109.00",
+            reason: "A countertop hydroponic garden with LED grow lights and space for 17 plants: herbs, greens, cherry tomatoes, or whatever she wants to grow year-round without a garden. For a girlfriend who prioritizes fresh ingredients and knows exactly where her food comes from, growing her own is the logical extension of how she already eats. The system handles the watering and lighting automatically, which means the only thing she needs to do is harvest.",
+            url: "https://www.amazon.com/dp/B0CQN9Z2WD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/818unoUl7-L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Garmin Venu Sq Smartwatch",
+            price: "$119.99",
+            reason: "A Garmin GPS smartwatch with built-in health tracking for heart rate, sleep, stress, hydration, and calorie burn, in a slim, lightweight design that works as an everyday watch as much as a fitness device. For a girlfriend who approaches her health with data rather than guesswork, this is the tool that consolidates everything she is already tracking into a single, accurate source. Garmin is the brand that health-serious people actually use, and the Venu Sq specifically is the version that does not look like gym equipment.",
+            url: "https://www.amazon.com/dp/B095J8MDX1?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71dxG5vHYcL._AC_UY218_.jpg"
+          },
+          {
+            name: "Rose Gold Oura Ring",
+            price: "$499.00",
+            reason: "The Oura Ring is a sleek wearable that tracks sleep quality, heart rate variability, body temperature, and recovery scores through an app that learns her patterns over time. For someone who understands that nutrition and exercise are only as effective as the recovery that supports them, the Oura closes the loop on the part of health that most trackers do poorly. It also looks like jewelry rather than a fitness device, which for a girlfriend who cares about how she presents matters. Only give this if she has mentioned wanting one or follows health content closely enough to know what it is.",
+            url: "https://www.amazon.com/Oura-Ring-Tracking-Wearable-Fitness/dp/B0D9WV3474?crid=1SF6Z7F9VRB46&dib=eyJ2IjoiMSJ9.IzR6mfi0tEmvMVGOTQpLj0AKbm96ymX28ha5429xXCJwa2zoLYJolC5su-0p8OebQs35hNsR-K8Cp7d9aWLh1l_5ZYDq27fOM3fpmRcEOf1_aRzgqtB_GCYzCZdjq6eujSIgGqaYDVFrfp1qsYAE3LAxabmfjKpkrTkvFQO-BCo5CecCI8A8uxb4lgzvkIxNn6xAhL_5jq5yYCstRkH_mK2VHv98Q7o7FiFH9oIkCyE.jkKLgUH4BjH_jDLkzb-EVEjSSQ4ZWZWByiENll3Qyko&dib_tag=se&keywords=Oura%2BRing%2Bgen%2B3&qid=1773371204&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=oura%2Bring%2Bgen%2B3%2B%2Caps%2C232&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7fefc7c69fb1dca3420cec09c1e66fab&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51zKmnnZU8L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing to avoid",
+        body: "Do not give a cookbook full of indulgent recipes, a gift basket of processed snacks, or anything that implies she needs to loosen up about food. She has a relationship with what she eats that she has built deliberately, and the right gift respects that rather than poking at it."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

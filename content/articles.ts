@@ -4152,6 +4152,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — WIFE WHO LOVES THE OUTDOORS / GARDENING
+  // ============================================================================
+  {
+    slug: "gifts-for-wife-who-loves-outdoors-gardening",
+    title: "Gifts for a Wife Who Lives for Her Outdoor Space",
+    excerpt: "For the woman whose garden is her happy place. Seven picks from a $9 starter to the outdoor splurge she will actually use all summer.",
+    occasion: "birthday",
+    interests: ["gardening", "hiking", "camping", "travel", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-gardening",
+      "birthday-gifts-hiking",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-wife-just-had-a-baby"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Her outdoor space is not a hobby, it is a practice",
+        body: "For a woman who genuinely loves being outside, the garden and backyard are not just places she maintains: they are where she goes to think, to decompress, and to build something she is proud of. The best gifts for this person are the ones that serve that practice directly, whether that means better tools, something that extends the growing season, or something that makes the hours she spends out there noticeably more enjoyable."
+      },
+      {
+        type: "text",
+        heading: "What works at every budget",
+        body: "The seven picks below run from a nine-dollar seed tray to a two-hundred-dollar cooler, and everything in between is chosen specifically for someone who spends real time outdoors. Each one either improves something she does in the garden, upgrades the experience of being outside, or acknowledges that she has earned somewhere beautiful to actually sit down and enjoy what she has built."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Bonviee Seed Starter Tray Set",
+            price: "$9.00",
+            reason: "A seed starter tray set with an adjustable humidity dome and drainage system, designed for germinating seeds before they go into the ground. For a gardener who grows from seed rather than buying starts, this is the kind of practical upgrade that makes the beginning of the season noticeably smoother. At nine dollars it works perfectly as a companion to a card or alongside something larger, and it is specific enough to her hobby to feel considered rather than generic.",
+            url: "https://www.amazon.com/Bonviee-Adjustable-Humidity-Greenhouse-Propagator/dp/B0DBDKRQNS?crid=3HD1VP2ZFV250&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.D14rWyG5fv7BDJQnLll6BkDXXSuZJccDXq7pp6ATMKdAPROloBPB9rPRZd0_DinFnNFBG_Rj3jIDbyvUBCVbtxfojxys-1dFu8zxivqLkjvRwgMHYqbGZZFN-QJSKlMNJJ_ChTHAwIak6EG8GAqrbAa4eGW2_DRLn_oTWXQCdnhI5cf5XSBABowol9cEe-Z0XJWoTNlmQG6vx2E3jyTxFBur7E67XUF6SGm5W6KXkZg.93u7uFtXFQ40Kffi-hANGHp2oPFH-kJ_OWHRpd_Rar0&dib_tag=se&keywords=Gardening%2Bseed%2Bstarter%2Bkit&qid=1775433224&s=samedaystore&sprefix=gardening%2Bseed%2Bstarter%2Bkit%2Csamedaystore%2C334&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=d40e0a7de7f927d795c79adaf5df060f&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81UZJlqGjeL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Pressed Flower Art Kit",
+            price: "$31.99",
+            reason: "A complete flower pressing kit with a large 11x11 inch press, framing materials, and instructions for turning garden flowers into preserved wall art. For a gardener who grows things she loves to look at, this closes the loop between the garden and the house: the flowers she tends outside end up framed inside. It is also a genuinely enjoyable activity that gives her something creative to do with what she grows, which for the right person is a better gift than almost anything more expensive.",
+            url: "https://www.amazon.com/Aboofx-Pressing-Detailed-instruction-Preservation/dp/B0C7T7JWWM?crid=2HCE070Q0HIFC&dib=eyJ2IjoiMSJ9.XB-VrJgulguvzs3nesGKKRWz6j4S_kMlajLr13WaxMbYofz9UU-z3NQM2Z5d85yycWyPB4zfYvgCqnl9q5IG2wPzVCd6uFH65vvq6gHmqgfT7WtSnmFIVIRPyi6qEZrirRUNOe7trKme5lBLY94QXdwywBDZxv7znCis56btA0Hiarsgv7nLjJQ0N9_p3jAiqWKlDVsU24ZB8iIMsz40pDibNTT40wCvEWyTi1aZ0t8EnuDifq-ZmsmBsdlJokCrnvNNe0miPt2LkD0Vjycped_85u7zeAt9n5qGKwPDiDI.4qxEJl5PvfGhYEpf6GXC4Ex7CQ3MG7uoN2U0fHQFJbs&dib_tag=se&keywords=Pressed%2Bflower%2Bart%2Bkit&qid=1774735650&sprefix=pressed%2Bflower%2Bart%2Bkit%2Caps%2C414&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ef0f8037debeb680b7fcc9d4c32713c5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/91K6A7TnAuL._AC_SX679_.jpg"
+          },
+          {
+            name: "All-in-One Gardening Tool Set",
+            price: "$32.00",
+            reason: "A complete stainless steel gardening set with a trowel, transplanter, cultivator, weeder, rake, and carrying case. For a serious gardener, the quality of her tools is something she notices every single time she uses them, and stainless steel tools with comfortable grips are a real upgrade from the lightweight ones that bend under pressure. This is the gift that replaces the drawer of mismatched tools she has accumulated over the years with a proper set she will actually want to reach for.",
+            url: "https://www.amazon.com/Scuddles-Stainless-Fingertip-Landscaping-Gardening/dp/B0761Z9MKM?crid=233CP1RI8QE95&dib=eyJ2IjoiMSJ9.PZYsXAh67pc8FLxZ6eEqRbK1JHv6SPVo7Td0vFgHKOipG12has7h_6fJck2rV60-_KYLmMbX03abogoVK4cfS3uSox7jj2tUXR_bLaRREUUdaIel9t63cccWkocN3qK8YdhDXgkKWAaDRFGwNKxkjJfDtcOxGS6l-D5P9hY-2WviXPWYKriff6r-CtL44lO9e99672sbjbrMuWGqtBJL2dxhDvUc9WYhpkOuwOLv67GjPMjq-bSkgv1_ttS6UGXVkka1wNDO01Pd40HHxn462I3_okPgzCsbFgFymDo9mIw.WS0zFpqvb9LkMPeHAJ2ghxBsItW6guh_9NUWy0FGU9s&dib_tag=se&keywords=Professional%2BGardening%2BTool%2BSet&qid=1773534318&sprefix=professional%2Bgardening%2Btool%2Bset%2Caps%2C271&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6f8bfc9c48bad73de24200b7cba43254&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81GQjPjFt+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Smart Hydroponics Herb Garden Kit",
+            price: "$119.00",
+            reason: "An automated indoor hydroponic garden with LED grow lights, a self-watering system, and enough pods for herbs, greens, or flowers year-round. For a gardener who spends the summer outside and winters watching the garden sleep, this keeps the growing going indoors: fresh basil and mint in January, year-round access to the part of gardening she actually loves. The automated lights and watering system mean it requires almost no maintenance, which is the right level of effort for something that lives on the kitchen counter.",
+            url: "https://www.amazon.com/LPH-SE-Hydroponics-Growing-Controlled-Automatic/dp/B0BL3GG6J3?crid=M1G78Z3PAD77&dib=eyJ2IjoiMSJ9.pIVabIJFS-84JWcH8F-_PG8V7eM02IN3hAeoY3Ch1zBgx-8uras5QWmLw8uk3V33vQX46RvQNBA6CZsAhllWZElX2DK8pmjYjLJHpxgTkIWvOiFxWKWe0FURMMw1UusOf2q3Bv8LuLsOaR-ije6SmNF5yncxOx-6BfqUrmeugcizxf3ijzG7PjqLJV0fbUW1HtA6erWGZDmKwD-G9t-VkN4T_sJFxo4rUdPihcX3qomZH_WbaajhzU-uUcmfNeImPWExj93hp1nyWu5DDaM09elYWpmad1wQsKglsPpKLmM.e-MP5enEWh_sEtI8CbSLfxDa4Z91TK2CMuDfQWr73W0&dib_tag=se&keywords=Smart%2BIndoor%2BHydroponic%2BGarden&qid=1773534501&sprefix=smart%2Bindoor%2Bhydroponic%2Bgarden%2Caps%2C269&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=50ecac0c91dc019eb0c7089fa1777dda&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81k-jJm+DXL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Portable Waterproof Bluetooth Speaker",
+            price: "$119.00",
+            reason: "The Bose SoundLink Flex is one of the best-reviewed portable speakers on the market: genuinely waterproof, with sound quality that holds up outdoors where most compact speakers fall flat. For a woman who spends hours in the garden or on the patio, music is part of the environment, and a speaker that can sit on the ground in full sun without worrying about a splash from the hose changes how those hours feel. The Bose name carries real weight here: she will recognize immediately that this is not a generic Bluetooth speaker.",
+            url: "https://www.amazon.com/dp/B0DPN69X2V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61a47LVNd4L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "2-Person Outdoor Hammock with Stand",
+            price: "$199.00",
+            reason: "A quilted two-person hammock with a freestanding steel stand, no trees required, with a carrying bag for easy setup anywhere in the yard. For a woman who puts enormous effort into making her outdoor space beautiful, this is the gift that gives her somewhere to actually stop and enjoy it. The two-person size is the detail that matters: it is an invitation rather than a solo retreat, and the quilted pad makes it comfortable enough to stay in for an actual afternoon rather than just a few minutes.",
+            url: "https://www.amazon.com/Everyfun-Polyester-Adjustable-Portable-Carrying/dp/B0FMDYQFWZ?crid=36HYK0SHGY7X7&dib=eyJ2IjoiMSJ9.0gor6a9VZm3ZgdAABiXZ7ODlqrNSgiSM08dymlFeYNIsB4VUP5BKISSLrZhitGzQMKM-ecrVcJUB9deKw_C0qcVPMJWnuHI6ftK_N1IxvLApXgjjPw1LYmYtcd_LUy-Xa7Y33lcQmKYBBM992z-NotNhEqjxwCOKQtWSJJ2BZ6tyyw8KeyLznQOfNvBQ14XOsAAsg_w6BTm-g6uF2JzKOfJZ7wAUcfhKhQVcT74WnEzTNHaLNv2jXEZvKxQ27Ij2WmKvjKhsSQ0rK68Tkh7r4Ob3jW6ynxolioULRBGsHxk.2zSnS8VhzZTfAjG9pVYRFUMmEnYiX9gv1gCy7sZQ8YpY&dib_tag=se&keywords=Premium%2BCamping%2BHammock&qid=1772582431&sprefix=premium%2Bcamping%2Bhammock%2Caps%2C352&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=54cebdefa34f457130d7e23b9edd316a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71ZI9Z7oIHL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "YETI Hopper Portable Soft Cooler",
+            price: "$199.00",
+            reason: "The YETI Hopper soft cooler with MagShield magnetic closure keeps ice for days and is tough enough for any outdoor environment, from a day in the garden to a weekend camping trip. For a woman who is outside for long stretches in warm weather, cold drinks are not a luxury but a basic requirement, and the YETI is the cooler that handles that without having to think about it. It is also the kind of gear gift that she would price out, decide is too much to justify, and then love completely once she has it.",
+            url: "https://www.amazon.com/YETI-Hopper-Portable-MagShield-Charcoal/dp/B0CGY16MR4?crid=2TAJNZZZ2UG6S&dib=eyJ2IjoiMSJ9.alrq0vuP4YYpBTHFmAYuS2mrMsmLikYtpZC3vsxClflzUz-kiTOFjdsXN-085gYZ023iHVwXt95jqZaS6F04yRoebQKWmX0t7rqifCsiO9Dkq9VMXj76082Ytn0cn4L2gepSHs5W7XryHE2oy7WSqruiA1vEyDV3bkuBEDFGPhmO1-qgR6q2s0fcdWJqzR3kJ53L4_1_k5MwA5Qc9YY5HCSdrlIF4lxVjZD-I9VZLRIJca_NvkhcJnjcKVa5mqmKhI4vFZn7aO-EkdcI3_VfeE8c5TG8EDIM6vvuMXi5CIk.sOYAtiau1tYpRFxxvtxbYWvt_DGdlP5TuoPYMeiO-sw&dib_tag=se&keywords=yeti%2Bhopper%2Bsoft%2Bcooler&qid=1773370870&sprefix=Yeti%2BHopper%2Bsoft%2Bcooler%2Caps%2C267&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=69c62d40dd00ccc5acfc3dff1447443b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61E2BzsbxZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Pair it with your time",
+        body: "For the gardening-specific picks especially, the best thing you can add is an afternoon of actually helping: digging, weeding, carrying bags of soil without being asked. The gift says you see what she does out there. Showing up alongside her says you respect it."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

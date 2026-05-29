@@ -4242,6 +4242,89 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — SITUATIONSHIP
+  // ============================================================================
+  {
+    slug: "gifts-for-your-situationship",
+    title: "Gifts for Your Situationship",
+    excerpt: "You're not nothing. You're also not putting a label on it. Here's how to get the gift exactly right.",
+    occasion: "birthday",
+    interests: ["wellness", "cocktails", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "birthday-gifts-hard-to-shop-for",
+      "what-to-get-girlfriend-one-year"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The situationship gift: a masterclass in calibration",
+        body: "You have to get this exactly right. Too small and she thinks you do not care. Too big and suddenly there is a conversation happening that neither of you planned. The gift has to say: I was thinking about you, I put in some actual effort, and also I am completely fine with how things are right now. This is a narrow target. It requires thought, restraint, and a genuine willingness to walk away from anything with her name engraved on it."
+      },
+      {
+        type: "text",
+        heading: "The rules",
+        body: "Nothing personalized. Nothing sentimental. Nothing that requires her to display it somewhere. No jewelry with coordinates. No star maps from the night you met. No matching anything. The ideal situationship gift is something she will enjoy, something that shows you pay attention, and something that leaves absolutely no trace of commitment. The five picks below all qualify."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Craftmix Espresso Martini Mixer",
+            price: "$16.99",
+            reason: "Single-serve espresso martini mixer sticks, cocktail and mocktail both, that she can use whenever she wants. This gift says: I know you like espresso martinis, I was at a checkout somewhere, and I thought of you. That is genuinely the correct amount of thought for a situationship birthday. The bonus is that it might generate an occasion to make one together, which is, again, the correct level of occasion.",
+            url: "https://www.amazon.com/dp/B0C7LQQT9W?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/711b7JHjXJL._AC_UL320_.jpg"
+          },
+          {
+            name: "Let's Get Deep Couples Card Game",
+            price: "$18.60",
+            reason: "A card game specifically designed to help couples get emotionally closer by asking probing personal questions about each other. You are buying this for your situationship. She will open it and look at you and you will both laugh, which is honestly the best possible outcome of any gift in this dynamic. If you have the kind of situationship where you can pull this off, it will be the most memorable $18.60 you ever spent. If you do not, maybe start with the espresso martini mixers.",
+            url: "https://www.amazon.com/dp/B08PQ14F57?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71E5VZ2dGIL._AC_UL320_.jpg"
+          },
+          {
+            name: "Skinny Cocktail Mixer Set, 12 Flavors",
+            price: "$26.00",
+            reason: "Twelve sugar-free cocktail and mocktail mixers in a neat set she can actually use. This is the gift that communicates: I know you like making drinks, here are more options, you are welcome. It does not require explanation, does not generate questions, and does not look like you spent an alarming amount of time thinking about it. For a situationship, invisibility of effort is almost as important as the effort itself.",
+            url: "https://www.amazon.com/Thoughtfully-Cocktail-Hawaiian-Sunrise-Contains/dp/B07R2P9ZLZ?crid=25SKHVWMIQV&dib=eyJ2IjoiMSJ9.75CdVMojuN5lJw9oAyVGVFQe0noHu95n26uqbTT0_85msyu12MQNF-a8aaQ095tWeU1-CdKHBErf_WYLXmsuYy6L4MDy0ipLte77ippPqTqQEn7pY45Is9Wjf8Yz-4QmE1yYBkFitQz6iEncALIzNbdtfzjETo1Gz9_rdqfVNRyfXoos2LX0yLk8s374lpw59lcx8AdbX3S1N-yMwhwpTU2ydxehg9ATzfYgtI7QszN7Q0xAHEoeAOuH_1B31KT_8a8wHL54hdhqUSaNfNROgDtVWkUKdvDL1W1jDKylyr4.FUdd81f8NEE9PKKzKpd2AXeRUkMYteLJubXnxGM_m6A&dib_tag=se&keywords=cocktail%2Bsyrup%2Bsampler&qid=1773364782&sprefix=ocktail%2Bsyrup%2Bsampler%2Caps%2C235&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=660ad516414602577d937f4bd362c949&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51Zm3BdXWPL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Capri Blue Volcano Scented Candles",
+            price: "$35.00",
+            reason: "The Capri Blue Volcano candle is recognizable, genuinely beloved, and universally appropriate regardless of relationship status. It is the perfect situationship gift because it says exactly the right amount: I put thought into this, I have decent taste, and I am not going to make it weird. She burns it, thinks of you briefly, and everyone moves on with their lives. This is the best possible outcome of a gift at this stage of things.",
+            url: "https://www.amazon.com/dp/B000YBFJQU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61OaZLhib8L._AC_UL320_.jpg"
+          },
+          {
+            name: "Bath Bombs Gift Set",
+            price: "$35.99",
+            reason: "A set of natural bath bombs in various scents, packaged nicely, that she can use whenever she wants without thinking about you. This is the gift that says: I want you to treat yourself, alone, in your own bathroom, on your own schedule, with no further involvement from me. For a situationship, that level of independence is not a red flag. It is a feature.",
+            url: "https://www.amazon.com/Organic-Natural-Ingredients-Mothers-Relaxing/dp/B00W2EH98I?dib=eyJ2IjoiMSJ9.MMQqZF53adP-Ijtz9LM--8iZRo1efDjbclLY8I1ddfAyqZOkwds0M3JLIuCMMS5EzGxTn76R-waP32tiThnPzYQfkeQC-O2Frl-I8yV21m9cGCr1kFya_GsiavuvktuuMrlqZvgE1FHMITTg5Jgy9A-097utO-XTD0JsFY9t-Qhx5Gk4PLgkMD6WxHgNRffun4fidfqD_7hsvqusrz5efCYw-pKckEMbOygQQwnUe20VBak7vGm1m7sm8GnF5IHdobr-nTcW32FYl-KIa9toZRy1SFgVo9vJdJX3A-8eXtY.--PKrR60k94cJFsHl1o74dh6ddAmmYQLBJ-_4k9uy-g&dib_tag=se&keywords=Floral%2Bbath%2Bbomb%2Bset&qid=1774227033&rdc=1&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=85f37f85713e9d770b3eda3061399d1a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81b7juZJqhL._SL1500_.jpg"
+          },
+          {
+            name: "Complete Espresso Martini Kit",
+            price: "$45.00",
+            reason: "A full espresso martini kit with everything needed to make a proper one at home: espresso, mixers, botanicals, the works. This is the situationship gift that comes with a built-in plan: here is something we could do together, tonight, at your place, but only if you want to, no pressure, I am very casual about the whole thing. It signals just enough initiative without any of the paperwork.",
+            url: "https://www.amazon.com/Espresso-Martini-Gifts-Complete-Botanicals/dp/B0FW25RLC5?crid=3CJNI70R46CHZ&dib=eyJ2IjoiMSJ9.ZR2nqrEwJgautpxRgRVWeBXqIDGF35iKcFIe8ps-OIqC5DjqQ_syS_0n9ykyK1m1LAgGAcX5sehf0nFxmnWzlZOyD8a56oRuOfJ-5QqJCAkS_WVpPBmE5_AHs4HGAHkRcuJ7WdH4r3HQyeTpaf95XAdqYJrtJrUrvG3MmL9xL4e0gcR7GogSAZXlKjFV2JLwmp9sGxZeBakXSY_VL74X2Rqy_6I69QocjB3XorwfIIHkwPFs2C8SVJqyLv6uWLXcOFHSCSAXcA-RQTOpPkOp8WS8XS3CKaRp7GkheA5od0A.auAsuxsXHw3sqm0qR1WwSFCuhwhswIIQxjdsbU1X_YA&dib_tag=se&keywords=Espresso+martini+kit&qid=1776008712&sprefix=espresso+martini+kit%2Caps%2C1175&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=41f4e893f1df165f058706118238ac93&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71W-IVXYZ9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "What not to buy",
+        body: "Just to be completely clear: no personalized star maps, no engraved jewelry, no matching anything, no framed photos, no cards that use the words always or forever, and absolutely nothing that requires a speech. If you find yourself thinking this gift will definitely make her want to define the relationship, put it down and start over. You are looking for the gift that makes her smile and then changes absolutely nothing. That is the whole brief."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

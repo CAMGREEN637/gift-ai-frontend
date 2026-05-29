@@ -4062,6 +4062,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — DRINKWARE / TUMBLERS / BEVERAGE CARRIERS
+  // ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-takes-drinkware-seriously",
+    title: "Gifts for the Girlfriend Who Takes Her Drinkware Very Seriously",
+    excerpt: "She has opinions about tumblers. These are for her.",
+    occasion: "birthday",
+    interests: ["coffee", "wine", "cocktails", "travel", "hiking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-beverage-girlie-summer-drinks",
+      "birthday-gifts-hard-to-shop-for",
+      "birthday-gifts-coffee",
+      "gifts-cozy-homebody"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "She already knows what she wants",
+        body: "Stanley, Owala, YETI: drinkware has become its own category of personality, and the woman who cares about her cup situation is not going to be impressed by a random tumbler with no thought behind it. The good news is that this is one of the easiest gift categories to get right once you know the brands, because the products that are actually worth owning are very specific and she will recognize immediately that you did the work."
+      },
+      {
+        type: "text",
+        heading: "From $15 to the serious splurge",
+        body: "The seven picks below cover the full drinkware and beverage carrier spectrum: small adds that feel considered, the tumblers she actually wants, a wine setup for the woman who takes her glass as seriously as her cup, and the outdoor cooler that anyone who has used one immediately understands. All of them are the kind of thing she would not buy for herself without a reason, which is exactly what a birthday is for."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Stanley Stay-Hot Camp Cup 10 oz",
+            price: "$15.00",
+            reason: "The Stanley camp cup is the smaller, stackable version of the brand's classic insulated line: a 10oz double-wall stainless mug that keeps coffee hot and fits neatly inside a bag or a larger cup. For a girlfriend who already has a Stanley and loves the brand, this is the thoughtful add-on that shows you were paying attention. For someone who has not tried Stanley yet, it is the entry point that will make perfect sense the first time she uses it.",
+            url: "https://www.amazon.com/Stay-Hot-Stacking-Insulated-Stainless-BPA-Free/dp/B0CZC6M49S?crid=G5U07Z31E55G&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.mLi5DZDfVGWI61PNdpXpNfFPrwzAdwdz0KvFqg53otfCSI3ehyYltHhteJYGvUB7k6XotWlc8ttVeqHXl-TQa_9pjnhIFaHqlHuVk-IDv05pXR4g9kbpWHv2IbJwZaIcdNOGpgqp7lrUAlyBv0eK-4jnnHSCUZbfW_V3hYU6-5PB3XorifuQzR3yY11my0EQGCszvkYDsoDMpCYeJAijo5HaCU7zEXH2HHWOiUPC2TQ.XOEx3qzlcvLMvviTqBYMcuXwLe2s0lZw0-1nKxyQpqo&dib_tag=se&keywords=camping%2Bmug%2Bset&qid=1775434019&s=samedaystore&sprefix=camping%2Bmug%2Bset%2Csamedaystore%2C535&sr=1-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=242a560cad4878ce43b90cec41955c21&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61mMo6A-d0L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Owala SmoothSip Coffee Tumbler",
+            price: "$24.99",
+            reason: "Owala is the brand that the drinkware-conscious crowd has been gravitating toward as a Stanley alternative, and for good reason: the SmoothSip lid design is genuinely more practical for coffee, with a wide sipping opening and a tight seal that does not leak. If she has been curious about Owala or has mentioned wanting to try it, this is the gift that answers that question without requiring her to justify the purchase herself.",
+            url: "https://www.amazon.com/dp/B0DF4FQHYT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/31+cYb2JpOL._AC_UL320_.jpg"
+          },
+          {
+            name: "STANLEY Quencher ProTour Tumbler 30 oz",
+            price: "$40.00",
+            reason: "The ProTour is Stanley's cupholder-compatible redesign of the Quencher: same double-wall vacuum insulation and leakproof flip straw lid, but sized to actually fit in a car cupholder without forcing it. For a girlfriend who is already a Stanley person, this is the version she has probably been eyeing. For someone who has always found the classic Quencher slightly too big for everyday carry, this solves exactly that problem.",
+            url: "https://www.amazon.com/Leakproof-Cupholder-Compatible-Insulated-Stainless/dp/B0DCDZP98B?dib=eyJ2IjoiMSJ9.29dH_iwoxIhj_jwoJBkzf7HgRzM3sexdgEKX8SguWt6dS-663dyhZfvPQ5VvcBIER18rENSpM3RwNAOLKCbsTSlo_I3IJAei1rXi5g4KHcExVhnBsO-qsbc53ObReWCc3F7dZpewl05r_oAqXJ03u2DrRe89siLYmg1EMaF-nH3itmLoBj5K2OJXYq0pBIUtuZsauR64e5EbtTOjYTrBGzp6I_GVDl_ec82YCwQjug70x-nk2vhNrsuqC2nAQ9RAIRANIi5of5e3t4jPt6lTlUlaQ49kkc4a9qOHfbg5sCw.F689nwW0ga1IYpFpru3a9qJUD8Yn9XQiyVA-Jd3J24w&dib_tag=se&keywords=stanley%2Bquencher&qid=1777840415&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=37ccbd86f288942a2d304698f88d4c07&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51L-q8h+bwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wine Cooler Bag Set",
+            price: "$39.99",
+            reason: "An insulated wine carrier bag with everything needed to bring a bottle anywhere: glasses, a corkscrew, and a tote that keeps the bottle cold for hours. For a girlfriend who brings wine to picnics, rooftops, beach days, or any outdoor occasion where a proper setup matters, this is the gift that makes all of those moments look intentional rather than improvised. It is also the kind of thing that gets used every single summer.",
+            url: "https://www.amazon.com/dp/B0FR43TRY8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81pfdd9OlTL._AC_UL320_.jpg"
+          },
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully equipped picnic backpack with plates, wine glasses, cutlery, and a built-in insulated cooler compartment. This is the beverage carrier that has a plan already inside it: wherever she takes it, the setup is already done. For a girlfriend who loves outdoor occasions and has strong opinions about how a picnic should look, this is the gift that makes her the one everyone wants to invite.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Electric Wine Chiller",
+            price: "$99.99",
+            reason: "A countertop wine chiller that brings any bottle down to serving temperature in about eight minutes and holds it there. For someone who takes her wine as seriously as her water bottle, this is the home upgrade that removes the one remaining frustration: having to plan ahead to chill something. It works for still and sparkling, looks genuinely good on a counter, and is the kind of thing she will use every single weekend once she has it.",
+            url: "https://www.amazon.com/Electric-Cobalance-Champagne-Stainless-Accessory/dp/B0B4BCCBMM?content-id=amzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699%3Aamzn1.sym.c8b39f81-ded8-4d75-80c2-6dfa03cbb699&crid=2KGWE4Y1CHR8&cv_ct_cx=wine%2Bfridge&keywords=wine%2Bfridge&pd_rd_i=B0B4BCCBMM&pd_rd_r=5ace7472-a355-4bf8-a76f-6c986f9bf1f2&pd_rd_w=fO2ht&pd_rd_wg=MWmSr&pf_rd_p=c8b39f81-ded8-4d75-80c2-6dfa03cbb699&pf_rd_r=2YPVNYNDKATVER2TYBK1&qid=1774737615&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=wine%2B%2Caps%2C233&sr=1-1-5190daf0-67e3-427c-bea6-c72c1df98776&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=1aa2924dc09e9da8e3fedf1ae187ad00&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61jJx0BhiSL._AC_SX679_.jpg"
+          },
+          {
+            name: "YETI Hopper Portable Soft Cooler",
+            price: "$199.00",
+            reason: "The YETI Hopper is the soft cooler that anyone who has used one stops looking for alternatives. The MagShield closure keeps ice for days rather than hours, the exterior is puncture-resistant and waterproof, and the whole thing is packable enough to take on a kayak, a boat, a hike, or a beach day without a second thought. For a girlfriend who is serious about outdoor time and serious about her drinks being cold when she gets there, this is the splurge that immediately earns its place.",
+            url: "https://www.amazon.com/YETI-Hopper-Portable-MagShield-Charcoal/dp/B0CGY16MR4?crid=2TAJNZZZ2UG6S&dib=eyJ2IjoiMSJ9.alrq0vuP4YYpBTHFmAYuS2mrMsmLikYtpZC3vsxClflzUz-kiTOFjdsXN-085gYZ023iHVwXt95jqZaS6F04yRoebQKWmX0t7rqifCsiO9Dkq9VMXj76082Ytn0cn4L2gepSHs5W7XryHE2oy7WSqruiA1vEyDV3bkuBEDFGPhmO1-qgR6q2s0fcdWJqzR3kJ53L4_1_k5MwA5Qc9YY5HCSdrlIF4lxVjZD-I9VZLRIJca_NvkhcJnjcKVa5mqmKhI4vFZn7aO-EkdcI3_VfeE8c5TG8EDIM6vvuMXi5CIk.sOYAtiau1tYpRFxxvtxbYWvt_DGdlP5TuoPYMeiO-sw&dib_tag=se&keywords=yeti%2Bhopper%2Bsoft%2Bcooler&qid=1773370870&sprefix=Yeti%2BHopper%2Bsoft%2Bcooler%2Caps%2C267&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=69c62d40dd00ccc5acfc3dff1447443b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61E2BzsbxZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Check her color preference first",
+        body: "For the Stanley and Owala picks especially, both brands release new colorways constantly and she probably has a preference. A quick look at what she already owns, or a casual mention of the gift idea to a mutual friend, takes sixty seconds and turns a good gift into a great one."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

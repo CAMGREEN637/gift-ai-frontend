@@ -4519,7 +4519,119 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       },
       { type: "cta" }
     ]
-  }
+  },
+// ============================================================================
+  // BIRTHDAY GIFT MISTAKES — GENERAL
+  // ============================================================================
+  {
+    slug: "mistakes-men-make-buying-birthday-gifts",
+    title: "3 Mistakes Men Make Buying Birthday Gifts for Their Girlfriend",
+    excerpt: "The birthday gift is not just an object. Here is where most men go wrong, and what to do instead.",
+    occasion: "birthday",
+    interests: ["wellness", "home_decor", "photography", "travel"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-romantic-without-being-over-the-top",
+      "mistakes-men-make-buying-fitness-tech"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Most birthday gifts fail for the same reason",
+        body: "It is almost never about the money. Women remember bad birthday gifts not because they were cheap but because they were unconsidered: proof that the person giving them was going through the motions rather than actually thinking. The three mistakes below account for the vast majority of birthday gifts that get a polite smile and a quiet disappointment. Each one has a straightforward fix."
+      },
+      {
+        type: "text",
+        heading: "What the right gift actually communicates",
+        body: "A good birthday gift says: I was thinking about you specifically, I made a decision, and I put in some effort that had nothing to do with convenience. It does not need to be expensive. It does not need to be surprising. It just needs to feel like it came from someone who pays attention. That is a lower bar than most men think, and a higher bar than most men clear."
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 1: Confusing spending money with giving thought",
+        body: "The most common birthday gift mistake is buying something expensive enough that it feels like effort, but generic enough that it could have been for anyone. A nice candle set, a wellness hamper, a brand-name skincare box: all of these communicate roughly the same thing, which is that you bought something in the right price bracket from the right category without making any actual decisions about who she is. The price tag does not cover the lack of specificity. A $16 gift that shows you know her beats a $150 gift that proves you do not every single time."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "A print of the night sky exactly as it appeared over a specific place on a specific date: the night you met, her birthday, your first trip together. The gift costs sixteen dollars. The thought it communicates is not priced. Presenting this alongside a well-written card is the clearest possible proof that the amount you spent is the least interesting thing about a birthday gift.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Capri Blue Volcano Scented Candles",
+            price: "$35.00",
+            reason: "If you are going to give a candle, give the right candle. The Capri Blue Volcano is not a generic gift basket filler: it is a specific, recognizable product with a devoted following that she will either already love or immediately understand the appeal of. Giving this instead of a random candle set says you know the difference, which lands differently than a generic selection of scents that signals you found something in the right category and stopped there.",
+            url: "https://www.amazon.com/dp/B000YBFJQU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61OaZLhib8L._AC_UL320_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 2: Buying for the relationship stage instead of for her",
+        body: "The second mistake is calibrating the gift to the occasion rather than to the person. A first birthday together: buy something romantic. A third anniversary: buy something bigger. This logic leads men toward gifts that match a relationship template rather than gifts that match the actual woman. Some girlfriends want a grand gesture on their birthday. Most want something that shows you were thinking about her specifically, not about what a boyfriend is supposed to do. A gift that fits her interests, her habits, and what she has mentioned wanting will always outperform a gift that fits the occasion's implied price bracket."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Date Night Scratch-Off Adventure Book",
+            price: "$42.00",
+            reason: "Sixty scratch-off date ideas that make the birthday gift about the next several months rather than just the day. For a girlfriend who values your time together more than an object, this is the gift that says you are already thinking about what comes next. It also removes the planning burden from both of you: the idea is already there, the only thing required is scratching the card and showing up. At forty-two dollars it communicates more than most things twice the price.",
+            url: "https://www.amazon.com/Date-Night-Book-Scratch-Off-Anniversary/dp/B0C7WFJRS6?crid=13XNMGEIBS0Z7&dib=eyJ2IjoiMSJ9.uRQ8iM56V6PgulWyD81ojOYNafJyJW0ZlQdbx-9ELytMTfSZA-BKtooutEtZPf9sKxp-AT7g7v2tyeVxeP66yDawsSHkXAWWi0cNaBNbIm78rIPRcwy5hk7T26BwKIvv3uF-yaEwCntbg8PI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Couples+Adventure+Challenge+Book&qid=1773534770&sprefix=couples+adventure+challenge+book%2Caps%2C271&sr=8-4&linkCode=ll2&tag=cbggiftapp637-20&linkId=b498b3b9fbcba3f1fb6ad25e72b37db4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/519A-wlTT5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "10 Inch WiFi Digital Photo Frame",
+            price: "$119.00",
+            reason: "A WiFi photo frame you load with photos of the two of you before she ever opens it, so it arrives already running as a curated display of the past year together. This is not a generic tech gift: it requires you to sit down, choose the photos, and think about what the year looked like. That process is the gift as much as the frame itself. For a girlfriend who values the relationship over any individual object, this is the birthday gift that makes her feel like you were paying attention all year.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 3: Treating the gift as the whole birthday",
+        body: "The third mistake is the most fixable and the most commonly made: handing over a wrapped gift and considering the birthday handled. For most women, the gift is a part of the birthday, not the whole of it. The evening matters: where you go, what you do, whether you made a reservation or asked her to choose, whether you acknowledged what the day means to her. A great gift handed over with no plan, no card, and no particular effort on the evening itself lands noticeably worse than a decent gift accompanied by a dinner at a place she loves and a note that took you ten minutes to write. The gift opens the door. What you do with the rest of the evening is the actual birthday."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Apollo Walker Picnic Backpack for 4",
+            price: "$62.00",
+            reason: "A fully equipped picnic backpack with plates, glasses, cutlery, and a cooler compartment that arrives with a plan already implied: you have a location, a date, and something to put in the bag. This is the gift that makes the birthday an event rather than a transaction. The bag is good on its own, but the gesture of having already thought about what to do with it is what makes it land. Hand this over and tell her where you are taking her.",
+            url: "https://www.amazon.com/gp/aw/d/B078MLMCY2?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0e0ef2f1cb3d46b9d1e76ccca3e825fa&hsa_cr_id=0&qid=1777862834&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=oRqMN&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=AMEEEPAJ6QKDQ3ZKQ7S3&pd_rd_wg=e8C9b&pd_rd_r=e8ca90e5-1d03-4b09-8976-aeb27a849772&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4ca61725c2b678835d64122d23dea097&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Barefoot Dreams Adult Robe",
+            price: "$138.00",
+            reason: "The Barefoot Dreams robe is one of the most consistently loved gifts in the database, and it works as a birthday gift that comes with its own quiet plan: give it to her early in the evening, let her put it on, and make the rest of the birthday about being at home in a way that feels special rather than default. A good bottle of something, her favourite food, no agenda. The robe signals that the birthday is about her comfort and enjoyment specifically, which is exactly the register a birthday evening should be in.",
+            url: "https://www.amazon.com/gp/aw/d/B0FFHS6PXG?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=92bfaf59a6b2b0ba3a46ec07b8d5be6b&hsa_cr_id=0&qid=1776648173&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=QellE&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=3AAVKQF8QTQWK3YM0DBM&pd_rd_wg=kfBmQ&pd_rd_r=7143192c-12f6-45dd-8dc8-50d5cb571905&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=19b275d0af4f654278195b58b65c7cf0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81kqgtaCEkL._AC_SY445_SX342_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The one thing behind all three mistakes",
+        body: "Every mistake here is a version of the same thing: treating the birthday gift as a task to complete rather than an opportunity to show someone you know them. Fix that, and most of the rest takes care of itself. The gift almost does not matter once she can see that you were actually thinking about her."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

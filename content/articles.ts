@@ -4408,6 +4408,118 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // FITNESS TECH — GIFT MISTAKES (DOS AND DON'TS FORMAT)
+  // ============================================================================
+  {
+    slug: "mistakes-men-make-buying-fitness-tech",
+    title: "3 Mistakes Men Make Buying Fitness Tech for Their Girlfriend",
+    excerpt: "Fitness tech is one of the easiest gift categories to get wrong. Here is what to avoid and what to get instead.",
+    occasion: "birthday",
+    interests: ["fitness", "running", "wellness", "cycling"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-fitness",
+      "birthday-gifts-running",
+      "birthday-gifts-cycling",
+      "gifts-for-girlfriend-who-loves-healthy-eating"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Fitness tech is a minefield",
+        body: "Fitness tech gifts look great in theory: they're practical, they show you take her interests seriously, and the price points feel like they communicate real effort. The problem is that this category has more ways to go wrong than almost any other. Buy the wrong tracker and you're implying she needs to monitor herself more closely. Buy a duplicate of something she already owns and you're admitting you don't pay attention. Buy the most impressive spec without knowing what she actually needs and you've spent $300 on something she opens twice. The three mistakes below cover the most common versions of each."
+      },
+      {
+        type: "text",
+        heading: "Why it keeps going wrong",
+        body: "Fitness tech gifts tend to fail because men shop by category rather than by person. A smartwatch is a smartwatch, right? A tracker is a tracker? In reality, a serious runner and a woman who goes to yoga twice a week need completely different things, and buying based on the category rather than the specific person is where most of these gifts end up unused."
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 1: Buying a fitness tracker she didn't ask for",
+        body: "The most common fitness tech mistake is giving a woman a smartwatch or fitness tracker without knowing whether she wants one. If she already has a device she loves, a new one is a direct implication that hers is not good enough. If she has never worn a tracker, there is usually a reason: she either does not want one, or the right one has not crossed her path yet. Either way, buying a generic tracker and hoping it lands is the wrong move. The better approach is to give something that upgrades her experience of being active without requiring her to make a decision about her wrist."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Bala Bangles Adjustable Wrist & Ankle Weights",
+            price: "$55.00",
+            reason: "Weighted bangles that add low-level resistance to any workout, walk, or everyday movement without requiring any setup, syncing, or decision about what to track. Bala has become a cult product among active women specifically because it looks like jewelry rather than equipment, which means she will actually wear it. For the woman who is fit and active but has never embraced wearable tech, this is the fitness gift that does not ask anything of her except to put it on.",
+            url: "https://www.amazon.com/dp/B0BQCJRL6Q?_encoding=UTF8&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c3ea6a28710d170f2c7e0b1d28359b92&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61yHjkXkINL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "OpenRun Pro Bone Conduction Headphones",
+            price: "$139.00",
+            reason: "The Shokz OpenRun Pro sits just in front of the ears rather than in them, which means she can hear her music or podcasts while staying fully aware of her surroundings during a run, ride, or outdoor workout. For a woman who is already active, this is a genuine upgrade to something she already does rather than a new device asking for her attention. It is also the kind of fitness tech that works because of how she uses it, not what it tracks, which means there is nothing to set up, calibrate, or ignore.",
+            url: "https://www.amazon.com/SHOKZ-New-OpenRun-Pro-Comfortable/dp/B0FH4QX7TH?dib=eyJ2IjoiMSJ9.TVb5kEGmjMahLc2ZrEgdzyx_NZcZnkCMR7ah1ugbDMHaRN2c9y71f6rWOqT6lxul1IPkQeUO7A0ilAxUzbHZp9m1MB8ucBkbXyJotbAdtUeKBs7Klxwux5P4RG2mP2t1N23DXMLNmLs2vO27seW3vARzmHGUIn1Rqzw-hrIvCenaVrBICpjJy_5jBcuz-G8SKrKHbPsJPOrlu2QbReurAuTxqJw_uJEo9HhXCD6PQMY.dHKCcu9FxnyErBEcc_Bt332kowVnva3NIbCEw8r14pY&dib_tag=se&keywords=bone%2Bconduction%2Bheadphones&qid=1775607536&sr=8-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b7987e7f304ee046d043bfaa35836aec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51f7hhpfGnL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 2: Buying by spec instead of by use case",
+        body: "When men do decide to buy a GPS watch or fitness tracker, they tend to go one of two ways: the cheapest option that technically qualifies, or the most impressive spec they can find at the budget. Both are wrong for the same reason: the right watch is the one that matches how she actually trains, not how much you spent or how basic a beginner version looked. A casual gym-goer does not need a watch with a running power meter and triathlon mode. A serious runner does not want a general wellness watch that maxes out at step counting. The spec needs to match the person."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Garmin Venu Sq Smartwatch",
+            price: "$119.99",
+            reason: "The Garmin Venu Sq is the right watch for a fitness-conscious woman who is not a dedicated endurance athlete: GPS, heart rate, sleep tracking, stress monitoring, and guided workouts in a slim everyday design that does not look like race equipment. It gives her real health data without overwhelming her with metrics she does not need. If she goes to the gym, takes fitness classes, walks, hikes, or does yoga but has not committed to a specific sport, this is the watch built exactly for that.",
+            url: "https://www.amazon.com/dp/B095J8MDX1?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71dxG5vHYcL._AC_UY218_.jpg"
+          },
+          {
+            name: "Garmin Forerunner 55",
+            price: "$149.99",
+            reason: "The Forerunner 55 is the dedicated running watch for a woman who takes her mileage seriously: GPS pace, heart rate, cadence, daily suggested workouts calibrated to her training load, and recovery time tracking. It is the watch that Garmin built specifically for runners rather than adapted from a general fitness platform, which is exactly the distinction that matters if she is logging real miles. If she tracks her runs, follows a training plan, or has mentioned wanting more data on her performance, this is the correct spec.",
+            url: "https://www.amazon.com/dp/B0BFCZYMLY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61XNnt+pdDS._AC_UY218_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 3: Buying recovery gear that looks medical",
+        body: "Recovery is one of the most impactful parts of any fitness routine, and there is a whole category of recovery gifts that active women genuinely want. The mistake is choosing the ones that look clinical rather than the ones that feel like a treat. A compression sleeve, a generic foam roller from a sports shop, an ice pack set: these are the kind of recovery tools she might already own or will associate with injury rather than self-care. The recovery gifts that land as genuinely good gifts are the ones that feel luxurious, not like something from a physiotherapy catalogue."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Ultra-Portable Massage Gun",
+            price: "$219.00",
+            reason: "The Theragun Mini is the compact percussion massage gun that has earned its place as one of the most recommended recovery tools among athletes at every level, and the brand name is what makes this a gift rather than a piece of physio equipment. It reaches deeper into sore quads, calves, and shoulders than a foam roller can, takes five minutes instead of twenty, and fits in a gym bag. For a woman who trains regularly and takes recovery seriously, this is the upgrade she has probably priced out and decided to wait on.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Infrared Sauna Blanket",
+            price: "$293.95",
+            reason: "A LifePro infrared sauna blanket that delivers far-infrared heat therapy for muscle recovery, circulation, and stress relief in thirty minutes on the couch or bed. This is the recovery gift that lands as a genuine splurge rather than a medical device: it requires nothing from her except lying still, produces noticeable results immediately, and is the kind of thing that wellness-serious women either already have or have been watching on social media for months. At this price it is a proper birthday gift rather than a casual add-on.",
+            url: "https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B0BX7HLCYQ?content-id=amzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095%3Aamzn1.sym.141f5c48-2844-433f-b731-f8ecc97a5095&crid=1AJN8MOV2F7HQ&cv_ct_cx=Weighted%2Bheated%2Bblanket&keywords=Weighted%2Bheated%2Bblanket&pd_rd_i=B0BX7HLCYQ&pd_rd_r=af11a619-c016-41f2-80f0-9ac0a51e57df&pd_rd_w=KEL4v&pd_rd_wg=07rVc&pf_rd_p=141f5c48-2844-433f-b731-f8ecc97a5095&pf_rd_r=9TSAQ9DSX1BB9PNCNGRQ&qid=1774736436&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bheated%2Bblanket%2Caps%2C270&sr=1-4-6024b2a3-78e4-4fed-8fed-e1613be3bcce-spons&aref=SGiR41tniM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c23aa71ec7e1c3167017f6abfec16408&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71+6dBgvlUL._AC_SX679_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The pattern behind all three mistakes",
+        body: "Every mistake here comes from the same root: shopping the category instead of the person. Fitness tech is not a monolith. The right gift is the one that matches how she specifically trains, what she already has, and how she thinks about her own body. Get those three things right and almost any of the picks above will land well. Get them wrong and the most expensive option in the store becomes another thing she has to find a polite way to put in a drawer."
+      },
+      { type: "cta" }
+    ]
+  }
 ];
 
 // ============================================================================

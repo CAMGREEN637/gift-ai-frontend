@@ -4632,6 +4632,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+// GIFTS — HOUSEWARMING
+// ============================================================================
+{
+  slug: "best-housewarming-gifts-grown-up-home",
+  title: "7 Best Housewarming Gifts That Actually Belong in a Grown-Up Home",
+  excerpt: "Searching for the best housewarming gifts for friends buying a house or renting a new space? Skip the generic ideas for unique, intentional new home gifts.",
+  occasion: "housewarming",
+  interests: ["home_decor", "cooking", "wine", "music", "baking", "wellness"],
+  readTime: "5 min read",
+  publishedAt: "2026-05-24",
+  relatedArticles: [
+    "birthday-gifts-home-decor",
+    "gifts-cozy-homebody",
+    "thoughtful-gifts-that-dont-feel-last-minute",
+    "gifts-for-a-serious-relationship"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "Why Choosing the Right Housewarming Gift Matters",
+      body: "When you are in your twenties and someone moves into a new apartment, a bottle of wine and a card is completely fine. But when your friends start buying homes, or signing proper leases on places they actually intend to stay in, the register shifts. This is a real milestone. The space is theirs in a way a previous one was not, and the best housewarming gifts acknowledge that. Not expensive necessarily, just deliberate. Something that belongs in a home someone actually chose."
+    },
+    {
+      type: "text",
+      heading: "Unique Housewarming Gifts (That Aren't Just Another Candle)",
+      body: "The default move-in present is a candle and a card, and there is nothing wrong with that except that everyone brings the exact same thing. The seven unique housewarming gift ideas below still include a candle, but one that is actually worth giving, alongside practical home gifts that serve a real need: for the kitchen, the living room, the air quality, or the Sunday morning ritual. None of them require knowing the person's exact taste, which matters when you are shopping for a new home rather than a hobby."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Minimalist White Ceramic Vase",
+          price: "$16.60",
+          reason: "A clean, matte white ceramic vase in a simple silhouette that works on any shelf, windowsill, or dining table regardless of what the rest of the space looks like. In a new home where the decor is still finding itself, a neutral vase is one of those home decor gifts that makes a room look more intentional immediately. It is also the rare $17 gift that does not look like a $17 gift, which matters when you are turning up to someone's new place for the first time.",
+          url: "https://www.amazon.com/dp/B09VXH4TJ7?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/61KG+L+UlYL._AC_UL320_.jpg"
+        },
+        {
+          name: "Scented Crystal Candle Set",
+          price: "$22.97",
+          reason: "Three soy wax candles in different scents, each poured with a small healing crystal inside that reveals itself as the candle burns down. Better than a generic candle set because the format gives each one a small moment of discovery, and the three-candle spread means different scents can go in different rooms. For anyone moving into a new place, this is the gift that makes a space start to smell like a home rather than an empty one.",
+          url: "https://www.amazon.com/dp/B08DZ8QWSN?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71JWhzNKqyL._AC_UL320_.jpg"
+        },
+        {
+          name: "Zulay Red Wine Decanter",
+          price: "$23.99",
+          reason: "A hand-blown glass wine decanter with a wide base for aeration and a slender neck that pours cleanly. For anyone who drinks wine with any regularity, a decanter is one of those kitchen objects that has been on the mental list for years without making it to the cart. It also looks genuinely elegant sitting out on a counter or a dining table, which gives it the dual function of being both useful and decorative. The kind of thing that says this is a home where people actually host.",
+          url: "https://www.amazon.com/dp/B07T2FF67L?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71MJMUVvYaL._AC_UL320_.jpg"
+        },
+        {
+          name: "Sourdough Starter Kit",
+          price: "$29.99",
+          reason: "A complete sourdough starter kit with a glass jar, flour, yeast, a wooden spoon, and instructions for beginning a sourdough culture from scratch. For someone settling into a new kitchen for the first time, or anyone who has wanted to try baking bread and kept deprioritising it, this is the gift that turns a new kitchen into something that actually gets used. There is something satisfying about having a culture living on the counter of a home you own. It makes the place feel like it has been there longer than it has.",
+          url: "https://www.amazon.com/dp/B0D3D3339P?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71EzazE9uSL._AC_UL320_.jpg"
+        },
+        {
+          name: "Vintage Wooden Bluetooth Record Player",
+          price: "$35.99",
+          reason: "A compact Bluetooth record player in a warm wood-finish suitcase design with built-in speakers, a three-speed turntable, and an aux input for streaming when there is no vinyl to hand. A record player is one of those objects that immediately makes a room feel characterful rather than assembled from a moving box. It also has a low barrier to use: you do not need a collection to enjoy it. Bluetooth streaming alone makes it worth having, and buying records is the kind of thing you start doing once you have somewhere to put them.",
+          url: "https://www.amazon.com/dp/B0FR9RCX4B?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71Ty6t746RL._AC_UY218_.jpg"
+        },
+        {
+          name: "Gourmet Olive Oil Set",
+          price: "$43.00",
+          reason: "Eighteen single-serving flavoured olive oils in individual glass bottles, covering everything from garlic and herb to chipotle and lemon. A high-quality olive oil set is one of those things that immediately makes cooking feel more interesting without requiring any extra skill or equipment. It is also genuinely hard to buy for yourself because of the price-versus-how-often-you-actually-use-flavoured-oil calculation, which is exactly the gap a housewarming gift is supposed to fill. For someone stocking a kitchen from scratch, this is the upgrade that earns its shelf space.",
+          url: "https://www.amazon.com/Thoughtfully-Sampler-Flavors-Include-Chipotle/dp/B08TDZVQDM?crid=23RDG83403FX6&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.WUNJLGxoRUgSi9-GvzZpUROpb-_sEiyIglpAmzE_OgpAzK5X1VBsC3HjPbT1Y6e2q5SIJHqowQX4qxC7DiZdgsy237x1nKwQFTYS-Y3X0THXWcIH_VAH-GrVip_2snDoWrmFV74aqj1vxQl2VyrjaYGpyyw9Zw_2E4IN6tn-s4ZD8yt6fRo1bYCsN8LoElFvCA_H_Yr-n8PnKjLfnKf1x217rQODDt_js0XcogpXG7A.EEfKw-egu2NW4FlEiBqmyj6dA6wEADQlxyBoI4N9Ssk&dib_tag=se&keywords=gourmet+olive+oil+set&qid=1775435704&s=samedaystore&sprefix=gourmet+olive+oil+set%2Csamedaystore%2C185&sr=1-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=06f300d79e895b98bcb38bb1586943d4&language=en_US&ref_=as_li_ss_tl",
+          image_url: "https://m.media-amazon.com/images/I/81rEVc-M7PL._SL1500_.jpg"
+        },
+        {
+          name: "Air Purifier for Home Allergens",
+          price: "$99.00",
+          reason: "A LEVOIT HEPA air purifier that covers up to 1,073 square feet, filters 99.97% of airborne particles including dust, pollen, pet dander, and odours, and runs quietly enough to leave on overnight. Moving into a new home means inheriting whatever the previous occupants left behind in the air: dust from the move, paint fumes, general staleness. An air purifier is one of the most practically useful housewarming gifts you can give, and one of the few that would not typically make it onto a wish list in the middle of an expensive move. Give this and they will think of it every morning when they wake up in clean air.",
+          url: "https://www.amazon.com/dp/B07VVK39F7?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71t-9BTIg9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "The Golden Rule: Bring Food to a New Home",
+      body: "Whatever you bring, arrive with something to eat or drink on the night. Moving is exhausting and the kitchen is rarely functional in the first week. Takeout from somewhere they like, a bottle of something, or food that requires zero effort is worth as much as anything wrapped. The gift is for the home. The food is for the person who just moved into it."
+    },
+    { type: "cta" }
+  ]
+},
 ];
 
 // ============================================================================

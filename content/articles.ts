@@ -4615,7 +4615,6 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             image_url: "https://m.media-amazon.com/images/I/81j0XN1tlvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-
             name: "Barefoot Dreams Adult Robe",
             price: "$138.00",
             reason: "The Barefoot Dreams robe is one of the most consistently loved gifts in the database, and it works as a birthday gift that comes with its own quiet plan: give it to her early in the evening, let her put it on, and make the rest of the birthday about being at home in a way that feels special rather than default. A good bottle of something, her favourite food, no agenda. The robe signals that the birthday is about her comfort and enjoyment specifically, which is exactly the register a birthday evening should be in.",
@@ -4633,98 +4632,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
-// ============================================================================
-  // GIFTS — HOUSEWARMING
-  // ============================================================================
-  {
-    slug: "housewarming-gifts-for-girlfriend",
-    title: "Housewarming Gifts She Will Actually Use in the New Place",
-    excerpt: "Seven picks that work as housewarming gifts: genuinely useful, easy to give, and none of them a scented candle she will put in a drawer.",
-    occasion: "birthday",
-    interests: ["home_decor", "cooking", "wine", "music", "baking", "wellness"],
-    readTime: "5 min read",
-    publishedAt: "2026-05-24",
-    relatedArticles: [
-      "birthday-gifts-home-decor",
-      "gifts-cozy-homebody",
-      "thoughtful-gifts-that-dont-feel-last-minute",
-      "gifts-for-a-serious-relationship"
-    ],
-    sections: [
-      {
-        type: "text",
-        heading: "Housewarming gifts are harder than they look",
-        body: "The problem with most housewarming gifts is that they are either too generic to feel considered or too specific to the giver's taste rather than the recipient's. A random candle, a bottle of prosecco, a dish towel set: all of these are fine in the moment and forgotten by Tuesday. The gifts that actually earn a place in a new home are the ones that either improve her daily life immediately or add something she would have chosen herself if she had gotten around to it."
-      },
-      {
-        type: "text",
-        heading: "What makes a housewarming gift work",
-        body: "The best housewarming gifts tend to fit into one of two categories: things that make the new space feel finished and intentional, or things that serve a genuine daily need she has not yet sorted out in the move. Neither requires spending a lot. The seven picks below span $17 to $99 and cover everything from a single elegant object for the shelf to the kind of practical upgrade that a new home genuinely benefits from."
-      },
-      {
-        type: "picks",
-        gifts: [
-          {
-            name: "Minimalist White Ceramic Vase",
-            price: "$16.60",
-            reason: "A clean, matte white ceramic vase in a simple silhouette that works on a shelf, a windowsill, a dining table, or a nightstand in any kind of space. In a new home where the decor is still finding itself, a neutral vase is one of those objects that makes a room look more pulled together instantly. It is also the rare $17 gift that does not look like a $17 gift, which matters when you are turning up to someone's new place.",
-            url: "https://www.amazon.com/dp/B09VXH4TJ7?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/61KG+L+UlYL._AC_UL320_.jpg"
-          },
-          {
-            name: "Scented Crystal Candle Set",
-            price: "$22.97",
-            reason: "Three soy wax candles in different scents, each poured with a small healing crystal inside that reveals itself as the candle burns down. Better than a generic candle set because the crystal element gives each one a small moment of discovery, and the three-candle format means she can try different scents in different rooms. For someone moving into their first proper space, this is the kind of gift that makes a room start to smell like home.",
-            url: "https://www.amazon.com/dp/B08DZ8QWSN?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71JWhzNKqyL._AC_UL320_.jpg"
-          },
-          {
-            name: "Zulay Red Wine Decanter",
-            price: "$23.99",
-            reason: "A hand-blown glass wine decanter with a wide base for aeration and a slender neck that pours cleanly. For a girlfriend who drinks wine regularly, a decanter is one of those kitchen objects that has been on the mental list for a while without ever quite making it to the cart. It also looks genuinely elegant on a countertop or dining table, which gives it the dual function of being both useful and decorative. For a housewarming, it is the rare practical gift that looks like you put real thought into it.",
-            url: "https://www.amazon.com/dp/B07T2FF67L?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71MJMUVvYaL._AC_UL320_.jpg"
-          },
-          {
-            name: "Sourdough Starter Kit",
-            price: "$29.99",
-            reason: "A complete sourdough starter kit with a glass jar, flour, yeast, a wooden spoon, and instructions for beginning a sourdough culture from scratch. For someone settling into a new home with a real kitchen for the first time, or someone who has wanted to try sourdough and kept putting it off, this is the gift that turns a new kitchen into something she actually uses. It is also the kind of project that makes a new space feel lived in faster than almost anything else.",
-            url: "https://www.amazon.com/dp/B0D3D3339P?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71EzazE9uSL._AC_UL320_.jpg"
-          },
-          {
-            name: "Vintage Wooden Bluetooth Record Player",
-            price: "$35.99",
-            reason: "A compact Bluetooth record player in a warm wood-finish suitcase design with built-in speakers, a three-speed turntable, and an aux input for Bluetooth streaming when she is not spinning vinyl. For a girlfriend who has even a passing interest in music or home aesthetics, a record player is one of those objects that immediately makes a room feel characterful rather than generic. This one sits at a price that makes it a generous housewarming gift without being a statement piece she did not ask for.",
-            url: "https://www.amazon.com/dp/B0FR9RCX4B?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71Ty6t746RL._AC_UY218_.jpg"
-          },
-          {
-            name: "Gourmet Olive Oil Set",
-            price: "$43.00",
-            reason: "Eighteen single-serving flavoured olive oils in individual glass bottles, covering everything from garlic and herb to chipotle and lemon. For someone moving into a new kitchen, a high-quality olive oil set is one of those gifts that immediately makes cooking feel more interesting without requiring any particular skill or extra equipment. It is also genuinely hard to buy for yourself because of the price-versus-how-often-you-actually-use-flavoured-oil calculation, which is exactly the gap a housewarming gift is supposed to fill.",
-            url: "https://www.amazon.com/Thoughtfully-Sampler-Flavors-Include-Chipotle/dp/B08TDZVQDM?crid=23RDG83403FX6&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.WUNJLGxoRUgSi9-GvzZpUROpb-_sEiyIglpAmzE_OgpAzK5X1VBsC3HjPbT1Y6e2q5SIJHqowQX4qxC7DiZdgsy237x1nKwQFTYS-Y3X0THXWcIH_VAH-GrVip_2snDoWrmFV74aqj1vxQl2VyrjaYGpyyw9Zw_2E4IN6tn-s4ZD8yt6fRo1bYCsN8LoElFvCA_H_Yr-n8PnKjLfnKf1x217rQODDt_js0XcogpXG7A.EEfKw-egu2NW4FlEiBqmyj6dA6wEADQlxyBoI4N9Ssk&dib_tag=se&keywords=gourmet+olive+oil+set&qid=1775435704&s=samedaystore&sprefix=gourmet+olive+oil+set%2Csamedaystore%2C185&sr=1-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=06f300d79e895b98bcb38bb1586943d4&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/81rEVc-M7PL._SL1500_.jpg"
-          },
-          {
-            name: "Air Purifier for Home Allergens",
-            price: "$99.00",
-            reason: "A LEVOIT HEPA air purifier that covers up to 1,073 square feet, filters 99.97% of airborne particles including dust, pollen, pet dander, and odours, and runs quietly enough to leave on in a bedroom overnight. Moving into a new home often means inheriting whatever the previous occupants left behind in the air: dust from the move, paint fumes, general mustiness. A quality air purifier is one of the most genuinely useful housewarming gifts you can give, and one of the few that a person would not typically think to buy for themselves in the middle of an expensive move.",
-            url: "https://www.amazon.com/dp/B07VVK39F7?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71t-9BTIg9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
-          }
-        ]
-      },
-      {
-        type: "text",
-        heading: "Show up with food too",
-        body: "Whatever you bring as a gift, arrive with something to eat or drink on the night. Moving is exhausting and the kitchen is rarely functional in the first week. Takeout from somewhere she likes, a bottle of wine, or something that requires zero cooking effort is worth as much as anything wrapped. The gift is for the home. The food is for the person."
-      },
-      { type: "cta" }
-    ]
-  },
 ];
-
 
 // ============================================================================
 // HELPER FUNCTIONS
@@ -4758,10 +4666,8 @@ export function getAllArticles(): GiftArticle[] {
 }
 
 export function getRelatedArticles(article: GiftArticle): GiftArticle[] {
-  if (!article.relatedArticle
-      s) return [];
+  if (!article.relatedArticles) return [];
   return article.relatedArticles
-    .map(slug => getArticleB
-        ySlug(slug))
+    .map(slug => getArticleBySlug(slug))
     .filter((article): article is GiftArticle => !!article);
 }

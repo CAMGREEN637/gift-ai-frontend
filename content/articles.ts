@@ -4812,6 +4812,186 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — BAKING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-girlfriend-loves-baking",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Bake",
+    excerpt: "Seven picks for the woman who considers the weekend a success if something comes out of the oven.",
+    occasion: "birthday",
+    interests: ["baking", "cooking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-cooking",
+      "housewarming-gifts-for-girlfriend",
+      "gifts-for-girlfriend-who-loves-healthy-eating",
+      "birthday-gifts-hard-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The wrong baking gift is the one that ignores where she actually is",
+        body: "Baking gifts fail in two directions: too basic for someone who has been doing this for years, or too advanced for someone who is still building her confidence. A decorating kit for a bread baker misses the point. A cookbook for a woman who has been baking from memory for a decade is not a gift, it is homework. The best baking gift is the one that fits her specific practice: what she makes, what she is missing, and what she has been wanting to try."
+      },
+      {
+        type: "text",
+        heading: "Seven gifts across every kind of baker",
+        body: "The picks below cover the full range: the baker who is still learning, the one obsessed with sourdough, the cake decorator, the stand mixer owner who has not fully kitted it out, and the serious baker who deserves a premium ingredient or a piece of equipment she will use for decades. None of them are repeats from anything else on this site."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Funny Baking Apron Set",
+            price: "$18.99",
+            reason: "A baking apron set with matching oven mitts, pot holder, and kitchen towel in a fun print that leans into the identity of someone who actually bakes rather than someone who just owns an apron. For the girlfriend who spends real time in the kitchen and has a sense of humor about it, this is the kind of gift that gets worn rather than hung on a hook. It is also one of those things nobody buys for themselves because an apron is technically already covered, which makes it exactly right as a gift.",
+            url: "https://www.amazon.com/dp/B0FXMCKFN8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71IYQR7ay+L._AC_UL320_.jpg"
+          },
+          {
+            name: "Sally's Baking 101: Foolproof Recipes from Easy to Advanced",
+            price: "$20.97",
+            reason: "Sally McKenney is one of the most trusted voices in home baking, and this book earns its place on the shelf by covering the full range from genuinely approachable recipes for new bakers through techniques that will challenge someone who has been at it for years. Unlike most baking books that assume either total beginner or seasoned professional, this one works across the gap. For a girlfriend who bakes regularly and is always looking for something new to try, a well-chosen cookbook is one of those gifts that keeps delivering for years.",
+            url: "https://www.amazon.com/dp/0593581962?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81y+iS3Va1L._AC_UL320_.jpg"
+          },
+          {
+            name: "Banneton Bread Proofing Basket Set",
+            price: "$21.58",
+            reason: "A complete banneton set with a round proofing basket, linen liner, dough scraper, scoring lame, and bench knife: everything needed to proof and score a proper sourdough loaf. For a girlfriend who has gotten into bread baking, the banneton is the upgrade that takes a loaf from good to genuinely beautiful, and the spiral pattern it leaves on the crust is the kind of detail that makes the whole process feel more intentional. This is a specific gift that shows you know what she actually makes.",
+            url: "https://www.amazon.com/dp/B0FZQS2JV3?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81i-6yohmtL._AC_UL320_.jpg"
+          },
+          {
+            name: "RFAQK Cake Decorating Kit",
+            price: "$34.90",
+            reason: "A comprehensive 700-piece cake decorating kit with piping bags, tips in every shape and size, couplers, flower nails, and practice boards. For a baker who has been improvising with a zip-lock bag and a basic tip set, this is the upgrade that opens up a completely different level of decoration. The sheer scope of the kit means she will spend a weekend just exploring what is possible, which for the right person is the best kind of gift.",
+            url: "https://www.amazon.com/dp/B0B41WY8QS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/912RF7VdOML._AC_UL320_.jpg"
+          },
+          {
+            name: "Stainless Steel Mixer Attachment Kit",
+            price: "$39.99",
+            reason: "A three-piece stainless steel attachment set that expands what her stand mixer can do: a flat beater, dough hook, and wire whisk in commercial-grade steel that performs noticeably better than the standard attachments most mixers ship with. For the girlfriend who already has a stand mixer and uses it regularly, this is the gift that makes her existing investment work harder without requiring anything new to find room for. It is the kind of practical upgrade she would never prioritise for herself but will notice immediately the first time she uses it.",
+            url: "https://www.amazon.com/dp/B0F32WN7QZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61ibOCq02iL._AC_UL320_.jpg"
+          },
+          {
+            name: "VALRHONA Chocolate",
+            price: "$68.99",
+            reason: "Valrhona is the chocolate that serious pastry chefs and dedicated home bakers actually use, and it is recognisable the moment anyone with baking knowledge sees the name. A gift of premium baking chocolate communicates something specific: not just that you know she bakes, but that you have paid enough attention to know what separates the ingredients that make a difference from the ones that do not. For a baker who takes her craft seriously, this lands in a completely different register from a generic gift.",
+            url: "https://www.amazon.com/dp/B0BH8MTKRH?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/813OKbaqojL._AC_UL320_.jpg"
+          },
+          {
+            name: "Nordic Ware Bakeware",
+            price: "$70.00",
+            reason: "Nordic Ware is the American bakeware brand that has been making the same cast aluminium pans since 1946, and the quality is immediately apparent in the weight and evenness of the bake. For a serious baker who does not already own Nordic Ware, this is the equivalent of a Le Creuset moment: a piece of equipment that lasts decades, performs better than anything comparable, and makes her wonder how she tolerated her previous pans. It looks as good on a shelf as it does coming out of the oven.",
+            url: "https://www.amazon.com/dp/B0FCZGR97V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51CJB89m9rL._AC_UL320_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Ask for a recipe first",
+        body: "Before you give any of these, ask her what she has been making lately. The answer will tell you whether the banneton is right, whether she already has a decorating kit, or whether the cookbook is a better fit than the equipment. Ten seconds of conversation makes the difference between a gift that fits and one that misses by just enough to notice."
+      },
+      { type: "cta" }
+    ]
+  },
+// ============================================================================
+  // GIFTS — NEW HOBBY
+  // ============================================================================
+  {
+    slug: "gifts-for-girlfriend-looking-for-new-hobby",
+    title: "Gifts for a Girlfriend Who Is Looking for a New Hobby",
+    excerpt: "Seven starter kits across seven completely different hobbies. One of them will stick.",
+    occasion: "birthday",
+    interests: ["art", "music", "baking", "gardening", "yoga", "wellness", "cooking"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-girlfriend-loves-baking",
+      "birthday-gifts-art",
+      "birthday-gifts-music",
+      "gift-ideas-girlfriend-impossible-to-shop-for"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The best hobby gift is a low-stakes invitation",
+        body: "The mistake with hobby gifts is overcommitting on behalf of the person receiving them. A full professional watercolor setup for someone who has never painted before turns the gift into pressure rather than fun. The sweet spot is something complete enough to actually try the thing, but approachable enough that if it turns out not to be her thing, she does not feel like she wasted your money or her time. All seven picks below are designed to be genuinely good entry points without making anyone feel like they have signed up for a course."
+      },
+      {
+        type: "text",
+        heading: "Seven hobbies, seven different kinds of person",
+        body: "These picks cover painting, crochet, bread making, music, yoga, plants, and tea. If you know she has been curious about one of these specifically, that is the one to give. If you genuinely have no idea, the watercolors and the terrarium are the lowest-commitment starting points: easy to pick up, easy to put down, and both produce something she can keep regardless of whether the hobby sticks."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "XXXFLOWER Plant Terrarium with Wooden Stand",
+            price: "$16.99",
+            reason: "A glass geometric terrarium with a bamboo stand, sized for succulents, air plants, or small cacti. Plant keeping is one of those hobbies that starts with a single object on a shelf and quietly expands from there, and a terrarium is a more interesting entry point than a pot with soil. It requires almost no maintenance, looks genuinely beautiful wherever it ends up, and gives her something to care for at exactly the level of commitment she wants to invest. If she has ever mentioned wanting more plants, start here.",
+            url: "https://www.amazon.com/dp/B07D29P5Z1?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71GrAWYYDyL._AC_UL320_.jpg"
+          },
+          {
+            name: "ARTISTRO 50-Color Watercolor Set",
+            price: "$18.99",
+            reason: "Fifty watercolor pans in a compact tin that opens flat for easy mixing, with a water brush pen included. Watercolor is one of the most forgiving painting mediums for a beginner: the materials are inexpensive, the cleanup is just water, and the results look better than expected almost immediately. Fifty colors sounds like a lot but the variety is exactly what makes experimentation feel fun rather than limiting. For a girlfriend who has said she wants to be more creative but has not started anything yet, this is the lowest-friction possible first step.",
+            url: "https://www.amazon.com/dp/B08D2DJPD3?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81IcRaIZLNL._AC_UL320_.jpg"
+          },
+          {
+            name: "Woobles Beginner Crochet Kit",
+            price: "$29.00",
+            reason: "The Woobles is the beginner crochet kit that actually teaches you how to crochet rather than just providing materials and hoping for the best. It comes with pre-started yarn so the hardest part is already done, a detailed guide, and everything needed to make a small amigurumi figure from scratch. Crochet has had a genuine resurgence in recent years, particularly among women in their twenties and thirties, and the Woobles in particular is the kit people recommend to first-timers because the learning curve is genuinely handled rather than glossed over.",
+            url: "https://www.amazon.com/PRE-Order-Woobles-Beginners-Tutorials-Penguin/dp/B08YS42GPG?dib=eyJ2IjoiMSJ9.jYShvN-VGIXjTymxMZBKw2uFL3zluk1uDLnUuyrttDDWqTM4XeiBvSn57ErznvpIMIxO0Uuti-XtaFASAz6silNvXnUMmLJFtWpQs6Xts063fF2O8B6PP1yLwREYeRV3OzkI_OkIvNXTRnYlq3Sd56JXNQ2yXygKab5FzG2PvojP3nLW3f89eZG-pZ6aDKzgJ78NSjm1-w9j8847ga4VpwE99XR-2wmSD7lXqZmYIPmygaGkYiz4IIoA1ptuZPE5IlFty6UwYChTYZqRY4ImsBT4pEwp69oSg6yNhOUu9bY.HkAZcC4-r5DMvSP9UwZH0lKWSnbJ8IdWXdwCpC8ubqc&dib_tag=se&keywords=wobbles&qid=1777602032&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ab46783f8aa0ff9752596310efe85297&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71l2S+fPvFL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Sourdough Starter Kit",
+            price: "$29.99",
+            reason: "A complete sourdough kit with a glass jar, flour, yeast, a wooden spoon, and step-by-step instructions for culturing a starter from scratch. Sourdough is having an extended cultural moment and it earns it: the process is genuinely satisfying, the results are delicious, and maintaining a starter gives you something to check on every day in a way that makes the kitchen feel more alive. For a girlfriend who likes to cook but has not tried making bread, this is one of those hobbies that tends to stick once it starts.",
+            url: "https://www.amazon.com/dp/B0D3D3339P?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71EzazE9uSL._AC_UL320_.jpg"
+          },
+          {
+            name: "AODSK Soprano Pink Ukulele",
+            price: "$39.99",
+            reason: "A properly tuned, genuinely playable soprano ukulele with a gig bag, tuner, extra strings, and a chord chart. The ukulele is one of the most accessible instruments for an adult beginner: it has four strings instead of six, the chord shapes are simple, and you can play recognisable songs within a couple of sessions. This one comes in a pink finish that leans into the fun rather than the serious, which is exactly the right register for a hobby gift. If she has ever picked one up at a party or mentioned wanting to learn an instrument, this is a genuinely viable place to start.",
+            url: "https://www.amazon.com/dp/B0C58MV7NV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81yRzYTJqoL._AC_UL320_.jpg"
+          },
+          {
+            name: "Foldable Yoga Mat and Blocks Set",
+            price: "$39.99",
+            reason: "A foldable yoga mat with two cork blocks and a strap, everything needed to start a home practice without a studio membership or any prior experience. The foldable format means it lives in a bag or on a shelf rather than rolled in a corner collecting dust, which matters more than it sounds for a hobby that is still finding its footing. Yoga as a hobby has an unusually low barrier to entry: there is more free content available online than anyone could work through, and the only equipment that actually matters is a mat that does not slip.",
+            url: "https://www.amazon.com/dp/B0FPVQGWG7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81j9FSQ9emL._AC_UL320_.jpg"
+          },
+          {
+            name: "Complete Glass Tea Set with Infuser",
+            price: "$63.00",
+            reason: "A full glass tea set with a teapot, infuser basket, and four cups, designed for loose-leaf brewing rather than teabags. For a girlfriend who drinks tea casually and has not yet gone further than a mug and a bag, this opens up a completely different tier of the hobby: sourcing interesting loose-leaf teas, understanding steeping times, building a small collection of different varieties. The glass construction lets her watch the tea steep, which is a small but genuinely pleasant detail that makes the ritual feel worth taking slowly. It is one of those hobbies that starts with one good cup and goes from there.",
+            url: "https://www.amazon.com/dp/B01IFBPX7A?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71imBu7dydL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Give it with zero expectation",
+        body: "The best thing you can say when you give any of these is that there is no pressure to love it. A hobby gift with implied expectations attached becomes homework. One that arrives with genuine curiosity attached stays fun. Tell her what made you think she might enjoy it, and leave the rest entirely up to her."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

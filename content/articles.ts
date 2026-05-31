@@ -4992,6 +4992,280 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — SHE WOULD NEVER THINK TO BUY HERSELF
+  // ============================================================================
+  {
+    slug: "gifts-she-would-never-think-to-buy-herself",
+    title: "10 Gifts She Would Never Think to Buy for Herself",
+    excerpt: "Not on her wishlist. Not in her browser tabs. She just hasn't encountered these yet.",
+    occasion: "birthday",
+    interests: ["skincare", "wine", "photography", "wellness", "home_decor", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "gifts-she-would-never-buy-herself",
+      "gift-ideas-girlfriend-impossible-to-shop-for",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "tech-gifts-that-feel-thoughtful"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Different from the wishlist",
+        body: "There is a difference between the gift she wants but has not bought herself yet, and the gift she would never have thought to want in the first place. The first category is easy: you find her browser history, check her saved posts, ask her friends. The second category is harder and more interesting. These are products that exist outside her normal browsing patterns, things from categories she does not actively shop, or solutions to problems she has not yet framed as problems. When these land, they land differently. She is not just pleased. She is surprised."
+      },
+      {
+        type: "text",
+        heading: "Ten things off her radar",
+        body: "The picks below are deliberately varied in category. A few are from corners of wellness and skincare she probably has not explored yet. A few are practical tools she would never think to buy as a treat. One is a splurge so far outside the ordinary gift register that it will genuinely catch her off guard. The price range runs from $17 to $239."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Gua Sha Facial Tools Set",
+            price: "$16.59",
+            reason: "A set of three rose quartz and jade gua sha tools in different shapes for the face, neck, and décolletage. Gua sha facial massage has a devoted following in skincare communities for genuine reasons: regular use reduces puffiness, improves circulation, and makes skin look noticeably more defined over time. She may have vaguely heard of it but probably has not tried it, which is exactly what makes it a good gift. It costs almost nothing, takes three minutes to use, and changes the texture of a morning skincare routine in a way she will immediately notice.",
+            url: "https://www.amazon.com/dp/B0BRXC1341?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61-jIksMtJL._AC_UL320_.jpg"
+          },
+          {
+            name: "Wine Tasting Journal",
+            price: "$19.00",
+            reason: "A proper wine tasting journal from Wine Folly, designed for recording tasting notes, tracking bottles she has loved, and building an actual vocabulary for what she is drinking. For a woman who drinks wine regularly and has strong opinions about what she likes without quite having the language for it, this is the gift that formalises a hobby she already has without realising it. It is one of those objects that makes an existing pleasure feel more intentional.",
+            url: "https://www.amazon.com/Wine-Folly-Tasting-Journal-Notebook/dp/B07J2W1FVK?crid=2TZG0HK2LX1Z",
+            image_url: "https://m.media-amazon.com/images/I/91FTIc7VVRL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Coiro Leather Camera Wrist Strap",
+            price: "$26.99",
+            reason: "A full-grain leather wrist strap for any camera, made in a width and weight that makes carrying a mirrorless or compact camera feel more intentional and less like you are wearing a piece of equipment. For a girlfriend who takes her camera out regularly and has been using the stock strap since she bought it, this is the kind of small upgrade that changes how the whole kit feels in hand. She would never browse camera accessories for herself. That is exactly why it works as a gift.",
+            url: "https://www.amazon.com/dp/B09V1QDK1M?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51vySdzozrL._AC_UY218_.jpg"
+          },
+          {
+            name: "Lymphatic Contour Face Brush Set",
+            price: "$27.99",
+            reason: "A dry brushing set designed specifically for the face and neck, using a dual-ended brush and jade tool for lymphatic drainage massage. Lymphatic facial massage is one of those wellness practices that is well-evidenced and widely used in professional facials but rarely makes it into a home routine because most people have never been shown how. The set comes with a guide, takes five minutes, and the results in terms of reduced puffiness and improved skin tone are visible within a few sessions. She has probably never bought a face brush for herself. She will wonder why not.",
+            url: "https://www.amazon.com/dp/B0GLFP8LR8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81b0Z4KgGeL._AC_UL320_.jpg"
+          },
+          {
+            name: "12 Inch Selfie Ring Light with Tripod",
+            price: "$32.00",
+            reason: "A 12-inch LED ring light with a full-height adjustable tripod and phone holder, three color temperatures, and ten brightness levels. She almost certainly would not buy this for herself because a ring light reads as content-creator equipment and she probably does not think of herself that way. In practice it is useful for anyone who takes photos, video calls, has virtual meetings, or just wants better light in a room. The stand folds flat and the light charges via USB. Once it is set up somewhere in the apartment, it becomes the thing she uses every day.",
+            url: "https://www.amazon.com/dp/B08L5VKNWR?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61tKCv30rNL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized PhotoBook 8x8\" Hard Cover",
+            price: "$36.67",
+            reason: "A printed hardcover photo book you fill with twenty photos of your choice, delivered ready to put on a shelf. This is the gift where you do the work: select the photos, order the book, hand it to her already finished. It requires forty minutes of your time and produces one of the most personal objects in the database. She would never make one for herself because it takes effort she would not spend on her own behalf. You spending that effort on her behalf is exactly the point.",
+            url: "https://www.amazon.com/dp/B0CQMVGKBF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61SAIuLEeDL._AC_UL320_.jpg"
+          },
+          {
+            name: "MUSICOZY Sleep Mask with Bluetooth Headphones",
+            price: "$39.98",
+            reason: "A soft sleep mask with ultra-thin Bluetooth speakers built into the fabric that lets her fall asleep to music, podcasts, or white noise without earbuds falling out. Nobody thinks to buy this for themselves because the concept sounds strange until you try it. For anyone who has a winding-down routine, trouble falling asleep, or a partner with a different sleep schedule, this closes a gap she did not know was there. It is also the definition of a category she would never browse: somewhere between sleep accessories and wireless audio, visible to neither.",
+            url: "https://www.amazon.com/dp/B0FFG8THCY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81IuDARhnpL._AC_UY218_.jpg"
+          },
+          {
+            name: "Electric Wine Opener Gift Set",
+            price: "$59.99",
+            reason: "A rechargeable electric wine opener with a foil cutter, vacuum stopper, and wine pourer presented in a gift box. The logic she uses to not buy this is the same logic everyone uses: she already has a corkscrew and it works fine. An electric opener is genuinely better in a way that is immediately obvious the first time she uses it, and the set format makes it feel complete rather than like a single kitchen gadget. She would never prioritise this. That makes it a perfect gift.",
+            url: "https://www.amazon.com/dp/B0BHZ7KSPN?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71Ftd15iSeL._AC_UL320_.jpg"
+          },
+          {
+            name: "Polaroid Go Generation 2 Mini Instant Camera Bundle",
+            price: "$89.99",
+            reason: "The Polaroid Go is the smallest instant camera Polaroid makes: genuinely pocket-sized, with 16 photos included in the bundle and the warm, slightly imperfect analog quality that makes every print feel different from a phone photo. She has probably noticed the Instax Mini and thought it looked fun without ever pulling the trigger. The Go is smaller, more portable, and produces a print format that fits in a wallet. It is the instant camera for someone who takes photos everywhere but has never had a reason to carry a dedicated camera.",
+            url: "https://www.amazon.com/dp/B0CG7GHYXJ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81zeXFfqKyL._AC_UY218_.jpg"
+          },
+          {
+            name: "4K Outdoor Projector with WiFi",
+            price: "$239.00",
+            reason: "A 4K smart projector with built-in WiFi and Bluetooth that streams directly from Netflix, Prime Video, and other apps, outdoor or indoor, with a picture up to 200 inches. For a girlfriend who has a backyard, a balcony, or a white wall in her living room, this is the gift that creates an entirely new way to use a space she already has. She would never buy this for herself because there is always a more practical purchase to make first and an outdoor movie setup feels like a luxury rather than a need. Once she has it, that calculus reverses immediately.",
+            url: "https://www.amazon.com/Projector-Bluetooth-Dual-Mode-Proyector-PrimeVideo/dp/B0FM82SPKH",
+            image_url: "https://m.media-amazon.com/images/I/71gRC82ohAL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The test for any gift on this list",
+        body: "If her reaction when she opens it is I never would have thought of this, you got it right. That response is worth more than any amount of research into what she already wants, and it is only possible when you go looking in places she does not."
+      },
+      { type: "cta" }
+    ]
+  },
+// ============================================================================
+  // ANNIVERSARY GIFTS BY YEAR — TRADITIONAL MATERIALS
+  // ============================================================================
+  {
+    slug: "anniversary-gifts-by-year-traditional",
+    title: "Anniversary Gifts by Year: What the Traditional Materials Actually Mean",
+    excerpt: "There is a reason each anniversary year has its own material. Here is what they mean and what to give.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "wine", "music", "reading"],
+    readTime: "6 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "what-to-get-girlfriend-one-year",
+      "what-to-get-girlfriend-two-years",
+      "gifts-five-year-anniversary",
+      "gifts-for-a-serious-relationship"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Where the tradition comes from",
+        body: "The practice of assigning a material to each anniversary year dates back to medieval Europe, when husbands would give their wives symbolic gifts to mark significant milestones. The materials were chosen deliberately: they represent the nature of a relationship at that stage. Early years get fragile or flexible materials because a new relationship is still being shaped. Later years get harder, more durable materials because the relationship has proven itself. The tradition was formalized in the nineteenth century and widely popularized in the twentieth, with the modern list tweaked over time to reflect changing tastes. Most people have heard of the big ones: paper, silver, gold. Fewer know what year gets wood, or why silk comes at year twelve."
+      },
+      {
+        type: "text",
+        heading: "Why it still matters as a gift framework",
+        body: "You do not have to follow the traditional material exactly, but it gives you something useful: a starting point that is specifically calibrated to where you are in the relationship. A first anniversary paper gift says something different from a fifth anniversary wood gift, and the material itself carries meaning you do not have to explain in a card. The picks below cover seven years, each with one gift that honors the traditional material in a way that actually makes sense as a present in this decade."
+      },
+
+      {
+        type: "text",
+        heading: "1st Anniversary: Paper",
+        body: "Paper represents the beginning. A blank page. A relationship that is still being written. The fragility of paper is the point: a first anniversary is meaningful precisely because relationships in their first year are still finding their shape, and paper honors that. In practice, the best first anniversary paper gifts are the ones that document something specific about the year you just had together: a date, a place, a song."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16.00",
+            reason: "A printed star map of the night sky over a specific location on a specific date: the night you met, your first date, or any moment from the first year that belongs only to the two of you. It is paper in the most literal sense and in the most meaningful one. The thought required to generate it, choosing the right date and place, is the gift as much as the print itself.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "2nd Anniversary: Cotton",
+        body: "Cotton represents comfort and adaptability. A relationship at two years has moved past the careful, performative early stage and into something more settled: you know each other's habits, you are comfortable with silence, you have shared a bed. Cotton honors that domestic intimacy directly. The best second anniversary cotton gifts are the ones that improve the comfort of your shared daily life."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Wearable Sherpa Blanket Hoodie with Pockets",
+            price: "$25.00",
+            reason: "A full-length wearable sherpa blanket with sleeves, a hood, and deep pockets: the ultimate comfort object for anyone who is always cold, always on the couch, or always reaching for a throw. It is cotton and fleece in the most literal anniversary sense, and it is the kind of gift that gets used every single evening for years. At a second anniversary it also says: I know exactly how you spend your evenings at home, and I want that to feel better.",
+            url: "https://www.amazon.com/dp/B099YQ9P67?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71+qC0HVtwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "3rd Anniversary: Leather",
+        body: "Leather represents durability and depth. Unlike paper, it does not tear. Unlike cotton, it stiffens and softens over time into something shaped specifically by the person using it. A three-year relationship has weathered enough to have real character, and leather honors that: it acknowledges that you have been through something together and it has held. The best leather gifts are the ones that develop a patina, the ones that improve with age."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized A5 Leather Bound Journal",
+            price: "$25.00",
+            reason: "A genuine leather journal personalized with her name or initials, with enough pages to carry her through a year of whatever she wants to fill it with. Leather journals develop a patina over time and take on the character of the person using them, which is the whole point of the material at year three. Write the first page before you give it: date it, say what you are proud of about the year, say what you are looking forward to. The journal will outlast the occasion, and so will what you wrote.",
+            url: "https://www.amazon.com/gp/aw/d/B0D24LDKX5?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=9bb5365bc186c87178f9f4cb90c081d0&hsa_cr_id=0&qid=1775774613&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=U65Id&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=ARRXF53ST4Y3K1VD65FY&pd_rd_wg=PmraY&pd_rd_r=e76aa7ec-d9a3-4a30-aaa7-c102a867b334&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=18a7ed644d91e499ebbebfc7bbb1d9f2&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71GlpMEAomL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "4th Anniversary: Fruit and Flowers",
+        body: "The fourth anniversary material is fruit and flowers, which represents growth and the natural progression of a living thing. A four-year relationship is no longer fragile, no longer brand new, but it is still actively growing. The traditional symbolism here is about abundance and bloom: the relationship has put down roots and is now producing something. Flowers that last longer than a week honor that better than cut stems that wilt by the weekend."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Pressed Flower Art Kit",
+            price: "$31.99",
+            reason: "A complete flower pressing and framing kit that turns garden flowers, a bouquet, or blooms from a meaningful occasion into preserved wall art. This honors the fourth anniversary material in two directions at once: flowers as the symbolic material, and the act of preservation as a statement about the relationship. Pair it with a bouquet and suggest pressing the flowers together. The resulting art will be on the wall long after most gifts are forgotten.",
+            url: "https://www.amazon.com/Aboofx-Pressing-Detailed-instruction-Preservation/dp/B0C7T7JWWM?crid=2HCE070Q0HIFC&dib=eyJ2IjoiMSJ9.XB-VrJgulguvzs3nesGKKRWz6j4S_kMlajLr13WaxMbYofz9UU-z3NQM2Z5d85yycWyPB4zfYvgCqnl9q5IG2wPzVCd6uFH65vvq6gHmqgfT7WtSnmFJF4pKq0WrH_82c7OTnl8Y_V17RCdVwYUdxTN-7IHzwzQLKA2VCr6j0h43RvMlGGl95_HtLy5pQTJWc77tEHNETnwHuCjLz1RYq-7p66baBgPI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Pressed%2Bflower%2Bart%2Bkit&qid=1774735650&sprefix=pressed%2Bflower%2Bart%2Bkit%2Caps%2C414&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ef0f8037debeb680b7fcc9d4c32713c5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/91K6A7TnAuL._AC_SX679_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "5th Anniversary: Wood",
+        body: "Wood is the first truly solid material in the traditional list, and that is deliberate. Five years is a milestone that most relationships do not reach: it requires sustained commitment, real compatibility, and the willingness to grow together rather than apart. Wood honors that solidity. It is also a material that resonates: sturdy, warm, natural, shaped by time. The best fifth anniversary wood gifts are the ones that will still be in the home in ten years and will look better for the wear."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Vintage Wooden Bluetooth Record Player",
+            price: "$35.99",
+            reason: "A compact suitcase-style record player in a warm wood finish with built-in speakers, a three-speed turntable, and Bluetooth streaming. Wood as the fifth anniversary material is honored literally here: the cabinet is real wood veneer, and the warmth of the aesthetic matches the material's symbolism exactly. For a fifth anniversary it also has the right weight: substantial enough to feel like an occasion gift, personal enough to feel chosen rather than generic.",
+            url: "https://www.amazon.com/dp/B0FR9RCX4B?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71Ty6t746RL._AC_UY218_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "12th Anniversary: Silk and Linen",
+        body: "Silk and linen at year twelve acknowledge a relationship that has found its rhythm. Silk is luxurious but also surprisingly durable: it is the material of something that has earned its refinement. A twelve-year relationship is past the stage of proving itself and into the stage of genuinely enjoying each other, and silk honors that. The traditional gift is often something worn or used against the skin, which is intimate in exactly the right way for a long-term relationship."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Nodpod Silk Sleep Mask",
+            price: "$68.00",
+            reason: "A weighted silk sleep mask with bead-filled interior that applies gentle pressure across the eyes and forehead while blocking light completely. Silk against the skin, used every single night, as intimate and practical as a twelve-year anniversary gift should be. The Nodpod specifically earns its place because it is not a generic sleep mask: the weighted design is genuinely different from anything she has tried, and the quality of the silk is immediately apparent. This is the kind of gift that changes a nightly ritual she already has.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "15th Anniversary: Crystal",
+        body: "Crystal at fifteen years represents clarity: a relationship that has been through enough to see each other clearly, without illusion, and has chosen to stay. Crystal is also celebratory in a way the earlier materials are not: it catches light, it is used for toasting, it marks occasions. A fifteen-year anniversary is a proper milestone, and crystal honors it with the right amount of ceremony."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Crystal Wine Decanter Set",
+            price: "$49.99",
+            reason: "A hand-blown crystal wine decanter with matching glasses in a gift box: the gift that literally embodies the material and the occasion it represents. Opening a good bottle of wine together on a fifteen-year anniversary, poured through a crystal decanter into crystal glasses, is one of those evenings that feels exactly as significant as it is. The set format means it arrives ready for that occasion, not as something she needs to assemble or supplement.",
+            url: "https://www.amazon.com/dp/B0FNYCM8BJ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/715MpWGzR0L._AC_UL320_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The material is the starting point, not the rule",
+        body: "The traditional list exists as a framework, not a constraint. If you are at year five and she does not care about record players, find something else made from wood that fits who she is. The tradition works best when it guides the thinking rather than replacing it: use the material as a lens for choosing something that feels both symbolic and personal. The combination of those two things is what makes an anniversary gift memorable rather than just correct."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

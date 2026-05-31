@@ -4722,6 +4722,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     { type: "cta" }
   ]
 },
+// ============================================================================
+  // GIFTS — HARD TO SHOP FOR / IMPOSSIBLE TO SHOP FOR
+  // ============================================================================
+  {
+    slug: "gift-ideas-girlfriend-impossible-to-shop-for",
+    title: "Gift Ideas for a Girlfriend Who Is Impossible to Shop For",
+    excerpt: "She says she doesn't need anything. She's not wrong. Here are seven gifts that work anyway.",
+    occasion: "birthday",
+    interests: ["wellness", "home_decor", "music", "coffee", "travel"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-romantic-without-being-over-the-top",
+      "birthday-gifts-hard-to-shop-for",
+      "mistakes-men-make-buying-birthday-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why impossible-to-shop-for is actually a useful description",
+        body: "When someone says she is impossible to shop for, what they usually mean is one of three things: she already has most things she wants, she has very specific taste and tends to buy things herself before anyone else gets a chance, or she genuinely does not prioritise acquiring objects and no amount of stuff is going to feel meaningful to her. All three of these have a solution, but it is not the same solution. The gifts below are chosen specifically for people who fall into one of these categories: things she almost certainly does not have, things that require almost no taste knowledge to get right, and things that are more about experience than ownership."
+      },
+      {
+        type: "text",
+        heading: "The rule for this kind of gift",
+        body: "Avoid anything she could easily buy for herself and has not, which usually means it is either not quite a priority or just off her radar. The sweet spot is a gift that falls into neither of her usual purchasing patterns: not something she has been meaning to get, not something she would consider essential, but something that makes her genuinely glad someone else thought of it. The seven picks below all fit that brief."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "QANYI Coffee Cup Night Light",
+            price: "$18.99",
+            reason: "An LED night light shaped and lit to look like a glowing coffee cup, warm enough to use as a bedside light and small enough to sit on any surface. It is the kind of object that is completely unnecessary and completely charming, which is exactly what you want from a gift for someone who already has everything she needs. Nobody buys themselves a coffee cup night light. Everybody who receives one is quietly delighted by it.",
+            url: "https://www.amazon.com/dp/B0G5N1SYSD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51CIOMiOueL._AC_UL320_.jpg"
+          },
+          {
+            name: "Airkeep Reed Diffuser Set",
+            price: "$19.99",
+            reason: "A reed diffuser set with multiple scent options that fills a room gradually over several weeks rather than burning for an hour and going out. For someone who has strong opinions about candles and already has the ones she wants, a diffuser is a different format that does not compete with her existing collection. It is also one of those home objects that she would evaluate for months before committing to, which makes it the perfect category for a gift: someone else does the choosing, she gets the result.",
+            url: "https://www.amazon.com/dp/B0DG8G3569?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/819Id3o252L._AC_UL320_.jpg"
+          },
+          {
+            name: "Electric Wine Opener Set",
+            price: "$28.46",
+            reason: "A rechargeable electric wine opener with a foil cutter and vacuum wine stopper, presented as a set. This is the gift that solves a problem so small she has never thought to solve it herself: opening a bottle of wine is fine, it just takes a moment and she already owns a corkscrew somewhere. An electric opener is genuinely better in a way that is immediately obvious the first time she uses it, and the set format makes it feel complete rather than like a single novelty item.",
+            url: "https://www.amazon.com/dp/B0DBVZMHL7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81JwHGKsLvL._AC_UL320_.jpg"
+          },
+          {
+            name: "MUSICOZY Sleep Mask with Bluetooth Headphones",
+            price: "$39.98",
+            reason: "A soft sleep mask with built-in ultra-thin Bluetooth speakers that let her fall asleep to music, podcasts, or white noise without earbuds falling out or keeping someone else awake. Nobody thinks to buy this for themselves because the concept sounds strange until you try it. For anyone who has a winding-down routine, trouble falling asleep, or a partner who goes to bed at different times, this closes a gap she did not know was closeable. It is also the definition of a gift that improves something she already does every single night.",
+            url: "https://www.amazon.com/dp/B0FFG8THCY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81IuDARhnpL._AC_UY218_.jpg"
+          },
+          {
+            name: "Oversized Sherpa Lined Wearable Blanket",
+            price: "$49.00",
+            reason: "A full-length wearable blanket with a sherpa lining, sleeves, and a hood that is noticeably warmer than a throw and more functional than a robe. The impossible-to-shop-for person is almost certainly not going to buy herself an oversized wearable blanket, which makes it a perfect gift: it is cozy and completely unexpected, requires no knowledge of her taste beyond knowing she feels cold sometimes, and gets used every single winter evening for years. One of the few genuinely universal gifts in the database.",
+            url: "https://www.amazon.com/dp/B07DKSY26D?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71sz7vQVtAL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Apple AirPods 4",
+            price: "$99.00",
+            reason: "The AirPods 4 are Apple's latest standard AirPods with improved audio, adaptive noise cancellation, and better fit than previous generations. For a hard-to-shop-for person who uses an iPhone and does not already have wireless earbuds she loves, this is one of the safest and most genuinely appreciated gifts in existence. The brand recognition does the work: she will know immediately what she is holding and immediately know it is a good gift. If she already has AirPods, check the generation before buying.",
+            url: "https://www.amazon.com/dp/B0DGHMNQ5Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61iBtxCUabL._AC_UY218_.jpg"
+          },
+          {
+            name: "15.6 Inch Touchscreen Wall Calendar",
+            price: "$169.00",
+            reason: "A large touchscreen digital wall calendar that syncs with Google Calendar, Apple Calendar, and other platforms, displaying her schedule, reminders, and custom backgrounds on a frame that hangs like artwork. This is the kind of product that sits in the category of things she has probably seen, thought that is genuinely cool, and immediately moved on from because buying a digital wall calendar for herself feels like a hard thing to justify. It is the perfect splurge gift for someone impossible to shop for: unexpected, immediately useful, and something she will look at every single day.",
+            url: "https://www.amazon.com/gp/aw/d/B0FLXL6JTN?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=5739190983e6d7fbea78b99c6e969795&hsa_cr_id=0&qid=1777862481&sr=1-1-f02f01d6-adaf-4bef-9a7c-29308eff9043&pd_rd_w=axoyh&content-id=amzn1.sym.d3360101-5266-4e0e-8e4a-de7eb0be6ed9%3Aamzn1.sym.d3360101-5266-4e0e-8e4a-de7eb0be6ed9&pf_rd_p=d3360101-5266-4e0e-8e4a-de7eb0be6ed9&pf_rd_r=MCTA3AASG58SRNJ4HPVM&pd_rd_wg=NxEM0&pd_rd_r=99c8ef3c-899c-43f5-aaea-ea57f42739a7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=eb94df6d42f24a0e685573e5f4325434&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71qQM9a3ucL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "When none of these feel right",
+        body: "If she genuinely has everything and nothing here seems to fit, give her an experience rather than an object: a reservation at a restaurant she has mentioned, a class in something she has been curious about, a plan for a day that is entirely about what she enjoys. For someone who does not prioritise things, time and attention land better than almost any product."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

@@ -5111,7 +5111,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     title: "Anniversary Gifts by Year: What the Traditional Materials Actually Mean",
     excerpt: "There is a reason each anniversary year has its own material. Here is what they mean and what to give.",
     occasion: "anniversary",
-    interests: ["home_decor", "wellness", "wine", "music", "reading"],
+    interests: ["home_decor", "wellness", "wine", "music", "photography", "reading"],
     readTime: "6 min read",
     publishedAt: "2026-05-24",
     relatedArticles: [
@@ -5124,18 +5124,12 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "Where the tradition comes from",
-        body: "The practice of assigning a material to each anniversary year dates back to medieval Europe, when husbands would give their wives symbolic gifts to mark significant milestones. The materials were chosen deliberately: they represent the nature of a relationship at that stage. Early years get fragile or flexible materials because a new relationship is still being shaped. Later years get harder, more durable materials because the relationship has proven itself. The tradition was formalized in the nineteenth century and widely popularized in the twentieth, with the modern list tweaked over time to reflect changing tastes. Most people have heard of the big ones: paper, silver, gold. Fewer know what year gets wood, or why silk comes at year twelve."
+        body: "The practice of assigning a material to each anniversary year dates back to medieval Europe and was formalized in the nineteenth century. The materials were chosen deliberately: early years get fragile or flexible materials because a new relationship is still being shaped, later years get harder and more durable ones because the relationship has proven itself. Most people know the big milestones. Fewer know what year gets wood, or why silk comes at twelve."
       },
-      {
-        type: "text",
-        heading: "Why it still matters as a gift framework",
-        body: "You do not have to follow the traditional material exactly, but it gives you something useful: a starting point that is specifically calibrated to where you are in the relationship. A first anniversary paper gift says something different from a fifth anniversary wood gift, and the material itself carries meaning you do not have to explain in a card. The picks below cover seven years, each with one gift that honors the traditional material in a way that actually makes sense as a present in this decade."
-      },
-
       {
         type: "text",
         heading: "1st Anniversary: Paper",
-        body: "Paper represents the beginning. A blank page. A relationship that is still being written. The fragility of paper is the point: a first anniversary is meaningful precisely because relationships in their first year are still finding their shape, and paper honors that. In practice, the best first anniversary paper gifts are the ones that document something specific about the year you just had together: a date, a place, a song."
+        body: "Paper represents a blank page — a relationship still being written. The fragility is the point. The best first anniversary paper gifts document something specific about the year you just had together."
       },
       {
         type: "picks",
@@ -5146,6 +5140,13 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             reason: "A printed star map of the night sky over a specific location on a specific date: the night you met, your first date, or any moment from the first year that belongs only to the two of you. It is paper in the most literal sense and in the most meaningful one. The thought required to generate it, choosing the right date and place, is the gift as much as the print itself.",
             url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized Acrylic Music Plaque",
+            price: "$8.00",
+            reason: "A custom plaque printed with the album art and scan code of a specific song, playable instantly by holding a phone up to it. Paper-thin acrylic, but the value is entirely in the song you choose: the one from your first night together, the one that became yours without either of you deciding. At eight dollars it cannot be mistaken for a compensatory gesture. It is just the right song, printed and framed, which at one year says exactly enough.",
+            url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
       },
@@ -5153,7 +5154,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "2nd Anniversary: Cotton",
-        body: "Cotton represents comfort and adaptability. A relationship at two years has moved past the careful, performative early stage and into something more settled: you know each other's habits, you are comfortable with silence, you have shared a bed. Cotton honors that domestic intimacy directly. The best second anniversary cotton gifts are the ones that improve the comfort of your shared daily life."
+        body: "Cotton represents comfort and adaptability. Two years means you know each other's habits, you are comfortable with silence, you have shared a bed. The best second anniversary cotton gifts improve the comfort of your shared daily life."
       },
       {
         type: "picks",
@@ -5161,7 +5162,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
           {
             name: "Wearable Sherpa Blanket Hoodie with Pockets",
             price: "$25.00",
-            reason: "A full-length wearable sherpa blanket with sleeves, a hood, and deep pockets: the ultimate comfort object for anyone who is always cold, always on the couch, or always reaching for a throw. It is cotton and fleece in the most literal anniversary sense, and it is the kind of gift that gets used every single evening for years. At a second anniversary it also says: I know exactly how you spend your evenings at home, and I want that to feel better.",
+            reason: "A full-length wearable sherpa blanket with sleeves, a hood, and deep pockets: the ultimate comfort object for anyone who is always cold or always reaching for a throw. It is cotton and fleece in the most literal anniversary sense, and it is the kind of gift that gets used every single evening for years. At a second anniversary it also says: I know exactly how you spend your evenings at home, and I want that to feel better.",
             url: "https://www.amazon.com/dp/B099YQ9P67?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/71+qC0HVtwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
@@ -5171,7 +5172,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "3rd Anniversary: Leather",
-        body: "Leather represents durability and depth. Unlike paper, it does not tear. Unlike cotton, it stiffens and softens over time into something shaped specifically by the person using it. A three-year relationship has weathered enough to have real character, and leather honors that: it acknowledges that you have been through something together and it has held. The best leather gifts are the ones that develop a patina, the ones that improve with age."
+        body: "Leather represents durability. Unlike paper it does not tear. Unlike cotton it stiffens and softens over time into something shaped specifically by the person using it. A three-year relationship has real character, and the best leather gifts are the ones that develop a patina, that improve with age."
       },
       {
         type: "picks",
@@ -5182,6 +5183,20 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             reason: "A genuine leather journal personalized with her name or initials, with enough pages to carry her through a year of whatever she wants to fill it with. Leather journals develop a patina over time and take on the character of the person using them, which is the whole point of the material at year three. Write the first page before you give it: date it, say what you are proud of about the year, say what you are looking forward to. The journal will outlast the occasion, and so will what you wrote.",
             url: "https://www.amazon.com/gp/aw/d/B0D24LDKX5?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=9bb5365bc186c87178f9f4cb90c081d0&hsa_cr_id=0&qid=1775774613&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=U65Id&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=ARRXF53ST4Y3K1VD65FY&pd_rd_wg=PmraY&pd_rd_r=e76aa7ec-d9a3-4a30-aaa7-c102a867b334&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=18a7ed644d91e499ebbebfc7bbb1d9f2&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/71GlpMEAomL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Coiro Leather Camera Wrist Strap",
+            price: "$26.99",
+            reason: "A full-grain leather wrist strap for any mirrorless or compact camera, made in a weight that makes carrying a camera feel intentional rather than utilitarian. Leather improves with use, and a wrist strap is one of the most-handled parts of the whole kit: every time she picks up her camera it is in her hand. For a girlfriend who shoots regularly and has been on the stock strap since day one, this is a third anniversary leather gift that is also just the right practical upgrade.",
+            url: "https://www.amazon.com/dp/B09V1QDK1M?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51vySdzozrL._AC_UY218_.jpg"
+          },
+          {
+            name: "Beechmore Books A4 Sketchbook",
+            price: "$27.95",
+            reason: "A premium vegan leather-bound sketchbook with 100 sheets of thick acid-free cartridge paper, a ribbon bookmark, and a magnetic closure. The cover is the leather; the gift is the invitation to fill it. For a girlfriend who draws, sketches, journals, or keeps any kind of visual record, this is the upgrade from the spiral-bound notebooks she has been tolerating. Beautiful objects make the practice feel more worth doing.",
+            url: "https://www.amazon.com/dp/B0BX8XMMC4?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81jQBuZw6bL._AC_UL320_.jpg"
           }
         ]
       },
@@ -5189,15 +5204,22 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "4th Anniversary: Fruit and Flowers",
-        body: "The fourth anniversary material is fruit and flowers, which represents growth and the natural progression of a living thing. A four-year relationship is no longer fragile, no longer brand new, but it is still actively growing. The traditional symbolism here is about abundance and bloom: the relationship has put down roots and is now producing something. Flowers that last longer than a week honor that better than cut stems that wilt by the weekend."
+        body: "Fruit and flowers represent growth and abundance. A four-year relationship has put down roots and is producing something. Flowers that last longer than a week honor that better than anything that wilts by Wednesday."
       },
       {
         type: "picks",
         gifts: [
           {
+            name: "Heart-Shaped Box of Preserved Roses",
+            price: "$39.00",
+            reason: "Real preserved roses that hold their shape and color for months without water, arranged in a heart-shaped box. This honors the fourth anniversary material directly while sitting in a completely different register from a grocery store bouquet. The flowers last; the gesture stays visible. For an occasion that is about growth and staying power, preserved flowers say both things at once.",
+            url: "https://www.amazon.com/dp/B0BBBG4QMF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81bHitaEdvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
             name: "Pressed Flower Art Kit",
             price: "$31.99",
-            reason: "A complete flower pressing and framing kit that turns garden flowers, a bouquet, or blooms from a meaningful occasion into preserved wall art. This honors the fourth anniversary material in two directions at once: flowers as the symbolic material, and the act of preservation as a statement about the relationship. Pair it with a bouquet and suggest pressing the flowers together. The resulting art will be on the wall long after most gifts are forgotten.",
+            reason: "A complete flower pressing and framing kit that turns garden flowers, a bouquet, or blooms from a meaningful occasion into preserved wall art. This honors the fourth anniversary material in two directions at once: flowers as the symbolic gift, and the act of preservation as a statement about the relationship itself. Pair it with a bouquet of her favorite flowers and suggest pressing them together. The resulting art will be on the wall long after most gifts are forgotten.",
             url: "https://www.amazon.com/Aboofx-Pressing-Detailed-instruction-Preservation/dp/B0C7T7JWWM?crid=2HCE070Q0HIFC&dib=eyJ2IjoiMSJ9.XB-VrJgulguvzs3nesGKKRWz6j4S_kMlajLr13WaxMbYofz9UU-z3NQM2Z5d85yycWyPB4zfYvgCqnl9q5IG2wPzVCd6uFH65vvq6gHmqgfT7WtSnmFJF4pKq0WrH_82c7OTnl8Y_V17RCdVwYUdxTN-7IHzwzQLKA2VCr6j0h43RvMlGGl95_HtLy5pQTJWc77tEHNETnwHuCjLz1RYq-7p66baBgPI08rswKRSWM4qiig2wCTQnZsABXC9vpEMrClyW_nGLv2qUhEenvyxDwrjBQ6J8aMDov4NcYiA2FObMJI6VYI1H-3t6X4.fKUDVYJbJUMcnqI9T8_0c5YW8eHyCKIWAD-7p66hQHY&dib_tag=se&keywords=Pressed%2Bflower%2Bart%2Bkit&qid=1774735650&sprefix=pressed%2Bflower%2Bart%2Bkit%2Caps%2C414&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ef0f8037debeb680b7fcc9d4c32713c5&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/91K6A7TnAuL._AC_SX679_.jpg"
           }
@@ -5207,7 +5229,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "5th Anniversary: Wood",
-        body: "Wood is the first truly solid material in the traditional list, and that is deliberate. Five years is a milestone that most relationships do not reach: it requires sustained commitment, real compatibility, and the willingness to grow together rather than apart. Wood honors that solidity. It is also a material that resonates: sturdy, warm, natural, shaped by time. The best fifth anniversary wood gifts are the ones that will still be in the home in ten years and will look better for the wear."
+        body: "Wood is the first truly solid material in the traditional list, and that is deliberate. Five years is a milestone: sturdy, warm, shaped by time. The best fifth anniversary wood gifts are the ones that will still be in the home in ten years and look better for the wear."
       },
       {
         type: "picks",
@@ -5215,7 +5237,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
           {
             name: "Vintage Wooden Bluetooth Record Player",
             price: "$35.99",
-            reason: "A compact suitcase-style record player in a warm wood finish with built-in speakers, a three-speed turntable, and Bluetooth streaming. Wood as the fifth anniversary material is honored literally here: the cabinet is real wood veneer, and the warmth of the aesthetic matches the material's symbolism exactly. For a fifth anniversary it also has the right weight: substantial enough to feel like an occasion gift, personal enough to feel chosen rather than generic.",
+            reason: "A compact suitcase-style record player in a warm wood finish with built-in speakers, a three-speed turntable, and Bluetooth streaming. The cabinet is real wood veneer and the warmth of the aesthetic matches the material's symbolism exactly. For a fifth anniversary it also has the right weight: substantial enough to feel like an occasion gift, personal enough to feel chosen rather than generic. A record player is one of those objects that makes a room feel more intentional the moment it is in it.",
             url: "https://www.amazon.com/dp/B0FR9RCX4B?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/71Ty6t746RL._AC_UY218_.jpg"
           }
@@ -5225,7 +5247,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "12th Anniversary: Silk and Linen",
-        body: "Silk and linen at year twelve acknowledge a relationship that has found its rhythm. Silk is luxurious but also surprisingly durable: it is the material of something that has earned its refinement. A twelve-year relationship is past the stage of proving itself and into the stage of genuinely enjoying each other, and silk honors that. The traditional gift is often something worn or used against the skin, which is intimate in exactly the right way for a long-term relationship."
+        body: "Silk at year twelve acknowledges a relationship that has found its rhythm. Luxurious but durable, the material of something that has earned its refinement. Traditional silk gifts are usually something worn or used against the skin, which is intimate in exactly the right way for a long-term relationship."
       },
       {
         type: "picks",
@@ -5233,9 +5255,16 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
           {
             name: "Nodpod Silk Sleep Mask",
             price: "$68.00",
-            reason: "A weighted silk sleep mask with bead-filled interior that applies gentle pressure across the eyes and forehead while blocking light completely. Silk against the skin, used every single night, as intimate and practical as a twelve-year anniversary gift should be. The Nodpod specifically earns its place because it is not a generic sleep mask: the weighted design is genuinely different from anything she has tried, and the quality of the silk is immediately apparent. This is the kind of gift that changes a nightly ritual she already has.",
-            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
+            reason: "A weighted silk sleep mask with bead-filled interior that applies gentle pressure across the eyes and forehead while blocking light completely. Silk against the skin, used every single night. The Nodpod specifically earns its place because it is not a generic sleep mask: the weighted design is genuinely different from anything she has tried, and the quality of the silk is immediately apparent. This is the kind of gift that changes a nightly ritual she already has, and will continue to change it every night for years.",
+            url: "https://www.amazon.com/Pressure-Patented-Blocking-Sleeping-Relaxation/dp/B0BY39RY2R?content-id=amzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89%3Aamzn1.sym.cdeaf89b-0b83-4151-b82a-07a08dc40e89&crid=3OW9TGX86OLCU&cv_ct_cx=Weighted%2BSilk%2BEye%2BMask&keywords=Weighted%2BSilk%2BEye%2BMask&pd_rd_i=B0BY39RY2R&pd_rd_r=d32f83d8-e894-4f07-8413-604273fb7d9f&pd_rd_w=Etp1U&pd_rd_wg=xRXgh&pf_rd_p=cdeaf89b-0b83-4151-b82a-07a08dc40e89&pf_rd_r=H3A4P3HD6Y8WQPCB41V9&qid=1775775914&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=weighted%2Bsilk%2Beye%2Bmask%2Cspecialty-aps%2C197&sr=1-1-6e60e730-e094-43e9-99e8-1a4854cd27ff-spons&srs=120955898011&aref=QL21lyULDZ&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f668e1134192f9eeb3be7f7013abbcd0&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61IaMVtP-sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Silk Pillowcase Set",
+            price: "$82.46",
+            reason: "Mulberry silk pillowcases that are genuinely better for her skin and hair than cotton: cooler, smoother, and noticeably different the first night she uses them. Blissy is the brand that dermatologists and beauty editors consistently recommend because the quality of the silk is not cosmetic. At a twelfth anniversary this gift says something specific: I want the hours you spend resting to feel as good as the hours we spend together. She will think of that every night she reaches for the pillow.",
+            url: "https://www.amazon.com/Blissy-Silk-Pillowcase-Mulberry-High-Grade/dp/B0CB5H5FK9?crid=WUSNEVTEAOC3&dib=eyJ2IjoiMSJ9._9legs_JeYX_B3g98oMutpxB8_SHrP3m5UY3dFBrvjbLIqKQFdvDjFfCHYV8t3c1Vi7yjSl6D8o_1QtxBmLLYEy4Aw1tDwXpmS4ksOVFzydSxp6L89GCl9pJiO0iLkeIturEydj92ihqJg3G9zAuZhk3fm7TucYjqNc9FzUQdhW3hhX3RN44aRVvL_Tqn7f_kk9Wd3dG8Js7tqIlAlo6_JQhq99jPMtugR7C_bPs8UdRoQSIvignP7fsXsaNvkx_OFI8DFnSMVOEdbpfOWVFmwcYpBj0y7ogSXzPGZHs1zI.drhWHXgpa0JdZh5Xa9LdEqJaMu9RyOm2_2y9M1Upidw&dib_tag=se&keywords=Silk%2Bpillowcase%2Bset&qid=1774736111&sprefix=silk%2Bpillowcase%2Bset%2Caps%2C248&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c8b5f67abacfb99ec7307f43873b3aca&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71OLg-ScWGL._AC_SL1500_.jpg"
           }
         ]
       },
@@ -5243,7 +5272,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "15th Anniversary: Crystal",
-        body: "Crystal at fifteen years represents clarity: a relationship that has been through enough to see each other clearly, without illusion, and has chosen to stay. Crystal is also celebratory in a way the earlier materials are not: it catches light, it is used for toasting, it marks occasions. A fifteen-year anniversary is a proper milestone, and crystal honors it with the right amount of ceremony."
+        body: "Crystal at fifteen years represents clarity: a relationship that has been through enough to see each other clearly, without illusion, and has chosen to stay. Crystal is also celebratory: it catches light, it is used for toasting. A fifteen-year anniversary deserves that ceremony."
       },
       {
         type: "picks",
@@ -5251,9 +5280,16 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
           {
             name: "Crystal Wine Decanter Set",
             price: "$49.99",
-            reason: "A hand-blown crystal wine decanter with matching glasses in a gift box: the gift that literally embodies the material and the occasion it represents. Opening a good bottle of wine together on a fifteen-year anniversary, poured through a crystal decanter into crystal glasses, is one of those evenings that feels exactly as significant as it is. The set format means it arrives ready for that occasion, not as something she needs to assemble or supplement.",
+            reason: "A hand-blown crystal wine decanter with matching glasses in a gift box: the gift that literally embodies the material and the occasion it represents. Opening a good bottle of wine together on a fifteen-year anniversary, poured through a crystal decanter into crystal glasses, is one of those evenings that feels exactly as significant as it is. The set arrives ready for that occasion without anything extra needed.",
             url: "https://www.amazon.com/dp/B0FNYCM8BJ?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/715MpWGzR0L._AC_UL320_.jpg"
+          },
+          {
+            name: "Monogrammed Wine Glass Gift Set",
+            price: "$20.99",
+            reason: "A set of two crystal wine glasses engraved with her monogram, or your initials together, presented in a gift box. At a lower price point this delivers the crystal material and the ceremony of the occasion without requiring a full decanter setup. For someone who entertains regularly or has strong opinions about her glassware, a personalized set she can reach for every time she opens a bottle is the quiet daily presence that makes an anniversary gift memorable beyond the day itself.",
+            url: "https://www.amazon.com/dp/B0FSD8W14D?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71-nuR1614L._AC_UL320_.jpg"
           }
         ]
       },
@@ -5261,7 +5297,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       {
         type: "text",
         heading: "The material is the starting point, not the rule",
-        body: "The traditional list exists as a framework, not a constraint. If you are at year five and she does not care about record players, find something else made from wood that fits who she is. The tradition works best when it guides the thinking rather than replacing it: use the material as a lens for choosing something that feels both symbolic and personal. The combination of those two things is what makes an anniversary gift memorable rather than just correct."
+        body: "Use the traditional material as a lens for choosing something that feels both symbolic and personal. If you are at year five and she does not care about record players, find something else made of wood that fits who she is. The combination of those two things, symbolic and personal, is what makes an anniversary gift memorable rather than just correct."
       },
       { type: "cta" }
     ]

@@ -5504,6 +5504,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // BIRTHDAY GIFTS — HIKING
+  // ============================================================================
+  {
+    slug: "birthday-gifts-girlfriend-loves-hiking",
+    title: "Birthday Gifts for a Girlfriend Who Loves to Hike",
+    excerpt: "For the woman who plans weekends around trails. Seven picks from a $15 trail cup to a $299 camp stove that charges her phone from a fire.",
+    occasion: "birthday",
+    interests: ["hiking", "camping", "fitness", "travel"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-03",
+    relatedArticles: [
+      "birthday-gifts-camping",
+      "birthday-gifts-cycling",
+      "gifts-for-wife-who-loves-outdoors-gardening",
+      "birthday-gifts-running"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Hiking gear is personal but not complicated to shop for",
+        body: "Hikers tend to have strong opinions about their kit, but those opinions are usually about the specifics: the brand of boot, the exact weight of a pack, whether she prefers poles. At the level of accessories and upgrades, there is a lot of useful territory that does not require knowing her technical preferences. The best hiking gifts are the ones that improve a specific part of the experience she already has, whether that is carrying water more easily, listening to music safely on a long trail, or making the camp at the end feel more worth the drive."
+      },
+      {
+        type: "text",
+        heading: "What works at every budget",
+        body: "The seven picks below run from a $15 Stanley cup to a $299 wood-burning camp stove with a built-in USB generator. Each one serves a different part of the hiking experience: hydration, trail audio, recovery, the camp setup. None of them require knowing her exact pack or boot preference, and all of them are the kind of thing she would use on the next trip regardless of where it goes."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Stanley Stay-Hot Camp Cup 10 oz",
+            price: "$15.00",
+            reason: "The Stanley camp cup is the compact, stackable version of the brand's classic insulated line: a 10oz double-wall stainless mug that keeps coffee hot on an early morning trailhead and fits inside a pack without taking up real estate. For a hiker who starts every trail at 6am with something hot, this is the gear-appropriate version of a coffee gift that actually belongs in her kit. Stanley is the brand hikers and campers already trust, and the camp cup is the piece most people do not already own.",
+            url: "https://www.amazon.com/Stay-Hot-Stacking-Insulated-Stainless-BPA-Free/dp/B0CZC6M49S?crid=G5U07Z31E55G&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.mLi5DZDfVGWI61PNdpXpNfFPrwzAdwdz0KvFqg53otfCSI3ehyYltHhteJYGvUB7k6XotWlc8ttVeqHXl-TQa_9pjnhIFaHqlHuVk-IDv05pXR4g9kbpWHv2IbJwZaIcdNOGpgqp7lrUAlyBv0eK-4jnnHSCUZbfW_V3hYU6-5PB3XorifuQzR3yY11my0EQGCszvkYDsoDMpCYeJAijo5HaCU7zEXH2HHWOiUPC2TQ.XOEx3qzlcvLMvviTqBYMcuXwLe2s0lZw0-1nKxyQpqo&dib_tag=se&keywords=camping%2Bmug%2Bset&qid=1775434019&s=samedaystore&sprefix=camping%2Bmug%2Bset%2Csamedaystore%2C535&sr=1-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=242a560cad4878ce43b90cec41955c21&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61mMo6A-d0L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BECOJADDE Running Vest",
+            price: "$20.24",
+            reason: "A lightweight hydration vest with a 1.5L water bladder, multiple front pockets, and a breathable mesh back panel designed for running, hiking, and trail use. For a hiker who does longer distances or wants to carry water hands-free without a full pack, a running vest is the upgrade that changes the experience on any trail over two hours. This one sits at a price point that makes it an easy addition to a gift rather than an investment decision, and the lightweight construction means she will not leave it at home.",
+            url: "https://www.amazon.com/dp/B0F9JCDLM7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81g48FHsgJL._AC_UL320_.jpg"
+          },
+          {
+            name: "Hydration Pack Running Vest",
+            price: "$23.89",
+            reason: "A 5L hydration pack vest with a 1.5L water reservoir, chest straps, and storage pockets sized for a phone, gels, keys, and a light layer. Where the BECOJADDE vest is built for speed and minimalism, this one prioritises capacity and stability on longer, more rugged terrain. For a hiker who goes multi-hour rather than multi-mile, the extra storage and the more structured fit makes a real difference. Two different vests at similar prices because the right one depends entirely on how she hikes.",
+            url: "https://www.amazon.com/dp/B0DPGBWX6T?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61nv-VdW0JL._AC_UL320_.jpg"
+          },
+          {
+            name: "Portable Waterproof Bluetooth Speaker",
+            price: "$119.00",
+            reason: "The Bose SoundLink Flex is the portable speaker that holds up in the conditions that destroy cheaper options: it floats, it is IP67 waterproof, and it produces genuine room-filling sound outdoors where most compact speakers fall flat against ambient noise. For a hiker who listens to podcasts, playlists, or audiobooks on trail, this is the gift that makes that habit sound the way it should rather than like audio coming out of a pocket. The Bose name carries real recognition: she will know immediately that this is not a generic Bluetooth speaker.",
+            url: "https://www.amazon.com/dp/B0DPN69X2V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61a47LVNd4L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "2-Person Outdoor Hammock with Stand",
+            price: "$199.00",
+            reason: "A quilted two-person hammock with a freestanding steel stand, no trees required, and a carrying bag for transport. After a long trail, this is what the drive home is already thinking about: somewhere to lie down outside and not move for a while. The two-person size is the detail that matters for a gift: it is an invitation rather than a solo retreat, and the quilted pad is comfortable enough to stay in for an actual afternoon. For a hiker who earns her rest, this is where the rest happens.",
+            url: "https://www.amazon.com/Everyfun-Polyester-Adjustable-Portable-Carrying/dp/B0FMDYQFWZ?crid=36HYK0SHGY7X7&dib=eyJ2IjoiMSJ9.0gor6a9VZm3ZgdAABiXZ7ODlqrNSgiSM08dymlFeYNIsB4VUP5BKISSLrZhitGzQMKM-ecrVcJUB9deKw_C0qcVPMJWnuHI6ftK_N1IxvLApXgjjPw1LYmYtcd_LUy-Xa7Y33lcQmKYBBM992z-NotNhEqjxwCOKQtWSJJ2BZ6tyyw8KeyLznQOfNvBQ14XOsAAsg_w6BTm-g6uF2JzKOfJZ7wAUcfhKhQVcT74WnEzTNHaLNv2jXEZvKxQ27Ij2WmKvjKhsSQ0rK68Tkh7r4Ob3jW6ynxolioULRBGsHxk.2zSnS8VhzZTfAjG9pVYRFUMmEnYiX9gv1gCy7sZQ8YpY&dib_tag=se&keywords=Premium%2BCamping%2BHammock&qid=1772582431&sprefix=premium%2Bcamping%2Bhammock%2Caps%2C352&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=54cebdefa34f457130d7e23b9edd316a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71ZI9Z7oIHL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "YETI Hopper Portable Soft Cooler",
+            price: "$199.00",
+            reason: "The YETI Hopper soft cooler with MagShield magnetic closure keeps ice for days, is puncture-resistant and fully waterproof, and packs down into a car boot without argument. For a hiker who does overnight or multi-day trips, or who ends long day hikes with a camp setup, this is the cooler that handles cold food and drinks across the whole duration without compromise. The YETI name is the kind of gear recognition that lands immediately with someone who takes the outdoors seriously: she knows what it is and she knows it is the right one.",
+            url: "https://www.amazon.com/YETI-Hopper-Portable-MagShield-Charcoal/dp/B0CGY16MR4?crid=2TAJNZZZ2UG6S&dib=eyJ2IjoiMSJ9.alrq0vuP4YYpBTHFmAYuS2mrMsmLikYtpZC3vsxClflzUz-kiTOFjdsXN-085gYZ023iHVwXt95jqZaS6F04yRoebQKWmX0t7rqifCsiO9Dkq9VMXj76082Ytn0cn4L2gepSHs5W7XryHE2oy7WSqruiA1vEyDV3bkuBEDFGPhmO1-qgR6q2s0fcdWJqzR3kJ53L4_1_k5MwA5Qc9YY5HCSdrlIF4lxVjZD-I9VZLRIJca_NvkhcJnjcKVa5mqmKhI4vFZn7aO-EkdcI3_VfeE8c5TG8EDIM6vvuMXi5CIk.sOYAtiau1tYpRFxxvtxbYWvt_DGdlP5TuoPYMeiO-sw&dib_tag=se&keywords=yeti%2Bhopper%2Bsoft%2Bcooler&qid=1773370870&sprefix=Yeti%2BHopper%2Bsoft%2Bcooler%2Caps%2C267&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=69c62d40dd00ccc5acfc3dff1447443b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61E2BzsbxZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wood Burning Camp Stove with USB Charger",
+            price: "$299.00",
+            reason: "The BioLite CampStove 2+ burns twigs and sticks rather than fuel canisters, generates electricity from the fire, and charges phones and devices via USB while it cooks. For a hiker who does overnight trips or backcountry camping, this eliminates two logistical problems at once: fuel weight and battery anxiety. It is also one of those products that generates immediate curiosity the moment someone sees it working, which makes it the rare piece of gear that is as much a conversation starter as it is a tool. One of the most genuinely impressive gifts in the entire database for the right person.",
+            url: "https://www.amazon.com/BioLite-CampStove-Camping-Stoves-Complete-Renewable/dp/B08S46HLM1?crid=3K0JV7YRG08WC&dib=eyJ2IjoiMSJ9.YKbxAVjkqS2zHZo0O4aAdMIMnGC-wVRhCZ8iL7a0Pz4XFdkMRmX9Wph3Xm1Jf1HUVSi6eK_8_1B2PZgxpP4UNOFcXWAI1WQgdcwk4kLhD4z6yc-r_qZ6XSwMYfpHMfx3Bt18U_rU8X2Gkdvpqm0hBrQrJPJH6Kb-_mIp-4vFGEF-6xq6n9O8L1Hy0OZYP4eXw5Hp5Z1AyBdKGO2lkPqQLV3Z2S5_PkNmxrD6wL1_aXZI1N1VdBGHIRYaXMeNSMmU2OPBb6A2XYGU-FKQ94NHNt.nP6H7_0qvvvEdQAfWs-g0g31IKpnT0dGGqe9S3F_VD0&dib_tag=se&keywords=biolite+campstove+2%2B&qid=1773370712&sprefix=biolite+campstove+2%2B%2Caps%2C272&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8a60af41da3706e3c7e2f0c3f0bcca49&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71935nPZwsL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The two vest picks are both intentional",
+        body: "The BECOJADDE and the Hydration Pack are both hydration vests at similar prices for a reason: the right one depends on how she hikes. If she moves fast and light on well-marked trails, the BECOJADDE. If she goes longer, carries more, or hikes technical terrain, the hydration pack. If you are not sure, ask her how long her average trail day runs. The answer will tell you which one fits."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

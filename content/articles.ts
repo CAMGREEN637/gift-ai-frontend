@@ -5594,6 +5594,96 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // GIFTS — GIRLFRIEND WHO LOVES TO READ
+  // ============================================================================
+  {
+    slug: "gifts-girlfriend-loves-reading",
+    title: "Gifts for a Girlfriend Who Loves to Read",
+    excerpt: "For the woman who always has a book on the go. Seven picks that upgrade the reading ritual without getting in the way of it.",
+    occasion: "birthday",
+    interests: ["reading", "wellness", "coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-reading",
+      "birthday-gifts-hard-to-shop-for",
+      "gifts-cozy-homebody",
+      "graduation-gift-girlfriend-from-boyfriend"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The obvious gift comes with obvious risks",
+        body: "The first instinct for a reader is a book, and it is a reasonable instinct with a real problem: wrong author, wrong genre, something she already owns, something she has been meaning to read and will now feel obligated to prioritise. Unless you know her reading taste with confidence, a book is high-variance. The more reliable move is to give something that improves the experience of reading itself, which means she will appreciate it regardless of what she is currently working through."
+      },
+      {
+        type: "text",
+        heading: "How to choose",
+        body: "The seven picks below fall into three categories: small practical upgrades that change how she reads every night, items that elevate the environment around the habit, and the hardware upgrade that changes the whole practice. The price range runs from $12 to $159, and every gift is specific enough to reading that it says I know you as clearly as any book ever could."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Rechargeable Clip-on Book Light",
+            price: "$12.00",
+            reason: "A slim rechargeable LED book light that clips onto any book or eReader with multiple brightness settings. For someone who reads in bed while her partner sleeps, or who loses track of time and finds herself finishing a chapter long after the lights should have gone out, this is the small upgrade that changes a nightly friction point completely. It costs almost nothing, gets used every time she reads in low light, and is more specific to who she is than most things that cost ten times more.",
+            url: "https://www.amazon.com/Glocusent-Rechargeable-Portable-Brightness-Dimmable/dp/B09PR1BTM7?crid=7490P307Z40L&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.VPCcqHP_G_AvTUSd50vJ2zv4z6o-fGzXrl2VDpMCm5IKvXLycVI4aAdNKx_IGR0xaegbtgiGZ1Ssi2dAP2cYCawiEyfmBfsm5zg4xG7VCYwh4Vxpw9TqXjO7T4KRfh5AT0A3axAYCjeSDrca4-C0pG0FLgNSLqKcjRXSZpThgxNfTCKL9bYgEBBKi6tENTxnaqw0IYp2LamwjNGdOqrzJf5posMqpAZtIHVs8Y8gVxE.hrGtjw87Jg2N4-mKHT-O8tide1xYG4st6TNgXn50fMA&dib_tag=se&keywords=rechargeable%2Breading%2Blight&qid=1775427974&s=samedaystore&sprefix=rechargeable%2Breading%2Blight%2Csamedaystore%2C222&sr=1-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4b16af53c44e0f006b1347d37695df96&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KDpa+vM6L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Universal Padded Sleeve for eReaders",
+            price: "$13.00",
+            reason: "A padded protective sleeve designed for 6-7 inch eReaders, compatible with Kindle Paperwhite, Kobo, and most other devices, in a soft microfibre interior that will not scratch the screen. For a reader who already has a Kindle and carries it everywhere, a quality sleeve is the practical gift that keeps the device in the condition it deserves. It also pairs naturally with the Kindle further down this list if you want to give both: the hardware and the case it should have come with.",
+            url: "https://www.amazon.com/Dadanism-Universal-Colorsoft-Signature-Protective/dp/B0F83V1PCK?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=ereader-sleeve&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/718v1z3K5JL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Personalized Wildflower Book Embosser",
+            price: "$24.00",
+            reason: "A custom embossing stamp that presses her name into the first page of every book she owns, surrounded by a wildflower design. Readers who care about their libraries tend to love this in a way that surprises people who do not: it makes every book on her shelf unambiguously hers, adds a small ritual to starting a new book, and is the kind of thing she would never think to buy herself. One of the most reading-specific gifts in the database, and one of the few that says something about her identity as a reader rather than just her current habit.",
+            url: "https://www.amazon.com/ANATTASOUL-Personalized-Wildflower-Envelopes-Invitation%EF%BC%88100Pcs/dp/B0FC2KVDMF?crid=2TS98PRMY78ZF&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.e-ZEy2Dei2RkkPl8TcCQEPtrnAm-TAWadYKc8GRtyYy8NhP0Y8n_3CGcWyn7VPOO3EPkEXv5yncJZvblkl07IldKQZFVa_YUCTddSux2Z0LvmVpJhkwgvDa8Cr_4JMA6woy80eH0O_hNViFryYgcMuyTRuvlUjOFGMG3A844hnNd1lpYfxhhshPF4t1m7DuzUY8jfGWKvBV2cGC6K3oA6tFQFHwl3swDcUKOl3XbvT8.EMo_aIu_ubHGxrxYiCp-MTD3AiGJRky9A5FI5ieVMqY&dib_tag=se&keywords=book%2Bembosser&qid=1775429847&s=samedaystore&sprefix=book%2Bembosser%2Csamedaystore%2C206&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b1a39f7525d2d6abc0e84ce4f3c74055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61jOGsS87WL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Faux Fur Throw Blanket, 50\"x70\", White",
+            price: "$54.00",
+            reason: "A large white UGG faux fur throw in a plush 800gsm fabric that is noticeably more luxurious than standard fleece throws. For a reader who spends hours on the couch or in a chair, the blanket she reaches for is part of the experience, and this is a meaningful upgrade: soft enough to stay under for an entire afternoon, substantial enough to actually feel like something special rather than just warm. The white UGG throw in particular has an aesthetic quality that makes it a home object she would be proud to have sitting out.",
+            url: "https://www.amazon.com/dp/B07WRDL2VZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71bO9GhO3PL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Complete Glass Tea Set with Infuser",
+            price: "$63.00",
+            reason: "A full glass tea set with a teapot, infuser basket, and cups designed for loose-leaf brewing. Reading and tea occupy the same ritual space for a certain kind of reader, and this is the gift that elevates that ritual from a mug and a bag to something deliberate and beautiful. The glass construction lets her watch the tea steep, the set is complete enough to use immediately, and loose-leaf brewing opens up a whole category of tea she may not have explored yet. For someone who reads slowly and intentionally, this matches the pace.",
+            url: "https://www.amazon.com/dp/B01IFBPX7A?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71imBu7dydL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Women's Soft Knit Pajama Set",
+            price: "$149.00",
+            reason: "A Boll and Branch knit pajama set in a fabric that holds its softness wash after wash, from a brand that dermatologists and sleep editors consistently cite for quality. For a girlfriend whose ideal evening involves getting into pajamas early and reading until she falls asleep, this is the gift that makes that evening feel more intentional. Boll and Branch is the kind of brand she has probably encountered but has never quite justified for herself, which puts it in exactly the right register for a birthday: something she deserves and would not prioritise on a regular day.",
+            url: "https://www.amazon.com/BOLL-BRANCH-Womens-Sleeve-Pajama/dp/B0DTB465K4?crid=1WLTVAKZMJHMC&dib=eyJ2IjoiMSJ9.O6A8ENDWF97OH2kFf2yKSBGiTSBUUx0URzdyLuT-K8c3NT9d7JxvBIi5XeGGnEFje_fY4VeYfs6GkHWCCOKZrecYlVJExuteJwIGL_rHyVQ8kH4C43QLYJHENfaBy26AF-8N-qMcJ2aOPZkbVaLaEh4OeKeSi-Y7k1nu6shR3ucH4_R8K-NBl2EuTR4okxR6zay3e9oHLTBV7koBxkQxpUhEMmwyFxaQCuzcFcgY_-SQMCB8hdMgnILI7n5yxXDC5Fjwn_wzElDJgQ3HeV4I2x11sYg89GFepVTKTajjL5Q.4zzn-kLAxuPiw3aCtzVoPMLuBumpQUChM5BnQ8W62Sw&dib_tag=se&keywords=Luxury%2BSilk%2BPajama%2BSet&qid=1773535460&sprefix=luxury%2Bsilk%2Bpajama%2Bset%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=95af7bf7c56daa4c3700048b87385595&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71hSiXigNlL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Kindle Paperwhite 16GB eReader",
+            price: "$159.00",
+            reason: "The Kindle Paperwhite has a glare-free screen that works in direct sunlight, adjustable warm light for reading in the dark without eye strain, weeks of battery life on a single charge, and 16GB of storage for an entire library in a bag. For a reader who goes through several books a month, travels with a book always within reach, or has run out of shelf space at home, this is the gift that removes every practical friction point in the habit. If she does not already own one she has almost certainly thought about it. This is the birthday that removes the last reason not to.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "If you do want to give a book",
+        body: "Pick the most recent author she mentioned and find something from their backlist she has not read yet, not the new release she already knows about. A book from ten years ago by someone she loves is a more interesting choice than whatever is on the bestseller list, and it shows you were paying attention to what she actually said."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

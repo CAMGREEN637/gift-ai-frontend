@@ -5302,6 +5302,208 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // ANNIVERSARY GIFT MISTAKES
+  // ============================================================================
+  {
+    slug: "mistakes-men-make-buying-anniversary-gifts",
+    title: "3 Mistakes Men Make Buying Anniversary Gifts",
+    excerpt: "Anniversary gifts fail differently from birthday gifts. Here is where most men go wrong and what to give instead.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "coffee", "wine"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "mistakes-men-make-buying-birthday-gifts",
+      "anniversary-gifts-by-year-traditional",
+      "what-to-get-girlfriend-one-year",
+      "gifts-for-a-serious-relationship"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Anniversary gifts fail for different reasons than birthday gifts",
+        body: "A birthday gift that misses tends to miss because it was generic or unconsidered. An anniversary gift that misses tends to miss for a more specific reason: it treated the occasion like a birthday rather than an anniversary. These are different events. A birthday is about her as an individual. An anniversary is about the two of you, the relationship itself, the fact that it has existed and endured for a specific amount of time. Gifts that ignore that distinction land flat even when they are objectively good gifts."
+      },
+      {
+        type: "text",
+        heading: "Why this matters more over time",
+        body: "In the early years, the anniversary gift is partly about signaling that you take the relationship seriously. As the years accumulate, the signal matters less and the quality of the gesture matters more. A five-year anniversary gift that could have been given at any point in the relationship communicates something specific: that you were not paying attention to what the occasion actually is."
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 1: Buying her something she wants instead of something about you",
+        body: "The most common anniversary gift mistake is treating it like a birthday: buying her something she has been wanting, something nice from a category she cares about, something that shows you know her interests. This is a good instinct applied to the wrong occasion. An anniversary is not about what she wants right now. It is about what the two of you have built together, and the best anniversary gifts reflect that: a specific date, a specific memory, something that could not have come from anyone other than you. A great perfume from her wish list is a birthday gift. A light-up calendar frame marked with the date you met is an anniversary gift."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Light Up Calendar Frame",
+            price: "$16.00",
+            reason: "A light-up photo frame you customize with a specific date highlighted on the calendar and a photo that goes with it: the day the relationship started, the first trip you took together, any moment from the years that belongs to the two of you specifically. It requires almost no money and ten minutes of your time, but the result is an object no one else in the world could have given her. For an anniversary that is exactly the brief.",
+            url: "https://www.amazon.com/Custom-Light-Calendar-Frame-Photo/dp/B0G6Z7PKW9?crid=3MZFD0TZUXRXL&dib=eyJ2IjoiMSJ9.t6t2pNeqHZdSXtSHYuf9E9d7KIZ4ow6eIGY_kt3jzULGjHj071QN20LucGBJIEps.EnocTYCndACYsxyyidZatfztBizyAU4Ahxz2tGTRPbc&dib_tag=se&keywords=Custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled&qid=1777862481&s=handmade&sprefix=custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled%2Cspecialty-aps%2C204&sr=8-3&srs=120955898011&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=65b194c8b30a30e7c224d2926e1cd20d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71lwEyHgZZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Our Love Ever After Photo Album",
+            price: "$29.99",
+            reason: "A photo album designed specifically for couples, with prompts and space for photos from across the relationship: how you met, first trips, ordinary days that became significant in hindsight. Fill even the first few pages before you give it and it becomes one of the most personal anniversary gifts possible. The difference between this and a generic photo album is the framing: it is built around the relationship as a story, which is exactly what an anniversary is meant to honor.",
+            url: "https://www.amazon.com/dp/B0BV3D2FW4?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71v-IO50wVL._AC_UL320_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 2: Misjudging the register",
+        body: "Anniversary gifts can fail in two opposite directions at once. Overshoot and the gift feels like a performance: a grand gesture that creates pressure rather than warmth, a statement that is more about impressing than connecting. Undershoot and the gift barely acknowledges that the occasion exists: something small and generic that communicates the anniversary was an afterthought. The register that works is intimate rather than performative. The gift that lands is the one that says I have been thinking about us, not I want you to know I take this seriously."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Let's Get Deep Couples Card Game",
+            price: "$18.60",
+            reason: "A card game with questions designed to move past surface conversation and into the things you actually find interesting about each other. For an anniversary this is the intimate register done right: a quiet evening, a glass of something, cards that generate real conversation about the relationship rather than around it. It does not require a speech or a production. It just requires showing up and being genuinely curious about the person you have been with for another year.",
+            url: "https://www.amazon.com/dp/B08PQ14F57?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71E5VZ2dGIL._AC_UL320_.jpg"
+          },
+          {
+            name: "Long Distance Touch Lamps",
+            price: "$155.00",
+            reason: "A pair of WiFi-connected lamps that light up on both ends simultaneously when either person touches theirs: she touches hers in a different room or a different city and yours glows, and vice versa. For couples who spend time apart, this is a proper romantic gesture that earns the anniversary register without being theatrical. It says I am thinking of you at a specific moment, and it keeps saying that every day after the anniversary is over. The gift that works in year one and still works in year ten.",
+            url: "https://www.amazon.com/LuvLink-Friendship-Lamp-v2-0-Bluetooth/dp/B0C5WTJC4N?crid=WZVD8O7EXA&dib=eyJ2IjoiMSJ9.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=touch-lamps&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61ahNfW22OL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "❌ Mistake 3: Stopping at the gift",
+        body: "The third anniversary mistake is the same as the third birthday mistake but more consequential: handing over a wrapped gift and calling the occasion handled. On a birthday this reads as insufficient. On an anniversary it reads as missing the point entirely. An anniversary is an occasion, not a transaction. The evening matters: where you go, whether you made a reservation, whether you have thought about what you want to say to her. The gift opens the occasion. What you do with the rest of the evening is the anniversary itself."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Wine Accessories Gift Box",
+            price: "$19.97",
+            reason: "A curated wine accessories gift box with an aerator, stopper, pourer, and drip ring, presented as a set. This is the gift that arrives with a built-in plan: open it with a good bottle, use the accessories the same evening, make the night about the two of you sharing something rather than just exchanging something. At under twenty dollars it works well as part of a larger evening rather than as the main event, which is exactly the right way to think about it.",
+            url: "https://www.amazon.com/dp/B09JT1W9W2?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81unHwsx-nL._AC_UL320_.jpg"
+          },
+          {
+            name: "Fellow Stagg EKG Pro Electric Gooseneck Kettle",
+            price: "$179.00",
+            reason: "The Fellow Stagg is the kettle that serious coffee and tea drinkers eventually arrive at: precision temperature control to the degree, a slow-pour gooseneck spout designed for pour-over, and a design that looks considered sitting on a counter. For an anniversary gift this works because it comes with a plan that does not have to be stated: the first morning after the anniversary, you make her coffee with it. That quiet follow-through, a gift that has already thought about the next day, is the difference between giving her an object and giving her an occasion that extends beyond the evening.",
+            url: "https://www.amazon.com/Fellow-Stagg-Electric-Gooseneck-Kettle/dp/B0BF7DXLBF?crid=3OIMZOVWJY8ZJ&dib=eyJ2IjoiMSJ9.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=fellow-stagg&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61grHEIj7PL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+
+      {
+        type: "text",
+        heading: "The pattern behind all three",
+        body: "Every mistake here comes from treating an anniversary like any other gift occasion rather than the specific thing it is: a marker of how long two people have chosen each other. Get that right and almost any of the picks above will land. Get it wrong and the most expensive gift in the world arrives in the wrong register and lands with the wrong feeling."
+      },
+      { type: "cta" }
+    ]
+  },
+// ============================================================================
+  // BIRTHDAY GIFTS — YOGA
+  // ============================================================================
+  {
+    slug: "birthday-gifts-girlfriend-loves-yoga",
+    title: "Birthday Gifts for a Girlfriend Who Loves Yoga",
+    excerpt: "Seven picks for the woman whose mat is always out. From a $17 bag that gets used every session to the premium mat she has been looking at for months.",
+    occasion: "birthday",
+    interests: ["yoga", "wellness", "fitness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "birthday-gifts-fitness",
+      "birthday-gifts-running",
+      "gifts-for-girlfriend-who-loves-healthy-eating",
+      "gifts-for-girlfriend-looking-for-new-hobby"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "What separates a yoga gift from a fitness gift",
+        body: "Yoga occupies a particular space between exercise and ritual. Someone who practices regularly is not just working out: she is doing something that serves her physically and mentally, and she has opinions about her equipment, her environment, and the things that make the practice feel worth doing. The best yoga gifts are the ones that honor both sides of that: the functional side, the mat and the blocks and the bag, and the ritual side, the ambiance, the recovery, the meditation that bookends the physical practice."
+      },
+      {
+        type: "text",
+        heading: "How to choose across any budget",
+        body: "The seven picks below run from $17 to $164 and cover three distinct categories: gear that makes the practice easier to do consistently, items that support the ritual and atmosphere around it, and recovery tools that serve the body after class. None of them require you to know her specific practice level or preferred style, which makes them work for anyone from a beginner to someone who has been on the mat for years."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "WLLWOO Yoga Bag",
+            price: "$17.99",
+            reason: "A canvas yoga tote with a dedicated mat strap, inner zip pocket, and enough room for a change of clothes, a water bottle, and everything she takes to class. For a regular practitioner who has been hauling her mat under one arm and her bag over the other, a proper yoga bag is the practical upgrade she keeps meaning to sort out. It is also the kind of gift that gets used every time she leaves for a session, which for someone who practices multiple times a week is several times a week without fail.",
+            url: "https://www.amazon.com/dp/B09Y1QQB26?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/714-wDmzRUL._AC_UL320_.jpg"
+          },
+          {
+            name: "Pink Yoga Accessories Set",
+            price: "$16.99",
+            reason: "An 11-piece yoga accessories set that includes blocks, a strap, resistance bands, a mat towel, and a carrying bag, all in a coordinated pink colorway. For a newer practitioner who is still building her kit, or for someone who wants a cohesive setup rather than mismatched pieces from different orders, this is the gift that sorts out multiple gaps at once. The coordinated aesthetic is a small thing that actually matters: when your equipment looks intentional, the practice feels more so.",
+            url: "https://www.amazon.com/dp/B0GF25GQ3L?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71Et-W-SkzL._AC_UL320_.jpg"
+          },
+          {
+            name: "Inspireyes Chakra Candles Set",
+            price: "$29.99",
+            reason: "Seven soy wax candles aligned with the seven chakras, each in a different scent and color chosen to correspond with its energy center. For a woman whose yoga practice extends into meditation, breathwork, or any kind of mindfulness ritual, this is the gift that honors that dimension directly. It is also genuinely beautiful as a set on a shelf or altar, which means it works as home decor on the days it is not being used in a practice. One of the few yoga gifts that is as much about the environment as the exercise.",
+            url: "https://www.amazon.com/dp/B09BRGWXL8?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71HIm9Sp2iL._AC_UL320_.jpg"
+          },
+          {
+            name: "Shiatsu Neck and Back Massager with Heat",
+            price: "$45.00",
+            reason: "A heated shiatsu massager with rotating nodes that reaches deep into the neck, shoulders, and upper back. Yoga is demanding on the body in ways that are easy to underestimate: held poses, inversions, and transitions all accumulate tension in exactly the places this massager targets. For someone who practices several times a week, a good recovery tool is as important as the practice itself, and this one works in ten minutes on the couch without requiring a booking, a commute, or any planning whatsoever.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Clever Yoga 7-Piece Kit",
+            price: "$71.99",
+            reason: "A comprehensive seven-piece yoga kit from Clever Yoga, a brand with a strong reputation in the yoga community: premium mat, two blocks, a strap, a towel, a bag, and a carry strap, all in one purchase. For a practitioner who wants to upgrade her whole setup at once rather than piecing it together, this is the gift that does it cleanly. The Clever Yoga brand is worth knowing: it is one of the few yoga equipment brands that practitioners actually recommend to each other rather than just tolerating.",
+            url: "https://www.amazon.com/dp/B07TFJJ4RS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71C3WlUaj7L._AC_UL320_.jpg"
+          },
+          {
+            name: "Meditation Cushion Set",
+            price: "$79.99",
+            reason: "A premium meditation cushion and mat set designed for seated practice: buckwheat-filled zafu cushion, zabuton floor mat, and carrying case. For a yogi whose practice includes meditation, breathing work, or simply sitting quietly before or after physical practice, a proper cushion changes the experience entirely: your hips are elevated, your spine stays naturally upright, and you can sit comfortably for far longer than on a rolled blanket or the floor. It is the kind of equipment upgrade that makes a practice feel more serious without requiring more effort.",
+            url: "https://www.amazon.com/dp/B0GMZN8RJY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81O33UOy9wL._AC_UL320_.jpg"
+          },
+          {
+            name: "Eco-Friendly Non-Slip Yoga Mat, 4.2mm",
+            price: "$164.00",
+            reason: "A premium 4.2mm natural rubber yoga mat with a microfiber top layer that grips better with moisture and provides exceptional joint cushioning across the full range of poses. Most yoga mats at the entry and mid price point compress over time, slip in heat, and feel noticeably different from a quality mat. This is the mat that serious practitioners eventually upgrade to and then wonder how they tolerated their previous one for so long. For a girlfriend who practices consistently and has been on the same mat for a year or more, this is the birthday gift that changes every single session going forward.",
+            url: "https://www.amazon.com/dp/B01CGLCGRA?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/41jBqFTYZVL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing to check first",
+        body: "If you are considering the full kit or the premium mat, check what she already has. Someone who has practiced for several years will have specific preferences about mat thickness, block density, and strap length. A quick question framed as what do you actually need for your practice tends to produce a useful answer without giving the gift away."
+      },
+      { type: "cta" }
+    ]
+  },
 ];
 
 // ============================================================================

@@ -5312,7 +5312,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "anniversary",
     interests: ["home_decor", "wellness", "coffee", "wine"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-01",
     relatedArticles: [
       "mistakes-men-make-buying-birthday-gifts",
       "anniversary-gifts-by-year-traditional",

@@ -5604,7 +5604,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "birthday",
     interests: ["reading", "wellness", "coffee"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-03",
     relatedArticles: [
       "birthday-gifts-reading",
       "birthday-gifts-hard-to-shop-for",

@@ -5850,6 +5850,165 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+  // LAST-MINUTE FATHER'S DAY GIFTS THAT DON'T LOOK LAST-MINUTE
+  // ============================================================================
+  {
+    slug: "fathers-day-last-minute-gifts",
+    title: "Last-Minute Father's Day Gifts That Don't Look Last-Minute",
+    excerpt: "You still have time. Here are six gifts that ship fast and land like you planned them weeks ago.",
+    occasion: "fathers_day",
+    interests: ["coffee", "wellness", "tech", "outdoors", "music"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "fathers-day-gifts-dad-who-has-everything",
+      "thoughtful-gifts-that-dont-feel-last-minute"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The only thing that makes a gift feel last-minute",
+        body: "It's not the shipping speed. It's the lack of thought. A gift that arrives on time but feels like you grabbed it without thinking reads as late even when it isn't. The inverse is also true: a gift that's clearly connected to something specific about him feels considered regardless of when it showed up. Everything on this list ships with Prime. The work is in picking the right one, not finding something that clears the logistics bar."
+      },
+      {
+        type: "text",
+        heading: "How to pick fast without picking badly",
+        body: "Narrow it down to one thing you actually know about him. He's always got a mug in his hand. He complains about his back. He listens to music while he works. He's been talking about wanting to read more. Any one of those is enough to find something that lands. These picks are organized to make that match easier: each one is for a specific kind of dad, not just a generic dad-shaped person."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Acrylic Music Plaque",
+            price: "$8",
+            reason: "This is the fastest way to give something personal at any budget. You enter a song title and artist, and it generates a custom plaque printed with the track's Spotify waveform. If there's a song that means something between you and your dad, a song he played constantly when you were growing up, or one he's mentioned more than once, this turns that into a physical object. At $8 it's the kind of thing people keep for years without expecting to.",
+            url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Stanley Stay-Hot Camp Cup 10 oz",
+            price: "$15",
+            reason: "For the dad who's always got a hot drink in hand, a Stanley camp cup is a genuinely useful upgrade to whatever he's currently using. The 10 oz size is the right call for someone who wants to actually finish their coffee before it goes cold rather than a massive tumbler that holds three cups. It stacks, it's stainless, and the Stanley name has the kind of reputation that makes it feel like a proper gift rather than a convenience store impulse. Simple, right, fast.",
+            url: "https://www.amazon.com/Stay-Hot-Stacking-Insulated-Stainless-BPA-Free/dp/B0CZC6M49S?crid=G5U07Z31E55G&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.mLi5DZDfVGWI61PNdpXpNfFPrwzAdwdz0KvFqg53otfCSI3ehyYltHhteJYGvUB7k6XotWlc8ttVeqHXl-TQa_9pjnhIFaHqlHuVk-IDv05pXR4g9kbpWHv2IbJwZaIcdNOGpgqp7lrUAlyBv0eK-4jnnHSCUZbfW_V3hYU6-5PB3XorifuQzR3yY11my0EQGCszvkYDsoDMpCYeJAijo5HaCU7zEXH2HHWOiUPC2TQ.XOEx3qzlcvLMvviTqBYMcuXwLe2s0lZw0-1nKxyQpqo&dib_tag=se&keywords=camping%2Bmug%2Bset&qid=1775434019&s=samedaystore&sprefix=camping%2Bmug%2Bset%2Csamedaystore%2C535&sr=1-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=242a560cad4878ce43b90cec41955c21&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61mMo6A-d0L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "TriggerPoint Grid Foam Roller",
+            price: "$28",
+            reason: "The TriggerPoint Grid is the foam roller that physical therapists and serious athletes actually use, not the basic dense cylinder from a big-box sporting goods store. The multi-density grid surface mimics the pressure of a therapist's hands and works meaningfully better on tight muscles and connective tissue. For a dad who runs, cycles, lifts, or just sits at a desk for long hours and complains about his back or hips, this is the kind of gift that becomes part of a daily routine. He won't buy it for himself because it looks like something anyone could get. He'll use it every week.",
+            url: "https://www.amazon.com/dp/B0040EGNIU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71WUESEiowL._AC_UL320_.jpg"
+          },
+          {
+            name: "Loop Experience 2 Ear Plugs",
+            price: "$34",
+            reason: "Loop earplugs are not what the name suggests. They're high-fidelity plugs designed to reduce volume without killing clarity, so music sounds like music instead of muffled noise, and conversation is still possible. They're built for concerts, loud venues, or simply not being assaulted by a crowded family gathering. For the dad who loves live music but leaves shows with his ears ringing, or one who just values a moment of low-volume calm in a loud house, these are the kind of thing he'd never think to get himself but will immediately understand the appeal of.",
+            url: "https://www.amazon.com/Loop-Experience-Ear-Plugs-High-Fidelity/dp/B0D4DFQTMJ?dib=eyJ2IjoiMSJ9.XnK1RMTVrUuM9Ct8j60j5MeK-US74wmjOZfzwbfb7qWynEw4kqCNmT-1wNzhMWZLP9qQUzPXQEnUDlmxK-zimBNTe9YOcC91mQn4qo_3jbTViEkqXOAlqjpzmO8no-XBhZvQCZIxMVy1GkGyThmYBiIawhuyheelMgcmzqdzOmV83jznFGsrzTfj3rH7NnZzGferK2t4MlpD5VZWrDc8CI4lT3TOcuYHdXYfbxPnY70S_ZbFg6zTNPPNcHGXYf1JBy0fkESNGgbIotM7cEGa6SHW3PteMoATzJUfbRRNVFk.p_u1gKLuyIcTKdCJscwvtNc92WHJnEdGU64BSe0lo8Y&dib_tag=se&keywords=Loop%2BEarplugs&qid=1777841578&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=6cdd273c81eca52583601106cef78cfa&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SY300_SX300_QL70_ML2_.jpg"
+          },
+          {
+            name: "Espresso Martini Kit",
+            price: "$45",
+            reason: "For the dad who enjoys a proper drink and has a little curiosity about making things well, this kit has everything needed to pull off a solid espresso martini at home: the botanicals, the mixers, and instructions that actually make it approachable. It's the kind of gift that prompts an activity rather than just sitting on a shelf, which makes Father's Day itself more interesting. At $45 it feels like a real present without requiring you to know anything beyond the fact that he likes cocktails.",
+            url: "https://www.amazon.com/Espresso-Martini-Gifts-Complete-Botanicals/dp/B0FW25RLC5?crid=3CJNI70R46CHZ&dib=eyJ2IjoiMSJ9.ZR2nqrEwJgautpxRgRVWeBXqIDGF35iKcFIe8ps-OIqC5DjqQ_syS_0n9ykyK1m1LAgGAcX5sehf0nFxmnWzlZOyD8a56oRuOfJ-5QqJCAkS_WVpPBmE5_AHs4HGAHkRcuJ7WdH4r3HQyeTpaf95XAdqYJrtJrUrvG3MmL9xL4e0gcR7GogSAZXlKjFV2JLwmp9sGxZeBakXSY_VL74X2Rqy_6I69QocjB3XorwfIIHkwPFs2C8SVJqyLv6uWLXcOFHSCSAXcA-RQTOpPkOp8WS8XS3CKaRp7GkheA5od0A.auAsuxsXHw3sqm0qR1WwSFCuhwhswIIQxjdsbU1X_YA&dib_tag=se&keywords=Espresso+martini+kit&qid=1776008712&sprefix=espresso+martini+kit%2Caps%2C1175&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=41f4e893f1df165f058706118238ca93&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71W-IVXYZ9L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Kindle Paperwhite 16GB",
+            price: "$159",
+            reason: "The Kindle Paperwhite is the right answer for a dad who reads, has ever mentioned wanting to read more, or travels for work and lugs physical books with him out of stubbornness. The Paperwhite specifically is worth the upgrade over the base Kindle: the backlit display is genuinely comfortable in all lighting conditions, the 16GB holds hundreds of books, and the battery lasts weeks rather than days. If he's been carrying a paperback in a bag for months without finishing it, this is the thing that changes that. It also makes it easy to send him books directly after he opens it, which is its own kind of nice.",
+            url: "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0CFPJYX7P?crid=1GOJ9RM2UILYJ&dib=eyJ2IjoiMSJ9.1CNXjHzWLf8E2tgP9J4rKRr_8thDhtvtvK5EJHj_PcmGxzH5QAAorQ6BttcSI9XulsATvzrESAnygD9xsdE05l9iGw9fZXfppzI0Ar5jFrudLWJZD_gbdBVp5oTdgWVDALiqpflM8edVm-yES07UnuF1JGsX-CF07ddaCyvYLvu1iP37WO6PJIxwqTfsdz7rMcJ72MZNGD7raS2cQvc_vix3IDAL8436SPwlXPdPvDw.FErUyKYb2yS6i6PD8ea5RMJ8C0_P_IHeveRnV-ySsr4&dib_tag=se&keywords=Kindle%2BPaperwhite&qid=1773536138&sprefix=kindle%2Bpaperwhite%2Caps%2C365&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=baf98de8424f609991c372dc76d9f18c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61KMlIaN9pL._AC_SY879_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "What to do when it arrives",
+        body: "If it comes in an Amazon box, take thirty seconds to rewrap it in whatever you have. A note matters more than packaging: two sentences about why you picked this specific thing for him will do more work than any ribbon. The thought was always the point."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+  // FATHER'S DAY GIFTS FOR A DAD WHO LOVES COFFEE
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-coffee-dad",
+    title: "Father's Day Gifts for a Dad Who Loves Coffee",
+    excerpt: "Five gifts matched to how he actually drinks coffee, from the daily ritual to the full setup.",
+    occasion: "fathers_day",
+    interests: ["coffee"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "fathers-day-last-minute-gifts",
+      "fathers-day-gifts-dad-who-has-everything"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Coffee isn't just a drink for this kind of dad",
+        body: "For a dad who's serious about coffee, the morning cup isn't a caffeine delivery mechanism. It's a ritual: the specific grind, the right temperature, the few minutes of quiet before anyone else is awake. Gifting someone like this well means understanding which part of the ritual you're improving. A bag of interesting beans lands differently than a piece of equipment. A better travel mug lands differently than a brewing upgrade for home. The picks below cover the full range, from a $16 novelty that gets the joke to a $159 machine that changes what he can make at home."
+      },
+      {
+        type: "text",
+        heading: "The mistake most people make with coffee gifts",
+        body: "Generic coffee gift sets tend to miss because they're built around the category rather than the person. A basket of flavored syrups and an unbranded mug says you know he drinks coffee, not that you know anything about how. The best gifts here are specific to a type of coffee drinker: the one who obsesses over pour-over technique, the one who drinks three cups at his desk and hates when the last one goes cold, the one who's been talking about getting an espresso machine for two years without pulling the trigger. Any of those is enough to pick from."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "STRATA CUPS Camera Lens Coffee Mug",
+            price: "$16",
+            reason: "This is for the dad who appreciates a good bit. The STRATA mug is designed to look exactly like a professional camera lens from the outside, right down to the focus ring and depth-of-field markings, while functioning as a perfectly normal 13oz travel mug on the inside. If he's into photography, or just has the kind of sense of humor that appreciates a well-executed visual joke, this lands. It also looks genuinely impressive on a desk, which means it gets noticed and used rather than sitting in a cabinet.",
+            url: "https://www.amazon.com/dp/B01N1WYQYT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/91I+lFlSoZL._AC_UL320_.jpg"
+          },
+          {
+            name: "Grounds & Hounds Coffee Sample Kit",
+            price: "$31",
+            reason: "Grounds & Hounds is a specialty roaster that donates a portion of every sale to animal rescue, which gives this gift a story beyond the coffee itself. The sample kit includes a range of roasts from different origins, which makes it a discovery experience rather than a straight consumable. For a dad who's been drinking the same bag from the same place for years, this is the nudge that introduces him to something new. For one who already explores different roasters, it's a curated shortcut to several worth trying.",
+            url: "https://www.amazon.com/dp/B0BX78V5KS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61uB8cZeDmL._AC_UL320_.jpg"
+          },
+          {
+            name: "STANLEY Perfect Brew Pour Over Set",
+            price: "$35",
+            reason: "This is the pick for a dad who makes coffee at home but hasn't gone full equipment nerd yet. The Stanley Pour Over set is a stainless steel dripper and carafe designed to make a clean, full-bodied cup without any electricity or pods. It's also portable, which means it travels to a campsite or a hotel room as easily as it lives on a kitchen counter. Stanley's build quality is the kind that lasts a decade rather than six months, so this isn't a gift he'll replace. It's the thing that quietly becomes part of the morning.",
+            url: "https://www.amazon.com/dp/B0BY3SXZ56?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/51NWe6e1hsL._AC_UL320_.jpg"
+          },
+          {
+            name: "Temperature-Controlled Self-Heating Mug, 14oz",
+            price: "$99",
+            reason: "This solves the specific problem that every coffee drinker has and accepts as inevitable: the last third of the cup going cold before you get to it. The self-heating mug maintains a set temperature from first sip to last using a built-in heating element that works on any flat surface or the included charging coaster. For a dad who works at a desk, takes calls, gets distracted, or simply doesn't drink fast enough, this is the kind of upgrade that changes every single morning. At $99 it feels like a real gift. The functionality is impossible to argue with once you've used one.",
+            url: "https://www.amazon.com/dp/B0B6JTX6NB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71D51fALypL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "20 Bar Semi-Automatic Espresso Machine",
+            price: "$159",
+            reason: "For the dad who's been making do with drip coffee but mentions espresso drinks whenever he's at a good cafe, this is the machine that brings that home without requiring a barista's skill set. The HiBREW H10B runs at 20 bars of pressure, which is the standard for proper espresso extraction, and includes both a single and double shot basket plus a steam wand for milk. It's semi-automatic, meaning he controls the shot but isn't doing everything by hand. At $159, it sits at the point where the machine is genuinely capable without being a commitment that needs justifying.",
+            url: "https://www.amazon.com/HIBREW-H10B-Temperature-Adjustable-Intelligent/dp/B0DLP26373?crid=3LJEBJLSS58L5&dib=eyJ2IjoiMSJ9.VRfsNFwOnWd_4xvdvi1vQ1gnO7pp1TWyTMz6hYXrp60IW99Li0B_EQsDKi6gRXiZQrIA0E11VP2Dm-6o-YbwmGxkUEo1fLmqNWPxAfbyB5IW8ot43CDr1w2z5sKE_5TX2ZqkuONNNF6c3Ieq-7xkwxMQGnIBkftJu95YFz4N6rg4VqHrAe3_a6lqqLQE_bFMJLF87_Dgn94NvgdKBBH_ZzayyjUBmuznEsZqCjpDwrNV9IV-U4OYUhAxbMSmlTgFsCXAcm_Xsl41OaM0H22F3LsnhlZhVChJ0UsJBN6ArqA.sMMG9Sm2lc7yL4Jy2y5sZy-3uO9KwKpka23MhvJK6Hc&dib_tag=se&keywords=Breville%2BBarista%2BExpress%2BEspresso%2BMachine&qid=1773107129&sprefix=breville%2Bbarista%2Bexpress%2Bespresso%2Bmachine%2Caps%2C341&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=59d8a555daf224f89b05d4dd502510ff&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71CeX2VA0+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth adding",
+        body: "If you go with the sample kit or any consumable, pair it with a note about why you picked that specific one. With the equipment picks, offer to set it up with him. The gift opens a door. Walking through it together is the part he'll actually remember."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

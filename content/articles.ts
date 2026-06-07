@@ -5685,80 +5685,93 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     ]
   },
 // ============================================================================
-// GIFTS FOR LONG DISTANCE RELATIONSHIPS THAT ACTUALLY BRIDGE THE GAP
-// ============================================================================
+  // GIFTS — LONG DISTANCE RELATIONSHIPS
+  // ============================================================================
   {
     slug: "gifts-for-long-distance-relationships",
-    title: "Gifts for Long Distance Relationships That Actually Bridge the Gap",
-    excerpt: "When you can't be there in person, the right gift does more than arrive in a box. It shows up for her the way you wish you could.",
-    occasion: "just_because",
-    interests: ["home_decor", "wellness", "music"],
+    title: "Gifts for a Long Distance Girlfriend That Close the Gap",
+    excerpt: "Seven picks that make the distance feel smaller. From a song that plays with one tap to a lamp that glows when you touch yours.",
+    occasion: "anniversary",
+    interests: ["home_decor", "wellness", "photography", "music"],
     readTime: "5 min read",
-    publishedAt: "2025-06-07",
+    publishedAt: "2026-06-07",
     relatedArticles: [
       "what-to-get-girlfriend-one-year",
       "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute",
       "gifts-for-a-serious-relationship"
     ],
     sections: [
       {
         type: "text",
-        heading: "The Distance Is the Whole Point",
-        body: "Buying a gift for someone in a long distance relationship is different from any other gift situation you'll encounter. The goal is not just to give her something she likes. It is to make the physical gap feel smaller. The best long distance gifts do one of two things: they remind her of you in her daily environment, or they create a real-time connection that works across any timezone. Generic gifts miss this entirely. A nice candle is a nice candle anywhere, but the candle you sent her from across the country hits differently when she lights it at the end of a long day."
+        heading: "Long distance changes what a good gift does",
+        body: "In a regular relationship, a gift is a nice thing that shows you were thinking about her. In a long distance relationship, a gift carries more weight than that. It arrives when you cannot. It sits in her apartment and represents your presence in a space you are not in. The best long distance gifts are the ones that stay active rather than passive: things she interacts with daily, things that create a moment of connection, things that make her feel less alone on the evenings that are hardest."
       },
       {
         type: "text",
-        heading: "What Actually Works at a Distance",
-        body: "The gifts worth sending fall into two categories. The first is deeply personal: something engraved with her name, your anniversary date, coordinates of where you met, a song that means something to both of you. Personalisation costs almost nothing extra but transforms an ordinary object into something that belongs specifically to the two of you. The second category is interactive: gifts that require you both to participate, so the distance collapses for a moment. Tech has made this genuinely good now. Touch lamps that glow when the other person touches theirs, devices that let you send photos directly to a small screen on her desk, bracelets that buzz when you tap yours. These are not gimmicks. For couples spending weeks or months apart, they fill a real gap."
+        heading: "What to look for",
+        body: "The picks below fall into two categories: gifts that reference the relationship directly, a specific song, a specific date, a shared photo, and gifts that create an ongoing connection across the distance. Both matter. The first says I have been thinking about us. The second says I am still here even when I am not."
       },
       {
         type: "picks",
         gifts: [
           {
             name: "Personalized Acrylic Music Plaque",
-            price: "8",
-            reason: "You upload a photo, a song title, and the artist name, and it becomes a small piece of art she keeps somewhere she sees every day. The Spotify code on the plaque actually scans, so she can play the song whenever she wants. It is the kind of thing that costs almost nothing but carries a lot of weight for someone who is missing you.",
+            price: "$8.00",
+            reason: "A custom plaque printed with the album art and scan code of a specific song, playable instantly by holding a phone up to it. The gift is entirely in the song you choose: the one from your first night together, the one she plays when she misses you, the one that became yours without either of you deciding. For a long distance relationship, a song that plays with one tap is one of the most intimate objects she can have in her apartment. It costs eight dollars and lands like something worth considerably more.",
             url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "Personalized Gold Bar Name Bracelet",
-            price: "27",
-            reason: "A slim engraved bar bracelet with her name, your anniversary date, or coordinates of somewhere meaningful to you both. She wears it every day and it becomes part of how she carries the relationship with her. The personalisation is done at order, so it arrives ready to give without any extra steps.",
-            url: "https://www.amazon.com/Personalized-Bracelet-Bridesmaid-Anniversary-Christmas/dp/B015DTI1OY?dib=eyJ2IjoiMSJ9.PCCDydwMZHOLTSR7mcG-URohJE-b3eKoUeyBSZ9R1rUDpaUpKeRPqGOgTI-Lz_LD8xeCMU-TpEKIh7JGJWBQHl4Sb2bPjUOj1hXJCAWyp4hEoTgsjjTHY2TICW7jKHz32-pTtGmLk_Sw7-diWqgKip7wbbzXSZ9WE6lQs1NK7RpTGUTVG2qhxD_I-be4WDlM5KcfQXYASbewbAlrWUTnU4BLwgMiUvGydgSlapCdBW8jWZkbAVx_dJGg-VGAQ4n3W_-bQjx1rzidiWuUQrGyxuvH6JPR50yc2uUd8V1E8xGs.r_Xzn70VgCmJJLzrtY0rF_w5D5KrcAvQb0wahN_yrdE&dib_tag=se&keywords=Custom+coordinates+bracelet&qid=1777685069&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=29d71f5bc7c800c112cd399b0cc5fe9a&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            name: "Personalized Light Up Calendar Frame",
+            price: "$16.00",
+            reason: "A light-up photo frame you customize with a specific date highlighted on the calendar: the next time you are together, the anniversary, the day the distance ends. Set it up with a photo and the right date before you send it, so it arrives already counting down to something. For a long distance relationship, having a date on the wall rather than just in a calendar changes how the time between visits feels. It makes the end of the distance visible and present every day.",
+            url: "https://www.amazon.com/Custom-Light-Calendar-Frame-Photo/dp/B0G6Z7PKW9?crid=3MZFD0TZUXRXL&dib=eyJ2IjoiMSJ9.t6t2pNeqHZdSXtSHYuf9E9d7KIZ4ow6eIGY_kt3jzULGjHj071QN20LucGBJIEps.EnocTYCndACYsxyyidZatfztBizyAU4Ahxz2tGTRPbc&dib_tag=se&keywords=Custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled&qid=1777862481&s=handmade&sprefix=custom%2Bphoto%2Bcalendar%2Bwith%2Brelationship%2Bdates%2Bpre-filled%2Cspecialty-aps%2C204&sr=8-3&srs=120955898011&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=65b194c8b30a30e7c224d2926e1cd20d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71lwEyHgZZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
-            name: "Customized Engraved Photo Album",
-            price: "29.99",
-            reason: "A photo album with a custom engraved cover is the kind of gift that takes two minutes to order and lands like something you spent hours on. Fill it with photos from your time together, or send it empty so she can fill it herself. Either way it becomes the physical record of the relationship she can hold when you are not there.",
-            url: "https://www.amazon.com/dp/B0F1N2NRLY?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/71i94Chha9L._AC_UL320_.jpg"
+            name: "Our Love Ever After Photo Album",
+            price: "$29.99",
+            reason: "A couple's photo album with guided prompts and space for photos across the relationship: how you met, first trips, the ordinary days that became significant. Fill the first few pages before you send it so it arrives already started rather than blank. For a long distance relationship, a physical record of the relationship that she can hold and add to is one of the most grounding gifts you can give. It makes the relationship feel substantial and documented even when you are not in the same room.",
+            url: "https://www.amazon.com/dp/B0BV3D2FW4?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71v-IO50wVL._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized PhotoBook 8x8\" Hard Cover",
+            price: "$36.67",
+            reason: "A printed hardcover photo book you fill with photos of your choice, delivered ready to put on her shelf. The work is yours: forty minutes selecting the photos, deciding what the year looked like, choosing what she should be able to hold. For a long distance girlfriend who has hundreds of photos of you both on her phone and none of them printed, this is the gift that makes the relationship tangible in a way a screen never quite does. She will look at it on the hard evenings.",
+            url: "https://www.amazon.com/dp/B0CQMVGKBF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61SAIuLEeDL._AC_UL320_.jpg"
+          },
+          {
+            name: "Anforsun Sunflower Care Package",
+            price: "$39.99",
+            reason: "A pre-assembled care package built around a sunflower theme: candle, tea, snacks, a cozy item, and a card holder, presented in a gift box ready to ship. For long distance relationships, a care package that arrives at her door is the closest thing to showing up in person. This one arrives ready to go without needing to be assembled, which matters when you are sending something across a significant distance. The contents say: I thought about what would make an ordinary evening feel like something.",
+            url: "https://www.amazon.com/dp/B0DRW3HM8V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71QyqElACcL._AC_UL320_.jpg"
           },
           {
             name: "Long Distance Touch Lamps",
-            price: "155",
-            reason: "These come as a pair. You keep one, she keeps the other. Touch yours and hers lights up in the same color wherever she is in the world, no matter the timezone. It sounds simple because it is simple, and that is exactly why it works. It is a tap that says you are thinking about her without requiring either of you to stop what you are doing.",
-            url: "https://www.amazon.com/LuvLink-Friendship-Lamp-v2-0-Bluetooth/dp/B0C5WTJC4N?crid=WZVD8O7EXBH0&dib=eyJ2IjoiMSJ9.dKOnya_scm44XL2mUtLsUdgGvFlpgrD6VDqHee5Hva6HqHKsF-4qQE_3ZgqgOQv0YBZe0J2qIYn2mBmb6DSPLXycvJ-tpqyNySaoMyGetUzpcVU4HhLXWx2xoIbsh62iS1uGku-qgUlDUfTw-vMipDa3TPqYTCjdtKPWjW7DTsBlD8ePoGdIlh5kbXgXWuxcUQdSqApf6-4RDLSpB4JZrQrqwHOIKhmYZU7R-vA7mOIkMtFDrz-Tv4cfjAP6_qK5q6J571wAk1IrlEf0J8h4P62ROjjSWBlbVwtoon7bSF0.VT0jcBBRU5VVpQ-0j3jDUxVJyHmdrA-xKcMBgDD2yMk&dib_tag=se&keywords=long-distance%2Btouch%2Blamps&qid=1775775269&sprefix=Long-Distance%2BTouch%2BLamps%2Caps%2C354&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5906275c0c2f77b920926ccce8f7863b&language=en_US&ref_=as_li_ss_tl",
+            price: "$155.00",
+            reason: "A pair of WiFi-connected lamps that light up on both ends simultaneously when either person touches theirs: she touches hers in her city and yours glows, and vice versa. It is the simplest possible form of connection across distance: a touch, a glow, the knowledge that someone thought of you at that exact moment. For a long distance couple the lamp becomes a ritual, something she reaches for before bed or when the evening is quiet. The gift that keeps working long after the occasion that prompted it.",
+            url: "https://www.amazon.com/LuvLink-Friendship-Lamp-v2-0-Bluetooth/dp/B0C5WTJC4N?crid=WZVD8O7EXA&dib=eyJ2IjoiMSJ9.6k8Y_gB7lYkXJLxBH2sT8nRm4Kz9pQvD3WXjF5hCqwNE1oTr7VsIPuO2dMxKA.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=touch-lamps&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61ahNfW22OL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Long Distance Relationship Bracelets",
-            price: "178",
-            reason: "The Bond Touch bracelets connect over Wi-Fi so a tap on yours sends a buzz to hers in real time, wherever she is. You both wear one, and when you are thinking about her you tap it. She feels it on her wrist. It is the closest thing to a physical touch that technology can currently do across a distance, and for couples doing weeks or months apart it genuinely changes how the time feels.",
-            url: "https://www.amazon.com/BOND-TOUCH-Bracelet-Long-Distance-Relationship/dp/B0DWXP5RFV?crid=10SGZ0HM95SL8&dib=eyJ2IjoiMSJ9.IYtZWl0Wr9pLBHlr4p8p_iZNGj48kSumnJI0OO_TtLTIzPvrLi7eVjgEM_GT2xdOZcZjXJfWljGiijmKXsYQclZWqMtENyGJhzzKfL1wXAJKk0D2fP3CTmYAsLdcM8KXgySZfOuBwY8e_7mHeE6PcPWg421bFefL_5rQ5MOwYjuV2A8_5HzxX7FQMbODbmGB8eHc79mKu6eD_8iNy8znr8KfQ3svAQIoOmDczDSyXevROUzuNC6nZLukdld-S63QQO__FKGO0qhMHFoyEZe_MVcCtDfr24kFdcfYkP78_SU.A1YF5dolZHYh2fIinRwyIkzQZZL3QJs5bIkxEnipsmw&dib_tag=se&keywords=long%2Bdistance%2Brelationship%2Bbracelets&qid=1778375751&sprefix=long%2Bdistance%2Brealtions%2Caps%2C229&sr=8-9&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=53d7fa0f222164d91541a7ca7c52b45f&language=en_US&ref_=as_li_ss_tl",
+            price: "$178.00",
+            reason: "A pair of Bond Touch bracelets that connect over Bluetooth: when she taps hers, yours vibrates, and when you tap yours, hers vibrates. They are designed specifically for couples who are apart, and what they do is simple: they create a private channel between two people that requires no words and no screen time. You are in a meeting, you tap your wrist, and she feels it. She is having a hard evening, she taps hers, and you know. For a long distance relationship this is the most physically intimate connection technology currently makes possible without being in the same room.",
+            url: "https://www.amazon.com/BOND-TOUCH-Bracelet-Long-Distance-Relationship/dp/B0DWXP5RFV?crid=10SGZ0HM95SL8&dib=eyJ2IjoiMSJ9.IYtZWl0Wr9pLBHlr4p8p_iZNGj48kSumnJI0OO_TtLTIzPvrLi7eVjgEM_GT2b3OZcZcZjXJfWljGiijmKXsYQclZWqMtENyGJhzzKfL1wXAJKk0D2fP3CTmYAsLdcM8KXgySZfOuBwY8e_7mHeE6PcPWg421bFefL_5rQ5MOwYjuV2A8_5HzxX7FQMbODbmGB8eHc79mKu6eD_8iNy8znr8KfQ3svAQIoOmDczDSyXevROUzuNC6nZLukdld-S63QQO__FKGO0qhMHFoyEZe_MVcCtDfr24kFdcfYkP78_SU.A1YF5dolZHYh2fIinRwyIkzQZZL3QJs5bIkxEnipsmw&dib_tag=se&keywords=long%2Bdistance%2Brelationship%2Bbracelets&qid=1778375751&sprefix=long%2Bdistance%2Brealtions%2Caps%2C229&sr=8-9&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=53d7fa0f222164d91541a7ca7c52b45f&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61UQ8UKzLxL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
       },
       {
         type: "text",
-        heading: "A Note Before You Order",
-        body: "The best long distance gift is not the most expensive one. It is the one that shows up in her space and reminds her of you consistently. A $8 music plaque she looks at every morning can do more work than a $200 gadget she leaves in a drawer. Think about what fits naturally into her day and go from there."
+        heading: "Send the gift with a letter",
+        body: "Whatever you choose, write a real letter and put it in the box. Not a card, a letter: something that takes more than thirty seconds to read, something that says specifically what the distance has been like and what you are looking forward to. The gift arrives in her apartment. The letter stays with her."
       },
-      {
-        type: "cta"
-      }
+      { type: "cta" }
     ]
   },
 ];

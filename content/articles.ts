@@ -5684,7 +5684,10 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
-{
+// ============================================================================
+// GIFTS FOR LONG DISTANCE RELATIONSHIPS THAT ACTUALLY BRIDGE THE GAP
+// ============================================================================
+  {
     slug: "gifts-for-long-distance-relationships",
     title: "Gifts for Long Distance Relationships That Actually Bridge the Gap",
     excerpt: "When you can't be there in person, the right gift does more than arrive in a box. It shows up for her the way you wish you could.",
@@ -5713,35 +5716,35 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         gifts: [
           {
             name: "Personalized Acrylic Music Plaque",
-            price: 8,
+            price: "8",
             reason: "You upload a photo, a song title, and the artist name, and it becomes a small piece of art she keeps somewhere she sees every day. The Spotify code on the plaque actually scans, so she can play the song whenever she wants. It is the kind of thing that costs almost nothing but carries a lot of weight for someone who is missing you.",
             url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Personalized Gold Bar Name Bracelet",
-            price: 27,
+            price: "27",
             reason: "A slim engraved bar bracelet with her name, your anniversary date, or coordinates of somewhere meaningful to you both. She wears it every day and it becomes part of how she carries the relationship with her. The personalisation is done at order, so it arrives ready to give without any extra steps.",
             url: "https://www.amazon.com/Personalized-Bracelet-Bridesmaid-Anniversary-Christmas/dp/B015DTI1OY?dib=eyJ2IjoiMSJ9.PCCDydwMZHOLTSR7mcG-URohJE-b3eKoUeyBSZ9R1rUDpaUpKeRPqGOgTI-Lz_LD8xeCMU-TpEKIh7JGJWBQHl4Sb2bPjUOj1hXJCAWyp4hEoTgsjjTHY2TICW7jKHz32-pTtGmLk_Sw7-diWqgKip7wbbzXSZ9WE6lQs1NK7RpTGUTVG2qhxD_I-be4WDlM5KcfQXYASbewbAlrWUTnU4BLwgMiUvGydgSlapCdBW8jWZkbAVx_dJGg-VGAQ4n3W_-bQjx1rzidiWuUQrGyxuvH6JPR50yc2uUd8V1E8xGs.r_Xzn70VgCmJJLzrtY0rF_w5D5KrcAvQb0wahN_yrdE&dib_tag=se&keywords=Custom+coordinates+bracelet&qid=1777685069&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=29d71f5bc7c800c112cd399b0cc5fe9a&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Customized Engraved Photo Album",
-            price: 29.99,
+            price: "29.99",
             reason: "A photo album with a custom engraved cover is the kind of gift that takes two minutes to order and lands like something you spent hours on. Fill it with photos from your time together, or send it empty so she can fill it herself. Either way it becomes the physical record of the relationship she can hold when you are not there.",
             url: "https://www.amazon.com/dp/B0F1N2NRLY?tag=cbggiftapp637-20",
             image_url: "https://m.media-amazon.com/images/I/71i94Chha9L._AC_UL320_.jpg"
           },
           {
             name: "Long Distance Touch Lamps",
-            price: 155,
+            price: "155",
             reason: "These come as a pair. You keep one, she keeps the other. Touch yours and hers lights up in the same color wherever she is in the world, no matter the timezone. It sounds simple because it is simple, and that is exactly why it works. It is a tap that says you are thinking about her without requiring either of you to stop what you are doing.",
             url: "https://www.amazon.com/LuvLink-Friendship-Lamp-v2-0-Bluetooth/dp/B0C5WTJC4N?crid=WZVD8O7EXBH0&dib=eyJ2IjoiMSJ9.dKOnya_scm44XL2mUtLsUdgGvFlpgrD6VDqHee5Hva6HqHKsF-4qQE_3ZgqgOQv0YBZe0J2qIYn2mBmb6DSPLXycvJ-tpqyNySaoMyGetUzpcVU4HhLXWx2xoIbsh62iS1uGku-qgUlDUfTw-vMipDa3TPqYTCjdtKPWjW7DTsBlD8ePoGdIlh5kbXgXWuxcUQdSqApf6-4RDLSpB4JZrQrqwHOIKhmYZU7R-vA7mOIkMtFDrz-Tv4cfjAP6_qK5q6J571wAk1IrlEf0J8h4P62ROjjSWBlbVwtoon7bSF0.VT0jcBBRU5VVpQ-0j3jDUxVJyHmdrA-xKcMBgDD2yMk&dib_tag=se&keywords=long-distance%2Btouch%2Blamps&qid=1775775269&sprefix=Long-Distance%2BTouch%2BLamps%2Caps%2C354&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5906275c0c2f77b920926ccce8f7863b&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61ahNfW22OL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Long Distance Relationship Bracelets",
-            price: 178,
+            price: "178",
             reason: "The Bond Touch bracelets connect over Wi-Fi so a tap on yours sends a buzz to hers in real time, wherever she is. You both wear one, and when you are thinking about her you tap it. She feels it on her wrist. It is the closest thing to a physical touch that technology can currently do across a distance, and for couples doing weeks or months apart it genuinely changes how the time feels.",
             url: "https://www.amazon.com/BOND-TOUCH-Bracelet-Long-Distance-Relationship/dp/B0DWXP5RFV?crid=10SGZ0HM95SL8&dib=eyJ2IjoiMSJ9.IYtZWl0Wr9pLBHlr4p8p_iZNGj48kSumnJI0OO_TtLTIzPvrLi7eVjgEM_GT2xdOZcZjXJfWljGiijmKXsYQclZWqMtENyGJhzzKfL1wXAJKk0D2fP3CTmYAsLdcM8KXgySZfOuBwY8e_7mHeE6PcPWg421bFefL_5rQ5MOwYjuV2A8_5HzxX7FQMbODbmGB8eHc79mKu6eD_8iNy8znr8KfQ3svAQIoOmDczDSyXevROUzuNC6nZLukdld-S63QQO__FKGO0qhMHFoyEZe_MVcCtDfr24kFdcfYkP78_SU.A1YF5dolZHYh2fIinRwyIkzQZZL3QJs5bIkxEnipsmw&dib_tag=se&keywords=long%2Bdistance%2Brelationship%2Bbracelets&qid=1778375751&sprefix=long%2Bdistance%2Brealtions%2Caps%2C229&sr=8-9&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=53d7fa0f222164d91541a7ca7c52b45f&language=en_US&ref_=as_li_ss_tl",
             image_url: "https://m.media-amazon.com/images/I/61UQ8UKzLxL._AC_SY300_SX300_QL70_FMwebp_.jpg"

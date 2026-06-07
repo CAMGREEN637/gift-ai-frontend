@@ -5774,6 +5774,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
+// ============================================================================
+  // FATHER'S DAY GIFTS FOR A DAD WHO HAS EVERYTHING
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-dad-who-has-everything",
+    title: "Father's Day Gifts for a Dad Who Has Everything",
+    excerpt: "He says he doesn't need anything. He's wrong. Here are five gifts that will actually land.",
+    occasion: "fathers_day",
+    interests: ["tech", "outdoors", "coffee", "cooking", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "tech-gifts-that-feel-thoughtful",
+      "gifts-under-100-high-end"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The real problem with gifting a dad who has everything",
+        body: "When someone says they don't want anything, what they usually mean is that they've stopped expecting to be surprised. Years of socks and gift cards have a way of doing that. The solution isn't a bigger budget or a fancier version of something he already owns. It's specificity. A gift that connects to how he actually spends his time signals something the card never could: that you were paying attention. That's the version of Father's Day that stays with people."
+      },
+      {
+        type: "text",
+        heading: "What to look for in a gift for someone who buys himself what he needs",
+        body: "The best gifts for this type of person fall into two categories. The first is the upgrade he'd never justify spending on himself: the better version of something he uses every day that he keeps putting off. The second is the genuinely novel thing he hasn't encountered yet, something he'd never have sought out but immediately understands the value of once he has it. Both require knowing something specific about him. Generic will not cut it here."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Whiskey Smoker Kit with Torch",
+            price: "$47",
+            reason: "This is the kind of gift that turns an ordinary Tuesday evening into something more deliberate. The kit uses real wood chips to infuse cocktails with cold smoke before you drink them, and it works on any glass of whiskey, bourbon, or old fashioned. It's hands-on in a way that appeals to dads who like the ritual of making something, not just consuming it. At $47, it's the rare pick that feels considered without requiring a big commitment.",
+            url: "https://www.amazon.com/Whiskey-Smoker-Kit-Torch-Fashioned/dp/B0BJV68C17/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.BQik9qjTRgMVoww3vrQeW74S181REjqNa1jLHvvDL9XGcJ7fNEp_BAGaFWlGwr6KbUbDUcQ7Q7gyFjD5hMfJRbI6FspVTpaYBmfdvBpm1-P9kUPo4mEeVwPgda2l4aK62OldihDaAUFvDxMH-S-Y3-0wl0xuzlXnInwe7M7jHuCi7pHNOxZJQkb2sf4YNETOflqcQyGNI5EC2gBWtJzPFVPIOgA3jTRVGYcBghO9FHrxQ9FsgxgfhOGc37yMJM_YMTIQMVjWm3BiAWGaxYjBJUx2vgoH5_aYQG22RbJfUwQ.eB2Od59JBTL4C9BbbBA0-xk1nmIThvxmWQ3IyiRRrzc&dib_tag=se&keywords=Cocktail+smoking+kit&qid=1773364547&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+            image_url: "https://m.media-amazon.com/images/I/81giNCIRH5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169",
+            reason: "This one lands differently than it sounds. The Hatch Restore 3 is a sunrise alarm clock and sound machine that replaces the jarring buzz of a phone alarm with a gradual light simulation that wakes you up with your natural sleep cycle rather than against it. For a dad who's been running on bad sleep for years without thinking much about it, this is the kind of gift that changes something daily. He wouldn't buy it for himself because it doesn't seem necessary. It is.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Fellow Stagg EKG Pro Kettle",
+            price: "$179",
+            reason: "If he makes coffee at home, this is the upgrade that changes how it tastes. The Fellow Stagg EKG Pro is a gooseneck electric kettle with precise temperature control down to the degree, which matters more than most people realize: different brewing methods need different temperatures, and standard kettles don't give you that. The design is also genuinely beautiful in a way that looks intentional on a kitchen counter. For a dad who takes his morning coffee seriously but hasn't gone deep on equipment, this is the right next step.",
+            url: "https://www.amazon.com/Fellow-Stagg-Electric-Gooseneck-Kettle/dp/B0BF7DXLBF?crid=3OIMZOVWJNRXA&dib=eyJ2IjoiMSJ9.kgh-95Gmn8iXvGBVrnDCwGYdH7kyBSsJUYSbIVGugVCU7ykZcZ0-q8ZTxnprn2nesd4fsNV_4UiRsDLDcPu1nuvbXkS6XfxBYeCJWnCZNySX3ROQ16gqFvjhH6z7ILy9uNJneHAeZ-EURmTnfhcBHi1agw-0Yowqwh1-gaAd0hUiyGkRSlcokxhkMaszS00Se5RyIJox-GUC59jO6qfVHrdOmh4SPeFJEquaVa5fpgE.kK2UVqiZS6OHuJWy5OJI_lb5cQkKt2DQcuLCR7_NuLs&dib_tag=se&keywords=Fellow%2BStagg%2BEKG%2BElectric%2BPour-Over%2BKettle&qid=1776730622&s=handmade&sprefix=fellow%2Bstagg%2Bekg%2Belectric%2Bpour-over%2Bkettle%2Cspecialty-aps%2C433&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e5edc9a0e8e188c4b4cf4ce4ea95024b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61grHEIj7PL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "YETI Hopper Soft Cooler with MagShield Access",
+            price: "$199",
+            reason: "YETI makes the cooler that dads who are serious about the outdoors actually want but rarely buy themselves because the price always feels hard to justify for something that just holds ice. The Hopper is the soft cooler version: packable, waterproof, and built to keep things genuinely cold across a full day outside rather than a polite few hours. The MagShield magnetic closure means no fumbling with zippers on the water. If he camps, tailgates, fishes, or just spends real time outside, this gets used every time.",
+            url: "https://www.amazon.com/YETI-Hopper-Portable-MagShield-Charcoal/dp/B0CGY16MR4?crid=2TAJNZZZ2UG6S&dib=eyJ2IjoiMSJ9.alrq0vuP4YYpBTHFmAYuS2mrMsmLikYtpZC3vsxClflzUz-kiTOFjdsXN-085gYZ023iHVwXt95jqZaS6F04yRoebQKWmX0t7rqifCsiO9Dkq9VMXj76082Ytn0cn4L2gepSHs5W7XryHE2oy7WSqruiA1vEyDV3bkuBEDFGPhmO1-qgR6q2s0fcdWJqzR3kJ53L4_1_k5MwA5Qc9YY5HCSdrlIF4lxVjZD-I9VZLRIJca_NvkhcJnjcKVa5mqmKhI4vFZn7aO-EkdcI3_VfeE8c5TG8EDIM6vvuMXi5CIk.sOYAtiau1tYpRFxxvtxbYWvt_DGdlP5TuoPYMeiO-sw&dib_tag=se&keywords=yeti%2Bhopper%2Bsoft%2Bcooler&qid=1773370870&sprefix=Yeti%2BHopper%2Bsoft%2Bcooler%2Caps%2C267&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=69c62d40dd00ccc5acfc3dff1447443b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61E2BzsbxZL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Sonos Era 100 Wireless Speaker",
+            price: "$219",
+            reason: "For the dad who listens to music at home and has been living with a Bluetooth speaker that was fine when he bought it five years ago, the Sonos Era 100 is a significant jump. It's a room-filling wireless speaker with genuinely rich stereo sound, built to stay in one place and be used every day rather than packed in a bag. It connects to Spotify, Apple Music, and Tidal directly, meaning no phone required. He probably wouldn't spend this on himself. But once it's in the room, it becomes part of how the house sounds.",
+            url: "https://www.amazon.com/Sonos-Era-100-Wireless-Speaker/dp/B0BW34LCB8?crid=2HJVRZ6YPD5GJ&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.Fkj6HYFflftSzq2aeeoe8XqgfvPBWR6bs80Li0_A8cYJYapLLm_FKM8gJgXSmzypnozbCTNxz4VKKMUUHEiZLrkCu_lWHeZG16m73fIXZzYldc1uL1Aw8CL87X3X8nqSMiMLNkw0SsABrmVg98dyF1DOoj4b_07VG0jjuO6NifLaXW4-0svRjUV-sgEfO-5uPsyrIHHjQi1cOxlLYNSqlkAPY_T0lXyWBOMUZTB7hW8.HI5dwO6RITLWtgUPlqzCLT2lxT1lkckSFSldiSNHBHA&dib_tag=se&keywords=Portable%2Bspeaker&qid=1775431576&s=samedaystore&sprefix=portable%2Bspeaker%2Csamedaystore%2C194&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=11d5d28ea45c35d43db885bf6fda1301&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71fAeaUTNvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing",
+        body: "The dad who says he doesn't want anything is usually the same one who quietly appreciates being seen more than he lets on. None of these gifts require a card that overthinks it. A short note that says you picked this because of something specific about him does more work than any amount of wrapping paper."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

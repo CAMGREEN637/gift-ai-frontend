@@ -5684,10 +5684,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       { type: "cta" }
     ]
   },
-// ============================================================================
-// GIFTS FOR LONG DISTANCE RELATIONSHIPS THAT ACTUALLY BRIDGE THE GAP
-// ============================================================================
-  {
+{
     slug: "gifts-for-long-distance-relationships",
     title: "Gifts for Long Distance Relationships That Actually Bridge the Gap",
     excerpt: "When you can't be there in person, the right gift does more than arrive in a box. It shows up for her the way you wish you could.",

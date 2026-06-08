@@ -6313,6 +6313,82 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+  // FATHER'S DAY TECH GIFTS FOR DAD
+  // ============================================================================
+  {
+    slug: "fathers-day-tech-gifts-for-dad",
+    title: "Father's Day Tech Gifts for Dad",
+    excerpt: "Five picks for the dad who appreciates things that actually work well.",
+    occasion: "fathers_day",
+    interests: ["tech", "gaming", "music"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "fathers-day-gifts-dad-who-has-everything",
+      "fathers-day-last-minute-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Tech gifts land differently when they're actually chosen",
+        body: "The problem with most tech gift guides is that they're written around what's new rather than what's useful. A dad who appreciates technology tends to have strong opinions about what he wants, which makes generic picks feel hollow and specific ones feel genuinely considered. The difference between a good tech gift and a bad one usually isn't the category or even the price. It's whether the person giving it understood what problem they were solving. These five picks each solve a specific one, ranging from $49 to $284, across audio, desk setup, connection, and leisure."
+      },
+      {
+        type: "text",
+        heading: "How to pick the right one",
+        body: "Start with how he spends his time at home rather than with what seems impressive. The dad who works from a desk every day has different needs from the one who mostly unwinds in front of a screen. The one who keeps saying he misses gaming is a different pick from the one who fills every wall with photos. Any one of these is the right answer for a specific person. The wrong answer is picking one that sounds good without knowing which type of dad you're shopping for."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Wireless Noise Cancelling Over-Ear Headphones",
+            price: "$49",
+            reason: "For a dad who works from home, travels, or just needs twenty minutes of quiet: active noise cancellation at $49 is the most accessible upgrade on this list. The hybrid ANC system uses four microphones to reduce up to 90% of ambient noise, which is the kind of spec that makes a real difference on a plane or in an open office rather than a marginal one. At this price it's the right pick when the budget is limited but the need is genuine. If he's been using earbuds or nothing at all for focus work or long calls, this changes that without asking for much in return.",
+            url: "https://www.amazon.com/dp/B0F4884LN3?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/613wL6XbeBL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Wireless Mechanical Keyboard with Smart Display",
+            price: "$79",
+            reason: "This one is for the dad with a home office setup he's never quite finished. The keyboard is wireless, mechanical, and includes a small built-in display that shows the date, battery level, connection mode, and custom content, controlled by a physical knob that also handles volume and backlight. Mechanical keys have a tactile and auditory feedback that membrane keyboards don't, which is the kind of thing that sounds like a small distinction until you type on one every day. For a dad who spends hours at a desk and has been using whatever keyboard came with the computer, this is the upgrade that makes the whole setup feel intentional.",
+            url: "https://www.amazon.com/dp/B0CQ2L9PCB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61g03L1eB1L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Skylight 10 Inch WiFi Digital Photo Frame",
+            price: "$119",
+            reason: "The Skylight frame is the tech gift that works as a sentimental one. It connects to WiFi and gets its own email address: anyone in the family can send photos directly to the frame from their phone and they appear on his desk within seconds, without him having to do anything. For a dad who's far from kids or grandkids, or one whose family is scattered and communicates in photos more than calls, this is the kind of thing that's quietly running in the background of every day. Setup takes about three minutes. The part that matters takes considerably less.",
+            url: "https://www.amazon.com/dp/B01N7ENHO6?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/811cSLz1f2L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Sony WH-1000XM5 Wireless Headphones (Renewed)",
+            price: "$200",
+            reason: "The Sony WH-1000XM5 is the benchmark for noise-cancelling headphones at any price, and the certified renewed version brings it to $200 rather than $350 without compromising on performance. Eight microphones and Sony's HD Noise Cancelling Processor handle ambient sound at a level that cheaper ANC can't match. The sound quality is the other half: wide soundstage, accurate bass, the kind of audio that makes streaming music or podcasts feel different from what he's been using. For a dad who takes what he listens to seriously and hasn't upgraded his headphones in years, this is the version worth owning.",
+            url: "https://www.amazon.com/dp/B0B2FCT81R?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/519JPzTAdVL._AC_UY218_.jpg"
+          },
+          {
+            name: "Nintendo Switch OLED Model (Renewed)",
+            price: "$284",
+            reason: "The Switch OLED is the right answer for a dad who used to game and drifted away from it, or one who's mentioned it and never acted on it. The OLED model has a noticeably better screen than the original Switch for handheld play, docks to a TV for full living room gaming, and works as a party console with detachable Joy-Cons for two-player games on the couch. The certified renewed version comes at a real saving over new. For a dad who hasn't had a console in years, this is the one that has the widest catalog, the most flexibility, and the lowest barrier to actually getting used rather than sitting on a shelf.",
+            url: "https://www.amazon.com/dp/B09J652L1P?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61U4SKnyS4L._AC_UY218_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A note on the renewed picks",
+        body: "Both the Sony headphones and the Nintendo Switch on this list are certified renewed, meaning they've been inspected, tested, and restored to full working condition. They're covered by a warranty and arrive in clean packaging. For products at this build quality, renewed is the sensible call: you're getting the same hardware at a meaningfully lower price, which leaves room in the budget for a game or a case to go alongside it."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

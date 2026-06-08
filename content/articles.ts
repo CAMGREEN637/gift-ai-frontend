@@ -5784,7 +5784,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "fathers_day",
     interests: ["tech", "outdoors", "coffee", "cooking", "wellness"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-07",
     relatedArticles: [
       "tech-gifts-that-feel-thoughtful",
       "gifts-under-100-high-end"
@@ -5860,7 +5860,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "fathers_day",
     interests: ["coffee", "wellness", "tech", "outdoors", "music"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-07",
     relatedArticles: [
       "fathers-day-gifts-dad-who-has-everything",
       "thoughtful-gifts-that-dont-feel-last-minute"
@@ -5943,7 +5943,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "fathers_day",
     interests: ["coffee"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-07",
     relatedArticles: [
       "fathers-day-last-minute-gifts",
       "fathers-day-gifts-dad-who-has-everything"
@@ -6003,6 +6003,310 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
         type: "text",
         heading: "One thing worth adding",
         body: "If you go with the sample kit or any consumable, pair it with a note about why you picked that specific one. With the equipment picks, offer to set it up with him. The gift opens a door. Walking through it together is the part he'll actually remember."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+  // FATHER'S DAY GIFTS FROM A DAUGHTER
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-from-daughter",
+    title: "Father's Day Gifts From a Daughter",
+    excerpt: "Not 'gifts for dads.' Gifts that say you actually know him.",
+    occasion: "fathers_day",
+    interests: ["wellness", "tech", "personalized"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-07",
+    relatedArticles: [
+      "fathers-day-gifts-dad-who-has-everything",
+      "fathers-day-last-minute-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The gift that actually means something",
+        body: "There's a version of Father's Day gifting that's about checking a box, and there's a version that's about saying something. The box-checking version produces gift cards, golf accessories for dads who don't golf, and things with 'World's Best Dad' printed on them. The other version requires knowing one specific true thing about your father and finding a gift that reflects it back. That's harder to find on a listicle. It's also the only kind that gets remembered. Everything below is chosen for the daughter who wants to land in that second category."
+      },
+      {
+        type: "text",
+        heading: "What makes a gift land differently when it comes from a daughter",
+        body: "The relationship carries its own weight. A gift from a daughter doesn't need to be expensive or elaborate to feel significant, but it does need to feel intentional. The picks here are organized around a single logic: each one communicates something specific. Some say I remember. Some say I see how hard you work and I want you to rest. Some say I want to keep being close to you even when we're not in the same place. Any one of those is more than most Father's Day gifts ever manages."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Star Map Wall Art",
+            price: "$16",
+            reason: "A custom star map prints the exact configuration of the night sky over a specific place and date: the night you were born, the night he walked you down the aisle, the night of a game or concert or trip you both still talk about. At $16 it is the most emotionally leveraged gift on this list. The date and location do all the work. What you're really giving him is proof that a specific moment in time mattered enough that you looked it up and put it on a wall, which is not something most people do.",
+            url: "https://www.amazon.com/Custom-Star-Map-Personalized-Constellation/dp/B07RC9FWLN?crid=2HRNEKXA1EE50&dib=eyJ2IjoiMSJ9.7kwGab3C5Oa4H5mYiQPX-4fSbDd5XooWUO4yZFk5iIynSH6Wz_spTBmPI1BFEfdyC2APySf2DeswthdH1p_ft7FmhG4niOqD1quE3pTiOBSc6ictlEatzSyt9nS967SZb13rWvtjrfCvQ0W6L4ch_VLIaMz6kH_YAx-6hCiMh8RtY80h479DQQLvFqkTyGOD62PSGMu0wlklwTMblbYMr7ZIHSB-RL5Kovyo8odLLSwHa5bRDLZgqO3UvOW0NrrBl26kcmajQeZuOLmgkwM_36ebwItk6kZyLim2Jrf7s5I.7HtUKJo8MmDHBcX41D765-OxvCPMyjif3fSRDF5k2EY&dib_tag=se&keywords=Gifts+Personalized+Star+Map+Print&qid=1776653811&sprefix=gifts+personalized+star+map+print%2Caps%2C214&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8725f7e4afa874791e41f8c93ab2de5b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816L0CW7cgL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Customized Engraved Photo Album",
+            price: "$30",
+            reason: "A physical photo album is the kind of gift that requires actual effort in a way that registers. Choosing the photos, printing them, deciding on an order: none of that is hard, but all of it takes time, and dads notice the difference between a gift that was assembled and one that was ordered. The engraved cover personalizes it without being over the top. This is the gift to give if you want him to have something he pulls out and shows people, not something that lives in a box.",
+            url: "https://www.amazon.com/dp/B0F1N2NRLY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71i94Chha9L._AC_UL320_.jpg"
+          },
+          {
+            name: "Shiatsu Neck and Back Massager",
+            price: "$45",
+            reason: "This one is for the dad who carries tension in his shoulders and has for as long as you can remember, the one who mentioned his back last time you talked, the one who would never book a massage for himself because that's not how he's built. The Shiatsu massager wraps around the neck and upper back with rotating nodes that apply real pressure, not the polite vibration of a cheap handheld device. At $45 it's an honest upgrade. What you're really saying with this gift is: you do a lot, and you deserve to feel better than you do right now.",
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "4x6\" Portable Instant Photo Printer",
+            price: "$139",
+            reason: "This is the gift that keeps working after Father's Day. The portable photo printer connects to a phone over Bluetooth and prints full-color 4x6 photos in under a minute with no ink cartridges required. Once he has it, you can send him photos directly from your phone to his printer whenever you want: milestones, ordinary Tuesdays, pictures of the grandkids, anything. For a dad who's far away or who you don't see as often as you'd like, this closes a gap that a text message doesn't. It puts things on his desk in a form that stays there.",
+            url: "https://www.amazon.com/dp/B088PRX3BD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ySRliPMKL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Hatch Restore 3 Alarm Clock",
+            price: "$169",
+            reason: "Most dads wake up to a phone alarm, have for years, and have never thought twice about it. The Hatch Restore 3 replaces that with a sunrise light that gradually brightens before the alarm goes off, easing the transition out of sleep instead of forcing it. It also functions as a sound machine, with a library of sleep sounds that actually help with the falling-asleep half of the equation too. This is the gift for a dad who's been running on insufficient sleep so long that he's stopped noticing, which describes most dads. He won't buy it for himself. That's exactly why it works coming from you.",
+            url: "https://www.amazon.com/Hatch-Restore-Sunrise-Alarm-Machine/dp/B0DLLSCVZW?crid=1B4TMM9XDMYFX&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_nvJjPI6mZaWu90ueitnPxmNuWbAIhCJc_yEUD0zW9eVDQnjVWDJM-QKBx_kRX3Sd9avRPfMhjViRJL4bKUVrJu0AOQYf4RFvcBLXQwvHijGYRV_pCzwJFhAbIkiNQozAe2GZul6M0jYjhsjGVx0Xj01M___-4MmYB67_TBBa-SZ1Ukaj3I_WPXK-5BsQMprja7hi26_SbQBUi4RnXrdAwAQh6offWzD__Rph03fYa15bAMGFdXY7JZ5_8goW3g-Ma6huwgJA38xDVmOwd_AVIhg.l0SJOwpHsU105Sy7OqPZllxr76jkszOlx28muuzW0DY&dib_tag=se&keywords=Hatch%2BRestore%2B2%2BSunrise%2BAlarm%2BClock&qid=1777842130&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2Caps%2C263&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=094726024f26ad4de9d052138d1c766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/814DUVqPmJL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The note matters as much as the gift",
+        body: "Whatever you send, write something specific in the card. Not a sentiment, a memory. One thing you actually remember. That's the part that gets saved."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+  // FATHER'S DAY GIFTS FOR A NEW DAD
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-new-dad",
+    title: "Father's Day Gifts for a New Dad",
+    excerpt: "He's not sleeping. He's not taking care of himself. These gifts fix that.",
+    occasion: "fathers_day",
+    interests: ["wellness", "tech", "coffee", "gaming"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "fathers-day-last-minute-gifts",
+      "fathers-day-gifts-dad-who-has-everything"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The first Father's Day is a strange one to shop for",
+        body: "He's been a dad for less than a year. He's running on broken sleep and cold coffee and the particular kind of adrenaline that comes with keeping a small person alive. He is not thinking about what he wants for Father's Day, because he is not currently thinking about himself very much at all. That's actually useful information for anyone trying to buy him a gift: the most meaningful thing you can give a new dad is something that takes care of him for a change, or something that quietly says you still know who he is outside of this new role. Both are harder to find than they should be."
+      },
+      {
+        type: "text",
+        heading: "What actually helps versus what just acknowledges the occasion",
+        body: "A lot of new-dad gifts are really just nods to the milestone: funny onesie-and-mug sets, 'new dad survival kits' full of things he doesn't need, anything with '#girldad' printed on it. Those gifts communicate that you noticed he became a father. The gifts below communicate something more useful: that you noticed what becoming a father actually costs him day to day, and you thought about it. Price range here runs from $20 to $219, because the right answer depends more on what he needs than on what the budget is."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "10,000mAh Ultra Slim Power Bank",
+            price: "$20",
+            reason: "A new dad's phone dies constantly. He's using it as a white noise machine, a camera, a flashlight at 3am, a one-handed scroll through anything that keeps him awake during a feed. The INIU power bank is slim enough to slide into a pocket and holds enough charge to refill a phone twice over. There is no version of new parenthood where this doesn't get used every single day. At $20 it's the most practical gift on this list and one of the most practical gifts that exists for this stage of life.",
+            url: "https://www.amazon.com/dp/B0CB1FW5FC?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71gH0eRJcFL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "BOOST Smart Water Bottle 32oz",
+            price: "$46",
+            reason: "New parents are chronically dehydrated and largely unaware of it. The BOOST bottle has LED reminder lights that pulse to prompt a drink every hour, which sounds unnecessary until you realize that a new dad can spend an entire day holding a baby, making coffee he forgets to drink, and eating whatever is fastest, without once filling a glass of water. Insulated stainless steel keeps drinks cold for hours. This is a gift that acknowledges a real and specific thing about what his days look like right now, which is more than most gifts manage.",
+            url: "https://www.amazon.com/Reminder-BPA-Free-Stainless-Insulated-Tracker/dp/B0D479ZB2L?crid=2ADBEYGJS8OO6&dib=eyJ2IjoiMSJ9.NcnSz236mSprkeX4A2qXy4mK-hS6mdHPWsjmlPc9QPq7qysOzmy2Ava-HoXBRhLFIGkuRoiSx7wo-89VTErp-U9gf8nwYq4jFesY9FvUQHt6N5yIp8d7q7FCO2AJGiY7vShN4ZKejnmq0bkIAvJkyLqjsYgXMNlJ7zp78zVOcTDfQcFPvJFFVLxIH0wlb3LRRBhbVmyS2W01V71SGLo4PGOO7PY_30B-Iafzu6_kPC3j9GRbO4-508Q196iIgmFdblaDGdQYRYKxIYsS3Sx9S5Pb6vLkPKNZCDeW46hKEcE.yi_sBYcR-NsCF1PDFKvLhY6mMDJ-7UAJ-aPMcaMVNoM&dib_tag=se&keywords=smart%2Bwater%2Bbottle&qid=1776010057&sprefix=smart%2Bwater%2Bbottle%2Caps%2C327&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=14aae9ebd86d64f726c2df4bec4a6e7d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61j0emHta6L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Keurig K-Mini Portable Coffee Maker",
+            price: "$49",
+            reason: "The K-Mini is four inches wide and brews a single cup in under two minutes. That matters for a new dad because the thing that stands between him and coffee is almost never a shortage of beans. It's the baby waking up mid-brew, the toddler, the phone, the complete impossibility of completing any task that takes more than ninety seconds. A Keurig solves the time problem entirely: pod in, button pressed, coffee in hand before anything can interrupt. This is not a gift for someone who cares about coffee craft. It's a gift for someone who just needs coffee, now, reliably, every morning for the foreseeable future.",
+            url: "https://www.amazon.com/Keurig-Compact-Portable-Machine-Glamping/dp/B0FMSTSYL7?crid=19FI926BGRJ8P&dib=eyJ2IjoiMSJ9.8OGpU9Yu-6EEX9xX0DuffMle4ANwQ0RPvRS2Qk8nPLlG3f4knXorJmRCUeSPH41LprJW1zc6eqc3OClEsC5V1Ocd-PlHhulgVY0XmB-mpOLwWlt1mPraRjIaLEc1YQ9auLdsG1cmVFJt0VRnYsxINcbU8E9HpyqLlskt2DBIJbSwpu-HZatRFPNb6lMTXbpeXCNy436AfepZcnBTpLIuodxmIXrAKKF5Zwkpfn4jj2P7iXEibhgyxSyIztQMmS0PI5Gf8jV1nIY-VC8XePsXJ019AOTbLJAf3uDoNmfwT3s.eYRXJcPyZbkxluCcBbZVRpblmwNc0gYeLY52kKiHcPQ&dib_tag=se&keywords=Keurig%2BK-Mini%2BSingle%2BServe%2BCoffee%2BMaker&qid=1777842338&sprefix=keurig%2Bk-mini%2Bsingle%2Bserve%2Bcoffee%2Bmaker%2Caps%2C290&sr=8-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=13ffb65d2fc32a37a7fb3d10b62bab70&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61FrE0tj9OL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Backbone Pro Mobile Gaming Controller",
+            price: "$169",
+            reason: "This is the identity gift on this list. The Backbone Pro clips onto an iPhone and turns it into a proper handheld gaming console, with physical joysticks and buttons, access to Xbox Game Pass, Apple Arcade, and most major mobile titles, and a form factor that works one-handed on the couch at 11pm when the baby is finally down. For a new dad who gamed before the baby arrived and misses it without quite knowing how to say that, this is the gift that says: you're still that person too, and it's okay to be him for thirty minutes. That's harder to put a price on than $169.",
+            url: "https://www.amazon.com/Backbone-Gaming-Controller-Bluetooth-Pro-Level-Console/dp/B0DQM23MLZ?content-id=amzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db%3Aamzn1.sym.582a5b7f-e458-4b67-81d0-f4623d03d4db&crid=28HTA8BKLDFLF&cv_ct_cx=Backbone%2BOne%2BiPhone%2BController&keywords=Backbone%2BOne%2BiPhone%2BController&pd_rd_i=B0DQM23MLZ&pd_rd_r=a46399da-61f1-41fa-887a-784e8e9305f0&pd_rd_w=Gp89I&pd_rd_wg=LvTdS&pf_rd_p=582a5b7f-e458-4b67-81d0-f4623d03d4db&pf_rd_r=0GZ3YMPRG7MFJG0NHP4E&qid=1776731130&s=handmade&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=backbone%2Bone%2Biphone%2Bcontroller%2B%2Cspecialty-aps%2C233&sr=1-1-905f6665-3817-4290-88eb-a2363c78a4a1-spons&srs=120955898011&aref=cVHAwrUUe1&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9daf56f2f2f30ba53846a39a8153a710&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41xP2Xc9z6L._SX342_SY445_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Ultra-Portable Massage Gun (Theragun Mini)",
+            price: "$219",
+            reason: "A new dad's body takes a beating that nobody talks about: the hunched feeding positions, the hours of carrying, the nights on the couch at an angle that no spine was designed for. The Theragun Mini is the compact version of the percussion massager that physical therapists and professional athletes use, small enough to fit in a palm but powerful enough to actually work on tight muscles and connective tissue. At $219 it's the splurge on this list. It's also the gift that most directly says: your body matters, you're not just the person holding the baby, take ten minutes for yourself. Most new dads need to hear that more than they need another clever onesie.",
+            url: "https://www.amazon.com/dp/B0DV71V4R7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71H1zckV0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing worth saying",
+        body: "The best thing you can pair with any of these gifts is an offer to take the baby for a few hours. The gift opens a door. Giving him the time to actually use it is what makes it real."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+  // FATHER'S DAY GIFTS FOR YOUR HUSBAND
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-for-husband",
+    title: "Father's Day Gifts for Your Husband",
+    excerpt: "You know him better than anyone. These gifts are built for someone who does.",
+    occasion: "fathers_day",
+    interests: ["music", "fitness", "outdoors", "tech", "hobby"],
+    readTime: "5 min read",
+    publishedAt: "2026-05-24",
+    relatedArticles: [
+      "fathers-day-gifts-dad-who-has-everything",
+      "fathers-day-last-minute-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The advantage you have that nobody else does",
+        body: "Shopping for your husband on Father's Day should be easier than it is for everyone else, because you know things about him that nobody else knows. You know the record he puts on when the house is finally quiet. You know he's been saying he'll get back to running for eight months. You know he lights up around a problem that requires real focus. You know what he actually wants and never gets around to buying for himself. The gifts below are chosen to reward exactly that kind of knowledge. None of them are good ideas in the abstract. The right one will be obvious the moment you see it."
+      },
+      {
+        type: "text",
+        heading: "What Father's Day gifting misses when it aims at 'dads' instead of him",
+        body: "The problem with most Father's Day gift guides is that they're written for a dad-shaped person: someone who grills, watches sports, and appreciates a good power tool. That person may or may not be your husband. The gifts here are organized around specific interests and personality types rather than a generic idea of fatherhood, because the gift that lands is always the one that says I was thinking about you, specifically, not about the role you happen to fill right now."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized A5 Leather Bound Journal",
+            price: "$25",
+            reason: "This one is for the husband who has things worth writing down and never does: the one with opinions, ideas, a lot going on in his head that doesn't make it onto paper. The A5 leather journal is compact enough to keep on a desk or bedside table without feeling like a project, and the gold embossed personalization on the cover makes it feel like an object rather than a stationery purchase. You're not giving him a journal. You're giving him permission to take up a little space for himself.",
+            url: "https://www.amazon.com/gp/aw/d/B0D24LDKX5?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=9bb5365bc186c87178f9f4cb90c081d0&hsa_cr_id=0&qid=1775774613&sr=1-2-9e67e56a-6f64-441f-a281-df67fc737124&pd_rd_w=U65Id&content-id=amzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507%3Aamzn1.sym.2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_p=2fb72bc8-96ef-420d-b08f-c04b69f36507&pf_rd_r=ARRXF53ST4Y3K1VD65FY&pd_rd_wg=PmraY&pd_rd_r=e76aa7ec-d9a3-4a30-aaa7-c102a867b334&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=18a7ed644d91e499ebbebfc7bbb1d9f2&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71GlpMEAomL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Victrola Journey Bluetooth Record Player",
+            price: "$54",
+            reason: "For the husband who still talks about specific albums the way other people talk about meals they remember: this is the gift that gives vinyl back to someone who hasn't had a record player in years. The Victrola Journey is a portable suitcase-style turntable with built-in Bluetooth speakers, so it works anywhere without needing a separate sound system to set up. It plays 33, 45, and 78 rpm records. If he has a box of albums in a closet somewhere, or has been picking them up at markets without anywhere to play them, he knows exactly what to do with this.",
+            url: "https://www.amazon.com/Victrola-Bluetooth-Suitcase-Turntable-Turquoise/dp/B00UMVVUOC?crid=3A6UL297LFY65&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.B_2j35_Vg9b_AlLlAUMvulZRsbQ7rGVyBiFjwAtjPxFUj-W-s6TBlqDWEPkCLLV77y8Fh4ZCrfILitMl4RUmFIGqRgDsFObmc4IxNOk40EubSEnaBENO8Cly1yIhjuCDG0WpG_VgKQHZo-y_L4iBEQCJyOKbjg_ROqzJo3zDZVfIqg_MxH7XGNV4GPGHvcj124RaGYEeofb_MF5ItrlScdDpwbOM-zSn7ubGypozgec.6I38cXLys5ntWFv_Rol112QAE9I9ACrlVDl76Vy_QzY&dib_tag=se&keywords=bluetooth%2Brecord%2Bplayer&qid=1775431322&s=samedaystore&sprefix=bluetooth%2Brecord%2Bplayer%2Csamedaystore%2C169&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=22ef620ab421f22cfe313ea42640766d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71q-KKcG4aL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Electronic Puzzle Box - 3D Wooden",
+            price: "$64",
+            reason: "This is for the husband who gets visibly more alive around a problem. The Tesla Box is a 3D wooden mechanical puzzle with hidden electronic components: it requires a specific sequence of moves and discoveries to open, functioning like an escape room built into a single object. There's no instruction manual. You figure it out or you don't. For a husband who finds most things too easy or too passive, this is the gift that actually holds his attention for a full evening rather than fifteen minutes, which is harder to achieve than it sounds.",
+            url: "https://www.amazon.com/PUZZLE-POTATO-Tesla-Box-Electronic/dp/B0DFWQ6N2K?crid=N8806BZZZS6G&dib=eyJ2IjoiMSJ9.6PROe1-KAPK59tTkqg0xw3jIvERXyj_W7_n_caYFfFWtxZHH4DwoLRIlEE3nlpTGBKYxAqpkVwxXAJswGdwCXoESyKGqBnPxXbay-BjRW_6LuKFZGckVJc-LtG6w5ImTuqRZKu0-Xep47u_PTsRoIJra6a1fO-CVSD96VwgrcF_b0ea-iGt7J4NUk6_JKiVpqGhBh0ZDkkMyIBAaQ0jnKgK3pkW4-A06B3Y2d0eWRdmBKr0f4n4lq-9lBd6xdwfULKM3U63Uqqp_PAzQmyRnChGPVj0cNqiFxpO4C_REf70.4Zhvf_I7Z101UdJh4-F96wMmPkPWdfN8RN2jWTiSi3Q&dib_tag=se&keywords=Puzzle%2BBox&qid=1773537081&sprefix=puzzle%2Bbox%2Caps%2C239&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=56c163ce7f7d6e5523efef0b1ba98d54&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81ub9zRZYEL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Garmin Forerunner 55",
+            price: "$150",
+            reason: "For the husband who used to run, wants to run again, and keeps not quite getting there: the Forerunner 55 is the GPS running watch that removes the last remaining excuse. It tracks pace, distance, and heart rate, generates daily suggested workouts based on his current fitness level so he's not guessing at effort, and has a battery that lasts two weeks between charges. At $150 it's specific enough to feel like a real commitment without being the kind of investment that puts pressure on him. Sometimes the gift that gets someone back to something they love is just the one that makes starting feel easier.",
+            url: "https://www.amazon.com/dp/B0BFCZYMLY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61XNnt+pdDS._AC_UY218_.jpg"
+          },
+          {
+            name: "4K Outdoor Projector with WiFi",
+            price: "$239",
+            reason: "This one is technically for him but practically for both of you, which is often the best kind of gift a wife can give. The iSinbox 4K outdoor projector has built-in WiFi and a smart TV operating system, meaning it connects to Netflix, YouTube, and Prime Video without needing anything else plugged in. Set it up in the backyard, point it at a wall or a sheet, and you have an outdoor cinema. For a husband who's mentioned wanting to do something like this, or one you'd like to spend a few more summer evenings with outside, it's the gift that creates the occasion rather than just marking it.",
+            url: "https://www.amazon.com/Projector-Bluetooth-Dual-Mode-Proyector-PrimeVideo/dp/B0FM82SPKH?crid=3DNWGSYLSQP5G&dib=eyJ2IjoiMSJ9.IrfIVC1GiZpuf31gCW1-cdFb1w2X2b7zmM2EUcgFwhfr58aeXuN8x0G9kiY9qRAJ0m71nV2m7VRE0Zpq93EsaH4g-OH6oypG7L2FA886WL2b-GOBI5RW6FRJmouXUx5pDTBFLGjzUrarbxcSyrakezEQRVc7KOvSWHDxpWLx-d6bhrwUmuCD58T7lZ25gfnyD_YNavvQa7BVYJA_FYCudmQlDLQQPCJRc6tN0sJaHTE.ZAbE0isguxEmyZlHrx0eLwkOAc84mck7LgbXHlz9D_Y&dib_tag=se&keywords=Portable%2BOutdoor%2BMovie%2BProjector&qid=1773535965&sprefix=portable%2Boutdoor%2Bmovie%2Bprojector%2Caps%2C278&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=4496a9fe2b46a887d56029a83bd4be37&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71gRC82ohAL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The thing that makes this different from any other Father's Day gift",
+        body: "You already know which one is right. That instinct, the one that says he would love this or he's been waiting for something like this, is the whole point. Trust it. Write one sentence in the card about why you picked it. That's the part he'll read twice."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+  // FATHER'S DAY GIFTS FOR A DAD WHO LOVES THE OUTDOORS
+  // ============================================================================
+  {
+    slug: "fathers-day-gifts-outdoor-dad",
+    title: "Father's Day Gifts for a Dad Who Loves the Outdoors",
+    excerpt: "Five gifts for the dad who is at his best when he's outside.",
+    occasion: "fathers_day",
+    interests: ["outdoors", "fitness", "cycling", "hiking"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-07",
+    relatedArticles: [
+      "fathers-day-gifts-dad-who-has-everything",
+      "fathers-day-last-minute-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Gifting someone who already owns the basics",
+        body: "A dad who spends real time outside has usually accumulated the gear he needs through years of trial and error. He has opinions about it. He replaced the cheap stuff long ago and is unlikely to be impressed by anything that reads as beginner equipment. The gifts that land for this type of person are either meaningful upgrades to something he uses constantly, or genuinely new things that solve a problem he has accepted as just part of being outside. Both categories require paying attention to how he specifically engages with the outdoors, not just the fact that he does."
+      },
+      {
+        type: "text",
+        heading: "What makes a great outdoor gift versus a well-meaning miss",
+        body: "The miss is usually something that looks outdoorsy without being specific to anything: a generic multi-tool, a decorative compass, anything with a mountain logo and no real function behind it. The outdoor dad who takes his time outside seriously responds to gifts that treat him as someone who knows what he's doing. These picks are chosen for a dad who actually gets out there, across hiking, cycling, running, and the kind of slow outdoor time that deserves its own category."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "STANLEY Quencher ProTour Tumbler 30 oz",
+            price: "$40",
+            reason: "The Stanley Quencher ProTour is the version built specifically for activity rather than the desk. The ProTour Flip Straw lid lets you drink one-handed without unscrewing anything, snaps shut to prevent spills, and fits a standard car cupholder, which matters when he's heading out at 6am. Double-wall vacuum insulation keeps drinks cold for hours in full sun. For a dad who's outside regularly and currently drinking from whatever was available, this is the kind of quiet upgrade that improves every single outing without announcing itself as a gift.",
+            url: "https://www.amazon.com/Leakproof-Cupholder-Compatible-Insulated-Stainless/dp/B0DCDZP98B?dib=eyJ2IjoiMSJ9.29dH_iwoxIhj_jwoJBkzf7HgRzM3sexdgEKX8SguWt6dS-663dyhZfvPQ5VvcBIER18rENSpM3RwNAOLKCbsTSlo_I3IJAei1rXi5g4KHcExVhnBsO-qsbc53ObReWCc3F7dZpewl05r_oAqXJ03u2DrRe89siLYmg1EMaF-nH3itmLoBj5K2OJXYq0pBIUtuZsauR64e5EbtTOjYTrBGzp6I_GVDl_ec82YCwQjug70x-nk2vhNrsuqC2nAQ9RAIRANIi5of5e3t4jPt6lTlUlaQ49kkc4a9qOHfbg5sCw.F689nwW0ga1IYpFpru3a9qJUD8Yn9XQiyVA-Jd3J24w&dib_tag=se&keywords=stanley%2Bquencher&qid=1777840415&sr=8-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=37ccbd86f288942a2d304698f88d4c07&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51L-q8h+bwL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Giro Fixture MIPS II Cycling Helmet",
+            price: "$85",
+            reason: "For the dad who cycles and is still wearing a helmet he bought five years ago because replacing it never quite made the priority list: the Giro Fixture MIPS II is the upgrade worth making. MIPS is a rotational impact protection system that reduces the forces transmitted to the brain in the kind of angled crash that helmets were historically bad at handling. The Fixture II sits at the point where the safety technology is genuine rather than marketing, and the ventilation and fit system are properly designed for long rides rather than occasional use. A better helmet is not a glamorous gift. It is a useful one, which matters more.",
+            url: "https://www.amazon.com/dp/B0GFBTCKGT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/616uX4Nfg1L._AC_UL320_.jpg"
+          },
+          {
+            name: "SHOKZ OpenRun Pro Bone Conduction Headphones",
+            price: "$139",
+            reason: "Bone conduction headphones solve the problem that every outdoor dad who listens to music while running or cycling has quietly accepted: standard earbuds block the sounds you need to hear. The SHOKZ OpenRun Pro sits on the cheekbones rather than in the ears, transmitting audio through vibration while leaving both ears fully open to traffic, trail conditions, and everything else happening around him. The dual-driver system on the Pro model combines bone conduction with air conduction for audio quality that's genuinely good rather than merely functional. Twelve hours of battery, IP55 water resistance, and a design that stays on through a full run. For a dad who's outside and moving, these change what listening to music feels like.",
+            url: "https://www.amazon.com/SHOKZ-New-OpenRun-Pro-Comfortable/dp/B0FH4QX7TH?dib=eyJ2IjoiMSJ9.TVb5kEGmjMahLc2ZrEgdzyx_NZcZnkCMR7ah1ugbDMHaRN2c9y71f6rWOqT6lxul1IPkQeUO7A0ilAxUzbHZp9m1MB8ucBkbXyJotbAdtUeKBs7Klxwux5P4RG2mP2t1N23DXMLNmLs2vO27seW3vARzmHGUIn1Rqzw-hrIvCenaVrBICpjJy_5jBcuz-G8SKrKHbPsJPOrlu2QbReurAuTxqJw_uJEo9HhXCD6PQMY.dHKCcu9FxnyErBEcc_Bt332kowVnva3NIbCEw8r14pY&dib_tag=se&keywords=bone%2Bconduction%2Bheadphones&qid=1775607536&sr=8-3&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b7987e7f304ee046d043bfaa35836aec&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51f7hhpfGnL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Garmin GPS Running Watch with Daily Workouts",
+            price: "$169",
+            reason: "For the dad who runs or hikes and is currently navigating by feel and rough distance estimates: the Garmin Forerunner changes what training looks like. GPS tracking, wrist-based heart rate, and daily suggested workouts that adjust to his current fitness level mean he's not guessing at effort or recovery anymore. The battery runs for two weeks between charges, which is the difference between a watch that gets worn every day and one that stays on the charger half the time. For an outdoor dad who takes what he does seriously but hasn't invested in tracking it properly, this is the piece of kit that closes that gap.",
+            url: "https://www.amazon.com/Garmin-Forerunner-Running-Suggested-Workouts/dp/B092RH28GN?crid=3UXLKOM2V2JMS&dib=eyJ2IjoiMSJ9.3JJNc3wPtOyEngqmKQIfNW5ats_fPIsEYUZHgSDBKvddwHtMNG_Oz04uIyMn8TKZMTxT9kwnvgZUxJKJngfkwG69ZTcfBijI4oi1Wlcw8QJFJAGJjDLaxP1cUB-4uTE6gkyHDVrUiIbcIfnxGn-vP7iJ5ZAs8cmxyZO7nTfqatXZEzhCIri8MlzzqQbLF_gp9Y2GvwspKkIjrd5JVadaKlrTAAImdAzZI5lP2bt1OgM.6zyP3ZgsgpsJblkx6IaA94uwaUq_q3veNbQEg19gcy4&dib_tag=se&keywords=garmin%2Brunning%2Bwatch&qid=1772586295&sprefix=%2Caps%2C370&sr=8-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=28aff32a41eda4391c71c358d27d6aa4&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51oLbLikOeS._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "2-Person Outdoor Hammock with Stand",
+            price: "$199",
+            reason: "This is for the dad who spends time outside and rarely slows down while he's there. The double hammock with a freestanding steel stand needs no trees, no specific campsite setup, no planning: it goes in the backyard, the park, or anywhere flat. The quilted polyester pad and built-in headrest make it genuinely comfortable for an afternoon rather than ten minutes. At $199 it's the gift that creates a habit rather than a single occasion. For a dad who's always moving when he's outdoors, giving him something that specifically invites him to stop and stay somewhere is its own kind of statement.",
+            url: "https://www.amazon.com/Everyfun-Polyester-Adjustable-Portable-Carrying/dp/B0FMDYQFWZ?crid=36HYK0SHGY7X7&dib=eyJ2IjoiMSJ9.0gor6a9VZm3ZgdAABiXZ7ODlqrNSgiSM08dymlFeYNIsB4VUP5BKISSLrZhitGzQMKM-ecrVcJUB9deKw_C0qcVPMJWnuHI6ftK_N1IxvLApXgjjPw1LYmYtcd_LUy-Xa7Y33lcQmKYBBM992z-NotNhEqjxwCOKQtWSJJ2BZ6tyyw8KeyLznQOfNvBQ14XOsAAsg_w6BTm-g6uF2JzKOfJZ7wAUcfhKhQVcT74WnEzTNHaLNv2jXEZvKxQ27Ij2WmKvjKhsSQ0rK68Tkh7r4Ob3jW6ynxolioULRBGsHxk.2zSnS8VhzZTfAzKFad95DkjLerYCjq13p5XjfDLpNHo&dib_tag=se&keywords=Premium%2BCamping%2BHammock&qid=1772582431&sprefix=premium%2Bcamping%2Bhammock%2Caps%2C352&sr=8-5-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=54cebdefa34f457130d7e23b9edd316a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71ZI9Z7oIHL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing to consider before you order",
+        body: "The helmet and the watch are the two picks where sizing or compatibility matters. The Giro Fixture MIPS II comes in S/M and M/L. The Garmin pairs with any phone. Worth confirming those details before checkout rather than after."
       },
       {
         type: "cta"

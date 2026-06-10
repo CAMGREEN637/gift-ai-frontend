@@ -3202,8 +3202,8 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             name: "Shiatsu Neck and Back Massager",
             price: "$45.00",
             reason: "A heated shiatsu massager with rotating nodes that works on the neck, shoulders, and back. It is the kind of practical comfort gift that requires enough intimacy to give well: you have to know she carries tension in her shoulders, or that she comes home from work stiff, or that she has mentioned wanting one. Two years in you probably do know that, and this is the gift that acts on it. She will use it more than almost anything else on this list.",
-            url: "https://www.amazon.com/dp/B07BGPQSJY?tag=cbggiftapp637-20",
-            image_url: "https://m.media-amazon.com/images/I/61VFDj7WSYL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            url: "https://www.amazon.com/dp/B07G142F9Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71fdZ-Ei0tL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "Personalized Engraved Wooden Keepsake Box",
@@ -3216,8 +3216,8 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             name: "Fellow Stagg EKG Pro Kettle",
             price: "$179.00",
             reason: "The Fellow Stagg is the kettle that serious coffee and tea drinkers eventually arrive at: precision temperature control to the degree, a slow-pour spout designed for pour-over, and a design that looks considered sitting on a counter rather than hidden in a cabinet. For a girlfriend whose morning routine matters to her, this is the kind of upgrade that changes how that routine feels every single day. It is also the kind of thing she would admire but never quite buy for herself, which is exactly where a two-year anniversary gift should sit.",
-            url: "https://www.amazon.com/Fellow-Stagg-Stovetop-Pour-over-Thermometer/dp/B083121W7G?crid=JTQKLBQ3BN5P&dib=eyJ2IjoiMSJ9.V5C7xCm3DKhHTXtjLEFe3OlMknPHK2Yyx4f8JMM1p2wKwxiHVDN3c89xzLF3F0F8rCHJ7mTleBT7_v7P2Mk35pWfhYT7JKnifJOYVPjlkRrxFnqpB3s8MiMFcOO4qKnOWXrFc1RCdR4Uv5X_HZTdvnzQ2x2xMaTNT7b6R7hkZKD4VHcm8b2KdJEcfSdm_2VlQECXflsj6YdwSN78qJGFE1kKD8PbhQjhcFQH4YbYNXpW3dTmwN7xEj5b3zSSvtfJcGsFWBzuQBv3Bp5w6YA8yfbQWq8iC0KkBmBB_8E.example&linkCode=ll2&tag=cbggiftapp637-20&linkId=fellow-kettle&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/51PBtVl0c-L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            url: "https://www.amazon.com/Fellow-Stagg-Electric-Gooseneck-Kettle/dp/B0BF7DXLBF?crid=3OIMZOVWJNRXA&dib=eyJ2IjoiMSJ9.kgh-95Gmn8iXvGBVrnDCwGYdH7kyBSsJUYSbIVGugVCU7ykZcZ0-q8ZTxnprn2nesd4fsNV_4UiRsDLDcPu1nuvbXkS6XfxBYeCJWnCZNySX3ROQ16gqFvjhH6z7ILy9uNJneHAeZ-EURmTnfhcBHi1agw-0Yowqwh1-gaAd0hUiyGkRSlcokxhkMaszS00Se5RyIJox-GUC59jO6qfVHrdOmh4SPeFJEquaVa5fpgE.kK2UVqiZS6OHuJWy5OJI_lb5cQkKt2DQcuLCR7_NuLs&dib_tag=se&keywords=Fellow%2BStagg%2BEKG%2BElectric%2BPour-Over%2BKettle&qid=1776730622&s=handmade&sprefix=fellow%2Bstagg%2Bekg%2Belectric%2Bpour-over%2Bkettle%2Cspecialty-aps%2C433&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=e5edc9a0e8e188c4b4cf4ce4ea95024b&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61grHEIj7PL._AC_SY300_SX300_QL70_FMwebp_.jpg"
           },
           {
             name: "6.5qt Enameled Cast Iron Dutch Oven",
@@ -3230,8 +3230,8 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
             name: "Rose Gold Oura Ring, Size 9",
             price: "$499.00",
             reason: "The Oura Ring tracks sleep quality, heart rate variability, body temperature, and recovery, delivering insights through an app that gets more accurate the longer she wears it. It is the most unobtrusive wearable on the market and the one that health-conscious women who have resisted fitness trackers tend to actually want. At five hundred dollars this is a real commitment as a gift, which is exactly why it fits at two years and nowhere earlier. Only give this if she has mentioned it, follows wellness closely, or you know with confidence it will land.",
-            url: "https://www.amazon.com/Oura-Ring-Generation-3-Sizing/dp/B0BXRZ9N13?crid=1JV1N2RKWHFKC&dib=eyJ2IjoiMSJ9.GmAEGxiCBcxPIiaCRa5mvgVJxr7w1YWSQ0V-WQlMpb5RfElCDyGc0sHTzf0gvxaVrNNbVOlb8HOi1bhTq4d_-ZqLGV8p2V2QR-BKDI-iFTEeSVXbAsPHPAlxPbsq-3MOSjdN7QUFB5t1RJpj0d-8JxfpIvP2i-OtGxj1H_Pt8VPGbBp1WCHlbZuvfZ3XCCkTc7eU8GnX4L64pjBtY4BiqPLLKiQqGElfZr3-z4VyQ-YtUV-4CZ2sE4l_eI0kvTbAfZ2bKqYlD4oFbM1sXq5yCFDHZajIJSp89Vy00mKI.bLBqmAFh6zUi5qVFPQXqWgdPrk8ueq9DFP7LKJZOZFc&dib_tag=se&keywords=oura%2Bring%2Brose%2Bgold&qid=1776647695&sprefix=oura%2Bring%2Brose%2Bgold%2Caps%2C221&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=0b8e4cc00048e2f3c1b56adcabd13ac3&language=en_US&ref_=as_li_ss_tl",
-            image_url: "https://m.media-amazon.com/images/I/41M9gNwT1gL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+            url: "https://www.amazon.com/Oura-Ring-Tracking-Wearable-Fitness/dp/B0D9WV3474?crid=1SF6Z7F9VRB46&dib=eyJ2IjoiMSJ9.IzR6mfi0tEmvMVGOTQpLj0AKbm96ymX28ha5429xXCJwa2zoLYJolC5su-0p8OebQs35hNsR-K8Cp7d9aWLh1l_5ZYDq27fOM3fpmRcEOf1_aRzgqtB_GCYzCZdjq6eujSIgGqaYDVFrfp1qsYAE3LAxabmfjKpkrTkvFQO-BCo5CecCI8A8uxb4lgzvkIxNn6xAhL_5jq5yYCstRkH_mK2VHv98Q7o7FiFH9oIkCyE.jkKLgUH4BjH_jDLkzb-EVEjSSQ4ZWZWByiENll3Qyko&dib_tag=se&keywords=Oura%2BRing%2Bgen%2B3&qid=1773371204&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=oura%2Bring%2Bgen%2B3%2B%2Caps%2C232&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7fefc7c69fb1dca3420cec09c1e66fab&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51zKmnnZU8L._AC_SY300_SX300_QL70_FMwebp_.jpg"
           }
         ]
       },
@@ -6171,7 +6171,7 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     occasion: "fathers_day",
     interests: ["music", "fitness", "outdoors", "tech", "hobby"],
     readTime: "5 min read",
-    publishedAt: "2026-05-24",
+    publishedAt: "2026-06-07",
     relatedArticles: [
       "fathers-day-gifts-dad-who-has-everything",
       "fathers-day-last-minute-gifts"

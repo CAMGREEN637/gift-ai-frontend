@@ -6543,6 +6543,650 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO DOES PILATES
+// ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-does-pilates",
+    title: "Gifts for a Girlfriend Who Does Pilates",
+    excerpt: "She shows up three times a week and actually looks forward to it. These gifts match that level of commitment.",
+    occasion: "birthday",
+    interests: ["fitness", "yoga", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "birthday-gifts-girlfriend-loves-yoga",
+      "gifts-for-girlfriend-who-loves-healthy-eating",
+      "gifts-she-would-never-buy-herself"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Pilates is a hobby, not just a workout",
+        body: "For a woman who does Pilates consistently, it is not something she does to stay in shape. It is part of how she structures her week and how she feels in her body. Gifts that acknowledge that, rather than treating it like generic exercise, land completely differently. The ones that work are the ones that fit how she actually moves, recovers, and thinks about her practice."
+      },
+      {
+        type: "text",
+        heading: "Where to focus",
+        body: "The best Pilates gifts fall into three categories: equipment that extends what she can do at home, recovery tools that support the work she is already putting in, and upgrades that make the studio experience feel more intentional. You do not need to know her exact routine to get this right. You just need to know she takes it seriously."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Himaly Resistance Bands Set",
+            price: "16.99",
+            reason: "A set of five fabric resistance bands in graduated resistance levels, designed for lower body and glute work that complements Pilates training directly. For a girlfriend who attends classes regularly, bands are the most natural extension of what she is already doing. She can use them at home on rest days without needing a reformer or any other equipment.",
+            url: "https://www.amazon.com/dp/B07V54LFDB?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71GCykfew2L._AC_UL320_.jpg"
+          },
+          {
+            name: "Ayombo Pilates Bar Kit",
+            price: "24.99",
+            reason: "A resistance bar with adjustable bands that replicates the kind of controlled, low-impact work she does on a reformer, usable at home on a mat. For a woman who goes to a studio regularly but wants to keep up between sessions, this is the closest thing to a reformer workout that fits in a closet. It is specific enough to show you understand what she actually does, not just that she exercises.",
+            url: "https://www.amazon.com/dp/B0CRHDRVHQ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/813sEL15XeL._AC_UL320_.jpg"
+          },
+          {
+            name: "TriggerPoint Grid Foam Roller",
+            price: "27.69",
+            reason: "A high-density foam roller with a multi-density surface designed to work out muscle knots more effectively than a flat roller. Pilates targets deep stabilising muscles that accumulate tension in specific ways, and a quality foam roller is the tool that keeps her feeling good between sessions. The TriggerPoint Grid is the one that people who use foam rollers seriously actually buy.",
+            url: "https://www.amazon.com/dp/B0040EGNIU?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71WUESEiowL._AC_UL320_.jpg"
+          },
+          {
+            name: "Yoga Starter Kit",
+            price: "56.99",
+            reason: "A complete mat kit with blocks, a strap, and a carrying bag, in a colorway that looks intentional rather than like gym gear. For a Pilates woman who also stretches and moves at home, this fills out her practice without duplicating anything she already has. The strap in particular is something serious movers use constantly and rarely buy for themselves.",
+            url: "https://www.amazon.com/dp/B09YHHBMKN?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71t2sITZIML._AC_UL320_.jpg"
+          },
+          {
+            name: "Garmin Vivoactive 5",
+            price: "164.95",
+            reason: "A GPS smartwatch with built-in Pilates activity tracking, recovery metrics, sleep tracking, and body battery monitoring. For a girlfriend who is serious about her practice, being able to track her sessions, see how her body is recovering, and monitor trends over time changes how she relates to her training. It is the gift that shows you see the commitment she puts in and want to support it at that level.",
+            url: "https://www.amazon.com/dp/B0CNJ5V5DM?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/610Jl4dUB7L._AC_UY218_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth knowing",
+        body: "If she goes to a studio, avoid buying mat-specific gear without knowing what the studio provides. The resistance bands, the Pilates bar, and the foam roller work regardless of where she trains. The Garmin works for any level. The mat kit is best if she also has a home practice."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO CYCLES
+// ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-cycles",
+    title: "Gifts for a Girlfriend Who Cycles",
+    excerpt: "Whether she rides for the commute, the fitness, or the Saturday morning group ride, these picks match how seriously she takes it.",
+    occasion: "birthday",
+    interests: ["cycling", "fitness"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "birthday-gifts-cycling",
+      "gifts-girlfriend-training-first-marathon",
+      "gifts-she-would-never-buy-herself"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Cyclists are particular about their gear",
+        body: "A woman who cycles regularly has opinions about her setup. She knows what fits her bike, what she reaches for on every ride, and what has been on her wishlist for months. The gifts that miss are the ones that feel like they could have been bought for anyone who exercises. The ones that land are specific to how she actually rides."
+      },
+      {
+        type: "text",
+        heading: "What to focus on",
+        body: "The best cycling gifts fall into two categories: things she uses on every ride that are worth upgrading, and things that make a meaningful difference to her safety or performance. Both are easy to get right if you know roughly what level she rides at. A casual weekend rider and a woman who tracks her route data every session need different things, and the picks below cover both ends."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "CamelBak Podium Chill Water Bottle",
+            price: "15.95",
+            reason: "A bike-specific insulated water bottle with a self-sealing jet valve designed for one-handed use while riding. For a cyclist, hydration during a ride is not the same as drinking from any bottle. The CamelBak Podium is the bottle that serious riders actually use because it fits standard cages, doesn't leak when squeezed, and keeps water cold longer than standard bottles. It is a small upgrade that gets used on every single ride.",
+            url: "https://www.amazon.com/dp/B07HGRWG1S?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61D9Uc0+r+L._AC_UL320_.jpg"
+          },
+          {
+            name: "Lamicall Bike Frame Bag",
+            price: "25.99",
+            reason: "A water-resistant frame bag that mounts to the triangle of her bike frame and keeps her phone, keys, and snacks accessible without a backpack. For a cyclist who does longer rides or commutes, not having to stop and dig through a bag changes the whole experience. It is the kind of practical upgrade that looks minor but gets commented on every time she uses it.",
+            url: "https://www.amazon.com/dp/B0D9GQMXBV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71VKkKd2xtL._AC_UL320_.jpg"
+          },
+          {
+            name: "Ascher USB Rechargeable Bike Light Set",
+            price: "29.99",
+            reason: "A front and rear light set with USB-C charging, multiple brightness modes, and enough battery life for extended evening rides. For a woman who rides early mornings or after work, lights are not optional. These are bright enough to be seen in traffic and compact enough that she will not mind leaving them on the bike. The rechargeable setup means she is never caught out with dead batteries.",
+            url: "https://www.amazon.com/dp/B0FH4WX7P2?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/718cDGxWNvL._AC_UL320_.jpg"
+          },
+          {
+            name: "Giro Register MIPS II Women's Helmet",
+            price: "84.95",
+            reason: "A women's-specific road helmet with MIPS protection, 18 vents for airflow, and a fit system that actually adjusts to smaller head shapes. For a girlfriend who is still riding in an old helmet or borrowed gear, this is the gift that matters most. MIPS technology reduces rotational forces in a crash in a way that standard helmets don't, and the women's fit means it sits correctly rather than just tolerably.",
+            url: "https://www.amazon.com/dp/B0GGDWQQSF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61PJqXNXmTL._AC_UL320_.jpg"
+          },
+          {
+            name: "Compact GPS Cycling Computer",
+            price: "339",
+            reason: "The Garmin Edge 540 is a dedicated GPS cycling computer that tracks route, speed, power, gradient, and recovery metrics, with turn-by-turn navigation and compatibility with sensors she may already own. For a serious cyclist who currently relies on her phone or a basic watch for data, this is the upgrade that changes how she trains and rides. It is the gift that shows you have been paying attention to how seriously she takes it.",
+            url: "https://www.amazon.com/Garmin-Computer-Controls-Targeted-Navigation/dp/B0BT36VBGM?crid=22NPQVRDI56B2&dib=eyJ2IjoiMSJ9.HS7KqiBfeLAZVFDvw3vIgnBKPnStS4oCjzBKx1zbLzGmg-VZNpJrYeAogeQpyI9tLwfdaNms7pxtHTF-G8dfVEWia0xj6EQJjGWI2lRRwSsw0NcqC47pLaLQTATT2rlwXNK2OlQzRM1om_6zLHRD3HukWfIa_BPV8c3zmvRVHH9OHZIwTuecYvkqC5FqIm0gqaM7Bl9C-v7ulCR3Mq3VzyiJhtBb5WBbN7wA9_aBD_StBQ2xHGwqUImuSjMqyfckhAbDTclEUfZOwh-SnZrDN_ZGZd4uQKzmSFmsX0rhUhg.en6FDlnImIc0EHxatLzKm-o12QfixaZWEvJYah5d9NI&dib_tag=se&keywords=Premium%2BCycling%2BComputer&qid=1773535144&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=premium%2Bcycling%2Bcomputer%2Caps%2C244&sr=8-6&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=f313c959a73f37a58f4c3a77c9a4a027&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/612ELumqRyL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "How to pick based on where she is",
+        body: "If she is newer to cycling or rides casually, the water bottle, frame bag, and lights are all useful immediately and require no knowledge of her setup. The helmet works at any level but check if she already has one she loves. The Garmin is for the woman who tracks her rides and would actually use the data."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// GIFTS TO SPOIL YOUR GIRLFRIEND
+// ============================================================================
+  {
+    slug: "gifts-to-spoil-your-girlfriend",
+    title: "Gifts to Spoil Your Girlfriend",
+    excerpt: "These are not practical gifts. They are the ones she has wanted for a long time and would never spend this much on herself.",
+    occasion: "birthday",
+    interests: ["skincare", "wellness", "home_decor", "photography"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "gifts-she-would-never-buy-herself",
+      "gifts-she-would-never-think-to-buy-herself",
+      "safe-gift-ideas-for-your-girlfriend"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Some gifts are just for spoiling her",
+        body: "There is a category of gift that is not about solving a problem or matching a hobby. It is about spending more than she would ever spend on herself on something she genuinely wants. These gifts work because the price is part of the message. They say you paid attention, you saved up, and you wanted her to have something she would not have bought otherwise."
+      },
+      {
+        type: "text",
+        heading: "What makes a splurge gift actually land",
+        body: "The difference between a splurge gift that lands and one that misses is specificity. An expensive thing she does not want is just an expensive thing. The picks below are each best-in-class at what they do, which means they work for the right woman regardless of budget. Pick based on what she has mentioned wanting, what she uses every day, or what she has talked herself out of buying."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Polaroid Now+ Instant Camera",
+            price: "229.99",
+            reason: "A Bluetooth-connected instant camera that prints photos on the spot, with a companion app that adds double exposure, light painting, and manual controls. For a girlfriend who takes photos constantly on her phone but never prints them, this is the gift that changes that. The prints come out immediately and go straight on her wall, her mirror, or her journal. It is the kind of object that becomes part of how she documents her life.",
+            url: "https://www.amazon.com/dp/B0F8KQW9TV?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71h9VFhxOOL._AC_UY218_.jpg"
+          },
+          {
+            name: "Winter Kit Skincare Gift Set",
+            price: "280",
+            reason: "A premium skincare set built around a full winter routine: cleanser, serum, moisturiser, eye cream, and mask, all from a single brand formulated for hydration and barrier repair. For a girlfriend who takes skincare seriously, a complete kit from a brand she trusts is more meaningful than a single product. It replaces her current routine with something noticeably better and covers every step she already does.",
+            url: "https://www.amazon.com/dp/B0FRGCG42X?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/614aheSyL2L._AC_UL320_.jpg"
+          },
+          {
+            name: "Le Creuset 6.5qt Enameled Cast Iron Dutch Oven",
+            price: "289",
+            reason: "A 6.5-quart enameled cast iron Dutch oven in Le Creuset's signature artichaut colourway, built to last a lifetime and backed by a lifetime warranty. For a girlfriend who cooks regularly or has talked about wanting to cook more, this is the centrepiece piece of kitchen equipment she will use for decades. Le Creuset is one of the few kitchen purchases people keep forever, and the colour makes it a piece she will leave on the stove even when she is not using it.",
+            url: "https://www.amazon.com/Creuset-Enameled-Signature-Round-Artichaut/dp/B07RXBSWZZ?crid=29M2RNIQI65CV&dib=eyJ2IjoiMSJ9.zg3iPs8agRKCchFLOXS7h7EK0szh4EpkojQGW2Vmvb3YR4Lyg9sum8uQvi7CIBaoWozDWCCaVAoEMFGcdbdgJRxT9ot8MXvtTGJwbiUdbNccrMdcPY3IxK7fO0O3_Ic-VZZe_lmvvpYTMm6Toz8mvZ6uKl8K1v2cn8mfkzlg6Sveuozdbinr3tawS6BrrXNUaTGGKRn7x_6JgGXIdcnldNMNQF3Y8eJFl7YNGarTqd9dvDZ16tBtLl36LpMGWYI4BEa_MXeceaeYERciaz2XUWoOlRNRFcYLrQ6UW_30JnM.SI896DJBYRmSYcQ_Pnm-6-3pzgtKSxSoMyEQATdads0&dib_tag=se&keywords=Le%2BCreuset%2BDutch%2Boven&qid=1773371582&sprefix=le%2Bcreuset%2Bdutch%2Boven%2Caps%2C343&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=5743fe6d2fb116790feb2470792c6bbe&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61NhCrCEh9L._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Rose Gold Oura Ring, Size 9",
+            price: "499",
+            reason: "A sleek ring-form health tracker that monitors sleep stages, heart rate variability, body temperature, and recovery score overnight, with no screen or notifications to interrupt her day. For a girlfriend who is health-conscious or wants to understand her body better, the Oura gives her data that a watch or phone cannot: what is actually happening while she sleeps. The rose gold finish means it looks like jewellery, not a fitness device.",
+            url: "https://www.amazon.com/Oura-Ring-Tracking-Wearable-Fitness/dp/B0D9WV3474?crid=1SF6Z7F9VRB46&dib=eyJ2IjoiMSJ9.IzR6mfi0tEmvMVGOTQpLj0AKbm96ymX28ha5429xXCJwa2zoLYJolC5su-0p8OebQs35hNsR-K8Cp7d9aWLh1l_5ZYDq27fOM3fpmRcEOf1_aRzgqtB_GCYzCZdjq6eujSIgGqaYDVFrfp1qsYAE3LAxabmfjKpkrTkvFQO-BCo5CecCI8A8uxb4lgzvkIxNn6xAhL_5jq5yYCstRkH_mK2VHv98Q7o7FiFH9oIkCyE.jkKLgUH4BjH_jDLkzb-EVEjSSQ4ZWZWByiENll3Qyko&dib_tag=se&keywords=Oura%2BRing%2Bgen%2B3&qid=1773371204&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=oura%2Bring%2Bgen%2B3%2B%2Caps%2C232&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=7fefc7c69fb1dca3420cec09c1e66fab&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51zKmnnZU8L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Dyson Airwrap Multi-Styler Complete",
+            price: "649",
+            reason: "The Dyson Airwrap curls, waves, smooths, and dries hair simultaneously using controlled airflow rather than extreme heat, which means significantly less damage over time and results that last longer. It is the most-wanted hair tool on the market for a reason: it does what it promises, and most women who want one have not bought it because the price is genuinely hard to justify for yourself. If she does her hair regularly and you have the budget, nothing else on this list will get the same reaction.",
+            url: "https://www.amazon.com/Dyson-Airwrap-multi-styler-Complete-Long/dp/B0B61XH5YT?crid=11JNPL6331S6N&dib=eyJ2IjoiMSJ9.LOE-_8vatXbS8_ISCE8E1Ls7SMHIvC2aZIRMlK2GCgamWS6NxGHK5Z2NvP8guuiHGafcx1p_oBKqcEcOKJ-4NZwc1AdUZk99zg_YdmOyanW98s1EvC8mJ0LqpMg4kmJVkYL3XRD2npO_qAaAkLZydgfq4fEGK0IAqBM6CIA6GuPTIDAO9vreuY4o9joROGV77AoV3Odrbp1IPWqYmziWz6wEl7DgW-rYe6s4dCWPwob5K65433MmEsB2nxP_60HvAqS0MTz1gITB10cnEuclwdwrMUKSMBCmDWLW4tsAv1k.FM72hm1V6qtDv66gEuXa0oc2ENyHV1-t-UZtRPz3ZKM&dib_tag=se&keywords=Dyson%2BAirwrap%2Bor%2BSupersonic&qid=1773371354&sprefix=dyson%2Bairwrap%2Bor%2Bsupersonic%2Caps%2C265&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b718ad3149a1a8d670eaa05f5ca2f14c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/318kwbWIgnL._SX342_SY445_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth saying",
+        body: "Spending more does not automatically mean a better gift. But when the right expensive gift lands, it lands harder than anything else. These five are the ones where the price matches the impact. Pick the one that fits her specifically and you will not go wrong."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// ROMANTIC ANNIVERSARY GIFTS FOR YOUR GIRLFRIEND
+// ============================================================================
+  {
+    slug: "romantic-anniversary-gifts-for-girlfriend",
+    title: "Romantic Anniversary Gifts for Your Girlfriend",
+    excerpt: "Anniversary gifts work differently from birthday gifts. These are the ones built around the relationship itself, not just what she likes.",
+    occasion: "anniversary",
+    interests: ["wellness", "skincare", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "what-to-get-girlfriend-one-year",
+      "gifts-romantic-without-being-over-the-top",
+      "gifts-for-a-serious-relationship"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "An anniversary gift is not a birthday gift",
+        body: "The difference matters. A birthday gift is about her: what she likes, what she wants, what she would choose for herself. An anniversary gift is about the two of you. The best ones reference the relationship directly, mark the time you have spent together, or create something new for the two of you to share. A gift that could have come from anyone misses the point of the occasion."
+      },
+      {
+        type: "text",
+        heading: "What makes a romantic gift actually romantic",
+        body: "Romantic is not the same as expensive or elaborate. A romantic gift is one that shows you thought about her specifically and about what this relationship means. It can be something she wears every day with her name on it, something that holds the photos from your time together, or something that makes her feel genuinely looked after. The picks below span all three."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Gold Bar Name Bracelet",
+            price: "27",
+            reason: "A slim gold bar bracelet engraved with her name, your anniversary date, or coordinates of somewhere that belongs to both of you. She wears it every day and it becomes the piece of jewellery that has a reason behind it, not just one she bought herself. The personalisation is done at order so it arrives ready to give, and the price point makes it accessible without feeling low-effort.",
+            url: "https://www.amazon.com/Personalized-Bracelet-Bridesmaid-Anniversary-Christmas/dp/B015DTI1OY?dib=eyJ2IjoiMSJ9.PCCDydwMZHOLTSR7mcG-URohJE-b3eKoUeyBSZ9R1rUDpaUpKeRPqGOgTI-Lz_LD8xeCMU-TpEKIl3x5FtesF4Sb2bPjUOj1hXJCAWyp4hEoTgsjjTHY2TICW7jKHz32-pTtGmLk_Sw7-diWqgKip7wbbzXSZ9WE6lQs1NK7RpTGUTVG2qhxD_I-be4WDlM5KcfQXYASbewbAlrWUTnU4BLwgMiUvGydgSlapCdBW8jWZkbAVx_dJGg-VGAQ4n3W_-bQjx1rzidiWuUQrGyxuvH6JPR50yc2uUd8V1E8xGs.r_Xzn70VgCmJJLzrtY0rF_w5D5KrcAvQb0wahN_yrdE&dib_tag=se&keywords=Custom+coordinates+bracelet&qid=1777685069&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=29d71f5bc7c800c112cd399b0cc5fe9a&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61eEdtBXI5L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Our Love Ever After Photo Album",
+            price: "29.99",
+            reason: "A guided couples photo album with prompted pages for how you met, first trips, favourite memories, and space to keep adding. Fill the first several pages before you give it so it arrives already started rather than empty. For a girlfriend who values having a physical record of the relationship, this is the gift that makes that record real. It is something she will add to and keep for a long time.",
+            url: "https://www.amazon.com/dp/B0BV3D2FW4?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71v-IO50wVL._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized Engraved Wooden Keepsake Box",
+            price: "49",
+            reason: "A solid wood box engraved with your names, your anniversary date, or a short phrase, designed to hold the physical keepsakes of a relationship: ticket stubs, letters, small gifts, photos. It is the kind of object that gets kept for decades. Give it with something inside, even a handwritten note, so it arrives already meaningful rather than waiting to be filled.",
+            url: "https://www.amazon.com/Krezy-Case-Personalised-Engraved-Personalized/dp/B0FL958G1B?crid=21Z9FAZ3HCYNV&dib=eyJ2IjoiMSJ9.jVJ7rrEeKtUVUvtIzPGGg3NXaBA9ZXIzSYYt_k8DJ9iC8jRAWab9fSUtS-R4kULEoq45bFHJl44R4yYNcsesaPL2UnrZODUwilTy6HNIVAkGpxb8xK1G8SMHtpOgJuyxNlKE4UyawaWCKgKze_1eRFCYivz9u_JoHZVkm3HOevLoboL4hQgrpSVNM2NcvWqwnwGALH3au9qRRtfhQUqyufmR9dbkAbJxbrUuVeQEvxBT8GzsLU_4YTnfzLoH4l-odl6FdV03Pb6__SIjZXMHKlSRGpsMFJ74eoJLjJaHnyQ.aVCrzR4hoDWe9Z8iEwq2srkUEgJ5lHPkD2gzpc6Bs_4&dib_tag=se&keywords=Wedding%2BMemory%2BKeepsake%2BBox&qid=1773536793&sprefix=wedding%2Bmemory%2Bkeepsake%2Bbox%2Caps%2C232&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9c3391a97b394c2c46a1b896b7bd0a4c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816jS1pUXuL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lavender Spa Gift Set for Women",
+            price: "139",
+            reason: "A complete luxury spa set built around lavender: bath salts, body scrub, body butter, shower gel, loofah, and a sleep mask, presented in a full gift box. For an anniversary, a spa set reads differently than a birthday gift because of what you do with it: you give her an evening of being properly looked after, which is a romantic act even if the products themselves are not explicitly romantic. The lavender collection is cohesive and the quality is noticeably better than a drugstore equivalent.",
+            url: "https://www.amazon.com/Lizush-Piece-Complete-Luxury-Women/dp/B088ZHBX22?crid=2G4FUVG6DASK1&dib=eyJ2IjoiMSJ9.wdNCtqyWta1khiiItcCLEpIhdm4EINKvTl_DHBm_SnxBItbZaoZk8OIAHJOgJeB2W27kbbkpT2Z4y7Q_qi86DdzHjJ2gJ3-LV6SD9fHaMaz6e7q8mYW6kcc2Td3rZPx0a2u3ZieMlP2ksPmue-3agNO0-fBLYTqdqh4Cc7uxCG1k3CioUQMTnwfqx_dex9LRESDR5LuFEMhJE4s42bhaGmA-9Nql839dB1g6sXWY6Vfdl8chIfjD07-4GPGC17PFGzEqICnmafZ2Un2XwJfY4vaAlV7ND2sYHeU9x5NI0jc.JU4TOnIMdhDBIDGIRql33BPX2JOLX5EP0WzFzfpUQJs&dib_tag=se&keywords=Luxury%2BBath%2BSpa%2BGift%2BBasket&qid=1773537574&sprefix=luxury%2Bbath%2Bspa%2Bgift%2Bbasket%2Caps%2C879&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9adbe727004cb2e61534ae42ad47e515&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/513jKGDIIYL._SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "169",
+            reason: "A small connected device that sits on her desk or nightstand. You send her a photo from your phone and a spinning heart on the front of the box alerts her it is there. She opens the lid and sees what you sent. It is a private channel between two people that requires no explanation and no effort once it is set up. For an anniversary gift, it is the one that keeps working every day after the occasion, turning ordinary moments into something she looks forward to.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW78J?crid=107QJ3KGU5AT9&dib=eyJ2IjoiMSJ9.iy0k1nYzZ6EZAmonOpTbXRT72JZWqZMxciM2DfDXm2TyF-bYlw4gI0h86sOHBfAAFawV3k_RcpvdINEdMxmQCYYMcmzI8ZbGcDJs9h85h2s.ga92mLAB_rMTyOvd4jTXYw3hmzU2nRHHhtV6DXIW-ak&dib_tag=se&keywords=Lovebox+Spinning+Heart+Messenger&qid=1776654042&s=handmade&sprefix=lovebox+spinning+heart+messenger%2Cspecialty-aps%2C192&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8c9cdbf3c271910d049f4fc42520b055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Pair whatever you choose with a letter",
+        body: "An anniversary is one of the few occasions where a handwritten letter is not optional. The gift does its job. The letter does the other half. Write down what the year actually meant, not just that you love her. The specific detail is what she will remember."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// SENTIMENTAL BIRTHDAY GIFTS FOR YOUR GIRLFRIEND
+// ============================================================================
+  {
+    slug: "sentimental-birthday-gifts-for-girlfriend",
+    title: "Sentimental Birthday Gifts for Your Girlfriend",
+    excerpt: "Not every birthday gift needs to be about what she wants. Sometimes the ones that land hardest are the ones that show you were paying attention.",
+    occasion: "birthday",
+    interests: ["skincare", "photography", "wellness"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-she-would-never-buy-herself"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Sentimental is not the same as cheap",
+        body: "There is a version of sentimental that feels like an excuse: a card with a long message and nothing else. That is not what this is. A sentimental gift is one that carries weight because it required you to think about her specifically, not just about what category of thing she might like. It can cost $17 or $139. The price is not the point. The thought is, and the thought has to actually show up in the object."
+      },
+      {
+        type: "text",
+        heading: "What makes these work",
+        body: "Every gift below requires something from you before it arrives: a photo you selected, a name you had engraved, a memory you decided was worth keeping. That effort is what turns a product into a sentimental gift. The work you put in before she opens it is what she actually feels when she does."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Custom Photo Prints",
+            price: "16.88",
+            reason: "A set of printed photos you choose from the thousands sitting on her phone or yours, delivered as high-quality prints she can actually hold and display. Most couples have hundreds of photos of their time together that have never been printed. Choosing the ones that matter, ordering them, and giving them to her is the work that makes this sentimental. The prints are good. The selection is entirely yours.",
+            url: "https://www.amazon.com/dp/B0D9YMF259?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/8136VxE5xUL._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized Wine Glasses",
+            price: "22.99",
+            reason: "A set of stemless wine glasses engraved with her name or a short phrase, the kind that go on the shelf and come down when she wants to feel like the evening is worth marking. Personalised glassware works because it is specific to her in a way that a standard set cannot be. She reaches for these instead of the others, and every time she does she knows where they came from.",
+            url: "https://www.amazon.com/dp/B0BX62KXJP?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/713nveiTL9L._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized PhotoBook 8x8\" Hard Cover",
+            price: "36.67",
+            reason: "A printed hardcover photo book you build yourself: you choose the photos, arrange them, and decide what story the year tells. It arrives as a finished book she puts on her shelf. For a girlfriend who has never had a printed record of the relationship, this is the gift that creates one. The forty minutes you spend putting it together is the most visible part of the gift, because she can see every choice you made.",
+            url: "https://www.amazon.com/dp/B0CQMVGKBF?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61SAIuLEeDL._AC_UL320_.jpg"
+          },
+          {
+            name: "Tatcha Skincare Set",
+            price: "95",
+            reason: "A starter ritual set from Tatcha, one of the most respected Japanese skincare brands available: cleanser, moisturiser, and their signature Dewy Skin Cream. For a girlfriend who talks about skincare, has mentioned Tatcha specifically, or simply deserves something noticeably better than what she currently uses, this is the set that delivers. It is sentimental not because it has her name on it but because you chose something she genuinely wanted rather than something easy.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=2UQ2KCRG5EGO1&dib=eyJ2IjoiMSJ9.x9w1hhp6SFHQ8JfZulUH5j9XizGt-Z34UJHa7FVSlY7U3twGEOdI2wY3Gv842P1uCKIifs3jBnL6VzmYyW0WgQfufeGPDjyRteHLalPvhii0VYn21Yj38zQz3AGH_GnHXagxRUsne0rcIW7uh6Y-VwpEqgQqNBvwrBWB22DZgsTXQI2PZUJbEA0euJZm3vwuIf92SHBuV22PnsibXGXNVb6Rq0jrt31jcfgmo2aA1Yy28vPHfaZK8GXORdbCXSWlerW9rYVKY7eOVk95a-kUQFjMD4yJWXbAyO8lR1eaqNw.3hXYTIyVr1pvZOBShvAw2Vgz2doeGO_osxW6kL3rK3I&dib_tag=se&keywords=Tatcha+skincare+set&qid=1774736945&sprefix=tatcha+skincare+set%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ed66be2350a587168c4fcbc32c54f59d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          },
+          {
+            name: "4x6\" Portable Instant Photo Printer",
+            price: "139",
+            reason: "A wireless photo printer the size of a water bottle that connects to her phone and prints 4x6 photos on the spot with no ink required. For a girlfriend who takes hundreds of photos and has none of them on her walls, this is the gift that changes that permanently. She will use it at every gathering, every trip, every ordinary evening worth keeping. It is sentimental in both directions: for the photos she prints tonight and for everything she will print for years after.",
+            url: "https://www.amazon.com/dp/B088PRX3BD?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ySRliPMKL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "Add the note",
+        body: "A sentimental gift without a note is half a gift. Write down what you were thinking when you chose it. The object is the gesture. The note is the reason."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// WHAT'S A THOUGHTFUL GIFT THAT ISN'T JEWELRY?
+// ============================================================================
+  {
+    slug: "thoughtful-gifts-that-arent-jewelry",
+    title: "What's a Thoughtful Gift That Isn't Jewelry?",
+    excerpt: "Jewelry is the default when you want to say something real. But there are other ways to say it, and some of them land just as hard.",
+    occasion: "birthday",
+    interests: ["skincare", "wellness", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "sentimental-birthday-gifts-for-girlfriend",
+      "gifts-she-would-never-buy-herself",
+      "safe-gift-ideas-for-your-girlfriend"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Why jewelry is the default and when to skip it",
+        body: "Jewelry carries weight. It lasts, it is visible, and it signals you spent real money on something permanent. Those are good reasons to reach for it. But jewelry is also a minefield: wrong style, wrong metal, wrong size, or a piece that does not match how she actually dresses can land worse than a more modest gift chosen more carefully. If you are not confident you know her taste exactly, a thoughtful non-jewelry gift often does more work."
+      },
+      {
+        type: "text",
+        heading: "What makes something thoughtful without being jewelry",
+        body: "The same quality that makes jewelry work when it does: specificity. A thoughtful gift is one where she can tell it was chosen for her, not just purchased in her general direction. That can be something she uses on her face every morning, something that arrives at her door and makes her feel genuinely looked after, or an upgrade to something she already values but would not justify buying for herself. The format is not what matters. The evidence of thought is."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Gua Sha Facial Tool Set",
+            price: "20.99",
+            reason: "A rose quartz gua sha stone and facial roller, used as part of a morning or evening skincare routine to reduce puffiness, improve circulation, and help products absorb. For a girlfriend who has any kind of skincare routine, this fits directly into it. It is small and considered without being generic, and it shows you were paying attention to what she actually does rather than what you assumed she might want.",
+            url: "https://www.amazon.com/dp/B0GL7VWRLQ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ijHE+ELoL._AC_UL320_.jpg"
+          },
+          {
+            name: "The Ordinary Serum Favorites Set",
+            price: "25.10",
+            reason: "A curated set of The Ordinary's bestselling serums: Niacinamide 10%, Hyaluronic Acid, and the AHA/BHA Peeling Solution. The Ordinary is the brand that women who know skincare buy for themselves and recommend to everyone they know. Getting her the set means she can try each one without committing to a full bottle. It reads as considered because it is a brand people actually want, not a generic option you found on a shelf.",
+            url: "https://www.amazon.com/dp/B07QFHZZZL?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71rdx655AxL._AC_UL320_.jpg"
+          },
+          {
+            name: "Orchid & Jasmine Spa Gift Basket",
+            price: "38.99",
+            reason: "A complete spa set built around an orchid and jasmine scent: bath salts, body lotion, shower gel, hand cream, and a soap bar, presented in a gift basket ready to give. The scent combination is specific enough to feel chosen rather than grabbed off a shelf, and the full set means she has everything she needs for an evening of actually unwinding. For a girlfriend who never makes time for herself, this is the gift that gives her permission to.",
+            url: "https://www.amazon.com/dp/B0C24HCSCQ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71RmWqSjjKL._AC_UL320_.jpg"
+          },
+          {
+            name: "Luxury Birthday Spa Gift Box",
+            price: "59.99",
+            reason: "A premium spa gift box with a bath bomb collection, body butter, shower gel, and loofah, in a presentation box that looks like it came from a boutique. At this price point the quality is noticeably better than a drugstore equivalent: the scents are cleaner, the textures are richer. For a birthday where you want her to feel genuinely celebrated without having to know her exact taste in jewellery, this lands without the guesswork.",
+            url: "https://www.amazon.com/dp/B08YDWNF6Q?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61cAPCWI8WL._AC_UL320_.jpg"
+          },
+          {
+            name: "Professional Makeup Brush Set, 12 Pieces",
+            price: "187",
+            reason: "A 12-piece professional brush set from Sigma Beauty, one of the most respected names in makeup tools: foundation, concealer, blending, contour, and eye brushes, each designed to last for years. For a girlfriend who wears makeup regularly, the quality of her brushes determines the quality of her results, and most women are working with brushes that are well past their best. This is a splurge she would never justify for herself and will immediately notice the difference from.",
+            url: "https://www.amazon.com/Sigma-Beauty-Essential-Brushes-CK001/dp/B008BU9I5E?content-id=amzn1.sym.dd853b89-63e1-487a-948e-6d420ce636b4%3Aamzn1.sym.dd853b89-63e1-487a-948e-6d420ce636b4&crid=1T0XIKHH3UXIZ&cv_ct_cx=Professional%2BMakeup%2BBrush%2BSet&keywords=Professional%2BMakeup%2BBrush%2BSet&pd_rd_i=B008BU9I5E&pd_rd_r=b00a89e0-94e7-41cc-8985-4d76dff73029&pd_rd_w=9VS7l&pd_rd_wg=ve8z7&pf_rd_p=dd853b89-63e1-487a-948e-6d420ce636b4&pf_rd_r=M6JMM48JBHF3PE4ANSYM&qid=1773535731&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=professional%2Bmakeup%2Bbrush%2Bset%2Caps%2C383&sr=8-1-2c727eeb-987f-452f-86bd-c2978cc9d8b9-spons&aref=Oop79k87MM&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=c98ccc298bce36c9c7b1a86f15f29db8&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/41ip0cFTc+L._SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The short answer",
+        body: "The best non-jewelry thoughtful gift is one that makes her feel looked after. Skincare and spa gifts do this reliably across the broadest range of women because they require nothing from her except the time to enjoy them. Pick the price point that fits the occasion and you are done."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// WHY MOST MEN BUY BAD GIFTS
+// ============================================================================
+  {
+    slug: "why-most-men-buy-bad-gifts",
+    title: "Why Most Men Buy Bad Gifts (And How to Fix It)",
+    excerpt: "It is not about budget. It is about four habits that almost every man falls into, usually without realising it.",
+    occasion: "birthday",
+    interests: ["skincare", "wellness", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "mistakes-men-make-buying-birthday-gifts",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "safe-gift-ideas-for-your-girlfriend"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "The problem is not what you think",
+        body: "Most men who buy bad gifts are not thoughtless. They are applying the wrong framework. They think about what she needs, or what they would want, or what seems impressive at the price point, and none of those approaches produce good gifts. Good gifts come from a different question: what would make her feel seen? That question changes everything that follows."
+      },
+      {
+        type: "text",
+        heading: "Four habits that produce bad gifts every time",
+        body: "Most gift failures come from the same small set of patterns. Knowing which one you are prone to is half the fix."
+      },
+      {
+        type: "text",
+        heading: "❌ Buying what you would want to receive",
+        body: "This is the most common mistake and the hardest one to catch because it feels like effort. You find something genuinely impressive or exciting and assume she will feel the same way. She usually does not. The test is simple: if she would not have chosen it for herself, it is probably a gift that reflects your taste, not hers. The fix is to think about how she actually spends her time, not how you spend yours."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Gua Sha Facial Tools",
+            price: "15.9",
+            reason: "A rose quartz gua sha stone and facial roller for her skincare routine. This is the kind of gift that requires almost no budget but lands well because it is chosen for how she actually spends her mornings, not how you would spend yours. She uses it, she sees it every day, and she knows it was picked with her in mind.",
+            url: "https://www.amazon.com/dp/B0FH72NTP9?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61alJ53fqVL._AC_UL320_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "❌ Buying something functional that solves a problem",
+        body: "A new phone case because her old one is cracked. A replacement for something she has lost. An item that addresses a household need. These are practical, they are well-intentioned, and they almost always land badly. A gift that says \"I noticed this needed fixing\" is not the same as a gift that says \"I wanted to give you something.\" Practical gifts belong on shopping lists, not in gift boxes."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Luxury Soy Candle Gift Set",
+            price: "35.99",
+            reason: "A set of premium soy candles with long burn times and clean scent throw, presented in packaging that looks deliberately chosen. This is the opposite of a practical gift: it serves no function except to make her evenings nicer. That is exactly the point. A gift that exists purely to be enjoyed tells her something different from one that fixes a problem.",
+            url: "https://www.amazon.com/dp/B0DT5YJG9B?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71gNmxWO53L._AC_UL320_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "❌ Leaving it too late and defaulting",
+        body: "The gift card is the most visible symptom of this, but late gifting shows up in other ways too: something grabbed from a display near a checkout, a duplicate of something she already owns, a brand you chose because you recognised the name rather than because it fit her. Late gifts are not just forgettable. They communicate that the deadline mattered more than she did. Fifteen minutes of thought a week earlier produces a dramatically better result at the same price."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "The Ordinary Serum Favorites Set",
+            price: "25.10",
+            reason: "A set of The Ordinary's bestselling serums: Niacinamide, Hyaluronic Acid, and the AHA/BHA Peeling Solution. This can be ordered in a few minutes and arrives quickly, but it does not look like a last-minute gift because it is a brand people actually want. The difference between a thoughtful $25 skincare set and a rushed $25 gift card is entirely in the decision to order it before the day of.",
+            url: "https://www.amazon.com/dp/B07QFHZZZL?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71rdx655AxL._AC_UL320_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "❌ Spending money but skipping the thought",
+        body: "An expensive gift with no consideration behind it lands worse than a cheap gift that was clearly chosen for her. Most women can tell immediately which category they are in. The price creates an expectation and then the lack of thought fails to meet it. Spending more on a generic gift does not make it less generic. It just makes the gap between effort and expenditure more visible."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Luxury Birthday Spa Gift Box",
+            price: "59.99",
+            reason: "A full spa gift set with bath bombs, body butter, shower gel, and loofah, in a presentation box that looks like it came from a boutique. This costs real money and the quality matches the price, but what makes it land is that it says: I wanted you to have an evening that was entirely yours. That is a specific thought, not a gesture. The combination of genuine quality and a clear intention is what separates a good expensive gift from a bad one.",
+            url: "https://www.amazon.com/dp/B08YDWNF6Q?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61cAPCWI8WL._AC_UL320_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The fix is simpler than it sounds",
+        body: "Ask one question before you buy anything: would she have chosen this for herself? If the answer is yes, you are on the right track. If the answer is no, ask why not. Sometimes the answer reveals something you had not considered. Sometimes it just tells you to keep looking."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// I FORGOT HER BIRTHDAY. WHAT NOW?
+// ============================================================================
+  {
+    slug: "i-forgot-her-birthday-what-now",
+    title: "I Forgot Her Birthday. What Now?",
+    excerpt: "It happened. Here is how to handle it without making it worse.",
+    occasion: "birthday",
+    interests: ["skincare", "wellness", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "apology-gifts-dos-and-donts",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "why-most-men-buy-bad-gifts"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "First: what not to do",
+        body: "Do not pretend it did not happen. Do not over-explain. Do not make her birthday about your guilt. She already knows you forgot. The moment she hears you trying to justify it, the conversation becomes about you rather than about her, and that is the second mistake layered on top of the first. Acknowledge it simply, directly, and without a long preamble. Then do something about it."
+      },
+      {
+        type: "text",
+        heading: "The actual recovery",
+        body: "Three things work in sequence. Say something real, not a scripted apology. Get a gift that arrives quickly and is genuinely good, not something that signals panic or guilt. And then let it go. A forgotten birthday that was handled well becomes a small story in the relationship. A forgotten birthday that became a week-long guilt spiral becomes something else. The gift is part of the recovery, not the whole of it. The picks below are all orderable now and arrive fast. Pick the one that fits your situation and get it ordered today."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "The Ordinary Serum Favorites Set",
+            price: "25.10",
+            reason: "A curated set of The Ordinary's bestselling serums: Niacinamide, Hyaluronic Acid, and the AHA/BHA Peeling Solution. This is the move when budget is tight but you need something that looks considered. The Ordinary is a brand women who know skincare actually want, which means it reads as chosen rather than grabbed. Orders quickly, arrives fast, looks better than the price suggests.",
+            url: "https://www.amazon.com/dp/B07QFHZZZL?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71rdx655AxL._AC_UL320_.jpg"
+          },
+          {
+            name: "Anforsun Sunflower Care Package",
+            price: "39.99",
+            reason: "A pre-assembled care package with a candle, tea, snacks, and a cozy item, presented in a gift box ready to ship. The sunflower theme gives it a visual identity rather than looking like a random assortment. For a forgotten birthday, a care package that arrives at her door is the closest thing to showing up in person after the fact. It requires no assembly and no planning beyond ordering it.",
+            url: "https://www.amazon.com/dp/B0DRW3HM8V?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71QyqElACcL._AC_UL320_.jpg"
+          },
+          {
+            name: "Luxury Birthday Spa Gift Box",
+            price: "59.99",
+            reason: "A full spa gift set with bath bombs, body butter, shower gel, and loofah, packaged in a presentation box. The quality at this price point is genuinely good: the scents are clean, the presentation is solid, and it arrives looking like something you planned rather than something you panic-ordered. For a forgotten birthday where you want to spend real money but not venture into jewellery territory without a plan, this is the safe call.",
+            url: "https://www.amazon.com/dp/B08YDWNF6Q?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61cAPCWI8WL._AC_UL320_.jpg"
+          },
+          {
+            name: "Tatcha Skincare Set",
+            price: "95",
+            reason: "A starter ritual set from Tatcha: cleanser, moisturiser, and their Dewy Skin Cream. Tatcha is a brand women recognise and want, which matters here because a forgotten birthday gift needs to arrive looking like you knew what you were doing. At this price point it communicates that you took the recovery seriously. If she has mentioned Tatcha before or follows any skincare content, this is one of the strongest moves available.",
+            url: "https://www.amazon.com/Tatcha-Starter-Ritual-Set-Introductory/dp/B0F9BMZ5Z7?crid=2UQ2KCRG5EGO1&dib=eyJ2IjoiMSJ9.x9w1hhp6SFHQ8JfZulUH5j9XizGt-Z34UJHa7FVSlY7U3twGEOdI2wY3Gv842P1uCKIifs3jBnL6VzmYyW0WgQfufeGPDjyRteHLalPvhii0VYn21Yj38zQz3AGH_GnHXagxRUsne0rcIW7uh6Y-VwpEqgQqNBvwrBWB22DZgsTXQI2PZUJbEA0euJZm3vwuIf92SHBuV22PnsibXGXNVb6Rq0jrt31jcfgmo2aA1Yy28vPHfaZK8GXORdbCXSWlerW9rYVKY7eOVk95a-kUQFjMD4yJWXbAyO8lR1eaqNw.3hXYTIyVr1pvZOBShvAw2Vgz2doeGO_osxW6kL3rK3I&dib_tag=se&keywords=Tatcha+skincare+set&qid=1774736945&sprefix=tatcha+skincare+set%2Caps%2C262&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZZ1zcF9hdGY&psc=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=ed66be2350a587168c4fcbc32c54f59d&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61PA8xpdCGL._SL1200_.jpg"
+          },
+          {
+            name: "Dyson Airwrap Multi-Styler Complete",
+            price: "649",
+            reason: "The Dyson Airwrap is the most-wanted hair tool on the market. It styles, curls, waves, and dries simultaneously using controlled airflow rather than extreme heat, and most women who want one have not bought it for themselves because the price is genuinely hard to justify. If you forgot her birthday and you want to make it right with something significant, this is the gift that makes the conversation very short. It does not erase the forgetting but it does demonstrate that the recovery was as serious as the mistake.",
+            url: "https://www.amazon.com/Dyson-Airwrap-multi-styler-Complete-Long/dp/B0B61XH5YT?crid=11JNPL6331S6N&dib=eyJ2IjoiMSJ9.LOE-_8vatXbS8_ISCE8E1Ls7SMHIvC2aZIRMlK2GCgamWS6NxGHK5Z2NvP8guuiHGafcx1p_oBKqcEcOKJ-4NZwc1AdUZk99zg_YdmOyanW98s1EvC8mJ0LqpMg4kmJVkYL3XRD2npO_qAaAkLZydgfq4fEGK0IAqBM6CIA6GuPTIDAO9vreuY4o9joROGV77AoV3Odrbp1IPWqYmziWz6wEl7DgW-rYe6s4dCWPwob5K65433MmEsB2nxP_60HvAqS0MTz1gITB10cnEuclwdwrMUKSMBCmDWLW4tsAv1k.FM72hm1V6qtDv66gEuXa0oc2ENyHV1-t-UZtRPz3ZKM&dib_tag=se&keywords=Dyson%2BAirwrap%2Bor%2BSupersonic&qid=1773371354&sprefix=dyson%2Bairwrap%2Bor%2Bsupersonic%2Caps%2C265&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b718ad3149a1a8d670eaa05f5ca2f14c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/318kwbWIgnL._SX342_SY445_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One more thing",
+        body: "Order the gift today, then write her a real note. Not a text. Something handwritten that acknowledges the birthday specifically, not just a generic apology. The gift shows up in her apartment. The note stays with her. Both matter, and the note costs nothing except the time to mean it."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

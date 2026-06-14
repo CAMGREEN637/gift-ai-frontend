@@ -6389,6 +6389,160 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO LOVES WINE
+// ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-loves-wine",
+    title: "Gifts for a Girlfriend Who Loves Wine",
+    excerpt: "She knows the difference between a Burgundy and a Bordeaux. These gifts meet her where she actually is.",
+    occasion: "birthday",
+    interests: ["wine"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "gifts-beverage-girlie-summer-drinks",
+      "gifts-for-girlfriend-who-loves-healthy-eating",
+      "gifts-she-would-never-buy-herself"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "She already has wine",
+        body: "The mistake most people make buying for a wine lover is buying wine. She picks her own bottles. She knows what she likes and she already has a system. What she does not have is the equipment, the tools, or the objects that make the experience around the wine better. That is the gap a good gift fills."
+      },
+      {
+        type: "text",
+        heading: "What actually lands",
+        body: "The best gifts for a woman who loves wine fall into two categories: things that upgrade how she stores and serves it, and things that deepen how she engages with it. A wine lover who is serious about the hobby will appreciate a kit that trains her palate or a preservation system that changes how she opens bottles far more than another glass she doesn't need."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Premium Wine Tasting Kit",
+            price: "15.99",
+            reason: "A structured tasting kit with aroma wheels, tasting cards, and guides for learning to identify varietals and regions by smell and taste. For someone who already drinks wine regularly, this is the gift that turns a habit into a skill. It is the kind of thing she would find interesting but would never prioritise buying for herself.",
+            url: "https://www.amazon.com/dp/B0CCC5V489?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81DYozFAg8L._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized Initial Wine Glass Set",
+            price: "39.99",
+            reason: "A set of stemless glasses etched with her initial, designed to sit on a shelf and look like they belong there. Personalised glassware hits differently from generic sets because it was clearly chosen for her specifically. If she hosts, these become the glasses she reaches for when someone she wants to impress comes over.",
+            url: "https://www.amazon.com/dp/B0F5N6DGJ7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71vIz6vU1OL._AC_UL320_.jpg"
+          },
+          {
+            name: "CORAVIN Wine System",
+            price: "54.95",
+            reason: "A needle-based preservation system that lets her pour a glass from a bottle without pulling the cork, so the rest stays fresh for weeks. For someone who drinks wine seriously but doesn't always finish a bottle in one sitting, this solves a real problem. It is the kind of tool that changes how she interacts with her collection every single week.",
+            url: "https://www.amazon.com/dp/B07RLLXQX7?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/511MyHxWs0L._AC_UL320_.jpg"
+          },
+          {
+            name: "Red Wine Aroma Kit",
+            price: "59.95",
+            reason: "A set of 24 scent vials that replicate the aromas found in red wine, from blackcurrant and cedar to leather and tobacco. Used by sommeliers in training, it teaches her to identify what she is smelling in the glass rather than just knowing she likes it. For a woman who talks about wine with real enthusiasm, this is the gift that shows you were paying attention to the depth of the interest, not just the surface.",
+            url: "https://www.amazon.com/dp/B0D7MSHJPS?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81lIOnt0ZIL._AC_UL320_.jpg"
+          },
+          {
+            name: "12-Bottle Wine Cooler Refrigerator",
+            price: "172",
+            reason: "A freestanding countertop wine fridge that holds 12 bottles at the right temperature and keeps them away from light and vibration. If she buys wine regularly and stores it on a shelf or in the regular fridge, this is the upgrade that changes that entirely. It is a considered, adult gift that says you noticed she takes this seriously and you wanted to support it properly.",
+            url: "https://www.amazon.com/Yeego-Bottles-Refrigerator-Freestanding-Counter/dp/B0FT32V98Y?crid=33OZUB703EBRU&dib=eyJ2IjoiMSJ9.z1CgE29uq_IOp7pYViUrXijwUOMyZFs2AUWQmpReoyMHiyUlvp6aF9nX9Q9QOfkxF6IrhNahSkYqKR4I0HKFitfTdCjKfF1Q15uncy5J_avpJHGv2AAiMvzArhQgOg5M0Ijts1PPEPrsn0PKJao3tNcIn_xYZP-FiTLVWa5fMXQlhddEkRMWPxMyHfIRM5DkD09SCBt8VYJFhn9Wv5oeZL8nycuutIHVCFzzn5GSBOs.vcxOpSgPHbR9MzorHBZDvm1gZvo0b9Shv1hjjohGGbE&dib_tag=se&keywords=12-Bottle%2BWine%2BFridge&qid=1773533849&sprefix=12-bottle%2Bwine%2Bfridge%2Caps%2C1117&sr=8-7&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=48ad3d92ff6d26cb35cc448b8ed8a146&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81b-UO3abFL._AC_SX342_SY445_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing worth knowing",
+        body: "If you are unsure of her level, go for the experience over the equipment. The aroma kit and tasting kit work for a casual wine drinker and a serious one. The fridge and the Coravin are for someone whose interest runs deep enough that she would actually use them every week."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO LOVES MUSIC
+// ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-loves-music",
+    title: "Gifts for a Girlfriend Who Loves Music",
+    excerpt: "Whether she streams everything or still hunts for vinyl on weekends, these picks match the way she actually listens.",
+    occasion: "birthday",
+    interests: ["music"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "gifts-beverage-girlie-summer-drinks",
+      "gifts-she-would-never-buy-herself",
+      "birthday-gifts-girlfriend-loves-hiking"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Music lovers are specific",
+        body: "A woman who genuinely loves music already has opinions about how she listens. She has a preferred streaming service, a relationship with her headphones, and if she is a vinyl person, she is very much a vinyl person. The mistake is buying something generic and hoping it lands. The gifts that work are the ones that meet her where she already is, not where you assume she might be."
+      },
+      {
+        type: "text",
+        heading: "What to look for",
+        body: "The picks below split into two types: things that upgrade how she listens at home, and things that extend the hobby she already has. If she streams, better speakers or earbuds change her daily experience. If she collects records, the right turntable or a bag that fits her habit is the gift that shows you were paying attention."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "G2TUP Vinyl Record Tote Bag",
+            price: "15.89",
+            reason: "A canvas tote with internal dividers designed specifically to carry vinyl records safely. For a girlfriend who shops at record stores regularly, this solves a real problem she has probably been working around with regular bags. It is a small gift that shows you understand how she spends her Saturdays.",
+            url: "https://www.amazon.com/dp/B0DYN2MX4S?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71wvMCchjyL._AC_UL320_.jpg"
+          },
+          {
+            name: "Vinyl Record Player with Bluetooth",
+            price: "39.99",
+            reason: "A compact record player with built-in Bluetooth so she can play vinyl through any speaker she already owns. For someone who has been wanting to get into records but hasn't taken the step yet, this is the entry point that removes every barrier. It doesn't require a separate amp, a separate speaker, or a complicated setup.",
+            url: "https://www.amazon.com/dp/B07N3WYLKZ?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71ntqXVSmKL._AC_UY218_.jpg"
+          },
+          {
+            name: "Beats Solo Buds",
+            price: "69.95",
+            reason: "Lightweight wireless earbuds with 18 hours of battery life and no charging case to carry around. For a girlfriend who listens to music constantly but finds most earbuds uncomfortable for long sessions, the Solo Buds are the upgrade that stays comfortable through a full day. The color options are genuinely good, which matters when she is wearing them all the time.",
+            url: "https://www.amazon.com/dp/B0D3J85SX4?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/41UVm6KHuiL._AC_UY218_.jpg"
+          },
+          {
+            name: "Belt Drive Vinyl Turntable",
+            price: "119.99",
+            reason: "A belt drive turntable with a built-in phono preamp, USB output, and Bluetooth connectivity. For a girlfriend who already owns a record or two but is running them through an entry-level player, this is the step up that makes the collection worth having. Belt drive reduces motor noise so the playback is noticeably cleaner, which a vinyl person will hear immediately.",
+            url: "https://www.amazon.com/dp/B0GXZ8GN6T?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71Zzij4SrGL._AC_UY218_.jpg"
+          },
+          {
+            name: "Sonos Era 100 Wireless Speaker",
+            price: "219",
+            reason: "A room-filling wireless speaker that connects to every streaming service she uses and can be paired with other Sonos speakers if she ever wants to expand. For a girlfriend who plays music at home every day through her phone speaker or a cheap Bluetooth option, this is the gift that changes how her apartment sounds. It is the kind of object she keeps for years.",
+            url: "https://www.amazon.com/Sonos-Era-100-Wireless-Speaker/dp/B0BW34LCB8?crid=2HJVRZ6YPD5GJ&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.Fkj6HYFflftSzq2aeeoe8XqgfvPBWR6bs80Li0_A8cYJYapLLm_FKM8gJgXSmzypnozbCTNxz4VKKMUUHEiZLrkCu_lWHeZG16m73fIXZzYldc1uL1Aw8CL87X3X8nqSMiMLNkw0SsABrmVg98dyF1DOoj4b_07VG0jjuO6NifLaXW4-0svRjUV-sgEfO-5uPsyrIHHjQi1cOxlLYNSqlkAPY_T0lXyWBOMUZTB7hW8.HI5dwO6RITPlqzCLT2lxT1lkckSFSldiSNHBHA&dib_tag=se&keywords=Portable%2Bspeaker&qid=1775431576&s=samedaystore&sprefix=portable%2Bspeaker%2Csamedaystore%2C194&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=11d5d28ea45c35d43db885bf6fda1301&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71fAeaUTNvL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "A quick way to narrow it down",
+        body: "If she already owns a record player, lean toward the tote bag or the turntable upgrade. If she streams everything, the Beats or the Sonos will get used every single day. The best gift is the one that fits how she actually listens right now, not how you imagine she might listen."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

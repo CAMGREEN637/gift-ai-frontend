@@ -7264,6 +7264,118 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// 10 SAFE GIFT IDEAS FOR YOUR GIRLFRIEND
+// ============================================================================
+  {
+    slug: "safe-gift-ideas-for-your-girlfriend",
+    title: "10 Safe Gift Ideas for Your Girlfriend (That Don't Feel Safe)",
+    excerpt: "Safe does not have to mean boring. These are the gifts that work almost universally because they are genuinely good, not because they are generic.",
+    occasion: "birthday",
+    interests: ["wellness", "skincare", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-15",
+    relatedArticles: [
+      "gifts-she-would-never-buy-herself",
+      "gifts-romantic-without-being-over-the-top",
+      "thoughtful-gifts-that-dont-feel-last-minute"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Safe is not the same as lazy",
+        body: "A safe gift gets a bad reputation because most safe gifts are lazy. A candle from a gas station is safe. A gift card with no note is safe. But there is a different kind of safe gift: one that is low-risk because it is actually good, not because it requires no thought. The picks below fall into that second category. They work for most women in most situations because the quality is real, not because they are hedging."
+      },
+      {
+        type: "text",
+        heading: "How to use this list",
+        body: "These are not ranked. They are sorted by price so you can find what fits your budget and your relationship. If you know anything specific about her, almost every article on this site covers a more targeted angle. But if you are genuinely unsure and need something that will land, start here."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Travel Jewelry Organizer Case, Soft Pink",
+            price: "13",
+            reason: "A compact zippered case with compartments for rings, earrings, necklaces, and bracelets, designed to travel without tangling. Most women who own jewelry have the same problem: keeping it organised when they are not at home. This solves it cleanly. It is small enough to feel considered rather than overspent, and useful enough that she will reach for it every time she packs.",
+            url: "https://www.amazon.com/dp/B07ZHC51DX?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71a6I-F-XxL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Espresso Martini Candle",
+            price: "16.88",
+            reason: "A soy wax candle scented to match the cocktail: coffee, vanilla, a little sweetness. For a woman who orders espresso martinis or loves the combination of coffee and evenings at home, this is the candle that actually makes sense for her specifically. It is not a generic lavender candle. It has a point of view, and that is what makes it feel chosen rather than defaulted to.",
+            url: "https://www.amazon.com/dp/B0DRC5TR44?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61tRU2L1wcL._AC_UL320_.jpg"
+          },
+          {
+            name: "The Ordinary Serum Favorites Set",
+            price: "25.10",
+            reason: "A curated set of The Ordinary's best-selling serums: Niacinamide, Hyaluronic Acid, and AHA/BHA Peeling Solution. The Ordinary is the skincare brand that women who actually know skincare buy for themselves. Getting her the set means she can try everything without committing to a full bottle of each. It is a gift that works whether she is already a fan or discovering it for the first time.",
+            url: "https://www.amazon.com/dp/B07QFHZZZL?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71rdx655AxL._AC_UL320_.jpg"
+          },
+          {
+            name: "Packing Cube Set",
+            price: "25",
+            reason: "A set of lightweight packing cubes in different sizes that compress clothes and keep luggage organised by category. For a girlfriend who travels, even occasionally, these are the upgrade that changes how she packs. Women who have them never go back to packing without them. The gift feels practical, but for a traveller it is genuinely one of the most useful things she will own.",
+            url: "https://www.amazon.com/BAGAIL-Packing-Lightweight-Organizers-Toiletry/dp/B08S35399Y?crid=2LBF9FS8P5W3R&dd=K4QnWBIoK6UMnHrJOE_yw9NGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.cde8eIE9Yl4guR8Q9nDfs20I5xtNKhd-JUfxw80ZZzC0WJoMR0kKJFWNLSRJ6pfy4p6sFfs4yLVkxhok8WCpO-Jw3nnCIry3ijR1S0J9iYEi-4meL9wGt44GoFRWF9JYg7JajpQCp311HCL5GKpUXGDAMuJ4rOMYZnEc7EGzNdZ18gGrCJU815RvIRFMXqnLSrTFXS9vveNXVSGBH5OvPoEktGXlB4AeaJ46O3RnquQ.Baj94HryVxNr2Coygh2wcr3YxuRJsthVEZkiDTupYqU&dib_tag=se&keywords=packing%2Bcube%2Bset&qid=1775437073&s=samedaystore&sprefix=packing%2Bcube%2Bset%2Csamedaystore%2C204&sr=1-4&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=3cdbf4321e10e754dbf6c21c7e20f692&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61aFuRVWe3L._AC_SX679_.jpg"
+          },
+          {
+            name: "Luxury Scented Candle Set",
+            price: "35.49",
+            reason: "A set of three luxury soy candles in complementary scents, presented in clean minimal packaging that looks like something from a boutique. Candles are the safe gift that gets a bad reputation because most gifted candles are cheap. A set at this level, with real scent throw and a clean burn, is different. She will use all three and remember where they came from.",
+            url: "https://www.amazon.com/dp/B0DYQVHS3X?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61GCb054CHL._AC_UL320_.jpg"
+          },
+          {
+            name: "Self Care Package Box",
+            price: "39.99",
+            reason: "A curated self-care box with bath salts, a face mask, a scrub, and a few smaller pampering items, presented ready to gift with no assembly required. For a girlfriend who rarely makes time for herself, a box like this gives her permission to do exactly that. It works for almost any occasion and almost any relationship stage because it is generous without being presumptuous.",
+            url: "https://www.amazon.com/dp/B0F5M9793N?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81B748erV2L._AC_UL320_.jpg"
+          },
+          {
+            name: "Nature's Bloom Scented Candle Set",
+            price: "45",
+            reason: "A set of botanically-scented soy candles with pressed flower lids and long burn times, packaged in a way that looks intentional and premium. The difference between this and a standard candle set is visual: these look like something she would choose herself and display rather than burn through quickly. For a girlfriend who cares about how her home looks and smells, that distinction matters.",
+            url: "https://www.amazon.com/dp/B0CBP79T4Z?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61u5AZMVsNL._AC_UL320_.jpg"
+          },
+          {
+            name: "Luxury Birthday Spa Gift Box",
+            price: "59.99",
+            reason: "A full spa gift set with a bath bomb collection, body butter, shower gel, and a loofah, in a presentation box that is ready to give. At this price point the contents are noticeably better than a drugstore equivalent: the scents are cleaner, the textures are richer, and it photographs well if she posts it. For a birthday where you want her to feel genuinely spoiled, this delivers that without overcomplicating the choice.",
+            url: "https://www.amazon.com/dp/B08YDWNF6Q?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61cAPCWI8WL._AC_UL320_.jpg"
+          },
+          {
+            name: "Apple AirPods Pro 3",
+            price: "199",
+            reason: "The latest AirPods Pro with active noise cancellation, Adaptive Audio, and a transparency mode that adjusts to her environment automatically. For a girlfriend who listens to music, podcasts, or takes calls throughout her day and is still on an older pair of earbuds or wired headphones, this is the upgrade that changes how she experiences audio every single day. It is expensive but it is one of the few gifts she will use for years.",
+            url: "https://www.amazon.com/dp/B0FQFB8FMG?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/61solmQSSlL._AC_UY218_.jpg"
+          },
+          {
+            name: "Dyson Airwrap Multi-Styler Complete",
+            price: "649",
+            reason: "The Dyson Airwrap styles, curls, waves, and dries hair simultaneously using controlled airflow rather than extreme heat, which means significantly less damage over time. It is the most-wanted hair tool on the market for a reason: it genuinely does what it promises, and most women who want one have not bought it for themselves because the price is hard to justify. If your budget stretches here and she does her hair regularly, this is the gift she will talk about.",
+            url: "https://www.amazon.com/Dyson-Airwrap-multi-styler-Complete-Long/dp/B0B61XH5YT?crid=11JNPL6331S6N&dib=eyJ2IjoiMSJ9.LOE-_8vatXbS8_ISCE8E1Ls7SMHIvC2aZIRMlK2GCgamWS6NxGHK5Z2NvP8guuiHGafcx1p_oBKqcEcOKJ-4NZwc1AdUZk99zg_YdmOyanW98s1EvC8mJ0LqpMg4kmJVkYL3XRD2npO_QAaAkLZydgfq4fEGK0IAqBM6CIA6GuPTIDAO9vreuY4o9joROGV77AoV3Odrbp1IPWqYmziWz6wEl7DgW-rYe6s4dCWPwob5K65433MmEsB2nxP_60HvAqS0MTz1gITB10cnEuclwdwrMUKSMBCmDWLW4tsAv1k.FM72hm1V6qtDv66gEuXa0oc2ENyHV1-t-UZtRPz3ZKM&dib_tag=se&keywords=Dyson%2BAirwrap%2Bor%2BSupersonic&qid=1773371354&sprefix=dyson%2Bairwrap%2Bor%2Bsupersonic%2Caps%2C265&sr=8-1&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=b718ad3149a1a8d670eaa05f5ca2f14c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/318kwbWIgnL._SX342_SY445_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One rule worth keeping",
+        body: "Whatever you choose, write something with it. A card, a note, even a text that explains why you picked that specific thing. The gift does half the work. The note does the other half."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

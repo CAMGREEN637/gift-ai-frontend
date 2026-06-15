@@ -7187,6 +7187,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// THE 30-SECOND GIFT RULE
+// ============================================================================
+  {
+    slug: "the-30-second-gift-rule",
+    title: "The 30-Second Gift Rule",
+    excerpt: "If you can't explain why a gift is specifically for her in under 30 seconds, keep looking.",
+    occasion: "just_because",
+    interests: ["home_decor", "wellness", "skincare"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "why-most-men-buy-bad-gifts",
+      "thoughtful-gifts-that-dont-feel-last-minute",
+      "gifts-she-would-never-buy-herself"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Most bad gifts have one thing in common",
+        body: "The person who bought them cannot clearly explain why they chose them. Ask a man why he bought a generic spa basket and you get something like: \"She likes relaxing... women like spa stuff... it had good reviews.\" That is not a reason. That is a category. The 30-Second Gift Rule exists to close the gap between buying something and choosing something. The rule is simple: if you cannot explain why this gift is specifically for her in under 30 seconds, without mentioning the price, the brand, or the packaging, keep looking."
+      },
+      {
+        type: "text",
+        heading: "Why men and women evaluate gifts differently",
+        body: "Most men evaluate gifts using price, brand, category, and reviews. Most women experience gifts through thought, attention, specificity, and meaning. These are completely different lists. A gift that scores well on the first list can still score zero on the second, and that is where most gift failures happen. The 30-Second Rule forces you off the first list and onto the second. When you can explain a gift in 30 seconds, it almost always means you were thinking about her rather than thinking about the gift."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Personalized Acrylic Music Plaque",
+            price: "8",
+            reason: "30-second explanation: \"This is printed with the song that was playing when we met. The code on it actually scans, so she can play it whenever she wants.\" That is a gift with a story. She keeps it somewhere she sees it every day, and every time she does she knows exactly where it came from and why.",
+            url: "https://www.amazon.com/dp/B0DLW9SSTT?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81cLL5uaIPL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Custom Photo Prints",
+            price: "16.88",
+            reason: "30-second explanation: \"She has hundreds of photos of us on her phone and none of them are printed. I went through and picked the ones that meant the most and had them printed properly.\" The work of choosing the photos is visible in the gift. That is the whole point.",
+            url: "https://www.amazon.com/dp/B0D9YMF259?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/8136VxE5xUL._AC_UL320_.jpg"
+          },
+          {
+            name: "Customized Engraved Photo Album",
+            price: "29.99",
+            reason: "30-second explanation: \"The cover has our names on it. I filled the first half with photos before I gave it to her so it arrived already started rather than empty.\" A photo album you filled yourself is not a product. It is a record of the relationship that she can hold, and the fact that you put the photos in is the gift.",
+            url: "https://www.amazon.com/dp/B0F1N2NRLY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/71i94Chha9L._AC_UL320_.jpg"
+          },
+          {
+            name: "Personalized Engraved Wooden Keepsake Box",
+            price: "49",
+            reason: "30-second explanation: \"It has our names and the date we got together engraved on the lid. I put a handwritten letter inside so it arrived with something in it.\" A box engraved with two names and a date is one of the rare objects that explains its own meaning the moment she reads it. The letter inside means it did not arrive empty.",
+            url: "https://www.amazon.com/Krezy-Case-Personalised-Engraved-Personalized/dp/B0FL958G1B?crid=21Z9FAZ3HCYNV&dib=eyJ2IjoiMSJ9.jVJ7rrEeKtUVUvtIzPGGg3NXaBA9ZXIzSYYt_k8DJ9iC8jRAWab9fSUtS-R4kULEoq45bFHJl44R4yYNcsesaPL2UnrZODUwilTy6HNIVAkGpxb8xK1G8SMHtpOgJuyxNlKE4UyawaWCKgKze_1eRFCYivz9u_JoHZVkm3HOevLoboL4hQgrpSVNM2NcvWqwnwGALH3au9qRRtfhQUqyufmR9dbkAbJxbrUuVeQEvxBT8GzsLU_4YTnfzLoH4l-odl6FdV03Pb6__SIjZXMHKlSRGpsMFJ74eoJLjJaHnyQ.aVCrzR4hoDWe9Z8iEwq2srkUEgJ5lHPkD2gzpc6Bs_4&dib_tag=se&keywords=Wedding%2BMemory%2BKeepsake%2BBox&qid=1773536793&sprefix=wedding%2Bmemory%2Bkeepsake%2Bbox%2Caps%2C232&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9c3391a97b394c2c46a1b896b7bd0a4c&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/816jS1pUXuL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Lovebox Photo Messenger",
+            price: "169",
+            reason: "30-second explanation: \"It sits on her desk. When I send her a photo from my phone, a heart on the front spins and she lifts the lid to see it. It is the only way we send each other photos that isn't just another notification.\" This one passes the rule so cleanly that the explanation itself is the gift. There is no version of this that she could mistake for something bought without thought.",
+            url: "https://www.amazon.com/Lovebox-Messenger-Meaningful-Distance-Relationship/dp/B08X4QW78J?crid=107QJ3KGU5AT9&dib=eyJ2IjoiMSJ9.iy0k1nYzZ6EZAmonOpTbXRT72JZWqZMxciM2DfDXm2TyF-bYlw4gI0h86sOHBfAAFawV3k_RcpvdINEdMxmQCYYMcmzI8ZbGcDJs9h85h2s.ga92mLAB_rMTyOvd4jTXYw3hmzU2nRHHhtV6DXIW-ak&dib_tag=se&keywords=Lovebox+Spinning+Heart+Messenger&qid=1776654042&s=handmade&sprefix=lovebox+spinning+heart+messenger%2Cspecialty-aps%2C192&sr=8-1&linkCode=ll2&tag=cbggiftapp637-20&linkId=8c9cdbf3c271910d049f4fc42520b055&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/51UxJ51fkhL._AC_SX300_SY300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "The rule in practice",
+        body: "Before you buy anything, say out loud why you are buying it. If the sentence contains the words \"women like\" or \"she probably\" or \"it has good reviews,\" start over. If the sentence contains her name, a specific memory, a habit she has, or something she said in passing three months ago, you are on the right track. The best gifts do not need a sales pitch. They come with a story."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

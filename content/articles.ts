@@ -7376,6 +7376,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO TREATS HER PET LIKE FAMILY
+// ============================================================================
+  {
+    slug: "gifts-for-girlfriend-who-loves-her-pet",
+    title: "Gifts for a Girlfriend Who Treats Her Pet Like Family",
+    excerpt: "She sends you photos of her cat mid-nap. Her dog has its own side of the couch. These gifts get it.",
+    occasion: "birthday",
+    interests: ["wellness", "home_decor"],
+    readTime: "5 min read",
+    publishedAt: "2026-06-14",
+    relatedArticles: [
+      "gifts-for-wife-who-loves-outdoors-gardening",
+      "gifts-she-would-never-buy-herself",
+      "gifts-romantic-without-being-over-the-top"
+    ],
+    sections: [
+      {
+        type: "text",
+        heading: "Her pet is part of the picture",
+        body: "For a woman who is genuinely attached to her pet, the animal is not a side detail of her life. It is woven into her daily routine, her home, her evenings. A gift that acknowledges that, even indirectly, lands differently than one that ignores it entirely. You do not have to buy something with a paw print on it. You just have to buy something that makes her life with her pet a little better."
+      },
+      {
+        type: "text",
+        heading: "What works and why",
+        body: "The best picks here fall into two categories. The first makes her pet's life more comfortable, which she will feel as a gift to herself. The second makes her daily routine easier, which frees up more of the time she would otherwise spend managing pet logistics. Either way, she notices."
+      },
+      {
+        type: "picks",
+        gifts: [
+          {
+            name: "Cordless Cat Window Perch Hammock",
+            price: "16",
+            reason: "A suction-cup window hammock that mounts without drilling, gives her cat a sunny spot to sit, and keeps the cat off whatever surface it was previously occupying. For a cat mom who has watched her cat press its face against the window for years, this is the gift that finally gives the cat what it wants. She will watch it use the perch and feel unreasonably happy about it.",
+            url: "https://www.amazon.com/AMOSIJOY-Cordless-Installation-Foldable-Large/dp/B09WDDGP2V?crid=2DYQCBK9N5V84&dd=92RNgXNT3OP_5sCcfzHijdNGzeC2M1AGI-JCm90QnS4%2C&ddc_refnmnt=free&dib=eyJ2IjoiMSJ9.VojaeMlgoUCouJzKzsOPsEx2axkkcw2g7KCgzbr8350QX7PAaubU0fw8rItfXjdcxxQpP6WpYM7n68-ZLlBCgJWRGcfHO24ZupGRc-fEDpisjUqAqCsrs5lg68myzzTwLxdBYt8bdKNHkyLWdezN8c67wAJTa7J1URPtFyDriGkRdzKGvJfsEbQPsvdCpbJ310OrgsOTMkQMDDXlsi2crdtppNnHclSSDexlrrWF4qI._9ASk7V7B6hRRUIIRbLUUr0l1shTriBg8ZG8bcKSoGg&dib_tag=se&keywords=cat%2Bwindow%2Bperch&qid=1775431041&s=samedaystore&sprefix=cat%2Bwindow%2Bperch%2Csamedaystore%2C203&sr=1-2&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=75788c33d082f851633bcb2f11b13f61&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71gvccdY6GL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Best Dog Mom Scented Candle",
+            price: "20",
+            reason: "A lavender soy wax candle with a label that says exactly what she is. It is a small thing, but for a woman who identifies strongly with her dog, seeing it acknowledged on a gift she uses every day carries more weight than a generic candle would. It burns clean and the scent is good, but the reason it works is that it was clearly chosen for her specifically.",
+            url: "https://www.amazon.com/Dog-Mom-Gifts-Women-Birthday/dp/B0B46YQ13F?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSRUTYgYtipxH0cVuBt_tnDYGK1T8V_113cHF1rZCAWDZF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.BRHrxuQaSurkmIvKxAoKwtX9RvtNxuJkIPMtdmUsIRI&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828370&sr=8-22-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=9f8eea3684199de5eb59f2d9940ebbe5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/81Z1gWgWn+L._AC_SX679_.jpg"
+          },
+          {
+            name: "Bedsure 3D Fleece Bubble Blanket",
+            price: "16.99",
+            reason: "A thick fleece throw with a bubble texture that is soft enough that her pet will immediately claim half of it. For a woman who spends her evenings on the couch with her dog or cat, a blanket is not just a blanket. It is where the routine happens. This one is machine washable, which matters more than it sounds when there is pet hair involved.",
+            url: "https://www.amazon.com/dp/B0FFG8THCY?tag=cbggiftapp637-20",
+            image_url: "https://m.media-amazon.com/images/I/81IuDARhnpL._AC_UY218_.jpg"
+          },
+          {
+            name: "Automatic Cat Feeder with WiFi",
+            price: "69",
+            reason: "A 5-liter WiFi-connected feeder that lets her schedule and control her cat's meals from her phone, including when she is travelling or running late. For a cat mom whose entire morning revolves around feeding time, this removes the anxiety of being away. She can check that the cat has eaten without being in the room, which for a certain kind of pet owner is a genuinely meaningful quality of life improvement.",
+            url: "https://www.amazon.com/PETLIBRO-Automatic-Control-Stainless-Blockage/dp/B09S8WMJY9?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSQZRVx51xmr1SzZ1s_cxcyhoesWtuwLwua1u5_SFSwjFF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.JqyLq3USXi_HTqgJDcY5O2V9yvEqb76_stuo6rrX0k0&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828172&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=eaa5ac35b1b7314f3845f6406699fe46&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/71g1HcpaAzL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          },
+          {
+            name: "Automatic Pet Hair Vacuum",
+            price: "179",
+            reason: "A touchless stationary vacuum that activates automatically when she sweeps pet hair toward it, pulling it in without her having to bend down or use a dustpan. For a woman with a heavy shedder, the daily hair management is a genuine friction point. This removes one of the most repetitive parts of it. It is the kind of practical gift that feels indulgent because she would never justify buying it for herself.",
+            url: "https://www.amazon.com/EYE-VAC-Touchless-Automatic-Dustpan-Canister/dp/B0011G20QY?dib=eyJ2IjoiMSJ9.yls9_F-JBbomscR-eegR6mXwi6brUFnBZ13H5vR3Lp8Gw906fJGi4kBpDHE_4J1Wz3jaTtaFSU-kzaQELd2WSRUTYgYtipxH0cVuBt_tnDYGK1T8V_113cHF1rZCAWDZF5g1IWU78RLt9FyM69OpXXA39AB-w_R-IIudmYFsqIJZM1Aax5_cZXDzi1GiYFk8B45N47-n6SBKVdnX6Av7RqtJC8TvING7M_t9gEFsR7D6N1i1b0XxkLgRylIx77VCUuYyabZxI0fmVngKHJvLY-ID94I6nP6z2-GvfiMuA7U.BRHrxuQaSurkmIvKxAoKwtX9RvtNxuJkIPMtdmUsIRI&dib_tag=se&keywords=gifts%2Bfor%2Bpet%2Blovers&qid=1774828370&sr=8-20-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&th=1&linkCode=ll2&tag=cbggiftapp637-20&linkId=96e42224a45096a135ddd7df2b0853e5&language=en_US&ref_=as_li_ss_tl",
+            image_url: "https://m.media-amazon.com/images/I/61Cjhi7evSL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+          }
+        ]
+      },
+      {
+        type: "text",
+        heading: "One thing to keep in mind",
+        body: "If you are not sure whether she has a cat or a dog, the blanket, the candle, and the vacuum work for either. The window perch is cat-specific and the feeder is cat or small dog. Pick based on what you actually know about her setup and you will not go wrong."
+      },
+      {
+        type: "cta"
+      }
+    ]
+  },
 ];
 
 // ============================================================================

@@ -8146,6 +8146,237 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     }
   ]
 },
+// ============================================================================
+// GIFTS FOR YOUR WIFE WHO HAS EVERYTHING
+// ============================================================================
+{
+  slug: "gifts-for-wife-who-has-everything",
+  title: "Gifts for Your Wife Who Has Everything",
+  excerpt: "She buys what she needs and returns what she doesn't. Here are five gifts that work anyway.",
+  occasion: "anniversary",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-22",
+  relatedArticles: [
+    "anniversary-gifts-wife-impossible-to-shop-for",
+    "gifts-she-would-never-buy-herself",
+    "gifts-for-a-serious-relationship"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "Why she is hard to shop for",
+      body: "A wife who says she doesn't want anything is not being modest. She is financially independent, she knows her own taste, and anything she genuinely needs she has already bought. Generic gifts read as a lack of effort immediately. She is polite about it, but you can tell. The ones that land are either too specific to come from anyone but you, or too indulgent to justify buying for herself, or both."
+    },
+    {
+      type: "text",
+      heading: "What actually works",
+      body: "Forget trying to guess what she wants. She has already handled that. The gifts that work for this kind of woman are the ones that sit outside her normal purchasing logic: something too luxurious to prioritise for herself, something that improves a daily moment she has quietly accepted as imperfect, or something that says you have been paying attention to how she actually lives. The five picks below are all things she almost certainly does not already own."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Elizabeth Arden Retinol Skin Care Set",
+          price: "37",
+          reason: "A curated retinol skincare set from one of the most trusted names in premium beauty, covering a serum, a night cream, and an eye treatment. If she has a skincare routine she is happy enough with but has never quite upgraded to a proper retinol regimen, this is the push that does it. It is the kind of thing she has scrolled past for herself and talked herself out of. That is exactly the gap a gift fills.",
+          url: "https://www.amazon.com/dp/B0FFBQWBXQ?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71DeGKegdfL._AC_UL320_.jpg"
+        },
+        {
+          name: "Marble Wine Chiller Bucket",
+          price: "40",
+          reason: "A double-walled stainless steel wine chiller with a marble finish that keeps a bottle cold for hours without ice water dripping across the table. For a wife who pours a glass of wine at the end of the day and has been using whatever was in the fridge, this is the small upgrade that makes the ritual feel more intentional. It sits on the counter and looks like it belongs in a home she cares about.",
+          url: "https://www.amazon.com/dp/B0B21D16DX?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/712RBtV-veL._AC_UL320_.jpg"
+        },
+        {
+          name: "Godinger Crystal Wine Decanter",
+          price: "60",
+          reason: "A hand-blown lead-free crystal decanter that aerates red wine as it pours and looks genuinely beautiful sitting on a sideboard or dinner table. Most people who appreciate wine have thought about owning a proper decanter and never quite got around to it, because buying one for yourself feels like a stretch. This is the version of that purchase she will reach for every time she opens a bottle worth opening.",
+          url: "https://www.amazon.com/dp/B06XG5DWN6?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/51pkK0SNUML._AC_UL320_.jpg"
+        },
+        {
+          name: "ZAAINA Luxury Spa Gift Set",
+          price: "75",
+          reason: "A complete luxury spa collection with a body scrub, body butter, bath salts, shower gel, and a bath sponge, built around a single cohesive scent and presented in a gift box that looks like something from a boutique rather than a basket from a drugstore. For a wife who rarely makes time for herself, a spa set at this quality level is not just nice products. It is a scheduled evening she would not otherwise take.",
+          url: "https://www.amazon.com/dp/B089SBNKXM?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71EFjzj9OQL._AC_UL320_.jpg"
+        },
+        {
+          name: "Bose QuietComfort Earbuds",
+          price: "149",
+          reason: "Bose QuietComfort earbuds with active noise cancellation that actually works, a comfortable fit that holds through hours of wear, and a sound profile that makes whatever she listens to sound meaningfully better. For a wife who is always partially in the world of everything else she has to think about, a pair of earbuds that genuinely closes the door on external noise is one of the most useful gifts that exists. She would not spend $149 on earbuds for herself. That is why it works as a gift.",
+          url: "https://www.amazon.com/dp/B0FC6KNK6X?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/51-7W7OJ-9L._AC_UY218_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "The note matters as much as the gift",
+      body: "For a woman who does not particularly want more things, the thought behind the gift carries more weight than the gift itself. Write something specific: not a sentiment, a memory, or a reason. Two sentences that make clear you were thinking about her when you chose it. That is what she will actually remember."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO IS HARD TO SHOP FOR
+// ============================================================================
+{
+  slug: "gifts-for-girlfriend-hard-to-shop-for",
+  title: "Gifts for a Girlfriend Who Is Hard to Shop For",
+  excerpt: "She says she doesn't need anything. She means it. Here are five gifts that work anyway.",
+  occasion: "birthday",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-22",
+  relatedArticles: [
+    "gift-ideas-girlfriend-impossible-to-shop-for",
+    "birthday-gifts-hard-to-shop-for",
+    "gifts-for-girlfriend-who-has-everything"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "The problem with shopping for her",
+      body: "A girlfriend who is hard to shop for is not being difficult. She knows what she likes, she buys it when she wants it, and she has been doing that for years before you came along. She is not waiting for someone to guess correctly. She is not secretly hoping you read her mind. What she is actually doing is living her life without gaps you can fill with a candle set. That is why generic gifts feel flat when she opens them, and why finding the right thing requires a different kind of thinking."
+    },
+    {
+      type: "text",
+      heading: "What actually lands",
+      body: "The gifts that work for a woman like this are not about taste. They are about the logic behind the purchase. She would never spend $160 on a portable photo printer for herself, not because she wouldn't use it, but because it doesn't make the mental shortlist of things she needs. Something personal cuts through for the same reason: it was made for her specifically, which means she could not have bought it herself even if she wanted to. The five picks below work because they either sit outside her normal spending logic or they could not come from anyone but you."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Personalized Wine Glasses",
+          price: "23",
+          reason: "A set of stemless wine glasses etched with a name, a date, or a short phrase you choose when you order. For a girlfriend who has a wine glass she uses and doesn't think about, a personalized version of the same thing becomes something she actually notices. It is a small object that holds a specific meaning, which is the kind of gift that outlasts anything generic regardless of price.",
+          url: "https://www.amazon.com/dp/B0BX62KXJP?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/713nveiTL9L._AC_UL320_.jpg"
+        },
+        {
+          name: "Tulip Flower Lamp",
+          price: "28",
+          reason: "A sculptural tulip lamp with a warm, ambient glow that sits on a nightstand or shelf and looks like something from a boutique rather than a home goods store. For a girlfriend who cares about how her space feels but tends to leave things as they are rather than actively decorating, this is the kind of addition that changes the atmosphere of a room she is already in every day. She would not pick it up herself. That is the point.",
+          url: "https://www.amazon.com/dp/B0D9BMZDDN?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71kJKwk8rzL._AC_UL320_.jpg"
+        },
+        {
+          name: "SOULISTIC ROOT Self-Care Set",
+          price: "36",
+          reason: "A complete self-care kit with a rose quartz roller, gua sha tool, jade roller, and a set of bath products, presented in a clean gift box. This works not because she doesn't already have skincare products, but because this is an intentional version of something she has been doing piecemeal. It turns a loose habit into a proper routine, which is the kind of upgrade she appreciates without knowing she wanted it.",
+          url: "https://www.amazon.com/dp/B0D2S2XXJF?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/816ZlqRcv-L._AC_UL320_.jpg"
+        },
+        {
+          name: "FUJIFILM Instax Mini 12 Holiday Bundle",
+          price: "100",
+          reason: "An Instax Mini 12 instant camera bundled with film and a carrying case, in a soft purple colorway that stands apart from the standard white. For a girlfriend who takes photos on her phone and never prints them, this changes that habit in a way that is immediately satisfying. The prints come out while she is still at the moment that made them. That is a different thing entirely, and it is the kind of gift that gets used rather than stored.",
+          url: "https://www.amazon.com/dp/B0FLFHN7PL?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71msMzScxxL._AC_UY218_.jpg"
+        },
+        {
+          name: "Liene M100 Photo Printer",
+          price: "160",
+          reason: "A compact wireless photo printer that connects to her phone and prints wallet-sized photos in under a minute, using dye-sublimation printing rather than ink. For a girlfriend who has years of photos sitting in her camera roll that she has never done anything with, this is the device that actually closes that gap. It is too specific and too useful to feel like a filler gift, and it is exactly the kind of thing she would not buy for herself.",
+          url: "https://www.amazon.com/dp/B09XHYNHB2?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71OoBK-vJLL._AC_UL320_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "A note before you decide",
+      body: "If you are stuck between two options, go with the one that connects to something specific about her. A photo printer means more if she actually has photos she loves but never prints. A personalized glass means more if you have a reason to choose what goes on it. The gift is the easy part. The thought behind it is what she will remember."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
+// ============================================================================
+// ANNIVERSARY GIFTS THAT DON'T FEEL LAST MINUTE
+// ============================================================================
+{
+  slug: "anniversary-gifts-that-dont-feel-last-minute",
+  title: "Anniversary Gifts That Don't Feel Last Minute",
+  excerpt: "The difference between a thoughtful anniversary gift and a forgettable one is not the price. It is whether it looks like you thought about her.",
+  occasion: "anniversary",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-22",
+  relatedArticles: [
+    "romantic-anniversary-gifts-for-girlfriend",
+    "anniversary-gifts-personal",
+    "thoughtful-gifts-that-dont-feel-last-minute"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "What last minute actually looks like",
+      body: "A last minute anniversary gift is not really about timing. She can tell the difference between something you grabbed on the way home and something that took thought even if both arrived on the same day. The giveaway is specificity. A gift that could have been for anyone communicates something different than one that clearly had her in mind. Generic flowers, a gift card, a candle she didn't ask for: none of these are bad exactly, but they do not say much. The gifts below work because they each look like a decision, not a default."
+    },
+    {
+      type: "text",
+      heading: "What to aim for instead",
+      body: "The easiest way to avoid a last minute feel is to pick something that connects to her life in a specific way. Something you fill in with her name or a date you share. Something that improves a ritual she already has. Something that creates a shared moment rather than sitting on a shelf. You do not need to spend more. You need to pick with more precision. The five options below are each trying to do one of those things."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Personalized Photo Album",
+          price: "30",
+          reason: "A linen-covered photo album with space for a custom message on the front, designed to hold prints from a shared trip, a year together, or a specific chapter of the relationship. A photo album with something written on it says you thought about which photos would go inside. That is the kind of detail that separates a personal gift from a placeholder.",
+          url: "https://www.amazon.com/dp/B0CSQGQPGZ?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/51FrLA5ebfL._AC_UL320_.jpg"
+        },
+        {
+          name: "Luxury Spa Gift Basket",
+          price: "38",
+          reason: "A curated bath and body collection with a shower gel, body butter, loofah, bath salts, and a candle, packaged in a basket that looks like it came from a boutique. An anniversary is a natural reason to give her an evening that is just for her, and a set at this quality level lands differently than the kind sold at a checkout counter. She does not need to do anything with it except use it.",
+          url: "https://www.amazon.com/dp/B07GBFT6Z3?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81bfbN1USPL._AC_UL320_.jpg"
+        },
+        {
+          name: "Hand Blown Wine Decanter",
+          price: "50",
+          reason: "A hand-blown borosilicate glass decanter with an aerating pour spout and enough volume for a full bottle of red. For a couple that shares a glass of wine on a regular basis, a decanter at this quality turns something habitual into something that feels considered. It lives on the table rather than in a cabinet, and it improves every bottle they open together.",
+          url: "https://www.amazon.com/dp/B0G3ZZT2R4?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71UKMepZNgL._AC_UL320_.jpg"
+        },
+        {
+          name: "Connoisseur Gourmet Gift Basket",
+          price: "60",
+          reason: "A premium gourmet basket with a selection of cheeses, crackers, dried fruit, nuts, and chocolates, built for two rather than one. An anniversary gift that creates a shared occasion rather than a singular one carries a different weight. This is something you open together on the night itself, which makes the gift the evening as much as the contents.",
+          url: "https://www.amazon.com/dp/B00BY78O60?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81L2ocLgzjL._AC_UL320_.jpg"
+        },
+        {
+          name: "Apple AirPods Pro",
+          price: "102",
+          reason: "Apple AirPods Pro with active noise cancellation, adaptive audio, and a MagSafe charging case. If she is still using a pair of earbuds she has had for years, or does not have earbuds at all, this is the gift with the highest daily return of anything on this list. She will use them every day, often for hours, and think about the anniversary every time she puts them in. That kind of staying power is hard to match.",
+          url: "https://www.amazon.com/dp/B0B844T634?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/41hofkZHlvL._AC_UY218_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "The one thing that actually makes it feel thoughtful",
+      body: "Write something down. It does not have to be long. A sentence about why you chose it, or what it reminded you of, or what you are looking forward to. That note is what she will keep. The gift is what gets her to read it."
+    },
+    {
+      type: "cta"
+    }
+  ]
+}
 ];
 
 // ============================================================================

@@ -8069,6 +8069,83 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       }
     ]
   },
+// ============================================================================
+// GIFTS FOR A GIRLFRIEND WHO LOVES COFFEE
+// ============================================================================
+{
+  slug: "gifts-for-girlfriend-who-loves-coffee",
+  title: "Gifts for the Girlfriend Who Lives for Her Morning Cup",
+  excerpt: "She has opinions about her grind size. Here are five gifts that actually match her level.",
+  occasion: "birthday",
+  interests: ["coffee"],
+  readTime: "5 min read",
+  publishedAt: "2026-06-21",
+  relatedArticles: [
+    "birthday-gifts-cooking",
+    "gifts-beverage-girlie-summer-drinks",
+    "gifts-cozy-homebody"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "Coffee isn't just a habit for her",
+      body: "For a lot of people, coffee is fuel. For her, it's a ritual. She knows what she likes, she's probably already bought herself the things that matter most, and she has zero patience for a pod machine. The trap most people fall into is buying something generic with a coffee print on it, or a gift set from a drugstore endcap. She'll use it politely and never touch it again."
+    },
+    {
+      type: "text",
+      heading: "What actually works for someone who takes coffee seriously",
+      body: "The best gifts for a coffee lover fall into two categories: things that upgrade her daily ritual, and things that let her discover something new. A beautiful travel mug she'll use every day lands differently than a novelty mug she'll stick in the back of a cabinet. A curated sampler from a specialty roaster gives her something to explore. Think about where her setup already is and what would genuinely fit into it, not what looks impressive in a box."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Coffee Masters Around the World in Twelve Coffees",
+          price: "17",
+          reason: "Twelve single-origin coffees, each from a different country, all in one tasting kit. If she's the kind of person who talks about tasting notes, this is the gift that actually lets her explore them. It's low-commitment to buy, high-return to receive, and she can work through it at her own pace over a few weeks.",
+          url: "https://www.amazon.com/dp/B001UFSOXE?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/91Fj6mseefL._AC_UL320_.jpg"
+        },
+        {
+          name: "STANLEY Transit FlipTop Mug",
+          price: "23",
+          reason: "Stanley makes travel mugs that people keep for years, and this one has the kind of clean, functional design she'll actually want to carry. The FlipTop lid is easier to drink from in a car or on a commute than a twist cap, and it holds temperature without any fuss. Practical gifts land when they're noticeably better than what someone already has.",
+          url: "https://www.amazon.com/dp/B0GC9JXTPV?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/51qQ6-Q5TdL._AC_UL320_.jpg"
+        },
+        {
+          name: "Melitta Pour-Over Coffee Brewer & Stainless Steel Carafe Set",
+          price: "38",
+          reason: "A pour-over setup is the kind of thing a coffee lover wants but rarely buys herself because it feels like an indulgence. The Melitta kit includes the brewer, a stainless carafe, and filters, so she can get started the day she opens it. If she's been making drip coffee out of habit, this gives her a reason to slow down and actually enjoy the process.",
+          url: "https://www.amazon.com/dp/B0CSQLHFW9?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71dro-rGamL._AC_UL320_.jpg"
+        },
+        {
+          name: "Split Oak Coffee Roasters Gourmet Gift Box",
+          price: "42",
+          reason: "Split Oak is a small-batch specialty roaster, and this gift box puts a curated selection of their coffees in front of her without her having to go find them herself. It's the kind of gift that signals you paid attention to what she actually likes, not just that you found something with the word coffee on it. Good packaging, genuinely good coffee.",
+          url: "https://www.amazon.com/dp/B09BP1CRGK?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/91dqiMt2iaL._AC_UL320_.jpg"
+        },
+        {
+          name: "Coffee and Espresso Machine",
+          price: "99",
+          reason: "A compact espresso and drip machine in one unit with a built-in milk frother, designed to sit on a counter without dominating it. If she's been stopping at cafes every morning, this is the gift that brings that home. At $99 it's the kind of purchase she keeps meaning to make and never quite prioritises for herself, which is exactly the sweet spot for a birthday gift.",
+          url: "https://www.amazon.com/dp/B0DVDG5TRT?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/51KPEbDiU+L._AC_SY300_SX300_QL70_FMwebp_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "A note on timing",
+      body: "Coffee gear makes an especially good birthday or Christmas gift because she'll use it every single day. If you're not sure which tier to go for, start with her current setup as the reference point. Someone who already owns a pour-over probably wants better beans. Someone still using a drip machine might finally be ready for the upgrade."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
 ];
 
 // ============================================================================

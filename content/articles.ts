@@ -8376,7 +8376,84 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
       type: "cta"
     }
   ]
-}
+},
+// ============================================================================
+// GIFTS FOR THE GIRLFRIEND JUST STARTING HER FITNESS JOURNEY
+// ============================================================================
+{
+  slug: "gifts-for-girlfriend-starting-fitness-journey",
+  title: "Gifts for the Girlfriend Just Starting Her Fitness Journey",
+  excerpt: "She is building a new habit. The right gift makes showing up easier — not more overwhelming.",
+  occasion: "birthday",
+  interests: ["fitness"],
+  readTime: "5 min read",
+  publishedAt: "2026-06-23",
+  relatedArticles: [
+    "birthday-gifts-fitness",
+    "gifts-for-girlfriend-working-on-fitness",
+    "birthday-gifts-running"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "What she actually needs right now",
+      body: "Someone who is just starting out with fitness does not need advanced gear. She needs things that lower the friction of showing up. A pair of resistance bands she can use in her living room. A mat that makes the floor feel less like a barrier. Earbuds that make a thirty-minute workout feel shorter than it is. The gifts that help at this stage are the ones that make the first few weeks easier to get through, not the ones that signal where she should be six months from now."
+    },
+    {
+      type: "text",
+      heading: "What to avoid",
+      body: "Skip anything that assumes a level of commitment she hasn't built yet. A heavy barbell set, a complicated training program, a heart rate monitor with a steep learning curve — all of these can feel like pressure dressed up as support. The goal of a gift at this stage is encouragement, not a roadmap. The picks below are practical enough to use immediately and approachable enough not to intimidate."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "HPYGN Resistance Bands",
+          price: "$19",
+          reason: "A set of five fabric resistance bands in graduated resistance levels, designed for lower body and glute work without any equipment beyond floor space. For someone just starting out, resistance bands are one of the most useful things she can own — they work for a full routine, they store in a drawer, and they require no prior experience to get started with. This set has enough range to grow with her for months.",
+          url: "https://www.amazon.com/dp/B08CGJFW2Y?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81Xjzd8WYRL._AC_UL320_.jpg"
+        },
+        {
+          name: "JenPen Yoga Gift Set",
+          price: "$23",
+          reason: "A beginner yoga kit with a mat, two blocks, a strap, and a carrying bag, packaged together so she has everything she needs to start without having to research what she is missing. Yoga is one of the most accessible entry points into regular movement, and having the full setup from day one removes the most common early excuse. The blocks and strap matter more than most people expect when they are starting out.",
+          url: "https://www.amazon.com/dp/B0FPG5GZWD?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81pU5E0mFBL._AC_UL320_.jpg"
+        },
+        {
+          name: "HAOYUYAN Wireless Earbuds",
+          price: "$25",
+          reason: "Wireless earbuds with a secure sport fit, IPX5 sweat resistance, and enough battery life for a full week of workouts on a single charge. Music is one of the most consistent variables in whether someone actually gets through a workout, and tangled wires are a small but reliable reason to quit early. For a girlfriend who has been using her phone speakers or putting off buying a pair, these solve that problem at a price that doesn't require much thought.",
+          url: "https://www.amazon.com/dp/B0GSFPWHVV?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/61DzAvRWJlL._AC_UY218_.jpg"
+        },
+        {
+          name: "BalanceFrom Yoga Set",
+          price: "$43",
+          reason: "A complete yoga bundle with a thick non-slip mat, two foam blocks, a stretch strap, and a knee pad, all coordinated in the same colorway. This is the upgrade version of a starter yoga kit — the mat is thicker and more durable, and the extra knee pad matters more than most people expect for floor work. For a girlfriend who has been doing yoga on a thin mat or a carpet, this is a meaningful improvement to a practice she already wants to keep.",
+          url: "https://www.amazon.com/dp/B07LFND61Q?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/711crwg7eAL._AC_UL320_.jpg"
+        },
+        {
+          name: "Amazon Basics High-Density Foam Roller",
+          price: "$15",
+          reason: "A high-density foam roller for post-workout recovery, in a standard 18-inch size that works for back, legs, and IT band. Recovery is the part of a fitness routine that beginners skip most often because they don't yet own anything that makes it feel intentional. A foam roller changes that habit in a simple way: it gives her something to do after the workout, which makes the workout itself feel more complete. At this price it is an easy add, and it is one of the few things she will use every single time she trains.",
+          url: "https://www.amazon.com/dp/B00XM2MXK8?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/719fCtAm+hL._AC_UL320_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "One more thing",
+      body: "The best thing about a fitness gift at this stage is that it does not need to be expensive to be useful. A $15 foam roller she actually uses beats a $200 piece of equipment that sits in a corner. Pick the one that fits where she is right now, not where you think she should be heading."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
 ];
 
 // ============================================================================

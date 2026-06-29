@@ -8454,6 +8454,237 @@ export const SAMPLE_ARTICLES: GiftArticle[] = [
     }
   ]
 },
+// ============================================================================
+// GIFT IDEAS UNDER $50
+// ============================================================================
+{
+  slug: "gift-ideas-under-50",
+  title: "Gift Ideas Under $50",
+  excerpt: "You don't need to spend a lot to give something that lands. You need to pick something specific.",
+  occasion: "birthday",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-23",
+  relatedArticles: [
+    "mothers-day-gifts-under-50",
+    "thoughtful-gifts-that-dont-feel-last-minute",
+    "gifts-for-girlfriend-hard-to-shop-for"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "The case for a budget",
+      body: "Most people have a number in their head when they start looking for a gift, and $50 is one of the most common ones. It is enough to give something that feels real without crossing into territory that requires much deliberation. The problem is that it is also the budget where people settle for whatever looks acceptable rather than looking for what would actually be good. The picks below are all under $50. None of them look like they are."
+    },
+    {
+      type: "text",
+      heading: "What to look for at this price",
+      body: "The gifts that punch above their price are usually ones that solve a small daily inconvenience, add something pleasant to an existing habit, or feel more intentional than a generic box of chocolates. At this budget you are not buying the most impressive version of something. You are buying the right thing. Those are different goals, and the second one is easier to hit than most people think."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Espresso Martini Scented Candle",
+          price: "$19",
+          reason: "A soy wax candle with a rich espresso and vanilla scent profile, in a clean glass vessel that looks at home on a coffee table or bathroom shelf. For a girlfriend who likes candles and likes coffee, this is a small luxury that hits both without being generic. It is the kind of thing she would not buy herself because it feels indulgent for no reason, which is exactly the gap a gift is meant to fill.",
+          url: "https://www.amazon.com/dp/B0FJ2H61QL?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71M3I8179qL._AC_UL320_.jpg"
+        },
+        {
+          name: "Innqoo Candle Warmer Lamp",
+          price: "$20",
+          reason: "A minimalist lamp that melts candles from the top with gentle heat rather than burning them with a flame, which extends the life of her candles significantly and removes any fire risk. If she already owns candles she loves but burns through them quickly, or uses them in a room where she would rather not have an open flame, this is the kind of upgrade she did not know she wanted. It also looks genuinely good on a nightstand.",
+          url: "https://www.amazon.com/dp/B0DZFGTCLR?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71t96oyL+UL._AC_UL320_.jpg"
+        },
+        {
+          name: "grace & stella Skin Care Set",
+          price: "$20",
+          reason: "A skincare set with eye masks, a rose quartz roller, a gua sha stone, and a jade roller, presented in a clean gift box that looks like a proper set rather than a collection of loose items. This works because it upgrades a routine she probably already has rather than proposing a new one. The quality feels above what the price suggests, which is the only thing that matters at this budget.",
+          url: "https://www.amazon.com/dp/B0CYCLJDST?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71NxQ8qyZPL._AC_UL320_.jpg"
+        },
+        {
+          name: "ASAKUKI Essential Oil Diffuser",
+          price: "$37",
+          reason: "A 500ml ultrasonic diffuser with seven LED light settings and a timer, designed to run quietly in the background of a bedroom, living room, or home office. For a girlfriend who cares about how her space feels but has never owned a diffuser, this is the kind of thing that changes the atmosphere of a room she is already in every day. It is practical, it is ambient, and it looks far more expensive than it is.",
+          url: "https://www.amazon.com/dp/B07T8DSTW3?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/719o+bgzT0L._AC_UL320_.jpg"
+        },
+        {
+          name: "Victrola Bluetooth Portable Record Player",
+          price: "$40",
+          reason: "A compact three-speed record player with built-in Bluetooth speakers and a retro design that works as both a functional turntable and a piece of decor. For a girlfriend who has casually mentioned vinyl, or who collects records without yet owning a player, this is the gift that closes the gap. At this price it is a legitimate entry point into something she would enjoy, not a toy version of it.",
+          url: "https://www.amazon.com/dp/B00UMVW4VA?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/61n1yDQLrhL._AC_UY218_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "A note on wrapping",
+      body: "At this price range, presentation carries more weight than usual. A small card with a specific reason you chose the gift, a bit of tissue paper, and a bag that does not come from a grocery store checkout will make any of these land better than the same item handed over in its original Amazon box. The thought you put in before she opens it is part of the gift."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
+// ============================================================================
+// GIFTS YOU SHOULD NEVER BUY YOUR GIRLFRIEND (AND WHAT TO BUY INSTEAD)
+// ============================================================================
+{
+  slug: "gifts-you-should-never-buy-your-girlfriend",
+  title: "Gifts You Should Never Buy Your Girlfriend (And What to Buy Instead)",
+  excerpt: "Some gifts are worse than nothing. Here is how to spot them before you buy them.",
+  occasion: "birthday",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-23",
+  relatedArticles: [
+    "mistakes-men-make-buying-birthday-gifts",
+    "mistakes-men-make-buying-anniversary-gifts",
+    "thoughtful-gifts-that-dont-feel-last-minute"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "The gifts that do more damage than good",
+      body: "A bad gift is not just one she doesn't like. It is one that communicates something you didn't mean to say. An appliance for the kitchen tells her you see her as someone who cooks. A generic body spray set tells her you grabbed something from the display at the front of the store with thirty seconds of thought. A gift card tells her you ran out of ideas and decided not to pretend otherwise. She will be polite about all of them. That does not mean they landed."
+    },
+    {
+      type: "text",
+      heading: "What makes a gift go wrong",
+      body: "The most common mistake is buying something that could be for anyone rather than something that is for her. The second most common mistake is buying something functional that addresses a need she didn't express rather than something indulgent she wouldn't buy for herself. The picks below are paired with the bad gift they replace, and a reason why the swap works."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Personalized Wine Glass with Stopper",
+          price: "$19",
+          reason: "Instead of a gift card. A gift card is not a gift. It is permission to buy herself something, which she was already capable of. A personalized wine glass with her name or a date that means something to both of you costs about the same as a low-value gift card and communicates the opposite thing. It required a decision. It has her name on it. That is the entire difference between something she keeps and something she forgets.",
+          url: "https://www.amazon.com/dp/B0FL1RXX2Q?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/711Na51hz6L._AC_UL320_.jpg"
+        },
+        {
+          name: "No7 Radiance Trio Gift Set",
+          price: "$20",
+          reason: "Instead of a drugstore lotion set. The lotion sets sold near the checkout counter at pharmacies are not bad products. They are bad gifts because they look like something bought without any thought, and because they often go unused. A No7 Radiance Trio is a clinically-tested skincare set from one of the most trusted names in pharmacy beauty, presented in gift packaging. It costs the same and looks like you picked it rather than grabbed it.",
+          url: "https://www.amazon.com/dp/B0FJDFJRDG?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71xdMU60LFL._AC_UL320_.jpg"
+        },
+        {
+          name: "Bedsure Faux Fur Throw Blanket",
+          price: "$34",
+          reason: "Instead of a kitchen appliance. An air fryer, an instant pot, a new set of pans: these are useful purchases. They are not gifts. Buying a woman something for the kitchen implies she is the one responsible for the kitchen, which is a message you almost certainly did not intend to send. A faux fur throw blanket is unambiguously for her, costs about the same as a small appliance, and is the kind of thing she would not prioritise buying for herself. That is what a gift is supposed to be.",
+          url: "https://www.amazon.com/dp/B0F5N67VDV?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81jFEQAPBYL._AC_UL320_.jpg"
+        },
+        {
+          name: "Luxury Bath & Body Gift Set",
+          price: "$34",
+          reason: "Instead of a cheap body spray set. Fragrance gift sets from the display near the entrance of a department store are not terrible. But there is a ceiling to what they communicate, and most women who receive them know exactly where they came from and how much thought went into selecting them. A properly curated bath and body set with a body scrub, lotion, shower gel, and bath salts at this quality level is the same idea executed with enough care to feel intentional.",
+          url: "https://www.amazon.com/dp/B07538WFQ8?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/91UbPqgGcTL._AC_UL320_.jpg"
+        },
+        {
+          name: "Espresso Martini Infusion Kit",
+          price: "$40",
+          reason: "Instead of a generic box of chocolates. Chocolates are not a bad gift exactly, but a grocery store box handed over with a card is the minimum viable effort for a gift, and she knows that. An espresso martini infusion kit comes with the botanicals, spices, and instructions to make a cocktail she actually has to participate in. It is a shared activity more than an object, and that is a meaningfully different kind of gift. If she likes coffee and she likes a drink, it will get used.",
+          url: "https://www.amazon.com/dp/B0CH415B4J?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81IGBXpzMOL._AC_UL320_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "The rule that covers everything else",
+      body: "If you are looking at a gift and your honest assessment is that it could be for anyone, keep looking. The gifts that land are the ones that required you to think about her specifically, even for five minutes. That is what she will actually notice, and it costs nothing extra."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
+// ============================================================================
+// GIFTS TO UPGRADE HER SELF CARE ROUTINE
+// ============================================================================
+{
+  slug: "gifts-to-upgrade-her-self-care-routine",
+  title: "Gifts to Upgrade Her Self Care Routine",
+  excerpt: "She already has a routine. These gifts make it feel more intentional.",
+  occasion: "birthday",
+  interests: [],
+  readTime: "5 min read",
+  publishedAt: "2026-06-23",
+  relatedArticles: [
+    "birthday-gifts-skincare",
+    "birthday-gifts-wellness",
+    "gifts-you-should-never-buy-your-girlfriend"
+  ],
+  sections: [
+    {
+      type: "text",
+      heading: "What a self-care upgrade actually looks like",
+      body: "Most women already have a routine. They wash their face, they moisturise, they do something in the bath or shower that makes the day feel closed. What they usually don't have is the better version of that routine — the one with a proper gua sha tool instead of a finger, a serum with an active ingredient instead of a basic moisturiser, a bath set that feels like a treat rather than maintenance. That gap between what she does and what she could be doing is where a gift lands."
+    },
+    {
+      type: "text",
+      heading: "Why these gifts work",
+      body: "A self-care gift works when it upgrades something she is already doing rather than proposing something new. She does not need to start a new habit. She needs a better version of the one she has. The picks below each target a specific part of a routine that most women have but few treat as an occasion: the facial massage step, the vitamin C step, the deep hydration step, and the proper wind-down ritual that she probably skips more often than she admits."
+    },
+    {
+      type: "picks",
+      gifts: [
+        {
+          name: "Yeamon Gua Sha Facial Tools",
+          price: "$22",
+          reason: "A set with a rose quartz gua sha stone and a jade roller, the two tools that most skincare routines call for but most people use their fingers instead of. For a girlfriend who applies serum or facial oil as part of her routine but has never actually used a proper facial tool, this is the upgrade that makes the step she is already doing work better. It improves lymphatic drainage and product absorption, and it turns something perfunctory into something she actually looks forward to.",
+          url: "https://www.amazon.com/dp/B09N6LG6NZ?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/61du5DZBu4L._AC_UL320_.jpg"
+        },
+        {
+          name: "Vitamin C Serum Set",
+          price: "$23",
+          reason: "A complete vitamin C skincare set with a serum, eye cream, and moisturiser, built around brightening and antioxidant protection. Vitamin C is one of the most consistently recommended active ingredients in skincare, and most people who know this have still not actually added it to their routine. A full set takes the friction out of starting: she does not need to research which products layer well together. It is already done.",
+          url: "https://www.amazon.com/dp/B0DLZ2BWKT?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/81lppCh9etL._AC_UL320_.jpg"
+        },
+        {
+          name: "Hydrating Skincare Set",
+          price: "$28",
+          reason: "A deeply hydrating skincare kit with a hyaluronic acid serum, a gel moisturiser, and a face wash, designed around the kind of plumping and barrier-repair routine that most dermatologists recommend but most people do not follow because they are missing one or two of the pieces. For a girlfriend whose skin tends to run dry or who complains about tightness after cleansing, this set addresses exactly that without requiring her to figure out what to buy.",
+          url: "https://www.amazon.com/dp/B0DVYZK5TP?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/91iUn61g79L._AC_UL320_.jpg"
+        },
+        {
+          name: "Scented Crystal Candle Set",
+          price: "$23",
+          reason: "A set of hand-poured soy wax candles, each embedded with a healing crystal, in clean glass vessels with warm, layered scents. Setting the atmosphere of a self-care routine is something most people do accidentally rather than intentionally, and a candle set like this turns the ritual of lighting something before a bath or a skincare session into a moment rather than a background detail. These are the kind of candles that stay on the shelf because they look good, not just because they smell good.",
+          url: "https://www.amazon.com/dp/B08DZ8QWSN?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71JWhzNKqyL._AC_UL320_.jpg"
+        },
+        {
+          name: "Friendship Gift Basket",
+          price: "$40",
+          reason: "A curated spa and pampering basket with bath bombs, a candle, hand cream, a face mask, and a few treats, packaged in a reusable basket that looks put-together rather than generic. This is the anchor of a self-care routine rather than a single product: it gives her everything she needs for a proper evening to herself, and it covers every step of the ritual from the bath to the wind-down. For a girlfriend who tends to skip the full routine because she is missing one piece, this makes the full version easy.",
+          url: "https://www.amazon.com/dp/B0FD3F8HHR?tag=cbggiftapp637-20",
+          image_url: "https://m.media-amazon.com/images/I/71RDxuFIV5L._AC_UL320_.jpg"
+        }
+      ]
+    },
+    {
+      type: "text",
+      heading: "How to make it feel complete",
+      body: "A self-care gift lands better when it is paired with a small note that gives her permission to use it. Not instructions — just something that tells her the gift came with the intention of her actually taking an evening for herself. That framing changes how she receives it. She will use it sooner, and she will think of you when she does."
+    },
+    {
+      type: "cta"
+    }
+  ]
+},
 ];
 
 // ============================================================================
